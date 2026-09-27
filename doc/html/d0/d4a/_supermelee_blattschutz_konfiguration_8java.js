@@ -1,0 +1,4 @@
+var _supermelee_blattschutz_konfiguration_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.blattschutz.SupermeleeBlattschutzKonfiguration", "d7/d97/classde_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz_1_1_supermelee_blattschutz_konfiguration.html", "d7/d97/classde_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz_1_1_supermelee_blattschutz_konfiguration" ]
+];

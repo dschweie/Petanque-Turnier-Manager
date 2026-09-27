@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/algorithmen/common/KoRundeTeamPaarungen.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/d32/_ko_runde_team_paarungen_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KoRundeTeamPaarungen.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d32/_ko_runde_team_paarungen_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 24.05.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.algorithmen.common;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkArgument;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.google.common.collect.Lists;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.model.FormeSpielrunde;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.model.Team;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.model.TeamPaarung;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.model.TeamRangliste;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html">   36</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aec436d5c9bcc9a48bbc70d8c940b65ee">KoRundeTeamPaarungen</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">   38</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html">TeamRangliste</a> <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a8a5fcdad7530089ea2b4149a1e784408">   39</a></span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a8a5fcdad7530089ea2b4149a1e784408">doppelteGespieltePaarungenVorhanden</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a93b74a4fc15e4e5d7d829f9579b87291">   40</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;String&gt; <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a93b74a4fc15e4e5d7d829f9579b87291">doppelteGespieltePaarungen</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aec436d5c9bcc9a48bbc70d8c940b65ee">   42</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aec436d5c9bcc9a48bbc70d8c940b65ee">KoRundeTeamPaarungen</a>(<a class="code hl_class" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html">TeamRangliste</a> <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        checkNotNull(<a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>, <span class="stringliteral">&quot;TeamRangliste == null&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        checkArgument(!<a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>.<a class="code hl_function" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html#a6c3c3ba67b730dbb148f382f6995e2d9">isEmpty</a>(), <span class="stringliteral">&quot;TeamRangliste.isEmpty&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        checkArgument(<a class="code hl_class" href="../../dd/d85/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_is_even_or_odd.html">IsEvenOrOdd</a>.<a class="code hl_function" href="../../dd/d85/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_is_even_or_odd.html#a98515af99d15d730494b3829a0b83b68">isEven</a>(<a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>.<a class="code hl_function" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html#a193f2628e96dc25a176316fb9b1d588a">size</a>()), <span class="stringliteral">&quot;Keine gerade anzahl Teams in der Liste&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        this.teamRangListe = <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aef5a7aded0ed073e896da81dbec232aa">   49</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html">FormeSpielrunde</a> <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aef5a7aded0ed073e896da81dbec232aa">generiereSpielrunde</a>() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html">FormeSpielrunde</a> formeSpielrunde = <span class="keyword">new</span> <a class="code hl_function" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#a8379766b29c7b7ecd3dba228325238e9">FormeSpielrunde</a>(1);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a8a5fcdad7530089ea2b4149a1e784408">doppelteGespieltePaarungenVorhanden</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a93b74a4fc15e4e5d7d829f9579b87291">doppelteGespieltePaarungen</a>.clear();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;Team&gt;</a> teamRangListeWork = <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>.<a class="code hl_function" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html#abe5b1b8a717bb022e28dd7363b29ed81">getCloneTeamListe</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">int</span> haelfte = teamRangListeWork.size() / 2;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cntr = 0; cntr &lt; haelfte; cntr++) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> teamA = teamRangListeWork.getFirst();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> teamB = <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ae92b9b8e150d97d363cf62b9018e07ad">sucheGegnerFuer</a>(teamA, teamRangListeWork);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">if</span> (teamB != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                formeSpielrunde.<a class="code hl_function" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#aa89acfe368244f6b6538ec9b22b013ff">addPaarungWennNichtVorhanden</a>(<span class="keyword">new</span> <a class="code hl_function" href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html#ae0d38dec4e3c6567d5a064c30d6a01fc">TeamPaarung</a>(teamA, teamB));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                teamRangListeWork.remove(teamB);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_function" href="../../d6/daa/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common.html#a5320ef2bc6965627433076d2845203a2">TauschTeams</a> tausch = <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a3fa92e9be0cf2cd580041e59ee815b52">kanntauschenMit</a>(teamA, teamRangListeWork, formeSpielrunde);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">if</span> (tausch != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> freigegenerB = tausch.teamPaarungTausch().getB();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    tausch.teamPaarungTausch().setB(tausch.teamAusRangliste());</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    teamRangListeWork.remove(tausch.teamAusRangliste());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    formeSpielrunde.<a class="code hl_function" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#aa89acfe368244f6b6538ec9b22b013ff">addPaarungWennNichtVorhanden</a>(<span class="keyword">new</span> <a class="code hl_function" href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html#ae0d38dec4e3c6567d5a064c30d6a01fc">TeamPaarung</a>(teamA, freigegenerB));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <span class="comment">// kein valider Gegner und kein Tausch möglich → Doppel-Paarung</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    teamB = teamRangListeWork.getLast();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a8a5fcdad7530089ea2b4149a1e784408">doppelteGespieltePaarungenVorhanden</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a93b74a4fc15e4e5d7d829f9579b87291">doppelteGespieltePaarungen</a>.add(teamA.<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">getNr</a>() + <span class="stringliteral">&quot;:&quot;</span> + teamB.<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">getNr</a>());</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    formeSpielrunde.<a class="code hl_function" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#aa89acfe368244f6b6538ec9b22b013ff">addPaarungWennNichtVorhanden</a>(<span class="keyword">new</span> <a class="code hl_function" href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html#ae0d38dec4e3c6567d5a064c30d6a01fc">TeamPaarung</a>(teamA, teamB));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    teamRangListeWork.remove(teamB);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            teamRangListeWork.remove(teamA);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> formeSpielrunde;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ae92b9b8e150d97d363cf62b9018e07ad">   94</a></span>    <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ae92b9b8e150d97d363cf62b9018e07ad">sucheGegnerFuer</a>(<span class="keyword">final</span> <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> teamA, <span class="keyword">final</span> List&lt;Team&gt; teamRangListeWork) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> Lists.reverse(teamRangListeWork).stream()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                .filter(t -&gt; !teamA.<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#adb5913961ef2ebf72997e4f9409f108c">equals</a>(t) &amp;&amp; !teamA.<a class="code hl_function" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a0d987b12608714871af626fb274509f5">hatAlsGegner</a>(t))</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                .findFirst()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                .orElse(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a3fa92e9be0cf2cd580041e59ee815b52">  110</a></span>    <a class="code hl_function" href="../../d6/daa/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common.html#a5320ef2bc6965627433076d2845203a2">TauschTeams</a> <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a3fa92e9be0cf2cd580041e59ee815b52">kanntauschenMit</a>(<span class="keyword">final</span> <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> teamA, <span class="keyword">final</span> List&lt;Team&gt; teamRangListeWork, <span class="keyword">final</span> <a class="code hl_class" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html">FormeSpielrunde</a> formeSpielrunde) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        List&lt;Team&gt; reversedRangliste = Lists.reverse(teamRangListeWork);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">for</span> (<a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> teamBAusSpielrunde : formeSpielrunde.<a class="code hl_function" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#a4d86365d0dd5e7e1f5b1fd1d8df232c4">getBTeams</a>()) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">if</span> (!teamA.<a class="code hl_function" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a0d987b12608714871af626fb274509f5">hatAlsGegner</a>(teamBAusSpielrunde)) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <a class="code hl_class" href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html">TeamPaarung</a> paarungTausch = formeSpielrunde.<a class="code hl_function" href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#a3626c4791f1f73d750bca23138bf603e">findTeamPaarung</a>(teamBAusSpielrunde);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="keywordflow">for</span> (<a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> teamAusRangliste : reversedRangliste) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                    <span class="keywordflow">if</span> (!teamA.<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#adb5913961ef2ebf72997e4f9409f108c">equals</a>(teamAusRangliste) &amp;&amp; !paarungTausch.<a class="code hl_function" href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html#aebe4bf91eed4b40cb1dc5f47a2f4850b">getA</a>().<a class="code hl_function" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a0d987b12608714871af626fb274509f5">hatAlsGegner</a>(teamAusRangliste)) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d6/daa/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common.html#a5320ef2bc6965627433076d2845203a2">TauschTeams</a>(teamAusRangliste, paarungTausch);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a74e5ecdee544b1517e0df592bb86984c">  126</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html">TeamRangliste</a> <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a74e5ecdee544b1517e0df592bb86984c">getTeamRangListe</a>() {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">teamRangListe</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ab59eb4630a72a3b5fb7a80aeb8dc0075">  131</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ab59eb4630a72a3b5fb7a80aeb8dc0075">isDoppelteGespieltePaarungenVorhanden</a>() {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a8a5fcdad7530089ea2b4149a1e784408">doppelteGespieltePaarungenVorhanden</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a4e2f9dfba3e5259313d61336ff7c6018">  136</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a4e2f9dfba3e5259313d61336ff7c6018">getDoppelteGespieltePaarungen</a>() {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">return</span> String.join(<span class="stringliteral">&quot; &quot;</span>, <a class="code hl_variable" href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a93b74a4fc15e4e5d7d829f9579b87291">doppelteGespieltePaarungen</a>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_is_even_or_odd_html"><div class="ttname"><a href="../../dd/d85/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_is_even_or_odd.html">de.petanqueturniermanager.algorithmen.common.IsEvenOrOdd</a></div><div class="ttdoc">Hilfsmethoden zur Prüfung ob eine Ganzzahl gerade oder ungerade ist.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db2/_is_even_or_odd_8java_source.html#l00021">IsEvenOrOdd.java:21</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_is_even_or_odd_html_a98515af99d15d730494b3829a0b83b68"><div class="ttname"><a href="../../dd/d85/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_is_even_or_odd.html#a98515af99d15d730494b3829a0b83b68">de.petanqueturniermanager.algorithmen.common.IsEvenOrOdd.isEven</a></div><div class="ttdeci">static boolean isEven(int nmbr)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/db2/_is_even_or_odd_8java_source.html#l00027">IsEvenOrOdd.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_a2ca8f64cd9382e4287651ca3f23eb43b"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a2ca8f64cd9382e4287651ca3f23eb43b">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.teamRangListe</a></div><div class="ttdeci">final TeamRangliste teamRangListe</div><div class="ttdef"><b>Definition</b> <a href="#l00038">KoRundeTeamPaarungen.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_a3fa92e9be0cf2cd580041e59ee815b52"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a3fa92e9be0cf2cd580041e59ee815b52">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.kanntauschenMit</a></div><div class="ttdeci">TauschTeams kanntauschenMit(final Team teamA, final List&lt; Team &gt; teamRangListeWork, final FormeSpielrunde formeSpielrunde)</div><div class="ttdoc">Versucht, einen Tausch zu finden: Ein bereits zugeordnetes B-Team wird mit einem noch verfügbaren Tea...</div><div class="ttdef"><b>Definition</b> <a href="#l00110">KoRundeTeamPaarungen.java:110</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_a4e2f9dfba3e5259313d61336ff7c6018"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a4e2f9dfba3e5259313d61336ff7c6018">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.getDoppelteGespieltePaarungen</a></div><div class="ttdeci">String getDoppelteGespieltePaarungen()</div><div class="ttdef"><b>Definition</b> <a href="#l00136">KoRundeTeamPaarungen.java:136</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_a74e5ecdee544b1517e0df592bb86984c"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a74e5ecdee544b1517e0df592bb86984c">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.getTeamRangListe</a></div><div class="ttdeci">TeamRangliste getTeamRangListe()</div><div class="ttdef"><b>Definition</b> <a href="#l00126">KoRundeTeamPaarungen.java:126</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_a8a5fcdad7530089ea2b4149a1e784408"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a8a5fcdad7530089ea2b4149a1e784408">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.doppelteGespieltePaarungenVorhanden</a></div><div class="ttdeci">boolean doppelteGespieltePaarungenVorhanden</div><div class="ttdef"><b>Definition</b> <a href="#l00039">KoRundeTeamPaarungen.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_a93b74a4fc15e4e5d7d829f9579b87291"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#a93b74a4fc15e4e5d7d829f9579b87291">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.doppelteGespieltePaarungen</a></div><div class="ttdeci">final List&lt; String &gt; doppelteGespieltePaarungen</div><div class="ttdef"><b>Definition</b> <a href="#l00040">KoRundeTeamPaarungen.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_ab59eb4630a72a3b5fb7a80aeb8dc0075"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ab59eb4630a72a3b5fb7a80aeb8dc0075">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.isDoppelteGespieltePaarungenVorhanden</a></div><div class="ttdeci">boolean isDoppelteGespieltePaarungenVorhanden()</div><div class="ttdef"><b>Definition</b> <a href="#l00131">KoRundeTeamPaarungen.java:131</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_ae92b9b8e150d97d363cf62b9018e07ad"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#ae92b9b8e150d97d363cf62b9018e07ad">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.sucheGegnerFuer</a></div><div class="ttdeci">Team sucheGegnerFuer(final Team teamA, final List&lt; Team &gt; teamRangListeWork)</div><div class="ttdoc">Sucht rückwärts in der Rangliste einen Gegner für teamA, gegen den teamA noch nicht gespielt hat.</div><div class="ttdef"><b>Definition</b> <a href="#l00094">KoRundeTeamPaarungen.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_aec436d5c9bcc9a48bbc70d8c940b65ee"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aec436d5c9bcc9a48bbc70d8c940b65ee">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.KoRundeTeamPaarungen</a></div><div class="ttdeci">KoRundeTeamPaarungen(TeamRangliste teamRangListe)</div><div class="ttdef"><b>Definition</b> <a href="#l00042">KoRundeTeamPaarungen.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen_html_aef5a7aded0ed073e896da81dbec232aa"><div class="ttname"><a href="../../d8/d25/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1_ko_runde_team_paarungen.html#aef5a7aded0ed073e896da81dbec232aa">de.petanqueturniermanager.algorithmen.common.KoRundeTeamPaarungen.generiereSpielrunde</a></div><div class="ttdeci">FormeSpielrunde generiereSpielrunde()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">KoRundeTeamPaarungen.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde_html"><div class="ttname"><a href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html">de.petanqueturniermanager.model.FormeSpielrunde</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00019">FormeSpielrunde.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde_html_a3626c4791f1f73d750bca23138bf603e"><div class="ttname"><a href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#a3626c4791f1f73d750bca23138bf603e">de.petanqueturniermanager.model.FormeSpielrunde.findTeamPaarung</a></div><div class="ttdeci">TeamPaarung findTeamPaarung(final Team team)</div><div class="ttdoc">suche in der liste entweder nach team A ode B</div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00078">FormeSpielrunde.java:78</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde_html_a4d86365d0dd5e7e1f5b1fd1d8df232c4"><div class="ttname"><a href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#a4d86365d0dd5e7e1f5b1fd1d8df232c4">de.petanqueturniermanager.model.FormeSpielrunde.getBTeams</a></div><div class="ttdeci">ImmutableList&lt; Team &gt; getBTeams()</div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00092">FormeSpielrunde.java:92</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde_html_a8379766b29c7b7ecd3dba228325238e9"><div class="ttname"><a href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#a8379766b29c7b7ecd3dba228325238e9">de.petanqueturniermanager.model.FormeSpielrunde.FormeSpielrunde</a></div><div class="ttdeci">FormeSpielrunde(int nr)</div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00026">FormeSpielrunde.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde_html_aa89acfe368244f6b6538ec9b22b013ff"><div class="ttname"><a href="../../dd/da2/classde_1_1petanqueturniermanager_1_1model_1_1_forme_spielrunde.html#aa89acfe368244f6b6538ec9b22b013ff">de.petanqueturniermanager.model.FormeSpielrunde.addPaarungWennNichtVorhanden</a></div><div class="ttdeci">FormeSpielrunde addPaarungWennNichtVorhanden(final TeamPaarung teamPaarung)</div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00030">FormeSpielrunde.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable_html_a0eedbc0c50986365122894596e47d11a"><div class="ttname"><a href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">de.petanqueturniermanager.model.NrComparable.getNr</a></div><div class="ttdeci">final int getNr()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_nr_comparable_8java_source.html#l00022">NrComparable.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable_html_adb5913961ef2ebf72997e4f9409f108c"><div class="ttname"><a href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#adb5913961ef2ebf72997e4f9409f108c">de.petanqueturniermanager.model.NrComparable.equals</a></div><div class="ttdeci">final boolean equals(Object obj)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_nr_comparable_8java_source.html#l00043">NrComparable.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">de.petanqueturniermanager.model.Team</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00019">Team.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html_a0d987b12608714871af626fb274509f5"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a0d987b12608714871af626fb274509f5">de.petanqueturniermanager.model.Team.hatAlsGegner</a></div><div class="ttdeci">boolean hatAlsGegner(Team team)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00065">Team.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_paarung_html"><div class="ttname"><a href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html">de.petanqueturniermanager.model.TeamPaarung</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d19/_team_paarung_8java_source.html#l00016">TeamPaarung.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_paarung_html_ae0d38dec4e3c6567d5a064c30d6a01fc"><div class="ttname"><a href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html#ae0d38dec4e3c6567d5a064c30d6a01fc">de.petanqueturniermanager.model.TeamPaarung.TeamPaarung</a></div><div class="ttdeci">TeamPaarung(Team a, Team b)</div><div class="ttdoc">wenn b = null dann freilos</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d19/_team_paarung_8java_source.html#l00027">TeamPaarung.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_paarung_html_aebe4bf91eed4b40cb1dc5f47a2f4850b"><div class="ttname"><a href="../../d7/dea/classde_1_1petanqueturniermanager_1_1model_1_1_team_paarung.html#aebe4bf91eed4b40cb1dc5f47a2f4850b">de.petanqueturniermanager.model.TeamPaarung.getA</a></div><div class="ttdeci">Team getA()</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d19/_team_paarung_8java_source.html#l00095">TeamPaarung.java:95</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste_html"><div class="ttname"><a href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html">de.petanqueturniermanager.model.TeamRangliste</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d07/_team_rangliste_8java_source.html#l00018">TeamRangliste.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste_html_a193f2628e96dc25a176316fb9b1d588a"><div class="ttname"><a href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html#a193f2628e96dc25a176316fb9b1d588a">de.petanqueturniermanager.model.TeamRangliste.size</a></div><div class="ttdeci">int size()</div><div class="ttdef"><b>Definition</b> <a href="../../db/d07/_team_rangliste_8java_source.html#l00070">TeamRangliste.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste_html_a6c3c3ba67b730dbb148f382f6995e2d9"><div class="ttname"><a href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html#a6c3c3ba67b730dbb148f382f6995e2d9">de.petanqueturniermanager.model.TeamRangliste.isEmpty</a></div><div class="ttdeci">boolean isEmpty()</div><div class="ttdef"><b>Definition</b> <a href="../../db/d07/_team_rangliste_8java_source.html#l00063">TeamRangliste.java:63</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste_html_abe5b1b8a717bb022e28dd7363b29ed81"><div class="ttname"><a href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html#abe5b1b8a717bb022e28dd7363b29ed81">de.petanqueturniermanager.model.TeamRangliste.getCloneTeamListe</a></div><div class="ttdeci">ArrayList&lt; Team &gt; getCloneTeamListe()</div><div class="ttdef"><b>Definition</b> <a href="../../db/d07/_team_rangliste_8java_source.html#l00036">TeamRangliste.java:36</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_html_a5320ef2bc6965627433076d2845203a2"><div class="ttname"><a href="../../d6/daa/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common.html#a5320ef2bc6965627433076d2845203a2">de.petanqueturniermanager.algorithmen.common.TauschTeams</a></div><div class="ttdeci">record TauschTeams(Team teamAusRangliste, TeamPaarung teamPaarungTausch)</div><div class="ttdoc">Kapselt einen gefundenen Tausch: das Team aus der Rangliste und die Paarung, deren B getauscht wird.</div><div class="ttdef"><b>Definition</b> <a href="../../df/de4/_tausch_teams_8java_source.html#l00007">TauschTeams.java:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_946f460c4ad1c6933c7b147c1968aa38.html">algorithmen</a></li><li class="navelem"><a href="../../dir_a4d2265d775fb79fe1d84b9f146329ed.html">common</a></li><li class="navelem"><a href="../../d3/d32/_ko_runde_team_paarungen_8java.html">KoRundeTeamPaarungen.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

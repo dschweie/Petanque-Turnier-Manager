@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/upload/ExportPfadHelper.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/dd1/_export_pfad_helper_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ExportPfadHelper.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/dd1/_export_pfad_helper_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.helper.upload;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.net.URI;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.net.MalformedURLException;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.nio.file.Path;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.Optional;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.sun.star.ui.dialogs.ExecutableDialogResults;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.ui.dialogs.FolderPicker;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.ui.dialogs.XFolderPicker2;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.sun.star.uno.XComponentContext;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.helper.DocumentPropertiesHelper;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html">   24</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a6678642ee71089f297146c2959fb0cd4">ExportPfadHelper</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#af59fb50823830c21afd0096b3c4d4402">   26</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#af59fb50823830c21afd0096b3c4d4402">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a6678642ee71089f297146c2959fb0cd4">ExportPfadHelper</a>.class);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ac39b945017b89a1b4750fb42dfffb6c2">   28</a></span>    <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ac39b945017b89a1b4750fb42dfffb6c2">DOC_PROP_LETZTER_PFAD</a> = <span class="stringliteral">&quot;Export Verzeichnis&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a6678642ee71089f297146c2959fb0cd4">   30</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a6678642ee71089f297146c2959fb0cd4">ExportPfadHelper</a>() {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a62a57ece0d7e0e739e785712707e40a8">   33</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> Optional&lt;Path&gt; <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a62a57ece0d7e0e739e785712707e40a8">waehlePfad</a>(XComponentContext xContext, <a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        var <a class="code hl_package" href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">helper</a> = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        String letzterPfad = <a class="code hl_package" href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">helper</a>.getStringProperty(<a class="code hl_variable" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ac39b945017b89a1b4750fb42dfffb6c2">DOC_PROP_LETZTER_PFAD</a>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        String ausgewaehlt = <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a13544b17a25299755a3f499faddda197">oeffneOrdnerPicker</a>(xContext,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;export.verzeichnis.dialog.titel&quot;</span>),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                letzterPfad.isEmpty() ? <span class="keyword">null</span> : letzterPfad);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span> (ausgewaehlt == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_package" href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">helper</a>.setStringPropertyOhneEvent(<a class="code hl_variable" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ac39b945017b89a1b4750fb42dfffb6c2">DOC_PROP_LETZTER_PFAD</a>, ausgewaehlt);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> Optional.of(Path.of(ausgewaehlt));</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a13544b17a25299755a3f499faddda197">   48</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a13544b17a25299755a3f499faddda197">oeffneOrdnerPicker</a>(XComponentContext xContext, String titel, String letzterPfad) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        XFolderPicker2 picker = FolderPicker.create(xContext);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        picker.setTitle(titel);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span> (letzterPfad != <span class="keyword">null</span> &amp;&amp; !letzterPfad.isEmpty()) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            picker.setDisplayDirectory(<a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ab7dba9caac8ffbbb08b9a28c9865021f">pfadAlsUrl</a>(letzterPfad));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (picker.execute() != ExecutableDialogResults.OK) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a931a88a0dd8fad41aaf6531f346276e3">urlAlsPfad</a>(picker.getDirectory());</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ab7dba9caac8ffbbb08b9a28c9865021f">   60</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ab7dba9caac8ffbbb08b9a28c9865021f">pfadAlsUrl</a>(String absoluterPfad) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> Path.of(absoluterPfad).toAbsolutePath().toUri().toURL().toExternalForm();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        } <span class="keywordflow">catch</span> (MalformedURLException | <a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_variable" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#af59fb50823830c21afd0096b3c4d4402">logger</a>.debug(<span class="stringliteral">&quot;Pfad → URL fehlgeschlagen: {}&quot;</span>, absoluterPfad);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a931a88a0dd8fad41aaf6531f346276e3">   69</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a931a88a0dd8fad41aaf6531f346276e3">urlAlsPfad</a>(String url) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> Path.of(URI.create(url)).toString();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> url;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+</div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a0a0cf75e4c5ea77ae70ffae3d3c72042"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">de.petanqueturniermanager.helper.DocumentPropertiesHelper.DocumentPropertiesHelper</a></div><div class="ttdeci">DocumentPropertiesHelper(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00065">DocumentPropertiesHelper.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">de.petanqueturniermanager.helper.i18n.I18n</a></div><div class="ttdoc">Lokalisierungs-Helfer.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00029">I18n.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html_a09756390c5ee255a5223ddad55a3910d"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">de.petanqueturniermanager.helper.i18n.I18n.get</a></div><div class="ttdeci">static String get(String key)</div><div class="ttdoc">Gibt den lokalisierten Text für den angegebenen Schlüssel zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00083">I18n.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_a13544b17a25299755a3f499faddda197"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a13544b17a25299755a3f499faddda197">de.petanqueturniermanager.helper.upload.ExportPfadHelper.oeffneOrdnerPicker</a></div><div class="ttdeci">static String oeffneOrdnerPicker(XComponentContext xContext, String titel, String letzterPfad)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">ExportPfadHelper.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_a62a57ece0d7e0e739e785712707e40a8"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a62a57ece0d7e0e739e785712707e40a8">de.petanqueturniermanager.helper.upload.ExportPfadHelper.waehlePfad</a></div><div class="ttdeci">static Optional&lt; Path &gt; waehlePfad(XComponentContext xContext, WorkingSpreadsheet ws)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">ExportPfadHelper.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_a6678642ee71089f297146c2959fb0cd4"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a6678642ee71089f297146c2959fb0cd4">de.petanqueturniermanager.helper.upload.ExportPfadHelper.ExportPfadHelper</a></div><div class="ttdeci">ExportPfadHelper()</div><div class="ttdef"><b>Definition</b> <a href="#l00030">ExportPfadHelper.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_a931a88a0dd8fad41aaf6531f346276e3"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#a931a88a0dd8fad41aaf6531f346276e3">de.petanqueturniermanager.helper.upload.ExportPfadHelper.urlAlsPfad</a></div><div class="ttdeci">static String urlAlsPfad(String url)</div><div class="ttdef"><b>Definition</b> <a href="#l00069">ExportPfadHelper.java:69</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_ab7dba9caac8ffbbb08b9a28c9865021f"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ab7dba9caac8ffbbb08b9a28c9865021f">de.petanqueturniermanager.helper.upload.ExportPfadHelper.pfadAlsUrl</a></div><div class="ttdeci">static String pfadAlsUrl(String absoluterPfad)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">ExportPfadHelper.java:60</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_ac39b945017b89a1b4750fb42dfffb6c2"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#ac39b945017b89a1b4750fb42dfffb6c2">de.petanqueturniermanager.helper.upload.ExportPfadHelper.DOC_PROP_LETZTER_PFAD</a></div><div class="ttdeci">static final String DOC_PROP_LETZTER_PFAD</div><div class="ttdef"><b>Definition</b> <a href="#l00028">ExportPfadHelper.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper_html_af59fb50823830c21afd0096b3c4d4402"><div class="ttname"><a href="../../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_pfad_helper.html#af59fb50823830c21afd0096b3c4d4402">de.petanqueturniermanager.helper.upload.ExportPfadHelper.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00026">ExportPfadHelper.java:26</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1helper_html"><div class="ttname"><a href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">de.petanqueturniermanager.helper</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_55a89787825c4377ac52f5a84e2d2576.html">upload</a></li><li class="navelem"><a href="../../d3/dd1/_export_pfad_helper_8java.html">ExportPfadHelper.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

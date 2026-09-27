@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/toolbar/TurnierSystemToolbarStrategieRegistry.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d28/_turnier_system_toolbar_strategie_registry_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TurnierSystemToolbarStrategieRegistry.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.Map;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.FormuleXToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.JGJToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.KaskadeToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.KoToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.LigaToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.MaastrichterToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.NichtVerfuegbarToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.PouleToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.SchweizerToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.SupermeleeToolbarStrategie;</code><br />
+<code>import de.petanqueturniermanager.toolbar.strategie.TripTeteToolbarStrategie;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für TurnierSystemToolbarStrategieRegistry.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/df1/_turnier_system_toolbar_strategie_registry_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2toolbar_2_turnier_system_toolbar_strategie_registry_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2toolbar_2_turnier_system_toolbar_strategie_registry_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2toolbar_2_turnier_system_toolbar_strategie_registry_8java">
+<area shape="rect" title=" " alt="" coords="1653,5,1976,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,101,131"/>
+<area shape="poly" title=" " alt="" coords="1650,29,1298,35,855,46,425,66,248,81,113,99,100,102,99,97,113,93,248,75,425,61,855,41,1298,30,1655,29"/>
+<area shape="rect" title=" " alt="" coords="125,96,434,139"/>
+<area shape="poly" title=" " alt="" coords="1650,33,1122,56,789,74,450,98,450,93,789,69,1122,50,1655,32"/>
+<area shape="rect" title=" " alt="" coords="459,96,738,139"/>
+<area shape="poly" title=" " alt="" coords="1650,35,1249,60,1003,77,754,98,753,93,1003,72,1248,54,1655,35"/>
+<area shape="rect" title=" " alt="" coords="763,96,1042,139"/>
+<area shape="poly" title=" " alt="" coords="1655,40,1379,67,1057,98,1057,93,1378,61,1650,41"/>
+<area shape="rect" title=" " alt="" coords="1067,96,1346,139"/>
+<area shape="poly" title=" " alt="" coords="1674,48,1362,96,1361,91,1669,49"/>
+<area shape="rect" title=" " alt="" coords="1371,96,1650,139"/>
+<area shape="poly" title=" " alt="" coords="1746,48,1597,94,1596,88,1740,49"/>
+<area shape="rect" title=" " alt="" coords="1675,96,1954,139"/>
+<area shape="poly" title=" " alt="" coords="1816,47,1816,82,1812,79,1812,50"/>
+<area shape="rect" title=" " alt="" coords="1979,96,2258,139"/>
+<area shape="poly" title=" " alt="" coords="1886,46,2035,91,2030,91,1885,51"/>
+<area shape="rect" title=" " alt="" coords="2283,96,2562,139"/>
+<area shape="poly" title=" " alt="" coords="1957,46,2270,94,2264,93,1957,51"/>
+<area shape="rect" title=" " alt="" coords="2587,96,2866,139"/>
+<area shape="poly" title=" " alt="" coords="1977,38,2251,61,2574,96,2569,96,2250,67,1976,43"/>
+<area shape="rect" title=" " alt="" coords="2891,96,3170,139"/>
+<area shape="poly" title=" " alt="" coords="1976,32,2380,54,2626,72,2878,96,2873,96,2626,77,2380,60,1976,38"/>
+<area shape="rect" title=" " alt="" coords="3195,96,3474,139"/>
+<area shape="poly" title=" " alt="" coords="1976,29,2507,49,2840,67,3182,96,3176,96,2840,73,2506,54,1976,34"/>
+<area shape="rect" title=" " alt="" coords="3499,96,3778,139"/>
+<area shape="poly" title=" " alt="" coords="1977,27,2258,33,2631,44,3053,63,3486,96,3480,96,3053,69,2631,49,2258,38,1977,32"/>
+</map>
+</div>
+</div>
+<p><a href="../../d5/d28/_turnier_system_toolbar_strategie_registry_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Etoolbar_2ETurnierSystemToolbarStrategieRegistry" id="r_de_2Epetanqueturniermanager_2Etoolbar_2ETurnierSystemToolbarStrategieRegistry"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">de.petanqueturniermanager.toolbar.TurnierSystemToolbarStrategieRegistry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registry, die jedem <code><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></code> eine passende <code><a class="el" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html">ITurnierSystemToolbarStrategie</a></code> zuordnet.  <a href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Etoolbar" id="r_de_2Epetanqueturniermanager_2Etoolbar"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../db/df3/namespacede_1_1petanqueturniermanager_1_1toolbar.html">de.petanqueturniermanager.toolbar</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_415ebf5c3b9e7ae8fc6f8641e29d27fc.html">toolbar</a></li><li class="navelem"><a href="../../d5/d28/_turnier_system_toolbar_strategie_registry_8java.html">TurnierSystemToolbarStrategieRegistry.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

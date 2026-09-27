@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_rangliste_hintergrund_farbe_un_gerade_char_red_style =
+[
+    [ "RanglisteHintergrundFarbeUnGeradeCharRedStyle", "d5/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_rangliste_hintergrund_farbe_un_gerade_char_red_style.html#a718e88c3e6e3031907e709101232c751", null ]
+];

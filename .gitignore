@@ -10,8 +10,15 @@ libs-test/
 *.iml
 *.iws
 .vscode/
+.vscode/settings.json
 !.vscode/launch.json
 !.vscode/tasks.json
+
+# doxygen html
+doc/html/*.md5
+doc/html/**/*.md5
+doc/html/*.map
+doc/html/**/*.map
 
 # Eclipse IDE files
 .project

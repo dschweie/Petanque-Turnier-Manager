@@ -1,0 +1,4 @@
+var _meldungen_hintergrund_farbe_un_gerade_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.MeldungenHintergrundFarbeUnGeradeStyle", "db/d91/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_meldungen_hintergrund_farbe_un_gerade_style.html", "db/d91/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_meldungen_hintergrund_farbe_un_gerade_style" ]
+];

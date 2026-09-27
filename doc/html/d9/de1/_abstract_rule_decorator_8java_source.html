@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/algorithmen/common/ruleset/matchup/AbstractRuleDecorator.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/de1/_abstract_rule_decorator_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AbstractRuleDecorator.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/de1/_abstract_rule_decorator_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.algorithmen.common.ruleset.matchup;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.petanqueturniermanager.model.MeleeSpielRunde;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> de.petanqueturniermanager.model.NrComparable;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> de.petanqueturniermanager.model.Team;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html">   38</a></span><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a22741d689b03c502068d25547cb04b55">AbstractRuleDecorator</a> <span class="keyword">implements</span> <a class="code hl_interface" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html">IMatchup</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a55a3672d5d11cf8786f05bbd4b3d7c80">   46</a></span>    <span class="keyword">protected</span> <a class="code hl_interface" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html">IMatchup</a> <a class="code hl_variable" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a55a3672d5d11cf8786f05bbd4b3d7c80">nextMatchupRule</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a22741d689b03c502068d25547cb04b55">   55</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a22741d689b03c502068d25547cb04b55">AbstractRuleDecorator</a>()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        this.nextMatchupRule = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/da4/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_default_core_rule.html">DefaultCoreRule</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#aff9114f2e2529d6c17e73d7b9978e4c9">   70</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#aff9114f2e2529d6c17e73d7b9978e4c9">AbstractRuleDecorator</a>(<a class="code hl_interface" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html">IMatchup</a> component)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        this.nextMatchupRule = component;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    @Override</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a2cb3bc04f56a08c219520729f7a354ee">   97</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a2cb3bc04f56a08c219520729f7a354ee">isMatchupValid</a>(<a class="code hl_class" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html">NrComparable</a> <a class="code hl_package" href="../../df/d87/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup.html">matchup</a>)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a3d38e3cffa25a4561786508b91029825">performCheck</a>(<a class="code hl_package" href="../../df/d87/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup.html">matchup</a>) &amp;&amp; this.nextMatchupRule.<a class="code hl_function" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a53bf3b7a0671b6eaf7f6d79f08186685">isMatchupValid</a>(<a class="code hl_package" href="../../df/d87/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup.html">matchup</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    @Override </div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a224dd9264d5f72f7cc65936b5c74a08a">  124</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a224dd9264d5f72f7cc65936b5c74a08a">isMatchupValid</a>(<a class="code hl_class" href="../../d0/d17/classde_1_1petanqueturniermanager_1_1model_1_1_melee_spiel_runde.html">MeleeSpielRunde</a> round) </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a3d38e3cffa25a4561786508b91029825">performCheck</a>(round) &amp;&amp; this.nextMatchupRule.<a class="code hl_function" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a53bf3b7a0671b6eaf7f6d79f08186685">isMatchupValid</a>(round);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    @Override </div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a877fd5e0501fb7b02371a5dba13ca7ce">  155</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a877fd5e0501fb7b02371a5dba13ca7ce">isMatchupValid</a>(<a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> first, <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> second)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a3d38e3cffa25a4561786508b91029825">performCheck</a>(first, second) &amp;&amp; this.nextMatchupRule.<a class="code hl_function" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a53bf3b7a0671b6eaf7f6d79f08186685">isMatchupValid</a>(first, second);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span></div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a3d38e3cffa25a4561786508b91029825">  184</a></span>    <span class="keyword">protected</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a3d38e3cffa25a4561786508b91029825">performCheck</a>(<a class="code hl_class" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html">NrComparable</a> <a class="code hl_package" href="../../df/d87/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup.html">matchup</a>)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    </div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a08e1a759bb2bc9c0b2704c6efd0c8198">  213</a></span>    <span class="keyword">protected</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a08e1a759bb2bc9c0b2704c6efd0c8198">performCheck</a>(<a class="code hl_class" href="../../d0/d17/classde_1_1petanqueturniermanager_1_1model_1_1_melee_spiel_runde.html">MeleeSpielRunde</a> round)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    </div>
+<div class="foldopen" id="foldopen00241" data-start="{" data-end="}">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#afa5120b1887e66ad7a9437e630588c3c">  241</a></span>    <span class="keyword">protected</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#afa5120b1887e66ad7a9437e630588c3c">performCheck</a>(<a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> first, <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> second)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
+</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    @Override</div>
+<div class="foldopen" id="foldopen00266" data-start="{" data-end="}">
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#aafbcb2242e698781ba99192a447c9f3d">  266</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#aafbcb2242e698781ba99192a447c9f3d">isRulesetSuspendable</a>() </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">return</span> (this.<a class="code hl_function" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a4ba90bc7a5a8064319ae22f520536933">isRuleSuspendable</a>() || this.nextMatchupRule.<a class="code hl_function" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a4ba90bc7a5a8064319ae22f520536933">isRuleSuspendable</a>());</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    }</div>
+</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a08e1a759bb2bc9c0b2704c6efd0c8198"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a08e1a759bb2bc9c0b2704c6efd0c8198">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.performCheck</a></div><div class="ttdeci">boolean performCheck(MeleeSpielRunde round)</div><div class="ttdoc">Default-Implementierung, die  immer true zurückgibt.</div><div class="ttdef"><b>Definition</b> <a href="#l00213">AbstractRuleDecorator.java:213</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a224dd9264d5f72f7cc65936b5c74a08a"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a224dd9264d5f72f7cc65936b5c74a08a">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.isMatchupValid</a></div><div class="ttdeci">boolean isMatchupValid(MeleeSpielRunde round)</div><div class="ttdoc">Prüft die Informationen in round auf Zulässigkeit.</div><div class="ttdef"><b>Definition</b> <a href="#l00124">AbstractRuleDecorator.java:124</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a22741d689b03c502068d25547cb04b55"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a22741d689b03c502068d25547cb04b55">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.AbstractRuleDecorator</a></div><div class="ttdeci">AbstractRuleDecorator()</div><div class="ttdoc">Konstruktor ohne Parameter.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">AbstractRuleDecorator.java:55</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a2cb3bc04f56a08c219520729f7a354ee"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a2cb3bc04f56a08c219520729f7a354ee">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.isMatchupValid</a></div><div class="ttdeci">boolean isMatchupValid(NrComparable matchup)</div><div class="ttdoc">Prüft die Informationen in matchup auf Zulässigkeit.</div><div class="ttdef"><b>Definition</b> <a href="#l00097">AbstractRuleDecorator.java:97</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a3d38e3cffa25a4561786508b91029825"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a3d38e3cffa25a4561786508b91029825">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.performCheck</a></div><div class="ttdeci">boolean performCheck(NrComparable matchup)</div><div class="ttdoc">Default-Implementierung, die  immer true zurückgibt.</div><div class="ttdef"><b>Definition</b> <a href="#l00184">AbstractRuleDecorator.java:184</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a55a3672d5d11cf8786f05bbd4b3d7c80"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a55a3672d5d11cf8786f05bbd4b3d7c80">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.nextMatchupRule</a></div><div class="ttdeci">IMatchup nextMatchupRule</div><div class="ttdoc">In dem Attribut wird die folgende Komponente gehalten.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">AbstractRuleDecorator.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a877fd5e0501fb7b02371a5dba13ca7ce"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a877fd5e0501fb7b02371a5dba13ca7ce">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.isMatchupValid</a></div><div class="ttdeci">boolean isMatchupValid(Team first, Team second)</div><div class="ttdoc">Prüft eine Begegnung aus zwei Teams.</div><div class="ttdef"><b>Definition</b> <a href="#l00155">AbstractRuleDecorator.java:155</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_aafbcb2242e698781ba99192a447c9f3d"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#aafbcb2242e698781ba99192a447c9f3d">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.isRulesetSuspendable</a></div><div class="ttdeci">boolean isRulesetSuspendable()</div><div class="ttdoc">Methode liefert die Information, ob es in dem Regelwerk mindestens eine Regel gibt,...</div><div class="ttdef"><b>Definition</b> <a href="#l00266">AbstractRuleDecorator.java:266</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_afa5120b1887e66ad7a9437e630588c3c"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#afa5120b1887e66ad7a9437e630588c3c">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.performCheck</a></div><div class="ttdeci">boolean performCheck(Team first, Team second)</div><div class="ttdoc">Default-Implementierung, die  immer true zurückgibt.</div><div class="ttdef"><b>Definition</b> <a href="#l00241">AbstractRuleDecorator.java:241</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_aff9114f2e2529d6c17e73d7b9978e4c9"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#aff9114f2e2529d6c17e73d7b9978e4c9">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.AbstractRuleDecorator</a></div><div class="ttdeci">AbstractRuleDecorator(IMatchup component)</div><div class="ttdoc">Konstruktor, dem die zuverknüpfende Komponente übergeben wird.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">AbstractRuleDecorator.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_default_core_rule_html"><div class="ttname"><a href="../../d6/da4/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_default_core_rule.html">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.DefaultCoreRule</a></div><div class="ttdoc">Die Klasse ist konkrete Komponente, die durch Dekorierer Zusatzfunktionen erhält.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d02/_default_core_rule_8java_source.html#l00022">DefaultCoreRule.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_melee_spiel_runde_html"><div class="ttname"><a href="../../d0/d17/classde_1_1petanqueturniermanager_1_1model_1_1_melee_spiel_runde.html">de.petanqueturniermanager.model.MeleeSpielRunde</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd3/_melee_spiel_runde_8java_source.html#l00019">MeleeSpielRunde.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable_html"><div class="ttname"><a href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html">de.petanqueturniermanager.model.NrComparable</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_nr_comparable_8java_source.html#l00014">NrComparable.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">de.petanqueturniermanager.model.Team</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00019">Team.java:19</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup_html"><div class="ttname"><a href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.IMatchup</a></div><div class="ttdoc">Das Interface repräsentiert die Komponente gemäß des Strukturmusters des Dekorierers.</div><div class="ttdef"><b>Definition</b> <a href="../../da/d12/_i_matchup_8java_source.html#l00080">IMatchup.java:80</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup_html_a4ba90bc7a5a8064319ae22f520536933"><div class="ttname"><a href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a4ba90bc7a5a8064319ae22f520536933">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.IMatchup.isRuleSuspendable</a></div><div class="ttdeci">boolean isRuleSuspendable()</div><div class="ttdoc">Methode liefert die Information, ob die konkrete Regel deaktiviert werden kann.</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup_html_a53bf3b7a0671b6eaf7f6d79f08186685"><div class="ttname"><a href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html#a53bf3b7a0671b6eaf7f6d79f08186685">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.IMatchup.isMatchupValid</a></div><div class="ttdeci">boolean isMatchupValid(NrComparable matchup)</div><div class="ttdoc">Prüft die Informationen in matchup auf Zulässigkeit.</div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_html"><div class="ttname"><a href="../../df/d87/namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup.html">de.petanqueturniermanager.algorithmen.common.ruleset.matchup</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d93/_abstract_configurable_rule_decorator_8java_source.html#l00001">AbstractConfigurableRuleDecorator.java:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_946f460c4ad1c6933c7b147c1968aa38.html">algorithmen</a></li><li class="navelem"><a href="../../dir_a4d2265d775fb79fe1d84b9f146329ed.html">common</a></li><li class="navelem"><a href="../../dir_7b337dd080b95d8ebd44a8c06cb0c27b.html">ruleset</a></li><li class="navelem"><a href="../../dir_2bd8c402acc8b47e5d9173a6b8ae9fb3.html">matchup</a></li><li class="navelem"><a href="../../d9/de1/_abstract_rule_decorator_8java.html">AbstractRuleDecorator.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

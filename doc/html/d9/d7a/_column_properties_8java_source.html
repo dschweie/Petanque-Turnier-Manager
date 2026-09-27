@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/cellvalue/properties/ColumnProperties.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d7a/_column_properties_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ColumnProperties.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d7a/_column_properties_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* Erstellung : 15.04.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">**/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.helper.cellvalue.properties;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Spalte</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html">   10</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#ac7a63337f3dd953445895feda27a96b7">CommonProperties</a>&lt;ColumnProperties&gt; {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a1b0b272062a964f4e82e836700713348">   12</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a1b0b272062a964f4e82e836700713348">serialVersionUID</a> = 1L;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a8dabebdf4e582f8b0e1037801964ba8c">   14</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a8dabebdf4e582f8b0e1037801964ba8c">ISVISIBLE</a> = <span class="stringliteral">&quot;IsVisible&quot;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">   16</a></span>    <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a>() {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a780e46cb5e764457f97d1c149d5fc6cf">   19</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a780e46cb5e764457f97d1c149d5fc6cf">from</a>() {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a9122ff9880e054f5b486650d49850e92">   23</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a9122ff9880e054f5b486650d49850e92">from</a>(String key, Object value) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        checkNotNull(key);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        checkNotNull(value);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a>.from().put(key, value);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a773b4438911c2db38b56a0a94870ebcc">   29</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a773b4438911c2db38b56a0a94870ebcc">setWidth</a>(<span class="keywordtype">int</span> width) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#a09666858fafebae31a6afcdd3e60cd36">put</a>(WIDTH, width);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a35e6d4a9d7a38b6b25170573ca7cb93a">   40</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">ColumnProperties</a> <a class="code hl_function" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a35e6d4a9d7a38b6b25170573ca7cb93a">isVisible</a>(<span class="keywordtype">boolean</span> visible) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#a09666858fafebae31a6afcdd3e60cd36">put</a>(<a class="code hl_variable" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a8dabebdf4e582f8b0e1037801964ba8c">ISVISIBLE</a>, visible);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a1b0b272062a964f4e82e836700713348"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a1b0b272062a964f4e82e836700713348">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.serialVersionUID</a></div><div class="ttdeci">static final long serialVersionUID</div><div class="ttdef"><b>Definition</b> <a href="#l00012">ColumnProperties.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a35e6d4a9d7a38b6b25170573ca7cb93a"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a35e6d4a9d7a38b6b25170573ca7cb93a">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.isVisible</a></div><div class="ttdeci">ColumnProperties isVisible(boolean visible)</div><div class="ttdoc">Achtung: Bug ?</div><div class="ttdef"><b>Definition</b> <a href="#l00040">ColumnProperties.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a6a1048199acb289c249794b577af0e1a"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a6a1048199acb289c249794b577af0e1a">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.ColumnProperties</a></div><div class="ttdeci">ColumnProperties()</div><div class="ttdef"><b>Definition</b> <a href="#l00016">ColumnProperties.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a773b4438911c2db38b56a0a94870ebcc"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a773b4438911c2db38b56a0a94870ebcc">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.setWidth</a></div><div class="ttdeci">ColumnProperties setWidth(int width)</div><div class="ttdef"><b>Definition</b> <a href="#l00029">ColumnProperties.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a780e46cb5e764457f97d1c149d5fc6cf"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a780e46cb5e764457f97d1c149d5fc6cf">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.from</a></div><div class="ttdeci">static ColumnProperties from()</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ColumnProperties.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a8dabebdf4e582f8b0e1037801964ba8c"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a8dabebdf4e582f8b0e1037801964ba8c">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.ISVISIBLE</a></div><div class="ttdeci">static final String ISVISIBLE</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ColumnProperties.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html_a9122ff9880e054f5b486650d49850e92"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html#a9122ff9880e054f5b486650d49850e92">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties.from</a></div><div class="ttdeci">static ColumnProperties from(String key, Object value)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ColumnProperties.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties_html_a09666858fafebae31a6afcdd3e60cd36"><div class="ttname"><a href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#a09666858fafebae31a6afcdd3e60cd36">de.petanqueturniermanager.helper.cellvalue.properties.CommonProperties&lt; ColumnProperties &gt;::put</a></div><div class="ttdeci">final T put(String key, Object value)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d31/_common_properties_8java_source.html#l00035">CommonProperties.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties_html_ac7a63337f3dd953445895feda27a96b7"><div class="ttname"><a href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#ac7a63337f3dd953445895feda27a96b7">de.petanqueturniermanager.helper.cellvalue.properties.CommonProperties&lt; ColumnProperties &gt;::CommonProperties</a></div><div class="ttdeci">CommonProperties()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d31/_common_properties_8java_source.html#l00030">CommonProperties.java:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_1974395012eff4559c140bfbeed91b40.html">cellvalue</a></li><li class="navelem"><a href="../../dir_3aa426d3dbc12a19d082eaeb96a69bdb.html">properties</a></li><li class="navelem"><a href="../../d9/d7a/_column_properties_8java.html">ColumnProperties.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

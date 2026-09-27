@@ -1,0 +1,5 @@
+var _maastrichter_turnier_parameter_dialog_8java =
+[
+    [ "de.petanqueturniermanager.maastrichter.meldeliste.MaastrichterTurnierParameterDialog", "d5/dca/classde_1_1petanqueturniermanager_1_1maastrichter_1_1meldeliste_1_1_maastrichter_turnier_parameter_dialog.html", "d5/dca/classde_1_1petanqueturniermanager_1_1maastrichter_1_1meldeliste_1_1_maastrichter_turnier_parameter_dialog" ],
+    [ "de.petanqueturniermanager.maastrichter.meldeliste.MaastrichterTurnierParameterDialog.TurnierParameter", "d8/de0/classde_1_1petanqueturniermanager_1_1maastrichter_1_1meldeliste_1_1_maastrichter_turnier_parameter_dialog_1_1_turnier_parameter.html", "d8/de0/classde_1_1petanqueturniermanager_1_1maastrichter_1_1meldeliste_1_1_maastrichter_turnier_parameter_dialog_1_1_turnier_parameter" ]
+];

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/sheetsync/SpielplanFormatiererSheetRunner.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d96/_spielplan_formatierer_sheet_runner_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielplanFormatiererSheetRunner.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.google.common.base.Preconditions.checkNotNull;</code><br />
+<code>import java.util.List;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import org.jspecify.annotations.Nullable;</code><br />
+<code>import com.sun.star.beans.XPropertySet;</code><br />
+<code>import com.sun.star.sheet.XSheetConditionalEntries;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import com.sun.star.uno.XComponentContext;</code><br />
+<code>import de.petanqueturniermanager.SheetRunner;</code><br />
+<code>import de.petanqueturniermanager.basesheet.konfiguration.IKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.ISheet;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.TurnierSheet;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.BlattschutzManager;</code><br />
+<code>import de.petanqueturniermanager.toolbar.TurnierModus;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SpielplanFormatiererSheetRunner.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/da9/_spielplan_formatierer_sheet_runner_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2helper_2sheetsync_2_spielplan_formatierer_sheet_runner_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2helper_2sheetsync_2_spielplan_formatierer_sheet_runner_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2helper_2sheetsync_2_spielplan_formatierer_sheet_runner_8java">
+<area shape="rect" title=" " alt="" coords="2321,5,2602,64"/>
+<area shape="rect" title=" " alt="" coords="5,112,302,155"/>
+<area shape="poly" title=" " alt="" coords="2318,37,1971,44,1477,55,904,78,609,94,317,114,317,109,608,89,904,72,1477,50,1971,38,2323,37"/>
+<area shape="rect" title=" " alt="" coords="325,120,416,147"/>
+<area shape="poly" title=" " alt="" coords="2318,36,1907,41,1361,51,1082,61,821,74,598,92,429,115,416,118,415,112,428,109,597,86,821,69,1081,55,1361,46,1907,36,2323,36"/>
+<area shape="rect" title=" " alt="" coords="440,112,606,155"/>
+<area shape="poly" title=" " alt="" coords="2318,39,1950,50,1466,65,984,87,780,100,621,114,620,109,780,94,984,81,1465,60,1949,45,2323,39"/>
+<area shape="rect" title=" " alt="" coords="630,112,795,155"/>
+<area shape="poly" title=" " alt="" coords="2318,35,2044,39,1671,49,1245,72,1026,91,810,114,810,109,1025,85,1245,67,1671,44,2044,34,2323,35"/>
+<area shape="rect" title=" " alt="" coords="819,112,981,155"/>
+<area shape="poly" title=" " alt="" coords="2318,36,2074,42,1746,53,1375,76,1185,93,997,114,997,109,1184,88,1375,70,1746,48,2073,37,2323,36"/>
+<area shape="rect" title=" " alt="" coords="1006,120,1224,147"/>
+<area shape="poly" title=" " alt="" coords="2318,40,1840,65,1539,86,1236,115,1199,120,1199,114,1236,109,1538,81,1839,60,2323,40"/>
+<area shape="rect" title=" " alt="" coords="1249,112,1429,155"/>
+<area shape="poly" title=" " alt="" coords="2323,41,1930,66,1689,87,1444,114,1444,109,1689,81,1929,61,2318,41"/>
+<area shape="rect" title=" " alt="" coords="1453,120,1672,147"/>
+<area shape="poly" title=" " alt="" coords="2323,47,2027,76,1685,115,1650,120,1649,114,1684,109,2027,71,2318,47"/>
+<area shape="rect" title=" " alt="" coords="1696,112,1899,155"/>
+<area shape="poly" title=" " alt="" coords="2323,54,1914,114,1914,109,2318,54"/>
+<area shape="rect" title=" " alt="" coords="1922,112,2105,155"/>
+<area shape="poly" title=" " alt="" coords="2331,64,2120,112,2119,107,2326,65"/>
+<area shape="rect" title=" " alt="" coords="2129,112,2453,155"/>
+<area shape="poly" title=" " alt="" coords="2413,64,2341,106,2340,101,2408,65"/>
+<area shape="rect" title=" " alt="" coords="2478,112,2787,155"/>
+<area shape="poly" title=" " alt="" coords="2513,62,2585,105,2580,103,2512,67"/>
+<area shape="rect" title=" " alt="" coords="2811,112,3029,155"/>
+<area shape="poly" title=" " alt="" coords="2598,62,2809,108,2804,108,2598,67"/>
+<area shape="rect" title=" " alt="" coords="3054,112,3296,155"/>
+<area shape="poly" title=" " alt="" coords="2603,51,3041,112,3035,111,2603,56"/>
+<area shape="rect" title=" " alt="" coords="3320,112,3542,155"/>
+<area shape="poly" title=" " alt="" coords="2603,43,2920,68,3307,112,3302,112,2920,74,2603,48"/>
+<area shape="rect" title=" " alt="" coords="3565,120,3800,147"/>
+<area shape="poly" title=" " alt="" coords="2603,39,3029,64,3291,84,3554,109,3596,117,3591,117,3553,115,3291,89,3029,69,2603,45"/>
+<area shape="rect" title=" " alt="" coords="3825,112,4095,155"/>
+<area shape="poly" title=" " alt="" coords="2603,38,3129,61,3466,81,3812,112,3807,112,3465,87,3129,66,2603,43"/>
+<area shape="rect" title=" " alt="" coords="4120,112,4377,155"/>
+<area shape="poly" title=" " alt="" coords="2603,35,2877,42,3248,55,3671,76,4107,112,4102,112,3671,82,3248,60,2877,47,2603,41"/>
+<area shape="rect" title=" " alt="" coords="4401,112,4658,155"/>
+<area shape="poly" title=" " alt="" coords="2603,34,2920,38,3360,50,3867,72,4128,89,4388,112,4383,112,4128,94,3867,77,3360,55,2920,44,2603,39"/>
+<area shape="rect" title=" " alt="" coords="4682,112,4940,155"/>
+<area shape="poly" title=" " alt="" coords="2603,33,2962,35,3470,45,4061,68,4367,86,4669,112,4664,112,4366,91,4061,74,3470,51,2962,41,2603,38"/>
+<area shape="rect" title=" " alt="" coords="4964,112,5290,155"/>
+<area shape="poly" title=" " alt="" coords="2602,34,3002,37,3579,48,4255,70,4605,87,4951,112,4946,112,4604,93,4255,76,3579,53,3002,42,2603,39"/>
+<area shape="rect" title=" " alt="" coords="5314,112,5540,155"/>
+<area shape="poly" title=" " alt="" coords="2602,35,3153,41,3925,55,4710,77,5042,92,5301,112,5296,112,5042,97,4710,83,3925,61,3153,47,2603,40"/>
+</map>
+</div>
+</div>
+<p><a href="../../dd/d96/_spielplan_formatierer_sheet_runner_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Esheetsync_2ESpielplanFormatiererSheetRunner_2EKonfigSupplier" id="r_de_2Epetanqueturniermanager_2Ehelper_2Esheetsync_2ESpielplanFormatiererSheetRunner_2EKonfigSupplier"><td class="memItemLeft">interface &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d02/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_sheet_runner_1_1_konfig_supplier.html">de.petanqueturniermanager.helper.sheetsync.SpielplanFormatiererSheetRunner.KonfigSupplier</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert die Formatierungs-Konfiguration für das konkrete Sheet.  <a href="../../d0/d02/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_sheet_runner_1_1_konfig_supplier.html#details">Mehr ...</a><br /></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Esheetsync_2ESpielplanFormatiererSheetRunner" id="r_de_2Epetanqueturniermanager_2Ehelper_2Esheetsync_2ESpielplanFormatiererSheetRunner"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/df1/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_sheet_runner.html">de.petanqueturniermanager.helper.sheetsync.SpielplanFormatiererSheetRunner</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generischer, systemübergreifender Formatierungs-Runner für Spielplan- und Spielrunden-Sheets.  <a href="../../d5/df1/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_sheet_runner.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Esheetsync" id="r_de_2Epetanqueturniermanager_2Ehelper_2Esheetsync"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d6/de4/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync.html">de.petanqueturniermanager.helper.sheetsync</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_4a87b3b2cbeffc285fa362e36e4b59d8.html">sheetsync</a></li><li class="navelem"><a href="../../dd/d96/_spielplan_formatierer_sheet_runner_8java.html">SpielplanFormatiererSheetRunner.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

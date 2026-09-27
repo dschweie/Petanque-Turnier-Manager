@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_meldungen_hintergrund_farbe_gerade_style =
+[
+    [ "MeldungenHintergrundFarbeGeradeStyle", "de/de7/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_meldungen_hintergrund_farbe_gerade_style.html#adb1b082114b78015c4a84855136ef436", null ]
+];

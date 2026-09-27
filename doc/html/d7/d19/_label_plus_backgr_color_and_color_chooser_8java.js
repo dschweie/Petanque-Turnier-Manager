@@ -1,0 +1,4 @@
+var _label_plus_backgr_color_and_color_chooser_8java =
+[
+    [ "de.petanqueturniermanager.konfigdialog.gui.LabelPlusBackgrColorAndColorChooser", "d1/d03/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_backgr_color_and_color_chooser.html", "d1/d03/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_backgr_color_and_color_chooser" ]
+];

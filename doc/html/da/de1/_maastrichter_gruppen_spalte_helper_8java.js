@@ -1,0 +1,4 @@
+var _maastrichter_gruppen_spalte_helper_8java =
+[
+    [ "de.petanqueturniermanager.maastrichter.rangliste.MaastrichterGruppenSpalteHelper", "d3/da8/classde_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste_1_1_maastrichter_gruppen_spalte_helper.html", "d3/da8/classde_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste_1_1_maastrichter_gruppen_spalte_helper" ]
+];

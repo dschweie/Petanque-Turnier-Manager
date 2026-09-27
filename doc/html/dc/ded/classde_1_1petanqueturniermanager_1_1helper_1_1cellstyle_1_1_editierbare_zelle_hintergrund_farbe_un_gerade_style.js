@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_un_gerade_style =
+[
+    [ "EditierbareZelleHintergrundFarbeUnGeradeStyle", "dc/ded/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_un_gerade_style.html#a614caea056c45415afb24f419f4bd144", null ]
+];

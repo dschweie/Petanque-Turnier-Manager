@@ -1,0 +1,5 @@
+var namespacede_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde =
+[
+    [ "MaastrichterSpielrundeSheetNaechste", "d3/def/classde_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde_1_1_maastrichter_spielrunde_sheet_naechste.html", "d3/def/classde_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde_1_1_maastrichter_spielrunde_sheet_naechste" ],
+    [ "MaastrichterSpielrundeSheetUpdate", "db/da5/classde_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde_1_1_maastrichter_spielrunde_sheet_update.html", "db/da5/classde_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde_1_1_maastrichter_spielrunde_sheet_update" ]
+];

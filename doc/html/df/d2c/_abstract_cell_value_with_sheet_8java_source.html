@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/cellvalue/AbstractCellValueWithSheet.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d2c/_abstract_cell_value_with_sheet_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AbstractCellValueWithSheet.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d2c/_abstract_cell_value_with_sheet_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 21.04.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.helper.cellvalue;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.Position;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>@SuppressWarnings(<span class="stringliteral">&quot;rawtypes&quot;</span>)</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html">   17</a></span>public abstract class <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#aa6ef22d0a5248f4ae2aa587c65c6efd2">AbstractCellValueWithSheet</a>&lt;T extends <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#aa6ef22d0a5248f4ae2aa587c65c6efd2">AbstractCellValueWithSheet</a>, V&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        extends <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a006f7182c400e2abdc3d05c6867a76dc">AbstractCellValue</a>&lt;T, V&gt; implements <a class="code hl_interface" href="../../d8/d69/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet.html">ICellValueWithSheet</a>&lt;V&gt; {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">   20</a></span>    <span class="keyword">private</span> XSpreadsheet <a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#aa6ef22d0a5248f4ae2aa587c65c6efd2">   22</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#aa6ef22d0a5248f4ae2aa587c65c6efd2">AbstractCellValueWithSheet</a>(XSpreadsheet <a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">this</span>(<a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>, <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(0, 0));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#ab50e771f40b4ed16d20bb1d0dd2a5897">   26</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#ab50e771f40b4ed16d20bb1d0dd2a5897">AbstractCellValueWithSheet</a>(XSpreadsheet <a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>, <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        super(<a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        checkNotNull(<a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>, <span class="stringliteral">&quot;sheet=null&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        this.<a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a141e914030103f36cd3f2721d9dad787">setSheet</a>(<a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a31fb9d0b2489a17ab1525545f794b68e">   32</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#aa6ef22d0a5248f4ae2aa587c65c6efd2">AbstractCellValueWithSheet</a> <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a31fb9d0b2489a17ab1525545f794b68e">copyCommonAttr</a>(<a class="code hl_interface" href="../../d8/d69/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet.html">ICellValueWithSheet&lt;?&gt;</a> abstractCellValue) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        super.<a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a31fb9d0b2489a17ab1525545f794b68e">copyCommonAttr</a>(abstractCellValue);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        this.<a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a141e914030103f36cd3f2721d9dad787">setSheet</a>(abstractCellValue.<a class="code hl_function" href="../../d8/d69/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet.html#a7884c06740e02cb150c71d0666e6caad">getSheet</a>());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    @Override</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a1b6c53387b16d28209788241703ae635">   39</a></span>    <span class="keyword">public</span> XSpreadsheet <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a1b6c53387b16d28209788241703ae635">getSheet</a>() {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> this.sheet;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    @SuppressWarnings(<span class="stringliteral">&quot;unchecked&quot;</span>)</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a141e914030103f36cd3f2721d9dad787">   44</a></span>    public T <a class="code hl_function" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a141e914030103f36cd3f2721d9dad787">setSheet</a>(XSpreadsheet <a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        this.sheet = checkNotNull(<a class="code hl_variable" href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">sheet</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> (T) <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_a006f7182c400e2abdc3d05c6867a76dc"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a006f7182c400e2abdc3d05c6867a76dc">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; T, V &gt;::AbstractCellValue</a></div><div class="ttdeci">AbstractCellValue()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00037">AbstractCellValue.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_ac63367bc07f6b79d55e70c0ea115dc23"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; T, V &gt;::pos</a></div><div class="ttdeci">Position pos</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00028">AbstractCellValue.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet_html_a141e914030103f36cd3f2721d9dad787"><div class="ttname"><a href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a141e914030103f36cd3f2721d9dad787">de.petanqueturniermanager.helper.cellvalue.AbstractCellValueWithSheet.setSheet</a></div><div class="ttdeci">T setSheet(XSpreadsheet sheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">AbstractCellValueWithSheet.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet_html_a1b6c53387b16d28209788241703ae635"><div class="ttname"><a href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a1b6c53387b16d28209788241703ae635">de.petanqueturniermanager.helper.cellvalue.AbstractCellValueWithSheet.getSheet</a></div><div class="ttdeci">XSpreadsheet getSheet()</div><div class="ttdef"><b>Definition</b> <a href="#l00039">AbstractCellValueWithSheet.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet_html_a31fb9d0b2489a17ab1525545f794b68e"><div class="ttname"><a href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a31fb9d0b2489a17ab1525545f794b68e">de.petanqueturniermanager.helper.cellvalue.AbstractCellValueWithSheet.copyCommonAttr</a></div><div class="ttdeci">AbstractCellValueWithSheet copyCommonAttr(ICellValueWithSheet&lt;?&gt; abstractCellValue)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">AbstractCellValueWithSheet.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet_html_a60444279257e5bcf57c21d468ea28e4d"><div class="ttname"><a href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#a60444279257e5bcf57c21d468ea28e4d">de.petanqueturniermanager.helper.cellvalue.AbstractCellValueWithSheet.sheet</a></div><div class="ttdeci">XSpreadsheet sheet</div><div class="ttdef"><b>Definition</b> <a href="#l00020">AbstractCellValueWithSheet.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet_html_aa6ef22d0a5248f4ae2aa587c65c6efd2"><div class="ttname"><a href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#aa6ef22d0a5248f4ae2aa587c65c6efd2">de.petanqueturniermanager.helper.cellvalue.AbstractCellValueWithSheet.AbstractCellValueWithSheet</a></div><div class="ttdeci">AbstractCellValueWithSheet(XSpreadsheet sheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">AbstractCellValueWithSheet.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet_html_ab50e771f40b4ed16d20bb1d0dd2a5897"><div class="ttname"><a href="../../dd/d13/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_with_sheet.html#ab50e771f40b4ed16d20bb1d0dd2a5897">de.petanqueturniermanager.helper.cellvalue.AbstractCellValueWithSheet.AbstractCellValueWithSheet</a></div><div class="ttdeci">AbstractCellValueWithSheet(XSpreadsheet sheet, Position pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">AbstractCellValueWithSheet.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">de.petanqueturniermanager.helper.position.Position</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00007">Position.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html_a85ef35b47cbfd4319229d2c4d5e41c41"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">de.petanqueturniermanager.helper.position.Position.from</a></div><div class="ttdeci">static Position from(int spalte, int zeile)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00023">Position.java:23</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet_html"><div class="ttname"><a href="../../d8/d69/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet.html">de.petanqueturniermanager.helper.cellvalue.ICellValueWithSheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d2c/_i_cell_value_with_sheet_8java_source.html#l00012">ICellValueWithSheet.java:12</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet_html_a7884c06740e02cb150c71d0666e6caad"><div class="ttname"><a href="../../d8/d69/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_with_sheet.html#a7884c06740e02cb150c71d0666e6caad">de.petanqueturniermanager.helper.cellvalue.ICellValueWithSheet.getSheet</a></div><div class="ttdeci">XSpreadsheet getSheet()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_1974395012eff4559c140bfbeed91b40.html">cellvalue</a></li><li class="navelem"><a href="../../df/d2c/_abstract_cell_value_with_sheet_8java.html">AbstractCellValueWithSheet.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

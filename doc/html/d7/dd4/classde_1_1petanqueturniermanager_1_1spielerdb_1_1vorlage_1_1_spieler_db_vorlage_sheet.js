@@ -1,0 +1,25 @@
+var classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet =
+[
+    [ "SpielerDbVorlageSheet", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#ac66f99eedf8d311c9473cbe6e8d81837", null ],
+    [ "anhaengePosition", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#abbf9c386362d0fbf02d574692a703676", null ],
+    [ "bereitstellen", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a84aced505119303d7c75b48703f8e137", null ],
+    [ "formatiereHeader", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#ad0611a273d531c38b096b667b63d3e0e", null ],
+    [ "freezeKopfzeile", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#aaaee0c839f86249965de857142f89778", null ],
+    [ "schreibeHeader", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#aa151d5bfa2780e158f712e4754caa52d", null ],
+    [ "setzeSpaltenbreiten", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a5b9f90f339e0eafcb116cd93ad751595", null ],
+    [ "HEADER_HG_FARBE", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a3675fb36644d43a8dcfe0efa46d93770", null ],
+    [ "HEADER_ZEILE", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a512742efa0ae1e33ac9f3ea87de77ad0", null ],
+    [ "LETZTE_EINGABE_SPALTE", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#ad2e3c41a0d643d0c40ee34d82dab92b5", null ],
+    [ "logger", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a1192faa7879cdde245d0f6c02fe4635b", null ],
+    [ "MAX_DATEN_ZEILE", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#af20362b6c7980484494ef4b76faf993a", null ],
+    [ "SPALTE_FEHLERURSACHE", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a3e884b99bbfb6f3d0bb4caed02a95eea", null ],
+    [ "SPALTE_NACHNAME", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a45b4be54e24f60c4bff9eed19866ab93", null ],
+    [ "SPALTE_STATUS", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#af0ab9a4cb953f07848c58bac6951c8fb", null ],
+    [ "SPALTE_VEREIN", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a3ac055f9423fe473b20b21e8f0accb4d", null ],
+    [ "SPALTE_VORNAME", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a6aed8c9af65f1310b100e700e9f9d7d7", null ],
+    [ "SPALTENBREITE_FEHLER", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a26a2f4c1743cee6af1cacb7d0c402865", null ],
+    [ "SPALTENBREITE_NAME", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#ad9e13dc6b58d5e4219422fff46b2ab2f", null ],
+    [ "SPALTENBREITE_STATUS", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a5c9cfcab2acb0b5a6f84ca9a9da3fe54", null ],
+    [ "SPALTENBREITE_VEREIN", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#aa0821a2d91d4c967f08b28677c88c113", null ],
+    [ "TAB_FARBE", "d7/dd4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_spieler_db_vorlage_sheet.html#a7915598d34955e1b8d4da2b075fbc632", null ]
+];

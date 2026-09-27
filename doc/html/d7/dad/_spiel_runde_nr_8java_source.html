@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/SpielRundeNr.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/dad/_spiel_runde_nr_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielRundeNr.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/dad/_spiel_runde_nr_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* Erstellung : 09.05.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">**/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.supermelee;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkArgument;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.google.common.base.MoreObjects;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a9d44aedfaa8e73ee35d917a9c82c75de">SpielRundeNr</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a49f4f69c7fd03f0f580e2072023b68e0">   12</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a49f4f69c7fd03f0f580e2072023b68e0">nr</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a9d44aedfaa8e73ee35d917a9c82c75de">   14</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a9d44aedfaa8e73ee35d917a9c82c75de">SpielRundeNr</a>(<span class="keywordtype">int</span> newNr) {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        checkArgument(newNr &gt; -1);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_variable" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a49f4f69c7fd03f0f580e2072023b68e0">nr</a> = newNr;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">   19</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">getNr</a>() {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a49f4f69c7fd03f0f580e2072023b68e0">nr</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#ad29722be63050a967a06a16d71ea7e03">   23</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a9d44aedfaa8e73ee35d917a9c82c75de">SpielRundeNr</a> <a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#ad29722be63050a967a06a16d71ea7e03">from</a>(<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a9d44aedfaa8e73ee35d917a9c82c75de">SpielRundeNr</a>(i);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    @Override</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#ad852d3a0f424cdbe1427beb7b46f9703">   28</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#ad852d3a0f424cdbe1427beb7b46f9703">toString</a>() {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// @formatter:off</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> MoreObjects.toStringHelper(<span class="keyword">this</span>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                .add(<span class="stringliteral">&quot;Nr&quot;</span>, <a class="code hl_variable" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a49f4f69c7fd03f0f580e2072023b68e0">nr</a>)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                .toString();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// @formatter:on</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html_a49f4f69c7fd03f0f580e2072023b68e0"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a49f4f69c7fd03f0f580e2072023b68e0">de.petanqueturniermanager.supermelee.SpielRundeNr.nr</a></div><div class="ttdeci">final int nr</div><div class="ttdef"><b>Definition</b> <a href="#l00012">SpielRundeNr.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html_a82bcfea8561178f65456fe09cb852c0e"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">de.petanqueturniermanager.supermelee.SpielRundeNr.getNr</a></div><div class="ttdeci">int getNr()</div><div class="ttdef"><b>Definition</b> <a href="#l00019">SpielRundeNr.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html_a9d44aedfaa8e73ee35d917a9c82c75de"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a9d44aedfaa8e73ee35d917a9c82c75de">de.petanqueturniermanager.supermelee.SpielRundeNr.SpielRundeNr</a></div><div class="ttdeci">SpielRundeNr(int newNr)</div><div class="ttdef"><b>Definition</b> <a href="#l00014">SpielRundeNr.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html_ad29722be63050a967a06a16d71ea7e03"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#ad29722be63050a967a06a16d71ea7e03">de.petanqueturniermanager.supermelee.SpielRundeNr.from</a></div><div class="ttdeci">static SpielRundeNr from(int i)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">SpielRundeNr.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html_ad852d3a0f424cdbe1427beb7b46f9703"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#ad852d3a0f424cdbe1427beb7b46f9703">de.petanqueturniermanager.supermelee.SpielRundeNr.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SpielRundeNr.java:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../d7/dad/_spiel_runde_nr_8java.html">SpielRundeNr.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+var classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet___sort_only =
+[
+    [ "SpieltagRanglisteSheet_SortOnly", "dd/d0c/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet___sort_only.html#a6c9d52626c7617810d3669e7ff4866df", null ],
+    [ "doRun", "dd/d0c/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet___sort_only.html#acc432dc6cd47445cc401ca993899b9f5", null ],
+    [ "istDieAnzahlSpieltageInDerRanglisteGleichMitDerAnzahlderSpieltagesheets", "dd/d0c/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet___sort_only.html#aff83a463b48ff7e09cdf554b52a40f9c", null ]
+];

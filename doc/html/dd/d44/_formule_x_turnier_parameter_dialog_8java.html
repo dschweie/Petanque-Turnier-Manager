@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/formulex/meldeliste/FormuleXTurnierParameterDialog.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d44/_formule_x_turnier_parameter_dialog_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FormuleXTurnierParameterDialog.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.Optional;</code><br />
+<code>import com.sun.star.awt.ActionEvent;</code><br />
+<code>import com.sun.star.awt.XActionListener;</code><br />
+<code>import com.sun.star.awt.XButton;</code><br />
+<code>import com.sun.star.awt.XCheckBox;</code><br />
+<code>import com.sun.star.awt.XControl;</code><br />
+<code>import com.sun.star.awt.XControlContainer;</code><br />
+<code>import com.sun.star.awt.XControlModel;</code><br />
+<code>import com.sun.star.awt.XDialog;</code><br />
+<code>import com.sun.star.awt.XListBox;</code><br />
+<code>import com.sun.star.awt.XSpinField;</code><br />
+<code>import com.sun.star.awt.XToolkit;</code><br />
+<code>import com.sun.star.awt.XWindow;</code><br />
+<code>import com.sun.star.beans.XPropertySet;</code><br />
+<code>import com.sun.star.container.XNameContainer;</code><br />
+<code>import com.sun.star.lang.EventObject;</code><br />
+<code>import com.sun.star.lang.XComponent;</code><br />
+<code>import com.sun.star.lang.XMultiComponentFactory;</code><br />
+<code>import com.sun.star.lang.XMultiServiceFactory;</code><br />
+<code>import com.sun.star.uno.XComponentContext;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.Formation;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.helper.msgbox.ProcessBox;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für FormuleXTurnierParameterDialog.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d31/_formule_x_turnier_parameter_dialog_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2formulex_2meldeliste_2_formule_x_turnier_parameter_dialog_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2formulex_2meldeliste_2_formule_x_turnier_parameter_dialog_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2formulex_2meldeliste_2_formule_x_turnier_parameter_dialog_8java">
+<area shape="rect" title=" " alt="" coords="2339,5,2638,64"/>
+<area shape="rect" title=" " alt="" coords="5,120,124,147"/>
+<area shape="poly" title=" " alt="" coords="2336,36,1866,42,1229,52,902,62,597,75,334,92,136,115,118,118,117,113,135,109,334,87,597,70,902,56,1229,47,1866,36,2342,36"/>
+<area shape="rect" title=" " alt="" coords="147,120,344,147"/>
+<area shape="poly" title=" " alt="" coords="2336,39,1907,50,1335,65,770,87,535,100,357,115,322,119,321,114,356,109,535,95,770,81,1335,60,1907,45,2342,38"/>
+<area shape="rect" title=" " alt="" coords="369,112,541,155"/>
+<area shape="poly" title=" " alt="" coords="2336,39,1950,50,1442,65,937,86,724,100,557,115,556,109,724,94,937,81,1442,60,1949,45,2341,39"/>
+<area shape="rect" title=" " alt="" coords="566,120,739,147"/>
+<area shape="poly" title=" " alt="" coords="2336,40,1523,68,1077,89,892,101,751,115,722,119,722,114,751,109,892,96,1077,84,1523,62,2341,39"/>
+<area shape="rect" title=" " alt="" coords="764,120,960,147"/>
+<area shape="poly" title=" " alt="" coords="2336,37,2080,45,1740,57,1357,79,1162,95,971,115,938,119,938,114,971,109,1162,90,1357,74,1740,51,2080,39,2341,37"/>
+<area shape="rect" title=" " alt="" coords="984,120,1161,147"/>
+<area shape="poly" title=" " alt="" coords="2336,38,2113,46,1822,59,1498,81,1173,115,1144,119,1143,114,1172,109,1497,76,1821,54,2112,41,2342,38"/>
+<area shape="rect" title=" " alt="" coords="1185,112,1362,155"/>
+<area shape="poly" title=" " alt="" coords="2336,40,2149,50,1911,64,1647,85,1378,114,1378,109,1646,79,1910,59,2149,45,2341,40"/>
+<area shape="rect" title=" " alt="" coords="1386,112,1564,155"/>
+<area shape="poly" title=" " alt="" coords="2341,43,1996,69,1789,89,1580,114,1579,109,1789,83,1995,64,2336,43"/>
+<area shape="rect" title=" " alt="" coords="1588,120,1760,147"/>
+<area shape="poly" title=" " alt="" coords="2341,48,2075,76,1773,115,1747,119,1746,114,1772,109,2074,71,2336,48"/>
+<area shape="rect" title=" " alt="" coords="1784,120,1964,147"/>
+<area shape="poly" title=" " alt="" coords="2341,56,1976,115,1951,119,1950,114,1975,109,2336,56"/>
+<area shape="rect" title=" " alt="" coords="1987,120,2176,147"/>
+<area shape="poly" title=" " alt="" coords="2370,64,2150,119,2150,113,2365,65"/>
+<area shape="rect" title=" " alt="" coords="2200,120,2374,147"/>
+<area shape="poly" title=" " alt="" coords="2431,64,2328,115,2327,110,2426,65"/>
+<area shape="rect" title=" " alt="" coords="2397,120,2580,147"/>
+<area shape="poly" title=" " alt="" coords="2490,62,2490,106,2487,102,2487,66"/>
+<area shape="rect" title=" " alt="" coords="2603,120,2822,147"/>
+<area shape="poly" title=" " alt="" coords="2556,62,2672,114,2667,113,2555,67"/>
+<area shape="rect" title=" " alt="" coords="2846,112,3048,155"/>
+<area shape="poly" title=" " alt="" coords="2625,62,2836,108,2831,108,2625,67"/>
+<area shape="rect" title=" " alt="" coords="3072,120,3273,147"/>
+<area shape="poly" title=" " alt="" coords="2638,51,3061,109,3092,117,3087,117,3060,115,2638,57"/>
+<area shape="rect" title=" " alt="" coords="3298,120,3503,147"/>
+<area shape="poly" title=" " alt="" coords="2638,44,2938,70,3286,109,3321,117,3316,117,3285,115,2938,75,2638,49"/>
+<area shape="rect" title=" " alt="" coords="3527,112,3693,155"/>
+<area shape="poly" title=" " alt="" coords="2638,38,2813,46,3030,60,3269,80,3514,112,3509,111,3268,86,3029,65,2813,52,2638,43"/>
+<area shape="rect" title=" " alt="" coords="3717,112,3884,155"/>
+<area shape="poly" title=" " alt="" coords="2638,36,2845,42,3109,55,3403,77,3704,112,3699,112,3402,82,3108,60,2845,48,2638,41"/>
+<area shape="rect" title=" " alt="" coords="3907,112,4110,155"/>
+<area shape="poly" title=" " alt="" coords="2638,35,2876,42,3186,54,3536,76,3895,112,3889,112,3536,81,3186,60,2876,47,2638,41"/>
+<area shape="rect" title=" " alt="" coords="4134,112,4443,155"/>
+<area shape="poly" title=" " alt="" coords="2638,37,3277,58,3694,80,4121,112,4115,112,3693,85,3277,64,2638,42"/>
+<area shape="rect" title=" " alt="" coords="4467,112,4686,155"/>
+<area shape="poly" title=" " alt="" coords="2638,33,2963,35,3411,45,3926,68,4191,86,4454,112,4449,112,4191,92,3926,74,3411,51,2963,40,2638,38"/>
+<area shape="rect" title=" " alt="" coords="4710,120,4945,147"/>
+<area shape="poly" title=" " alt="" coords="2638,32,3002,34,3512,43,3801,53,4101,66,4402,85,4698,109,4743,117,4738,117,4698,115,4402,90,4100,72,3801,58,3512,49,3002,39,2638,38"/>
+<area shape="rect" title=" " alt="" coords="4969,120,5243,147"/>
+<area shape="poly" title=" " alt="" coords="2638,33,3039,34,3613,44,3939,53,4279,67,4621,85,4957,109,5011,118,5005,117,4956,115,4621,91,4278,72,3939,59,3613,49,3039,40,2638,38"/>
+<area shape="rect" title=" " alt="" coords="5268,112,5539,155"/>
+<area shape="poly" title=" " alt="" coords="2638,35,3179,44,3927,59,4685,81,5005,94,5255,112,5249,112,5004,100,4684,86,3927,64,3179,49,2638,41"/>
+</map>
+</div>
+</div>
+<p><a href="../../dd/d44/_formule_x_turnier_parameter_dialog_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eformulex_2Emeldeliste_2EFormuleXTurnierParameterDialog" id="r_de_2Epetanqueturniermanager_2Eformulex_2Emeldeliste_2EFormuleXTurnierParameterDialog"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/df8/classde_1_1petanqueturniermanager_1_1formulex_1_1meldeliste_1_1_formule_x_turnier_parameter_dialog.html">de.petanqueturniermanager.formulex.meldeliste.FormuleXTurnierParameterDialog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modaler Dialog zur Abfrage der Turnier-Parameter vor dem Anlegen einer neuen Formule X Meldeliste.  <a href="../../d9/df8/classde_1_1petanqueturniermanager_1_1formulex_1_1meldeliste_1_1_formule_x_turnier_parameter_dialog.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eformulex_2Emeldeliste" id="r_de_2Epetanqueturniermanager_2Eformulex_2Emeldeliste"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d12/namespacede_1_1petanqueturniermanager_1_1formulex_1_1meldeliste.html">de.petanqueturniermanager.formulex.meldeliste</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_ddbc153ed0939377a73ad3e300869bf1.html">formulex</a></li><li class="navelem"><a href="../../dir_277d9ef0008545ab70d66b368b6e54a3.html">meldeliste</a></li><li class="navelem"><a href="../../dd/d44/_formule_x_turnier_parameter_dialog_8java.html">FormuleXTurnierParameterDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

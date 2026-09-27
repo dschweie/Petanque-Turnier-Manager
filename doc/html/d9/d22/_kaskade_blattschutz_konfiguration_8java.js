@@ -1,0 +1,4 @@
+var _kaskade_blattschutz_konfiguration_8java =
+[
+    [ "de.petanqueturniermanager.kaskade.blattschutz.KaskadeBlattschutzKonfiguration", "d6/d86/classde_1_1petanqueturniermanager_1_1kaskade_1_1blattschutz_1_1_kaskade_blattschutz_konfiguration.html", "d6/d86/classde_1_1petanqueturniermanager_1_1kaskade_1_1blattschutz_1_1_kaskade_blattschutz_konfiguration" ]
+];

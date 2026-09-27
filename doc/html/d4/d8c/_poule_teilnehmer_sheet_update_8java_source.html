@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/poule/meldeliste/PouleTeilnehmerSheetUpdate.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d8c/_poule_teilnehmer_sheet_update_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PouleTeilnehmerSheetUpdate.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d8c/_poule_teilnehmer_sheet_update_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.poule.meldeliste;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.RangePosition;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.RangeHelper;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html">   27</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ae1cf6bef5ceacc8373a96ef1e5c5d176">PouleTeilnehmerSheetUpdate</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../de/d91/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet.html#a74dcf19c2c53df56f62ccfb10c3aef46">PouleTeilnehmerSheet</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ab728d25c6d5e9d65fe19cbaf252732fc">   29</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ab728d25c6d5e9d65fe19cbaf252732fc">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ae1cf6bef5ceacc8373a96ef1e5c5d176">PouleTeilnehmerSheetUpdate</a>.class);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a3760e216cc98b4547376bba3e8848e8b">   32</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a3760e216cc98b4547376bba3e8848e8b">CLEAR_LETZTE_ZEILE</a> = 200;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#abc5fd58d72c43648a2ac9dd57bf9d1f2">   33</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#abc5fd58d72c43648a2ac9dd57bf9d1f2">CLEAR_LETZTE_SPALTE</a> = 40;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ae1cf6bef5ceacc8373a96ef1e5c5d176">   35</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ae1cf6bef5ceacc8373a96ef1e5c5d176">PouleTeilnehmerSheetUpdate</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        super(<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    @Override</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ac1f4151deae86197b4a95449c01c56a2">   40</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ac1f4151deae86197b4a95449c01c56a2">doRun</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        XSpreadsheet sheet = <a class="code hl_function" href="../../de/d91/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet.html#a022e49c283585a1acdcb6f3c7bd39833">getXSpreadSheet</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ab728d25c6d5e9d65fe19cbaf252732fc">logger</a>.debug(<span class="stringliteral">&quot;TeilnehmerUpdate: Sheet nicht vorhanden – skip &quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    + <span class="stringliteral">&quot;(Erstaufbau erfolgt ausschließlich über Menü)&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.teilnehmer.aktualisieren.einfach&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a7c054ef3ac3fd70a1c5f719c508e2382">loescheBisherigenInhalt</a>(sheet);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="../../de/d91/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet.html#abad5ee564507642d0751a8a901e819b6">befuelleTeilnehmerDaten</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">// Bewusst KEIN setActiveSheet(sheet): Im Listener-Pfad ist der User schon auf dem</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">// Teilnehmer-Sheet; ein zusätzliches setActiveSheet aus dem selectionChanged-Handler</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// heraus kollidiert mit LO-internem Tab-Klick-Handling und revertiert den Tab-Wechsel.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a7c054ef3ac3fd70a1c5f719c508e2382">   56</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a7c054ef3ac3fd70a1c5f719c508e2382">loescheBisherigenInhalt</a>(XSpreadsheet sheet) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_class" href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html">RangeHelper</a>.<a class="code hl_function" href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#acb08065a3e43c57df0f665a910772153">from</a>(sheet, <a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#aa46f307cfbf37cc01389ff5d1247adb1">getWorkingSpreadsheet</a>().getWorkingSpreadsheetDocument(),</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <a class="code hl_class" href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">RangePosition</a>.<a class="code hl_function" href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html#a6e45b45d6c61ff07c3f314f097cc1d51">from</a>(0, 0, <a class="code hl_variable" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#abc5fd58d72c43648a2ac9dd57bf9d1f2">CLEAR_LETZTE_SPALTE</a>, <a class="code hl_variable" href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a3760e216cc98b4547376bba3e8848e8b">CLEAR_LETZTE_ZEILE</a>))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                .<a class="code hl_function" href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#ada84991f60b43a246b4d4179fd7b8e2e">clearRange</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a5d3fce9090dbab6b8a3b10d4a550a8ec"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">de.petanqueturniermanager.SheetRunner.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00047">SheetRunner.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position_html"><div class="ttname"><a href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">de.petanqueturniermanager.helper.position.RangePosition</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/df3/_range_position_8java_source.html#l00012">RangePosition.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position_html_a6e45b45d6c61ff07c3f314f097cc1d51"><div class="ttname"><a href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html#a6e45b45d6c61ff07c3f314f097cc1d51">de.petanqueturniermanager.helper.position.RangePosition.from</a></div><div class="ttdeci">static RangePosition from(String startSpalte, int startZeile, int endeSpalte, int endeZeile)</div><div class="ttdoc">clone end und start Position</div><div class="ttdef"><b>Definition</b> <a href="../../d8/df3/_range_position_8java_source.html#l00031">RangePosition.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper_html"><div class="ttname"><a href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html">de.petanqueturniermanager.helper.sheet.RangeHelper</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d18/_range_helper_8java_source.html#l00035">RangeHelper.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper_html_acb08065a3e43c57df0f665a910772153"><div class="ttname"><a href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#acb08065a3e43c57df0f665a910772153">de.petanqueturniermanager.helper.sheet.RangeHelper.from</a></div><div class="ttdeci">static RangeHelper from(XSpreadsheet xSpreadsheet, XSpreadsheetDocument workingSpreadsheetDocument, RangePosition rangePos)</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d18/_range_helper_8java_source.html#l00053">RangeHelper.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper_html_ada84991f60b43a246b4d4179fd7b8e2e"><div class="ttname"><a href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#ada84991f60b43a246b4d4179fd7b8e2e">de.petanqueturniermanager.helper.sheet.RangeHelper.clearRange</a></div><div class="ttdeci">RangeHelper clearRange()</div><div class="ttdoc">Alles !</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d18/_range_helper_8java_source.html#l00077">RangeHelper.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_html_a022e49c283585a1acdcb6f3c7bd39833"><div class="ttname"><a href="../../de/d91/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet.html#a022e49c283585a1acdcb6f3c7bd39833">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheet.getXSpreadSheet</a></div><div class="ttdeci">XSpreadsheet getXSpreadSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d5/df0/_poule_teilnehmer_sheet_8java_source.html#l00058">PouleTeilnehmerSheet.java:58</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_html_a74dcf19c2c53df56f62ccfb10c3aef46"><div class="ttname"><a href="../../de/d91/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet.html#a74dcf19c2c53df56f62ccfb10c3aef46">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheet.PouleTeilnehmerSheet</a></div><div class="ttdeci">PouleTeilnehmerSheet(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/df0/_poule_teilnehmer_sheet_8java_source.html#l00046">PouleTeilnehmerSheet.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_html_abad5ee564507642d0751a8a901e819b6"><div class="ttname"><a href="../../de/d91/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet.html#abad5ee564507642d0751a8a901e819b6">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheet.befuelleTeilnehmerDaten</a></div><div class="ttdeci">void befuelleTeilnehmerDaten()</div><div class="ttdoc">Schreibt Header und Datenbereich der Teilnehmerliste anhand der aktuellen Meldeliste.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/df0/_poule_teilnehmer_sheet_8java_source.html#l00088">PouleTeilnehmerSheet.java:88</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update_html_a3760e216cc98b4547376bba3e8848e8b"><div class="ttname"><a href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a3760e216cc98b4547376bba3e8848e8b">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate.CLEAR_LETZTE_ZEILE</a></div><div class="ttdeci">static final int CLEAR_LETZTE_ZEILE</div><div class="ttdoc">Großzügige Clear-Range: deckt jede plausible Block-Konfiguration ab.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">PouleTeilnehmerSheetUpdate.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update_html_a7c054ef3ac3fd70a1c5f719c508e2382"><div class="ttname"><a href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#a7c054ef3ac3fd70a1c5f719c508e2382">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate.loescheBisherigenInhalt</a></div><div class="ttdeci">void loescheBisherigenInhalt(XSpreadsheet sheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">PouleTeilnehmerSheetUpdate.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update_html_ab728d25c6d5e9d65fe19cbaf252732fc"><div class="ttname"><a href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ab728d25c6d5e9d65fe19cbaf252732fc">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00029">PouleTeilnehmerSheetUpdate.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update_html_abc5fd58d72c43648a2ac9dd57bf9d1f2"><div class="ttname"><a href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#abc5fd58d72c43648a2ac9dd57bf9d1f2">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate.CLEAR_LETZTE_SPALTE</a></div><div class="ttdeci">static final int CLEAR_LETZTE_SPALTE</div><div class="ttdef"><b>Definition</b> <a href="#l00033">PouleTeilnehmerSheetUpdate.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update_html_ac1f4151deae86197b4a95449c01c56a2"><div class="ttname"><a href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ac1f4151deae86197b4a95449c01c56a2">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate.doRun</a></div><div class="ttdeci">void doRun()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">PouleTeilnehmerSheetUpdate.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update_html_ae1cf6bef5ceacc8373a96ef1e5c5d176"><div class="ttname"><a href="../../df/d45/classde_1_1petanqueturniermanager_1_1poule_1_1meldeliste_1_1_poule_teilnehmer_sheet_update.html#ae1cf6bef5ceacc8373a96ef1e5c5d176">de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate.PouleTeilnehmerSheetUpdate</a></div><div class="ttdeci">PouleTeilnehmerSheetUpdate(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">PouleTeilnehmerSheetUpdate.java:35</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_aa46f307cfbf37cc01389ff5d1247adb1"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#aa46f307cfbf37cc01389ff5d1247adb1">de.petanqueturniermanager.helper.ISheet.getWorkingSpreadsheet</a></div><div class="ttdeci">WorkingSpreadsheet getWorkingSpreadsheet()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_ab2c7bea29fa41fa048b599ed07b220c2"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">de.petanqueturniermanager.helper.ISheet.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_3e115d8eb363b15d7137260a7ff66a3e.html">poule</a></li><li class="navelem"><a href="../../dir_0b24184119d124d35e5edb87392352f8.html">meldeliste</a></li><li class="navelem"><a href="../../d4/d8c/_poule_teilnehmer_sheet_update_8java.html">PouleTeilnehmerSheetUpdate.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

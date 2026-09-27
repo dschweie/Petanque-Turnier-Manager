@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer19_teams_turnier_test_daten =
+[
+    [ "Schweizer19TeamsTurnierTestDaten", "d6/d67/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer19_teams_turnier_test_daten.html#a555688e54d7eff9d74620bdc4c60cdf3", null ]
+];

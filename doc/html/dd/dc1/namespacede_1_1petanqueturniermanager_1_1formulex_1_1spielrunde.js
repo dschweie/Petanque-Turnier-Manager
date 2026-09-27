@@ -1,0 +1,7 @@
+var namespacede_1_1petanqueturniermanager_1_1formulex_1_1spielrunde =
+[
+    [ "FormuleXAbstractSpielrundeSheet", "d2/d94/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_abstract_spielrunde_sheet.html", "d2/d94/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_abstract_spielrunde_sheet" ],
+    [ "FormuleXSpielrundeSheetNaechste", "d7/d6e/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_spielrunde_sheet_naechste.html", "d7/d6e/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_spielrunde_sheet_naechste" ],
+    [ "FormuleXSpielrundeSheetUpdate", "d2/d08/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_spielrunde_sheet_update.html", "d2/d08/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_spielrunde_sheet_update" ],
+    [ "FormuleXTurnierTestDaten", "d5/dd3/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_turnier_test_daten.html", "d5/dd3/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_turnier_test_daten" ]
+];

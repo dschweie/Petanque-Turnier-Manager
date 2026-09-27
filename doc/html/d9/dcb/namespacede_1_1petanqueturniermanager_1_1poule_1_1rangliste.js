@@ -1,0 +1,5 @@
+var namespacede_1_1petanqueturniermanager_1_1poule_1_1rangliste =
+[
+    [ "PouleVorrundenRanglisteSheet", "d1/dee/classde_1_1petanqueturniermanager_1_1poule_1_1rangliste_1_1_poule_vorrunden_rangliste_sheet.html", "d1/dee/classde_1_1petanqueturniermanager_1_1poule_1_1rangliste_1_1_poule_vorrunden_rangliste_sheet" ],
+    [ "PouleVorrundenRanglisteSheetUpdate", "d0/dff/classde_1_1petanqueturniermanager_1_1poule_1_1rangliste_1_1_poule_vorrunden_rangliste_sheet_update.html", "d0/dff/classde_1_1petanqueturniermanager_1_1poule_1_1rangliste_1_1_poule_vorrunden_rangliste_sheet_update" ]
+];

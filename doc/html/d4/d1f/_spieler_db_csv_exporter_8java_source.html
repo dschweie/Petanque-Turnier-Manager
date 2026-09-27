@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/export/SpielerDbCsvExporter.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d1f/_spieler_db_csv_exporter_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbCsvExporter.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d1f/_spieler_db_csv_exporter_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.export;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.io.BufferedWriter;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.io.Writer;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.nio.charset.StandardCharsets;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.nio.file.Files;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.nio.file.Path;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.text.Collator;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.Comparator;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> java.util.Locale;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.opencsv.CSVWriterBuilder;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.opencsv.ICSVWriter;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbCsvFormat;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbException;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerMitVerein;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html">   45</a></span><span class="comment"> */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html">SpielerDbCsvExporter</a> <span class="keyword">implements</span> <a class="code hl_interface" href="../../d2/d86/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_exporter.html">SpielerDbExporter</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a87e4881f155f09ca08c125fd042cebf5">   47</a></span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a87e4881f155f09ca08c125fd042cebf5">BOM</a> = <span class="stringliteral">&#39;﻿&#39;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a8eaa1bdc8e4f3126da680b5c9df37c2c">   50</a></span>    @Override</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a8eaa1bdc8e4f3126da680b5c9df37c2c">export</a>(<a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">SpielerDbExportData</a> data, <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ab1554a8d52022eb0059c95777133dad9">ExportRequest</a> request) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (!request.entities().contains(<a class="code hl_class" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html">ExportEntity</a>.<a class="code hl_variable" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#a04b4b85ae739d3179fb9ace42ee7ce18">SPIELER</a>)) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    <span class="stringliteral">&quot;Flache CSV exportiert Spieler+Verein — Spieler-Entity muss im Scope sein&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        Path zielDatei = request.target();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        Path elternVerzeichnis = zielDatei.toAbsolutePath().getParent();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (elternVerzeichnis != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                Files.createDirectories(elternVerzeichnis);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(<span class="stringliteral">&quot;CSV-Zielverzeichnis nicht anlegbar: &quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                        + elternVerzeichnis, e);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        List&lt;SpielerMitVerein&gt; sortiert = <a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a08de15bccbd031f90cfb96d06cb2cbd4">sortiere</a>(data.spieler());</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">try</span> (BufferedWriter writer = <a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#ab6bc296acda32fff5af3df935f75ff22">oeffne</a>(zielDatei);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                ICSVWriter csv = <span class="keyword">new</span> CSVWriterBuilder(writer)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        .withSeparator(<a class="code hl_class" href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html">SpielerDbCsvFormat</a>.<a class="code hl_variable" href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html#a911b2a43a7275d4b7021aa38271ce8cb">SEPARATOR</a>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        .withLineEnd(System.lineSeparator())</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        .build()) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            writer.write(<a class="code hl_class" href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html">SpielerDbCsvFormat</a>.<a class="code hl_function" href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html#a3a1b6da0b0925ff8f35a9bb0476084ef">formatMarkerZeile</a>() + System.lineSeparator());</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            csv.writeNext(<a class="code hl_class" href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html">SpielerDbCsvFormat</a>.<a class="code hl_variable" href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html#acbcba6d431a054655b358fbcf4d17cc1">HEADER</a>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">for</span> (<a class="code hl_function" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> s : sortiert) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                csv.writeNext(<a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a69c614c4cfa8cb2bd0262fa9f804c698">zuZeile</a>(s), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(<span class="stringliteral">&quot;CSV-Export fehlgeschlagen: &quot;</span> + zielDatei, e);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a08de15bccbd031f90cfb96d06cb2cbd4">   83</a></span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;SpielerMitVerein&gt; <a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a08de15bccbd031f90cfb96d06cb2cbd4">sortiere</a>(List&lt;SpielerMitVerein&gt; spieler) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// Collator für stabile, locale-konsistente Reihenfolge (Umlaute richtig).</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Collator collator = Collator.getInstance(Locale.ROOT);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        collator.setStrength(Collator.SECONDARY); <span class="comment">// case-insensitiv</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        Comparator&lt;String&gt; stringComparator = Comparator.nullsFirst(collator::compare);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        Comparator&lt;SpielerMitVerein&gt; cmp = Comparator</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                .&lt;<a class="code hl_function" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a>, String&gt;comparing(SpielerMitVerein::nachname, stringComparator)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                .thenComparing(SpielerMitVerein::vorname, stringComparator)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                .thenComparing(SpielerMitVerein::vereinName, stringComparator);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        List&lt;SpielerMitVerein&gt; kopie = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(spieler);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        kopie.sort(cmp);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> kopie;</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a69c614c4cfa8cb2bd0262fa9f804c698">   97</a></span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">private</span> <span class="keyword">static</span> String[] <a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a69c614c4cfa8cb2bd0262fa9f804c698">zuZeile</a>(<a class="code hl_function" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> s) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> String[] {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                s.vorname(),</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                s.nachname(),</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                s.vereinName() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : s.vereinName(),</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                s.lizenznr() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : s.lizenznr()</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        };</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#ab6bc296acda32fff5af3df935f75ff22">  106</a></span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">private</span> <span class="keyword">static</span> BufferedWriter <a class="code hl_function" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#ab6bc296acda32fff5af3df935f75ff22">oeffne</a>(Path datei) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        Writer w = Files.newBufferedWriter(datei, StandardCharsets.UTF_8);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment">// BOM zuerst — sonst erkennt Excel UTF-8 nicht und stellt Umlaute falsch dar.</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        w.write(<a class="code hl_variable" href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a87e4881f155f09ca08c125fd042cebf5">BOM</a>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> BufferedWriter(w);</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format_html"><div class="ttname"><a href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html">de.petanqueturniermanager.spielerdb.SpielerDbCsvFormat</a></div><div class="ttdoc">Konstanten und Format-Spezifikation für die flache Spieler-DB-CSV.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_spieler_db_csv_format_8java_source.html#l00024">SpielerDbCsvFormat.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format_html_a3a1b6da0b0925ff8f35a9bb0476084ef"><div class="ttname"><a href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html#a3a1b6da0b0925ff8f35a9bb0476084ef">de.petanqueturniermanager.spielerdb.SpielerDbCsvFormat.formatMarkerZeile</a></div><div class="ttdeci">static String formatMarkerZeile()</div><div class="ttdoc">Vollständige Marker-Zeile für die aktuelle Version.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_spieler_db_csv_format_8java_source.html#l00037">SpielerDbCsvFormat.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format_html_a911b2a43a7275d4b7021aa38271ce8cb"><div class="ttname"><a href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html#a911b2a43a7275d4b7021aa38271ce8cb">de.petanqueturniermanager.spielerdb.SpielerDbCsvFormat.SEPARATOR</a></div><div class="ttdeci">static final char SEPARATOR</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_spieler_db_csv_format_8java_source.html#l00026">SpielerDbCsvFormat.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format_html_acbcba6d431a054655b358fbcf4d17cc1"><div class="ttname"><a href="../../dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html#acbcba6d431a054655b358fbcf4d17cc1">de.petanqueturniermanager.spielerdb.SpielerDbCsvFormat.HEADER</a></div><div class="ttdeci">static final String[] HEADER</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_spieler_db_csv_format_8java_source.html#l00032">SpielerDbCsvFormat.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">de.petanqueturniermanager.spielerdb.SpielerDbException</a></div><div class="ttdoc">Fehler aus der Spieler-DB-Schicht.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00008">SpielerDbException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html_a91701793abc4feae51f72989b5087a87"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">de.petanqueturniermanager.spielerdb.SpielerDbException.SpielerDbException</a></div><div class="ttdeci">SpielerDbException(String message)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00014">SpielerDbException.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter_html"><div class="ttname"><a href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html">de.petanqueturniermanager.spielerdb.export.SpielerDbCsvExporter</a></div><div class="ttdoc">Schreibt die Spieler-Stammdaten in eine flache, single-file CSV mit den Spalten vorname;nachname;vere...</div><div class="ttdef"><b>Definition</b> <a href="#l00045">SpielerDbCsvExporter.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter_html_a08de15bccbd031f90cfb96d06cb2cbd4"><div class="ttname"><a href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a08de15bccbd031f90cfb96d06cb2cbd4">de.petanqueturniermanager.spielerdb.export.SpielerDbCsvExporter.sortiere</a></div><div class="ttdeci">static List&lt; SpielerMitVerein &gt; sortiere(List&lt; SpielerMitVerein &gt; spieler)</div><div class="ttdef"><b>Definition</b> <a href="#l00083">SpielerDbCsvExporter.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter_html_a69c614c4cfa8cb2bd0262fa9f804c698"><div class="ttname"><a href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a69c614c4cfa8cb2bd0262fa9f804c698">de.petanqueturniermanager.spielerdb.export.SpielerDbCsvExporter.zuZeile</a></div><div class="ttdeci">static String[] zuZeile(SpielerMitVerein s)</div><div class="ttdef"><b>Definition</b> <a href="#l00097">SpielerDbCsvExporter.java:97</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter_html_a87e4881f155f09ca08c125fd042cebf5"><div class="ttname"><a href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a87e4881f155f09ca08c125fd042cebf5">de.petanqueturniermanager.spielerdb.export.SpielerDbCsvExporter.BOM</a></div><div class="ttdeci">static final char BOM</div><div class="ttdef"><b>Definition</b> <a href="#l00047">SpielerDbCsvExporter.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter_html_a8eaa1bdc8e4f3126da680b5c9df37c2c"><div class="ttname"><a href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#a8eaa1bdc8e4f3126da680b5c9df37c2c">de.petanqueturniermanager.spielerdb.export.SpielerDbCsvExporter.export</a></div><div class="ttdeci">void export(SpielerDbExportData data, ExportRequest request)</div><div class="ttdoc">Schreibt die Daten gemäß dem Request.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SpielerDbCsvExporter.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter_html_ab6bc296acda32fff5af3df935f75ff22"><div class="ttname"><a href="../../dd/d7b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_csv_exporter.html#ab6bc296acda32fff5af3df935f75ff22">de.petanqueturniermanager.spielerdb.export.SpielerDbCsvExporter.oeffne</a></div><div class="ttdeci">static BufferedWriter oeffne(Path datei)</div><div class="ttdef"><b>Definition</b> <a href="#l00106">SpielerDbCsvExporter.java:106</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity_html"><div class="ttname"><a href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html">de.petanqueturniermanager.spielerdb.export.ExportEntity</a></div><div class="ttdoc">Logische Einheit, die exportiert werden kann.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d50/_export_entity_8java_source.html#l00011">ExportEntity.java:11</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity_html_a04b4b85ae739d3179fb9ace42ee7ce18"><div class="ttname"><a href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#a04b4b85ae739d3179fb9ace42ee7ce18">de.petanqueturniermanager.spielerdb.export.ExportEntity.SPIELER</a></div><div class="ttdeci">SPIELER</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d50/_export_entity_8java_source.html#l00012">ExportEntity.java:12</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_exporter_html"><div class="ttname"><a href="../../d2/d86/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_exporter.html">de.petanqueturniermanager.spielerdb.export.SpielerDbExporter</a></div><div class="ttdoc">Schreibt SpielerDbExportData in eines der unterstützten Formate.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_spieler_db_exporter_8java_source.html#l00009">SpielerDbExporter.java:9</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_ab1554a8d52022eb0059c95777133dad9"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ab1554a8d52022eb0059c95777133dad9">de.petanqueturniermanager.spielerdb.export.ExportRequest</a></div><div class="ttdeci">record ExportRequest(SpielerDbDateiFormat format, EnumSet&lt; ExportEntity &gt; entities, ExportFilter filter, Path target)</div><div class="ttdoc">Gebündelte Aufrufparameter eines Exports.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d5d/_export_request_8java_source.html#l00018">ExportRequest.java:18</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_ac662546311ca3ded8852cffe88d97333"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">de.petanqueturniermanager.spielerdb.export.SpielerDbExportData</a></div><div class="ttdeci">record SpielerDbExportData(ExportMeta meta, List&lt; SpielerMitVerein &gt; spieler, List&lt; VereinDatensatz &gt; vereine, List&lt; LabelDatensatz &gt; labels, List&lt; SpielerLabelZuordnung &gt; spielerLabels)</div><div class="ttdoc">In-Memory-Repräsentation aller Daten, die ein konkreter Export schreibt.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dfe/_spieler_db_export_data_8java_source.html#l00017">SpielerDbExportData.java:17</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_html_a738f3eaecc711ab94b90e3511c031ab7"><div class="ttname"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">de.petanqueturniermanager.spielerdb.SpielerMitVerein</a></div><div class="ttdeci">record SpielerMitVerein(int nr, String vorname, String nachname, @Nullable Integer vereinNr, @Nullable String vereinName, List&lt; Integer &gt; labelNrs, List&lt; String &gt; labelNamen, @Nullable String lizenznr)</div><div class="ttdoc">Anzeige-Record für die Trefferliste der Suche: Spielerfelder denormalisiert mit Vereinsname und Liste...</div><div class="ttdef"><b>Definition</b> <a href="../../db/d70/_spieler_mit_verein_8java_source.html#l00012">SpielerMitVerein.java:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_5f460adda081a765fa21a09550c6289d.html">export</a></li><li class="navelem"><a href="../../d4/d1f/_spieler_db_csv_exporter_8java.html">SpielerDbCsvExporter.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

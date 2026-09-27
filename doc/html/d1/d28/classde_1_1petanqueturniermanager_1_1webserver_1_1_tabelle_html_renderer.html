@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.webserver.TabelleHtmlRenderer Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d28/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_html_renderer.html','../../','de/d4e/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_html_renderer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.webserver.TabelleHtmlRenderer Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Rendert ein <code><a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a></code> als HTML-<code class="JavaDocCode">&lt;table&gt;</code>-Fragment.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:ab34eece8dafd30efb191e33a0d909e21" id="r_ab34eece8dafd30efb191e33a0d909e21"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ab34eece8dafd30efb191e33a0d909e21">render</a> (<a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a> model)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ad9a63ab2d85b1df3345c52d59202e895" id="r_ad9a63ab2d85b1df3345c52d59202e895"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ad9a63ab2d85b1df3345c52d59202e895">bereinigeFontFamily</a> (String fontFamily)</td></tr>
+<tr class="memitem:a8b847c383afdc99bd7daaaa7194c66f4" id="r_a8b847c383afdc99bd7daaaa7194c66f4"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a8b847c383afdc99bd7daaaa7194c66f4">buildCss</a> (<a class="el" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#ae737e417d4d3703edec2b6cc876a91be">StyleModel</a> s)</td></tr>
+<tr class="memitem:a654ce1e2bd864ec1611c94251cea321e" id="r_a654ce1e2bd864ec1611c94251cea321e"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a654ce1e2bd864ec1611c94251cea321e">formatPt</a> (float pt)</td></tr>
+<tr class="memitem:accea95fcb2a01f1c27e3ef6c98828cc1" id="r_accea95fcb2a01f1c27e3ef6c98828cc1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#accea95fcb2a01f1c27e3ef6c98828cc1">renderColgroup</a> (<a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a> model, StringBuilder sb)</td></tr>
+<tr class="memitem:aa4b84263a0e5559acfe39b469dc26443" id="r_aa4b84263a0e5559acfe39b469dc26443"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa4b84263a0e5559acfe39b469dc26443">renderKopfUndRumpf</a> (<a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a> model, StringBuilder sb)</td></tr>
+<tr class="memitem:a548ab4addfc229a79ef08553418cc399" id="r_a548ab4addfc229a79ef08553418cc399"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a548ab4addfc229a79ef08553418cc399">renderZeile</a> (<a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a> model, List&lt; String &gt; zeile, int zeilenIdx, StringBuilder sb)</td></tr>
+<tr class="memitem:a5396ccb739fe23ae5303c31de2dcad8c" id="r_a5396ccb739fe23ae5303c31de2dcad8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5396ccb739fe23ae5303c31de2dcad8c">renderZelle</a> (<a class="el" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#a763a21e7839f80b422e52ed9aac9cf90">ZelleModel</a> zelle, StringBuilder sb)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:a298aa43575c76962c8085c6ada740d85" id="r_a298aa43575c76962c8085c6ada740d85"><td class="memItemLeft">static boolean&#160;</td><td class="memItemRight"><a class="el" href="#a298aa43575c76962c8085c6ada740d85">istVersteckt</a> (Integer breite)</td></tr>
+<tr class="memitem:a1d98fe563a7c6a3c0d2ec67c97fc75bf" id="r_a1d98fe563a7c6a3c0d2ec67c97fc75bf"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a1d98fe563a7c6a3c0d2ec67c97fc75bf">zuPx</a> (int unoEinheit)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:aa9f0c57f115bffe88721bcc9cde27a51" id="r_aa9f0c57f115bffe88721bcc9cde27a51"><td class="memItemLeft">static final int&#160;</td><td class="memItemRight"><a class="el" href="#aa9f0c57f115bffe88721bcc9cde27a51">SPALTENBREITE_FALLBACK</a> = 2000</td></tr>
+<tr class="memitem:a0f5c4d7e6ea917ac756a1c562d08730b" id="r_a0f5c4d7e6ea917ac756a1c562d08730b"><td class="memItemLeft">static final float&#160;</td><td class="memItemRight"><a class="el" href="#a0f5c4d7e6ea917ac756a1c562d08730b">UNO_ZU_PX</a> = 37.795f</td></tr>
+<tr class="memitem:ac28d1397569ff44768a5e8de16dc48f7" id="r_ac28d1397569ff44768a5e8de16dc48f7"><td class="memItemLeft">static final int&#160;</td><td class="memItemRight"><a class="el" href="#ac28d1397569ff44768a5e8de16dc48f7">ZEILENHOEHE_FALLBACK</a> = 600</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Wiederverwendbar für alle Turniersysteme — keinerlei Liga-spezifische Logik. </p>
+<p>Rendering-Regeln orientieren sich an <code class="JavaDocCode">frontend/src/Cell.jsx</code> und <code class="JavaDocCode">frontend/src/Panel.jsx</code>, damit Export und Live-Ansicht vergleichbar aussehen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00018">18</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="ad9a63ab2d85b1df3345c52d59202e895" name="ad9a63ab2d85b1df3345c52d59202e895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9a63ab2d85b1df3345c52d59202e895">&#9670;&#160;</a></span>bereinigeFontFamily()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.webserver.TabelleHtmlRenderer.bereinigeFontFamily </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>fontFamily</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00159">159</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                          {</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> fontFamily.replaceAll(<span class="stringliteral">&quot;[;\&quot;&#39;&lt;&gt;]&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b847c383afdc99bd7daaaa7194c66f4" name="a8b847c383afdc99bd7daaaa7194c66f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b847c383afdc99bd7daaaa7194c66f4">&#9670;&#160;</a></span>buildCss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.webserver.TabelleHtmlRenderer.buildCss </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#ae737e417d4d3703edec2b6cc876a91be">StyleModel</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00107">107</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                          {</div>
+<div class="line"><span class="lineno">  108</span>        var css = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><span class="lineno">  109</span>        css.append(<span class="stringliteral">&quot;overflow:hidden;&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (s.hintergrundfarbe() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  112</span>            css.append(<span class="stringliteral">&quot;background-color:&quot;</span>).append(s.hintergrundfarbe()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">if</span> (s.schriftfarbe() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  115</span>            css.append(<span class="stringliteral">&quot;color:&quot;</span>).append(s.schriftfarbe()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (s.fett()) {</div>
+<div class="line"><span class="lineno">  118</span>            css.append(<span class="stringliteral">&quot;font-weight:bold;&quot;</span>);</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">if</span> (s.kursiv()) {</div>
+<div class="line"><span class="lineno">  121</span>            css.append(<span class="stringliteral">&quot;font-style:italic;&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>        }</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">if</span> (s.schriftart() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  124</span>            css.append(<span class="stringliteral">&quot;font-family:&quot;</span>).append(bereinigeFontFamily(s.schriftart())).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (s.schriftgroesse() &gt; 0) {</div>
+<div class="line"><span class="lineno">  127</span>            css.append(<span class="stringliteral">&quot;font-size:&quot;</span>).append(formatPt(s.schriftgroesse())).append(<span class="stringliteral">&quot;pt;&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span> (s.ausrichtung() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  130</span>            css.append(<span class="stringliteral">&quot;text-align:&quot;</span>).append(s.ausrichtung()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        String va = s.vertikaleAusrichtung() != <span class="keyword">null</span> ? s.vertikaleAusrichtung() : <span class="stringliteral">&quot;top&quot;</span>;</div>
+<div class="line"><span class="lineno">  133</span>        css.append(<span class="stringliteral">&quot;vertical-align:&quot;</span>).append(va).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  134</span>        css.append(s.zeilenumbruch() ? <span class="stringliteral">&quot;white-space:normal;&quot;</span> : <span class="stringliteral">&quot;white-space:nowrap;&quot;</span>);</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordtype">int</span> rot = s.rotationGrad();</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span> (rot == 90 || rot == 270) {</div>
+<div class="line"><span class="lineno">  138</span>            css.append(<span class="stringliteral">&quot;writing-mode:vertical-rl;&quot;</span>);</div>
+<div class="line"><span class="lineno">  139</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rot != 0) {</div>
+<div class="line"><span class="lineno">  140</span>            css.append(<span class="stringliteral">&quot;transform:rotate(&quot;</span>).append(rot).append(<span class="stringliteral">&quot;deg);&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>        }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">if</span> (s.linienOben() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  144</span>            css.append(<span class="stringliteral">&quot;border-top:&quot;</span>).append(s.linienOben()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (s.linienUnten() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  147</span>            css.append(<span class="stringliteral">&quot;border-bottom:&quot;</span>).append(s.linienUnten()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (s.linienLinks() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  150</span>            css.append(<span class="stringliteral">&quot;border-left:&quot;</span>).append(s.linienLinks()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (s.linienRechts() != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  153</span>            css.append(<span class="stringliteral">&quot;border-right:&quot;</span>).append(s.linienRechts()).append(<span class="stringliteral">&quot;;&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> css.toString();</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a654ce1e2bd864ec1611c94251cea321e" name="a654ce1e2bd864ec1611c94251cea321e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654ce1e2bd864ec1611c94251cea321e">&#9670;&#160;</a></span>formatPt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.webserver.TabelleHtmlRenderer.formatPt </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00163">163</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>                                      {</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (pt == Math.floor(pt)) {</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">return</span> String.valueOf((<span class="keywordtype">int</span>) pt);</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> String.valueOf(pt);</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a298aa43575c76962c8085c6ada740d85" name="a298aa43575c76962c8085c6ada740d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298aa43575c76962c8085c6ada740d85">&#9670;&#160;</a></span>istVersteckt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.webserver.TabelleHtmlRenderer.istVersteckt </td>
+          <td>(</td>
+          <td class="paramtype">Integer</td>          <td class="paramname"><span class="paramname"><em>breite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00170">170</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>                                                        {</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span> breite != <span class="keyword">null</span> &amp;&amp; breite == 0;</div>
+<div class="line"><span class="lineno">  172</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab34eece8dafd30efb191e33a0d909e21" name="ab34eece8dafd30efb191e33a0d909e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34eece8dafd30efb191e33a0d909e21">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.webserver.TabelleHtmlRenderer.render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00024">24</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                                             {</div>
+<div class="line"><span class="lineno">   25</span>        var sb = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><span class="lineno">   26</span>        sb.append(<span class="stringliteral">&quot;&lt;table&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>        renderColgroup(model, sb);</div>
+<div class="line"><span class="lineno">   28</span>        renderKopfUndRumpf(model, sb);</div>
+<div class="line"><span class="lineno">   29</span>        sb.append(<span class="stringliteral">&quot;&lt;/table&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">return</span> sb.toString();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="accea95fcb2a01f1c27e3ef6c98828cc1" name="accea95fcb2a01f1c27e3ef6c98828cc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accea95fcb2a01f1c27e3ef6c98828cc1">&#9670;&#160;</a></span>renderColgroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.webserver.TabelleHtmlRenderer.renderColgroup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringBuilder</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00033">33</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                                      {</div>
+<div class="line"><span class="lineno">   34</span>        sb.append(<span class="stringliteral">&quot;&lt;colgroup&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   35</span>        var spaltenBreiten = model.getSpaltenBreiten();</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; model.getSpalten(); c++) {</div>
+<div class="line"><span class="lineno">   37</span>            Integer breite = spaltenBreiten.get(c);</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (istVersteckt(breite)) {</div>
+<div class="line"><span class="lineno">   39</span>                sb.append(<span class="stringliteral">&quot;&lt;col style=\&quot;display:none\&quot; /&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordtype">int</span> px = zuPx(breite != <span class="keyword">null</span> ? breite : SPALTENBREITE_FALLBACK);</div>
+<div class="line"><span class="lineno">   42</span>                sb.append(<span class="stringliteral">&quot;&lt;col style=\&quot;width:&quot;</span>).append(px).append(<span class="stringliteral">&quot;px\&quot; /&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        sb.append(<span class="stringliteral">&quot;&lt;/colgroup&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa4b84263a0e5559acfe39b469dc26443" name="aa4b84263a0e5559acfe39b469dc26443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b84263a0e5559acfe39b469dc26443">&#9670;&#160;</a></span>renderKopfUndRumpf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.webserver.TabelleHtmlRenderer.renderKopfUndRumpf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringBuilder</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00048">48</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                                          {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordtype">int</span> kopfZeilenAnzahl = model.getKopfZeilenAnzahl();</div>
+<div class="line"><span class="lineno">   50</span>        var gitter = model.getGitter();</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (kopfZeilenAnzahl &gt; 0) {</div>
+<div class="line"><span class="lineno">   53</span>            sb.append(<span class="stringliteral">&quot;&lt;thead&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; kopfZeilenAnzahl &amp;&amp; r &lt; gitter.size(); r++) {</div>
+<div class="line"><span class="lineno">   55</span>                renderZeile(model, gitter.get(r), r, sb);</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>            sb.append(<span class="stringliteral">&quot;&lt;/thead&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        sb.append(<span class="stringliteral">&quot;&lt;tbody&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = kopfZeilenAnzahl; r &lt; gitter.size(); r++) {</div>
+<div class="line"><span class="lineno">   62</span>            renderZeile(model, gitter.get(r), r, sb);</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        sb.append(<span class="stringliteral">&quot;&lt;/tbody&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a548ab4addfc229a79ef08553418cc399" name="a548ab4addfc229a79ef08553418cc399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548ab4addfc229a79ef08553418cc399">&#9670;&#160;</a></span>renderZeile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.webserver.TabelleHtmlRenderer.renderZeile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/d39/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_model.html">TabelleModel</a></td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; String &gt;</td>          <td class="paramname"><span class="paramname"><em>zeile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>zeilenIdx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringBuilder</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00067">67</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                                                                      {</div>
+<div class="line"><span class="lineno">   68</span>        Integer hoehe = model.getZeilenHoehen().get(zeilenIdx);</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> px = zuPx(hoehe != <span class="keyword">null</span> ? hoehe : ZEILENHOEHE_FALLBACK);</div>
+<div class="line"><span class="lineno">   70</span>        sb.append(<span class="stringliteral">&quot;&lt;tr style=\&quot;height:&quot;</span>).append(px).append(<span class="stringliteral">&quot;px\&quot;&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        var spaltenBreiten = model.getSpaltenBreiten();</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; zeile.size(); c++) {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (istVersteckt(spaltenBreiten.get(c))) {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>            String <span class="keywordtype">id</span> = zeile.get(c);</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">continue</span>; <span class="comment">// Merge-Slave</span></div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_function" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#a763a21e7839f80b422e52ed9aac9cf90">ZelleModel</a> zelle = model.getZellen().get(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (zelle == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   83</span>                sb.append(<span class="stringliteral">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>); <span class="comment">// catch-Fall aus TabellenMapper</span></div>
+<div class="line"><span class="lineno">   84</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   85</span>                renderZelle(zelle, sb);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>        sb.append(<span class="stringliteral">&quot;&lt;/tr&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1webserver_html_a763a21e7839f80b422e52ed9aac9cf90"><div class="ttname"><a href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#a763a21e7839f80b422e52ed9aac9cf90">de.petanqueturniermanager.webserver.ZelleModel</a></div><div class="ttdeci">record ZelleModel(String id, String wert, StyleModel stil)</div><div class="ttdoc">Repräsentiert eine einzelne Tabellenzelle mit Inhalt und Stil.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d66/_zelle_model_8java_source.html#l00010">ZelleModel.java:10</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5396ccb739fe23ae5303c31de2dcad8c" name="a5396ccb739fe23ae5303c31de2dcad8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5396ccb739fe23ae5303c31de2dcad8c">&#9670;&#160;</a></span>renderZelle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.webserver.TabelleHtmlRenderer.renderZelle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#a763a21e7839f80b422e52ed9aac9cf90">ZelleModel</a></td>          <td class="paramname"><span class="paramname"><em>zelle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringBuilder</td>          <td class="paramname"><span class="paramname"><em>sb</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00092">92</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                                                 {</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#ae737e417d4d3703edec2b6cc876a91be">StyleModel</a> s = zelle.stil();</div>
+<div class="line"><span class="lineno">   94</span>        sb.append(<span class="stringliteral">&quot;&lt;td&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (s.colspan() &gt; 1) {</div>
+<div class="line"><span class="lineno">   96</span>            sb.append(<span class="stringliteral">&quot; colspan=\&quot;&quot;</span>).append(s.colspan()).append(<span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (s.rowspan() &gt; 1) {</div>
+<div class="line"><span class="lineno">   99</span>            sb.append(<span class="stringliteral">&quot; rowspan=\&quot;&quot;</span>).append(s.rowspan()).append(<span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        sb.append(<span class="stringliteral">&quot; style=\&quot;&quot;</span>).append(buildCss(s)).append(<span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  102</span>        sb.append(<span class="stringliteral">&quot;&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>        sb.append(StringEscapeUtils.escapeHtml4(zelle.wert() != <span class="keyword">null</span> ? zelle.wert() : <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><span class="lineno">  104</span>        sb.append(<span class="stringliteral">&quot;&lt;/td&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1webserver_html_ae737e417d4d3703edec2b6cc876a91be"><div class="ttname"><a href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html#ae737e417d4d3703edec2b6cc876a91be">de.petanqueturniermanager.webserver.StyleModel</a></div><div class="ttdeci">record StyleModel(boolean fett, boolean kursiv, String hintergrundfarbe, String schriftfarbe, String ausrichtung, String vertikaleAusrichtung, int colspan, int rowspan, int rotationGrad, boolean zeilenumbruch, String schriftart, float schriftgroesse, String linienOben, String linienUnten, String linienLinks, String linienRechts)</div><div class="ttdoc">Enthält alle visuellen Eigenschaften einer einzelnen Tabellenzelle.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dc8/_style_model_8java_source.html#l00012">StyleModel.java:12</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1d98fe563a7c6a3c0d2ec67c97fc75bf" name="a1d98fe563a7c6a3c0d2ec67c97fc75bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d98fe563a7c6a3c0d2ec67c97fc75bf">&#9670;&#160;</a></span>zuPx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int de.petanqueturniermanager.webserver.TabelleHtmlRenderer.zuPx </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>unoEinheit</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00174">174</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                                            {</div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">return</span> Math.round(unoEinheit / UNO_ZU_PX);</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="aa9f0c57f115bffe88721bcc9cde27a51" name="aa9f0c57f115bffe88721bcc9cde27a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f0c57f115bffe88721bcc9cde27a51">&#9670;&#160;</a></span>SPALTENBREITE_FALLBACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int de.petanqueturniermanager.webserver.TabelleHtmlRenderer.SPALTENBREITE_FALLBACK = 2000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00021">21</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+
+</div>
+</div>
+<a id="a0f5c4d7e6ea917ac756a1c562d08730b" name="a0f5c4d7e6ea917ac756a1c562d08730b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5c4d7e6ea917ac756a1c562d08730b">&#9670;&#160;</a></span>UNO_ZU_PX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final float de.petanqueturniermanager.webserver.TabelleHtmlRenderer.UNO_ZU_PX = 37.795f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00020">20</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+
+</div>
+</div>
+<a id="ac28d1397569ff44768a5e8de16dc48f7" name="ac28d1397569ff44768a5e8de16dc48f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28d1397569ff44768a5e8de16dc48f7">&#9670;&#160;</a></span>ZEILENHOEHE_FALLBACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int de.petanqueturniermanager.webserver.TabelleHtmlRenderer.ZEILENHOEHE_FALLBACK = 600</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html#l00022">22</a> der Datei <a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/webserver/<a class="el" href="../../d4/de8/_tabelle_html_renderer_8java_source.html">TabelleHtmlRenderer.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html">webserver</a></li><li class="navelem"><a href="../../d1/d28/classde_1_1petanqueturniermanager_1_1webserver_1_1_tabelle_html_renderer.html">TabelleHtmlRenderer</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/importer/SpielerDbImportValidator.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/de5/_spieler_db_import_validator_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbImportValidator.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/de5/_spieler_db_import_validator_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.importer;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.HashSet;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.LinkedHashMap;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.Set;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbException;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohLabel;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohSpieler;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohSpielerLabel;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohVerein;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ValidierteDaten.ValLabel;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ValidierteDaten.ValSpieler;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ValidierteDaten.ValSpielerLabel;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.importer.ValidierteDaten.ValVerein;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.matching.SpielerMatchKeyNormalizer;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html">   40</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html">SpielerDbImportValidator</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a976bec39b927d8d50417378a6cdfb7cb">   42</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">ValidierteDaten</a> <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a976bec39b927d8d50417378a6cdfb7cb">validiere</a>(<a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a> roh) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        List&lt;String&gt; fehler = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        List&lt;ImportWarnung&gt; warnungen = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        List&lt;ValVerein&gt; vereine = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a087f0b1ad8aa70fc5b1055fb00f870fa">validiereVereine</a>(roh.vereine(), fehler, warnungen);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        List&lt;ValLabel&gt; labels = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a8bda73c1dee212cccc6b6ad1c22e537a">validiereLabels</a>(roh.labels(), fehler, warnungen);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        Map&lt;String, Integer&gt; vereinNameZuAltNr = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#abb20e571a209dba38b6f50198bbc5544">sammleVereinNamen</a>(vereine);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a064802d1c8574040f76255eac15f2719">ergaenzeImpliziteVereine</a>(roh.spieler(), vereine, vereinNameZuAltNr);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        List&lt;ValSpieler&gt; spieler = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a3d193a017fab0321e9a2b89c5bc25bd5">validiereSpieler</a>(roh.spieler(), vereinNameZuAltNr,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                fehler, warnungen);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        List&lt;ValSpielerLabel&gt; junction = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a5294c48431c70b8020e50488a1eeb371">validiereJunction</a>(roh, warnungen);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (!fehler.isEmpty()) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d5/da8/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_validation_exception.html#a2175179323ad28cbdd504af8944e6364">SpielerDbValidationException</a>(fehler);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">ValidierteDaten</a>(spieler, vereine, labels, junction, warnungen);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a087f0b1ad8aa70fc5b1055fb00f870fa">   62</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;ValVerein&gt; <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a087f0b1ad8aa70fc5b1055fb00f870fa">validiereVereine</a>(List&lt;RohVerein&gt; roh, List&lt;String&gt; fehler,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            List&lt;ImportWarnung&gt; warnungen) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        LinkedHashMap&lt;String, ValVerein&gt; dedup = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; roh.size(); i++) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            RohVerein v = roh.get(i);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            String name = v.name() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : v.name().strip();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (name.isEmpty()) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                fehler.add(<span class="stringliteral">&quot;Verein-Eintrag &quot;</span> + (i + 1) + <span class="stringliteral">&quot;: Name fehlt&quot;</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            String key = <a class="code hl_class" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">SpielerMatchKeyNormalizer</a>.<a class="code hl_function" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#ae23737ee3cd0e859c1683d4bea2c1c1d">vereinSchluessel</a>(name);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            ValVerein neu = <span class="keyword">new</span> ValVerein(v.nr(), name);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (dedup.put(key, neu) != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                warnungen.add(<span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#a7de518f3b41bcec93fe8cf9c9c1ea1fd">ImportWarnung</a>(</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        <span class="stringliteral">&quot;Verein &#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; kommt mehrfach in der Datei vor — letzter Eintrag gewinnt&quot;</span>));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(dedup.values());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#abb20e571a209dba38b6f50198bbc5544">   82</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Integer&gt; <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#abb20e571a209dba38b6f50198bbc5544">sammleVereinNamen</a>(List&lt;ValVerein&gt; vereine) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        Map&lt;String, Integer&gt; erg = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dfe/class_hash_map.html">HashMap&lt;&gt;</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (ValVerein v : vereine) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">if</span> (v.altNr() != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                erg.put(<a class="code hl_class" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">SpielerMatchKeyNormalizer</a>.<a class="code hl_function" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#ae23737ee3cd0e859c1683d4bea2c1c1d">vereinSchluessel</a>(v.name()), v.altNr());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a064802d1c8574040f76255eac15f2719">   99</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a064802d1c8574040f76255eac15f2719">ergaenzeImpliziteVereine</a>(List&lt;RohSpieler&gt; spieler,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            List&lt;ValVerein&gt; vereine, Map&lt;String, Integer&gt; nameZuAltNr) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordtype">int</span> sentinel = -1;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="comment">// Schon vergebene negative AltNrs (z.B. aus expliziten RohVereinen mit nr=null</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="comment">// wären in vereine schon mit altNr=null vermerkt — diese betreffen den Sentinel</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="comment">// nicht). Wir starten frisch bei -1, da Sentinel-NRs nur dann benutzt werden,</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="comment">// wenn der explizite RohVerein keine altNr hatte; das stört das Mapping nicht.</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        Set&lt;Integer&gt; bereitsBenutzteSentinels = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span> (RohSpieler s : spieler) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">if</span> (s.vereinNr() != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            String vereinName = s.vereinName();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">if</span> (vereinName == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            String getrimmt = vereinName.strip();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">if</span> (getrimmt.isEmpty()) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            String key = <a class="code hl_class" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">SpielerMatchKeyNormalizer</a>.<a class="code hl_function" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#ae23737ee3cd0e859c1683d4bea2c1c1d">vereinSchluessel</a>(getrimmt);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">if</span> (nameZuAltNr.containsKey(key)) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">while</span> (bereitsBenutzteSentinels.contains(sentinel)) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                sentinel--;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordtype">int</span> altNr = sentinel--;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            bereitsBenutzteSentinels.add(altNr);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            vereine.add(<span class="keyword">new</span> ValVerein(altNr, getrimmt));</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            nameZuAltNr.put(key, altNr);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a8bda73c1dee212cccc6b6ad1c22e537a">  133</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;ValLabel&gt; <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a8bda73c1dee212cccc6b6ad1c22e537a">validiereLabels</a>(List&lt;RohLabel&gt; roh, List&lt;String&gt; fehler,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            List&lt;ImportWarnung&gt; warnungen) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        LinkedHashMap&lt;String, ValLabel&gt; dedup = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; roh.size(); i++) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            RohLabel l = roh.get(i);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            String name = l.name() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : l.name().strip();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span> (name.isEmpty()) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                fehler.add(<span class="stringliteral">&quot;Label-Eintrag &quot;</span> + (i + 1) + <span class="stringliteral">&quot;: Name fehlt&quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            String key = <a class="code hl_class" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">SpielerMatchKeyNormalizer</a>.<a class="code hl_function" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#a45df4c018be0fa78070e0b44f7655079">labelSchluessel</a>(name);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            ValLabel neu = <span class="keyword">new</span> ValLabel(l.nr(), name);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">if</span> (dedup.put(key, neu) != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                warnungen.add(<span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#a7de518f3b41bcec93fe8cf9c9c1ea1fd">ImportWarnung</a>(</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        <span class="stringliteral">&quot;Label &#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; kommt mehrfach in der Datei vor — letzter Eintrag gewinnt&quot;</span>));</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(dedup.values());</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a3d193a017fab0321e9a2b89c5bc25bd5">  153</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;ValSpieler&gt; <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a3d193a017fab0321e9a2b89c5bc25bd5">validiereSpieler</a>(List&lt;RohSpieler&gt; roh,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            Map&lt;String, Integer&gt; vereinNameZuAltNr, List&lt;String&gt; fehler,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            List&lt;ImportWarnung&gt; warnungen) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        LinkedHashMap&lt;String, ValSpieler&gt; dedup = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; roh.size(); i++) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            RohSpieler s = roh.get(i);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            String vorname = s.vorname() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : s.vorname().strip();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            String nachname = s.nachname() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : s.nachname().strip();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            String herkunft = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#ade574e22795ab1351c86f04093c65d72">herkunftsLabel</a>(s, i);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">if</span> (vorname.isEmpty() || nachname.isEmpty()) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                fehler.add(herkunft + <span class="stringliteral">&quot;: Vor-/Nachname fehlt&quot;</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            Integer <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">effektiveVereinNr</a> = <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">effektiveVereinNr</a>(s, vereinNameZuAltNr);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            String key = <a class="code hl_class" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">SpielerMatchKeyNormalizer</a>.<a class="code hl_function" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#a39ce0462522b212b68f0d04e2fe393cb">spielerSchluesselMitVereinNr</a>(</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    vorname, nachname, <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">effektiveVereinNr</a>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            ValSpieler neu = <span class="keyword">new</span> ValSpieler(s.nr(), vorname, nachname,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">effektiveVereinNr</a>, s.vereinName(), s.lizenznr(), s.quellZeile());</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">if</span> (dedup.put(key, neu) != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                String praefix = s.quellZeile() != <span class="keyword">null</span> ? <span class="stringliteral">&quot;Zeile &quot;</span> + s.quellZeile() + <span class="stringliteral">&quot;: &quot;</span> : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                warnungen.add(<span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#a7de518f3b41bcec93fe8cf9c9c1ea1fd">ImportWarnung</a>(praefix</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                        + <span class="stringliteral">&quot;Spieler &#39;&quot;</span> + vorname + <span class="stringliteral">&quot; &quot;</span> + nachname + <span class="stringliteral">&quot;&#39; kommt mehrfach in der Datei vor&quot;</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                        + <span class="stringliteral">&quot; — letzter Eintrag gewinnt&quot;</span>));</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(dedup.values());</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    @Nullable</div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">  182</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> Integer <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">effektiveVereinNr</a>(RohSpieler s, Map&lt;String, Integer&gt; nameZuAltNr) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (s.vereinNr() != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keywordflow">return</span> s.vereinNr();</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        String name = s.vereinName();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">if</span> (name == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        String getrimmt = name.strip();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">if</span> (getrimmt.isEmpty()) {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">return</span> nameZuAltNr.get(<a class="code hl_class" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">SpielerMatchKeyNormalizer</a>.<a class="code hl_function" href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#ae23737ee3cd0e859c1683d4bea2c1c1d">vereinSchluessel</a>(getrimmt));</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    }</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#ade574e22795ab1351c86f04093c65d72">  197</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#ade574e22795ab1351c86f04093c65d72">herkunftsLabel</a>(RohSpieler s, <span class="keywordtype">int</span> idx) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">return</span> s.quellZeile() != <span class="keyword">null</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                ? <span class="stringliteral">&quot;Zeile &quot;</span> + s.quellZeile()</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                : <span class="stringliteral">&quot;Spieler-Eintrag &quot;</span> + (idx + 1);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
+</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a5294c48431c70b8020e50488a1eeb371">  203</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;ValSpielerLabel&gt; <a class="code hl_function" href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a5294c48431c70b8020e50488a1eeb371">validiereJunction</a>(<a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a> roh,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            List&lt;ImportWarnung&gt; warnungen) {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        Set&lt;Integer&gt; bekannteSpielerNrs = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">for</span> (RohSpieler s : roh.spieler()) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordflow">if</span> (s.nr() != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                bekannteSpielerNrs.add(s.nr());</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        Set&lt;Integer&gt; bekannteLabelNrs = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">for</span> (RohLabel l : roh.labels()) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="keywordflow">if</span> (l.nr() != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                bekannteLabelNrs.add(l.nr());</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        List&lt;ValSpielerLabel&gt; erg = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(roh.spielerLabels().size());</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">for</span> (RohSpielerLabel j : roh.spielerLabels()) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">if</span> (!bekannteSpielerNrs.contains(j.spielerNr())) {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                warnungen.add(<span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#a7de518f3b41bcec93fe8cf9c9c1ea1fd">ImportWarnung</a>(<span class="stringliteral">&quot;Junction-Eintrag verweist auf unbekannte spielerNr=&quot;</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                        + j.spielerNr() + <span class="stringliteral">&quot; — übersprungen&quot;</span>));</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">if</span> (!bekannteLabelNrs.contains(j.labelNr())) {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                warnungen.add(<span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#a7de518f3b41bcec93fe8cf9c9c1ea1fd">ImportWarnung</a>(<span class="stringliteral">&quot;Junction-Eintrag verweist auf unbekannte labelNr=&quot;</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                        + j.labelNr() + <span class="stringliteral">&quot; — übersprungen&quot;</span>));</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            erg.add(<span class="keyword">new</span> ValSpielerLabel(j.spielerNr(), j.labelNr()));</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_hash_map_html"><div class="ttname"><a href="../../d8/dfe/class_hash_map.html">HashMap</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">de.petanqueturniermanager.spielerdb.SpielerDbException</a></div><div class="ttdoc">Fehler aus der Spieler-DB-Schicht.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00008">SpielerDbException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator</a></div><div class="ttdoc">Prüft Roh-Daten vor der Transaktion.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">SpielerDbImportValidator.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a064802d1c8574040f76255eac15f2719"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a064802d1c8574040f76255eac15f2719">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.ergaenzeImpliziteVereine</a></div><div class="ttdeci">static void ergaenzeImpliziteVereine(List&lt; RohSpieler &gt; spieler, List&lt; ValVerein &gt; vereine, Map&lt; String, Integer &gt; nameZuAltNr)</div><div class="ttdoc">Für jeden RohSpieler mit vereinName aber ohne vereinNr (und ohne passenden expliziten RohVerein) wird...</div><div class="ttdef"><b>Definition</b> <a href="#l00099">SpielerDbImportValidator.java:99</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a087f0b1ad8aa70fc5b1055fb00f870fa"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a087f0b1ad8aa70fc5b1055fb00f870fa">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.validiereVereine</a></div><div class="ttdeci">static List&lt; ValVerein &gt; validiereVereine(List&lt; RohVerein &gt; roh, List&lt; String &gt; fehler, List&lt; ImportWarnung &gt; warnungen)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SpielerDbImportValidator.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a238f8fd041b132b8e7c0f47f710290dd"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a238f8fd041b132b8e7c0f47f710290dd">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.effektiveVereinNr</a></div><div class="ttdeci">static Integer effektiveVereinNr(RohSpieler s, Map&lt; String, Integer &gt; nameZuAltNr)</div><div class="ttdef"><b>Definition</b> <a href="#l00182">SpielerDbImportValidator.java:182</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a3d193a017fab0321e9a2b89c5bc25bd5"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a3d193a017fab0321e9a2b89c5bc25bd5">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.validiereSpieler</a></div><div class="ttdeci">static List&lt; ValSpieler &gt; validiereSpieler(List&lt; RohSpieler &gt; roh, Map&lt; String, Integer &gt; vereinNameZuAltNr, List&lt; String &gt; fehler, List&lt; ImportWarnung &gt; warnungen)</div><div class="ttdef"><b>Definition</b> <a href="#l00153">SpielerDbImportValidator.java:153</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a5294c48431c70b8020e50488a1eeb371"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a5294c48431c70b8020e50488a1eeb371">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.validiereJunction</a></div><div class="ttdeci">static List&lt; ValSpielerLabel &gt; validiereJunction(ImportRohdaten roh, List&lt; ImportWarnung &gt; warnungen)</div><div class="ttdef"><b>Definition</b> <a href="#l00203">SpielerDbImportValidator.java:203</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a8bda73c1dee212cccc6b6ad1c22e537a"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a8bda73c1dee212cccc6b6ad1c22e537a">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.validiereLabels</a></div><div class="ttdeci">static List&lt; ValLabel &gt; validiereLabels(List&lt; RohLabel &gt; roh, List&lt; String &gt; fehler, List&lt; ImportWarnung &gt; warnungen)</div><div class="ttdef"><b>Definition</b> <a href="#l00133">SpielerDbImportValidator.java:133</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_a976bec39b927d8d50417378a6cdfb7cb"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#a976bec39b927d8d50417378a6cdfb7cb">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.validiere</a></div><div class="ttdeci">ValidierteDaten validiere(ImportRohdaten roh)</div><div class="ttdef"><b>Definition</b> <a href="#l00042">SpielerDbImportValidator.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_abb20e571a209dba38b6f50198bbc5544"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#abb20e571a209dba38b6f50198bbc5544">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.sammleVereinNamen</a></div><div class="ttdeci">static Map&lt; String, Integer &gt; sammleVereinNamen(List&lt; ValVerein &gt; vereine)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">SpielerDbImportValidator.java:82</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator_html_ade574e22795ab1351c86f04093c65d72"><div class="ttname"><a href="../../d8/dc5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_validator.html#ade574e22795ab1351c86f04093c65d72">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportValidator.herkunftsLabel</a></div><div class="ttdeci">static String herkunftsLabel(RohSpieler s, int idx)</div><div class="ttdef"><b>Definition</b> <a href="#l00197">SpielerDbImportValidator.java:197</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_validation_exception_html_a2175179323ad28cbdd504af8944e6364"><div class="ttname"><a href="../../d5/da8/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_validation_exception.html#a2175179323ad28cbdd504af8944e6364">de.petanqueturniermanager.spielerdb.importer.SpielerDbValidationException.SpielerDbValidationException</a></div><div class="ttdeci">SpielerDbValidationException(List&lt; String &gt; fehler)</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d3a/_spieler_db_validation_exception_8java_source.html#l00020">SpielerDbValidationException.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer_html"><div class="ttname"><a href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html">de.petanqueturniermanager.spielerdb.matching.SpielerMatchKeyNormalizer</a></div><div class="ttdoc">Normalisiert Strings für den Vergleich von Spieler-/Verein-/Label-Identitäten.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d03/_spieler_match_key_normalizer_8java_source.html#l00025">SpielerMatchKeyNormalizer.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer_html_a39ce0462522b212b68f0d04e2fe393cb"><div class="ttname"><a href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#a39ce0462522b212b68f0d04e2fe393cb">de.petanqueturniermanager.spielerdb.matching.SpielerMatchKeyNormalizer.spielerSchluesselMitVereinNr</a></div><div class="ttdeci">static String spielerSchluesselMitVereinNr(String vorname, String nachname, @Nullable Integer vereinNr)</div><div class="ttdoc">Match-Schlüssel für Spieler über Vereins-NR.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d03/_spieler_match_key_normalizer_8java_source.html#l00058">SpielerMatchKeyNormalizer.java:58</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer_html_a45df4c018be0fa78070e0b44f7655079"><div class="ttname"><a href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#a45df4c018be0fa78070e0b44f7655079">de.petanqueturniermanager.spielerdb.matching.SpielerMatchKeyNormalizer.labelSchluessel</a></div><div class="ttdeci">static String labelSchluessel(String name)</div><div class="ttdoc">Match-Schlüssel für Labels.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d03/_spieler_match_key_normalizer_8java_source.html#l00070">SpielerMatchKeyNormalizer.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer_html_ae23737ee3cd0e859c1683d4bea2c1c1d"><div class="ttname"><a href="../../d2/de5/classde_1_1petanqueturniermanager_1_1spielerdb_1_1matching_1_1_spieler_match_key_normalizer.html#ae23737ee3cd0e859c1683d4bea2c1c1d">de.petanqueturniermanager.spielerdb.matching.SpielerMatchKeyNormalizer.vereinSchluessel</a></div><div class="ttdeci">static String vereinSchluessel(String name)</div><div class="ttdoc">Match-Schlüssel für Vereine.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d03/_spieler_match_key_normalizer_8java_source.html#l00065">SpielerMatchKeyNormalizer.java:65</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_a7de518f3b41bcec93fe8cf9c9c1ea1fd"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#a7de518f3b41bcec93fe8cf9c9c1ea1fd">de.petanqueturniermanager.spielerdb.importer.ImportWarnung</a></div><div class="ttdeci">record ImportWarnung(String text)</div><div class="ttdoc">Nicht-fataler Hinweis aus der Import-Pipeline.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d52/_import_warnung_8java_source.html#l00007">ImportWarnung.java:7</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_acded9e8745d8489c2d0b0fa1c995fe7a"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">de.petanqueturniermanager.spielerdb.importer.ValidierteDaten</a></div><div class="ttdeci">record ValidierteDaten(List&lt; ValSpieler &gt; spieler, List&lt; ValVerein &gt; vereine, List&lt; ValLabel &gt; labels, List&lt; ValSpielerLabel &gt; spielerLabels, List&lt; ImportWarnung &gt; warnungen)</div><div class="ttdoc">Ergebnis der Validierungs-Stufe: Pflichtfelder garantiert, Junction-Refs konsistent (oder bereits aus...</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d70/_validierte_daten_8java_source.html#l00012">ValidierteDaten.java:12</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_afc7ed4612e551a6e2c49a34365206931"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">de.petanqueturniermanager.spielerdb.importer.ImportRohdaten</a></div><div class="ttdeci">record ImportRohdaten(List&lt; RohSpieler &gt; spieler, List&lt; RohVerein &gt; vereine, List&lt; RohLabel &gt; labels, List&lt; RohSpielerLabel &gt; spielerLabels)</div><div class="ttdoc">Rohe (noch nicht validierte) Daten aus einer Import-Quelle.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/ddb/_import_rohdaten_8java_source.html#l00018">ImportRohdaten.java:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_b04589d758b323be9502941c6b1fb23c.html">importer</a></li><li class="navelem"><a href="../../dc/de5/_spieler_db_import_validator_8java.html">SpielerDbImportValidator.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

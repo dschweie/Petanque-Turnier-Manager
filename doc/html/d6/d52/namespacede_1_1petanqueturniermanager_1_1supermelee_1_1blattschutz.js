@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz =
+[
+    [ "SupermeleeBlattschutzKonfiguration", "d7/d97/classde_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz_1_1_supermelee_blattschutz_konfiguration.html", "d7/d97/classde_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz_1_1_supermelee_blattschutz_konfiguration" ]
+];

@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/webserver/TurnierStatusErmittler.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/da4/_turnier_status_ermittler_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TurnierStatusErmittler.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.formulex.FormuleXStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.helper.DocumentPropertiesHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.spielplan.JGJStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.kaskade.KaskadeStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.ko.KoStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.liga.spielplan.LigaStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.poule.PouleStatusLeser;</code><br />
+<code>import de.petanqueturniermanager.schweizer.konfiguration.SchweizerPropertiesSpalte;</code><br />
+<code>import de.petanqueturniermanager.supermelee.konfiguration.SuperMeleePropertiesSpalte;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für TurnierStatusErmittler.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d39/_turnier_status_ermittler_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2webserver_2_turnier_status_ermittler_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2webserver_2_turnier_status_ermittler_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2webserver_2_turnier_status_ermittler_8java">
+<area shape="rect" title=" " alt="" coords="1800,5,2061,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,224,139"/>
+<area shape="poly" title=" " alt="" coords="1797,28,1520,33,1135,42,692,63,464,79,240,98,239,93,464,73,692,58,1135,37,1520,28,1803,28"/>
+<area shape="rect" title=" " alt="" coords="248,96,485,139"/>
+<area shape="poly" title=" " alt="" coords="1797,30,1560,38,1239,49,874,68,500,98,500,93,873,63,1239,44,1560,32,1802,30"/>
+<area shape="rect" title=" " alt="" coords="509,96,730,139"/>
+<area shape="poly" title=" " alt="" coords="1797,31,1339,52,1045,71,746,98,746,93,1045,66,1338,47,1803,31"/>
+<area shape="rect" title=" " alt="" coords="755,104,1029,131"/>
+<area shape="poly" title=" " alt="" coords="1802,35,1456,62,1040,99,994,104,994,99,1040,93,1455,56,1797,36"/>
+<area shape="rect" title=" " alt="" coords="1052,96,1310,139"/>
+<area shape="poly" title=" " alt="" coords="1803,41,1326,98,1325,93,1798,42"/>
+<area shape="rect" title=" " alt="" coords="1334,96,1669,139"/>
+<area shape="poly" title=" " alt="" coords="1832,48,1617,95,1616,90,1827,49"/>
+<area shape="rect" title=" " alt="" coords="1693,96,1928,139"/>
+<area shape="poly" title=" " alt="" coords="1905,48,1851,89,1850,84,1900,49"/>
+<area shape="rect" title=" " alt="" coords="1952,96,2152,139"/>
+<area shape="poly" title=" " alt="" coords="1959,46,2014,87,2009,86,1958,51"/>
+<area shape="rect" title=" " alt="" coords="2176,96,2437,139"/>
+<area shape="poly" title=" " alt="" coords="2019,46,2206,92,2201,92,2018,51"/>
+<area shape="rect" title=" " alt="" coords="2461,96,2720,139"/>
+<area shape="poly" title=" " alt="" coords="2061,42,2448,96,2443,95,2061,47"/>
+<area shape="rect" title=" " alt="" coords="2743,96,2960,139"/>
+<area shape="poly" title=" " alt="" coords="2061,33,2362,56,2730,96,2725,95,2362,61,2061,39"/>
+<area shape="rect" title=" " alt="" coords="2985,96,3308,139"/>
+<area shape="poly" title=" " alt="" coords="2061,32,2463,55,2972,96,2967,96,2462,60,2061,37"/>
+<area shape="rect" title=" " alt="" coords="3333,96,3664,139"/>
+<area shape="poly" title=" " alt="" coords="2061,29,2604,50,2957,68,3320,96,3315,96,2956,74,2604,55,2061,34"/>
+<area shape="rect" title=" " alt="" coords="3688,96,3997,139"/>
+<area shape="poly" title=" " alt="" coords="2061,27,2349,32,2746,44,3204,63,3675,96,3670,96,3203,68,2746,49,2348,38,2061,32"/>
+</map>
+</div>
+</div>
+<p><a href="../../de/da4/_turnier_status_ermittler_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ewebserver_2ETurnierStatusErmittler" id="r_de_2Epetanqueturniermanager_2Ewebserver_2ETurnierStatusErmittler"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d41/classde_1_1petanqueturniermanager_1_1webserver_1_1_turnier_status_ermittler.html">de.petanqueturniermanager.webserver.TurnierStatusErmittler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert pro Turniersystem einen kurzen Status-Text ("Spielrunde 3", "Turnier beendet", …).  <a href="../../dc/d41/classde_1_1petanqueturniermanager_1_1webserver_1_1_turnier_status_ermittler.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ewebserver" id="r_de_2Epetanqueturniermanager_2Ewebserver"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d90/namespacede_1_1petanqueturniermanager_1_1webserver.html">de.petanqueturniermanager.webserver</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_76781b525c19a99b082f593a6c41c2ff.html">webserver</a></li><li class="navelem"><a href="../../de/da4/_turnier_status_ermittler_8java.html">TurnierStatusErmittler.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

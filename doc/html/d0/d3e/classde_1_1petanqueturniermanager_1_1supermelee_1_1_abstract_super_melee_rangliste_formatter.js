@@ -1,0 +1,27 @@
+var classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter =
+[
+    [ "AbstractSuperMeleeRanglisteFormatter", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a6962825591a4b7e3af09d93198c036f3", null ],
+    [ "addFooter", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a39473f919b220a5bdfed0927ac3075e8", null ],
+    [ "borderThinLeftBold", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a98e51ad6b024007758ac1f8684771b4c", null ],
+    [ "formatDatenErrorGeradeUngerade", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#aa17bdf4ff259d6d67a9b1d75692221dd", null ],
+    [ "formatDatenErrorGeradeUngerade", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#ae655a02c4776757d913c5843825661ee", null ],
+    [ "formatDatenSpielTagSpalten", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#ae44a088948be52a8714f51ab8abaf816", null ],
+    [ "formatDritteZeileSpielTagSpalten", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#acea4d2293ef1e2a924b31107072ee5a7", null ],
+    [ "formatEndSummen", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#abfae46c9660fb1875ee3f6f3484dbd2a", null ],
+    [ "formatErsteZeileSummeSpalte", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a1052fa61639b2d3734b7b6dc300030f1", null ],
+    [ "formatZweiteZeileSpielTagSpalten", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a364af867fcb8334f5fff6f6849be1514", null ],
+    [ "getHeaderFarbe", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#ac98e67973fd090f5921f37db41b50ef9", null ],
+    [ "getLetzteSpalte", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a4d408ba03c82b701ae7d0eea1fb0b608", null ],
+    [ "getPropertiesSpalte", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#ad01e47359de07a510f52d1670a7234da", null ],
+    [ "getSheet", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#ad2c7da0248cd3f5318ca5bcf8a6a6847", null ],
+    [ "getSheetHelper", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#aaffac789b911e5db018f1cfec4c25003", null ],
+    [ "getSpielerSpalte", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a729014aa44cbeb4a055d73d89d30b3dd", null ],
+    [ "getSuprMleEndranglisteSortMode", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#af4c126c24671007310d0938f54d1cf7a", null ],
+    [ "DRITTE_KOPFDATEN_ZEILE", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a6ab2c9c322048c0b20f4e01e20cd4e11", null ],
+    [ "ENDSUMME_NUMBER_WIDTH", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a04ab4d0ed3e9c4eb0b92fb9bbecd964b", null ],
+    [ "ERSTE_KOPFDATEN_ZEILE", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#acb3a2a3c46079d39a450c08713995dff", null ],
+    [ "iRanglisteSheet", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a6f22a647a5fb3a2c713c07081c794ba3", null ],
+    [ "propertiesSpalte", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#aa2a89c925c22ca9a15712a4c8e2e3f66", null ],
+    [ "spielerSpalte", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#ac66b2ae4a0ba015e4aed993e85ac1e48", null ],
+    [ "ZWEITE_KOPFDATEN_ZEILE", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html#a94e76f3acdc152f783ba7521f6fd2b5d", null ]
+];

@@ -1,0 +1,4 @@
+var _schweizer_melde_liste_sheet_test_daten_8java =
+[
+    [ "de.petanqueturniermanager.schweizer.meldeliste.SchweizerMeldeListeSheetTestDaten", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten" ]
+];

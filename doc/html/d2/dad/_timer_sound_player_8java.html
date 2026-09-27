@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/timer/TimerSoundPlayer.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d2/dad/_timer_sound_player_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TimerSoundPlayer.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.io.BufferedInputStream;</code><br />
+<code>import java.io.IOException;</code><br />
+<code>import java.io.InputStream;</code><br />
+<code>import java.util.concurrent.Executors;</code><br />
+<code>import java.util.concurrent.ScheduledExecutorService;</code><br />
+<code>import java.util.concurrent.ScheduledFuture;</code><br />
+<code>import java.util.concurrent.TimeUnit;</code><br />
+<code>import javax.sound.sampled.AudioInputStream;</code><br />
+<code>import javax.sound.sampled.AudioSystem;</code><br />
+<code>import javax.sound.sampled.Clip;</code><br />
+<code>import javax.sound.sampled.LineEvent;</code><br />
+<code>import javax.sound.sampled.LineUnavailableException;</code><br />
+<code>import javax.sound.sampled.UnsupportedAudioFileException;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für TimerSoundPlayer.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d11/_timer_sound_player_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2timer_2_timer_sound_player_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2timer_2_timer_sound_player_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2timer_2_timer_sound_player_8java">
+<area shape="rect" title=" " alt="" coords="1361,5,1621,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,188,131"/>
+<area shape="poly" title=" " alt="" coords="1358,29,1140,36,851,47,526,67,199,99,169,103,168,98,199,93,526,61,850,41,1140,31,1363,29"/>
+<area shape="rect" title=" " alt="" coords="212,104,347,131"/>
+<area shape="poly" title=" " alt="" coords="1358,28,1165,34,915,45,638,65,497,80,360,99,338,103,337,97,359,93,496,75,637,60,915,39,1165,29,1363,28"/>
+<area shape="rect" title=" " alt="" coords="371,104,505,131"/>
+<area shape="poly" title=" " alt="" coords="1358,30,1192,38,981,49,749,69,517,99,497,103,496,97,516,93,748,63,980,44,1192,32,1363,30"/>
+<area shape="rect" title=" " alt="" coords="529,104,723,131"/>
+<area shape="poly" title=" " alt="" coords="1363,36,1073,61,904,78,736,99,705,103,704,98,735,93,904,73,1073,56,1358,36"/>
+<area shape="rect" title=" " alt="" coords="748,96,944,139"/>
+<area shape="poly" title=" " alt="" coords="1363,42,1175,68,959,98,959,93,1174,63,1358,43"/>
+<area shape="rect" title=" " alt="" coords="968,96,1164,139"/>
+<area shape="poly" title=" " alt="" coords="1394,48,1180,95,1179,90,1389,49"/>
+<area shape="rect" title=" " alt="" coords="1188,104,1376,131"/>
+<area shape="poly" title=" " alt="" coords="1445,48,1326,100,1325,95,1439,49"/>
+<area shape="rect" title=" " alt="" coords="1400,96,1582,139"/>
+<area shape="poly" title=" " alt="" coords="1493,47,1493,82,1489,79,1489,50"/>
+<area shape="rect" title=" " alt="" coords="1606,96,1787,139"/>
+<area shape="poly" title=" " alt="" coords="1540,46,1637,90,1632,89,1539,51"/>
+<area shape="rect" title=" " alt="" coords="1811,104,1982,131"/>
+<area shape="poly" title=" " alt="" coords="1586,46,1826,100,1821,100,1586,51"/>
+<area shape="rect" title=" " alt="" coords="2006,96,2179,139"/>
+<area shape="poly" title=" " alt="" coords="1622,41,1793,63,1994,96,1988,95,1793,68,1622,46"/>
+<area shape="rect" title=" " alt="" coords="2202,96,2375,139"/>
+<area shape="poly" title=" " alt="" coords="1622,34,1880,56,2033,72,2190,96,2185,95,2032,78,1879,61,1622,39"/>
+<area shape="rect" title=" " alt="" coords="2399,96,2621,139"/>
+<area shape="poly" title=" " alt="" coords="1622,32,1963,54,2171,71,2386,96,2381,96,2171,76,1962,59,1622,37"/>
+<area shape="rect" title=" " alt="" coords="2644,96,2810,139"/>
+<area shape="poly" title=" " alt="" coords="1622,27,1816,32,2065,43,2345,63,2632,96,2627,96,2344,68,2065,48,1815,37,1622,32"/>
+<area shape="rect" title=" " alt="" coords="2834,96,2999,139"/>
+<area shape="poly" title=" " alt="" coords="1622,25,1846,28,2142,38,2477,59,2649,74,2821,96,2816,96,2648,79,2476,64,2141,44,1846,34,1622,31"/>
+</map>
+</div>
+</div>
+<p><a href="../../d2/dad/_timer_sound_player_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Etimer_2ETimerSoundPlayer" id="r_de_2Epetanqueturniermanager_2Etimer_2ETimerSoundPlayer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d75/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_sound_player.html">de.petanqueturniermanager.timer.TimerSoundPlayer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spielt im Zustand <code><a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html#a9c4f8af9aa41beca68f880f7cd7b2ed4">TimerZustand#BEENDET</a></code> wiederholt einen Gong ab, solange der Timer nicht per Snooze stummgeschaltet wurde.  <a href="../../d1/d75/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_sound_player.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Etimer" id="r_de_2Epetanqueturniermanager_2Etimer"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html">de.petanqueturniermanager.timer</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_a0974f0cb0e94b01d648ec1c4422b70c.html">timer</a></li><li class="navelem"><a href="../../d2/dad/_timer_sound_player_8java.html">TimerSoundPlayer.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

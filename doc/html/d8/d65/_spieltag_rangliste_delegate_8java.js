@@ -1,0 +1,4 @@
+var _spieltag_rangliste_delegate_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteDelegate", "dd/d98/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_delegate.html", "dd/d98/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_delegate" ]
+];

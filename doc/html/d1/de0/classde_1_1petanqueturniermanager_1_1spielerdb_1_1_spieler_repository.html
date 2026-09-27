@@ -1,0 +1,1313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.spielerdb.SpielerRepository Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html','../../','d7/d47/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.spielerdb.SpielerRepository Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>CRUD für <code><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a></code> mit JOIN auf VEREIN für Anzeige (<code><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a></code>).  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:LizenzDuplikatException" id="r_LizenzDuplikatException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d02/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_1_1_lizenz_duplikat_exception.html">LizenzDuplikatException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lizenznummer (case-sensitiv) ist bereits vergeben.  <a href="../../d8/d02/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_1_1_lizenz_duplikat_exception.html#details">Mehr ...</a><br /></td></tr>
+<tr class="memitem:NameDuplikatException" id="r_NameDuplikatException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_1_1_name_duplikat_exception.html">NameDuplikatException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vor-/Nachname + Verein (case-insensitiv, getrimmt) bereits vergeben.  <a href="../../d8/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_1_1_name_duplikat_exception.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:ab03731e59b8c5245aa926de6efa36190" id="r_ab03731e59b8c5245aa926de6efa36190"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab03731e59b8c5245aa926de6efa36190">anzahl</a> ()  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memdesc:ab03731e59b8c5245aa926de6efa36190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gesamtzahl Spielerdatensätze in der DB.  <br /></td></tr>
+<tr class="memitem:afdae9bc86537e3823619896e46597f71" id="r_afdae9bc86537e3823619896e46597f71"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afdae9bc86537e3823619896e46597f71">delete</a> (int nr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a6db9f26ce3388e15794e691be05c8184" id="r_a6db9f26ce3388e15794e691be05c8184"><td class="memItemLeft">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6db9f26ce3388e15794e691be05c8184">findAll</a> ()  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:ac3a8fa8929bf2450b0276418235701f9" id="r_ac3a8fa8929bf2450b0276418235701f9"><td class="memItemLeft">Optional&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ac3a8fa8929bf2450b0276418235701f9">findById</a> (int nr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:aaba54307881273170af44c5ef500bd0a" id="r_aaba54307881273170af44c5ef500bd0a"><td class="memItemLeft">Optional&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aaba54307881273170af44c5ef500bd0a">findByLizenz</a> (String lizenznr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:ae3a3e5e7b820c643cd8eee91538427b1" id="r_ae3a3e5e7b820c643cd8eee91538427b1"><td class="memItemLeft">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae3a3e5e7b820c643cd8eee91538427b1">findByNamePart</a> (String praefix, int limit)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memdesc:ae3a3e5e7b820c643cd8eee91538427b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix-Suche auf Nachname und Vorname (case-insensitiv).  <br /></td></tr>
+<tr class="memitem:a34e8edaf687da2c3c084f5140cc23839" id="r_a34e8edaf687da2c3c084f5140cc23839"><td class="memItemLeft">Optional&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a34e8edaf687da2c3c084f5140cc23839">findeDuplikat</a> (String vorname, String nachname, @Nullable Integer vereinNr, @Nullable Integer ausserNr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memdesc:a34e8edaf687da2c3c084f5140cc23839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sucht einen vorhandenen Spieler mit identischem Vor-, Nachnamen und Verein (case-insensitiv).  <br /></td></tr>
+<tr class="memitem:a343cdef1e5a49874962cc6325064b03d" id="r_a343cdef1e5a49874962cc6325064b03d"><td class="memItemLeft">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a343cdef1e5a49874962cc6325064b03d">findeMitWildcard</a> (String suche, boolean wildcard, int limit)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memdesc:a343cdef1e5a49874962cc6325064b03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wildcard-Suche auf Nachname und Vorname (case-insensitiv).  <br /></td></tr>
+<tr class="memitem:ab5b20de80b6b3590d710f2e73712ff15" id="r_ab5b20de80b6b3590d710f2e73712ff15"><td class="memItemLeft"><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab5b20de80b6b3590d710f2e73712ff15">insert</a> (<a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a> neu)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a172aa45bdc524d79b909d073dbd07b22" id="r_a172aa45bdc524d79b909d073dbd07b22"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a172aa45bdc524d79b909d073dbd07b22">SpielerRepository</a> (<a class="el" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> conn)</td></tr>
+<tr class="memitem:a3da4e91a9ff018ad7deb77e46f8d285d" id="r_a3da4e91a9ff018ad7deb77e46f8d285d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3da4e91a9ff018ad7deb77e46f8d285d">update</a> (<a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a> datensatz)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:aa6a1e4ef705985107da56350ef7e3725" id="r_aa6a1e4ef705985107da56350ef7e3725"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6a1e4ef705985107da56350ef7e3725">ersetzeLabelZuweisungen</a> (int spielerNr, List&lt; Integer &gt; labelNrs)  throws SQLException </td></tr>
+<tr class="memdesc:aa6a1e4ef705985107da56350ef7e3725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ersetzt alle bisherigen Junction-Einträge — Aufruf innerhalb einer Transaktion.  <br /></td></tr>
+<tr class="memitem:a01197f2f26ae539d6dab7658b90c0b6c" id="r_a01197f2f26ae539d6dab7658b90c0b6c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a01197f2f26ae539d6dab7658b90c0b6c">rollbackLeise</a> ()</td></tr>
+<tr class="memitem:a22cf7c852afa903e06eb28d078e2f38b" id="r_a22cf7c852afa903e06eb28d078e2f38b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a22cf7c852afa903e06eb28d078e2f38b">schreibeLabelZuweisungen</a> (int spielerNr, List&lt; Integer &gt; labelNrs)  throws SQLException </td></tr>
+<tr class="memdesc:a22cf7c852afa903e06eb28d078e2f38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schreibt die Junction-Einträge — Aufruf innerhalb einer Transaktion.  <br /></td></tr>
+<tr class="memitem:ae12152c3d77bbc20f62eea702a23cafd" id="r_ae12152c3d77bbc20f62eea702a23cafd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae12152c3d77bbc20f62eea702a23cafd">wiederherstellenAutoCommit</a> (boolean vorigerWert)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:aa2fbf1b99ec072e881ded6833e662afd" id="r_aa2fbf1b99ec072e881ded6833e662afd"><td class="memItemLeft">static boolean&#160;</td><td class="memItemRight"><a class="el" href="#aa2fbf1b99ec072e881ded6833e662afd">istFkVerletzung</a> (SQLException e)</td></tr>
+<tr class="memitem:ab0843e41e4135146c80d6aea9c94c6c6" id="r_ab0843e41e4135146c80d6aea9c94c6c6"><td class="memItemLeft">static boolean&#160;</td><td class="memItemRight"><a class="el" href="#ab0843e41e4135146c80d6aea9c94c6c6">istNameDuplikat</a> (SQLException e)</td></tr>
+<tr class="memdesc:ab0843e41e4135146c80d6aea9c94c6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNIQUE-Verletzung des kombinierten Indexes <code class="JavaDocCode">UQ_SPIELER_NAME_VEREIN</code> — also gleicher Vor-/Nachname samt Verein.  <br /></td></tr>
+<tr class="memitem:a6afa8914de5c72c5168da0d02474dbc5" id="r_a6afa8914de5c72c5168da0d02474dbc5"><td class="memItemLeft">static boolean&#160;</td><td class="memItemRight"><a class="el" href="#a6afa8914de5c72c5168da0d02474dbc5">istUniqueVerletzung</a> (SQLException e)</td></tr>
+<tr class="memitem:addc5e4b71ff6e2ecfb0898aaf47d310d" id="r_addc5e4b71ff6e2ecfb0898aaf47d310d"><td class="memItemLeft">static <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a>&#160;</td><td class="memItemRight"><a class="el" href="#addc5e4b71ff6e2ecfb0898aaf47d310d">map</a> (ResultSet rs)  throws SQLException </td></tr>
+<tr class="memitem:aba435ab36c6def8fe741cd80685fd2cf" id="r_aba435ab36c6def8fe741cd80685fd2cf"><td class="memItemLeft">static List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aba435ab36c6def8fe741cd80685fd2cf">mapList</a> (ResultSet rs)  throws SQLException </td></tr>
+<tr class="memitem:a03b80f656757576aecf0e9d743e404b5" id="r_a03b80f656757576aecf0e9d743e404b5"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a03b80f656757576aecf0e9d743e404b5">normLizenz</a> (@Nullable String roh)</td></tr>
+<tr class="memitem:a547514ed3c8b92435d050452dce0a57f" id="r_a547514ed3c8b92435d050452dce0a57f"><td class="memItemLeft">static List&lt; Integer &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a547514ed3c8b92435d050452dce0a57f">parseIntList</a> (@Nullable String konkateniert)</td></tr>
+<tr class="memitem:a5ff22cdcae89350a03cf44a3af279c52" id="r_a5ff22cdcae89350a03cf44a3af279c52"><td class="memItemLeft">static List&lt; String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5ff22cdcae89350a03cf44a3af279c52">parseStringList</a> (@Nullable String konkateniert)</td></tr>
+<tr class="memitem:a667055763012a2c210b9282d1dd5cc23" id="r_a667055763012a2c210b9282d1dd5cc23"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a667055763012a2c210b9282d1dd5cc23">setNullableInt</a> (PreparedStatement ps, int idx, @Nullable Integer wert)  throws SQLException </td></tr>
+<tr class="memitem:a3031659b97f42e82c2c2a0c4b5adf658" id="r_a3031659b97f42e82c2c2a0c4b5adf658"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a3031659b97f42e82c2c2a0c4b5adf658">setNullableString</a> (PreparedStatement ps, int idx, @Nullable String wert)  throws SQLException </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:abe846e71b30943135401564e5a960dc4" id="r_abe846e71b30943135401564e5a960dc4"><td class="memItemLeft">final Connection&#160;</td><td class="memItemRight"><a class="el" href="#abe846e71b30943135401564e5a960dc4">connection</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:af7d85bd9a16234695330aaf1cf67d19a" id="r_af7d85bd9a16234695330aaf1cf67d19a"><td class="memItemLeft">static final String&#160;</td><td class="memItemRight"><a class="el" href="#af7d85bd9a16234695330aaf1cf67d19a">LABEL_SEP</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:af7d85bd9a16234695330aaf1cf67d19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trennzeichen für die in <code class="JavaDocCode">group_concat</code> gepackten Label-IDs/-Namen.  <br /></td></tr>
+<tr class="memitem:a3e5219bae096e843b56ad399a2a89f4f" id="r_a3e5219bae096e843b56ad399a2a89f4f"><td class="memItemLeft">static final String&#160;</td><td class="memItemRight"><a class="el" href="#a3e5219bae096e843b56ad399a2a89f4f">SELECT_JOIN</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Suche als indexfreundlicher Prefix-Match. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00020">20</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a172aa45bdc524d79b909d073dbd07b22" name="a172aa45bdc524d79b909d073dbd07b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172aa45bdc524d79b909d073dbd07b22">&#9670;&#160;</a></span>SpielerRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.spielerdb.SpielerRepository.SpielerRepository </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a></td>          <td class="paramname"><span class="paramname"><em>conn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00042">42</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                       {</div>
+<div class="line"><span class="lineno">   43</span>        this.connection = conn.getConnection();</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="ab03731e59b8c5245aa926de6efa36190" name="ab03731e59b8c5245aa926de6efa36190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03731e59b8c5245aa926de6efa36190">&#9670;&#160;</a></span>anzahl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int de.petanqueturniermanager.spielerdb.SpielerRepository.anzahl </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Für Calc-AddIn-Statistik. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00047">47</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                  {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(<span class="stringliteral">&quot;SELECT COUNT(*) FROM SPIELER&quot;</span>);</div>
+<div class="line"><span class="lineno">   49</span>                ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> rs.next() ? rs.getInt(1) : 0;</div>
+<div class="line"><span class="lineno">   51</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Anzahl-Abfrage fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afdae9bc86537e3823619896e46597f71" name="afdae9bc86537e3823619896e46597f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdae9bc86537e3823619896e46597f71">&#9670;&#160;</a></span>delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.delete </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nr</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00302">302</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  302</span>                                                         {</div>
+<div class="line"><span class="lineno">  303</span>        String sql = <span class="stringliteral">&quot;DELETE FROM SPIELER WHERE NR = ?&quot;</span>;</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">  305</span>            ps.setInt(1, nr);</div>
+<div class="line"><span class="lineno">  306</span>            <span class="keywordtype">int</span> n = ps.executeUpdate();</div>
+<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">if</span> (n == 0) {</div>
+<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler nicht gefunden: nr=&quot;</span> + nr);</div>
+<div class="line"><span class="lineno">  309</span>            }</div>
+<div class="line"><span class="lineno">  310</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler-Delete fehlgeschlagen: nr=&quot;</span> + nr, e);</div>
+<div class="line"><span class="lineno">  312</span>        }</div>
+<div class="line"><span class="lineno">  313</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa6a1e4ef705985107da56350ef7e3725" name="aa6a1e4ef705985107da56350ef7e3725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a1e4ef705985107da56350ef7e3725">&#9670;&#160;</a></span>ersetzeLabelZuweisungen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.ersetzeLabelZuweisungen </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>spielerNr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Integer &gt;</td>          <td class="paramname"><span class="paramname"><em>labelNrs</em></span>&#160;) throws SQLException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00373">373</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span>                                                                                                    {</div>
+<div class="line"><span class="lineno">  374</span>        <span class="keywordflow">try</span> (PreparedStatement del = connection.prepareStatement(</div>
+<div class="line"><span class="lineno">  375</span>                <span class="stringliteral">&quot;DELETE FROM SPIELER_LABEL WHERE SPIELER_NR = ?&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  376</span>            del.setInt(1, spielerNr);</div>
+<div class="line"><span class="lineno">  377</span>            del.executeUpdate();</div>
+<div class="line"><span class="lineno">  378</span>        }</div>
+<div class="line"><span class="lineno">  379</span>        schreibeLabelZuweisungen(spielerNr, labelNrs);</div>
+<div class="line"><span class="lineno">  380</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6db9f26ce3388e15794e691be05c8184" name="a6db9f26ce3388e15794e691be05c8184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db9f26ce3388e15794e691be05c8184">&#9670;&#160;</a></span>findAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.findAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00087">87</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                                      {</div>
+<div class="line"><span class="lineno">   88</span>        String sql = SELECT_JOIN + <span class="stringliteral">&quot;ORDER BY JAVA_LOWER(s.NACHNAME), JAVA_LOWER(s.VORNAME)&quot;</span>;</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql);</div>
+<div class="line"><span class="lineno">   90</span>                ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">return</span> mapList(rs);</div>
+<div class="line"><span class="lineno">   92</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler laden fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3a8fa8929bf2450b0276418235701f9" name="ac3a8fa8929bf2450b0276418235701f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a8fa8929bf2450b0276418235701f9">&#9670;&#160;</a></span>findById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.findById </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nr</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00120">120</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                                                                 {</div>
+<div class="line"><span class="lineno">  121</span>        String sql = SELECT_JOIN + <span class="stringliteral">&quot;WHERE s.NR = ?&quot;</span>;</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">  123</span>            ps.setInt(1, nr);</div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">try</span> (ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">if</span> (rs.next()) {</div>
+<div class="line"><span class="lineno">  126</span>                    <span class="keywordflow">return</span> Optional.of(map(rs));</div>
+<div class="line"><span class="lineno">  127</span>                }</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  129</span>            }</div>
+<div class="line"><span class="lineno">  130</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler-Lookup fehlgeschlagen: nr=&quot;</span> + nr, e);</div>
+<div class="line"><span class="lineno">  132</span>        }</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaba54307881273170af44c5ef500bd0a" name="aaba54307881273170af44c5ef500bd0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba54307881273170af44c5ef500bd0a">&#9670;&#160;</a></span>findByLizenz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.findByLizenz </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>lizenznr</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00182">182</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  183</span>        String norm = lizenznr.strip();</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">if</span> (norm.isEmpty()) {</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
+<div class="line"><span class="lineno">  187</span>        String sql = SELECT_JOIN + <span class="stringliteral">&quot;WHERE s.LIZENZNR = ?&quot;</span>;</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">  189</span>            ps.setString(1, norm);</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">try</span> (ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">if</span> (rs.next()) {</div>
+<div class="line"><span class="lineno">  192</span>                    <span class="keywordflow">return</span> Optional.of(map(rs));</div>
+<div class="line"><span class="lineno">  193</span>                }</div>
+<div class="line"><span class="lineno">  194</span>                <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  195</span>            }</div>
+<div class="line"><span class="lineno">  196</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler-Lookup per Lizenz fehlgeschlagen: &quot;</span> + lizenznr, e);</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae3a3e5e7b820c643cd8eee91538427b1" name="ae3a3e5e7b820c643cd8eee91538427b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a3e5e7b820c643cd8eee91538427b1">&#9670;&#160;</a></span>findByNamePart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.findByNamePart </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>praefix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Leerer Suchstring liefert die ersten <code class="JavaDocCode">limit</code> Treffer alphabetisch. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00101">101</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                                                                      {</div>
+<div class="line"><span class="lineno">  102</span>        String norm = praefix.strip();</div>
+<div class="line"><span class="lineno">  103</span>        String sql = SELECT_JOIN</div>
+<div class="line"><span class="lineno">  104</span>                + <span class="stringliteral">&quot;WHERE JAVA_LOWER(s.NACHNAME) LIKE JAVA_LOWER(?) OR JAVA_LOWER(s.VORNAME) LIKE JAVA_LOWER(?) &quot;</span></div>
+<div class="line"><span class="lineno">  105</span>                + <span class="stringliteral">&quot;ORDER BY JAVA_LOWER(s.NACHNAME), JAVA_LOWER(s.VORNAME) &quot;</span></div>
+<div class="line"><span class="lineno">  106</span>                + <span class="stringliteral">&quot;LIMIT ?&quot;</span>;</div>
+<div class="line"><span class="lineno">  107</span>        String pattern = norm + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">  109</span>            ps.setString(1, pattern);</div>
+<div class="line"><span class="lineno">  110</span>            ps.setString(2, pattern);</div>
+<div class="line"><span class="lineno">  111</span>            ps.setInt(3, limit);</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">try</span> (ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">return</span> mapList(rs);</div>
+<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="line"><span class="lineno">  115</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler-Suche fehlgeschlagen: &quot;</span> + praefix, e);</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a34e8edaf687da2c3c084f5140cc23839" name="a34e8edaf687da2c3c084f5140cc23839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e8edaf687da2c3c084f5140cc23839">&#9670;&#160;</a></span>findeDuplikat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.findeDuplikat </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>vorname</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>nachname</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">@Nullable Integer</td>          <td class="paramname"><span class="paramname"><em>vereinNr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">@Nullable Integer</td>          <td class="paramname"><span class="paramname"><em>ausserNr</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ein <code class="JavaDocCode">null</code>-Verein matcht nur einen Datensatz, der ebenfalls keinen Verein hat. <code class="JavaDocCode">ausserNr</code> kann beim Bearbeiten gesetzt werden, um den eigenen Datensatz auszuschließen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00141">141</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  143</span>        String vor = vorname.strip();</div>
+<div class="line"><span class="lineno">  144</span>        String nach = nachname.strip();</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (vor.isEmpty() || nach.isEmpty()) {</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  147</span>        }</div>
+<div class="line"><span class="lineno">  148</span>        StringBuilder sql = <span class="keyword">new</span> StringBuilder(SELECT_JOIN);</div>
+<div class="line"><span class="lineno">  149</span>        sql.append(<span class="stringliteral">&quot;WHERE JAVA_LOWER(s.VORNAME) = JAVA_LOWER(?) &quot;</span>)</div>
+<div class="line"><span class="lineno">  150</span>                .append(<span class="stringliteral">&quot;AND JAVA_LOWER(s.NACHNAME) = JAVA_LOWER(?) &quot;</span>);</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">if</span> (vereinNr == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  152</span>            sql.append(<span class="stringliteral">&quot;AND s.VEREIN_NR IS NULL &quot;</span>);</div>
+<div class="line"><span class="lineno">  153</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  154</span>            sql.append(<span class="stringliteral">&quot;AND s.VEREIN_NR = ? &quot;</span>);</div>
+<div class="line"><span class="lineno">  155</span>        }</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (ausserNr != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  157</span>            sql.append(<span class="stringliteral">&quot;AND s.NR &lt;&gt; ? &quot;</span>);</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span>        sql.append(<span class="stringliteral">&quot;LIMIT 1&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql.toString())) {</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordtype">int</span> idx = 1;</div>
+<div class="line"><span class="lineno">  162</span>            ps.setString(idx++, vor);</div>
+<div class="line"><span class="lineno">  163</span>            ps.setString(idx++, nach);</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (vereinNr != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  165</span>                ps.setInt(idx++, vereinNr);</div>
+<div class="line"><span class="lineno">  166</span>            }</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordflow">if</span> (ausserNr != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  168</span>                ps.setInt(idx++, ausserNr);</div>
+<div class="line"><span class="lineno">  169</span>            }</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">try</span> (ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">if</span> (rs.next()) {</div>
+<div class="line"><span class="lineno">  172</span>                    <span class="keywordflow">return</span> Optional.of(map(rs));</div>
+<div class="line"><span class="lineno">  173</span>                }</div>
+<div class="line"><span class="lineno">  174</span>                <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  175</span>            }</div>
+<div class="line"><span class="lineno">  176</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Duplikat-Lookup fehlgeschlagen: &quot;</span></div>
+<div class="line"><span class="lineno">  178</span>                    + vor + <span class="stringliteral">&quot; &quot;</span> + nach, e);</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a343cdef1e5a49874962cc6325064b03d" name="a343cdef1e5a49874962cc6325064b03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343cdef1e5a49874962cc6325064b03d">&#9670;&#160;</a></span>findeMitWildcard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.findeMitWildcard </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>suche</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>wildcard</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>limit</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ul>
+<li>
+<code class="JavaDocCode">wildcard=false</code> → indexfreundlicher Prefix-Match <code class="JavaDocCode">term%</code>. </li>
+<li>
+<code class="JavaDocCode">wildcard=true</code> → Substring-Match <code class="JavaDocCode">%term%</code>. </li>
+</ul>
+<p>Normalisierung des Suchbegriffs (trim, lowercase) passiert genau einmal hier; die SQL-Spalte wird passend mit <code class="JavaDocCode">LOWER(...)</code> normalisiert. Parameter werden ausschließlich per PreparedStatement gebunden — keine String-Konkatenation, kein SQL-Injection-Risiko. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00067">67</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                      {</div>
+<div class="line"><span class="lineno">   69</span>        String normalized = suche == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : suche.trim().toLowerCase(Locale.ROOT);</div>
+<div class="line"><span class="lineno">   70</span>        String pattern = wildcard ? <span class="stringliteral">&quot;%&quot;</span> + normalized + <span class="stringliteral">&quot;%&quot;</span> : normalized + <span class="stringliteral">&quot;%&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>        String sql = SELECT_JOIN</div>
+<div class="line"><span class="lineno">   72</span>                + <span class="stringliteral">&quot;WHERE JAVA_LOWER(s.NACHNAME) LIKE ? OR JAVA_LOWER(s.VORNAME) LIKE ? &quot;</span></div>
+<div class="line"><span class="lineno">   73</span>                + <span class="stringliteral">&quot;ORDER BY JAVA_LOWER(s.NACHNAME), JAVA_LOWER(s.VORNAME) &quot;</span></div>
+<div class="line"><span class="lineno">   74</span>                + <span class="stringliteral">&quot;LIMIT ?&quot;</span>;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">   76</span>            ps.setString(1, pattern);</div>
+<div class="line"><span class="lineno">   77</span>            ps.setString(2, pattern);</div>
+<div class="line"><span class="lineno">   78</span>            ps.setInt(3, limit);</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">try</span> (ResultSet rs = ps.executeQuery()) {</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">return</span> mapList(rs);</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Wildcard-Suche fehlgeschlagen: &quot;</span> + suche, e);</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5b20de80b6b3590d710f2e73712ff15" name="ab5b20de80b6b3590d710f2e73712ff15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b20de80b6b3590d710f2e73712ff15">&#9670;&#160;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a> de.petanqueturniermanager.spielerdb.SpielerRepository.insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a></td>          <td class="paramname"><span class="paramname"><em>neu</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00201">201</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>                                                                                   {</div>
+<div class="line"><span class="lineno">  202</span>        String vorname = neu.vorname().strip();</div>
+<div class="line"><span class="lineno">  203</span>        String nachname = neu.nachname().strip();</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">if</span> (vorname.isEmpty() || nachname.isEmpty()) {</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Vorname und Nachname sind Pflichtfelder&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="line"><span class="lineno">  207</span>        String lizenz = normLizenz(neu.lizenznr());</div>
+<div class="line"><span class="lineno">  208</span>        String sql = <span class="stringliteral">&quot;INSERT INTO SPIELER (VORNAME, NACHNAME, VEREIN_NR, LIZENZNR) &quot;</span></div>
+<div class="line"><span class="lineno">  209</span>                + <span class="stringliteral">&quot;VALUES (?, ?, ?, ?)&quot;</span>;</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordtype">boolean</span> vorigerAutoCommit = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  212</span>            vorigerAutoCommit = connection.getAutoCommit();</div>
+<div class="line"><span class="lineno">  213</span>            connection.setAutoCommit(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordtype">int</span> neueNr;</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {</div>
+<div class="line"><span class="lineno">  216</span>                ps.setString(1, vorname);</div>
+<div class="line"><span class="lineno">  217</span>                ps.setString(2, nachname);</div>
+<div class="line"><span class="lineno">  218</span>                setNullableInt(ps, 3, neu.vereinNr());</div>
+<div class="line"><span class="lineno">  219</span>                setNullableString(ps, 4, lizenz);</div>
+<div class="line"><span class="lineno">  220</span>                ps.executeUpdate();</div>
+<div class="line"><span class="lineno">  221</span>                <span class="keywordflow">try</span> (ResultSet keys = ps.getGeneratedKeys()) {</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="keywordflow">if</span> (!keys.next()) {</div>
+<div class="line"><span class="lineno">  223</span>                        <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Insert lieferte keinen Schlüssel&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>                    }</div>
+<div class="line"><span class="lineno">  225</span>                    neueNr = keys.getInt(1);</div>
+<div class="line"><span class="lineno">  226</span>                }</div>
+<div class="line"><span class="lineno">  227</span>            }</div>
+<div class="line"><span class="lineno">  228</span>            schreibeLabelZuweisungen(neueNr, neu.labelNrs());</div>
+<div class="line"><span class="lineno">  229</span>            connection.commit();</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a>(neueNr, vorname, nachname,</div>
+<div class="line"><span class="lineno">  231</span>                    neu.vereinNr(), neu.labelNrs(), lizenz);</div>
+<div class="line"><span class="lineno">  232</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  233</span>            rollbackLeise();</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">if</span> (istNameDuplikat(e)) {</div>
+<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> NameDuplikatException(<span class="stringliteral">&quot;Spieler mit gleichem Vor-/Nachnamen &quot;</span></div>
+<div class="line"><span class="lineno">  236</span>                        + <span class="stringliteral">&quot;und Verein existiert bereits: &quot;</span> + vorname + <span class="stringliteral">&quot; &quot;</span> + nachname, e);</div>
+<div class="line"><span class="lineno">  237</span>            }</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keywordflow">if</span> (istUniqueVerletzung(e)) {</div>
+<div class="line"><span class="lineno">  239</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> LizenzDuplikatException(<span class="stringliteral">&quot;Lizenznummer existiert bereits: &quot;</span> + lizenz, e);</div>
+<div class="line"><span class="lineno">  240</span>            }</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (istFkVerletzung(e)) {</div>
+<div class="line"><span class="lineno">  242</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(</div>
+<div class="line"><span class="lineno">  243</span>                        <span class="stringliteral">&quot;Verein-/Label-Referenz ungültig: vereinNr=&quot;</span> + neu.vereinNr()</div>
+<div class="line"><span class="lineno">  244</span>                                + <span class="stringliteral">&quot;, labelNrs=&quot;</span> + neu.labelNrs(), e);</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler-Insert fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  247</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">  248</span>            wiederherstellenAutoCommit(vorigerAutoCommit);</div>
+<div class="line"><span class="lineno">  249</span>        }</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_html_adfea849579ae9d23a2b79a1af84df75f"><div class="ttname"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">de.petanqueturniermanager.spielerdb.SpielerDatensatz</a></div><div class="ttdeci">record SpielerDatensatz( @Nullable Integer nr, String vorname, String nachname, @Nullable Integer vereinNr, List&lt; Integer &gt; labelNrs, @Nullable String lizenznr)</div><div class="ttdoc">Stammdaten eines Spielers.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd4/_spieler_datensatz_8java_source.html#l00012">SpielerDatensatz.java:12</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa2fbf1b99ec072e881ded6833e662afd" name="aa2fbf1b99ec072e881ded6833e662afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2fbf1b99ec072e881ded6833e662afd">&#9670;&#160;</a></span>istFkVerletzung()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.spielerdb.SpielerRepository.istFkVerletzung </td>
+          <td>(</td>
+          <td class="paramtype">SQLException</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00455">455</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  455</span>                                                           {</div>
+<div class="line"><span class="lineno">  456</span>        String raw = e.getMessage();</div>
+<div class="line"><span class="lineno">  457</span>        <span class="keywordflow">if</span> (raw == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  458</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  459</span>        }</div>
+<div class="line"><span class="lineno">  460</span>        String msg = raw.toLowerCase(Locale.ROOT);</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">if</span> (msg.contains(<span class="stringliteral">&quot;foreign key constraint failed&quot;</span>) || msg.contains(<span class="stringliteral">&quot;sqlite_constraint_foreignkey&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  462</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  463</span>        }</div>
+<div class="line"><span class="lineno">  464</span>        String state = e.getSQLState();</div>
+<div class="line"><span class="lineno">  465</span>        <span class="keywordflow">return</span> state != <span class="keyword">null</span> &amp;&amp; state.startsWith(<span class="stringliteral">&quot;23&quot;</span>)</div>
+<div class="line"><span class="lineno">  466</span>                &amp;&amp; (msg.contains(<span class="stringliteral">&quot;foreign&quot;</span>) || msg.contains(<span class="stringliteral">&quot;integrity&quot;</span>));</div>
+<div class="line"><span class="lineno">  467</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab0843e41e4135146c80d6aea9c94c6c6" name="ab0843e41e4135146c80d6aea9c94c6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0843e41e4135146c80d6aea9c94c6c6">&#9670;&#160;</a></span>istNameDuplikat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.spielerdb.SpielerRepository.istNameDuplikat </td>
+          <td>(</td>
+          <td class="paramtype">SQLException</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Wird per Index-Name in der SQLite-Fehlermeldung erkannt. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00429">429</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  429</span>                                                           {</div>
+<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">if</span> (!istUniqueVerletzung(e)) {</div>
+<div class="line"><span class="lineno">  431</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  432</span>        }</div>
+<div class="line"><span class="lineno">  433</span>        String raw = e.getMessage();</div>
+<div class="line"><span class="lineno">  434</span>        <span class="keywordflow">if</span> (raw == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  435</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  436</span>        }</div>
+<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">return</span> raw.toLowerCase(Locale.ROOT).contains(<span class="stringliteral">&quot;uq_spieler_name_verein&quot;</span>);</div>
+<div class="line"><span class="lineno">  438</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6afa8914de5c72c5168da0d02474dbc5" name="a6afa8914de5c72c5168da0d02474dbc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afa8914de5c72c5168da0d02474dbc5">&#9670;&#160;</a></span>istUniqueVerletzung()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.spielerdb.SpielerRepository.istUniqueVerletzung </td>
+          <td>(</td>
+          <td class="paramtype">SQLException</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00440">440</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>                                                               {</div>
+<div class="line"><span class="lineno">  441</span>        String raw = e.getMessage();</div>
+<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">if</span> (raw == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  443</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  444</span>        }</div>
+<div class="line"><span class="lineno">  445</span>        String msg = raw.toLowerCase(Locale.ROOT);</div>
+<div class="line"><span class="lineno">  446</span>        <span class="comment">// SQLite-Format: &quot;[SQLITE_CONSTRAINT_UNIQUE] ... UNIQUE constraint failed: ...&quot;</span></div>
+<div class="line"><span class="lineno">  447</span>        <span class="keywordflow">if</span> (msg.contains(<span class="stringliteral">&quot;unique constraint failed&quot;</span>) || msg.contains(<span class="stringliteral">&quot;sqlite_constraint_unique&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  449</span>        }</div>
+<div class="line"><span class="lineno">  450</span>        <span class="comment">// HSQLDB-Style-Fallback (für alte/andere Backends)</span></div>
+<div class="line"><span class="lineno">  451</span>        String state = e.getSQLState();</div>
+<div class="line"><span class="lineno">  452</span>        <span class="keywordflow">return</span> state != <span class="keyword">null</span> &amp;&amp; state.startsWith(<span class="stringliteral">&quot;23&quot;</span>) &amp;&amp; msg.contains(<span class="stringliteral">&quot;unique&quot;</span>);</div>
+<div class="line"><span class="lineno">  453</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="addc5e4b71ff6e2ecfb0898aaf47d310d" name="addc5e4b71ff6e2ecfb0898aaf47d310d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc5e4b71ff6e2ecfb0898aaf47d310d">&#9670;&#160;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> de.petanqueturniermanager.spielerdb.SpielerRepository.map </td>
+          <td>(</td>
+          <td class="paramtype">ResultSet</td>          <td class="paramname"><span class="paramname"><em>rs</em></span></td><td>)</td>
+          <td> throws SQLException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00323">323</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  323</span>                                                                          {</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordtype">int</span> nr = rs.getInt(<span class="stringliteral">&quot;NR&quot;</span>);</div>
+<div class="line"><span class="lineno">  325</span>        String vorname = rs.getString(<span class="stringliteral">&quot;VORNAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  326</span>        String nachname = rs.getString(<span class="stringliteral">&quot;NACHNAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordtype">int</span> vereinNrRaw = rs.getInt(<span class="stringliteral">&quot;VEREIN_NR&quot;</span>);</div>
+<div class="line"><span class="lineno">  328</span>        Integer vereinNr = rs.wasNull() ? null : Integer.valueOf(vereinNrRaw);</div>
+<div class="line"><span class="lineno">  329</span>        String vereinName = rs.getString(<span class="stringliteral">&quot;VEREIN_NAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  330</span>        List&lt;Integer&gt; labelNrs = parseIntList(rs.getString(<span class="stringliteral">&quot;LABEL_NRS&quot;</span>));</div>
+<div class="line"><span class="lineno">  331</span>        List&lt;String&gt; labelNamen = parseStringList(rs.getString(<span class="stringliteral">&quot;LABEL_NAMES&quot;</span>));</div>
+<div class="line"><span class="lineno">  332</span>        String lizenznr = rs.getString(<span class="stringliteral">&quot;LIZENZNR&quot;</span>);</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a>(nr, vorname, nachname,</div>
+<div class="line"><span class="lineno">  334</span>                vereinNr, vereinName, labelNrs, labelNamen, lizenznr);</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_html_a738f3eaecc711ab94b90e3511c031ab7"><div class="ttname"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">de.petanqueturniermanager.spielerdb.SpielerMitVerein</a></div><div class="ttdeci">record SpielerMitVerein(int nr, String vorname, String nachname, @Nullable Integer vereinNr, @Nullable String vereinName, List&lt; Integer &gt; labelNrs, List&lt; String &gt; labelNamen, @Nullable String lizenznr)</div><div class="ttdoc">Anzeige-Record für die Trefferliste der Suche: Spielerfelder denormalisiert mit Vereinsname und Liste...</div><div class="ttdef"><b>Definition</b> <a href="../../db/d70/_spieler_mit_verein_8java_source.html#l00012">SpielerMitVerein.java:12</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aba435ab36c6def8fe741cd80685fd2cf" name="aba435ab36c6def8fe741cd80685fd2cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba435ab36c6def8fe741cd80685fd2cf">&#9670;&#160;</a></span>mapList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.mapList </td>
+          <td>(</td>
+          <td class="paramtype">ResultSet</td>          <td class="paramname"><span class="paramname"><em>rs</em></span></td><td>)</td>
+          <td> throws SQLException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00315">315</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  315</span>                                                                                    {</div>
+<div class="line"><span class="lineno">  316</span>        List&lt;SpielerMitVerein&gt; ergebnis = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">while</span> (rs.next()) {</div>
+<div class="line"><span class="lineno">  318</span>            ergebnis.add(map(rs));</div>
+<div class="line"><span class="lineno">  319</span>        }</div>
+<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">return</span> ergebnis;</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a03b80f656757576aecf0e9d743e404b5" name="a03b80f656757576aecf0e9d743e404b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b80f656757576aecf0e9d743e404b5">&#9670;&#160;</a></span>normLizenz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.spielerdb.SpielerRepository.normLizenz </td>
+          <td>(</td>
+          <td class="paramtype">@Nullable String</td>          <td class="paramname"><span class="paramname"><em>roh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00400">400</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  400</span>                                                           {</div>
+<div class="line"><span class="lineno">  401</span>        <span class="keywordflow">if</span> (roh == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  402</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  403</span>        }</div>
+<div class="line"><span class="lineno">  404</span>        String s = roh.strip();</div>
+<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">return</span> s.isEmpty() ? null : s;</div>
+<div class="line"><span class="lineno">  406</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a547514ed3c8b92435d050452dce0a57f" name="a547514ed3c8b92435d050452dce0a57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547514ed3c8b92435d050452dce0a57f">&#9670;&#160;</a></span>parseIntList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; Integer &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.parseIntList </td>
+          <td>(</td>
+          <td class="paramtype">@Nullable String</td>          <td class="paramname"><span class="paramname"><em>konkateniert</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00337">337</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>                                                                             {</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">if</span> (konkateniert == <span class="keyword">null</span> || konkateniert.isEmpty()) {</div>
+<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">return</span> List.of();</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="line"><span class="lineno">  341</span>        String[] teile = konkateniert.split(LABEL_SEP, -1);</div>
+<div class="line"><span class="lineno">  342</span>        List&lt;Integer&gt; ergebnis = <span class="keyword">new</span> ArrayList&lt;&gt;(teile.length);</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">for</span> (String t : teile) {</div>
+<div class="line"><span class="lineno">  344</span>            ergebnis.add(Integer.valueOf(t));</div>
+<div class="line"><span class="lineno">  345</span>        }</div>
+<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">return</span> List.copyOf(ergebnis);</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5ff22cdcae89350a03cf44a3af279c52" name="a5ff22cdcae89350a03cf44a3af279c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff22cdcae89350a03cf44a3af279c52">&#9670;&#160;</a></span>parseStringList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; String &gt; de.petanqueturniermanager.spielerdb.SpielerRepository.parseStringList </td>
+          <td>(</td>
+          <td class="paramtype">@Nullable String</td>          <td class="paramname"><span class="paramname"><em>konkateniert</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00349">349</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  349</span>                                                                               {</div>
+<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">if</span> (konkateniert == <span class="keyword">null</span> || konkateniert.isEmpty()) {</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">return</span> List.of();</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">return</span> List.of(konkateniert.split(LABEL_SEP, -1));</div>
+<div class="line"><span class="lineno">  354</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a01197f2f26ae539d6dab7658b90c0b6c" name="a01197f2f26ae539d6dab7658b90c0b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01197f2f26ae539d6dab7658b90c0b6c">&#9670;&#160;</a></span>rollbackLeise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.rollbackLeise </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00382">382</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  382</span>                                 {</div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  384</span>            connection.rollback();</div>
+<div class="line"><span class="lineno">  385</span>        } <span class="keywordflow">catch</span> (SQLException ex) {</div>
+<div class="line"><span class="lineno">  386</span>            <span class="comment">// Sekundärfehler beim Rollback — primäre Exception nicht überdecken.</span></div>
+<div class="line"><span class="lineno">  387</span>        }</div>
+<div class="line"><span class="lineno">  388</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22cf7c852afa903e06eb28d078e2f38b" name="a22cf7c852afa903e06eb28d078e2f38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cf7c852afa903e06eb28d078e2f38b">&#9670;&#160;</a></span>schreibeLabelZuweisungen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.schreibeLabelZuweisungen </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>spielerNr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; Integer &gt;</td>          <td class="paramname"><span class="paramname"><em>labelNrs</em></span>&#160;) throws SQLException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00357">357</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  357</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  358</span>        <span class="keywordflow">if</span> (labelNrs.isEmpty()) {</div>
+<div class="line"><span class="lineno">  359</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  360</span>        }</div>
+<div class="line"><span class="lineno">  361</span>        String sql = <span class="stringliteral">&quot;INSERT INTO SPIELER_LABEL (SPIELER_NR, LABEL_NR) VALUES (?, ?)&quot;</span>;</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">for</span> (Integer labelNr : labelNrs) {</div>
+<div class="line"><span class="lineno">  364</span>                ps.setInt(1, spielerNr);</div>
+<div class="line"><span class="lineno">  365</span>                ps.setInt(2, labelNr);</div>
+<div class="line"><span class="lineno">  366</span>                ps.addBatch();</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span>            ps.executeBatch();</div>
+<div class="line"><span class="lineno">  369</span>        }</div>
+<div class="line"><span class="lineno">  370</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a667055763012a2c210b9282d1dd5cc23" name="a667055763012a2c210b9282d1dd5cc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667055763012a2c210b9282d1dd5cc23">&#9670;&#160;</a></span>setNullableInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.setNullableInt </td>
+          <td>(</td>
+          <td class="paramtype">PreparedStatement</td>          <td class="paramname"><span class="paramname"><em>ps</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">@Nullable Integer</td>          <td class="paramname"><span class="paramname"><em>wert</em></span>&#160;) throws SQLException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00408">408</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>                                                                                                                  {</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> (wert == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  410</span>            ps.setNull(idx, Types.INTEGER);</div>
+<div class="line"><span class="lineno">  411</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  412</span>            ps.setInt(idx, wert);</div>
+<div class="line"><span class="lineno">  413</span>        }</div>
+<div class="line"><span class="lineno">  414</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3031659b97f42e82c2c2a0c4b5adf658" name="a3031659b97f42e82c2c2a0c4b5adf658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3031659b97f42e82c2c2a0c4b5adf658">&#9670;&#160;</a></span>setNullableString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.setNullableString </td>
+          <td>(</td>
+          <td class="paramtype">PreparedStatement</td>          <td class="paramname"><span class="paramname"><em>ps</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">@Nullable String</td>          <td class="paramname"><span class="paramname"><em>wert</em></span>&#160;) throws SQLException</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00416">416</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>                                                                                                                    {</div>
+<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (wert == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  418</span>            ps.setNull(idx, Types.VARCHAR);</div>
+<div class="line"><span class="lineno">  419</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  420</span>            ps.setString(idx, wert);</div>
+<div class="line"><span class="lineno">  421</span>        }</div>
+<div class="line"><span class="lineno">  422</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3da4e91a9ff018ad7deb77e46f8d285d" name="a3da4e91a9ff018ad7deb77e46f8d285d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da4e91a9ff018ad7deb77e46f8d285d">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f">SpielerDatensatz</a></td>          <td class="paramname"><span class="paramname"><em>datensatz</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00252">252</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                                             {</div>
+<div class="line"><span class="lineno">  253</span>        Integer nr = datensatz.nr();</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">if</span> (nr == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Update braucht persistierten Datensatz (nr != null)&quot;</span>);</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span>        String vorname = datensatz.vorname().strip();</div>
+<div class="line"><span class="lineno">  258</span>        String nachname = datensatz.nachname().strip();</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">if</span> (vorname.isEmpty() || nachname.isEmpty()) {</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Vorname und Nachname sind Pflichtfelder&quot;</span>);</div>
+<div class="line"><span class="lineno">  261</span>        }</div>
+<div class="line"><span class="lineno">  262</span>        String lizenz = normLizenz(datensatz.lizenznr());</div>
+<div class="line"><span class="lineno">  263</span>        String sql = <span class="stringliteral">&quot;UPDATE SPIELER SET VORNAME = ?, NACHNAME = ?, VEREIN_NR = ?, &quot;</span></div>
+<div class="line"><span class="lineno">  264</span>                + <span class="stringliteral">&quot;LIZENZNR = ? WHERE NR = ?&quot;</span>;</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordtype">boolean</span> vorigerAutoCommit = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  267</span>            vorigerAutoCommit = connection.getAutoCommit();</div>
+<div class="line"><span class="lineno">  268</span>            connection.setAutoCommit(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">try</span> (PreparedStatement ps = connection.prepareStatement(sql)) {</div>
+<div class="line"><span class="lineno">  270</span>                ps.setString(1, vorname);</div>
+<div class="line"><span class="lineno">  271</span>                ps.setString(2, nachname);</div>
+<div class="line"><span class="lineno">  272</span>                setNullableInt(ps, 3, datensatz.vereinNr());</div>
+<div class="line"><span class="lineno">  273</span>                setNullableString(ps, 4, lizenz);</div>
+<div class="line"><span class="lineno">  274</span>                ps.setInt(5, nr);</div>
+<div class="line"><span class="lineno">  275</span>                <span class="keywordtype">int</span> n = ps.executeUpdate();</div>
+<div class="line"><span class="lineno">  276</span>                <span class="keywordflow">if</span> (n == 0) {</div>
+<div class="line"><span class="lineno">  277</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler nicht gefunden: nr=&quot;</span> + nr);</div>
+<div class="line"><span class="lineno">  278</span>                }</div>
+<div class="line"><span class="lineno">  279</span>            }</div>
+<div class="line"><span class="lineno">  280</span>            ersetzeLabelZuweisungen(nr, datensatz.labelNrs());</div>
+<div class="line"><span class="lineno">  281</span>            connection.commit();</div>
+<div class="line"><span class="lineno">  282</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><span class="lineno">  283</span>            rollbackLeise();</div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span> (istNameDuplikat(e)) {</div>
+<div class="line"><span class="lineno">  285</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> NameDuplikatException(<span class="stringliteral">&quot;Spieler mit gleichem Vor-/Nachnamen &quot;</span></div>
+<div class="line"><span class="lineno">  286</span>                        + <span class="stringliteral">&quot;und Verein existiert bereits: &quot;</span> + vorname + <span class="stringliteral">&quot; &quot;</span> + nachname, e);</div>
+<div class="line"><span class="lineno">  287</span>            }</div>
+<div class="line"><span class="lineno">  288</span>            <span class="keywordflow">if</span> (istUniqueVerletzung(e)) {</div>
+<div class="line"><span class="lineno">  289</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> LizenzDuplikatException(<span class="stringliteral">&quot;Lizenznummer existiert bereits: &quot;</span> + lizenz, e);</div>
+<div class="line"><span class="lineno">  290</span>            }</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (istFkVerletzung(e)) {</div>
+<div class="line"><span class="lineno">  292</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(</div>
+<div class="line"><span class="lineno">  293</span>                        <span class="stringliteral">&quot;Verein-/Label-Referenz ungültig: vereinNr=&quot;</span> + datensatz.vereinNr()</div>
+<div class="line"><span class="lineno">  294</span>                                + <span class="stringliteral">&quot;, labelNrs=&quot;</span> + datensatz.labelNrs(), e);</div>
+<div class="line"><span class="lineno">  295</span>            }</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Spieler-Update fehlgeschlagen: nr=&quot;</span> + nr, e);</div>
+<div class="line"><span class="lineno">  297</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">  298</span>            wiederherstellenAutoCommit(vorigerAutoCommit);</div>
+<div class="line"><span class="lineno">  299</span>        }</div>
+<div class="line"><span class="lineno">  300</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae12152c3d77bbc20f62eea702a23cafd" name="ae12152c3d77bbc20f62eea702a23cafd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12152c3d77bbc20f62eea702a23cafd">&#9670;&#160;</a></span>wiederherstellenAutoCommit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.SpielerRepository.wiederherstellenAutoCommit </td>
+          <td>(</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>vorigerWert</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00390">390</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  390</span>                                                                 {</div>
+<div class="line"><span class="lineno">  391</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  392</span>            connection.setAutoCommit(vorigerWert);</div>
+<div class="line"><span class="lineno">  393</span>        } <span class="keywordflow">catch</span> (SQLException ex) {</div>
+<div class="line"><span class="lineno">  394</span>            <span class="comment">// Verbindung könnte bereits geschlossen sein — keine kritische Folge,</span></div>
+<div class="line"><span class="lineno">  395</span>            <span class="comment">// nächste Operation legt den Wert ohnehin neu fest.</span></div>
+<div class="line"><span class="lineno">  396</span>        }</div>
+<div class="line"><span class="lineno">  397</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="abe846e71b30943135401564e5a960dc4" name="abe846e71b30943135401564e5a960dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe846e71b30943135401564e5a960dc4">&#9670;&#160;</a></span>connection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Connection de.petanqueturniermanager.spielerdb.SpielerRepository.connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00040">40</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+
+</div>
+</div>
+<a id="af7d85bd9a16234695330aaf1cf67d19a" name="af7d85bd9a16234695330aaf1cf67d19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d85bd9a16234695330aaf1cf67d19a">&#9670;&#160;</a></span>LABEL_SEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String de.petanqueturniermanager.spielerdb.SpielerRepository.LABEL_SEP = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Bewusst exotisches Zeichen, kann in Labelnamen praktisch nicht vorkommen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00026">26</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+
+</div>
+</div>
+<a id="a3e5219bae096e843b56ad399a2a89f4f" name="a3e5219bae096e843b56ad399a2a89f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5219bae096e843b56ad399a2a89f4f">&#9670;&#160;</a></span>SELECT_JOIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String de.petanqueturniermanager.spielerdb.SpielerRepository.SELECT_JOIN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">                                =</div>
+<div class="line"><span class="stringliteral">&quot;SELECT s.NR, s.VORNAME, s.NACHNAME, s.VEREIN_NR, s.LIZENZNR, &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;v.NAME AS VEREIN_NAME, &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;(SELECT group_concat(l.NR, &#39;&quot;</span> + <a class="code hl_variable" href="#af7d85bd9a16234695330aaf1cf67d19a">LABEL_SEP</a> + <span class="stringliteral">&quot;&#39;) &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;   FROM SPIELER_LABEL sl JOIN LABEL l ON l.NR = sl.LABEL_NR &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;   WHERE sl.SPIELER_NR = s.NR ORDER BY JAVA_LOWER(l.NAME)) AS LABEL_NRS, &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;(SELECT group_concat(l.NAME, &#39;&quot;</span> + <a class="code hl_variable" href="#af7d85bd9a16234695330aaf1cf67d19a">LABEL_SEP</a> + <span class="stringliteral">&quot;&#39;) &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;   FROM SPIELER_LABEL sl JOIN LABEL l ON l.NR = sl.LABEL_NR &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;   WHERE sl.SPIELER_NR = s.NR ORDER BY JAVA_LOWER(l.NAME)) AS LABEL_NAMES &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;FROM SPIELER s &quot;</span></div>
+<div class="line">        + <span class="stringliteral">&quot;LEFT JOIN VEREIN v ON s.VEREIN_NR = v.NR &quot;</span></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_html_af7d85bd9a16234695330aaf1cf67d19a"><div class="ttname"><a href="#af7d85bd9a16234695330aaf1cf67d19a">de.petanqueturniermanager.spielerdb.SpielerRepository.LABEL_SEP</a></div><div class="ttdeci">static final String LABEL_SEP</div><div class="ttdoc">Trennzeichen für die in group_concat gepackten Label-IDs/-Namen.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d69/_spieler_repository_8java_source.html#l00026">SpielerRepository.java:26</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html#l00028">28</a> der Datei <a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/spielerdb/<a class="el" href="../../d4/d69/_spieler_repository_8java_source.html">SpielerRepository.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html">spielerdb</a></li><li class="navelem"><a href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html">SpielerRepository</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

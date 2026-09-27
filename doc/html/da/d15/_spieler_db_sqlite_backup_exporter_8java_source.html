@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/export/SpielerDbSqliteBackupExporter.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d15/_spieler_db_sqlite_backup_exporter_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbSqliteBackupExporter.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d15/_spieler_db_sqlite_backup_exporter_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.export;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.nio.file.Files;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.nio.file.Path;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.sql.Connection;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.sql.SQLException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.sqlite.SQLiteConnection;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbConnection;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbException;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html">   24</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#ad919e665d3eb5b390d93fa544e0b8f33">SpielerDbSqliteBackupExporter</a> <span class="keyword">implements</span> <a class="code hl_interface" href="../../d2/d86/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_exporter.html">SpielerDbExporter</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#a799890989d3b7597fa04ad8803ad8faa">   26</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> <a class="code hl_variable" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#a799890989d3b7597fa04ad8803ad8faa">dbConnection</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#ad919e665d3eb5b390d93fa544e0b8f33">   28</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#ad919e665d3eb5b390d93fa544e0b8f33">SpielerDbSqliteBackupExporter</a>(<a class="code hl_class" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> <a class="code hl_variable" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#a799890989d3b7597fa04ad8803ad8faa">dbConnection</a>) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        this.dbConnection = <a class="code hl_variable" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#a799890989d3b7597fa04ad8803ad8faa">dbConnection</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    @Override</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#aa83b780eb0d17057031e32409c532364">   33</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#aa83b780eb0d17057031e32409c532364">export</a>(<a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">SpielerDbExportData</a> data, <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ab1554a8d52022eb0059c95777133dad9">ExportRequest</a> request) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        Path datei = request.target();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        Path elternverzeichnis = datei.toAbsolutePath().getParent();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span> (elternverzeichnis != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                Files.createDirectories(elternverzeichnis);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                        <span class="stringliteral">&quot;SQLite-Backup-Verzeichnis nicht anlegbar: &quot;</span> + elternverzeichnis, e);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            Files.deleteIfExists(datei);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    <span class="stringliteral">&quot;Vorherige Backup-Datei konnte nicht gelöscht werden: &quot;</span> + datei, e);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        Connection conn = <a class="code hl_variable" href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#a799890989d3b7597fa04ad8803ad8faa">dbConnection</a>.<a class="code hl_function" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html#a6f2222ddaff7c4df7ddee8765760d0f7">getConnection</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        SQLiteConnection sqlite;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            sqlite = conn.unwrap(SQLiteConnection.class);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <span class="stringliteral">&quot;SQLite-Backup nicht möglich: Connection ist keine SQLiteConnection&quot;</span>, e);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            sqlite.getDatabase().backup(<span class="stringliteral">&quot;main&quot;</span>, datei.toAbsolutePath().toString(), <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        } <span class="keywordflow">catch</span> (SQLException e) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(<span class="stringliteral">&quot;SQLite-Backup fehlgeschlagen: &quot;</span> + datei, e);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection_html"><div class="ttname"><a href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">de.petanqueturniermanager.spielerdb.SpielerDbConnection</a></div><div class="ttdoc">Lifecycle für die lokale Spieler-Stammdaten-DB.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/df5/_spieler_db_connection_8java_source.html#l00033">SpielerDbConnection.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection_html_a6f2222ddaff7c4df7ddee8765760d0f7"><div class="ttname"><a href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html#a6f2222ddaff7c4df7ddee8765760d0f7">de.petanqueturniermanager.spielerdb.SpielerDbConnection.getConnection</a></div><div class="ttdeci">Connection getConnection()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/df5/_spieler_db_connection_8java_source.html#l00235">SpielerDbConnection.java:235</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">de.petanqueturniermanager.spielerdb.SpielerDbException</a></div><div class="ttdoc">Fehler aus der Spieler-DB-Schicht.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00008">SpielerDbException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html_a91701793abc4feae51f72989b5087a87"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">de.petanqueturniermanager.spielerdb.SpielerDbException.SpielerDbException</a></div><div class="ttdeci">SpielerDbException(String message)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00014">SpielerDbException.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter_html_a799890989d3b7597fa04ad8803ad8faa"><div class="ttname"><a href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#a799890989d3b7597fa04ad8803ad8faa">de.petanqueturniermanager.spielerdb.export.SpielerDbSqliteBackupExporter.dbConnection</a></div><div class="ttdeci">final SpielerDbConnection dbConnection</div><div class="ttdef"><b>Definition</b> <a href="#l00026">SpielerDbSqliteBackupExporter.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter_html_aa83b780eb0d17057031e32409c532364"><div class="ttname"><a href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#aa83b780eb0d17057031e32409c532364">de.petanqueturniermanager.spielerdb.export.SpielerDbSqliteBackupExporter.export</a></div><div class="ttdeci">void export(SpielerDbExportData data, ExportRequest request)</div><div class="ttdoc">Schreibt die Daten gemäß dem Request.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SpielerDbSqliteBackupExporter.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter_html_ad919e665d3eb5b390d93fa544e0b8f33"><div class="ttname"><a href="../../d8/dea/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_sqlite_backup_exporter.html#ad919e665d3eb5b390d93fa544e0b8f33">de.petanqueturniermanager.spielerdb.export.SpielerDbSqliteBackupExporter.SpielerDbSqliteBackupExporter</a></div><div class="ttdeci">SpielerDbSqliteBackupExporter(SpielerDbConnection dbConnection)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SpielerDbSqliteBackupExporter.java:28</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_exporter_html"><div class="ttname"><a href="../../d2/d86/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_exporter.html">de.petanqueturniermanager.spielerdb.export.SpielerDbExporter</a></div><div class="ttdoc">Schreibt SpielerDbExportData in eines der unterstützten Formate.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_spieler_db_exporter_8java_source.html#l00009">SpielerDbExporter.java:9</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_ab1554a8d52022eb0059c95777133dad9"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ab1554a8d52022eb0059c95777133dad9">de.petanqueturniermanager.spielerdb.export.ExportRequest</a></div><div class="ttdeci">record ExportRequest(SpielerDbDateiFormat format, EnumSet&lt; ExportEntity &gt; entities, ExportFilter filter, Path target)</div><div class="ttdoc">Gebündelte Aufrufparameter eines Exports.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d5d/_export_request_8java_source.html#l00018">ExportRequest.java:18</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_ac662546311ca3ded8852cffe88d97333"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">de.petanqueturniermanager.spielerdb.export.SpielerDbExportData</a></div><div class="ttdeci">record SpielerDbExportData(ExportMeta meta, List&lt; SpielerMitVerein &gt; spieler, List&lt; VereinDatensatz &gt; vereine, List&lt; LabelDatensatz &gt; labels, List&lt; SpielerLabelZuordnung &gt; spielerLabels)</div><div class="ttdoc">In-Memory-Repräsentation aller Daten, die ein konkreter Export schreibt.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dfe/_spieler_db_export_data_8java_source.html#l00017">SpielerDbExportData.java:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_5f460adda081a765fa21a09550c6289d.html">export</a></li><li class="navelem"><a href="../../da/d15/_spieler_db_sqlite_backup_exporter_8java.html">SpielerDbSqliteBackupExporter.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

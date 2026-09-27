@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/cellstyle/CellStyleHelper.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d59/_cell_style_helper_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CellStyleHelper.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d59/_cell_style_helper_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 21.05.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.helper.cellstyle;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.Objects;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.beans.XPropertySet;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> com.sun.star.container.NoSuchElementException;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> com.sun.star.container.XNameContainer;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> com.sun.star.lang.WrappedTargetException;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> com.sun.star.lang.XMultiServiceFactory;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheetDocument;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> com.sun.star.style.XStyleFamiliesSupplier;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> com.sun.star.uno.Exception;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">import</span> com.sun.star.util.XProtectable;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">import</span> de.petanqueturniermanager.helper.ISheet;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html">   31</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a35649236b88dfb69566871a322cc54a3">   33</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a35649236b88dfb69566871a322cc54a3">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a>.class);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">   35</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html">AbstractCellStyleDef</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">   37</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">   39</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> XSpreadsheetDocument <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">spreadsheetDocument</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">   41</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a>(<a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>, <a class="code hl_class" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html">AbstractCellStyleDef</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        this.sheet = <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        this.spreadsheetDocument = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        this.cellStyleDef = <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#acb70dd8835fe479d9cc33270e098c693">   47</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#acb70dd8835fe479d9cc33270e098c693">CellStyleHelper</a>(XSpreadsheetDocument <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">spreadsheetDocument</a>, <a class="code hl_class" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html">AbstractCellStyleDef</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        this.sheet = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this.spreadsheetDocument = <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">spreadsheetDocument</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        this.cellStyleDef = <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a02db4836d208262e9b2f00afd9166c5d">   53</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a02db4836d208262e9b2f00afd9166c5d">from</a>(<a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>, <a class="code hl_class" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html">AbstractCellStyleDef</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        checkNotNull(<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        checkNotNull(<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a>(<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>, <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a908b6bfaabd40b35ddcd3c7c1719f6c1">   63</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a908b6bfaabd40b35ddcd3c7c1719f6c1">from</a>(XSpreadsheetDocument doc, <a class="code hl_class" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html">AbstractCellStyleDef</a> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        checkNotNull(doc);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        checkNotNull(<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a>(doc, <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#acad5d4f1620c07ec3e0be8679b313114">   69</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">CellStyleHelper</a> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#acad5d4f1620c07ec3e0be8679b313114">apply</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        checkNotNull(<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        var currentSpreadsheetDocument = <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#ac1f426369d08598e685460848808232f">holeSpreadsheetDocument</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        checkNotNull(currentSpreadsheetDocument);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a38c3da448afc01b823893ce3531f5dec">applyAufDokument</a>(currentSpreadsheetDocument);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#ac1f426369d08598e685460848808232f">   80</a></span>    <span class="keyword">private</span> XSpreadsheetDocument <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#ac1f426369d08598e685460848808232f">holeSpreadsheetDocument</a>() {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">spreadsheetDocument</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">spreadsheetDocument</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        checkNotNull(<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>.<a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#aa46f307cfbf37cc01389ff5d1247adb1">getWorkingSpreadsheet</a>().<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">getWorkingSpreadsheetDocument</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a38c3da448afc01b823893ce3531f5dec">   88</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a38c3da448afc01b823893ce3531f5dec">applyAufDokument</a>(XSpreadsheetDocument currentSpreadsheetDocument) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        var styleName = <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>.<a class="code hl_function" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#a028067095e9d4d4a050013c7eace350d">getName</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">// LO-Einschränkung (sc/source/ui/unoobj/styleuno.cxx): Zellstile können nicht</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// geändert werden, solange irgendein Sheet im Doc tab-geschützt ist. Daher</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">// alle Sheets mit leerem Passwort temporär entsperren, Style schreiben,</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment">// danach Schutz wiederherstellen. Passwortgeschützte Sheets (durch User)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// bleiben gesperrt – dort logged der Catch-Zweig wie zuvor.</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        var temporaerEntsperrt = <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#aae28bd9d48e2d2ae7b74e9fe8fb4c26b">entsperreAlleSheetsMitLeeremPasswort</a>(currentSpreadsheetDocument);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            var xFamiliesSupplier = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XStyleFamiliesSupplier.class, currentSpreadsheetDocument);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            var xFamiliesNA = xFamiliesSupplier.getStyleFamilies();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            var aCellStylesObj = xFamiliesNA.getByName(<span class="stringliteral">&quot;CellStyles&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            var xCellStylesNA = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XNameContainer.class, aCellStylesObj);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            Object aCellStyle;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                aCellStyle = xCellStylesNA.getByName(styleName);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            } <span class="keywordflow">catch</span> (NoSuchElementException e) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="comment">// create a new cell style</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                var xDocServiceManager = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XMultiServiceFactory.class, currentSpreadsheetDocument);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                aCellStyle = xDocServiceManager.createInstance(<span class="stringliteral">&quot;com.sun.star.style.CellStyle&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                xCellStylesNA.insertByName(styleName, aCellStyle);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="comment">// modify properties of the (new) style</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            var xPropSet = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, aCellStyle);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">for</span> (var propKey : <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>.<a class="code hl_function" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#ada4805f3bd48e331ec0f8e2f72461ccf">getCellProperties</a>().keySet()) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="keywordflow">if</span> (xPropSet.getPropertySetInfo().hasPropertyByName(propKey)) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                    var neuerWert = <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">cellStyleDef</a>.<a class="code hl_function" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#ada4805f3bd48e331ec0f8e2f72461ccf">getCellProperties</a>().get(propKey);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    var aktuellerWert = xPropSet.getPropertyValue(propKey);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="keywordflow">if</span> (!Objects.equals(neuerWert, aktuellerWert)) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                        xPropSet.setPropertyValue(propKey, neuerWert);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span> (!temporaerEntsperrt.isEmpty()) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">getLogger</a>().warn(</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                        <span class="stringliteral">&quot;Zellstil &#39;{}&#39; konnte nicht gesetzt werden – LO-Einschränkung: &quot;</span> +</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        <span class="stringliteral">&quot;Zellstile können nicht geändert werden, solange ein Sheet im Dokument &quot;</span> +</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                        <span class="stringliteral">&quot;tab-geschützt ist. (sc/source/ui/unoobj/styleuno.cxx)&quot;</span>,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        styleName);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">getLogger</a>().error(e.getMessage(), e);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> e) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">getLogger</a>().error(e.getMessage(), e);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a55d1466f4949851cb84c31b67ab53407">schuetzeWiederMitLeeremPasswort</a>(temporaerEntsperrt);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#aae28bd9d48e2d2ae7b74e9fe8fb4c26b">  146</a></span>    <span class="keyword">private</span> List&lt;XProtectable&gt; <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#aae28bd9d48e2d2ae7b74e9fe8fb4c26b">entsperreAlleSheetsMitLeeremPasswort</a>(XSpreadsheetDocument doc) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        List&lt;XProtectable&gt; entsperrt = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        var sheets = doc.getSheets();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">for</span> (var name : sheets.getElementNames()) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                var xSheet = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XSpreadsheet.class, sheets.getByName(name));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                var xProt = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XProtectable.class, xSheet);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                <span class="keywordflow">if</span> (xProt != <span class="keyword">null</span> &amp;&amp; xProt.isProtected()) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                        xProt.unprotect(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                        <span class="comment">// Verifizieren: bei Passwortschutz schlägt unprotect(&quot;&quot;) still fehl</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                        <span class="keywordflow">if</span> (!xProt.isProtected()) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                            entsperrt.add(xProt);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                        <span class="comment">// Sheet mit Passwort – überspringen, bleibt geschützt</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            } <span class="keywordflow">catch</span> (NoSuchElementException | WrappedTargetException e) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                <span class="comment">// Sheet nicht zugreifbar – überspringen</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> entsperrt;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a55d1466f4949851cb84c31b67ab53407">  171</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a55d1466f4949851cb84c31b67ab53407">schuetzeWiederMitLeeremPasswort</a>(List&lt;XProtectable&gt; sheets) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">for</span> (var xProt : sheets) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                xProt.protect(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">getLogger</a>().warn(<span class="stringliteral">&quot;Sheet-Schutz konnte nicht wiederhergestellt werden: {}&quot;</span>, e.getMessage());</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">  181</a></span>    <span class="keyword">private</span> Logger <a class="code hl_function" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">getLogger</a>() {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">sheet</a>.<a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#a6bd14350282c40ab9c004ef077f0e0a9">getLogger</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a35649236b88dfb69566871a322cc54a3">logger</a>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_a31c86015e8e43a961f4b0441a8d4cb5d"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">de.petanqueturniermanager.comp.WorkingSpreadsheet.getWorkingSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument getWorkingSpreadsheetDocument()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00101">WorkingSpreadsheet.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def_html"><div class="ttname"><a href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html">de.petanqueturniermanager.helper.cellstyle.AbstractCellStyleDef</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6a/_abstract_cell_style_def_8java_source.html#l00011">AbstractCellStyleDef.java:11</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def_html_a028067095e9d4d4a050013c7eace350d"><div class="ttname"><a href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#a028067095e9d4d4a050013c7eace350d">de.petanqueturniermanager.helper.cellstyle.AbstractCellStyleDef.getName</a></div><div class="ttdeci">String getName()</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6a/_abstract_cell_style_def_8java_source.html#l00021">AbstractCellStyleDef.java:21</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def_html_ada4805f3bd48e331ec0f8e2f72461ccf"><div class="ttname"><a href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#ada4805f3bd48e331ec0f8e2f72461ccf">de.petanqueturniermanager.helper.cellstyle.AbstractCellStyleDef.getCellProperties</a></div><div class="ttdeci">CellProperties getCellProperties()</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6a/_abstract_cell_style_def_8java_source.html#l00025">AbstractCellStyleDef.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a02db4836d208262e9b2f00afd9166c5d"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a02db4836d208262e9b2f00afd9166c5d">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.from</a></div><div class="ttdeci">static CellStyleHelper from(ISheet sheet, AbstractCellStyleDef cellStyleDef)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">CellStyleHelper.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a03e235534df58f128680a89dd2a55315"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a03e235534df58f128680a89dd2a55315">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.getLogger</a></div><div class="ttdeci">Logger getLogger()</div><div class="ttdef"><b>Definition</b> <a href="#l00181">CellStyleHelper.java:181</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a1b4422ce869aa86ab0b5008b984eab96"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a1b4422ce869aa86ab0b5008b984eab96">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.sheet</a></div><div class="ttdeci">final ISheet sheet</div><div class="ttdoc">Gesetzt wenn über from(ISheet, AbstractCellStyleDef) erzeugt.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">CellStyleHelper.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a35649236b88dfb69566871a322cc54a3"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a35649236b88dfb69566871a322cc54a3">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00033">CellStyleHelper.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a38c3da448afc01b823893ce3531f5dec"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a38c3da448afc01b823893ce3531f5dec">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.applyAufDokument</a></div><div class="ttdeci">void applyAufDokument(XSpreadsheetDocument currentSpreadsheetDocument)</div><div class="ttdef"><b>Definition</b> <a href="#l00088">CellStyleHelper.java:88</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a55d1466f4949851cb84c31b67ab53407"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a55d1466f4949851cb84c31b67ab53407">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.schuetzeWiederMitLeeremPasswort</a></div><div class="ttdeci">void schuetzeWiederMitLeeremPasswort(List&lt; XProtectable &gt; sheets)</div><div class="ttdef"><b>Definition</b> <a href="#l00171">CellStyleHelper.java:171</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a5c22412ae55ad770cda021bb43753926"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a5c22412ae55ad770cda021bb43753926">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.CellStyleHelper</a></div><div class="ttdeci">CellStyleHelper(ISheet sheet, AbstractCellStyleDef cellStyleDef)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">CellStyleHelper.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a6e3d4ab85dd5d0e2c9fcc866e4dd038d"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a6e3d4ab85dd5d0e2c9fcc866e4dd038d">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.spreadsheetDocument</a></div><div class="ttdeci">final XSpreadsheetDocument spreadsheetDocument</div><div class="ttdoc">Gesetzt wenn über from(XSpreadsheetDocument, AbstractCellStyleDef) erzeugt.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">CellStyleHelper.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a85163664fe17c2d04d8c094a4bfea46b"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a85163664fe17c2d04d8c094a4bfea46b">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.cellStyleDef</a></div><div class="ttdeci">final AbstractCellStyleDef cellStyleDef</div><div class="ttdef"><b>Definition</b> <a href="#l00035">CellStyleHelper.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_a908b6bfaabd40b35ddcd3c7c1719f6c1"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#a908b6bfaabd40b35ddcd3c7c1719f6c1">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.from</a></div><div class="ttdeci">static CellStyleHelper from(XSpreadsheetDocument doc, AbstractCellStyleDef cellStyleDef)</div><div class="ttdoc">Erstellt einen CellStyleHelper direkt über das Dokument – für Kontexte ohne ISheet (z.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">CellStyleHelper.java:63</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_aae28bd9d48e2d2ae7b74e9fe8fb4c26b"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#aae28bd9d48e2d2ae7b74e9fe8fb4c26b">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.entsperreAlleSheetsMitLeeremPasswort</a></div><div class="ttdeci">List&lt; XProtectable &gt; entsperreAlleSheetsMitLeeremPasswort(XSpreadsheetDocument doc)</div><div class="ttdoc">Entsperrt alle aktuell mit leerem Passwort geschützten Sheets im Dokument und gibt sie zur Wiederhers...</div><div class="ttdef"><b>Definition</b> <a href="#l00146">CellStyleHelper.java:146</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_ac1f426369d08598e685460848808232f"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#ac1f426369d08598e685460848808232f">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.holeSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument holeSpreadsheetDocument()</div><div class="ttdef"><b>Definition</b> <a href="#l00080">CellStyleHelper.java:80</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_acad5d4f1620c07ec3e0be8679b313114"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#acad5d4f1620c07ec3e0be8679b313114">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.apply</a></div><div class="ttdeci">CellStyleHelper apply()</div><div class="ttdef"><b>Definition</b> <a href="#l00069">CellStyleHelper.java:69</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper_html_acb70dd8835fe479d9cc33270e098c693"><div class="ttname"><a href="../../da/de8/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_helper.html#acb70dd8835fe479d9cc33270e098c693">de.petanqueturniermanager.helper.cellstyle.CellStyleHelper.CellStyleHelper</a></div><div class="ttdeci">CellStyleHelper(XSpreadsheetDocument spreadsheetDocument, AbstractCellStyleDef cellStyleDef)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">CellStyleHelper.java:47</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">de.petanqueturniermanager.helper.ISheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/dae/_i_sheet_8java_source.html#l00017">ISheet.java:17</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_a6bd14350282c40ab9c004ef077f0e0a9"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#a6bd14350282c40ab9c004ef077f0e0a9">de.petanqueturniermanager.helper.ISheet.getLogger</a></div><div class="ttdeci">Logger getLogger()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_aa46f307cfbf37cc01389ff5d1247adb1"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#aa46f307cfbf37cc01389ff5d1247adb1">de.petanqueturniermanager.helper.ISheet.getWorkingSpreadsheet</a></div><div class="ttdeci">WorkingSpreadsheet getWorkingSpreadsheet()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_19cb19fd21f3b955bc7c24760ae80588.html">cellstyle</a></li><li class="navelem"><a href="../../d7/d59/_cell_style_helper_8java.html">CellStyleHelper.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

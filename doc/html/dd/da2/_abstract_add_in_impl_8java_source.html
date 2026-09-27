@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/addins/AbstractAddInImpl.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/da2/_abstract_add_in_impl_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AbstractAddInImpl.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/da2/_abstract_add_in_impl_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d8/d46/namespacede_1_1petanqueturniermanager_1_1addins.html">    1</a></span><span class="keyword">package </span>de.petanqueturniermanager.addins;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> com.sun.star.lib.uno.helper.WeakBase;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html">   12</a></span><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_class" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html">AbstractAddInImpl</a> <span class="keyword">extends</span> <a class="code hl_class" href="../../d5/da7/class_weak_base.html">WeakBase</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        implements com.sun.star.lang.<a class="code hl_class" href="../../d0/d04/class_x_service_info.html">XServiceInfo</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                   com.sun.star.sheet.XAddIn,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                   com.sun.star.sheet.XCompatibilityNames {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae62c4983bfc1180e19d5648a8fc3acac">   16</a></span>    <span class="keyword">private</span> com.sun.star.lang.Locale <a class="code hl_variable" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae62c4983bfc1180e19d5648a8fc3acac">locale</a> = <span class="keyword">new</span> com.sun.star.lang.Locale();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// -------- XLocalizable methods ------------</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    @Override</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a4ac13e57f06cc0fe446bc46e3359a405">   20</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a4ac13e57f06cc0fe446bc46e3359a405">setLocale</a>(com.sun.star.lang.Locale l) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_variable" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae62c4983bfc1180e19d5648a8fc3acac">locale</a> = l;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    @Override</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a9fa14617c6ba219a89a5a788503226f0">   25</a></span>    <span class="keyword">public</span> com.sun.star.lang.Locale <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a9fa14617c6ba219a89a5a788503226f0">getLocale</a>() {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae62c4983bfc1180e19d5648a8fc3acac">locale</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// -------- XAddIn methods ------------</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Standard-Implementierung: Leere Strings zurückgeben</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// LibreOffice macht das Mapping komplett aus der XCU-Datei</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    @Override</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a4072f7aed3320544bdddd68d79716f5e">   33</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a4072f7aed3320544bdddd68d79716f5e">getProgrammaticFuntionName</a>(String aDisplayName) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    @Override</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#aec81ec0f8e3fec48c799719c17f9f474">   38</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#aec81ec0f8e3fec48c799719c17f9f474">getDisplayFunctionName</a>(String aProgrammaticName) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    @Override</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#afa8805293e837c6bcb5bdcd9cb9efb13">   43</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#afa8805293e837c6bcb5bdcd9cb9efb13">getFunctionDescription</a>(String aProgrammaticName) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// Return empty - descriptions come from XCU file</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    @Override</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af0ac904a5e8fbd762dca56920fd31143">   49</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af0ac904a5e8fbd762dca56920fd31143">getDisplayArgumentName</a>(String aProgrammaticFunctionName, <span class="keywordtype">int</span> nArgument) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// Return empty - parameter names come from XCU file</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    @Override</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#addf1e6a093cf96f9218ea2a9145a6f4d">   55</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#addf1e6a093cf96f9218ea2a9145a6f4d">getArgumentDescription</a>(String aProgrammaticFunctionName, <span class="keywordtype">int</span> nArgument) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// Return empty - descriptions come from XCU file</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    @Override</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a1838d898164b0b7b5761381fded24d36">   61</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a1838d898164b0b7b5761381fded24d36">getProgrammaticCategoryName</a>(String aProgrammaticFunctionName) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">// Return empty - categories come from XCU file</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    @Override</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a1f24a6eea8376e9596bb8065a7aa1c5c">   67</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a1f24a6eea8376e9596bb8065a7aa1c5c">getDisplayCategoryName</a>(String aProgrammaticFunctionName) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// Return empty - categories come from XCU file</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    @Override</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a9ec62ffec74dbad1b3f1e16c38dc54a3">   73</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a9ec62ffec74dbad1b3f1e16c38dc54a3">getImplementationName</a>() {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae23e517f3bdbb08f2ddb44eee30e8758">getImplName</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// -------- XServiceInfo methods ------------</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    @Override</div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a0af71a1014b4ba8c41dce12251730082">   80</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a0af71a1014b4ba8c41dce12251730082">supportsService</a>(String sService) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af55d9dd8ae3c645f2975da1c81da896a">getServiceNames</a>().length; i++) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (sService.equals(<a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af55d9dd8ae3c645f2975da1c81da896a">getServiceNames</a>()[i])) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    @Override</div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a82206dfc53b8e2b11bd2f0c74cd2cf64">   90</a></span>    <span class="keyword">public</span> String[] <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a82206dfc53b8e2b11bd2f0c74cd2cf64">getSupportedServiceNames</a>() {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af55d9dd8ae3c645f2975da1c81da896a">getServiceNames</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// -------- XCompatibilityNames methods ------------</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    @Override</div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a06d8ae4144a2e885c37231cd1c0dd3be">   96</a></span>    <span class="keyword">public</span> com.sun.star.sheet.LocalizedName[] <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a06d8ae4144a2e885c37231cd1c0dd3be">getCompatibilityNames</a>(String aProgrammaticName) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">// Return empty array - compatibility names come from XCU file</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> com.sun.star.sheet.LocalizedName[0];</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae23e517f3bdbb08f2ddb44eee30e8758">  101</a></span>    <span class="keyword">abstract</span> String <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae23e517f3bdbb08f2ddb44eee30e8758">getImplName</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af55d9dd8ae3c645f2975da1c81da896a">  103</a></span>    <span class="keyword">abstract</span> String[] <a class="code hl_function" href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af55d9dd8ae3c645f2975da1c81da896a">getServiceNames</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+</div>
+<div class="ttc" id="aclass_weak_base_html"><div class="ttname"><a href="../../d5/da7/class_weak_base.html">WeakBase</a></div></div>
+<div class="ttc" id="aclass_x_service_info_html"><div class="ttname"><a href="../../d0/d04/class_x_service_info.html">XServiceInfo</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html">de.petanqueturniermanager.addins.AbstractAddInImpl</a></div><div class="ttdoc">Erstellung 23.05.2022 / Michael Massee http://biochemfusion.com/doc/Calc_addin_howto....</div><div class="ttdef"><b>Definition</b> <a href="#l00012">AbstractAddInImpl.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a06d8ae4144a2e885c37231cd1c0dd3be"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a06d8ae4144a2e885c37231cd1c0dd3be">de.petanqueturniermanager.addins.AbstractAddInImpl.getCompatibilityNames</a></div><div class="ttdeci">com.sun.star.sheet.LocalizedName[] getCompatibilityNames(String aProgrammaticName)</div><div class="ttdef"><b>Definition</b> <a href="#l00096">AbstractAddInImpl.java:96</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a0af71a1014b4ba8c41dce12251730082"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a0af71a1014b4ba8c41dce12251730082">de.petanqueturniermanager.addins.AbstractAddInImpl.supportsService</a></div><div class="ttdeci">boolean supportsService(String sService)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">AbstractAddInImpl.java:80</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a1838d898164b0b7b5761381fded24d36"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a1838d898164b0b7b5761381fded24d36">de.petanqueturniermanager.addins.AbstractAddInImpl.getProgrammaticCategoryName</a></div><div class="ttdeci">String getProgrammaticCategoryName(String aProgrammaticFunctionName)</div><div class="ttdef"><b>Definition</b> <a href="#l00061">AbstractAddInImpl.java:61</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a1f24a6eea8376e9596bb8065a7aa1c5c"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a1f24a6eea8376e9596bb8065a7aa1c5c">de.petanqueturniermanager.addins.AbstractAddInImpl.getDisplayCategoryName</a></div><div class="ttdeci">String getDisplayCategoryName(String aProgrammaticFunctionName)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">AbstractAddInImpl.java:67</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a4072f7aed3320544bdddd68d79716f5e"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a4072f7aed3320544bdddd68d79716f5e">de.petanqueturniermanager.addins.AbstractAddInImpl.getProgrammaticFuntionName</a></div><div class="ttdeci">String getProgrammaticFuntionName(String aDisplayName)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">AbstractAddInImpl.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a4ac13e57f06cc0fe446bc46e3359a405"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a4ac13e57f06cc0fe446bc46e3359a405">de.petanqueturniermanager.addins.AbstractAddInImpl.setLocale</a></div><div class="ttdeci">void setLocale(com.sun.star.lang.Locale l)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">AbstractAddInImpl.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a82206dfc53b8e2b11bd2f0c74cd2cf64"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a82206dfc53b8e2b11bd2f0c74cd2cf64">de.petanqueturniermanager.addins.AbstractAddInImpl.getSupportedServiceNames</a></div><div class="ttdeci">String[] getSupportedServiceNames()</div><div class="ttdef"><b>Definition</b> <a href="#l00090">AbstractAddInImpl.java:90</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a9ec62ffec74dbad1b3f1e16c38dc54a3"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a9ec62ffec74dbad1b3f1e16c38dc54a3">de.petanqueturniermanager.addins.AbstractAddInImpl.getImplementationName</a></div><div class="ttdeci">String getImplementationName()</div><div class="ttdef"><b>Definition</b> <a href="#l00073">AbstractAddInImpl.java:73</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_a9fa14617c6ba219a89a5a788503226f0"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#a9fa14617c6ba219a89a5a788503226f0">de.petanqueturniermanager.addins.AbstractAddInImpl.getLocale</a></div><div class="ttdeci">com.sun.star.lang.Locale getLocale()</div><div class="ttdef"><b>Definition</b> <a href="#l00025">AbstractAddInImpl.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_addf1e6a093cf96f9218ea2a9145a6f4d"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#addf1e6a093cf96f9218ea2a9145a6f4d">de.petanqueturniermanager.addins.AbstractAddInImpl.getArgumentDescription</a></div><div class="ttdeci">String getArgumentDescription(String aProgrammaticFunctionName, int nArgument)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">AbstractAddInImpl.java:55</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_ae23e517f3bdbb08f2ddb44eee30e8758"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae23e517f3bdbb08f2ddb44eee30e8758">de.petanqueturniermanager.addins.AbstractAddInImpl.getImplName</a></div><div class="ttdeci">abstract String getImplName()</div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_ae62c4983bfc1180e19d5648a8fc3acac"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#ae62c4983bfc1180e19d5648a8fc3acac">de.petanqueturniermanager.addins.AbstractAddInImpl.locale</a></div><div class="ttdeci">com.sun.star.lang.Locale locale</div><div class="ttdef"><b>Definition</b> <a href="#l00016">AbstractAddInImpl.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_aec81ec0f8e3fec48c799719c17f9f474"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#aec81ec0f8e3fec48c799719c17f9f474">de.petanqueturniermanager.addins.AbstractAddInImpl.getDisplayFunctionName</a></div><div class="ttdeci">String getDisplayFunctionName(String aProgrammaticName)</div><div class="ttdef"><b>Definition</b> <a href="#l00038">AbstractAddInImpl.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_af0ac904a5e8fbd762dca56920fd31143"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af0ac904a5e8fbd762dca56920fd31143">de.petanqueturniermanager.addins.AbstractAddInImpl.getDisplayArgumentName</a></div><div class="ttdeci">String getDisplayArgumentName(String aProgrammaticFunctionName, int nArgument)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">AbstractAddInImpl.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_af55d9dd8ae3c645f2975da1c81da896a"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#af55d9dd8ae3c645f2975da1c81da896a">de.petanqueturniermanager.addins.AbstractAddInImpl.getServiceNames</a></div><div class="ttdeci">abstract String[] getServiceNames()</div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl_html_afa8805293e837c6bcb5bdcd9cb9efb13"><div class="ttname"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html#afa8805293e837c6bcb5bdcd9cb9efb13">de.petanqueturniermanager.addins.AbstractAddInImpl.getFunctionDescription</a></div><div class="ttdeci">String getFunctionDescription(String aProgrammaticName)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">AbstractAddInImpl.java:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_bb2d56b483104f9ef7f48d6cf9baf00c.html">addins</a></li><li class="navelem"><a href="../../dd/da2/_abstract_add_in_impl_8java.html">AbstractAddInImpl.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

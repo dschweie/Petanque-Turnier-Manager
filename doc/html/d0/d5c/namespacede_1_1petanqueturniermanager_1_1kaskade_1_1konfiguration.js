@@ -1,0 +1,6 @@
+var namespacede_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration =
+[
+    [ "KaskadeKoBracketKonfigAdapter", "de/d71/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_ko_bracket_konfig_adapter.html", "de/d71/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_ko_bracket_konfig_adapter" ],
+    [ "KaskadeKonfigurationSheet", "da/d64/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_konfiguration_sheet.html", "da/d64/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_konfiguration_sheet" ],
+    [ "KaskadePropertiesSpalte", "d8/d68/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_properties_spalte.html", "d8/d68/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_properties_spalte" ]
+];

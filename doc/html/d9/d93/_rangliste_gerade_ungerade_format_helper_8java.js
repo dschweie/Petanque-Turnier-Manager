@@ -1,0 +1,4 @@
+var _rangliste_gerade_ungerade_format_helper_8java =
+[
+    [ "de.petanqueturniermanager.helper.sheet.RanglisteGeradeUngeradeFormatHelper", "d1/d11/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_rangliste_gerade_ungerade_format_helper.html", "d1/d11/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_rangliste_gerade_ungerade_format_helper" ]
+];

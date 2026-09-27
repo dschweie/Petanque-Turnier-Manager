@@ -1,0 +1,4 @@
+var _trip_tete_blattschutz_konfiguration_8java =
+[
+    [ "de.petanqueturniermanager.triptete.blattschutz.TripTeteBlattschutzKonfiguration", "de/d63/classde_1_1petanqueturniermanager_1_1triptete_1_1blattschutz_1_1_trip_tete_blattschutz_konfiguration.html", "de/d63/classde_1_1petanqueturniermanager_1_1triptete_1_1blattschutz_1_1_trip_tete_blattschutz_konfiguration" ]
+];

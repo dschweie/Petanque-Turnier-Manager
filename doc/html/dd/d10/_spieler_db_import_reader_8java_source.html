@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/importer/SpielerDbImportReader.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d10/_spieler_db_import_reader_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbImportReader.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d10/_spieler_db_import_reader_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.importer;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html">   10</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html">SpielerDbImportReader</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html#a83ad716b34610bfdd57fb0c476ad312d">   11</a></span>    <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a> <a class="code hl_function" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html#a83ad716b34610bfdd57fb0c476ad312d">read</a>(<a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#aa6f41c6b64ae681e2d9963e3562bf26a">ImportRequest</a> request) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">de.petanqueturniermanager.spielerdb.SpielerDbException</a></div><div class="ttdoc">Fehler aus der Spieler-DB-Schicht.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00008">SpielerDbException.java:8</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader_html"><div class="ttname"><a href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportReader</a></div><div class="ttdoc">Liest eine Import-Quelle in ImportRohdaten ein.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">SpielerDbImportReader.java:10</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader_html_a83ad716b34610bfdd57fb0c476ad312d"><div class="ttname"><a href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html#a83ad716b34610bfdd57fb0c476ad312d">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportReader.read</a></div><div class="ttdeci">ImportRohdaten read(ImportRequest request)</div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_aa6f41c6b64ae681e2d9963e3562bf26a"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#aa6f41c6b64ae681e2d9963e3562bf26a">de.petanqueturniermanager.spielerdb.importer.ImportRequest</a></div><div class="ttdeci">record ImportRequest(SpielerDbDateiFormat format, EnumSet&lt; ExportEntity &gt; entities, Path source, ImportModus modus, boolean dryRun)</div><div class="ttdoc">Gebündelte Aufrufparameter eines Imports.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/dff/_import_request_8java_source.html#l00023">ImportRequest.java:23</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_afc7ed4612e551a6e2c49a34365206931"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">de.petanqueturniermanager.spielerdb.importer.ImportRohdaten</a></div><div class="ttdeci">record ImportRohdaten(List&lt; RohSpieler &gt; spieler, List&lt; RohVerein &gt; vereine, List&lt; RohLabel &gt; labels, List&lt; RohSpielerLabel &gt; spielerLabels)</div><div class="ttdoc">Rohe (noch nicht validierte) Daten aus einer Import-Quelle.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/ddb/_import_rohdaten_8java_source.html#l00018">ImportRohdaten.java:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_b04589d758b323be9502941c6b1fb23c.html">importer</a></li><li class="navelem"><a href="../../dd/d10/_spieler_db_import_reader_8java.html">SpielerDbImportReader.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

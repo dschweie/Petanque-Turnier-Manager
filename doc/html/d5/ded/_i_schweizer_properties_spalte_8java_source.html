@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/schweizer/konfiguration/ISchweizerPropertiesSpalte.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/ded/_i_schweizer_properties_spalte_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ISchweizerPropertiesSpalte.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/ded/_i_schweizer_properties_spalte_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 12.04.2020 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">    4</a></span><span class="keyword">package </span>de.petanqueturniermanager.schweizer.konfiguration;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.meldeliste.Formation;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.spielrunde.SpielrundeSpielbahn;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellstyle.SpielrundeHintergrundFarbeGeradeStyle;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellstyle.SpielrundeHintergrundFarbeUnGeradeStyle;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.helper.upload.IUploadKonfigurierbar;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.supermelee.SpielRundeNr;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html">   17</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html">ISchweizerPropertiesSpalte</a> <span class="keyword">extends</span> de.<a class="code hl_package" href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a>.<a class="code hl_package" href="../../d3/d17/namespacede_1_1petanqueturniermanager_1_1basesheet.html">basesheet</a>.<a class="code hl_package" href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">konfiguration</a>.IFreispielPropertiesSpalte, <a class="code hl_interface" href="../../d9/d35/interfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_i_upload_konfigurierbar.html">IUploadKonfigurierbar</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#adf05373ea3ff53d02095e21d791eea05">   19</a></span>    String <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#adf05373ea3ff53d02095e21d791eea05">getKopfZeileLinks</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d63baa54a5650014612af6e763638c4">   21</a></span>    String <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d63baa54a5650014612af6e763638c4">getKopfZeileMitte</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a75f9a4860b43483129d654013914e320">   23</a></span>    String <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a75f9a4860b43483129d654013914e320">getKopfZeileRechts</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0fe31decad761f5548e78308e1bce3bb">   25</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0fe31decad761f5548e78308e1bce3bb">setAktiveSpielRunde</a>(<a class="code hl_class" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html">SpielRundeNr</a> neueSpielrunde);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a9eed2bcfd45ffb5c21b396da5c078c14">   27</a></span>    <a class="code hl_class" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html">SpielRundeNr</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a9eed2bcfd45ffb5c21b396da5c078c14">getAktiveSpielRunde</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a54ff112e896ff638ee2964eb6a559c38">   29</a></span>    Integer <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a54ff112e896ff638ee2964eb6a559c38">getSpielRundeHintergrundFarbeGerade</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a36d084f1bfd937c3dd4e0a62094a6169">   31</a></span>    <a class="code hl_class" href="../../d7/d35/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_gerade_style.html">SpielrundeHintergrundFarbeGeradeStyle</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a36d084f1bfd937c3dd4e0a62094a6169">getSpielRundeHintergrundFarbeGeradeStyle</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a02d56edbc6dcaf6d3e8498f5b4c5fe53">   33</a></span>    Integer <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a02d56edbc6dcaf6d3e8498f5b4c5fe53">getSpielRundeHintergrundFarbeUnGerade</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a1462372bf2418bdec36f1dfdcc4002d1">   35</a></span>    <a class="code hl_class" href="../../de/d61/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_un_gerade_style.html">SpielrundeHintergrundFarbeUnGeradeStyle</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a1462372bf2418bdec36f1dfdcc4002d1">getSpielRundeHintergrundFarbeUnGeradeStyle</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a2f7e41fe1c5941d63337eb04a08c6a59">   37</a></span>    Integer <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a2f7e41fe1c5941d63337eb04a08c6a59">getSpielRundeHeaderFarbe</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a74284db65fa1a80f8892d6d64d8c6c7b">   39</a></span>    <a class="code hl_class" href="../../d8/d33/enumde_1_1petanqueturniermanager_1_1basesheet_1_1spielrunde_1_1_spielrunde_spielbahn.html">SpielrundeSpielbahn</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a74284db65fa1a80f8892d6d64d8c6c7b">getSpielrundeSpielbahn</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a45f3e9a42644014b5db856336371e4df">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a45f3e9a42644014b5db856336371e4df">setSpielrundeSpielbahn</a>(<a class="code hl_class" href="../../d8/d33/enumde_1_1petanqueturniermanager_1_1basesheet_1_1spielrunde_1_1_spielrunde_spielbahn.html">SpielrundeSpielbahn</a> option);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a4b3dbcc379516c9617e23bdfe347b421">   43</a></span>    <a class="code hl_class" href="../../d9/d71/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation.html">Formation</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a4b3dbcc379516c9617e23bdfe347b421">getMeldeListeFormation</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ab22a2b946eff5ec4d48e09939e587deb">   45</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ab22a2b946eff5ec4d48e09939e587deb">isMeldeListeTeamnameAnzeigen</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ad451dd179223540cb76b62ae2b8075a5">   47</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ad451dd179223540cb76b62ae2b8075a5">isMeldeListeVereinsnameAnzeigen</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d75e43e4bd5bd82144e2a08ec201219">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d75e43e4bd5bd82144e2a08ec201219">setMeldeListeFormation</a>(<a class="code hl_class" href="../../d9/d71/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation.html">Formation</a> formation);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#afc0907ad83a224639aaf367826c1a25e">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#afc0907ad83a224639aaf367826c1a25e">setMeldeListeTeamnameAnzeigen</a>(<span class="keywordtype">boolean</span> anzeigen);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a5965c7273d6a1c45e71c5584b67425ba">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a5965c7273d6a1c45e71c5584b67425ba">setMeldeListeVereinsnameAnzeigen</a>(<span class="keywordtype">boolean</span> anzeigen);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#aa958485900a32aafd6bfafd19d3e5259">   55</a></span>    <a class="code hl_class" href="../../d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html">SpielplanTeamAnzeige</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#aa958485900a32aafd6bfafd19d3e5259">getSpielplanTeamAnzeige</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a3b2bf576bebdc51563474fad8de2ef89">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a3b2bf576bebdc51563474fad8de2ef89">setSpielplanTeamAnzeige</a>(<a class="code hl_class" href="../../d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html">SpielplanTeamAnzeige</a> anzeige);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#abbc5a99e6de8a47a22b4779c219da0d7">   59</a></span>    <a class="code hl_class" href="../../d1/d90/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_ranking_modus.html">SchweizerRankingModus</a> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#abbc5a99e6de8a47a22b4779c219da0d7">getRankingModus</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0ff8ee6d954acee0f3b22c9af1dafa3f">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0ff8ee6d954acee0f3b22c9af1dafa3f">setRankingModus</a>(<a class="code hl_class" href="../../d1/d90/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_ranking_modus.html">SchweizerRankingModus</a> modus);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_gerade_style_html"><div class="ttname"><a href="../../d7/d35/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_gerade_style.html">de.petanqueturniermanager.helper.cellstyle.SpielrundeHintergrundFarbeGeradeStyle</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d31/_spielrunde_hintergrund_farbe_gerade_style_8java_source.html#l00007">SpielrundeHintergrundFarbeGeradeStyle.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_un_gerade_style_html"><div class="ttname"><a href="../../de/d61/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_un_gerade_style.html">de.petanqueturniermanager.helper.cellstyle.SpielrundeHintergrundFarbeUnGeradeStyle</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dae/_spielrunde_hintergrund_farbe_un_gerade_style_8java_source.html#l00007">SpielrundeHintergrundFarbeUnGeradeStyle.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html">de.petanqueturniermanager.supermelee.SpielRundeNr</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/dad/_spiel_runde_nr_8java_source.html#l00011">SpielRundeNr.java:11</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation_html"><div class="ttname"><a href="../../d9/d71/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation.html">de.petanqueturniermanager.basesheet.meldeliste.Formation</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/db5/_formation_8java_source.html#l00009">Formation.java:9</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1spielrunde_1_1_spielrunde_spielbahn_html"><div class="ttname"><a href="../../d8/d33/enumde_1_1petanqueturniermanager_1_1basesheet_1_1spielrunde_1_1_spielrunde_spielbahn.html">de.petanqueturniermanager.basesheet.spielrunde.SpielrundeSpielbahn</a></div><div class="ttdoc">Erstellung 01.04.2024 / Michael Massee.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d0a/_spielrunde_spielbahn_8java_source.html#l00007">SpielrundeSpielbahn.java:7</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_ranking_modus_html"><div class="ttname"><a href="../../d1/d90/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_ranking_modus.html">de.petanqueturniermanager.schweizer.konfiguration.SchweizerRankingModus</a></div><div class="ttdoc">Ranking-Modus für das Schweizer Turniersystem.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/deb/_schweizer_ranking_modus_8java_source.html#l00009">SchweizerRankingModus.java:9</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige_html"><div class="ttname"><a href="../../d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html">de.petanqueturniermanager.schweizer.konfiguration.SpielplanTeamAnzeige</a></div><div class="ttdoc">Steuert, welche Team-Kennung in Spielplänen und Ranglisten angezeigt wird.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d5d/_spielplan_team_anzeige_8java_source.html#l00006">SpielplanTeamAnzeige.java:6</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_i_upload_konfigurierbar_html"><div class="ttname"><a href="../../d9/d35/interfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_i_upload_konfigurierbar.html">de.petanqueturniermanager.helper.upload.IUploadKonfigurierbar</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_i_upload_konfigurierbar_8java_source.html#l00003">IUploadKonfigurierbar.java:3</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte</a></div><div class="ttdef"><b>Definition</b> <a href="#l00017">ISchweizerPropertiesSpalte.java:17</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a02d56edbc6dcaf6d3e8498f5b4c5fe53"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a02d56edbc6dcaf6d3e8498f5b4c5fe53">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielRundeHintergrundFarbeUnGerade</a></div><div class="ttdeci">Integer getSpielRundeHintergrundFarbeUnGerade()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a0fe31decad761f5548e78308e1bce3bb"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0fe31decad761f5548e78308e1bce3bb">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setAktiveSpielRunde</a></div><div class="ttdeci">void setAktiveSpielRunde(SpielRundeNr neueSpielrunde)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a0ff8ee6d954acee0f3b22c9af1dafa3f"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0ff8ee6d954acee0f3b22c9af1dafa3f">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setRankingModus</a></div><div class="ttdeci">void setRankingModus(SchweizerRankingModus modus)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a1462372bf2418bdec36f1dfdcc4002d1"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a1462372bf2418bdec36f1dfdcc4002d1">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielRundeHintergrundFarbeUnGeradeStyle</a></div><div class="ttdeci">SpielrundeHintergrundFarbeUnGeradeStyle getSpielRundeHintergrundFarbeUnGeradeStyle()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a2f7e41fe1c5941d63337eb04a08c6a59"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a2f7e41fe1c5941d63337eb04a08c6a59">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielRundeHeaderFarbe</a></div><div class="ttdeci">Integer getSpielRundeHeaderFarbe()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a36d084f1bfd937c3dd4e0a62094a6169"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a36d084f1bfd937c3dd4e0a62094a6169">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielRundeHintergrundFarbeGeradeStyle</a></div><div class="ttdeci">SpielrundeHintergrundFarbeGeradeStyle getSpielRundeHintergrundFarbeGeradeStyle()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a3b2bf576bebdc51563474fad8de2ef89"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a3b2bf576bebdc51563474fad8de2ef89">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setSpielplanTeamAnzeige</a></div><div class="ttdeci">void setSpielplanTeamAnzeige(SpielplanTeamAnzeige anzeige)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a45f3e9a42644014b5db856336371e4df"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a45f3e9a42644014b5db856336371e4df">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setSpielrundeSpielbahn</a></div><div class="ttdeci">void setSpielrundeSpielbahn(SpielrundeSpielbahn option)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a4b3dbcc379516c9617e23bdfe347b421"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a4b3dbcc379516c9617e23bdfe347b421">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getMeldeListeFormation</a></div><div class="ttdeci">Formation getMeldeListeFormation()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a54ff112e896ff638ee2964eb6a559c38"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a54ff112e896ff638ee2964eb6a559c38">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielRundeHintergrundFarbeGerade</a></div><div class="ttdeci">Integer getSpielRundeHintergrundFarbeGerade()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a5965c7273d6a1c45e71c5584b67425ba"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a5965c7273d6a1c45e71c5584b67425ba">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setMeldeListeVereinsnameAnzeigen</a></div><div class="ttdeci">void setMeldeListeVereinsnameAnzeigen(boolean anzeigen)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a74284db65fa1a80f8892d6d64d8c6c7b"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a74284db65fa1a80f8892d6d64d8c6c7b">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielrundeSpielbahn</a></div><div class="ttdeci">SpielrundeSpielbahn getSpielrundeSpielbahn()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a75f9a4860b43483129d654013914e320"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a75f9a4860b43483129d654013914e320">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getKopfZeileRechts</a></div><div class="ttdeci">String getKopfZeileRechts()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a8d63baa54a5650014612af6e763638c4"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d63baa54a5650014612af6e763638c4">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getKopfZeileMitte</a></div><div class="ttdeci">String getKopfZeileMitte()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a8d75e43e4bd5bd82144e2a08ec201219"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d75e43e4bd5bd82144e2a08ec201219">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setMeldeListeFormation</a></div><div class="ttdeci">void setMeldeListeFormation(Formation formation)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_a9eed2bcfd45ffb5c21b396da5c078c14"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a9eed2bcfd45ffb5c21b396da5c078c14">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getAktiveSpielRunde</a></div><div class="ttdeci">SpielRundeNr getAktiveSpielRunde()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_aa958485900a32aafd6bfafd19d3e5259"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#aa958485900a32aafd6bfafd19d3e5259">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getSpielplanTeamAnzeige</a></div><div class="ttdeci">SpielplanTeamAnzeige getSpielplanTeamAnzeige()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_ab22a2b946eff5ec4d48e09939e587deb"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ab22a2b946eff5ec4d48e09939e587deb">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.isMeldeListeTeamnameAnzeigen</a></div><div class="ttdeci">boolean isMeldeListeTeamnameAnzeigen()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_abbc5a99e6de8a47a22b4779c219da0d7"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#abbc5a99e6de8a47a22b4779c219da0d7">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getRankingModus</a></div><div class="ttdeci">SchweizerRankingModus getRankingModus()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_ad451dd179223540cb76b62ae2b8075a5"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ad451dd179223540cb76b62ae2b8075a5">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.isMeldeListeVereinsnameAnzeigen</a></div><div class="ttdeci">boolean isMeldeListeVereinsnameAnzeigen()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_adf05373ea3ff53d02095e21d791eea05"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#adf05373ea3ff53d02095e21d791eea05">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.getKopfZeileLinks</a></div><div class="ttdeci">String getKopfZeileLinks()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte_html_afc0907ad83a224639aaf367826c1a25e"><div class="ttname"><a href="../../d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#afc0907ad83a224639aaf367826c1a25e">de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte.setMeldeListeTeamnameAnzeigen</a></div><div class="ttdeci">void setMeldeListeTeamnameAnzeigen(boolean anzeigen)</div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1basesheet_html"><div class="ttname"><a href="../../d3/d17/namespacede_1_1petanqueturniermanager_1_1basesheet.html">de.petanqueturniermanager.basesheet</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_html"><div class="ttname"><a href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">de.petanqueturniermanager.schweizer.konfiguration</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">ISchweizerPropertiesSpalte.java:4</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_html"><div class="ttname"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">de.petanqueturniermanager</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f2dc274b2ef50bd726f96278ffd481c8.html">schweizer</a></li><li class="navelem"><a href="../../dir_ce2d75dfa247abab3b0662a5f37ad758.html">konfiguration</a></li><li class="navelem"><a href="../../d5/ded/_i_schweizer_properties_spalte_8java.html">ISchweizerPropertiesSpalte.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

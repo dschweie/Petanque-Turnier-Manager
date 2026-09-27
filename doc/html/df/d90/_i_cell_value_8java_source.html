@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/cellvalue/ICellValue.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d90/_i_cell_value_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ICellValue.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d90/_i_cell_value_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 21.04.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.helper.cellvalue;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellvalue.properties.CellProperties;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellvalue.properties.RowProperties;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.Position;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html">   15</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html">ICellValue</a>&lt;V&gt; {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#afde833075c1b82cdb55b5627773a94a0">   17</a></span>    <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#afde833075c1b82cdb55b5627773a94a0">getPos</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a9dab2a3d0fa08c9c405649c2496ac3cf">   19</a></span>    <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a9dab2a3d0fa08c9c405649c2496ac3cf">getEndPosMerge</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#af74dd58a651eb5d9f3df4ebeb2342a14">   21</a></span>    String <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#af74dd58a651eb5d9f3df4ebeb2342a14">getComment</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a61bfb76b4e9c5a8811f105eb67b818b4">   23</a></span>    <a class="code hl_class" href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html">CellProperties</a> <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a61bfb76b4e9c5a8811f105eb67b818b4">getCellProperties</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#ac8861077ff0b7cd4884dbef6c9bcde06">   25</a></span>    <a class="code hl_class" href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html">ColumnProperties</a> <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#ac8861077ff0b7cd4884dbef6c9bcde06">getColumnProperties</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a57e0eb246f7ffb0f432057252a7d0c50">   27</a></span>    <a class="code hl_class" href="../../df/d31/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_row_properties.html">RowProperties</a> <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a57e0eb246f7ffb0f432057252a7d0c50">getRowProperties</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a0e8abcd32a1bfa8b2cd031eb3b1f7d5c">   29</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a0e8abcd32a1bfa8b2cd031eb3b1f7d5c">isUeberschreiben</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a0cf5c9a8bdec474e0fcc96cfdbbc6003">   31</a></span>    V <a class="code hl_function" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a0cf5c9a8bdec474e0fcc96cfdbbc6003">getValue</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties_html"><div class="ttname"><a href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html">de.petanqueturniermanager.helper.cellvalue.properties.CellProperties</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d8f/_cell_properties_8java_source.html#l00009">CellProperties.java:9</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties_html"><div class="ttname"><a href="../../dc/d79/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_column_properties.html">de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d7a/_column_properties_8java_source.html#l00010">ColumnProperties.java:10</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_row_properties_html"><div class="ttname"><a href="../../df/d31/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_row_properties.html">de.petanqueturniermanager.helper.cellvalue.properties.RowProperties</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/db0/_row_properties_8java_source.html#l00010">RowProperties.java:10</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">de.petanqueturniermanager.helper.position.Position</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00007">Position.java:7</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html">de.petanqueturniermanager.helper.cellvalue.ICellValue</a></div><div class="ttdef"><b>Definition</b> <a href="#l00015">ICellValue.java:15</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_a0cf5c9a8bdec474e0fcc96cfdbbc6003"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a0cf5c9a8bdec474e0fcc96cfdbbc6003">de.petanqueturniermanager.helper.cellvalue.ICellValue.getValue</a></div><div class="ttdeci">V getValue()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_a0e8abcd32a1bfa8b2cd031eb3b1f7d5c"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a0e8abcd32a1bfa8b2cd031eb3b1f7d5c">de.petanqueturniermanager.helper.cellvalue.ICellValue.isUeberschreiben</a></div><div class="ttdeci">boolean isUeberschreiben()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_a57e0eb246f7ffb0f432057252a7d0c50"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a57e0eb246f7ffb0f432057252a7d0c50">de.petanqueturniermanager.helper.cellvalue.ICellValue.getRowProperties</a></div><div class="ttdeci">RowProperties getRowProperties()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_a61bfb76b4e9c5a8811f105eb67b818b4"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a61bfb76b4e9c5a8811f105eb67b818b4">de.petanqueturniermanager.helper.cellvalue.ICellValue.getCellProperties</a></div><div class="ttdeci">CellProperties getCellProperties()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_a9dab2a3d0fa08c9c405649c2496ac3cf"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#a9dab2a3d0fa08c9c405649c2496ac3cf">de.petanqueturniermanager.helper.cellvalue.ICellValue.getEndPosMerge</a></div><div class="ttdeci">Position getEndPosMerge()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_ac8861077ff0b7cd4884dbef6c9bcde06"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#ac8861077ff0b7cd4884dbef6c9bcde06">de.petanqueturniermanager.helper.cellvalue.ICellValue.getColumnProperties</a></div><div class="ttdeci">ColumnProperties getColumnProperties()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_af74dd58a651eb5d9f3df4ebeb2342a14"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#af74dd58a651eb5d9f3df4ebeb2342a14">de.petanqueturniermanager.helper.cellvalue.ICellValue.getComment</a></div><div class="ttdeci">String getComment()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html_afde833075c1b82cdb55b5627773a94a0"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html#afde833075c1b82cdb55b5627773a94a0">de.petanqueturniermanager.helper.cellvalue.ICellValue.getPos</a></div><div class="ttdeci">Position getPos()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_1974395012eff4559c140bfbeed91b40.html">cellvalue</a></li><li class="navelem"><a href="../../df/d90/_i_cell_value_8java.html">ICellValue.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

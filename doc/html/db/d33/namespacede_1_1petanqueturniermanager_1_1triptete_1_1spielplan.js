@@ -1,0 +1,6 @@
+var namespacede_1_1petanqueturniermanager_1_1triptete_1_1spielplan =
+[
+    [ "TripTeteSpielPlanLeser", "d5/d04/classde_1_1petanqueturniermanager_1_1triptete_1_1spielplan_1_1_trip_tete_spiel_plan_leser.html", "d5/d04/classde_1_1petanqueturniermanager_1_1triptete_1_1spielplan_1_1_trip_tete_spiel_plan_leser" ],
+    [ "TripTeteSpielPlanSheet", "db/dd9/classde_1_1petanqueturniermanager_1_1triptete_1_1spielplan_1_1_trip_tete_spiel_plan_sheet.html", "db/dd9/classde_1_1petanqueturniermanager_1_1triptete_1_1spielplan_1_1_trip_tete_spiel_plan_sheet" ],
+    [ "TripTeteSpielPlanSheetTestDaten", "d5/dce/classde_1_1petanqueturniermanager_1_1triptete_1_1spielplan_1_1_trip_tete_spiel_plan_sheet_test_daten.html", "d5/dce/classde_1_1petanqueturniermanager_1_1triptete_1_1spielplan_1_1_trip_tete_spiel_plan_sheet_test_daten" ]
+];

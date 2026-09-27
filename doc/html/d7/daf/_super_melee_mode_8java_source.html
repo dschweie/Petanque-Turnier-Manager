@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/konfiguration/SuperMeleeMode.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/daf/_super_melee_mode_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SuperMeleeMode.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/daf/_super_melee_mode_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 04.07.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.supermelee.konfiguration;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html">   10</a></span><span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_function" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aec80d27d601322a2f08d58ee170687f3">SuperMeleeMode</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">//@formatter:off</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aed8dfa6ee3f43c0d4a378f8b64c7cbc6">   12</a></span>    <a class="code hl_variable" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aed8dfa6ee3f43c0d4a378f8b64c7cbc6">Triplette</a>(<span class="stringliteral">&quot;T&quot;</span>), <span class="comment">// aufüllen mit Doublettes</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a29c05eede6137f82b162c11ee7a02439">   13</a></span>    <a class="code hl_variable" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a29c05eede6137f82b162c11ee7a02439">Doublette</a>(<span class="stringliteral">&quot;D&quot;</span>); <span class="comment">// aufüllen mit Triplettes</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">//@formatter:on</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a9d53f955ffd3d8337a751c3a589efae4">   16</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a9d53f955ffd3d8337a751c3a589efae4">key</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aec80d27d601322a2f08d58ee170687f3">   18</a></span>    <a class="code hl_function" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aec80d27d601322a2f08d58ee170687f3">SuperMeleeMode</a>(String <a class="code hl_variable" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a9d53f955ffd3d8337a751c3a589efae4">key</a>) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        this.key = <a class="code hl_variable" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a9d53f955ffd3d8337a751c3a589efae4">key</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#abebc92fa1e9ee3aecac05e6f21edefae">   22</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#abebc92fa1e9ee3aecac05e6f21edefae">getKey</a>() {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a9d53f955ffd3d8337a751c3a589efae4">key</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode_html_a29c05eede6137f82b162c11ee7a02439"><div class="ttname"><a href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a29c05eede6137f82b162c11ee7a02439">de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeMode.Doublette</a></div><div class="ttdeci">Doublette</div><div class="ttdef"><b>Definition</b> <a href="#l00013">SuperMeleeMode.java:13</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode_html_a9d53f955ffd3d8337a751c3a589efae4"><div class="ttname"><a href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#a9d53f955ffd3d8337a751c3a589efae4">de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeMode.key</a></div><div class="ttdeci">final String key</div><div class="ttdef"><b>Definition</b> <a href="#l00016">SuperMeleeMode.java:16</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode_html_abebc92fa1e9ee3aecac05e6f21edefae"><div class="ttname"><a href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#abebc92fa1e9ee3aecac05e6f21edefae">de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeMode.getKey</a></div><div class="ttdeci">String getKey()</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SuperMeleeMode.java:22</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode_html_aec80d27d601322a2f08d58ee170687f3"><div class="ttname"><a href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aec80d27d601322a2f08d58ee170687f3">de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeMode.SuperMeleeMode</a></div><div class="ttdeci">SuperMeleeMode(String key)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">SuperMeleeMode.java:18</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode_html_aed8dfa6ee3f43c0d4a378f8b64c7cbc6"><div class="ttname"><a href="../../d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html#aed8dfa6ee3f43c0d4a378f8b64c7cbc6">de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeMode.Triplette</a></div><div class="ttdeci">Triplette</div><div class="ttdef"><b>Definition</b> <a href="#l00012">SuperMeleeMode.java:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../dir_a777f2125fa00ab7b1429ba4e8ea3239.html">konfiguration</a></li><li class="navelem"><a href="../../d7/daf/_super_melee_mode_8java.html">SuperMeleeMode.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

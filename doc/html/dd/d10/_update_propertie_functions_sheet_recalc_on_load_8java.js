@@ -1,0 +1,4 @@
+var _update_propertie_functions_sheet_recalc_on_load_8java =
+[
+    [ "de.petanqueturniermanager.addins.UpdatePropertieFunctionsSheetRecalcOnLoad", "da/d31/classde_1_1petanqueturniermanager_1_1addins_1_1_update_propertie_functions_sheet_recalc_on_load.html", "da/d31/classde_1_1petanqueturniermanager_1_1addins_1_1_update_propertie_functions_sheet_recalc_on_load" ]
+];

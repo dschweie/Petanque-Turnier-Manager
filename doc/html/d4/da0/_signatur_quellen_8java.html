@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/rangliste/SignaturQuellen.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/da0/_signatur_quellen_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SignaturQuellen.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.ArrayList;</code><br />
+<code>import java.util.Arrays;</code><br />
+<code>import java.util.Comparator;</code><br />
+<code>import java.util.List;</code><br />
+<code>import java.util.Set;</code><br />
+<code>import java.util.TreeSet;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheetDocument;</code><br />
+<code>import de.petanqueturniermanager.basesheet.konfiguration.BasePropertiesSpalte;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TeilnehmerListeSortModus;</code><br />
+<code>import de.petanqueturniermanager.helper.DocumentPropertiesHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.EingabeSignatur;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.SignaturQuelle;</code><br />
+<code>import de.petanqueturniermanager.liga.spielplan.LigaSpielPlanSheet;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SignaturQuellen.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/dd6/_signatur_quellen_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2helper_2rangliste_2_signatur_quellen_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2helper_2rangliste_2_signatur_quellen_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2helper_2rangliste_2_signatur_quellen_8java">
+<area shape="rect" title=" " alt="" coords="946,5,1206,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,128,131"/>
+<area shape="poly" title=" " alt="" coords="942,30,783,37,581,49,360,68,140,99,123,102,121,97,139,93,360,63,581,43,782,32,948,29"/>
+<area shape="rect" title=" " alt="" coords="152,104,261,131"/>
+<area shape="poly" title=" " alt="" coords="942,31,806,40,637,51,455,70,274,99,259,102,258,97,273,93,454,65,637,46,805,34,948,31"/>
+<area shape="rect" title=" " alt="" coords="285,104,424,131"/>
+<area shape="poly" title=" " alt="" coords="943,37,708,61,571,78,436,99,416,103,415,97,435,93,571,73,707,56,948,36"/>
+<area shape="rect" title=" " alt="" coords="448,104,539,131"/>
+<area shape="poly" title=" " alt="" coords="948,37,758,61,654,78,551,99,540,101,539,96,550,93,653,72,757,56,943,38"/>
+<area shape="rect" title=" " alt="" coords="563,104,653,131"/>
+<area shape="poly" title=" " alt="" coords="948,43,810,68,666,99,656,101,655,96,665,93,809,63,943,44"/>
+<area shape="rect" title=" " alt="" coords="678,104,794,131"/>
+<area shape="poly" title=" " alt="" coords="995,48,807,99,794,102,793,97,806,93,989,49"/>
+<area shape="rect" title=" " alt="" coords="818,96,1038,139"/>
+<area shape="poly" title=" " alt="" coords="1044,48,976,90,974,85,1039,49"/>
+<area shape="rect" title=" " alt="" coords="1062,96,1386,139"/>
+<area shape="poly" title=" " alt="" coords="1111,46,1179,88,1174,87,1110,51"/>
+<area shape="rect" title=" " alt="" coords="1410,96,1720,139"/>
+<area shape="poly" title=" " alt="" coords="1191,46,1438,93,1433,93,1190,51"/>
+<area shape="rect" title=" " alt="" coords="1744,96,1965,139"/>
+<area shape="poly" title=" " alt="" coords="1206,37,1445,60,1731,96,1726,96,1445,65,1206,42"/>
+<area shape="rect" title=" " alt="" coords="1990,96,2247,139"/>
+<area shape="poly" title=" " alt="" coords="1206,32,1549,55,1977,96,1972,96,1549,61,1206,38"/>
+<area shape="rect" title=" " alt="" coords="2272,96,2557,139"/>
+<area shape="poly" title=" " alt="" coords="1207,30,1666,51,1958,69,2259,96,2254,96,1958,75,1666,56,1207,35"/>
+<area shape="rect" title=" " alt="" coords="2581,96,2866,139"/>
+<area shape="poly" title=" " alt="" coords="1206,28,1791,46,2174,65,2568,96,2563,96,2174,70,1791,51,1206,33"/>
+<area shape="rect" title=" " alt="" coords="2890,96,3152,139"/>
+<area shape="poly" title=" " alt="" coords="1206,26,1502,29,1914,39,2389,59,2634,74,2878,96,2872,96,2633,80,2389,65,1914,45,1502,35,1206,31"/>
+</map>
+</div>
+</div>
+<p><a href="../../d4/da0/_signatur_quellen_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Erangliste_2ESignaturQuellen_2EQuellenFabrik" id="r_de_2Epetanqueturniermanager_2Ehelper_2Erangliste_2ESignaturQuellen_2EQuellenFabrik"><td class="memItemLeft">interface &#160;</td><td class="memItemRight"><a class="el" href="../../db/dcf/interfacede_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_signatur_quellen_1_1_quellen_fabrik.html">de.petanqueturniermanager.helper.rangliste.SignaturQuellen.QuellenFabrik</a></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Erangliste_2ESignaturQuellen" id="r_de_2Epetanqueturniermanager_2Ehelper_2Erangliste_2ESignaturQuellen"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../db/d53/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_signatur_quellen.html">de.petanqueturniermanager.helper.rangliste.SignaturQuellen</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builder-Helfer für die <code><a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a></code>: stellt pro Turniersystem die jeweilige Liste der <code><a class="el" href="">SignaturQuelle</a></code>n bereit.  <a href="../../db/d53/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_signatur_quellen.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Erangliste" id="r_de_2Epetanqueturniermanager_2Ehelper_2Erangliste"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d0d/namespacede_1_1petanqueturniermanager_1_1helper_1_1rangliste.html">de.petanqueturniermanager.helper.rangliste</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_f0b76cec168deda3146de030fc39787b.html">rangliste</a></li><li class="navelem"><a href="../../d4/da0/_signatur_quellen_8java.html">SignaturQuellen.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

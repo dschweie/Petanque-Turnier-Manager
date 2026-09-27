@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/SpielerAddInCache.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d74/_spieler_add_in_cache_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerAddInCache.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d74/_spieler_add_in_cache_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.concurrent.ConcurrentHashMap;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.function.Supplier;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html">   15</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html">SpielerAddInCache</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#ae90e6a381c8522a06d3bb9f0cb1e7d2a">   17</a></span>    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#ae90e6a381c8522a06d3bb9f0cb1e7d2a">TTL_MILLIS</a> = 30_000L;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a4d1b56db7363242b95471c583ea648e9">   19</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> ConcurrentHashMap&lt;String, Eintrag&gt; <a class="code hl_variable" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a4d1b56db7363242b95471c583ea648e9">cache</a> = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    @SuppressWarnings(<span class="stringliteral">&quot;unchecked&quot;</span>)</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a02914c2649ff0e658bfb9b9f672a315d">   22</a></span>    public &lt;T&gt; T <a class="code hl_function" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a02914c2649ff0e658bfb9b9f672a315d">holeOderBerechne</a>(String key, Supplier&lt;T&gt; berechner) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">long</span> jetzt = System.currentTimeMillis();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acd2f2044aeae95c255109182acf09613">Eintrag</a> vorhanden = <a class="code hl_variable" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a4d1b56db7363242b95471c583ea648e9">cache</a>.get(key);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (vorhanden != <span class="keyword">null</span> &amp;&amp; jetzt - vorhanden.zeitstempel &lt; <a class="code hl_variable" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#ae90e6a381c8522a06d3bb9f0cb1e7d2a">TTL_MILLIS</a>) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            return (T) vorhanden.wert;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        T neu = berechner.get();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a4d1b56db7363242b95471c583ea648e9">cache</a>.put(key, <span class="keyword">new</span> <a class="code hl_function" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acd2f2044aeae95c255109182acf09613">Eintrag</a>(jetzt, neu));</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> neu;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acb785a0d4b75625a09f129054eede69b">   33</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acb785a0d4b75625a09f129054eede69b">leeren</a>() {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a4d1b56db7363242b95471c583ea648e9">cache</a>.clear();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acd2f2044aeae95c255109182acf09613">   37</a></span>    <span class="keyword">private</span> record <a class="code hl_function" href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acd2f2044aeae95c255109182acf09613">Eintrag</a>(<span class="keywordtype">long</span> zeitstempel, Object wert) {}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache_html"><div class="ttname"><a href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html">de.petanqueturniermanager.spielerdb.SpielerAddInCache</a></div><div class="ttdoc">TTL-basierter Result-Cache für die Calc-AddIn-Funktionen PTM.DB.SPIELER.*.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">SpielerAddInCache.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache_html_a02914c2649ff0e658bfb9b9f672a315d"><div class="ttname"><a href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a02914c2649ff0e658bfb9b9f672a315d">de.petanqueturniermanager.spielerdb.SpielerAddInCache.holeOderBerechne</a></div><div class="ttdeci">public&lt; T &gt; T holeOderBerechne(String key, Supplier&lt; T &gt; berechner)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SpielerAddInCache.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache_html_a4d1b56db7363242b95471c583ea648e9"><div class="ttname"><a href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#a4d1b56db7363242b95471c583ea648e9">de.petanqueturniermanager.spielerdb.SpielerAddInCache.cache</a></div><div class="ttdeci">final ConcurrentHashMap&lt; String, Eintrag &gt; cache</div><div class="ttdef"><b>Definition</b> <a href="#l00019">SpielerAddInCache.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache_html_acb785a0d4b75625a09f129054eede69b"><div class="ttname"><a href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acb785a0d4b75625a09f129054eede69b">de.petanqueturniermanager.spielerdb.SpielerAddInCache.leeren</a></div><div class="ttdeci">void leeren()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SpielerAddInCache.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache_html_acd2f2044aeae95c255109182acf09613"><div class="ttname"><a href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#acd2f2044aeae95c255109182acf09613">de.petanqueturniermanager.spielerdb.SpielerAddInCache.Eintrag</a></div><div class="ttdeci">record Eintrag(long zeitstempel, Object wert)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">SpielerAddInCache.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache_html_ae90e6a381c8522a06d3bb9f0cb1e7d2a"><div class="ttname"><a href="../../d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html#ae90e6a381c8522a06d3bb9f0cb1e7d2a">de.petanqueturniermanager.spielerdb.SpielerAddInCache.TTL_MILLIS</a></div><div class="ttdeci">static final long TTL_MILLIS</div><div class="ttdef"><b>Definition</b> <a href="#l00017">SpielerAddInCache.java:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../d1/d74/_spieler_add_in_cache_8java.html">SpielerAddInCache.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

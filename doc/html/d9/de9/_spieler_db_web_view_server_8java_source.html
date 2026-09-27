@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/webview/SpielerDbWebViewServer.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/de9/_spieler_db_web_view_server_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbWebViewServer.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/de9/_spieler_db_web_view_server_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.webview;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.net.InetAddress;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.net.InetSocketAddress;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.net.URI;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.net.UnknownHostException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.concurrent.ExecutorService;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.concurrent.Executors;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.concurrent.atomic.AtomicReference;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.net.httpserver.HttpServer;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.LabelRepository;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbConnection;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbException;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerRepository;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.VereinRepository;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html">   31</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a368232bfeeb4338ea00f7dca9d5b665b">SpielerDbWebViewServer</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a35533680390f07f0f1792b61bcd5a750">   33</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a35533680390f07f0f1792b61bcd5a750">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a368232bfeeb4338ea00f7dca9d5b665b">SpielerDbWebViewServer</a>.class);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a138cc10ad180b444992d730bff380162">   34</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a138cc10ad180b444992d730bff380162">BIND_HOST</a> = <span class="stringliteral">&quot;127.0.0.1&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a514a070502bba1ec9caf7a9aba7b3ace">   35</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a514a070502bba1ec9caf7a9aba7b3ace">BACKLOG</a> = 10;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">   37</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> AtomicReference&lt;RunningServer&gt; <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">CURRENT</a> = <span class="keyword">new</span> AtomicReference&lt;&gt;();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a8920d2f0c68412f615397c27a32808b5">   38</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a8920d2f0c68412f615397c27a32808b5">STARTUP_LOCK</a> = <span class="keyword">new</span> Object();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a368232bfeeb4338ea00f7dca9d5b665b">   40</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a368232bfeeb4338ea00f7dca9d5b665b">SpielerDbWebViewServer</a>() {}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a9daba0f686b43444a168eac6ecfee8f3">   46</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> URI <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a9daba0f686b43444a168eac6ecfee8f3">starteOderHole</a>(<a class="code hl_class" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> conn) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a> = <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">CURRENT</a>.get();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a>.viewUri();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">synchronized</span> (<a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a8920d2f0c68412f615397c27a32808b5">STARTUP_LOCK</a>) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a> = <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">CURRENT</a>.get();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a>.viewUri();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a> neu = <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a4b14fb65b84860e59c852ddedccb0585">baueUndStarte</a>(conn);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">CURRENT</a>.set(neu);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                Runtime.getRuntime().addShutdownHook(</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>(<a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#ae6c3f0c26b0de6a0fb2d6eec3bc9cf8d">SpielerDbWebViewServer::stoppe</a>, <span class="stringliteral">&quot;spielerdb-webview-shutdown&quot;</span>));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a35533680390f07f0f1792b61bcd5a750">logger</a>.info(<span class="stringliteral">&quot;Spieler-DB-Web-Viewer läuft auf {}&quot;</span>, neu.viewUri());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">return</span> neu.viewUri();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">SpielerDbException</a>(<span class="stringliteral">&quot;Web-Viewer konnte nicht gestartet werden&quot;</span>, e);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#ae6c3f0c26b0de6a0fb2d6eec3bc9cf8d">   70</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#ae6c3f0c26b0de6a0fb2d6eec3bc9cf8d">stoppe</a>() {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a> alt = <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">CURRENT</a>.getAndSet(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (alt == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            alt.server().stop(0);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a35533680390f07f0f1792b61bcd5a750">logger</a>.warn(<span class="stringliteral">&quot;Fehler beim Stoppen des Web-Viewers&quot;</span>, e);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        alt.pool().shutdownNow();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a35533680390f07f0f1792b61bcd5a750">logger</a>.info(<span class="stringliteral">&quot;Spieler-DB-Web-Viewer gestoppt (Port {})&quot;</span>, alt.port());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a4b14fb65b84860e59c852ddedccb0585">   84</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a4b14fb65b84860e59c852ddedccb0585">baueUndStarte</a>(<a class="code hl_class" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> conn) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        InetAddress loopback;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            loopback = InetAddress.getByName(<a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a138cc10ad180b444992d730bff380162">BIND_HOST</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        } <span class="keywordflow">catch</span> (UnknownHostException e) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> IOException(<span class="stringliteral">&quot;Loopback-Adresse nicht auflösbar&quot;</span>, e);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        HttpServer server = HttpServer.create(<span class="keyword">new</span> InetSocketAddress(loopback, 0), <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a514a070502bba1ec9caf7a9aba7b3ace">BACKLOG</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        ExecutorService pool = Executors.newCachedThreadPool(r -&gt; {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a> t = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>(r, <span class="stringliteral">&quot;spielerdb-webview&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            t.setDaemon(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span> t;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        });</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        server.setExecutor(pool);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_class" href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html">SpielerRepository</a> spielerRepo = <span class="keyword">new</span> <a class="code hl_function" href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html#a172aa45bdc524d79b909d073dbd07b22">SpielerRepository</a>(conn);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_class" href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html">VereinRepository</a> vereinRepo = <span class="keyword">new</span> <a class="code hl_function" href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html#ae211bf8900327396a8478d2384120dc4">VereinRepository</a>(conn);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_class" href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html">LabelRepository</a> labelRepo = <span class="keyword">new</span> <a class="code hl_function" href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html#aa99781d45bab85edb727bad3bb9b2187">LabelRepository</a>(conn);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_class" href="../../d3/d1b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_api_handler.html">SpielerDbApiHandler</a> apiHandler = <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d1b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_api_handler.html#a1fc960b812da9bed9e5bbbf970645e91">SpielerDbApiHandler</a>(</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                spielerRepo, vereinRepo, labelRepo, conn.getJdbcUrl());</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_class" href="../../db/dfd/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_static_assets_handler.html">StaticAssetsHandler</a> assetsHandler = <span class="keyword">new</span> <a class="code hl_function" href="../../db/dfd/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_static_assets_handler.html#ac212f1208b1ccbf17b2588e2b073bcaa">StaticAssetsHandler</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        server.createContext(<span class="stringliteral">&quot;/api&quot;</span>, apiHandler);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        server.createContext(<span class="stringliteral">&quot;/&quot;</span>, assetsHandler);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        server.start();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">int</span> port = server.getAddress().getPort();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        URI uri = URI.create(<span class="stringliteral">&quot;http://&quot;</span> + <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a138cc10ad180b444992d730bff380162">BIND_HOST</a> + <span class="stringliteral">&quot;:&quot;</span> + port + <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a>(server, pool, port, uri);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">  115</a></span>    <span class="keyword">private</span> record <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a>(HttpServer server, ExecutorService pool, <span class="keywordtype">int</span> port, URI viewUri) {}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    @Nullable</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">  118</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">RunningServer</a> <a class="code hl_function" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">aktuell</a>() {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">CURRENT</a>.get();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclass_thread_html"><div class="ttname"><a href="../../d8/d18/class_thread.html">Thread</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository_html"><div class="ttname"><a href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html">de.petanqueturniermanager.spielerdb.LabelRepository</a></div><div class="ttdoc">CRUD für LabelDatensatz.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/ddf/_label_repository_8java_source.html#l00017">LabelRepository.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository_html_aa99781d45bab85edb727bad3bb9b2187"><div class="ttname"><a href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html#aa99781d45bab85edb727bad3bb9b2187">de.petanqueturniermanager.spielerdb.LabelRepository.LabelRepository</a></div><div class="ttdeci">LabelRepository(SpielerDbConnection conn)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/ddf/_label_repository_8java_source.html#l00021">LabelRepository.java:21</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection_html"><div class="ttname"><a href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">de.petanqueturniermanager.spielerdb.SpielerDbConnection</a></div><div class="ttdoc">Lifecycle für die lokale Spieler-Stammdaten-DB.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/df5/_spieler_db_connection_8java_source.html#l00033">SpielerDbConnection.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">de.petanqueturniermanager.spielerdb.SpielerDbException</a></div><div class="ttdoc">Fehler aus der Spieler-DB-Schicht.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00008">SpielerDbException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html_a91701793abc4feae51f72989b5087a87"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html#a91701793abc4feae51f72989b5087a87">de.petanqueturniermanager.spielerdb.SpielerDbException.SpielerDbException</a></div><div class="ttdeci">SpielerDbException(String message)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00014">SpielerDbException.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_html"><div class="ttname"><a href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html">de.petanqueturniermanager.spielerdb.SpielerRepository</a></div><div class="ttdoc">CRUD für SpielerDatensatz mit JOIN auf VEREIN für Anzeige (SpielerMitVerein).</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d69/_spieler_repository_8java_source.html#l00020">SpielerRepository.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_html_a172aa45bdc524d79b909d073dbd07b22"><div class="ttname"><a href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html#a172aa45bdc524d79b909d073dbd07b22">de.petanqueturniermanager.spielerdb.SpielerRepository.SpielerRepository</a></div><div class="ttdeci">SpielerRepository(SpielerDbConnection conn)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d69/_spieler_repository_8java_source.html#l00042">SpielerRepository.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository_html"><div class="ttname"><a href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html">de.petanqueturniermanager.spielerdb.VereinRepository</a></div><div class="ttdoc">CRUD für VereinDatensatz.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dda/_verein_repository_8java_source.html#l00016">VereinRepository.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository_html_ae211bf8900327396a8478d2384120dc4"><div class="ttname"><a href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html#ae211bf8900327396a8478d2384120dc4">de.petanqueturniermanager.spielerdb.VereinRepository.VereinRepository</a></div><div class="ttdeci">VereinRepository(SpielerDbConnection conn)</div><div class="ttdef"><b>Definition</b> <a href="../../da/dda/_verein_repository_8java_source.html#l00020">VereinRepository.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_api_handler_html"><div class="ttname"><a href="../../d3/d1b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_api_handler.html">de.petanqueturniermanager.spielerdb.webview.SpielerDbApiHandler</a></div><div class="ttdoc">JSON-API für den read-only Web-Viewer der Spieler-DB.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d63/_spieler_db_api_handler_8java_source.html#l00039">SpielerDbApiHandler.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_api_handler_html_a1fc960b812da9bed9e5bbbf970645e91"><div class="ttname"><a href="../../d3/d1b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_api_handler.html#a1fc960b812da9bed9e5bbbf970645e91">de.petanqueturniermanager.spielerdb.webview.SpielerDbApiHandler.SpielerDbApiHandler</a></div><div class="ttdeci">SpielerDbApiHandler(SpielerRepository spielerRepo, VereinRepository vereinRepo, LabelRepository labelRepo, String dbPfad)</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d63/_spieler_db_api_handler_8java_source.html#l00053">SpielerDbApiHandler.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a138cc10ad180b444992d730bff380162"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a138cc10ad180b444992d730bff380162">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.BIND_HOST</a></div><div class="ttdeci">static final String BIND_HOST</div><div class="ttdef"><b>Definition</b> <a href="#l00034">SpielerDbWebViewServer.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a35533680390f07f0f1792b61bcd5a750"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a35533680390f07f0f1792b61bcd5a750">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SpielerDbWebViewServer.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a368232bfeeb4338ea00f7dca9d5b665b"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a368232bfeeb4338ea00f7dca9d5b665b">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.SpielerDbWebViewServer</a></div><div class="ttdeci">SpielerDbWebViewServer()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">SpielerDbWebViewServer.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a39b53637d7d9f9206cd06e78ab1ad399"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a39b53637d7d9f9206cd06e78ab1ad399">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.RunningServer</a></div><div class="ttdeci">record RunningServer(HttpServer server, ExecutorService pool, int port, URI viewUri)</div><div class="ttdef"><b>Definition</b> <a href="#l00115">SpielerDbWebViewServer.java:115</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a4b14fb65b84860e59c852ddedccb0585"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a4b14fb65b84860e59c852ddedccb0585">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.baueUndStarte</a></div><div class="ttdeci">static RunningServer baueUndStarte(SpielerDbConnection conn)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">SpielerDbWebViewServer.java:84</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a514a070502bba1ec9caf7a9aba7b3ace"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a514a070502bba1ec9caf7a9aba7b3ace">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.BACKLOG</a></div><div class="ttdeci">static final int BACKLOG</div><div class="ttdef"><b>Definition</b> <a href="#l00035">SpielerDbWebViewServer.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a8920d2f0c68412f615397c27a32808b5"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a8920d2f0c68412f615397c27a32808b5">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.STARTUP_LOCK</a></div><div class="ttdeci">static final Object STARTUP_LOCK</div><div class="ttdef"><b>Definition</b> <a href="#l00038">SpielerDbWebViewServer.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_a9daba0f686b43444a168eac6ecfee8f3"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#a9daba0f686b43444a168eac6ecfee8f3">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.starteOderHole</a></div><div class="ttdeci">static URI starteOderHole(SpielerDbConnection conn)</div><div class="ttdoc">Startet den Server falls noch nicht gestartet, sonst gibt die bestehende URL zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">SpielerDbWebViewServer.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_aa717b5c0b26b9c9c4a4476a6282832ea"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#aa717b5c0b26b9c9c4a4476a6282832ea">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.aktuell</a></div><div class="ttdeci">static RunningServer aktuell()</div><div class="ttdef"><b>Definition</b> <a href="#l00118">SpielerDbWebViewServer.java:118</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_acafceff0af9a40d0df97843350ef28b3"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#acafceff0af9a40d0df97843350ef28b3">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.CURRENT</a></div><div class="ttdeci">static final AtomicReference&lt; RunningServer &gt; CURRENT</div><div class="ttdef"><b>Definition</b> <a href="#l00037">SpielerDbWebViewServer.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server_html_ae6c3f0c26b0de6a0fb2d6eec3bc9cf8d"><div class="ttname"><a href="../../d1/da3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_spieler_db_web_view_server.html#ae6c3f0c26b0de6a0fb2d6eec3bc9cf8d">de.petanqueturniermanager.spielerdb.webview.SpielerDbWebViewServer.stoppe</a></div><div class="ttdeci">static void stoppe()</div><div class="ttdoc">Stoppt den Server, falls einer läuft.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">SpielerDbWebViewServer.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_static_assets_handler_html"><div class="ttname"><a href="../../db/dfd/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_static_assets_handler.html">de.petanqueturniermanager.spielerdb.webview.StaticAssetsHandler</a></div><div class="ttdoc">Liefert die React-Bundle-Assets aus dem Classpath (de/petanqueturniermanager/spielerdb/webview/static...</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d4b/_static_assets_handler_8java_source.html#l00019">StaticAssetsHandler.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_static_assets_handler_html_ac212f1208b1ccbf17b2588e2b073bcaa"><div class="ttname"><a href="../../db/dfd/classde_1_1petanqueturniermanager_1_1spielerdb_1_1webview_1_1_static_assets_handler.html#ac212f1208b1ccbf17b2588e2b073bcaa">de.petanqueturniermanager.spielerdb.webview.StaticAssetsHandler.StaticAssetsHandler</a></div><div class="ttdeci">StaticAssetsHandler()</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d4b/_static_assets_handler_8java_source.html#l00025">StaticAssetsHandler.java:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_b68483dc508316202ad64851f27e55ae.html">webview</a></li><li class="navelem"><a href="../../d9/de9/_spieler_db_web_view_server_8java.html">SpielerDbWebViewServer.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

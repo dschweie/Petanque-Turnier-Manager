@@ -1,0 +1,4 @@
+var _kaskade_ko_bracket_konfig_adapter_8java =
+[
+    [ "de.petanqueturniermanager.kaskade.konfiguration.KaskadeKoBracketKonfigAdapter", "de/d71/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_ko_bracket_konfig_adapter.html", "de/d71/classde_1_1petanqueturniermanager_1_1kaskade_1_1konfiguration_1_1_kaskade_ko_bracket_konfig_adapter" ]
+];

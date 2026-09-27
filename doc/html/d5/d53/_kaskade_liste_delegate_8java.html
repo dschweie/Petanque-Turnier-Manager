@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/kaskade/meldeliste/KaskadeListeDelegate.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d53/_kaskade_liste_delegate_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KaskadeListeDelegate.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.google.common.base.Preconditions.checkNotNull;</code><br />
+<code>import java.util.ArrayList;</code><br />
+<code>import java.util.Comparator;</code><br />
+<code>import java.util.LinkedHashMap;</code><br />
+<code>import java.util.List;</code><br />
+<code>import java.util.Map;</code><br />
+<code>import com.sun.star.awt.FontWeight;</code><br />
+<code>import com.sun.star.sheet.ConditionOperator;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import com.sun.star.table.CellHoriJustify;</code><br />
+<code>import com.sun.star.table.CellVertJustify2;</code><br />
+<code>import de.petanqueturniermanager.basesheet.konfiguration.BasePropertiesSpalte;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.Formation;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldeListeKonstanten;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldungenSpalte;</code><br />
+<code>import de.petanqueturniermanager.helper.ISheet;</code><br />
+<code>import de.petanqueturniermanager.helper.border.BorderFactory;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.StringCellValue;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.properties.ColumnProperties;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.properties.RangeProperties;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.MeldungenHintergrundFarbeGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.MeldungenHintergrundFarbeUnGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.position.Position;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.print.PrintArea;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.RangeHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetFreeze;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.TurnierSheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.SheetNamen;</code><br />
+<code>import de.petanqueturniermanager.kaskade.konfiguration.KaskadeKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.kaskade.konfiguration.KaskadePropertiesSpalte;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.ConfigProperty;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.ConfigPropertyType;</code><br />
+<code>import de.petanqueturniermanager.model.Team;</code><br />
+<code>import de.petanqueturniermanager.model.TeamMeldungen;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für KaskadeListeDelegate.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db9/_kaskade_liste_delegate_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2kaskade_2meldeliste_2_kaskade_liste_delegate_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2kaskade_2meldeliste_2_kaskade_liste_delegate_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2kaskade_2meldeliste_2_kaskade_liste_delegate_8java">
+<area shape="rect" title=" " alt="" coords="4866,5,5166,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,302,139"/>
+<area shape="poly" title=" " alt="" coords="4863,28,3994,32,2685,41,1988,49,1328,61,755,77,317,98,317,93,755,72,1328,56,1988,44,2685,35,3994,27,4868,28"/>
+<area shape="rect" title=" " alt="" coords="326,104,448,131"/>
+<area shape="poly" title=" " alt="" coords="4863,28,3928,33,2552,41,1854,50,1232,62,747,78,575,88,461,99,441,102,440,97,460,93,574,82,746,72,1232,56,1854,44,2552,36,3928,27,4868,28"/>
+<area shape="rect" title=" " alt="" coords="472,104,611,131"/>
+<area shape="poly" title=" " alt="" coords="4863,28,3958,35,2634,45,1963,53,1365,65,898,80,733,89,623,99,600,103,599,97,622,93,733,84,898,75,1364,60,1963,48,2634,39,3958,29,4868,28"/>
+<area shape="rect" title=" " alt="" coords="635,104,800,131"/>
+<area shape="poly" title=" " alt="" coords="4863,29,3994,37,2729,49,1519,69,1075,83,812,99,783,103,783,98,812,93,1075,77,1519,64,2729,44,3994,32,4869,29"/>
+<area shape="rect" title=" " alt="" coords="824,104,915,131"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4014,31,2784,38,2164,46,1611,58,1181,76,1028,86,927,99,915,101,914,96,926,93,1028,81,1180,70,1611,53,2163,41,2784,33,4014,25,4868,28"/>
+<area shape="rect" title=" " alt="" coords="939,104,1034,131"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4036,32,2845,40,2244,48,1709,61,1293,77,1145,87,1047,99,1033,102,1033,96,1046,93,1145,82,1292,72,1709,55,2244,43,2845,35,4036,27,4868,28"/>
+<area shape="rect" title=" " alt="" coords="1059,104,1251,131"/>
+<area shape="poly" title=" " alt="" coords="4863,27,4147,30,3105,37,2557,45,2043,57,1599,75,1415,86,1263,99,1228,103,1228,98,1263,93,1415,81,1598,70,2042,52,2557,39,3105,31,4147,24,4868,27"/>
+<area shape="rect" title=" " alt="" coords="1275,96,1467,139"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4190,31,3218,38,2707,47,2224,59,1805,76,1483,98,1482,93,1805,71,2224,54,2707,41,3218,33,4190,26,4868,28"/>
+<area shape="rect" title=" " alt="" coords="1490,104,1710,131"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4225,34,3317,44,2842,52,2397,64,2012,79,1722,99,1681,104,1681,98,1721,93,2012,74,2396,59,2842,47,3317,38,4225,29,4868,28"/>
+<area shape="rect" title=" " alt="" coords="1734,96,1914,139"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4267,33,3425,41,2985,50,2570,62,2208,78,1930,99,1930,93,2208,72,2569,56,2985,44,3425,36,4267,27,4868,28"/>
+<area shape="rect" title=" " alt="" coords="1938,96,2118,139"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4303,34,3520,43,3112,51,2727,63,2392,79,2133,98,2133,93,2392,73,2727,58,3112,46,3520,38,4303,28,4868,28"/>
+<area shape="rect" title=" " alt="" coords="2142,96,2466,139"/>
+<area shape="poly" title=" " alt="" coords="4863,27,4456,32,3869,40,3185,61,2831,77,2482,99,2482,93,2830,72,3184,56,3869,35,4456,26,4868,27"/>
+<area shape="rect" title=" " alt="" coords="2491,96,2800,139"/>
+<area shape="poly" title=" " alt="" coords="4863,28,4505,34,4000,43,3415,64,3113,79,2816,98,2816,93,3113,74,3415,58,4000,38,4505,28,4868,28"/>
+<area shape="rect" title=" " alt="" coords="2824,96,3134,139"/>
+<area shape="poly" title=" " alt="" coords="4863,29,4555,37,4132,48,3646,68,3149,98,3149,93,3646,62,4131,42,4555,31,4868,29"/>
+<area shape="rect" title=" " alt="" coords="3158,96,3467,139"/>
+<area shape="poly" title=" " alt="" coords="4868,31,4265,53,3878,72,3483,98,3482,93,3877,66,4265,47,4863,31"/>
+<area shape="rect" title=" " alt="" coords="3491,96,3712,139"/>
+<area shape="poly" title=" " alt="" coords="4868,31,4646,39,4364,51,4049,70,3727,98,3727,93,4048,65,4364,46,4646,34,4863,31"/>
+<area shape="rect" title=" " alt="" coords="3736,96,3998,139"/>
+<area shape="poly" title=" " alt="" coords="4868,35,4483,60,4250,77,4013,98,4013,93,4250,71,4483,54,4863,35"/>
+<area shape="rect" title=" " alt="" coords="4022,96,4298,139"/>
+<area shape="poly" title=" " alt="" coords="4868,41,4612,67,4314,98,4314,93,4611,62,4863,41"/>
+<area shape="rect" title=" " alt="" coords="4322,96,4660,139"/>
+<area shape="poly" title=" " alt="" coords="4896,48,4629,95,4629,90,4890,49"/>
+<area shape="rect" title=" " alt="" coords="4684,96,5021,139"/>
+<area shape="poly" title=" " alt="" coords="4980,48,4904,91,4903,86,4975,49"/>
+<area shape="rect" title=" " alt="" coords="5045,96,5318,139"/>
+<area shape="poly" title=" " alt="" coords="5056,46,5132,89,5127,88,5054,51"/>
+<area shape="rect" title=" " alt="" coords="5342,96,5616,139"/>
+<area shape="poly" title=" " alt="" coords="5125,46,5358,93,5353,92,5124,51"/>
+<area shape="rect" title=" " alt="" coords="5640,96,5910,139"/>
+<area shape="poly" title=" " alt="" coords="5167,41,5627,96,5622,95,5166,46"/>
+<area shape="rect" title=" " alt="" coords="5934,96,6205,139"/>
+<area shape="poly" title=" " alt="" coords="5167,34,5507,57,5922,96,5916,96,5506,62,5167,39"/>
+<area shape="rect" title=" " alt="" coords="6228,96,6479,139"/>
+<area shape="poly" title=" " alt="" coords="5167,30,5630,50,5919,68,6216,96,6210,96,5919,73,5630,55,5167,35"/>
+<area shape="rect" title=" " alt="" coords="6502,96,6760,139"/>
+<area shape="poly" title=" " alt="" coords="5167,28,5416,33,5742,45,6111,64,6489,96,6484,96,6111,70,5742,50,5415,39,5167,33"/>
+<area shape="rect" title=" " alt="" coords="6784,96,7041,139"/>
+<area shape="poly" title=" " alt="" coords="5167,26,5460,30,5856,40,6307,60,6539,75,6771,96,6765,96,6539,80,6307,66,5855,46,5460,35,5167,31"/>
+<area shape="rect" title=" " alt="" coords="7065,96,7322,139"/>
+<area shape="poly" title=" " alt="" coords="5167,25,5502,27,5967,36,6502,56,6778,72,7052,96,7046,96,6778,78,6502,62,5967,41,5502,32,5167,30"/>
+<area shape="rect" title=" " alt="" coords="7346,96,7604,139"/>
+<area shape="poly" title=" " alt="" coords="5167,28,6245,49,6865,68,7127,80,7333,96,7328,96,7127,85,6865,74,6245,54,5167,33"/>
+<area shape="rect" title=" " alt="" coords="7627,96,7869,139"/>
+<area shape="poly" title=" " alt="" coords="5167,27,5678,33,6378,46,7083,65,7381,78,7614,96,7609,96,7381,84,7083,71,6378,51,5678,39,5167,32"/>
+<area shape="rect" title=" " alt="" coords="7894,104,8168,131"/>
+<area shape="poly" title=" " alt="" coords="5167,27,5731,33,6515,46,7304,66,7632,79,7882,93,7936,102,7931,101,7881,99,7632,84,7303,71,6515,51,5731,39,5167,32"/>
+<area shape="rect" title=" " alt="" coords="8192,96,8449,139"/>
+<area shape="poly" title=" " alt="" coords="5167,26,5777,31,6641,43,7519,63,7890,76,8179,96,8173,96,7890,82,7519,68,6641,48,5777,37,5167,31"/>
+<area shape="rect" title=" " alt="" coords="8473,96,8722,139"/>
+<area shape="poly" title=" " alt="" coords="5167,26,5827,30,6772,40,7737,60,8144,75,8460,96,8455,96,8144,80,7737,65,6772,45,5827,35,5167,31"/>
+<area shape="rect" title=" " alt="" coords="8746,96,9060,139"/>
+<area shape="poly" title=" " alt="" coords="5167,26,5873,31,6897,43,7947,63,8391,76,8734,96,8728,96,8390,82,7947,68,6897,48,5873,36,5167,31"/>
+<area shape="rect" title=" " alt="" coords="9084,96,9397,139"/>
+<area shape="poly" title=" " alt="" coords="5167,26,5930,30,7052,40,8206,61,8694,75,9071,96,9065,96,8694,80,8206,66,7052,46,5930,35,5167,31"/>
+<area shape="rect" title=" " alt="" coords="9420,96,9676,139"/>
+<area shape="poly" title=" " alt="" coords="5167,25,5987,26,7207,34,7855,42,8467,54,8999,71,9408,96,9403,96,8999,76,8467,59,7855,47,7207,39,5987,31,5167,30"/>
+<area shape="rect" title=" " alt="" coords="9700,96,9956,139"/>
+<area shape="poly" title=" " alt="" coords="5167,25,6033,25,7334,32,8026,40,8681,52,9250,70,9688,96,9682,96,9250,75,8681,58,8026,45,7334,37,6033,30,5167,30"/>
+<area shape="rect" title=" " alt="" coords="9980,104,10234,131"/>
+<area shape="poly" title=" " alt="" coords="5167,26,7676,47,9121,67,9654,80,9968,93,10020,101,10014,101,9968,99,9654,85,9121,73,7676,53,5167,32"/>
+<area shape="rect" title=" " alt="" coords="10258,96,10479,139"/>
+<area shape="poly" title=" " alt="" coords="5166,26,6213,32,7784,44,9316,64,9890,77,10245,96,10239,96,9890,83,9316,69,7784,49,6213,37,5166,31"/>
+<area shape="rect" title=" " alt="" coords="10503,96,10812,139"/>
+<area shape="poly" title=" " alt="" coords="5166,25,6164,25,7698,32,8518,40,9296,52,9972,70,10490,96,10484,96,9972,75,9296,58,8518,45,7698,37,6164,30,5166,30"/>
+</map>
+</div>
+</div>
+<p><a href="../../d5/d53/_kaskade_liste_delegate_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekaskade_2Emeldeliste_2EKaskadeListeDelegate" id="r_de_2Epetanqueturniermanager_2Ekaskade_2Emeldeliste_2EKaskadeListeDelegate"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/df0/classde_1_1petanqueturniermanager_1_1kaskade_1_1meldeliste_1_1_kaskade_liste_delegate.html">de.petanqueturniermanager.kaskade.meldeliste.KaskadeListeDelegate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegate für die Kaskaden-KO-Meldeliste.  <a href="../../d8/df0/classde_1_1petanqueturniermanager_1_1kaskade_1_1meldeliste_1_1_kaskade_liste_delegate.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekaskade_2Emeldeliste" id="r_de_2Epetanqueturniermanager_2Ekaskade_2Emeldeliste"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../df/dae/namespacede_1_1petanqueturniermanager_1_1kaskade_1_1meldeliste.html">de.petanqueturniermanager.kaskade.meldeliste</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_851147c5a079ca862d6f0a1a0c929383.html">kaskade</a></li><li class="navelem"><a href="../../dir_9c73d93d206fa95519f8a7ad49479bdc.html">meldeliste</a></li><li class="navelem"><a href="../../d5/d53/_kaskade_liste_delegate_8java.html">KaskadeListeDelegate.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

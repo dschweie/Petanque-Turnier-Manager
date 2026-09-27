@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/konfigdialog/gui/LabelPlusCheckBox.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d3b/_label_plus_check_box_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LabelPlusCheckBox.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d3b/_label_plus_check_box_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 22.01.2020 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.konfigdialog.gui;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.awt.ItemEvent;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.awt.XCheckBox;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.sun.star.awt.XControl;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.awt.XItemListener;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.star.awt.XToolkit;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.awt.XWindowPeer;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> com.sun.star.beans.XMultiPropertySet;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> com.sun.star.lang.EventObject;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> com.sun.star.lang.XMultiComponentFactory;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> com.sun.star.uno.XComponentContext;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> de.petanqueturniermanager.sidebar.GuiFactory;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">import</span> de.petanqueturniermanager.sidebar.GuiFactoryCreateParam;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html">   32</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#ad4159347dace0692dae7e2910347970d">BaseField</a>&lt;LabelPlusCheckBox&gt; implements <a class="code hl_class" href="../../d8/d33/class_x_item_listener.html">XItemListener</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#aaef34f0c9e303b1a40fb14f9dfadbb38">   34</a></span>    <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#aaef34f0c9e303b1a40fb14f9dfadbb38">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a>.class);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">   36</a></span>    <span class="keyword">private</span> XCheckBox <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">   38</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a>(XMultiComponentFactory xMCF, XComponentContext xContext, XToolkit toolkit,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            XWindowPeer windowPeer) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        super(<span class="keyword">new</span> <a class="code hl_function" href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html#a9c4108da0cede5f994a83c6baba4f27b">GuiFactoryCreateParam</a>(xMCF, xContext, toolkit, windowPeer));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a495394aa72a297f4cfbbe73101ec3c26">   43</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a495394aa72a297f4cfbbe73101ec3c26">LabelPlusCheckBox</a>(<a class="code hl_class" href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html">GuiFactoryCreateParam</a> <a class="code hl_variable" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a3d20ebe57b514dd444a6ce3e97ceef1f">guiFactoryCreateParam</a>) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        super(<a class="code hl_variable" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a3d20ebe57b514dd444a6ce3e97ceef1f">guiFactoryCreateParam</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#ab0f3b911d983a2da9e56f3ba9a9a1ee6">   47</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#ab0f3b911d983a2da9e56f3ba9a9a1ee6">from</a>(<a class="code hl_class" href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html">GuiFactoryCreateParam</a> <a class="code hl_variable" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a3d20ebe57b514dd444a6ce3e97ceef1f">guiFactoryCreateParam</a>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a>(<a class="code hl_variable" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a3d20ebe57b514dd444a6ce3e97ceef1f">guiFactoryCreateParam</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a31497fec6b2e79f26c8dacc4215784d7">   51</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a31497fec6b2e79f26c8dacc4215784d7">from</a>(XMultiComponentFactory xMCF, XComponentContext xContext,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            XToolkit toolkit, XWindowPeer windowPeer) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a>(xMCF, xContext, toolkit, windowPeer);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a5d55eec2c37ca794d197daa2b947fbef">   56</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a5d55eec2c37ca794d197daa2b947fbef">from</a>(XMultiComponentFactory xMCF, <a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> workingSpreadsheet,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            XToolkit toolkit, XWindowPeer windowPeer) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a>(xMCF, workingSpreadsheet.<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#ac33f37dfe8d60ce32075e159b75f3d0c">getxContext</a>(), toolkit, windowPeer);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    @Override</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a2ba486a9634753cb1df0a6ac40cf7f6e">   62</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a2ba486a9634753cb1df0a6ac40cf7f6e">doCreate</a>() {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        Map&lt;String, Object&gt; props = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dfe/class_hash_map.html">HashMap&lt;&gt;</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// props.putIfAbsent(GuiFactory.HELP_TEXT, &quot;Aktuelle Turniersystem&quot;);</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// props.putIfAbsent(GuiFactory.READ_ONLY, true);</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// props.putIfAbsent(GuiFactory.ENABLED, false);</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        XControl checkBoxControl = <a class="code hl_class" href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html">GuiFactory</a>.<a class="code hl_function" href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html#a60bce092770e30577ced444a3a79afbc">createCheckBox</a>(<a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a8338fc70a6828ca32f0a5757b8ccb7e9">getxMCF</a>(), <a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#af66de7776f115fd0e7e9943ab05fe56b">getxContext</a>(), <a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a1d46648d407957a8cd84c8df1f68ef16">getToolkit</a>(), <a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a0ff71edd5c9c57f5b9b957e241731e77">getWindowPeer</a>(),</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="stringliteral">&quot;..&quot;</span>, <span class="keyword">this</span>, <a class="code hl_variable" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a40d3a6ddd7bf5c14f6b26bed9eaa7812">BASE_RECTANGLE</a>, props);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a> = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XCheckBox.class, checkBoxControl);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#aed92aa1a7cd3df20f0a0676a5a3cbdc2">setProperties</a>(<a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XMultiPropertySet.class, checkBoxControl.getModel()));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_function" href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a1ea71c9597dea347ac93524a3f3ab44a">getLayout</a>().<a class="code hl_function" href="../../dd/dc6/interfacede_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_layout.html#a14e048c57c25ee778acc56027f967926">addControl</a>(checkBoxControl);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#acd5350c86d8ff0050afb51a84af1c8b7">   74</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#acd5350c86d8ff0050afb51a84af1c8b7">setStat</a>(<span class="keywordtype">boolean</span> state) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a>.setState((<span class="keywordtype">short</span>) (state ? 1 : 0));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#ad49674fc0de54b62af2a6417fc3d63b8">   81</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#ad49674fc0de54b62af2a6417fc3d63b8">labelText</a>(String text) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a>.setLabel(text);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#afd83b725358e31f625821c696a1517c9">   88</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">LabelPlusCheckBox</a> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#afd83b725358e31f625821c696a1517c9">addListener</a>(<a class="code hl_class" href="../../d8/d33/class_x_item_listener.html">XItemListener</a> itemListener) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a>.addItemListener(itemListener);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    @Override</div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#af16b0c9a6cac24e0a645712325aff49f">   96</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#af16b0c9a6cac24e0a645712325aff49f">disposing</a>(EventObject arg0) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        super.disposing();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">field</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    @Override</div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#aa5c040f638dea11799d3e0f45e4c286a">  102</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#aa5c040f638dea11799d3e0f45e4c286a">itemStateChanged</a>(ItemEvent arg0) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+</div>
+<div class="ttc" id="aclass_hash_map_html"><div class="ttname"><a href="../../d8/dfe/class_hash_map.html">HashMap</a></div></div>
+<div class="ttc" id="aclass_x_item_listener_html"><div class="ttname"><a href="../../d8/d33/class_x_item_listener.html">XItemListener</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_ac33f37dfe8d60ce32075e159b75f3d0c"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#ac33f37dfe8d60ce32075e159b75f3d0c">de.petanqueturniermanager.comp.WorkingSpreadsheet.getxContext</a></div><div class="ttdeci">XComponentContext getxContext()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00094">WorkingSpreadsheet.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_a0ff71edd5c9c57f5b9b957e241731e77"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a0ff71edd5c9c57f5b9b957e241731e77">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::getWindowPeer</a></div><div class="ttdeci">final XWindowPeer getWindowPeer()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00070">BaseField.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_a1d46648d407957a8cd84c8df1f68ef16"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a1d46648d407957a8cd84c8df1f68ef16">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::getToolkit</a></div><div class="ttdeci">final XToolkit getToolkit()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00066">BaseField.java:66</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_a1ea71c9597dea347ac93524a3f3ab44a"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a1ea71c9597dea347ac93524a3f3ab44a">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::getLayout</a></div><div class="ttdeci">final Layout getLayout()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00077">BaseField.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_a3d20ebe57b514dd444a6ce3e97ceef1f"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a3d20ebe57b514dd444a6ce3e97ceef1f">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::guiFactoryCreateParam</a></div><div class="ttdeci">GuiFactoryCreateParam guiFactoryCreateParam</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00035">BaseField.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_a40d3a6ddd7bf5c14f6b26bed9eaa7812"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a40d3a6ddd7bf5c14f6b26bed9eaa7812">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::BASE_RECTANGLE</a></div><div class="ttdeci">static final Rectangle BASE_RECTANGLE</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00043">BaseField.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_a8338fc70a6828ca32f0a5757b8ccb7e9"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#a8338fc70a6828ca32f0a5757b8ccb7e9">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::getxMCF</a></div><div class="ttdeci">final XMultiComponentFactory getxMCF()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00058">BaseField.java:58</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_ad4159347dace0692dae7e2910347970d"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#ad4159347dace0692dae7e2910347970d">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::BaseField</a></div><div class="ttdeci">BaseField(GuiFactoryCreateParam guiFactoryCreateParam)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00045">BaseField.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_aed92aa1a7cd3df20f0a0676a5a3cbdc2"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#aed92aa1a7cd3df20f0a0676a5a3cbdc2">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::setProperties</a></div><div class="ttdeci">final void setProperties(XMultiPropertySet properties)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00052">BaseField.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field_html_af66de7776f115fd0e7e9943ab05fe56b"><div class="ttname"><a href="../../d5/d8f/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_base_field.html#af66de7776f115fd0e7e9943ab05fe56b">de.petanqueturniermanager.konfigdialog.gui.BaseField&lt; LabelPlusCheckBox &gt;::getxContext</a></div><div class="ttdeci">final XComponentContext getxContext()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da9/_base_field_8java_source.html#l00062">BaseField.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_a0cecc3643f7183a99a14b4033b49b146"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a0cecc3643f7183a99a14b4033b49b146">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.LabelPlusCheckBox</a></div><div class="ttdeci">LabelPlusCheckBox(XMultiComponentFactory xMCF, XComponentContext xContext, XToolkit toolkit, XWindowPeer windowPeer)</div><div class="ttdef"><b>Definition</b> <a href="#l00038">LabelPlusCheckBox.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_a126d2b8732f58c2835d9c5470e216fd3"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a126d2b8732f58c2835d9c5470e216fd3">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.field</a></div><div class="ttdeci">XCheckBox field</div><div class="ttdef"><b>Definition</b> <a href="#l00036">LabelPlusCheckBox.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_a2ba486a9634753cb1df0a6ac40cf7f6e"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a2ba486a9634753cb1df0a6ac40cf7f6e">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.doCreate</a></div><div class="ttdeci">void doCreate()</div><div class="ttdef"><b>Definition</b> <a href="#l00062">LabelPlusCheckBox.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_a31497fec6b2e79f26c8dacc4215784d7"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a31497fec6b2e79f26c8dacc4215784d7">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.from</a></div><div class="ttdeci">static final LabelPlusCheckBox from(XMultiComponentFactory xMCF, XComponentContext xContext, XToolkit toolkit, XWindowPeer windowPeer)</div><div class="ttdef"><b>Definition</b> <a href="#l00051">LabelPlusCheckBox.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_a495394aa72a297f4cfbbe73101ec3c26"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a495394aa72a297f4cfbbe73101ec3c26">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.LabelPlusCheckBox</a></div><div class="ttdeci">LabelPlusCheckBox(GuiFactoryCreateParam guiFactoryCreateParam)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">LabelPlusCheckBox.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_a5d55eec2c37ca794d197daa2b947fbef"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#a5d55eec2c37ca794d197daa2b947fbef">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.from</a></div><div class="ttdeci">static final LabelPlusCheckBox from(XMultiComponentFactory xMCF, WorkingSpreadsheet workingSpreadsheet, XToolkit toolkit, XWindowPeer windowPeer)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">LabelPlusCheckBox.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_aa5c040f638dea11799d3e0f45e4c286a"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#aa5c040f638dea11799d3e0f45e4c286a">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.itemStateChanged</a></div><div class="ttdeci">void itemStateChanged(ItemEvent arg0)</div><div class="ttdef"><b>Definition</b> <a href="#l00102">LabelPlusCheckBox.java:102</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_aaef34f0c9e303b1a40fb14f9dfadbb38"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#aaef34f0c9e303b1a40fb14f9dfadbb38">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00034">LabelPlusCheckBox.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_ab0f3b911d983a2da9e56f3ba9a9a1ee6"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#ab0f3b911d983a2da9e56f3ba9a9a1ee6">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.from</a></div><div class="ttdeci">static final LabelPlusCheckBox from(GuiFactoryCreateParam guiFactoryCreateParam)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">LabelPlusCheckBox.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_acd5350c86d8ff0050afb51a84af1c8b7"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#acd5350c86d8ff0050afb51a84af1c8b7">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.setStat</a></div><div class="ttdeci">LabelPlusCheckBox setStat(boolean state)</div><div class="ttdef"><b>Definition</b> <a href="#l00074">LabelPlusCheckBox.java:74</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_ad49674fc0de54b62af2a6417fc3d63b8"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#ad49674fc0de54b62af2a6417fc3d63b8">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.labelText</a></div><div class="ttdeci">LabelPlusCheckBox labelText(String text)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">LabelPlusCheckBox.java:81</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_af16b0c9a6cac24e0a645712325aff49f"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#af16b0c9a6cac24e0a645712325aff49f">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.disposing</a></div><div class="ttdeci">void disposing(EventObject arg0)</div><div class="ttdef"><b>Definition</b> <a href="#l00096">LabelPlusCheckBox.java:96</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box_html_afd83b725358e31f625821c696a1517c9"><div class="ttname"><a href="../../d8/d94/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_check_box.html#afd83b725358e31f625821c696a1517c9">de.petanqueturniermanager.konfigdialog.gui.LabelPlusCheckBox.addListener</a></div><div class="ttdeci">LabelPlusCheckBox addListener(XItemListener itemListener)</div><div class="ttdef"><b>Definition</b> <a href="#l00088">LabelPlusCheckBox.java:88</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param_html"><div class="ttname"><a href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html">de.petanqueturniermanager.sidebar.GuiFactoryCreateParam</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/de5/_gui_factory_create_param_8java_source.html#l00017">GuiFactoryCreateParam.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param_html_a9c4108da0cede5f994a83c6baba4f27b"><div class="ttname"><a href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html#a9c4108da0cede5f994a83c6baba4f27b">de.petanqueturniermanager.sidebar.GuiFactoryCreateParam.GuiFactoryCreateParam</a></div><div class="ttdeci">GuiFactoryCreateParam(XMultiComponentFactory xMCF, XComponentContext xContext, XToolkit toolkit, XWindowPeer windowPeer)</div><div class="ttdef"><b>Definition</b> <a href="../../d3/de5/_gui_factory_create_param_8java_source.html#l00024">GuiFactoryCreateParam.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_html"><div class="ttname"><a href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html">de.petanqueturniermanager.sidebar.GuiFactory</a></div><div class="ttdoc">Die Factory enthält Hilfsfunktionen zum einfacheren Erzeugen von UNO-Steuerelementen.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_gui_factory_8java_source.html#l00044">GuiFactory.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_html_a60bce092770e30577ced444a3a79afbc"><div class="ttname"><a href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html#a60bce092770e30577ced444a3a79afbc">de.petanqueturniermanager.sidebar.GuiFactory.createCheckBox</a></div><div class="ttdeci">static XControl createCheckBox(XMultiComponentFactory xMCF, XComponentContext context, XToolkit toolkit, XWindowPeer windowPeer, String label, XItemListener listener, Rectangle size, Map&lt; String, Object &gt; props)</div><div class="ttdoc">Erzeugt eine CheckBox.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_gui_factory_8java_source.html#l00111">GuiFactory.java:111</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_layout_html_a14e048c57c25ee778acc56027f967926"><div class="ttname"><a href="../../dd/dc6/interfacede_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_layout.html#a14e048c57c25ee778acc56027f967926">de.petanqueturniermanager.sidebar.layout.Layout.addControl</a></div><div class="ttdeci">default void addControl(XControl control)</div><div class="ttdoc">addLayout(Layout, int) mit ControlLayout und Gewicht 1.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dfc/_layout_8java_source.html#l00033">Layout.java:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_5dc56744c2def96656232e2a15016d12.html">konfigdialog</a></li><li class="navelem"><a href="../../dir_f3a4e22500b8f7895199c1d77539386d.html">gui</a></li><li class="navelem"><a href="../../d1/d3b/_label_plus_check_box_8java.html">LabelPlusCheckBox.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

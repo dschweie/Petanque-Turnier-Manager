@@ -1,0 +1,5 @@
+var _schweizer_turnier_parameter_dialog_8java =
+[
+    [ "de.petanqueturniermanager.schweizer.meldeliste.SchweizerTurnierParameterDialog", "df/d92/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_turnier_parameter_dialog.html", "df/d92/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_turnier_parameter_dialog" ],
+    [ "de.petanqueturniermanager.schweizer.meldeliste.SchweizerTurnierParameterDialog.TurnierParameter", "d6/de1/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_turnier_parameter_dialog_1_1_turnier_parameter.html", "d6/de1/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_turnier_parameter_dialog_1_1_turnier_parameter" ]
+];

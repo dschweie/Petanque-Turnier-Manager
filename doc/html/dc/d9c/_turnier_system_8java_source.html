@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/basesheet/meldeliste/TurnierSystem.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d9c/_turnier_system_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TurnierSystem.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d9c/_turnier_system_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 22.03.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.basesheet.meldeliste;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">    9</a></span><span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0de32b989d36115d430bf39f8f8a9ef3">TurnierSystem</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3700c34c813fea16dc9365e0a3ec8a2f">   11</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3700c34c813fea16dc9365e0a3ec8a2f">KEIN</a>(0, <span class="stringliteral">&quot;enum.turniersystem.kein&quot;</span>), <span class="comment">// wenn nur der runner gebraucht wird</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a940799346b6c8d610387c23444351c0e">   12</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a2214ed7dde187bfab34c934bfab69655">SUPERMELEE</a>(1, <span class="stringliteral">&quot;enum.turniersystem.supermelee&quot;</span>), <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a940799346b6c8d610387c23444351c0e">LIGA</a>(2, <span class="stringliteral">&quot;enum.turniersystem.liga&quot;</span>),</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0f173094d957f5831828f93e64c280ad">   13</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0f173094d957f5831828f93e64c280ad">MAASTRICHTER</a>(3, <span class="stringliteral">&quot;enum.turniersystem.maastrichter&quot;</span>), <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8a79ce931e7d1811f9d3d5d049ca7412">SCHWEIZER</a>(4, <span class="stringliteral">&quot;enum.turniersystem.schweizer&quot;</span>),</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#abc66cb5afcbdb575bc6c30a48d8531ae">   14</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#abc66cb5afcbdb575bc6c30a48d8531ae">JGJ</a>(5, <span class="stringliteral">&quot;enum.turniersystem.jgj&quot;</span>), <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a15f2c789b46f9d8fc07e75a4cedf8a84">KO</a>(6, <span class="stringliteral">&quot;enum.turniersystem.ko&quot;</span>),</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#ae6da3119d3184f54b419fee038e1071c">   15</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#ae6da3119d3184f54b419fee038e1071c">POULE</a>(7, <span class="stringliteral">&quot;enum.turniersystem.poule&quot;</span>),</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a749f5a91a5f47b9426369234a9991fd5">   16</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a749f5a91a5f47b9426369234a9991fd5">KASKADE</a>(8, <span class="stringliteral">&quot;enum.turniersystem.kaskade&quot;</span>),</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3549fa2d2fcf4d04fe9d56fc089a7ef4">   17</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3549fa2d2fcf4d04fe9d56fc089a7ef4">FORMULEX</a>(9, <span class="stringliteral">&quot;enum.turniersystem.formulex&quot;</span>),</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#aadf10e8d239e224f6317176aa7b79b30">   18</a></span>    <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#aadf10e8d239e224f6317176aa7b79b30">TRIPTETE</a>(10, <span class="stringliteral">&quot;enum.turniersystem.triptete&quot;</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a42beacd722607dfba4f34fc8416446cc">   20</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a42beacd722607dfba4f34fc8416446cc">i18nKey</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#adb5ce27dfa6df761eadf60f4c1ce5ab3">   21</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#adb5ce27dfa6df761eadf60f4c1ce5ab3">id</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0de32b989d36115d430bf39f8f8a9ef3">   23</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0de32b989d36115d430bf39f8f8a9ef3">TurnierSystem</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, String <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a42beacd722607dfba4f34fc8416446cc">i18nKey</a>) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        this.id = <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#adb5ce27dfa6df761eadf60f4c1ce5ab3">id</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        this.i18nKey = <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a42beacd722607dfba4f34fc8416446cc">i18nKey</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a796de2586f80b4a08600d12b9aeaed7d">   28</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a796de2586f80b4a08600d12b9aeaed7d">getBezeichnung</a>() {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a42beacd722607dfba4f34fc8416446cc">i18nKey</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    @Override</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a788382889d8190abf98a9f922c40ff41">   33</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a788382889d8190abf98a9f922c40ff41">toString</a>() {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a796de2586f80b4a08600d12b9aeaed7d">getBezeichnung</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3cf4e92abd9e6534d10233743f69fd40">   37</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3cf4e92abd9e6534d10233743f69fd40">getId</a>() {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#adb5ce27dfa6df761eadf60f4c1ce5ab3">id</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8902db8dcee6fd0b4e663fa491d8321c">   41</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8902db8dcee6fd0b4e663fa491d8321c">hatMehrereSpielTage</a>() {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="keyword">this</span> == <a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a2214ed7dde187bfab34c934bfab69655">SUPERMELEE</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#aa940620b6b63096669418d6e2b9cf311">   45</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0de32b989d36115d430bf39f8f8a9ef3">TurnierSystem</a> <a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#aa940620b6b63096669418d6e2b9cf311">findById</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">for</span> (<a class="code hl_function" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0de32b989d36115d430bf39f8f8a9ef3">TurnierSystem</a> spielsystem : values()) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (spielsystem.getId() == <span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">return</span> spielsystem;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">de.petanqueturniermanager.helper.i18n.I18n</a></div><div class="ttdoc">Lokalisierungs-Helfer.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00029">I18n.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html_a09756390c5ee255a5223ddad55a3910d"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">de.petanqueturniermanager.helper.i18n.I18n.get</a></div><div class="ttdeci">static String get(String key)</div><div class="ttdoc">Gibt den lokalisierten Text für den angegebenen Schlüssel zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00083">I18n.java:83</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a0de32b989d36115d430bf39f8f8a9ef3"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0de32b989d36115d430bf39f8f8a9ef3">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.TurnierSystem</a></div><div class="ttdeci">TurnierSystem(int id, String i18nKey)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">TurnierSystem.java:23</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a0f173094d957f5831828f93e64c280ad"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a0f173094d957f5831828f93e64c280ad">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.MAASTRICHTER</a></div><div class="ttdeci">MAASTRICHTER</div><div class="ttdef"><b>Definition</b> <a href="#l00013">TurnierSystem.java:13</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a15f2c789b46f9d8fc07e75a4cedf8a84"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a15f2c789b46f9d8fc07e75a4cedf8a84">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.KO</a></div><div class="ttdeci">KO</div><div class="ttdef"><b>Definition</b> <a href="#l00014">TurnierSystem.java:14</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a2214ed7dde187bfab34c934bfab69655"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a2214ed7dde187bfab34c934bfab69655">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.SUPERMELEE</a></div><div class="ttdeci">SUPERMELEE</div><div class="ttdef"><b>Definition</b> <a href="#l00012">TurnierSystem.java:12</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a3549fa2d2fcf4d04fe9d56fc089a7ef4"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3549fa2d2fcf4d04fe9d56fc089a7ef4">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.FORMULEX</a></div><div class="ttdeci">FORMULEX</div><div class="ttdef"><b>Definition</b> <a href="#l00017">TurnierSystem.java:17</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a3700c34c813fea16dc9365e0a3ec8a2f"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3700c34c813fea16dc9365e0a3ec8a2f">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.KEIN</a></div><div class="ttdeci">KEIN</div><div class="ttdef"><b>Definition</b> <a href="#l00011">TurnierSystem.java:11</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a3cf4e92abd9e6534d10233743f69fd40"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3cf4e92abd9e6534d10233743f69fd40">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.getId</a></div><div class="ttdeci">int getId()</div><div class="ttdef"><b>Definition</b> <a href="#l00037">TurnierSystem.java:37</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a42beacd722607dfba4f34fc8416446cc"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a42beacd722607dfba4f34fc8416446cc">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.i18nKey</a></div><div class="ttdeci">final String i18nKey</div><div class="ttdef"><b>Definition</b> <a href="#l00020">TurnierSystem.java:20</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a749f5a91a5f47b9426369234a9991fd5"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a749f5a91a5f47b9426369234a9991fd5">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.KASKADE</a></div><div class="ttdeci">KASKADE</div><div class="ttdef"><b>Definition</b> <a href="#l00016">TurnierSystem.java:16</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a788382889d8190abf98a9f922c40ff41"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a788382889d8190abf98a9f922c40ff41">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">TurnierSystem.java:33</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a796de2586f80b4a08600d12b9aeaed7d"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a796de2586f80b4a08600d12b9aeaed7d">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.getBezeichnung</a></div><div class="ttdeci">String getBezeichnung()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">TurnierSystem.java:28</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a8902db8dcee6fd0b4e663fa491d8321c"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8902db8dcee6fd0b4e663fa491d8321c">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.hatMehrereSpielTage</a></div><div class="ttdeci">boolean hatMehrereSpielTage()</div><div class="ttdef"><b>Definition</b> <a href="#l00041">TurnierSystem.java:41</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a8a79ce931e7d1811f9d3d5d049ca7412"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8a79ce931e7d1811f9d3d5d049ca7412">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.SCHWEIZER</a></div><div class="ttdeci">SCHWEIZER</div><div class="ttdef"><b>Definition</b> <a href="#l00013">TurnierSystem.java:13</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a940799346b6c8d610387c23444351c0e"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a940799346b6c8d610387c23444351c0e">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.LIGA</a></div><div class="ttdeci">LIGA</div><div class="ttdef"><b>Definition</b> <a href="#l00012">TurnierSystem.java:12</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_aa940620b6b63096669418d6e2b9cf311"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#aa940620b6b63096669418d6e2b9cf311">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.findById</a></div><div class="ttdeci">static TurnierSystem findById(int id)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">TurnierSystem.java:45</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_aadf10e8d239e224f6317176aa7b79b30"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#aadf10e8d239e224f6317176aa7b79b30">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.TRIPTETE</a></div><div class="ttdeci">TRIPTETE</div><div class="ttdef"><b>Definition</b> <a href="#l00018">TurnierSystem.java:18</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_abc66cb5afcbdb575bc6c30a48d8531ae"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#abc66cb5afcbdb575bc6c30a48d8531ae">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.JGJ</a></div><div class="ttdeci">JGJ</div><div class="ttdef"><b>Definition</b> <a href="#l00014">TurnierSystem.java:14</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_adb5ce27dfa6df761eadf60f4c1ce5ab3"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#adb5ce27dfa6df761eadf60f4c1ce5ab3">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.id</a></div><div class="ttdeci">final int id</div><div class="ttdef"><b>Definition</b> <a href="#l00021">TurnierSystem.java:21</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_ae6da3119d3184f54b419fee038e1071c"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#ae6da3119d3184f54b419fee038e1071c">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.POULE</a></div><div class="ttdeci">POULE</div><div class="ttdef"><b>Definition</b> <a href="#l00015">TurnierSystem.java:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_96101c8b80d9fa0dd034af8b328d52d6.html">basesheet</a></li><li class="navelem"><a href="../../dir_a6d655c1322c97a1fdc8aabfa76c628f.html">meldeliste</a></li><li class="navelem"><a href="../../dc/d9c/_turnier_system_8java.html">TurnierSystem.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

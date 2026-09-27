@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/ui/LabelNameEingabeDialog.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/df8/_label_name_eingabe_dialog_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LabelNameEingabeDialog.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/df8/_label_name_eingabe_dialog_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d7/d89/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1ui.html">    1</a></span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.ui;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.Optional;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> com.sun.star.awt.PushButtonType;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.sun.star.awt.XControlContainer;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.awt.XDialog;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.sun.star.awt.XToolkit;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.sun.star.awt.XWindowPeer;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.beans.XPropertySet;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.container.XNameContainer;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.sun.star.lang.XMultiComponentFactory;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.lang.XMultiServiceFactory;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.star.uno.XComponentContext;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.konfigdialog.AbstractUnoDialog;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html">   26</a></span><span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6b9a7219d41c80731d4191c2d2a3c928">LabelNameEingabeDialog</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#a16010adf52309748f61dadaaa9d6c624">AbstractUnoDialog</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">   28</a></span>    @Nullable <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">vorbelegt</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a87ce104a3075eeef08cd536257c21867">   29</a></span>    @Nullable <span class="keyword">private</span> String <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a87ce104a3075eeef08cd536257c21867">ergebnis</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">   30</a></span>    @Nullable <span class="keyword">private</span> <a class="code hl_class" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html">UnoControlsHelper</a> <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">controls</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#acc8120dfd27729b82ddad3d8a7b43be9">   31</a></span>    @Nullable <span class="keyword">private</span> XDialog <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#acc8120dfd27729b82ddad3d8a7b43be9">xDialog</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6b9a7219d41c80731d4191c2d2a3c928">   33</a></span>    <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6b9a7219d41c80731d4191c2d2a3c928">LabelNameEingabeDialog</a>(XComponentContext <a class="code hl_variable" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#accfe2d659224218ee8b8b355938c9c2d">xContext</a>, @Nullable String <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">vorbelegt</a>) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        super(<a class="code hl_variable" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#accfe2d659224218ee8b8b355938c9c2d">xContext</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        this.vorbelegt = <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">vorbelegt</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#afafe36dd2e24c5b0259839edc1955a06">   38</a></span>    Optional&lt;String&gt; <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#afafe36dd2e24c5b0259839edc1955a06">zeigen</a>() throws com.sun.star.uno.<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#a7a7af4f0d5ba88b92143e2ad714a9851">erstelleUndAusfuehren</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> Optional.ofNullable(<a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a87ce104a3075eeef08cd536257c21867">ergebnis</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa4f86a0ad45ecb8ce3cbf4665b874e1d">   43</a></span>    @Override <span class="keyword">protected</span> String <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa4f86a0ad45ecb8ce3cbf4665b874e1d">getTitel</a>() {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">vorbelegt</a> == <span class="keyword">null</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                ? <span class="stringliteral">&quot;spielerdb.label.titel.neu&quot;</span> : <span class="stringliteral">&quot;spielerdb.label.titel.bearbeiten&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a2c92279faed8468f745a8dcc707bd585">   47</a></span>    @Override <span class="keyword">protected</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a2c92279faed8468f745a8dcc707bd585">getBreite</a>() { <span class="keywordflow">return</span> 220; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a7e484929e0a1762d7969f48710fa6b24">   48</a></span>    @Override <span class="keyword">protected</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a7e484929e0a1762d7969f48710fa6b24">getHoehe</a>() { <span class="keywordflow">return</span> 70; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    @Override</div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#af7ef32b1ee5446d732f5063e234548fc">   51</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#af7ef32b1ee5446d732f5063e234548fc">erstelleFelder</a>(XMultiComponentFactory mcf, XMultiServiceFactory xMSF,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            XNameContainer cont, XToolkit xToolkit, XWindowPeer peer,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            XPropertySet dlgProps, XDialog <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#acc8120dfd27729b82ddad3d8a7b43be9">xDialog</a>) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        this.xDialog = <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#acc8120dfd27729b82ddad3d8a7b43be9">xDialog</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        XControlContainer xcc = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XControlContainer.class, <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#acc8120dfd27729b82ddad3d8a7b43be9">xDialog</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        this.controls = <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">UnoControlsHelper</a>(xMSF, cont, xcc);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">controls</a>.fixedText(<span class="stringliteral">&quot;lblName&quot;</span>, <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;spielerdb.label.name&quot;</span>), 8, 10, 60, 10);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">controls</a>.edit(<span class="stringliteral">&quot;txtName&quot;</span>, <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">vorbelegt</a> == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">vorbelegt</a>, 75, 8, 135, 12);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">controls</a>.button(<span class="stringliteral">&quot;btnOk&quot;</span>, <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;spielerdb.erfassen.btn.ok&quot;</span>),</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                90, 45, 55, 14, (<span class="keywordtype">short</span>) PushButtonType.STANDARD_value);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">controls</a>.button(<span class="stringliteral">&quot;btnAbbrechen&quot;</span>, <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;spielerdb.erfassen.btn.abbrechen&quot;</span>),</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                150, 45, 60, 14, (<span class="keywordtype">short</span>) PushButtonType.CANCEL_value);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">controls</a>.registriereActionListener(<span class="stringliteral">&quot;btnOk&quot;</span>, this::beimOk);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6dd57be81219df27a009da68008f70b9">   69</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6dd57be81219df27a009da68008f70b9">beimOk</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_class" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html">UnoControlsHelper</a> c = this.controls;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        XDialog dlg = this.xDialog;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (c == <span class="keyword">null</span> || dlg == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_variable" href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a87ce104a3075eeef08cd536257c21867">ergebnis</a> = c.<a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a68d6e6f8eab7dba5ddecbe20b73cb689">leseText</a>(<span class="stringliteral">&quot;txtName&quot;</span>).strip();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        dlg.endExecute();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+</div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">de.petanqueturniermanager.helper.i18n.I18n</a></div><div class="ttdoc">Lokalisierungs-Helfer.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00029">I18n.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html_a09756390c5ee255a5223ddad55a3910d"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">de.petanqueturniermanager.helper.i18n.I18n.get</a></div><div class="ttdeci">static String get(String key)</div><div class="ttdoc">Gibt den lokalisierten Text für den angegebenen Schlüssel zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00083">I18n.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog_html_a16010adf52309748f61dadaaa9d6c624"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#a16010adf52309748f61dadaaa9d6c624">de.petanqueturniermanager.konfigdialog.AbstractUnoDialog.AbstractUnoDialog</a></div><div class="ttdeci">AbstractUnoDialog(XComponentContext xContext)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d08/_abstract_uno_dialog_8java_source.html#l00030">AbstractUnoDialog.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog_html_a7a7af4f0d5ba88b92143e2ad714a9851"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#a7a7af4f0d5ba88b92143e2ad714a9851">de.petanqueturniermanager.konfigdialog.AbstractUnoDialog.erstelleUndAusfuehren</a></div><div class="ttdeci">final void erstelleUndAusfuehren()</div><div class="ttdoc">Erstellt den UNO-Dialog, zeigt ihn an und ruft bei OK beiOkGeklickt() auf.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d08/_abstract_uno_dialog_8java_source.html#l00037">AbstractUnoDialog.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog_html_accfe2d659224218ee8b8b355938c9c2d"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#accfe2d659224218ee8b8b355938c9c2d">de.petanqueturniermanager.konfigdialog.AbstractUnoDialog.xContext</a></div><div class="ttdeci">final XComponentContext xContext</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d08/_abstract_uno_dialog_8java_source.html#l00028">AbstractUnoDialog.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_a0031ac8980d0d96a3629cc5cf2730ac8"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a0031ac8980d0d96a3629cc5cf2730ac8">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.vorbelegt</a></div><div class="ttdeci">final String vorbelegt</div><div class="ttdef"><b>Definition</b> <a href="#l00028">LabelNameEingabeDialog.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_a2c92279faed8468f745a8dcc707bd585"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a2c92279faed8468f745a8dcc707bd585">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.getBreite</a></div><div class="ttdeci">int getBreite()</div><div class="ttdoc">Breite des Dialogs in UNO-Einheiten.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">LabelNameEingabeDialog.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_a6b9a7219d41c80731d4191c2d2a3c928"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6b9a7219d41c80731d4191c2d2a3c928">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.LabelNameEingabeDialog</a></div><div class="ttdeci">LabelNameEingabeDialog(XComponentContext xContext, @Nullable String vorbelegt)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">LabelNameEingabeDialog.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_a6dd57be81219df27a009da68008f70b9"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a6dd57be81219df27a009da68008f70b9">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.beimOk</a></div><div class="ttdeci">void beimOk()</div><div class="ttdef"><b>Definition</b> <a href="#l00069">LabelNameEingabeDialog.java:69</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_a7e484929e0a1762d7969f48710fa6b24"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a7e484929e0a1762d7969f48710fa6b24">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.getHoehe</a></div><div class="ttdeci">int getHoehe()</div><div class="ttdoc">Anfangshöhe des Dialogs in UNO-Einheiten.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">LabelNameEingabeDialog.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_a87ce104a3075eeef08cd536257c21867"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#a87ce104a3075eeef08cd536257c21867">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.ergebnis</a></div><div class="ttdeci">String ergebnis</div><div class="ttdef"><b>Definition</b> <a href="#l00029">LabelNameEingabeDialog.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_aa4f86a0ad45ecb8ce3cbf4665b874e1d"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa4f86a0ad45ecb8ce3cbf4665b874e1d">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.getTitel</a></div><div class="ttdeci">String getTitel()</div><div class="ttdoc">Titel der Titelleiste.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">LabelNameEingabeDialog.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_aa9ab44deabb3d2b590ef301d8a2083a6"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#aa9ab44deabb3d2b590ef301d8a2083a6">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.controls</a></div><div class="ttdeci">UnoControlsHelper controls</div><div class="ttdef"><b>Definition</b> <a href="#l00030">LabelNameEingabeDialog.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_acc8120dfd27729b82ddad3d8a7b43be9"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#acc8120dfd27729b82ddad3d8a7b43be9">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.xDialog</a></div><div class="ttdeci">XDialog xDialog</div><div class="ttdef"><b>Definition</b> <a href="#l00031">LabelNameEingabeDialog.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_af7ef32b1ee5446d732f5063e234548fc"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#af7ef32b1ee5446d732f5063e234548fc">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.erstelleFelder</a></div><div class="ttdeci">void erstelleFelder(XMultiComponentFactory mcf, XMultiServiceFactory xMSF, XNameContainer cont, XToolkit xToolkit, XWindowPeer peer, XPropertySet dlgProps, XDialog xDialog)</div><div class="ttdoc">Unterklassen fügen hier ihre UNO-Steuerelemente zum Dialog hinzu.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">LabelNameEingabeDialog.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog_html_afafe36dd2e24c5b0259839edc1955a06"><div class="ttname"><a href="../../d9/d44/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_label_name_eingabe_dialog.html#afafe36dd2e24c5b0259839edc1955a06">de.petanqueturniermanager.spielerdb.ui.LabelNameEingabeDialog.zeigen</a></div><div class="ttdeci">Optional&lt; String &gt; zeigen()</div><div class="ttdef"><b>Definition</b> <a href="#l00038">LabelNameEingabeDialog.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper</a></div><div class="ttdoc">Kapselt das Erzeugen und Aktualisieren von UNO-AWT-Controls für die Spieler-DB-Dialoge.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d13/_uno_controls_helper_8java_source.html#l00033">UnoControlsHelper.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a052c9b77d67e238f81b50f9c062159e9"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.UnoControlsHelper</a></div><div class="ttdeci">UnoControlsHelper(XMultiServiceFactory xMSF, XNameContainer cont, XControlContainer xcc)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d13/_uno_controls_helper_8java_source.html#l00041">UnoControlsHelper.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a68d6e6f8eab7dba5ddecbe20b73cb689"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a68d6e6f8eab7dba5ddecbe20b73cb689">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.leseText</a></div><div class="ttdeci">String leseText(String name)</div><div class="ttdoc">Liest Text aus einem Edit-/ComboBox-Control.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d13/_uno_controls_helper_8java_source.html#l00216">UnoControlsHelper.java:216</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_d12683bd1f3655574725dbedeb5d02cd.html">ui</a></li><li class="navelem"><a href="../../db/df8/_label_name_eingabe_dialog_8java.html">LabelNameEingabeDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

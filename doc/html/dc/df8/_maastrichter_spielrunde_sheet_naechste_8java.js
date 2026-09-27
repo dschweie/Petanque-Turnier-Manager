@@ -1,0 +1,4 @@
+var _maastrichter_spielrunde_sheet_naechste_8java =
+[
+    [ "de.petanqueturniermanager.maastrichter.spielrunde.MaastrichterSpielrundeSheetNaechste", "d3/def/classde_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde_1_1_maastrichter_spielrunde_sheet_naechste.html", "d3/def/classde_1_1petanqueturniermanager_1_1maastrichter_1_1spielrunde_1_1_maastrichter_spielrunde_sheet_naechste" ]
+];

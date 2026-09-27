@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/ui/UnoControlsHelper.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d13/_uno_controls_helper_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UnoControlsHelper.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d13/_uno_controls_helper_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.ui;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> com.sun.star.awt.ActionEvent;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.sun.star.awt.ItemEvent;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.awt.PushButtonType;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.sun.star.awt.XActionListener;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.sun.star.awt.XButton;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.awt.XCheckBox;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.awt.XControl;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.sun.star.awt.XControlContainer;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.awt.XItemListener;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.star.awt.XListBox;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.awt.XTextComponent;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> com.sun.star.awt.XTextListener;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> com.sun.star.beans.XPropertySet;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> com.sun.star.container.NoSuchElementException;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> com.sun.star.container.XNameContainer;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> com.sun.star.lang.EventObject;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> com.sun.star.lang.WrappedTargetException;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> com.sun.star.lang.XMultiServiceFactory;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html">   33</a></span><span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">UnoControlsHelper</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">   35</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">UnoControlsHelper</a>.class);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">   37</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> XMultiServiceFactory <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">   38</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> XNameContainer <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">   39</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> XControlContainer <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">   41</a></span>    <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">UnoControlsHelper</a>(XMultiServiceFactory <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>, XNameContainer <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>, XControlContainer <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        this.xMSF = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        this.cont = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        this.xcc = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a8edccb4652241332aae0e063592566bd">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a8edccb4652241332aae0e063592566bd">fixedText</a>(String name, String <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlFixedTextModel&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        props.setPropertyValue(<span class="stringliteral">&quot;Label&quot;</span>, <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#aea7878a3599411b11c125fc40148ee18">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#aea7878a3599411b11c125fc40148ee18">edit</a>(String name, String text, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlEditModel&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        props.setPropertyValue(<span class="stringliteral">&quot;Text&quot;</span>, text == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : text);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        props.setPropertyValue(<span class="stringliteral">&quot;MultiLine&quot;</span>, Boolean.FALSE);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a38d604c6cf34e522a3f5c8895186f024">   73</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a38d604c6cf34e522a3f5c8895186f024">comboBox</a>(String name, String[] items, String selected, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlComboBoxModel&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        props.setPropertyValue(<span class="stringliteral">&quot;StringItemList&quot;</span>, items);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        props.setPropertyValue(<span class="stringliteral">&quot;Text&quot;</span>, selected == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : selected);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        props.setPropertyValue(<span class="stringliteral">&quot;Dropdown&quot;</span>, Boolean.TRUE);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        props.setPropertyValue(<span class="stringliteral">&quot;LineCount&quot;</span>, (<span class="keywordtype">short</span>) 12);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        props.setPropertyValue(<span class="stringliteral">&quot;Autocomplete&quot;</span>, Boolean.TRUE);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0a4b565431edaab412bb2b3b0de44d75">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0a4b565431edaab412bb2b3b0de44d75">listBox</a>(String name, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlListBoxModel&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        props.setPropertyValue(<span class="stringliteral">&quot;Dropdown&quot;</span>, Boolean.FALSE);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        props.setPropertyValue(<span class="stringliteral">&quot;MultiSelection&quot;</span>, Boolean.FALSE);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ab91f5b3399e4a6bdea8b963353b51dc1">  103</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ab91f5b3399e4a6bdea8b963353b51dc1">multiSelectListBox</a>(String name, String[] items, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlListBoxModel&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        props.setPropertyValue(<span class="stringliteral">&quot;Dropdown&quot;</span>, Boolean.FALSE);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        props.setPropertyValue(<span class="stringliteral">&quot;MultiSelection&quot;</span>, Boolean.TRUE);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        props.setPropertyValue(<span class="stringliteral">&quot;StringItemList&quot;</span>, items);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9f0bc98ae39b9227929102c6995095ce">  118</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9f0bc98ae39b9227929102c6995095ce">setzeAusgewaehlteIndizes</a>(String name, <span class="keywordtype">short</span>[] indizes) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, ctrl.getModel())</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    .setPropertyValue(<span class="stringliteral">&quot;SelectedItems&quot;</span>, indizes);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">logger</a>.warn(<span class="stringliteral">&quot;SelectedItems konnte nicht gesetzt werden für &#39;{}&#39;: {}&quot;</span>, name, e.getMessage());</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ab2702c1685428ce3122e22494f9043de">  132</a></span>    <span class="keywordtype">short</span>[] <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ab2702c1685428ce3122e22494f9043de">ausgewaehlteIndizes</a>(String name) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        XListBox lb = <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0a4b565431edaab412bb2b3b0de44d75">listBox</a>(name);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">if</span> (lb == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">short</span>[0];</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">return</span> lb.getSelectedItemsPos();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9d850f147bc2a3e94cb8a92eea3c222b">  141</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9d850f147bc2a3e94cb8a92eea3c222b">dropdownListBox</a>(String name, String[] items, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlListBoxModel&quot;</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        props.setPropertyValue(<span class="stringliteral">&quot;Dropdown&quot;</span>, Boolean.TRUE);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        props.setPropertyValue(<span class="stringliteral">&quot;MultiSelection&quot;</span>, Boolean.FALSE);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        props.setPropertyValue(<span class="stringliteral">&quot;StringItemList&quot;</span>, items);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">if</span> (items.length &gt; 0) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            props.setPropertyValue(<span class="stringliteral">&quot;SelectedItems&quot;</span>, <span class="keyword">new</span> <span class="keywordtype">short</span>[] { 0 });</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a164301c0d0c5e28de26d743f3c91bc9a">  159</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a164301c0d0c5e28de26d743f3c91bc9a">checkBox</a>(String name, String <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">boolean</span> angekreuzt)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlCheckBoxModel&quot;</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        props.setPropertyValue(<span class="stringliteral">&quot;Label&quot;</span>, <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        props.setPropertyValue(<span class="stringliteral">&quot;State&quot;</span>, (<span class="keywordtype">short</span>) (angekreuzt ? 1 : 0));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="}">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6c6b3ade03bbc51e01dcf09fb871b10a">  173</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6c6b3ade03bbc51e01dcf09fb871b10a">istAngekreuzt</a>(String name) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        XCheckBox cb = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XCheckBox.class, ctrl);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> cb != <span class="keyword">null</span> &amp;&amp; cb.getState() == 1;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="}">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a79b4f752abaf551fbd55c18d694e8281">  183</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a79b4f752abaf551fbd55c18d694e8281">registriereCheckBoxListener</a>(String name, Runnable aktion) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        XCheckBox cb = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XCheckBox.class, ctrl);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">if</span> (cb == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        cb.addItemListener(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d33/class_x_item_listener.html">XItemListener</a>() {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> itemStateChanged(ItemEvent e) { aktion.run(); }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) { <span class="comment">/* kein Aufräumen nötig */</span> }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        });</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a1533dd68e6d26093e77cfd8f36329853">  198</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a1533dd68e6d26093e77cfd8f36329853">button</a>(String name, String <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a1533dd68e6d26093e77cfd8f36329853">button</a>(name, <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>, x, y, w, h, (<span class="keywordtype">short</span>) PushButtonType.STANDARD_value);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a139dd8b6777ecb1e60d0c6b5ef125dc2">  202</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a139dd8b6777ecb1e60d0c6b5ef125dc2">button</a>(String name, String <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">short</span> pushButtonType)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        var <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">xMSF</a>.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlButtonModel&quot;</span>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        var props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        props.setPropertyValue(<span class="stringliteral">&quot;Label&quot;</span>, <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, x);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, y);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, w);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, h);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        props.setPropertyValue(<span class="stringliteral">&quot;PushButtonType&quot;</span>, pushButtonType);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="foldopen" id="foldopen00216" data-start="{" data-end="}">
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a68d6e6f8eab7dba5ddecbe20b73cb689">  216</a></span>    String <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a68d6e6f8eab7dba5ddecbe20b73cb689">leseText</a>(String name) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        XTextComponent tc = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XTextComponent.class, ctrl);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keywordflow">return</span> tc == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : tc.getText();</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
+</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span></div>
+<div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ad48198eb104ec96a2a46626f116495bd">  226</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ad48198eb104ec96a2a46626f116495bd">setzeText</a>(String name, @Nullable String text) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        XTextComponent tc = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XTextComponent.class, ctrl);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">if</span> (tc != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            tc.setText(text == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : text);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="foldopen" id="foldopen00238" data-start="{" data-end="}">
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae7e36ff77e1d93eb353d3fe164121345">  238</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae7e36ff77e1d93eb353d3fe164121345">enabled</a>(String name, <span class="keywordtype">boolean</span> aktiv) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, ctrl.getModel()).setPropertyValue(<span class="stringliteral">&quot;Enabled&quot;</span>, aktiv);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">logger</a>.warn(<span class="stringliteral">&quot;Enabled konnte nicht gesetzt werden für &#39;{}&#39;: {}&quot;</span>, name, e.getMessage());</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="foldopen" id="foldopen00250" data-start="{" data-end="}">
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">  250</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>(String name, String <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>) {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, ctrl.getModel()).setPropertyValue(<span class="stringliteral">&quot;Label&quot;</span>, <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">label</a>);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">logger</a>.warn(<span class="stringliteral">&quot;Label konnte nicht gesetzt werden für &#39;{}&#39;: {}&quot;</span>, name, e.getMessage());</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
+</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span></div>
+<div class="foldopen" id="foldopen00266" data-start="{" data-end="}">
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#aebb69bad12eeada460d10303fa085ae3">  266</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#aebb69bad12eeada460d10303fa085ae3">labelTextColor</a>(String name, <span class="keywordtype">int</span> rgb) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        }</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, ctrl.getModel()).setPropertyValue(<span class="stringliteral">&quot;TextColor&quot;</span>, rgb);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">logger</a>.warn(<span class="stringliteral">&quot;TextColor konnte nicht gesetzt werden für &#39;{}&#39;: {}&quot;</span>, name, e.getMessage());</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
+</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="foldopen" id="foldopen00278" data-start="{" data-end="}">
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0c868719071113ac73677c34d486857c">  278</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0c868719071113ac73677c34d486857c">registriereActionListener</a>(String name, Runnable aktion) {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        XButton btn = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XButton.class, ctrl);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">if</span> (btn == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        btn.addActionListener(<span class="keyword">new</span> XActionListener() {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) { aktion.run(); }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) { <span class="comment">/* kein Aufräumen nötig */</span> }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        });</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    }</div>
+</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span></div>
+<div class="foldopen" id="foldopen00294" data-start="{" data-end="}">
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ac9135fd21be6df0fd6da6d7a76ce7ac5">  294</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ac9135fd21be6df0fd6da6d7a76ce7ac5">registriereTextListener</a>(String name, Runnable aktion) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        XTextComponent tc = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XTextComponent.class, ctrl);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        <span class="keywordflow">if</span> (tc == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        tc.addTextListener(<span class="keyword">new</span> <a class="code hl_class" href="../../d9/d37/class_x_text_listener.html">XTextListener</a>() {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> textChanged(com.sun.star.awt.TextEvent e) { aktion.run(); }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) { <span class="comment">/* kein Aufräumen nötig */</span> }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        });</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
+</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span></div>
+<div class="foldopen" id="foldopen00310" data-start="{" data-end="}">
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a79413e9a2028d1a5c50d733cfee1fdbc">  310</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a79413e9a2028d1a5c50d733cfee1fdbc">registriereListBoxAuswahl</a>(String name, Runnable aufAuswahl, Runnable aufDoppelklick) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        }</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        XListBox lb = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XListBox.class, ctrl);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">if</span> (lb == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        lb.addItemListener(<span class="keyword">new</span> <a class="code hl_class" href="../../d8/d33/class_x_item_listener.html">XItemListener</a>() {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> itemStateChanged(ItemEvent e) { aufAuswahl.run(); }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) { <span class="comment">/* kein Aufräumen nötig */</span> }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        });</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        lb.addActionListener(<span class="keyword">new</span> XActionListener() {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) { aufDoppelklick.run(); }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            @Override <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) { <span class="comment">/* kein Aufräumen nötig */</span> }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        });</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    }</div>
+</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="foldopen" id="foldopen00329" data-start="{" data-end="}">
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a7c654af817fdbfe16a94996ee97e31e5">  329</a></span>    @Nullable XListBox <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a7c654af817fdbfe16a94996ee97e31e5">listBox</a>(String name) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        XControl ctrl = <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">xcc</a>.getControl(name);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keywordflow">return</span> ctrl == <span class="keyword">null</span> ? null : <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XListBox.class, ctrl);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    }</div>
+</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span></div>
+<div class="foldopen" id="foldopen00335" data-start="{" data-end="}">
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a5b346e9fd600694afb6a3080e41c6c5e">  335</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a5b346e9fd600694afb6a3080e41c6c5e">setzeListItems</a>(String name, String[] items) {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        XListBox lb = <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0a4b565431edaab412bb2b3b0de44d75">listBox</a>(name);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        <span class="keywordflow">if</span> (lb == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        <span class="keywordtype">short</span> anz = lb.getItemCount();</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        <span class="keywordflow">if</span> (anz &gt; 0) {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            lb.removeItems((<span class="keywordtype">short</span>) 0, anz);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="keywordflow">if</span> (items.length &gt; 0) {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            lb.addItems(items, (<span class="keywordtype">short</span>) 0);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span></div>
+<div class="foldopen" id="foldopen00350" data-start="{" data-end="}">
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ac0c658c1a59838dacb725012ae377444">  350</a></span>    <span class="keywordtype">short</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ac0c658c1a59838dacb725012ae377444">ausgewaehlterIndex</a>(String name) {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        XListBox lb = <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0a4b565431edaab412bb2b3b0de44d75">listBox</a>(name);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <span class="keywordflow">if</span> (lb == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordflow">return</span> lb.getSelectedItemPos();</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    }</div>
+</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="foldopen" id="foldopen00358" data-start="{" data-end="}">
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno"><a class="line" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9955e0244069ac0417a9814d500bceae">  358</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9955e0244069ac0417a9814d500bceae">entferneControl</a>(String name) {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            <a class="code hl_variable" href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">cont</a>.removeByName(name);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        } <span class="keywordflow">catch</span> (NoSuchElementException | WrappedTargetException e) {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            <span class="comment">// Control existiert nicht oder kann nicht entfernt werden – ignorieren</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        }</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    }</div>
+</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>}</div>
+</div>
+<div class="ttc" id="aclass_x_item_listener_html"><div class="ttname"><a href="../../d8/d33/class_x_item_listener.html">XItemListener</a></div></div>
+<div class="ttc" id="aclass_x_text_listener_html"><div class="ttname"><a href="../../d9/d37/class_x_text_listener.html">XTextListener</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a052c9b77d67e238f81b50f9c062159e9"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a052c9b77d67e238f81b50f9c062159e9">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.UnoControlsHelper</a></div><div class="ttdeci">UnoControlsHelper(XMultiServiceFactory xMSF, XNameContainer cont, XControlContainer xcc)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">UnoControlsHelper.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a0a4b565431edaab412bb2b3b0de44d75"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0a4b565431edaab412bb2b3b0de44d75">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.listBox</a></div><div class="ttdeci">void listBox(String name, int x, int y, int w, int h)</div><div class="ttdoc">ListBox (single-select, ohne Mehrfachauswahl).</div><div class="ttdef"><b>Definition</b> <a href="#l00090">UnoControlsHelper.java:90</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a0c868719071113ac73677c34d486857c"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a0c868719071113ac73677c34d486857c">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.registriereActionListener</a></div><div class="ttdeci">void registriereActionListener(String name, Runnable aktion)</div><div class="ttdef"><b>Definition</b> <a href="#l00278">UnoControlsHelper.java:278</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a139dd8b6777ecb1e60d0c6b5ef125dc2"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a139dd8b6777ecb1e60d0c6b5ef125dc2">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.button</a></div><div class="ttdeci">void button(String name, String label, int x, int y, int w, int h, short pushButtonType)</div><div class="ttdef"><b>Definition</b> <a href="#l00202">UnoControlsHelper.java:202</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a1533dd68e6d26093e77cfd8f36329853"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a1533dd68e6d26093e77cfd8f36329853">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.button</a></div><div class="ttdeci">void button(String name, String label, int x, int y, int w, int h)</div><div class="ttdef"><b>Definition</b> <a href="#l00198">UnoControlsHelper.java:198</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a164301c0d0c5e28de26d743f3c91bc9a"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a164301c0d0c5e28de26d743f3c91bc9a">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.checkBox</a></div><div class="ttdeci">void checkBox(String name, String label, int x, int y, int w, int h, boolean angekreuzt)</div><div class="ttdoc">Checkbox mit Initial-Zustand.</div><div class="ttdef"><b>Definition</b> <a href="#l00159">UnoControlsHelper.java:159</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a38d604c6cf34e522a3f5c8895186f024"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a38d604c6cf34e522a3f5c8895186f024">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.comboBox</a></div><div class="ttdeci">void comboBox(String name, String[] items, String selected, int x, int y, int w, int h)</div><div class="ttdoc">Edit-fähige ComboBox (Autocomplete-Style).</div><div class="ttdef"><b>Definition</b> <a href="#l00073">UnoControlsHelper.java:73</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a4e4c945572952a6c110c56d316cd7e3d"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a4e4c945572952a6c110c56d316cd7e3d">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.xMSF</a></div><div class="ttdeci">final XMultiServiceFactory xMSF</div><div class="ttdef"><b>Definition</b> <a href="#l00037">UnoControlsHelper.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a5b346e9fd600694afb6a3080e41c6c5e"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a5b346e9fd600694afb6a3080e41c6c5e">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.setzeListItems</a></div><div class="ttdeci">void setzeListItems(String name, String[] items)</div><div class="ttdoc">Setzt den Items einer ListBox neu (alte werden entfernt).</div><div class="ttdef"><b>Definition</b> <a href="#l00335">UnoControlsHelper.java:335</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a68d6e6f8eab7dba5ddecbe20b73cb689"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a68d6e6f8eab7dba5ddecbe20b73cb689">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.leseText</a></div><div class="ttdeci">String leseText(String name)</div><div class="ttdoc">Liest Text aus einem Edit-/ComboBox-Control.</div><div class="ttdef"><b>Definition</b> <a href="#l00216">UnoControlsHelper.java:216</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a6c6b3ade03bbc51e01dcf09fb871b10a"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6c6b3ade03bbc51e01dcf09fb871b10a">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.istAngekreuzt</a></div><div class="ttdeci">boolean istAngekreuzt(String name)</div><div class="ttdoc">true wenn die Checkbox angekreuzt ist (State == 1).</div><div class="ttdef"><b>Definition</b> <a href="#l00173">UnoControlsHelper.java:173</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a6d4368a988bb90ce6adc5d41ba68ff38"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6d4368a988bb90ce6adc5d41ba68ff38">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00035">UnoControlsHelper.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a6ead3579683c3c219205cd25bfecdae5"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a6ead3579683c3c219205cd25bfecdae5">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.label</a></div><div class="ttdeci">void label(String name, String label)</div><div class="ttdef"><b>Definition</b> <a href="#l00250">UnoControlsHelper.java:250</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a79413e9a2028d1a5c50d733cfee1fdbc"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a79413e9a2028d1a5c50d733cfee1fdbc">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.registriereListBoxAuswahl</a></div><div class="ttdeci">void registriereListBoxAuswahl(String name, Runnable aufAuswahl, Runnable aufDoppelklick)</div><div class="ttdoc">ListBox-Selektion: Single-Click und Doppelklick.</div><div class="ttdef"><b>Definition</b> <a href="#l00310">UnoControlsHelper.java:310</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a79b4f752abaf551fbd55c18d694e8281"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a79b4f752abaf551fbd55c18d694e8281">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.registriereCheckBoxListener</a></div><div class="ttdeci">void registriereCheckBoxListener(String name, Runnable aktion)</div><div class="ttdoc">Reagiert auf jeden Wechsel des Häkchen-Zustands.</div><div class="ttdef"><b>Definition</b> <a href="#l00183">UnoControlsHelper.java:183</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a7c654af817fdbfe16a94996ee97e31e5"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a7c654af817fdbfe16a94996ee97e31e5">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.listBox</a></div><div class="ttdeci">XListBox listBox(String name)</div><div class="ttdef"><b>Definition</b> <a href="#l00329">UnoControlsHelper.java:329</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a8edccb4652241332aae0e063592566bd"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a8edccb4652241332aae0e063592566bd">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.fixedText</a></div><div class="ttdeci">void fixedText(String name, String label, int x, int y, int w, int h)</div><div class="ttdoc">Statisches Label.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">UnoControlsHelper.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a9955e0244069ac0417a9814d500bceae"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9955e0244069ac0417a9814d500bceae">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.entferneControl</a></div><div class="ttdeci">void entferneControl(String name)</div><div class="ttdef"><b>Definition</b> <a href="#l00358">UnoControlsHelper.java:358</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a9d850f147bc2a3e94cb8a92eea3c222b"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9d850f147bc2a3e94cb8a92eea3c222b">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.dropdownListBox</a></div><div class="ttdeci">void dropdownListBox(String name, String[] items, int x, int y, int w, int h)</div><div class="ttdoc">Dropdown-ListBox (single-select, nicht-editierbar) für Filter-Auswahlen.</div><div class="ttdef"><b>Definition</b> <a href="#l00141">UnoControlsHelper.java:141</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_a9f0bc98ae39b9227929102c6995095ce"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#a9f0bc98ae39b9227929102c6995095ce">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.setzeAusgewaehlteIndizes</a></div><div class="ttdeci">void setzeAusgewaehlteIndizes(String name, short[] indizes)</div><div class="ttdoc">Setzt die ausgewählten Indizes einer Multi-Select-ListBox.</div><div class="ttdef"><b>Definition</b> <a href="#l00118">UnoControlsHelper.java:118</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ab2702c1685428ce3122e22494f9043de"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ab2702c1685428ce3122e22494f9043de">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.ausgewaehlteIndizes</a></div><div class="ttdeci">short[] ausgewaehlteIndizes(String name)</div><div class="ttdoc">Liefert die aktuell ausgewählten Indizes einer Multi-Select-ListBox.</div><div class="ttdef"><b>Definition</b> <a href="#l00132">UnoControlsHelper.java:132</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ab91f5b3399e4a6bdea8b963353b51dc1"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ab91f5b3399e4a6bdea8b963353b51dc1">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.multiSelectListBox</a></div><div class="ttdeci">void multiSelectListBox(String name, String[] items, int x, int y, int w, int h)</div><div class="ttdoc">Multi-Select-ListBox (Mehrfachauswahl per Strg/Shift).</div><div class="ttdef"><b>Definition</b> <a href="#l00103">UnoControlsHelper.java:103</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ac0c658c1a59838dacb725012ae377444"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ac0c658c1a59838dacb725012ae377444">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.ausgewaehlterIndex</a></div><div class="ttdeci">short ausgewaehlterIndex(String name)</div><div class="ttdoc">Selektierten Index oder -1.</div><div class="ttdef"><b>Definition</b> <a href="#l00350">UnoControlsHelper.java:350</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ac9135fd21be6df0fd6da6d7a76ce7ac5"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ac9135fd21be6df0fd6da6d7a76ce7ac5">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.registriereTextListener</a></div><div class="ttdeci">void registriereTextListener(String name, Runnable aktion)</div><div class="ttdoc">Live-Filter-Hook.</div><div class="ttdef"><b>Definition</b> <a href="#l00294">UnoControlsHelper.java:294</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ad48198eb104ec96a2a46626f116495bd"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ad48198eb104ec96a2a46626f116495bd">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.setzeText</a></div><div class="ttdeci">void setzeText(String name, @Nullable String text)</div><div class="ttdoc">Setzt Text in ein Edit-/ComboBox-Control.</div><div class="ttdef"><b>Definition</b> <a href="#l00226">UnoControlsHelper.java:226</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ae7e36ff77e1d93eb353d3fe164121345"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae7e36ff77e1d93eb353d3fe164121345">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.enabled</a></div><div class="ttdeci">void enabled(String name, boolean aktiv)</div><div class="ttdoc">Aktiviert/deaktiviert ein Control.</div><div class="ttdef"><b>Definition</b> <a href="#l00238">UnoControlsHelper.java:238</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_ae92adf0f4d041f4a731645b443aa4caa"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#ae92adf0f4d041f4a731645b443aa4caa">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.cont</a></div><div class="ttdeci">final XNameContainer cont</div><div class="ttdef"><b>Definition</b> <a href="#l00038">UnoControlsHelper.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_aea7878a3599411b11c125fc40148ee18"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#aea7878a3599411b11c125fc40148ee18">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.edit</a></div><div class="ttdeci">void edit(String name, String text, int x, int y, int w, int h)</div><div class="ttdoc">Einzeiliges Editfeld.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">UnoControlsHelper.java:60</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_aebb69bad12eeada460d10303fa085ae3"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#aebb69bad12eeada460d10303fa085ae3">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.labelTextColor</a></div><div class="ttdeci">void labelTextColor(String name, int rgb)</div><div class="ttdoc">Setzt die Schriftfarbe eines Controls.</div><div class="ttdef"><b>Definition</b> <a href="#l00266">UnoControlsHelper.java:266</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper_html_af437c0fea430b08954f4c4723676fddb"><div class="ttname"><a href="../../d3/d4f/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_uno_controls_helper.html#af437c0fea430b08954f4c4723676fddb">de.petanqueturniermanager.spielerdb.ui.UnoControlsHelper.xcc</a></div><div class="ttdeci">final XControlContainer xcc</div><div class="ttdef"><b>Definition</b> <a href="#l00039">UnoControlsHelper.java:39</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1model_html"><div class="ttname"><a href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">de.petanqueturniermanager.model</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00004">FormeSpielrunde.java:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_d12683bd1f3655574725dbedeb5d02cd.html">ui</a></li><li class="navelem"><a href="../../dc/d13/_uno_controls_helper_8java.html">UnoControlsHelper.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

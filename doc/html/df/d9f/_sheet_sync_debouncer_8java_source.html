@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/sheetsync/SheetSyncDebouncer.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d9f/_sheet_sync_debouncer_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SheetSyncDebouncer.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d9f/_sheet_sync_debouncer_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.helper.sheetsync;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkArgument;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.concurrent.ConcurrentHashMap;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.concurrent.Executors;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.concurrent.ScheduledExecutorService;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.concurrent.ScheduledFuture;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.concurrent.TimeUnit;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheetDocument;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html">   28</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a60e9bd88de11c2391defd627940b9742">   30</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a60e9bd88de11c2391defd627940b9742">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>.class);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a6beeec8af2d34ff68991e8701e7917a6">   33</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a6beeec8af2d34ff68991e8701e7917a6">DEBOUNCE_MS</a> = 150L;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aba4db3814636175cd6eca279eb6a3f14">   36</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">long</span>[] <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aba4db3814636175cd6eca279eb6a3f14">BACKOFF_MS</a> = {300L, 600L, 1200L};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aec48893299ac74a9d2f8e932812fe60f">   39</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aec48893299ac74a9d2f8e932812fe60f">MAX_RETRY</a> = <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aba4db3814636175cd6eca279eb6a3f14">BACKOFF_MS</a>.length;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#af8a36da33c788ec8bd912f76333a2b5a">   41</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a> <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#af8a36da33c788ec8bd912f76333a2b5a">INSTANZ</a> = <span class="keyword">new</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a896cb0ae7a50594bc132b2213e08d0bd">   43</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a> <span class="keyword">get</span>() {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#af8a36da33c788ec8bd912f76333a2b5a">INSTANZ</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#addf440fa9f61b1db49b6de82ab241002">   47</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> ScheduledExecutorService <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#addf440fa9f61b1db49b6de82ab241002">executor</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a9b35fb9e31c3af4c36161499f1fe55d9">   48</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> ConcurrentHashMap&lt;String, ScheduledFuture&lt;?&gt;&gt; <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a9b35fb9e31c3af4c36161499f1fe55d9">ausstehend</a> = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">   50</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>() {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        this.executor = Executors.newSingleThreadScheduledExecutor(r -&gt; {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a> t = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>(r, <span class="stringliteral">&quot;PTM-SheetSyncDebouncer&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            t.setDaemon(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span> t;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        });</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a3ea255c6904d0c6796449333052b2105">   62</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a3ea255c6904d0c6796449333052b2105">schedule</a>(XSpreadsheetDocument xDoc, String schluessel, Runnable check) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a1b9b8cf8b529c20815d90056fdfb6208">scheduleMitDelay</a>(xDoc, schluessel, check, <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a6beeec8af2d34ff68991e8701e7917a6">DEBOUNCE_MS</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ace0f997e1249e1c511d78e596ad1b89d">   70</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ace0f997e1249e1c511d78e596ad1b89d">scheduleRetry</a>(XSpreadsheetDocument xDoc, String schluessel, <span class="keywordtype">int</span> versuch,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            Runnable check) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        checkArgument(versuch &gt;= 1, <span class="stringliteral">&quot;versuch muss &gt;= 1 sein&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (versuch &gt; <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aec48893299ac74a9d2f8e932812fe60f">MAX_RETRY</a>) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a60e9bd88de11c2391defd627940b9742">logger</a>.debug(<span class="stringliteral">&quot;scheduleRetry ignoriert (versuch={} &gt; MAX_RETRY={})&quot;</span>, versuch, <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aec48893299ac74a9d2f8e932812fe60f">MAX_RETRY</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a1b9b8cf8b529c20815d90056fdfb6208">scheduleMitDelay</a>(xDoc, schluessel, check, <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aba4db3814636175cd6eca279eb6a3f14">BACKOFF_MS</a>[versuch - 1]);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a1b9b8cf8b529c20815d90056fdfb6208">   80</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a1b9b8cf8b529c20815d90056fdfb6208">scheduleMitDelay</a>(XSpreadsheetDocument xDoc, String schluessel, Runnable check,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordtype">long</span> delayMs) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        checkNotNull(check);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        String key = <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ae6aa66f61f92b72a406582313c003426">mapKey</a>(xDoc, schluessel);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        ScheduledFuture&lt;?&gt; neu = <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#addf440fa9f61b1db49b6de82ab241002">executor</a>.schedule(() -&gt; <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a4ae950c5226fc33873ede6a488b5e007">ausfuehren</a>(key, check), delayMs,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                TimeUnit.MILLISECONDS);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ScheduledFuture&lt;?&gt; alt = <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a9b35fb9e31c3af4c36161499f1fe55d9">ausstehend</a>.put(key, neu);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (alt != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            alt.cancel(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a4ae950c5226fc33873ede6a488b5e007">   94</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a4ae950c5226fc33873ede6a488b5e007">ausfuehren</a>(String key, Runnable check) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a9b35fb9e31c3af4c36161499f1fe55d9">ausstehend</a>.remove(key);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            check.run();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a60e9bd88de11c2391defd627940b9742">logger</a>.warn(<span class="stringliteral">&quot;Sheet-Sync-Check warf Exception (key={})&quot;</span>, key, e);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#acfa812500d7f36acb91a343d4efe0208">  107</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#acfa812500d7f36acb91a343d4efe0208">cancelAlle</a>(XSpreadsheetDocument xDoc) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        String prefix = <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a5008e6d4345293232659b1e6d321d7c9">docPrefix</a>(xDoc);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_variable" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a9b35fb9e31c3af4c36161499f1fe55d9">ausstehend</a>.entrySet().removeIf(eintrag -&gt; {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span> (eintrag.getKey().startsWith(prefix)) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                eintrag.getValue().cancel(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        });</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ae6aa66f61f92b72a406582313c003426">  119</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ae6aa66f61f92b72a406582313c003426">mapKey</a>(XSpreadsheetDocument xDoc, String schluessel) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a5008e6d4345293232659b1e6d321d7c9">docPrefix</a>(xDoc) + schluessel;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a5008e6d4345293232659b1e6d321d7c9">  123</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a5008e6d4345293232659b1e6d321d7c9">docPrefix</a>(XSpreadsheetDocument xDoc) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> System.identityHashCode(xDoc) + <span class="stringliteral">&quot;:&quot;</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+</div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclass_thread_html"><div class="ttname"><a href="../../d8/d18/class_thread.html">Thread</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a1b9b8cf8b529c20815d90056fdfb6208"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a1b9b8cf8b529c20815d90056fdfb6208">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.scheduleMitDelay</a></div><div class="ttdeci">void scheduleMitDelay(XSpreadsheetDocument xDoc, String schluessel, Runnable check, long delayMs)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">SheetSyncDebouncer.java:80</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a3ea255c6904d0c6796449333052b2105"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a3ea255c6904d0c6796449333052b2105">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.schedule</a></div><div class="ttdeci">void schedule(XSpreadsheetDocument xDoc, String schluessel, Runnable check)</div><div class="ttdoc">Plant einen Check für (xDoc, schluessel) nach DEBOUNCE_MS.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SheetSyncDebouncer.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a41b023d372a7ff471cb163f8e5d1fc13"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a41b023d372a7ff471cb163f8e5d1fc13">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.SheetSyncDebouncer</a></div><div class="ttdeci">SheetSyncDebouncer()</div><div class="ttdef"><b>Definition</b> <a href="#l00050">SheetSyncDebouncer.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a4ae950c5226fc33873ede6a488b5e007"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a4ae950c5226fc33873ede6a488b5e007">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.ausfuehren</a></div><div class="ttdeci">void ausfuehren(String key, Runnable check)</div><div class="ttdef"><b>Definition</b> <a href="#l00094">SheetSyncDebouncer.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a5008e6d4345293232659b1e6d321d7c9"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a5008e6d4345293232659b1e6d321d7c9">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.docPrefix</a></div><div class="ttdeci">static String docPrefix(XSpreadsheetDocument xDoc)</div><div class="ttdef"><b>Definition</b> <a href="#l00123">SheetSyncDebouncer.java:123</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a60e9bd88de11c2391defd627940b9742"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a60e9bd88de11c2391defd627940b9742">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00030">SheetSyncDebouncer.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a6beeec8af2d34ff68991e8701e7917a6"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a6beeec8af2d34ff68991e8701e7917a6">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.DEBOUNCE_MS</a></div><div class="ttdeci">static final long DEBOUNCE_MS</div><div class="ttdoc">Standard-Debounce-Fenster für Selection/Focus-Trigger.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">SheetSyncDebouncer.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_a9b35fb9e31c3af4c36161499f1fe55d9"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#a9b35fb9e31c3af4c36161499f1fe55d9">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.ausstehend</a></div><div class="ttdeci">final ConcurrentHashMap&lt; String, ScheduledFuture&lt;?&gt; &gt; ausstehend</div><div class="ttdef"><b>Definition</b> <a href="#l00048">SheetSyncDebouncer.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_aba4db3814636175cd6eca279eb6a3f14"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aba4db3814636175cd6eca279eb6a3f14">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.BACKOFF_MS</a></div><div class="ttdeci">static final long[] BACKOFF_MS</div><div class="ttdoc">Linearer Backoff für Re-Schedule nach TransientFehler (Versuche 1..3).</div><div class="ttdef"><b>Definition</b> <a href="#l00036">SheetSyncDebouncer.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_ace0f997e1249e1c511d78e596ad1b89d"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ace0f997e1249e1c511d78e596ad1b89d">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.scheduleRetry</a></div><div class="ttdeci">void scheduleRetry(XSpreadsheetDocument xDoc, String schluessel, int versuch, Runnable check)</div><div class="ttdoc">Plant einen Retry nach TransientFehler.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">SheetSyncDebouncer.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_acfa812500d7f36acb91a343d4efe0208"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#acfa812500d7f36acb91a343d4efe0208">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.cancelAlle</a></div><div class="ttdeci">void cancelAlle(XSpreadsheetDocument xDoc)</div><div class="ttdoc">Cancelt alle ausstehenden Checks zu diesem Dokument.</div><div class="ttdef"><b>Definition</b> <a href="#l00107">SheetSyncDebouncer.java:107</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_addf440fa9f61b1db49b6de82ab241002"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#addf440fa9f61b1db49b6de82ab241002">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.executor</a></div><div class="ttdeci">final ScheduledExecutorService executor</div><div class="ttdef"><b>Definition</b> <a href="#l00047">SheetSyncDebouncer.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_ae6aa66f61f92b72a406582313c003426"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#ae6aa66f61f92b72a406582313c003426">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.mapKey</a></div><div class="ttdeci">static String mapKey(XSpreadsheetDocument xDoc, String schluessel)</div><div class="ttdef"><b>Definition</b> <a href="#l00119">SheetSyncDebouncer.java:119</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_aec48893299ac74a9d2f8e932812fe60f"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#aec48893299ac74a9d2f8e932812fe60f">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.MAX_RETRY</a></div><div class="ttdeci">static final int MAX_RETRY</div><div class="ttdoc">Maximaler Versuch (inkl.) – danach forceNextCheck statt weiteres Retry.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">SheetSyncDebouncer.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer_html_af8a36da33c788ec8bd912f76333a2b5a"><div class="ttname"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html#af8a36da33c788ec8bd912f76333a2b5a">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.INSTANZ</a></div><div class="ttdeci">static final SheetSyncDebouncer INSTANZ</div><div class="ttdef"><b>Definition</b> <a href="#l00041">SheetSyncDebouncer.java:41</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_4a87b3b2cbeffc285fa362e36e4b59d8.html">sheetsync</a></li><li class="navelem"><a href="../../df/d9f/_sheet_sync_debouncer_8java.html">SheetSyncDebouncer.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

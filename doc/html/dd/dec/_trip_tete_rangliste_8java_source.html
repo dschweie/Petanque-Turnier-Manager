@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/algorithmen/triptete/TripTeteRangliste.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/dec/_trip_tete_rangliste_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TripTeteRangliste.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/dec/_trip_tete_rangliste_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.algorithmen.triptete;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.Collections;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.model.Team;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html">   24</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html">TripTeteRangliste</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">   26</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;Integer, TripTeteTeamErgebnis&gt; <a class="code hl_variable" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">ergebnisseProTeam</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dfe/class_hash_map.html">HashMap&lt;&gt;</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#af5a67e3e8e8370e98503be3acaca519c">   28</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html">TripTeteRangliste</a> <a class="code hl_function" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#af5a67e3e8e8370e98503be3acaca519c">addTeam</a>(<a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> team) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        checkNotNull(team, <span class="stringliteral">&quot;team == null&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_variable" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">ergebnisseProTeam</a>.computeIfAbsent(team.<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">getNr</a>(), nr -&gt; <span class="keyword">new</span> <a class="code hl_class" href="../../d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html">TripTeteTeamErgebnis</a>(team));</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a37a866091a83cf6357ed9498910b2a9a">   38</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html">TripTeteRangliste</a> <a class="code hl_function" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a37a866091a83cf6357ed9498910b2a9a">addBegegnung</a>(<a class="code hl_class" href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html">TripTeteBegegnungErgebnis</a> ergebnis) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        checkNotNull(ergebnis, <span class="stringliteral">&quot;ergebnis == null&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#af5a67e3e8e8370e98503be3acaca519c">addTeam</a>(ergebnis.<a class="code hl_function" href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html#a0d222f14162439fc3bfbbc292b26b154">getTeamA</a>());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#af5a67e3e8e8370e98503be3acaca519c">addTeam</a>(ergebnis.<a class="code hl_function" href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html#ac0dd6b54a078529eebd8dbd0555ce041">getTeamB</a>());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_variable" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">ergebnisseProTeam</a>.get(ergebnis.<a class="code hl_function" href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html#a0d222f14162439fc3bfbbc292b26b154">getTeamA</a>().<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">getNr</a>()).verbucheBegegnung(<span class="keyword">true</span>, ergebnis);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">ergebnisseProTeam</a>.get(ergebnis.<a class="code hl_function" href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html#ac0dd6b54a078529eebd8dbd0555ce041">getTeamB</a>().<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">getNr</a>()).verbucheBegegnung(<span class="keyword">false</span>, ergebnis);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a9858e276e7a70f2e3622b42ea34cd2ef">   48</a></span>    <span class="keyword">public</span> List&lt;TripTeteTeamErgebnis&gt; <a class="code hl_function" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a9858e276e7a70f2e3622b42ea34cd2ef">getRangliste</a>() {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        List&lt;TripTeteTeamErgebnis&gt; liste = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(<a class="code hl_variable" href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">ergebnisseProTeam</a>.values());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        Collections.sort(liste);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> liste;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_hash_map_html"><div class="ttname"><a href="../../d8/dfe/class_hash_map.html">HashMap</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis_html"><div class="ttname"><a href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html">de.petanqueturniermanager.algorithmen.triptete.TripTeteBegegnungErgebnis</a></div><div class="ttdoc">Wertung einer kompletten Trip-Tête-Begegnung zwischen zwei Teams.</div><div class="ttdef"><b>Definition</b> <a href="../../db/d97/_trip_tete_begegnung_ergebnis_8java_source.html#l00026">TripTeteBegegnungErgebnis.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis_html_a0d222f14162439fc3bfbbc292b26b154"><div class="ttname"><a href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html#a0d222f14162439fc3bfbbc292b26b154">de.petanqueturniermanager.algorithmen.triptete.TripTeteBegegnungErgebnis.getTeamA</a></div><div class="ttdeci">Team getTeamA()</div><div class="ttdef"><b>Definition</b> <a href="../../db/d97/_trip_tete_begegnung_ergebnis_8java_source.html#l00099">TripTeteBegegnungErgebnis.java:99</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis_html_ac0dd6b54a078529eebd8dbd0555ce041"><div class="ttname"><a href="../../d3/dab/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_begegnung_ergebnis.html#ac0dd6b54a078529eebd8dbd0555ce041">de.petanqueturniermanager.algorithmen.triptete.TripTeteBegegnungErgebnis.getTeamB</a></div><div class="ttdeci">Team getTeamB()</div><div class="ttdef"><b>Definition</b> <a href="../../db/d97/_trip_tete_begegnung_ergebnis_8java_source.html#l00103">TripTeteBegegnungErgebnis.java:103</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste_html"><div class="ttname"><a href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html">de.petanqueturniermanager.algorithmen.triptete.TripTeteRangliste</a></div><div class="ttdoc">Berechnet die Trip-Tête-Rangliste aus verbuchten Begegnungs-Ergebnissen.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">TripTeteRangliste.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste_html_a2f4b6edea71ffcd1afe4df8a153a0e1c"><div class="ttname"><a href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a2f4b6edea71ffcd1afe4df8a153a0e1c">de.petanqueturniermanager.algorithmen.triptete.TripTeteRangliste.ergebnisseProTeam</a></div><div class="ttdeci">final Map&lt; Integer, TripTeteTeamErgebnis &gt; ergebnisseProTeam</div><div class="ttdef"><b>Definition</b> <a href="#l00026">TripTeteRangliste.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste_html_a37a866091a83cf6357ed9498910b2a9a"><div class="ttname"><a href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a37a866091a83cf6357ed9498910b2a9a">de.petanqueturniermanager.algorithmen.triptete.TripTeteRangliste.addBegegnung</a></div><div class="ttdeci">TripTeteRangliste addBegegnung(TripTeteBegegnungErgebnis ergebnis)</div><div class="ttdoc">Verbucht eine Begegnung beidseitig.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">TripTeteRangliste.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste_html_a9858e276e7a70f2e3622b42ea34cd2ef"><div class="ttname"><a href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#a9858e276e7a70f2e3622b42ea34cd2ef">de.petanqueturniermanager.algorithmen.triptete.TripTeteRangliste.getRangliste</a></div><div class="ttdeci">List&lt; TripTeteTeamErgebnis &gt; getRangliste()</div><div class="ttdef"><b>Definition</b> <a href="#l00048">TripTeteRangliste.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste_html_af5a67e3e8e8370e98503be3acaca519c"><div class="ttname"><a href="../../db/dde/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_rangliste.html#af5a67e3e8e8370e98503be3acaca519c">de.petanqueturniermanager.algorithmen.triptete.TripTeteRangliste.addTeam</a></div><div class="ttdeci">TripTeteRangliste addTeam(Team team)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">TripTeteRangliste.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis_html"><div class="ttname"><a href="../../d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html">de.petanqueturniermanager.algorithmen.triptete.TripTeteTeamErgebnis</a></div><div class="ttdoc">Aggregierter Turnier-Stand eines Teams für die Trip-Tête-Rangliste.</div><div class="ttdef"><b>Definition</b> <a href="../../da/ddf/_trip_tete_team_ergebnis_8java_source.html#l00030">TripTeteTeamErgebnis.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable_html_a0eedbc0c50986365122894596e47d11a"><div class="ttname"><a href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">de.petanqueturniermanager.model.NrComparable.getNr</a></div><div class="ttdeci">final int getNr()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_nr_comparable_8java_source.html#l00022">NrComparable.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">de.petanqueturniermanager.model.Team</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00019">Team.java:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_946f460c4ad1c6933c7b147c1968aa38.html">algorithmen</a></li><li class="navelem"><a href="../../dir_390e0a8f4bd3d0b2ef2290ea2e1fe357.html">triptete</a></li><li class="navelem"><a href="../../dd/dec/_trip_tete_rangliste_8java.html">TripTeteRangliste.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

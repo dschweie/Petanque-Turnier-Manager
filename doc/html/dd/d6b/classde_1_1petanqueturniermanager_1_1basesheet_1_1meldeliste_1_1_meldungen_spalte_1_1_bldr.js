@@ -1,0 +1,25 @@
+var classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr =
+[
+    [ "anzNamenSpalten", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#aefaa156c95038cee9c8b8238dc79fdcb", null ],
+    [ "anzZeilenInHeader", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a5e47f1bac99c70b85626d7449283920f", null ],
+    [ "build", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#af62adeedeafe3bc0c1e99009819d5b7b", null ],
+    [ "ersteDatenZiele", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a8e0472613a69ee1a90c816def5a7cfc1", null ],
+    [ "ersteMeldungNameSpalteOffset", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a99ce96178f1bed91ed0b587a61ef8c69", null ],
+    [ "formation", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#af8e7316e0d204fac1a6066fa3220e419", null ],
+    [ "headerKeysProSpieler", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a6df0ca9272f35848a4629171a5c2c986", null ],
+    [ "minAnzZeilen", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a5b5ae779f41fbdc2157a1c5cf25b26fe", null ],
+    [ "sheet", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#ad178a95cfab5926364e27e8902512822", null ],
+    [ "spalteMeldungNameWidth", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a831127dd2aab105ab21322674266fa0c", null ],
+    [ "spielerNrSpalte", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a9cc13825ca90fef71cc4f50fc5ae0522", null ],
+    [ "anzNamenSpalten", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a3704ad10c859c84af1926d373ac13e34", null ],
+    [ "anzZeilenInHeader", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#af59fb9ce75cdf0533eaae9b487a30e17", null ],
+    [ "DEFAULT_MELDUNG_NAME_WIDTH", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#abd1677e1f3fda890ec829e9fd86c70ce", null ],
+    [ "ersteDatenZiele", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a945885794178cb3324704f826fefb44d", null ],
+    [ "ersteMeldungNameSpalteOffset", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a819740b22c8917b67a36aed42370f0cf", null ],
+    [ "formation", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#aeabf1ef0df2b5d819894e4551864e6d5", null ],
+    [ "headerKeysProSpieler", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a351699d066ea336c729a006abe2ab0d2", null ],
+    [ "iSheet", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#a3efb91908d59ca3989b040029b822e1a", null ],
+    [ "minAnzZeilen", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#ac71972ba9fade85500a19d0e0d47ad55", null ],
+    [ "spalteMeldungNameWidth", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#af5795b9e1ebf86db9e12348b4bcd62ee", null ],
+    [ "spielerNrSpalte", "dd/d6b/classde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_meldungen_spalte_1_1_bldr.html#aa645d8c38daa875aa776b00835ccb742", null ]
+];

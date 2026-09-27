@@ -1,0 +1,4 @@
+var _spieler_db_sqlite_restore_importer_8java =
+[
+    [ "de.petanqueturniermanager.spielerdb.importer.SpielerDbSqliteRestoreImporter", "d1/d80/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_sqlite_restore_importer.html", "d1/d80/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_sqlite_restore_importer" ]
+];

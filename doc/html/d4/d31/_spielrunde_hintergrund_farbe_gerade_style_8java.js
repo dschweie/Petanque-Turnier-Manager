@@ -1,0 +1,4 @@
+var _spielrunde_hintergrund_farbe_gerade_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.SpielrundeHintergrundFarbeGeradeStyle", "d7/d35/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_gerade_style.html", "d7/d35/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_spielrunde_hintergrund_farbe_gerade_style" ]
+];

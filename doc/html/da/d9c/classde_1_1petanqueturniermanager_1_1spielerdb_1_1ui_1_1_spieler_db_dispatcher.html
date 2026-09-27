@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d9c/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_spieler_db_dispatcher.html','../../','d5/db2/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_spieler_db_dispatcher-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Bindeglied zwischen <code><a class="el" href="../../de/df8/classde_1_1petanqueturniermanager_1_1comp_1_1_protocol_handler.html">de.petanqueturniermanager.comp.ProtocolHandler</a></code> und den Spieler-DB-Dialogen.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a8b3e1f29716a43ec476e1cc2532b348a" id="r_a8b3e1f29716a43ec476e1cc2532b348a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8b3e1f29716a43ec476e1cc2532b348a">abgleichMitMeldeliste</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:aa9a8c5548551d5b9de29342b9687c54d" id="r_aa9a8c5548551d5b9de29342b9687c54d"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa9a8c5548551d5b9de29342b9687c54d">abgleichMitVorlage</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:aad7f16559f2777cbe94780dcbf382ca9" id="r_aad7f16559f2777cbe94780dcbf382ca9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aad7f16559f2777cbe94780dcbf382ca9">exportSpielerDb</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:a8efa22282ecd194cc4b44eb9d7ce757f" id="r_a8efa22282ecd194cc4b44eb9d7ce757f"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a8efa22282ecd194cc4b44eb9d7ce757f">importSpielerDb</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:a40560e81e6b8bf7f81761267cad471d0" id="r_a40560e81e6b8bf7f81761267cad471d0"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a40560e81e6b8bf7f81761267cad471d0">oeffneLabelVerwaltung</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:a01e91c32b70ee212c941098fad736287" id="r_a01e91c32b70ee212c941098fad736287"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a01e91c32b70ee212c941098fad736287">oeffneSpielerVerwaltung</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:a5d0be5ec76ed7169f2e002431b6b14eb" id="r_a5d0be5ec76ed7169f2e002431b6b14eb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a5d0be5ec76ed7169f2e002431b6b14eb">oeffneVereinsVerwaltung</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:a9bc6258cee41be23cdfb8c35a2ce7797" id="r_a9bc6258cee41be23cdfb8c35a2ce7797"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9bc6258cee41be23cdfb8c35a2ce7797">uebernehmenInMeldeliste</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:aa5059535963b12cd62c292c9977f99fa" id="r_aa5059535963b12cd62c292c9977f99fa"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aa5059535963b12cd62c292c9977f99fa">vorlageErstellen</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memitem:ae9058ef200db3ffcaeb3916bbd2fd597" id="r_ae9058ef200db3ffcaeb3916bbd2fd597"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae9058ef200db3ffcaeb3916bbd2fd597">zeigeWebView</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memdesc:ae9058ef200db3ffcaeb3916bbd2fd597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet (idempotent) den lokalen Web-Viewer und öffnet ihn im Standard-Browser.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ab95f3c15900c68fb6ce7327ba6918544" id="r_ab95f3c15900c68fb6ce7327ba6918544"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab95f3c15900c68fb6ce7327ba6918544">SpielerDbDispatcher</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:ada7c20f50401f2a24bc9cb9b4f6bb7c7" id="r_ada7c20f50401f2a24bc9cb9b4f6bb7c7"><td class="memItemLeft">static <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a>&#160;</td><td class="memItemRight"><a class="el" href="#ada7c20f50401f2a24bc9cb9b4f6bb7c7">aktivesTurnierSystem</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memdesc:ada7c20f50401f2a24bc9cb9b4f6bb7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittelt das Turniersystem des aktuellen Dokuments.  <br /></td></tr>
+<tr class="memitem:a451160a02ffc53de318c0230c9bf4406" id="r_a451160a02ffc53de318c0230c9bf4406"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a451160a02ffc53de318c0230c9bf4406">aktiviereMeldelisteSheet</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memdesc:a451160a02ffc53de318c0230c9bf4406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktiviert das Meldeliste-Sheet im Vordergrund, damit der Anwender beim Öffnen des Übernahme-Dialogs den Schreibkontext sieht.  <br /></td></tr>
+<tr class="memitem:a9589f2248a0e9b109d30245759b5be2b" id="r_a9589f2248a0e9b109d30245759b5be2b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9589f2248a0e9b109d30245759b5be2b">oeffneImBrowser</a> (XComponentContext ctx, URI url)</td></tr>
+<tr class="memitem:a48eb7d13d9fb533d626e1b86dffec421" id="r_a48eb7d13d9fb533d626e1b86dffec421"><td class="memItemLeft">static Optional&lt; <a class="el" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a48eb7d13d9fb533d626e1b86dffec421">oeffneOderMelde</a> (XComponentContext ctx)</td></tr>
+<tr class="memitem:a0a62387d05ad137d5d872aa9199306c1" id="r_a0a62387d05ad137d5d872aa9199306c1"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0a62387d05ad137d5d872aa9199306c1">starteMeldelisteUpdate</a> (<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws, <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> ts)</td></tr>
+<tr class="memdesc:a0a62387d05ad137d5d872aa9199306c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet den system-passenden "Meldeliste aktualisieren"-Lauf als <code><a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a></code> (asynchron, eigener <a class="el" href="../../d8/d18/class_thread.html">Thread</a>, eigener Blattschutz-Scope) — analog zum Menü-Dispatch in <code class="JavaDocCode">ProtocolHandler</code>.  <br /></td></tr>
+<tr class="memitem:a661a8a813468e9a6819a4fc91422804b" id="r_a661a8a813468e9a6819a4fc91422804b"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a661a8a813468e9a6819a4fc91422804b">zeigeFehlerKeinZiel</a> (XComponentContext ctx, <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws)</td></tr>
+<tr class="memdesc:a661a8a813468e9a6819a4fc91422804b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeigt die passende Fehlermeldung, wenn <code><a class="el" href="../../d8/db6/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_meldeliste_ziel_factory.html#ac2cf8e6c27c59bacd3c9af4c60061de8">MeldelisteZielFactory#fuerAktivesSheet</a></code> kein Ziel liefern konnte: Bei einem erkannten, aber nicht unterstützten Turniersystem (z.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:a012c0ca6ce3a7c65e1aa931978648f89" id="r_a012c0ca6ce3a7c65e1aa931978648f89"><td class="memItemLeft">static final Logger&#160;</td><td class="memItemRight"><a class="el" href="#a012c0ca6ce3a7c65e1aa931978648f89">logger</a> = LogManager.getLogger(SpielerDbDispatcher.class)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Stellt die DB-Connection her, fängt Connection-Fehler einheitlich (Lock-Hinweis vs. generischer Init-Fehler) ab und öffnet je nach Menüpunkt einen der drei Dialoge. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00053">53</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="ab95f3c15900c68fb6ce7327ba6918544" name="ab95f3c15900c68fb6ce7327ba6918544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab95f3c15900c68fb6ce7327ba6918544">&#9670;&#160;</a></span>SpielerDbDispatcher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.SpielerDbDispatcher </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00057">57</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a8b3e1f29716a43ec476e1cc2532b348a" name="a8b3e1f29716a43ec476e1cc2532b348a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3e1f29716a43ec476e1cc2532b348a">&#9670;&#160;</a></span>abgleichMitMeldeliste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.abgleichMitMeldeliste </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00151">151</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>                                                                    {</div>
+<div class="line"><span class="lineno">  152</span>        XComponentContext ctx = ws.getxContext();</div>
+<div class="line"><span class="lineno">  153</span>        Optional&lt;MeldelisteZiel&gt; ziel = MeldelisteZielFactory.fuerAktivesSheet(ws);</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (ziel.isEmpty()) {</div>
+<div class="line"><span class="lineno">  155</span>            zeigeFehlerKeinZiel(ctx, ws);</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+<div class="line"><span class="lineno">  158</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ctx);</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        ProcessBox pb = ProcessBox.from();</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordtype">boolean</span> warSichtbar = pb.istSichtbar();</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">  165</span>            pb.hide();</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">try</span> (var _ = BlattschutzManager.get().scopeFuer(aktivesTurnierSystem(ws), ws)) {</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keyword">new</span> SpielerDbAbgleichDialog(ctx,</div>
+<div class="line"><span class="lineno">  169</span>                    <span class="keyword">new</span> SpielerRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  170</span>                    <span class="keyword">new</span> VereinRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  171</span>                    ziel.get()).zeigen();</div>
+<div class="line"><span class="lineno">  172</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception | RuntimeException e) {</div>
+<div class="line"><span class="lineno">  173</span>            logger.error(<span class="stringliteral">&quot;Spieler-DB-Abgleich-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  174</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">  176</span>                pb.visibleWennAutomatisch();</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa9a8c5548551d5b9de29342b9687c54d" name="aa9a8c5548551d5b9de29342b9687c54d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a8c5548551d5b9de29342b9687c54d">&#9670;&#160;</a></span>abgleichMitVorlage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.abgleichMitVorlage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00194">194</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                                 {</div>
+<div class="line"><span class="lineno">  195</span>        XComponentContext ctx = ws.getxContext();</div>
+<div class="line"><span class="lineno">  196</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ctx);</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  199</span>        }</div>
+<div class="line"><span class="lineno">  200</span>        SheetVorlageAdapter quelle = <span class="keyword">new</span> SheetVorlageAdapter(ws);</div>
+<div class="line"><span class="lineno">  201</span>        <span class="comment">// Eager-Probe: Sheet-Existenz und Header-Validierung VOR Dialog-Öffnung,</span></div>
+<div class="line"><span class="lineno">  202</span>        <span class="comment">// damit Fehlermeldungen als saubere MessageBox erscheinen statt als</span></div>
+<div class="line"><span class="lineno">  203</span>        <span class="comment">// leerer Dialog mit „0 Spieler gefunden&quot;.</span></div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  205</span>            quelle.leseAlleSpielerRoh();</div>
+<div class="line"><span class="lineno">  206</span>        } <span class="keywordflow">catch</span> (SheetVorlageAdapter.VorlageNichtVerfuegbarException e) {</div>
+<div class="line"><span class="lineno">  207</span>            MessageBox.from(ctx, MessageBoxTypeEnum.WARN_OK)</div>
+<div class="line"><span class="lineno">  208</span>                    .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.menu.toplevel&quot;</span>))</div>
+<div class="line"><span class="lineno">  209</span>                    .message(e.getMessage())</div>
+<div class="line"><span class="lineno">  210</span>                    .show();</div>
+<div class="line"><span class="lineno">  211</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>        ProcessBox pb = ProcessBox.from();</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordtype">boolean</span> warSichtbar = pb.istSichtbar();</div>
+<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">  217</span>            pb.hide();</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">try</span> (var _ = BlattschutzManager.get().scopeFuer(aktivesTurnierSystem(ws), ws)) {</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keyword">new</span> SpielerDbAbgleichDialog(ctx,</div>
+<div class="line"><span class="lineno">  221</span>                    <span class="keyword">new</span> SpielerRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  222</span>                    <span class="keyword">new</span> VereinRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  223</span>                    quelle, quelle).zeigen();</div>
+<div class="line"><span class="lineno">  224</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception | RuntimeException e) {</div>
+<div class="line"><span class="lineno">  225</span>            logger.error(<span class="stringliteral">&quot;Spieler-DB-Abgleich-Dialog (Vorlage) fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  226</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">  228</span>                pb.visibleWennAutomatisch();</div>
+<div class="line"><span class="lineno">  229</span>            }</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ada7c20f50401f2a24bc9cb9b4f6bb7c7" name="ada7c20f50401f2a24bc9cb9b4f6bb7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7c20f50401f2a24bc9cb9b4f6bb7c7">&#9670;&#160;</a></span>aktivesTurnierSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.aktivesTurnierSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Die Spieler-DB-Dialoge laufen direkt aus <code class="JavaDocCode">ProtocolHandler.behandleDialogBefehl</code> ohne <code class="JavaDocCode">SheetRunner</code>, daher müssen sie selbst einen <code><a class="el" href="../../d6/d19/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager.html">BlattschutzManager</a></code>- Scope öffnen, sonst werfen Sheet-Schreibvorgänge im Turnier-Modus. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00365">365</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  365</span>                                                                             {</div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> DocumentPropertiesHelper(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><span class="lineno">  367</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a451160a02ffc53de318c0230c9bf4406" name="a451160a02ffc53de318c0230c9bf4406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a451160a02ffc53de318c0230c9bf4406">&#9670;&#160;</a></span>aktiviereMeldelisteSheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.aktiviereMeldelisteSheet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fehler werden stillschweigend geloggt — die Aktivierung ist UX-Komfort und darf den Dialog-Workflow nicht blockieren. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00347">347</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>                                                                        {</div>
+<div class="line"><span class="lineno">  348</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  349</span>            SheetHelper sh = <span class="keyword">new</span> SheetHelper(ws);</div>
+<div class="line"><span class="lineno">  350</span>            XSpreadsheet meldeliste = sh.findByName(SheetNamen.meldeliste());</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">if</span> (meldeliste != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  352</span>                sh.setActiveSheet(meldeliste);</div>
+<div class="line"><span class="lineno">  353</span>            }</div>
+<div class="line"><span class="lineno">  354</span>        } <span class="keywordflow">catch</span> (RuntimeException e) {</div>
+<div class="line"><span class="lineno">  355</span>            logger.warn(<span class="stringliteral">&quot;Meldeliste-Sheet konnte nicht aktiviert werden&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  356</span>        }</div>
+<div class="line"><span class="lineno">  357</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aad7f16559f2777cbe94780dcbf382ca9" name="aad7f16559f2777cbe94780dcbf382ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7f16559f2777cbe94780dcbf382ca9">&#9670;&#160;</a></span>exportSpielerDb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.exportSpielerDb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00246">246</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                              {</div>
+<div class="line"><span class="lineno">  247</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ws.getxContext());</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  250</span>        }</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  252</span>            SpielerDbExportLoader exportLoader = <span class="keyword">new</span> SpielerDbExportLoader(</div>
+<div class="line"><span class="lineno">  253</span>                    <span class="keyword">new</span> SpielerRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  254</span>                    <span class="keyword">new</span> VereinRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  255</span>                    <span class="keyword">new</span> LabelRepository(conn.get()));</div>
+<div class="line"><span class="lineno">  256</span>            <span class="keyword">new</span> SpielerDbExportDialog(ws.getxContext(), exportLoader, conn.get()).zeigen();</div>
+<div class="line"><span class="lineno">  257</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception | RuntimeException e) {</div>
+<div class="line"><span class="lineno">  258</span>            logger.error(<span class="stringliteral">&quot;Spieler-DB-Export-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  259</span>        }</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8efa22282ecd194cc4b44eb9d7ce757f" name="a8efa22282ecd194cc4b44eb9d7ce757f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efa22282ecd194cc4b44eb9d7ce757f">&#9670;&#160;</a></span>importSpielerDb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.importSpielerDb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00262">262</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>                                                              {</div>
+<div class="line"><span class="lineno">  263</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ws.getxContext());</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  268</span>            <span class="keyword">new</span> SpielerDbImportDialog(ws.getxContext(), conn.get()).zeigen();</div>
+<div class="line"><span class="lineno">  269</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception | RuntimeException e) {</div>
+<div class="line"><span class="lineno">  270</span>            logger.error(<span class="stringliteral">&quot;Spieler-DB-Import-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  271</span>        }</div>
+<div class="line"><span class="lineno">  272</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9589f2248a0e9b109d30245759b5be2b" name="a9589f2248a0e9b109d30245759b5be2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9589f2248a0e9b109d30245759b5be2b">&#9670;&#160;</a></span>oeffneImBrowser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.oeffneImBrowser </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">URI</td>          <td class="paramname"><span class="paramname"><em>url</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00299">299</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  299</span>                                                                        {</div>
+<div class="line"><span class="lineno">  300</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  301</span>            BrowserOeffner.oeffne(url);</div>
+<div class="line"><span class="lineno">  302</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><span class="lineno">  303</span>            logger.warn(<span class="stringliteral">&quot;Browser konnte nicht geöffnet werden&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  304</span>            MessageBox.from(ctx, MessageBoxTypeEnum.INFO_OK)</div>
+<div class="line"><span class="lineno">  305</span>                    .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.menu.toplevel&quot;</span>))</div>
+<div class="line"><span class="lineno">  306</span>                    .message(I18n.get(<span class="stringliteral">&quot;spielerdb.webview.url_kopieren&quot;</span>, url.toString()))</div>
+<div class="line"><span class="lineno">  307</span>                    .show();</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a40560e81e6b8bf7f81761267cad471d0" name="a40560e81e6b8bf7f81761267cad471d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40560e81e6b8bf7f81761267cad471d0">&#9670;&#160;</a></span>oeffneLabelVerwaltung()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.oeffneLabelVerwaltung </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00311">311</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  311</span>                                                                    {</div>
+<div class="line"><span class="lineno">  312</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ws.getxContext());</div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  315</span>        }</div>
+<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keyword">new</span> LabelVerwaltenDialog(ws.getxContext(),</div>
+<div class="line"><span class="lineno">  318</span>                    <span class="keyword">new</span> LabelRepository(conn.get())).zeigen();</div>
+<div class="line"><span class="lineno">  319</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><span class="lineno">  320</span>            logger.error(<span class="stringliteral">&quot;Label-Verwalten-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  321</span>        }</div>
+<div class="line"><span class="lineno">  322</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a48eb7d13d9fb533d626e1b86dffec421" name="a48eb7d13d9fb533d626e1b86dffec421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48eb7d13d9fb533d626e1b86dffec421">&#9670;&#160;</a></span>oeffneOderMelde()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="../../d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html">SpielerDbConnection</a> &gt; de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.oeffneOderMelde </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00369">369</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  369</span>                                                                                        {</div>
+<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">return</span> Optional.of(SpielerDbConnection.getInstance());</div>
+<div class="line"><span class="lineno">  372</span>        } <span class="keywordflow">catch</span> (SpielerDbException e) {</div>
+<div class="line"><span class="lineno">  373</span>            logger.error(<span class="stringliteral">&quot;Spieler-DB konnte nicht geöffnet werden&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  374</span>            String text = e.istLockFehler()</div>
+<div class="line"><span class="lineno">  375</span>                    ? I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.db_locked&quot;</span>)</div>
+<div class="line"><span class="lineno">  376</span>                    : I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.dbinit&quot;</span>,</div>
+<div class="line"><span class="lineno">  377</span>                            e.getMessage() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : e.getMessage());</div>
+<div class="line"><span class="lineno">  378</span>            MessageBox.from(ctx, MessageBoxTypeEnum.ERROR_OK)</div>
+<div class="line"><span class="lineno">  379</span>                    .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.titel&quot;</span>))</div>
+<div class="line"><span class="lineno">  380</span>                    .message(text)</div>
+<div class="line"><span class="lineno">  381</span>                    .show();</div>
+<div class="line"><span class="lineno">  382</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  383</span>        } <span class="keywordflow">catch</span> (RuntimeException | LinkageError e) {</div>
+<div class="line"><span class="lineno">  384</span>            <span class="comment">// LinkageError: schützt vor stillem JVM-Tod bei künftigen</span></div>
+<div class="line"><span class="lineno">  385</span>            <span class="comment">// Classloader-Konflikten (vgl. HSQLDB-Shading, build.gradle).</span></div>
+<div class="line"><span class="lineno">  386</span>            logger.error(<span class="stringliteral">&quot;Spieler-DB: unerwarteter Fehler beim Initialisieren&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  387</span>            MessageBox.from(ctx, MessageBoxTypeEnum.ERROR_OK)</div>
+<div class="line"><span class="lineno">  388</span>                    .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.titel&quot;</span>))</div>
+<div class="line"><span class="lineno">  389</span>                    .message(I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.dbinit&quot;</span>,</div>
+<div class="line"><span class="lineno">  390</span>                            e.getClass().getSimpleName() + <span class="stringliteral">&quot;: &quot;</span> + e.getMessage()))</div>
+<div class="line"><span class="lineno">  391</span>                    .show();</div>
+<div class="line"><span class="lineno">  392</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><span class="lineno">  393</span>        }</div>
+<div class="line"><span class="lineno">  394</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a01e91c32b70ee212c941098fad736287" name="a01e91c32b70ee212c941098fad736287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e91c32b70ee212c941098fad736287">&#9670;&#160;</a></span>oeffneSpielerVerwaltung()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.oeffneSpielerVerwaltung </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00059">59</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                      {</div>
+<div class="line"><span class="lineno">   60</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ws.getxContext());</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>        ProcessBox pb = ProcessBox.from();</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordtype">boolean</span> warSichtbar = pb.istSichtbar();</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">   67</span>            pb.hide();</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keyword">new</span> SpielerSucheDialog(ws.getxContext(),</div>
+<div class="line"><span class="lineno">   71</span>                    <span class="keyword">new</span> SpielerRepository(conn.get()),</div>
+<div class="line"><span class="lineno">   72</span>                    <span class="keyword">new</span> VereinRepository(conn.get()),</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keyword">new</span> LabelRepository(conn.get()),</div>
+<div class="line"><span class="lineno">   74</span>                    <span class="keyword">null</span> <span class="comment">/* Verwaltungsmodus */</span>).zeigen();</div>
+<div class="line"><span class="lineno">   75</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception | RuntimeException e) {</div>
+<div class="line"><span class="lineno">   76</span>            logger.error(<span class="stringliteral">&quot;Spieler-Suche-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">   77</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">   79</span>                pb.visibleWennAutomatisch();</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5d0be5ec76ed7169f2e002431b6b14eb" name="a5d0be5ec76ed7169f2e002431b6b14eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0be5ec76ed7169f2e002431b6b14eb">&#9670;&#160;</a></span>oeffneVereinsVerwaltung()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.oeffneVereinsVerwaltung </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00233">233</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  233</span>                                                                      {</div>
+<div class="line"><span class="lineno">  234</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ws.getxContext());</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  236</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  237</span>        }</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keyword">new</span> VereinVerwaltenDialog(ws.getxContext(),</div>
+<div class="line"><span class="lineno">  240</span>                    <span class="keyword">new</span> VereinRepository(conn.get())).zeigen();</div>
+<div class="line"><span class="lineno">  241</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><span class="lineno">  242</span>            logger.error(<span class="stringliteral">&quot;Verein-Verwalten-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0a62387d05ad137d5d872aa9199306c1" name="a0a62387d05ad137d5d872aa9199306c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a62387d05ad137d5d872aa9199306c1">&#9670;&#160;</a></span>starteMeldelisteUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.starteMeldelisteUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></td>          <td class="paramname"><span class="paramname"><em>ts</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>LIGA/KEIN sind nicht erreichbar, da <code><a class="el" href="../../d8/db6/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_meldeliste_ziel_factory.html#ac2cf8e6c27c59bacd3c9af4c60061de8">MeldelisteZielFactory#fuerAktivesSheet</a></code> dafür kein Ziel liefert; der Zweig bleibt defensiv ohne Aktion. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00129">129</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                                        {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  131</span>            SheetRunner runner = <span class="keywordflow">switch</span> (ts) {</div>
+<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">case</span> SUPERMELEE -&gt; <span class="keyword">new</span> MeldeListeSheet_Update(ws).testTurnierSystem(TurnierSystem.SUPERMELEE);</div>
+<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">case</span> SCHWEIZER -&gt; <span class="keyword">new</span> SchweizerMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.SCHWEIZER);</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">case</span> FORMULEX -&gt; <span class="keyword">new</span> FormuleXMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.FORMULEX);</div>
+<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">case</span> KO -&gt; <span class="keyword">new</span> KoMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.KO).backUpDocument();</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">case</span> JGJ -&gt; <span class="keyword">new</span> JGJMeldeListeSheet_Update(ws).testTurnierSystem(TurnierSystem.JGJ).backUpDocument();</div>
+<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">case</span> MAASTRICHTER -&gt; <span class="keyword">new</span> MaastrichterMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.MAASTRICHTER).backUpDocument();</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">case</span> KASKADE -&gt; <span class="keyword">new</span> KaskadeMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.KASKADE).backUpDocument();</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">case</span> POULE -&gt; <span class="keyword">new</span> PouleMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.POULE).backUpDocument();</div>
+<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">case</span> TRIPTETE -&gt; <span class="keyword">new</span> de.petanqueturniermanager.triptete.meldeliste.TripTeteMeldeListeSheetUpdate(ws).testTurnierSystem(TurnierSystem.TRIPTETE).backUpDocument();</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">case</span> LIGA, KEIN -&gt; <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  142</span>            };</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">if</span> (runner != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  144</span>                runner.start();</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">catch</span> (GenerateException e) {</div>
+<div class="line"><span class="lineno">  147</span>            logger.error(<span class="stringliteral">&quot;Meldeliste-Aktualisieren nach Spieler-Übernahme fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9bc6258cee41be23cdfb8c35a2ce7797" name="a9bc6258cee41be23cdfb8c35a2ce7797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc6258cee41be23cdfb8c35a2ce7797">&#9670;&#160;</a></span>uebernehmenInMeldeliste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.uebernehmenInMeldeliste </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00084">84</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                                      {</div>
+<div class="line"><span class="lineno">   85</span>        XComponentContext ctx = ws.getxContext();</div>
+<div class="line"><span class="lineno">   86</span>        Optional&lt;MeldelisteZiel&gt; ziel = MeldelisteZielFactory.fuerAktivesSheet(ws);</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (ziel.isEmpty()) {</div>
+<div class="line"><span class="lineno">   88</span>            zeigeFehlerKeinZiel(ctx, ws);</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ctx);</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>        aktiviereMeldelisteSheet(ws);</div>
+<div class="line"><span class="lineno">   96</span>        ProcessBox pb = ProcessBox.from();</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordtype">boolean</span> warSichtbar = pb.istSichtbar();</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">   99</span>            pb.hide();</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>        SpielerSucheDialog dialog = <span class="keyword">new</span> SpielerSucheDialog(ctx,</div>
+<div class="line"><span class="lineno">  102</span>                <span class="keyword">new</span> SpielerRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keyword">new</span> VereinRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keyword">new</span> LabelRepository(conn.get()),</div>
+<div class="line"><span class="lineno">  105</span>                ziel.get());</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">try</span> (var _ = BlattschutzManager.get().scopeFuer(aktivesTurnierSystem(ws), ws)) {</div>
+<div class="line"><span class="lineno">  107</span>            dialog.zeigen();</div>
+<div class="line"><span class="lineno">  108</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><span class="lineno">  109</span>            logger.error(<span class="stringliteral">&quot;Spieler-Suche-Dialog fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  110</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (warSichtbar) {</div>
+<div class="line"><span class="lineno">  112</span>                pb.visibleWennAutomatisch();</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>        <span class="comment">// Nach Dialog-Schließen (Scope geschlossen, ProcessBox wiederhergestellt):</span></div>
+<div class="line"><span class="lineno">  116</span>        <span class="comment">// wurden Spieler übernommen, vergibt der Aktualisieren-Lauf die Team-Nr.</span></div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">if</span> (dialog.wurdenSpielerUebernommen()) {</div>
+<div class="line"><span class="lineno">  118</span>            starteMeldelisteUpdate(ws, aktivesTurnierSystem(ws));</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa5059535963b12cd62c292c9977f99fa" name="aa5059535963b12cd62c292c9977f99fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5059535963b12cd62c292c9977f99fa">&#9670;&#160;</a></span>vorlageErstellen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.vorlageErstellen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00181">181</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                               {</div>
+<div class="line"><span class="lineno">  182</span>        XComponentContext ctx = ws.getxContext();</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">try</span> (var _ = BlattschutzManager.get().scopeFuer(aktivesTurnierSystem(ws), ws)) {</div>
+<div class="line"><span class="lineno">  184</span>            SpielerDbVorlageSheet.bereitstellen(ws);</div>
+<div class="line"><span class="lineno">  185</span>        } <span class="keywordflow">catch</span> (GenerateException | RuntimeException e) {</div>
+<div class="line"><span class="lineno">  186</span>            logger.error(<span class="stringliteral">&quot;Vorlage-Sheet konnte nicht angelegt werden&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  187</span>            MessageBox.from(ctx, MessageBoxTypeEnum.ERROR_OK)</div>
+<div class="line"><span class="lineno">  188</span>                    .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.titel&quot;</span>))</div>
+<div class="line"><span class="lineno">  189</span>                    .message(e.getMessage() == <span class="keyword">null</span> ? e.getClass().getSimpleName() : e.getMessage())</div>
+<div class="line"><span class="lineno">  190</span>                    .show();</div>
+<div class="line"><span class="lineno">  191</span>        }</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a661a8a813468e9a6819a4fc91422804b" name="a661a8a813468e9a6819a4fc91422804b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661a8a813468e9a6819a4fc91422804b">&#9670;&#160;</a></span>zeigeFehlerKeinZiel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.zeigeFehlerKeinZiel </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&#160;B. Liga) wird der Systemname genannt; sonst der generische „keine Meldeliste"-Hinweis. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00330">330</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>                                                                                          {</div>
+<div class="line"><span class="lineno">  331</span>        Optional&lt;TurnierSystem&gt; nichtUnterstuetzt = MeldelisteZielFactory.nichtUnterstuetztesSystem(ws);</div>
+<div class="line"><span class="lineno">  332</span>        String text = nichtUnterstuetzt</div>
+<div class="line"><span class="lineno">  333</span>                .map(ts -&gt; I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.system_nicht_unterstuetzt&quot;</span>, ts.getBezeichnung()))</div>
+<div class="line"><span class="lineno">  334</span>                .orElseGet(() -&gt; I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.keine_meldeliste&quot;</span>));</div>
+<div class="line"><span class="lineno">  335</span>        MessageBox.from(ctx, MessageBoxTypeEnum.WARN_OK)</div>
+<div class="line"><span class="lineno">  336</span>                .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.menu.toplevel&quot;</span>))</div>
+<div class="line"><span class="lineno">  337</span>                .message(text)</div>
+<div class="line"><span class="lineno">  338</span>                .show();</div>
+<div class="line"><span class="lineno">  339</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae9058ef200db3ffcaeb3916bbd2fd597" name="ae9058ef200db3ffcaeb3916bbd2fd597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9058ef200db3ffcaeb3916bbd2fd597">&#9670;&#160;</a></span>zeigeWebView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.zeigeWebView </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a></td>          <td class="paramname"><span class="paramname"><em>ws</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Server bindet stets auf <code class="JavaDocCode">127.0.0.1</code> mit dynamisch vergebenem Port. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00278">278</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  278</span>                                                           {</div>
+<div class="line"><span class="lineno">  279</span>        XComponentContext ctx = ws.getxContext();</div>
+<div class="line"><span class="lineno">  280</span>        Optional&lt;SpielerDbConnection&gt; conn = oeffneOderMelde(ctx);</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">if</span> (conn.isEmpty()) {</div>
+<div class="line"><span class="lineno">  282</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  283</span>        }</div>
+<div class="line"><span class="lineno">  284</span>        URI url;</div>
+<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  286</span>            url = SpielerDbWebViewServer.starteOderHole(conn.get());</div>
+<div class="line"><span class="lineno">  287</span>        } <span class="keywordflow">catch</span> (SpielerDbException e) {</div>
+<div class="line"><span class="lineno">  288</span>            logger.error(<span class="stringliteral">&quot;Web-Viewer konnte nicht gestartet werden&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  289</span>            MessageBox.from(ctx, MessageBoxTypeEnum.ERROR_OK)</div>
+<div class="line"><span class="lineno">  290</span>                    .caption(I18n.get(<span class="stringliteral">&quot;spielerdb.fehler.titel&quot;</span>))</div>
+<div class="line"><span class="lineno">  291</span>                    .message(I18n.get(<span class="stringliteral">&quot;spielerdb.webview.fehler.start&quot;</span>,</div>
+<div class="line"><span class="lineno">  292</span>                            e.getMessage() == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : e.getMessage()))</div>
+<div class="line"><span class="lineno">  293</span>                    .show();</div>
+<div class="line"><span class="lineno">  294</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  295</span>        }</div>
+<div class="line"><span class="lineno">  296</span>        oeffneImBrowser(ctx, url);</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a012c0ca6ce3a7c65e1aa931978648f89" name="a012c0ca6ce3a7c65e1aa931978648f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012c0ca6ce3a7c65e1aa931978648f89">&#9670;&#160;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger de.petanqueturniermanager.spielerdb.ui.SpielerDbDispatcher.logger = LogManager.getLogger(SpielerDbDispatcher.class)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html#l00055">55</a> der Datei <a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/spielerdb/ui/<a class="el" href="../../d9/d78/_spieler_db_dispatcher_8java_source.html">SpielerDbDispatcher.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html">spielerdb</a></li><li class="navelem"><a href="../../d7/d89/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1ui.html">ui</a></li><li class="navelem"><a href="../../da/d9c/classde_1_1petanqueturniermanager_1_1spielerdb_1_1ui_1_1_spieler_db_dispatcher.html">SpielerDbDispatcher</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

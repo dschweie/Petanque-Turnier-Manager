@@ -1,0 +1,6 @@
+var namespacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration =
+[
+    [ "IJGJProperiesSpalte", "dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html", "dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte" ],
+    [ "JGJKonfigurationSheet", "de/ded/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_j_g_j_konfiguration_sheet.html", "de/ded/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_j_g_j_konfiguration_sheet" ],
+    [ "JGJPropertiesSpalte", "da/dc7/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_j_g_j_properties_spalte.html", "da/dc7/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_j_g_j_properties_spalte" ]
+];

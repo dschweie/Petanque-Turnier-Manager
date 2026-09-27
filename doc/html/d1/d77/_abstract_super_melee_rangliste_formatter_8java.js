@@ -1,0 +1,4 @@
+var _abstract_super_melee_rangliste_formatter_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.AbstractSuperMeleeRanglisteFormatter", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter.html", "d0/d3e/classde_1_1petanqueturniermanager_1_1supermelee_1_1_abstract_super_melee_rangliste_formatter" ]
+];

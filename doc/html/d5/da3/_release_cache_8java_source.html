@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/comp/newrelease/ReleaseCache.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/da3/_release_cache_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ReleaseCache.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/da3/_release_cache_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.comp.newrelease;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.io.BufferedReader;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.io.BufferedWriter;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.nio.file.AtomicMoveNotSupportedException;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.nio.file.Files;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.nio.file.Path;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.nio.file.Paths;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> java.nio.file.StandardCopyOption;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> java.time.Duration;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> java.time.Instant;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> java.time.format.DateTimeFormatter;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> java.time.format.DateTimeParseException;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> java.util.Objects;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> java.util.Optional;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> com.google.gson.Gson;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">import</span> com.google.gson.GsonBuilder;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">import</span> com.google.gson.JsonSyntaxException;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">import</span> com.google.gson.TypeAdapter;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">import</span> com.google.gson.stream.JsonReader;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">import</span> com.google.gson.stream.JsonToken;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">import</span> com.google.gson.stream.JsonWriter;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html">   54</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aff2be32190a8ea4aaebaccc0f9d2bb9c">ReleaseCache</a> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">   56</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aff2be32190a8ea4aaebaccc0f9d2bb9c">ReleaseCache</a>.class);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a01714fc3141d8401ab42fac24800eb05">   57</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a01714fc3141d8401ab42fac24800eb05">DEFAULT_DATEINAME</a> = <span class="stringliteral">&quot;release.info&quot;</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a05d1e7b893e7d438e1669ab2273a5f86">   58</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a05d1e7b893e7d438e1669ab2273a5f86">VERZEICHNIS_IM_HOME</a> = <span class="stringliteral">&quot;.petanqueturniermanager&quot;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">   60</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> Path <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a77f59f5f522880d5927029c8a1445d86">   61</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> Gson <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a77f59f5f522880d5927029c8a1445d86">gson</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aff2be32190a8ea4aaebaccc0f9d2bb9c">   63</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aff2be32190a8ea4aaebaccc0f9d2bb9c">ReleaseCache</a>() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">this</span>(<a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a988ad140050c1addaa379b5fb7c3d61b">defaultPfad</a>());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a10a639710d7b7cc7a613fcba4a8e87cd">   67</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a10a639710d7b7cc7a613fcba4a8e87cd">ReleaseCache</a>(Path <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        this.cacheDatei = Objects.requireNonNull(<a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, <span class="stringliteral">&quot;cacheDatei&quot;</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        this.gson = <span class="keyword">new</span> GsonBuilder()</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                .setPrettyPrinting()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                .registerTypeAdapter(Instant.class, <span class="keyword">new</span> <a class="code hl_class" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html">InstantTypeAdapter</a>())</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                .create();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a988ad140050c1addaa379b5fb7c3d61b">   75</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> Path <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a988ad140050c1addaa379b5fb7c3d61b">defaultPfad</a>() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        var home = System.getProperty(<span class="stringliteral">&quot;user.home&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> Paths.get(home, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a05d1e7b893e7d438e1669ab2273a5f86">VERZEICHNIS_IM_HOME</a>, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a01714fc3141d8401ab42fac24800eb05">DEFAULT_DATEINAME</a>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a4113cb2dc6eb9f3d2dc7a1bbbd45286a">   83</a></span>    <span class="keyword">public</span> Path <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a4113cb2dc6eb9f3d2dc7a1bbbd45286a">pfad</a>() {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a7e59eefbd3ac9a6e72bdafc8559db060">   87</a></span>    <span class="keyword">private</span> String <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a7e59eefbd3ac9a6e72bdafc8559db060">dateiname</a>() {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        var fileName = <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>.getFileName();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> fileName != <span class="keyword">null</span> ? fileName.toString() : <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a01714fc3141d8401ab42fac24800eb05">DEFAULT_DATEINAME</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a4b33b454b33d5cc5cb117a3590cfc7bc">   96</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a4b33b454b33d5cc5cb117a3590cfc7bc">schreibe</a>(<a class="code hl_function" href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">ReleaseInfo</a> release) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        Objects.requireNonNull(release, <span class="stringliteral">&quot;release&quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a1eb9f06901b003f34e8a47f6e8f6e564">schreibeMitZeitstempel</a>(release, Instant.now());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a1eb9f06901b003f34e8a47f6e8f6e564">  104</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a1eb9f06901b003f34e8a47f6e8f6e564">schreibeMitZeitstempel</a>(<a class="code hl_function" href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">ReleaseInfo</a> release, Instant cachedAt) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        Objects.requireNonNull(release, <span class="stringliteral">&quot;release&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        Objects.requireNonNull(cachedAt, <span class="stringliteral">&quot;cachedAt&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        var parent = <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>.getParent();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">if</span> (parent != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            Files.createDirectories(parent);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        var tmp = (parent != <span class="keyword">null</span> ? parent : Paths.get(<span class="stringliteral">&quot;.&quot;</span>))</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                .resolve(<a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a7e59eefbd3ac9a6e72bdafc8559db060">dateiname</a>() + <span class="stringliteral">&quot;.tmp&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        var huelle = <span class="keyword">new</span> <a class="code hl_function" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a91a880b318d62d1b8e9188de1d9c5f61">CacheHuelle</a>(cachedAt, release);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">try</span> (BufferedWriter writer = Files.newBufferedWriter(tmp)) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a77f59f5f522880d5927029c8a1445d86">gson</a>.toJson(huelle, <a class="code hl_class" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html">CacheHuelle</a>.class, writer);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            Files.move(tmp, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    StandardCopyOption.ATOMIC_MOVE,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    StandardCopyOption.REPLACE_EXISTING);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        } <span class="keywordflow">catch</span> (AtomicMoveNotSupportedException e) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.debug(<span class="stringliteral">&quot;ATOMIC_MOVE nicht unterstützt – Fallback auf REPLACE_EXISTING&quot;</span>, e);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            Files.move(tmp, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, StandardCopyOption.REPLACE_EXISTING);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            Files.deleteIfExists(tmp);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a3a96a26e3f300e697a0a6d91c5d76ff4">  133</a></span>    <span class="keyword">public</span> Optional&lt;ReleaseInfo&gt; <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a3a96a26e3f300e697a0a6d91c5d76ff4">ladeWennFrisch</a>(Duration maxAlter) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        Objects.requireNonNull(maxAlter, <span class="stringliteral">&quot;maxAlter&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        var huelle = <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a279653f38961f6252bb8464761437a7a">laden</a>().orElse(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (huelle == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        var alter = Duration.between(huelle.cachedAt, Instant.now());</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">if</span> (alter.isNegative() || alter.compareTo(maxAlter) &lt;= 0) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">return</span> Optional.of(huelle.release);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.debug(<span class="stringliteral">&quot;Cache-Eintrag ist {} alt (max {}) – als stale verworfen&quot;</span>, alter, maxAlter);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span></div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aaa4ea6adb701bed3d7d811eb9a575452">  152</a></span>    <span class="keyword">public</span> Optional&lt;ReleaseInfo&gt; <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aaa4ea6adb701bed3d7d811eb9a575452">ladeUnabhaengigVomAlter</a>() {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a279653f38961f6252bb8464761437a7a">laden</a>().map(huelle -&gt; huelle.release);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a279653f38961f6252bb8464761437a7a">  156</a></span>    <span class="keyword">private</span> Optional&lt;CacheHuelle&gt; <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a279653f38961f6252bb8464761437a7a">laden</a>() {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">if</span> (!(Files.exists(<a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>) &amp;&amp; Files.isReadable(<a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>))) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">try</span> (BufferedReader reader = Files.newBufferedReader(<a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>)) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            var huelle = <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a77f59f5f522880d5927029c8a1445d86">gson</a>.fromJson(reader, <a class="code hl_class" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html">CacheHuelle</a>.class);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">if</span> (huelle == <span class="keyword">null</span> || huelle.cachedAt == <span class="keyword">null</span> || huelle.release == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#ab21d602a2ce3f0965b7e86a3e62a78b0">korruptUmbenennen</a>(<span class="stringliteral">&quot;unvollstaendige-struktur&quot;</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordflow">return</span> Optional.of(huelle);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        } <span class="keywordflow">catch</span> (JsonSyntaxException e) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.warn(<span class="stringliteral">&quot;Cache-Datei {} enthält ungültiges JSON – wird als korrupt markiert&quot;</span>, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, e);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#ab21d602a2ce3f0965b7e86a3e62a78b0">korruptUmbenennen</a>(<span class="stringliteral">&quot;json-syntax&quot;</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.warn(<span class="stringliteral">&quot;Cache-Datei {} konnte nicht gelesen werden&quot;</span>, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, e);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="comment">// Record-Compact-Constructor wirft NullPointerException/IllegalArgumentException</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="comment">// wenn Pflichtfelder im JSON fehlen → wie Korruption behandeln.</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.warn(<span class="stringliteral">&quot;Cache-Datei {} hat unerwartete Struktur – wird als korrupt markiert&quot;</span>, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, e);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#ab21d602a2ce3f0965b7e86a3e62a78b0">korruptUmbenennen</a>(<span class="stringliteral">&quot;struktur-mismatch&quot;</span>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="}">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#ab21d602a2ce3f0965b7e86a3e62a78b0">  183</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#ab21d602a2ce3f0965b7e86a3e62a78b0">korruptUmbenennen</a>(String grund) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        var ziel = <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>.resolveSibling(</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                <a class="code hl_function" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a7e59eefbd3ac9a6e72bdafc8559db060">dateiname</a>() + <span class="stringliteral">&quot;.corrupt-&quot;</span> + Instant.now().toEpochMilli());</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            Files.move(<a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, ziel, StandardCopyOption.REPLACE_EXISTING);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.info(<span class="stringliteral">&quot;Korrupte Cache-Datei nach {} verschoben (Grund: {})&quot;</span>, ziel, grund);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        } <span class="keywordflow">catch</span> (IOException ioe) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">logger</a>.warn(<span class="stringliteral">&quot;Konnte korrupte Cache-Datei {} nicht umbenennen&quot;</span>, <a class="code hl_variable" href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">cacheDatei</a>, ioe);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="};">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html">  198</a></span>    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a91a880b318d62d1b8e9188de1d9c5f61">CacheHuelle</a> {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a34fbb5a8b66bcb9759f915690677cac8">  199</a></span>        <span class="keyword">final</span> Instant <a class="code hl_variable" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a34fbb5a8b66bcb9759f915690677cac8">cachedAt</a>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a0a3a201a4e3c396f0dfdb785383cd3dc">  200</a></span>        <span class="keyword">final</span> <a class="code hl_function" href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">ReleaseInfo</a> <a class="code hl_variable" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a0a3a201a4e3c396f0dfdb785383cd3dc">release</a>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a91a880b318d62d1b8e9188de1d9c5f61">  202</a></span>        <a class="code hl_function" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a91a880b318d62d1b8e9188de1d9c5f61">CacheHuelle</a>(Instant <a class="code hl_variable" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a34fbb5a8b66bcb9759f915690677cac8">cachedAt</a>, <a class="code hl_function" href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">ReleaseInfo</a> <a class="code hl_variable" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a0a3a201a4e3c396f0dfdb785383cd3dc">release</a>) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            this.cachedAt = <a class="code hl_variable" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a34fbb5a8b66bcb9759f915690677cac8">cachedAt</a>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            this.release = <a class="code hl_variable" href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a0a3a201a4e3c396f0dfdb785383cd3dc">release</a>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span></div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="};">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html">  211</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html">InstantTypeAdapter</a> <span class="keyword">extends</span> <a class="code hl_class" href="../../d2/d9f/class_type_adapter.html">TypeAdapter</a>&lt;Instant&gt; {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        @Override</div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html#af5d6ae18c59d4f7756cce1f0748581d8">  213</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html#af5d6ae18c59d4f7756cce1f0748581d8">write</a>(JsonWriter out, @Nullable Instant value) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">if</span> (value == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                out.nullValue();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            out.value(DateTimeFormatter.ISO_INSTANT.format(value));</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        }</div>
+</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        @Override</div>
+<div class="foldopen" id="foldopen00222" data-start="{" data-end="}">
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html#a46f34bc799c057d2f1f2b73f33222463">  222</a></span>        <span class="keyword">public</span> @Nullable Instant <a class="code hl_function" href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html#a46f34bc799c057d2f1f2b73f33222463">read</a>(JsonReader in) <span class="keywordflow">throws</span> IOException {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">if</span> (in.peek() == JsonToken.NULL) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                in.nextNull();</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            var raw = in.nextString();</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordflow">return</span> Instant.parse(raw);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            } <span class="keywordflow">catch</span> (DateTimeParseException e) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> JsonSyntaxException(<span class="stringliteral">&quot;Ungültiger Instant-Wert: &quot;</span> + raw, e);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
+</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
+</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
+</div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclass_type_adapter_html"><div class="ttname"><a href="../../d2/d9f/class_type_adapter.html">TypeAdapter</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle_html"><div class="ttname"><a href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html">de.petanqueturniermanager.comp.newrelease.ReleaseCache.CacheHuelle</a></div><div class="ttdoc">Hülle für die Serialisierung – trennt den Zeitstempel klar vom Release-Datenmodell.</div><div class="ttdef"><b>Definition</b> <a href="#l00198">ReleaseCache.java:198</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle_html_a0a3a201a4e3c396f0dfdb785383cd3dc"><div class="ttname"><a href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a0a3a201a4e3c396f0dfdb785383cd3dc">de.petanqueturniermanager.comp.newrelease.ReleaseCache.CacheHuelle.release</a></div><div class="ttdeci">final ReleaseInfo release</div><div class="ttdef"><b>Definition</b> <a href="#l00200">ReleaseCache.java:200</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle_html_a34fbb5a8b66bcb9759f915690677cac8"><div class="ttname"><a href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a34fbb5a8b66bcb9759f915690677cac8">de.petanqueturniermanager.comp.newrelease.ReleaseCache.CacheHuelle.cachedAt</a></div><div class="ttdeci">final Instant cachedAt</div><div class="ttdef"><b>Definition</b> <a href="#l00199">ReleaseCache.java:199</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle_html_a91a880b318d62d1b8e9188de1d9c5f61"><div class="ttname"><a href="../../da/db2/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_cache_huelle.html#a91a880b318d62d1b8e9188de1d9c5f61">de.petanqueturniermanager.comp.newrelease.ReleaseCache.CacheHuelle.CacheHuelle</a></div><div class="ttdeci">CacheHuelle(Instant cachedAt, ReleaseInfo release)</div><div class="ttdef"><b>Definition</b> <a href="#l00202">ReleaseCache.java:202</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter_html"><div class="ttname"><a href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html">de.petanqueturniermanager.comp.newrelease.ReleaseCache.InstantTypeAdapter</a></div><div class="ttdoc">Gson-TypeAdapter für Instant – schreibt/liest als ISO-8601-String.</div><div class="ttdef"><b>Definition</b> <a href="#l00211">ReleaseCache.java:211</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter_html_a46f34bc799c057d2f1f2b73f33222463"><div class="ttname"><a href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html#a46f34bc799c057d2f1f2b73f33222463">de.petanqueturniermanager.comp.newrelease.ReleaseCache.InstantTypeAdapter.read</a></div><div class="ttdeci">Instant read(JsonReader in)</div><div class="ttdef"><b>Definition</b> <a href="#l00222">ReleaseCache.java:222</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter_html_af5d6ae18c59d4f7756cce1f0748581d8"><div class="ttname"><a href="../../dd/d69/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_1_1_instant_type_adapter.html#af5d6ae18c59d4f7756cce1f0748581d8">de.petanqueturniermanager.comp.newrelease.ReleaseCache.InstantTypeAdapter.write</a></div><div class="ttdeci">void write(JsonWriter out, @Nullable Instant value)</div><div class="ttdef"><b>Definition</b> <a href="#l00213">ReleaseCache.java:213</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a01714fc3141d8401ab42fac24800eb05"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a01714fc3141d8401ab42fac24800eb05">de.petanqueturniermanager.comp.newrelease.ReleaseCache.DEFAULT_DATEINAME</a></div><div class="ttdeci">static final String DEFAULT_DATEINAME</div><div class="ttdef"><b>Definition</b> <a href="#l00057">ReleaseCache.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a05d1e7b893e7d438e1669ab2273a5f86"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a05d1e7b893e7d438e1669ab2273a5f86">de.petanqueturniermanager.comp.newrelease.ReleaseCache.VERZEICHNIS_IM_HOME</a></div><div class="ttdeci">static final String VERZEICHNIS_IM_HOME</div><div class="ttdef"><b>Definition</b> <a href="#l00058">ReleaseCache.java:58</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a10a639710d7b7cc7a613fcba4a8e87cd"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a10a639710d7b7cc7a613fcba4a8e87cd">de.petanqueturniermanager.comp.newrelease.ReleaseCache.ReleaseCache</a></div><div class="ttdeci">ReleaseCache(Path cacheDatei)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">ReleaseCache.java:67</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a1eb9f06901b003f34e8a47f6e8f6e564"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a1eb9f06901b003f34e8a47f6e8f6e564">de.petanqueturniermanager.comp.newrelease.ReleaseCache.schreibeMitZeitstempel</a></div><div class="ttdeci">void schreibeMitZeitstempel(ReleaseInfo release, Instant cachedAt)</div><div class="ttdoc">Test-Hook: Erlaubt das Setzen eines expliziten Zeitstempels.</div><div class="ttdef"><b>Definition</b> <a href="#l00104">ReleaseCache.java:104</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a279653f38961f6252bb8464761437a7a"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a279653f38961f6252bb8464761437a7a">de.petanqueturniermanager.comp.newrelease.ReleaseCache.laden</a></div><div class="ttdeci">Optional&lt; CacheHuelle &gt; laden()</div><div class="ttdef"><b>Definition</b> <a href="#l00156">ReleaseCache.java:156</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a3a96a26e3f300e697a0a6d91c5d76ff4"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a3a96a26e3f300e697a0a6d91c5d76ff4">de.petanqueturniermanager.comp.newrelease.ReleaseCache.ladeWennFrisch</a></div><div class="ttdeci">Optional&lt; ReleaseInfo &gt; ladeWennFrisch(Duration maxAlter)</div><div class="ttdoc">Liefert die im Cache liegende ReleaseInfo, falls die Datei existiert, lesbar und nicht älter als maxA...</div><div class="ttdef"><b>Definition</b> <a href="#l00133">ReleaseCache.java:133</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a4113cb2dc6eb9f3d2dc7a1bbbd45286a"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a4113cb2dc6eb9f3d2dc7a1bbbd45286a">de.petanqueturniermanager.comp.newrelease.ReleaseCache.pfad</a></div><div class="ttdeci">Path pfad()</div><div class="ttdoc">Liefert den Pfad der Cache-Datei (für Tests/Logging).</div><div class="ttdef"><b>Definition</b> <a href="#l00083">ReleaseCache.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a44d6db665ba3d6c56d4f420a13b1dc37"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a44d6db665ba3d6c56d4f420a13b1dc37">de.petanqueturniermanager.comp.newrelease.ReleaseCache.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00056">ReleaseCache.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a4b33b454b33d5cc5cb117a3590cfc7bc"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a4b33b454b33d5cc5cb117a3590cfc7bc">de.petanqueturniermanager.comp.newrelease.ReleaseCache.schreibe</a></div><div class="ttdeci">void schreibe(ReleaseInfo release)</div><div class="ttdoc">Schreibt den Cache-Eintrag atomar auf die Platte.</div><div class="ttdef"><b>Definition</b> <a href="#l00096">ReleaseCache.java:96</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a77f59f5f522880d5927029c8a1445d86"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a77f59f5f522880d5927029c8a1445d86">de.petanqueturniermanager.comp.newrelease.ReleaseCache.gson</a></div><div class="ttdeci">final Gson gson</div><div class="ttdef"><b>Definition</b> <a href="#l00061">ReleaseCache.java:61</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a7e59eefbd3ac9a6e72bdafc8559db060"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a7e59eefbd3ac9a6e72bdafc8559db060">de.petanqueturniermanager.comp.newrelease.ReleaseCache.dateiname</a></div><div class="ttdeci">String dateiname()</div><div class="ttdef"><b>Definition</b> <a href="#l00087">ReleaseCache.java:87</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_a988ad140050c1addaa379b5fb7c3d61b"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#a988ad140050c1addaa379b5fb7c3d61b">de.petanqueturniermanager.comp.newrelease.ReleaseCache.defaultPfad</a></div><div class="ttdeci">static Path defaultPfad()</div><div class="ttdef"><b>Definition</b> <a href="#l00075">ReleaseCache.java:75</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_aaa4ea6adb701bed3d7d811eb9a575452"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aaa4ea6adb701bed3d7d811eb9a575452">de.petanqueturniermanager.comp.newrelease.ReleaseCache.ladeUnabhaengigVomAlter</a></div><div class="ttdeci">Optional&lt; ReleaseInfo &gt; ladeUnabhaengigVomAlter()</div><div class="ttdoc">Liefert den Cache-Inhalt ohne Frische-Check – auch alte Einträge werden zurückgegeben.</div><div class="ttdef"><b>Definition</b> <a href="#l00152">ReleaseCache.java:152</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_ab21d602a2ce3f0965b7e86a3e62a78b0"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#ab21d602a2ce3f0965b7e86a3e62a78b0">de.petanqueturniermanager.comp.newrelease.ReleaseCache.korruptUmbenennen</a></div><div class="ttdeci">void korruptUmbenennen(String grund)</div><div class="ttdef"><b>Definition</b> <a href="#l00183">ReleaseCache.java:183</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_af5c7d8ddbcbc696dccf9cad83cd37f19"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#af5c7d8ddbcbc696dccf9cad83cd37f19">de.petanqueturniermanager.comp.newrelease.ReleaseCache.cacheDatei</a></div><div class="ttdeci">final Path cacheDatei</div><div class="ttdef"><b>Definition</b> <a href="#l00060">ReleaseCache.java:60</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache_html_aff2be32190a8ea4aaebaccc0f9d2bb9c"><div class="ttname"><a href="../../dd/dcb/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_cache.html#aff2be32190a8ea4aaebaccc0f9d2bb9c">de.petanqueturniermanager.comp.newrelease.ReleaseCache.ReleaseCache</a></div><div class="ttdeci">ReleaseCache()</div><div class="ttdef"><b>Definition</b> <a href="#l00063">ReleaseCache.java:63</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease_html_abbb11f9b137e66b13f8ccaf1905a235b"><div class="ttname"><a href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">de.petanqueturniermanager.comp.newrelease.ReleaseInfo</a></div><div class="ttdeci">record ReleaseInfo(String tagName, String name, @Nullable Instant publishedAt, boolean prerelease, @Nullable String body, List&lt; AssetInfo &gt; assets)</div><div class="ttdoc">Reduzierte, projektinterne Darstellung einer GitHub-Release-Antwort.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/dea/_release_info_8java_source.html#l00029">ReleaseInfo.java:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_703d3c4b9989bf1c20a29a3ebe047f31.html">comp</a></li><li class="navelem"><a href="../../dir_12ee4ffd85c43ae1dced1e5b29ae0b5d.html">newrelease</a></li><li class="navelem"><a href="../../d5/da3/_release_cache_8java.html">ReleaseCache.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

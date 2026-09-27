@@ -1,0 +1,4 @@
+var _rangliste_hintergrund_farbe_un_gerade_char_red_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.RanglisteHintergrundFarbeUnGeradeCharRedStyle", "d5/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_rangliste_hintergrund_farbe_un_gerade_char_red_style.html", "d5/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_rangliste_hintergrund_farbe_un_gerade_char_red_style" ]
+];

@@ -1,0 +1,4 @@
+var _formule_x_abstract_spielrunde_sheet_8java =
+[
+    [ "de.petanqueturniermanager.formulex.spielrunde.FormuleXAbstractSpielrundeSheet", "d2/d94/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_abstract_spielrunde_sheet.html", "d2/d94/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_abstract_spielrunde_sheet" ]
+];

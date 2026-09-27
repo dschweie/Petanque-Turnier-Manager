@@ -1,0 +1,4 @@
+var _i_trip_tete_properties_spalte_8java =
+[
+    [ "de.petanqueturniermanager.triptete.konfiguration.ITripTetePropertiesSpalte", "dd/d61/interfacede_1_1petanqueturniermanager_1_1triptete_1_1konfiguration_1_1_i_trip_tete_properties_spalte.html", "dd/d61/interfacede_1_1petanqueturniermanager_1_1triptete_1_1konfiguration_1_1_i_trip_tete_properties_spalte" ]
+];

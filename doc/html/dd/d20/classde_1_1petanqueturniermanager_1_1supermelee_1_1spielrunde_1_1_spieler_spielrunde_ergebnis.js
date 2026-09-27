@@ -1,0 +1,25 @@
+var classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis =
+[
+    [ "from", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a79a1cc6ad934c0fefa85ed699325c929", null ],
+    [ "from", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a5ca60bdbd359c2dde5f3f5a2a2d7d09b", null ],
+    [ "from", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a6cbdd10bb59496267e87e08adc223afe", null ],
+    [ "getPositionMinusPunkte", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a780ccaf0eb88739897912225df4d8b00", null ],
+    [ "getPositionPlusPunkte", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#ad2a4f3ec26690dcd4cb159d6840214e0", null ],
+    [ "getPositionSpielerNr", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a105874f7a21a35e47e9c725ad7efae08", null ],
+    [ "getSpielerNr", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a04b5bab0f4248b20a87d070908faf956", null ],
+    [ "getSpielrunde", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a55dbe64157db144970893f729b05881e", null ],
+    [ "getSpielRundeTeam", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a3abcc3237381b68466dc967791fe1228", null ],
+    [ "setPositionMinusPunkte", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#ac2181ecbf5268acc6145d6dd1065e9c5", null ],
+    [ "setPositionPlusPunkte", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#ad99c6e3877a2be44a49c815810ecb2da", null ],
+    [ "setPositionSpielerNr", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a525195580083bf32adc3e4c3f8998ba4", null ],
+    [ "setSpielerNr", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a9dbb8d77b9f2517e0fedfa031a5d8c38", null ],
+    [ "setSpielrunde", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#ac1b70beea62d1f96861dde9f2f256e79", null ],
+    [ "setSpielRundeTeam", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a26e19ea9d691616250b0e3d70a00e312", null ],
+    [ "toString", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#aa248f747cd770ac5d672bad0b51c8aea", null ],
+    [ "positionMinusPunkte", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#ac2c2fd1871646db884c0253db7abc138", null ],
+    [ "positionPlusPunkte", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a7dc0a85726e2548ea3650bed4e8c805c", null ],
+    [ "positionSpielerNr", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a5c383d15361eae650985851ec49ce4ae", null ],
+    [ "spielerNr", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a4ecac3999ebeaa0de7ba57095bf46dcb", null ],
+    [ "spielrunde", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a8df5aba12c11773e47f36fbf08acc3d3", null ],
+    [ "spielRundeTeam", "dd/d20/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis.html#a8017c011f6c66fb9530c8245f34d404d", null ]
+];

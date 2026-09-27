@@ -1,0 +1,5 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_vordergrund_hintergrund_farbe_style =
+[
+    [ "AbstractVordergrundHintergrundFarbeStyle", "d3/d0e/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_vordergrund_hintergrund_farbe_style.html#af242198eaf357a3fb95c63553bf695ac", null ],
+    [ "buildCellProperties", "d3/d0e/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_vordergrund_hintergrund_farbe_style.html#ae502bfe4f2af24c389b26cf08df4fb8b", null ]
+];

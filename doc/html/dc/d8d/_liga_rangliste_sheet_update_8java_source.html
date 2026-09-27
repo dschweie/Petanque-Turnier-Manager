@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/liga/rangliste/LigaRanglisteSheetUpdate.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d8d/_liga_rangliste_sheet_update_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LigaRanglisteSheetUpdate.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d8d/_liga_rangliste_sheet_update_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.liga.rangliste;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.helper.rangliste.RanglisteUpdateHelper;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.model.TeamMeldungen;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html">   23</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a6fdb8e07f7472f38de3f734fb8c24fb0">LigaRanglisteSheetUpdate</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a9047fea19ef7f005483f79ac9a071938">LigaRanglisteSheet</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a9f3e1c4ebed2d3ddea50836891c3718c">   25</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a9f3e1c4ebed2d3ddea50836891c3718c">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a6fdb8e07f7472f38de3f734fb8c24fb0">LigaRanglisteSheetUpdate</a>.class);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a6fdb8e07f7472f38de3f734fb8c24fb0">   27</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a6fdb8e07f7472f38de3f734fb8c24fb0">LigaRanglisteSheetUpdate</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        super(<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    @Override</div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#aea22befc73899fdfaa3e96838dbf5ae2">   32</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#aea22befc73899fdfaa3e96838dbf5ae2">doRun</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        XSpreadsheet sheet = <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a2400a8827ca7866d47a3062150eaff30">getXSpreadSheet</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_variable" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a9f3e1c4ebed2d3ddea50836891c3718c">logger</a>.debug(<span class="stringliteral">&quot;RanglisteUpdate: Sheet nicht vorhanden – vollständiger Erstaufbau&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a6886c14b25646a7de90c4b0a98bcd358">upDateSheet</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a9f3e1c4ebed2d3ddea50836891c3718c">logger</a>.debug(<span class="stringliteral">&quot;RanglisteUpdate START – Thread=&#39;{}&#39;&quot;</span>, <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>.currentThread().getName());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.rangliste.aktualisieren&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a4cf80c689fe82cac8601df75f30838b9">getMeldeListe</a>().<a class="code hl_function" href="../../d8/dbf/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_melde_liste_sheet_update.html#aac15282463bcecc1d658074d58aa80f8">upDateSheet</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_class" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">TeamMeldungen</a> aktiveMeldungen = <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a8712532ba429df11853ba2ac3f944aa1">getAlleMeldungen</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!aktiveMeldungen.<a class="code hl_function" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html#aed1fa83c8e4548bfa5b0dbf20f9c280a">isValid</a>()) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.abbruch&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html">RanglisteUpdateHelper</a>.<a class="code hl_function" href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html#aa406b5cd8006c4431fd1c83adf1ec780">loescheDatenzeilen</a>(<span class="keyword">this</span>, sheet, aktiveMeldungen.<a class="code hl_function" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html#acd28936f8c63bf57fa38cbe6c50ea8ff">size</a>());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a6a28fdba209ba037ffe0859d44c57474">berechnungUndSchreiben</a>(sheet, <a class="code hl_function" href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a4cf80c689fe82cac8601df75f30838b9">getMeldeListe</a>(), aktiveMeldungen);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a9f3e1c4ebed2d3ddea50836891c3718c">logger</a>.debug(<span class="stringliteral">&quot;RanglisteUpdate ENDE – Thread=&#39;{}&#39;&quot;</span>, <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>.currentThread().getName());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="ttc" id="aclass_thread_html"><div class="ttname"><a href="../../d8/d18/class_thread.html">Thread</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a5d3fce9090dbab6b8a3b10d4a550a8ec"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">de.petanqueturniermanager.SheetRunner.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00047">SheetRunner.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper_html"><div class="ttname"><a href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html">de.petanqueturniermanager.helper.rangliste.RanglisteUpdateHelper</a></div><div class="ttdoc">Gemeinsame Hilfsmethoden für *RanglisteSheetUpdate-Klassen.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dad/_rangliste_update_helper_8java_source.html#l00014">RanglisteUpdateHelper.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper_html_aa406b5cd8006c4431fd1c83adf1ec780"><div class="ttname"><a href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html#aa406b5cd8006c4431fd1c83adf1ec780">de.petanqueturniermanager.helper.rangliste.RanglisteUpdateHelper.loescheDatenzeilen</a></div><div class="ttdeci">static void loescheDatenzeilen(IRangliste rangliste, XSpreadsheet sheet, int neueTeamAnzahl)</div><div class="ttdoc">Löscht veraltete Datenzeilen wenn sich die Teamanzahl verringert hat.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dad/_rangliste_update_helper_8java_source.html#l00027">RanglisteUpdateHelper.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_melde_liste_sheet_update_html_aac15282463bcecc1d658074d58aa80f8"><div class="ttname"><a href="../../d8/dbf/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_melde_liste_sheet_update.html#aac15282463bcecc1d658074d58aa80f8">de.petanqueturniermanager.liga.meldeliste.LigaMeldeListeSheetUpdate.upDateSheet</a></div><div class="ttdeci">void upDateSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_liga_melde_liste_sheet_update_8java_source.html#l00136">LigaMeldeListeSheetUpdate.java:136</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_html_a2400a8827ca7866d47a3062150eaff30"><div class="ttname"><a href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a2400a8827ca7866d47a3062150eaff30">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheet.getXSpreadSheet</a></div><div class="ttdeci">XSpreadsheet getXSpreadSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dfd/_liga_rangliste_sheet_8java_source.html#l00111">LigaRanglisteSheet.java:111</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_html_a4cf80c689fe82cac8601df75f30838b9"><div class="ttname"><a href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a4cf80c689fe82cac8601df75f30838b9">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheet.getMeldeListe</a></div><div class="ttdeci">LigaMeldeListeSheetUpdate getMeldeListe()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dfd/_liga_rangliste_sheet_8java_source.html#l00106">LigaRanglisteSheet.java:106</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_html_a6886c14b25646a7de90c4b0a98bcd358"><div class="ttname"><a href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a6886c14b25646a7de90c4b0a98bcd358">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheet.upDateSheet</a></div><div class="ttdeci">void upDateSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dfd/_liga_rangliste_sheet_8java_source.html#l00129">LigaRanglisteSheet.java:129</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_html_a6a28fdba209ba037ffe0859d44c57474"><div class="ttname"><a href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a6a28fdba209ba037ffe0859d44c57474">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheet.berechnungUndSchreiben</a></div><div class="ttdeci">void berechnungUndSchreiben(XSpreadsheet sheet, LigaMeldeListeSheetUpdate meldeliste, TeamMeldungen aktiveMeldungen)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dfd/_liga_rangliste_sheet_8java_source.html#l00165">LigaRanglisteSheet.java:165</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_html_a8712532ba429df11853ba2ac3f944aa1"><div class="ttname"><a href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a8712532ba429df11853ba2ac3f944aa1">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheet.getAlleMeldungen</a></div><div class="ttdeci">TeamMeldungen getAlleMeldungen()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dfd/_liga_rangliste_sheet_8java_source.html#l00125">LigaRanglisteSheet.java:125</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_html_a9047fea19ef7f005483f79ac9a071938"><div class="ttname"><a href="../../d8/df5/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet.html#a9047fea19ef7f005483f79ac9a071938">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheet.LigaRanglisteSheet</a></div><div class="ttdeci">LigaRanglisteSheet(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dfd/_liga_rangliste_sheet_8java_source.html#l00090">LigaRanglisteSheet.java:90</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update_html_a6fdb8e07f7472f38de3f734fb8c24fb0"><div class="ttname"><a href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a6fdb8e07f7472f38de3f734fb8c24fb0">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheetUpdate.LigaRanglisteSheetUpdate</a></div><div class="ttdeci">LigaRanglisteSheetUpdate(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00027">LigaRanglisteSheetUpdate.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update_html_a9f3e1c4ebed2d3ddea50836891c3718c"><div class="ttname"><a href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#a9f3e1c4ebed2d3ddea50836891c3718c">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheetUpdate.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00025">LigaRanglisteSheetUpdate.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update_html_aea22befc73899fdfaa3e96838dbf5ae2"><div class="ttname"><a href="../../d6/d58/classde_1_1petanqueturniermanager_1_1liga_1_1rangliste_1_1_liga_rangliste_sheet_update.html#aea22befc73899fdfaa3e96838dbf5ae2">de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheetUpdate.doRun</a></div><div class="ttdeci">void doRun()</div><div class="ttdef"><b>Definition</b> <a href="#l00032">LigaRanglisteSheetUpdate.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen_html"><div class="ttname"><a href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">de.petanqueturniermanager.model.TeamMeldungen</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/dcd/_team_meldungen_8java_source.html#l00019">TeamMeldungen.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen_html_acd28936f8c63bf57fa38cbe6c50ea8ff"><div class="ttname"><a href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html#acd28936f8c63bf57fa38cbe6c50ea8ff">de.petanqueturniermanager.model.TeamMeldungen.size</a></div><div class="ttdeci">int size()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dcd/_team_meldungen_8java_source.html#l00076">TeamMeldungen.java:76</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen_html_aed1fa83c8e4548bfa5b0dbf20f9c280a"><div class="ttname"><a href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html#aed1fa83c8e4548bfa5b0dbf20f9c280a">de.petanqueturniermanager.model.TeamMeldungen.isValid</a></div><div class="ttdeci">boolean isValid()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dcd/_team_meldungen_8java_source.html#l00027">TeamMeldungen.java:27</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_ab2c7bea29fa41fa048b599ed07b220c2"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">de.petanqueturniermanager.helper.ISheet.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_ce7c1674cf21f28bd82b11a1b559cc7a.html">liga</a></li><li class="navelem"><a href="../../dir_37e2a9b8401a352d2c2fbdda42695e59.html">rangliste</a></li><li class="navelem"><a href="../../dc/d8d/_liga_rangliste_sheet_update_8java.html">LigaRanglisteSheetUpdate.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

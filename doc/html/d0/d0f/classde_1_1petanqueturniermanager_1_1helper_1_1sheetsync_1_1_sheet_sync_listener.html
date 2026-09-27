@@ -1,0 +1,1521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.helper.sheetsync.SheetSyncListener Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_listener.html','../../','df/d80/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_listener-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.helper.sheetsync.SheetSyncListener Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Lauscht auf Sheet-Tab-Wechsel und OS-Fokusereignisse und löst einen Sheet-Sync <b>nur dann</b> aus, wenn sich die semantisch relevanten Eingangsdaten seit dem letzten Rebuild geändert haben.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für de.petanqueturniermanager.helper.sheetsync.SheetSyncListener:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d07/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_listener__inherit__graph.png" border="0" usemap="#ade_8petanqueturniermanager_8helper_8sheetsync_8_sheet_sync_listener_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="ade_8petanqueturniermanager_8helper_8sheetsync_8_sheet_sync_listener_inherit__map" id="ade_8petanqueturniermanager_8helper_8sheetsync_8_sheet_sync_listener_inherit__map">
+<area shape="rect" title="Lauscht auf Sheet&#45;Tab&#45;Wechsel und OS&#45;Fokusereignisse und löst einen Sheet&#45;Sync nur dann aus,..." alt="" coords="344,39,629,81"/>
+<area shape="rect" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html" title=" " alt="" coords="18,5,283,48"/>
+<area shape="poly" title=" " alt="" coords="298,39,346,46,341,46,298,44"/>
+<area shape="rect" href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html" title=" " alt="" coords="5,72,296,115"/>
+<area shape="poly" title=" " alt="" coords="311,75,346,74,341,74,311,80"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a2bb445fb393a07645e011495496c8f8f" id="r_a2bb445fb393a07645e011495496c8f8f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2bb445fb393a07645e011495496c8f8f">onFocus</a> (Object source)</td></tr>
+<tr class="memitem:a4528d7a33b9eae4de57e69caff5099c3" id="r_a4528d7a33b9eae4de57e69caff5099c3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4528d7a33b9eae4de57e69caff5099c3">onLoadFinished</a> (Object source)</td></tr>
+<tr class="memitem:ab415c2829f7bcef4738640163a2f2888" id="r_ab415c2829f7bcef4738640163a2f2888"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab415c2829f7bcef4738640163a2f2888">onNew</a> (Object source)</td></tr>
+<tr class="memitem:a2664ff9db1c908e10ef982eb8251a37c" id="r_a2664ff9db1c908e10ef982eb8251a37c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2664ff9db1c908e10ef982eb8251a37c">onPropertiesChanged</a> (<a class="el" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a> eventObj)</td></tr>
+<tr class="memdesc:a2664ff9db1c908e10ef982eb8251a37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reagiert auf einen Konfig-Property-Wechsel: Ist das Ziel-Sheet im auslösenden Dokument gerade aktiv, wird ein Hash-Check geplant.  <br /></td></tr>
+<tr class="memitem:a4d5e6ce280be3289e8795cdc5b8db84c" id="r_a4d5e6ce280be3289e8795cdc5b8db84c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4d5e6ce280be3289e8795cdc5b8db84c">onViewCreated</a> (Object source)</td></tr>
+<tr class="inherit_header pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener"><td colspan="2">Öffentliche Methoden geerbt von <a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">de.petanqueturniermanager.comp.adapter.IGlobalEventListener</a></td></tr>
+<tr class="memitem:a630ced1ef161922cc17145f2ab08c9e6 pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a630ced1ef161922cc17145f2ab08c9e6"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a630ced1ef161922cc17145f2ab08c9e6">onFocus</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:acaec9bd45deb17eb3dc47a8490b02b74 pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_acaec9bd45deb17eb3dc47a8490b02b74"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#acaec9bd45deb17eb3dc47a8490b02b74">onLoad</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:a40f04cad3fd62f3c9f6818e654795608 pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a40f04cad3fd62f3c9f6818e654795608"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a40f04cad3fd62f3c9f6818e654795608">onLoadFinished</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:a359412816d816472c737ac4a641e3595 pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a359412816d816472c737ac4a641e3595"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a359412816d816472c737ac4a641e3595">onNew</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:a70929a52c012af581bc13a50c217e3a9 pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a70929a52c012af581bc13a50c217e3a9"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a70929a52c012af581bc13a50c217e3a9">onUnfocus</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:a6e736eab93c9b49fec92e79b4122e73d pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a6e736eab93c9b49fec92e79b4122e73d"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a6e736eab93c9b49fec92e79b4122e73d">onUnload</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:a843d58e0d00f4f810ddcb722f68626a1 pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a843d58e0d00f4f810ddcb722f68626a1"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a843d58e0d00f4f810ddcb722f68626a1">onViewClosed</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+<tr class="memitem:a0ec207956c3b1e91a1363cce9ce29cdf pub_methods_interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener" id="r_a0ec207956c3b1e91a1363cce9ce29cdf"><td class="memItemLeft">default void&#160;</td><td class="memItemRight"><a class="el" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a0ec207956c3b1e91a1363cce9ce29cdf">onViewCreated</a> (@SuppressWarnings(&quot;unused&quot;) Object source)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a6b24b1617d950f4411bfe723b75776b2" id="r_a6b24b1617d950f4411bfe723b75776b2"><td class="memItemLeft">static <a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6b24b1617d950f4411bfe723b75776b2">fuerSchluessel</a> (XComponentContext xContext, String namedRangeKey, <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> erwartesTurnierSystem, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> signatur, BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt; runnerFactory)</td></tr>
+<tr class="memdesc:a6b24b1617d950f4411bfe723b75776b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt einen Listener für Sheets mit festem Named-Range-Schlüssel.  <br /></td></tr>
+<tr class="memitem:aaa4f6d1b3ccc6f79bb4277e1f7d1a617" id="r_aaa4f6d1b3ccc6f79bb4277e1f7d1a617"><td class="memItemLeft">static <a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaa4f6d1b3ccc6f79bb4277e1f7d1a617">fuerSpieltagRangliste</a> (XComponentContext xContext, <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> erwartesTurnierSystem, IntFunction&lt; <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt; signaturProSpieltagNr, BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt; runnerFactory)</td></tr>
+<tr class="memdesc:aaa4f6d1b3ccc6f79bb4277e1f7d1a617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt einen Listener für Supermelee-Spieltag-Ranglisten (dynamische Schlüssel).  <br /></td></tr>
+<tr class="memitem:a4d9e52cd645d611bcc90655499bc5b86" id="r_a4d9e52cd645d611bcc90655499bc5b86"><td class="memItemLeft">static <a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4d9e52cd645d611bcc90655499bc5b86">fuerSpieltagSheet</a> (XComponentContext xContext, <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> erwartesTurnierSystem, BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, Optional&lt; <a class="el" href="../../d4/d06/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_tag_nr.html">SpielTagNr</a> &gt; &gt; spieltagNrLookup, String persistenzPrefix, IntFunction&lt; <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt; signaturProSpieltagNr, BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt; runnerFactory)</td></tr>
+<tr class="memdesc:a4d9e52cd645d611bcc90655499bc5b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generischer Spieltag-Sheet-Listener: matcht alle Sheets, für die der <code class="JavaDocCode">spieltagNrLookup</code> eine Nr liefert, und persistiert pro Nr.  <br /></td></tr>
+<tr class="memitem:abdcbc02097e9d2d45f3b0c3e196218ac" id="r_abdcbc02097e9d2d45f3b0c3e196218ac"><td class="memItemLeft">static <a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a>&#160;</td><td class="memItemRight"><a class="el" href="#abdcbc02097e9d2d45f3b0c3e196218ac">fuerSpieltagTeilnehmer</a> (XComponentContext xContext, <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> erwartesTurnierSystem, IntFunction&lt; <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt; signaturProSpieltagNr, BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt; runnerFactory)</td></tr>
+<tr class="memdesc:abdcbc02097e9d2d45f3b0c3e196218ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt einen Listener für Supermelee-Spieltag-Teilnehmerlisten.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
+Paketfunktionen</h2></td></tr>
+<tr class="memitem:a4cfc99ca252222aac4d76811e335da48" id="r_a4cfc99ca252222aac4d76811e335da48"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a> (XComponentContext xContext, BiPredicate&lt; XSpreadsheetDocument, XSpreadsheet &gt; zielSheetMatch, <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> erwartesTurnierSystem, BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt; signaturLieferant, BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, String &gt; schluesselLieferant, BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt; runnerFactory)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:af459aae68faf7095cfa46529d6e3c7cd" id="r_af459aae68faf7095cfa46529d6e3c7cd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af459aae68faf7095cfa46529d6e3c7cd">handleOk</a> (XSpreadsheetDocument xDoc, XSpreadsheet sheet, String key, String grund, String hash)</td></tr>
+<tr class="memitem:a5d5d46a53c1f3aa913dee60ae8b0ea3d" id="r_a5d5d46a53c1f3aa913dee60ae8b0ea3d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5d5d46a53c1f3aa913dee60ae8b0ea3d">handleSheetFehlt</a> (XSpreadsheetDocument xDoc, XSpreadsheet sheet, String key, <a class="el" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html#ad0ffb519b110b4aae8d4dbecfdcade3a">SignaturErgebnis.SheetFehlt</a> fehlt)</td></tr>
+<tr class="memitem:ac0ce585c69c97e709c40f71c0d736eb1" id="r_ac0ce585c69c97e709c40f71c0d736eb1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0ce585c69c97e709c40f71c0d736eb1">handleTransient</a> (XSpreadsheetDocument xDoc, XSpreadsheet sheet, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> signatur, String key, String grund, <a class="el" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html#a8d6cea4d6e4e6ebdad3fcd979950dddc">SignaturErgebnis.TransientFehler</a> te)</td></tr>
+<tr class="memitem:a44ef3ea1cc4025a27ca78a117633cb04" id="r_a44ef3ea1cc4025a27ca78a117633cb04"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a44ef3ea1cc4025a27ca78a117633cb04">istPassendesDokument</a> (XSpreadsheetDocument xDoc)</td></tr>
+<tr class="memitem:ab00baa2c2136de02fb49a7e08a35826a" id="r_ab00baa2c2136de02fb49a7e08a35826a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab00baa2c2136de02fb49a7e08a35826a">markiereForce</a> (XSpreadsheetDocument xDoc, String key)</td></tr>
+<tr class="memitem:a7f8fbe90ea3a95b3b131d5c363d8bc4d" id="r_a7f8fbe90ea3a95b3b131d5c363d8bc4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7f8fbe90ea3a95b3b131d5c363d8bc4d">plane</a> (XSpreadsheetDocument xDoc, XSpreadsheet sheet, String grund)</td></tr>
+<tr class="memitem:ab83d7d0a7972ae61776392dc023692ef" id="r_ab83d7d0a7972ae61776392dc023692ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab83d7d0a7972ae61776392dc023692ef">pruefeUndStarte</a> (XSpreadsheetDocument xDoc, XSpreadsheet sheet, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> signatur, String key, String grund, int versuch)</td></tr>
+<tr class="memitem:a239bc1ad1095b550ec3a37029478b6f5" id="r_a239bc1ad1095b550ec3a37029478b6f5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a239bc1ad1095b550ec3a37029478b6f5">registriereListener</a> (Object source)</td></tr>
+<tr class="memitem:abc1cad76e5fe57c20705094d798d8a22" id="r_abc1cad76e5fe57c20705094d798d8a22"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc1cad76e5fe57c20705094d798d8a22">registriereSelectionChangeListener</a> (XModel xModel, XSpreadsheetDocument xDoc)</td></tr>
+<tr class="memitem:a6f3459cb2c56e7c12367f3fc573c0dd4" id="r_a6f3459cb2c56e7c12367f3fc573c0dd4"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a6f3459cb2c56e7c12367f3fc573c0dd4">verbrauchForce</a> (XSpreadsheetDocument xDoc, String key)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:a0071ddad99d105556afcfd95a5c1a854" id="r_a0071ddad99d105556afcfd95a5c1a854"><td class="memItemLeft">static XSpreadsheet&#160;</td><td class="memItemRight"><a class="el" href="#a0071ddad99d105556afcfd95a5c1a854">aktivesSheet</a> (XSpreadsheetDocument xDoc)</td></tr>
+<tr class="memitem:aaffaf73a42bbf58fd4d7749a1af2c842" id="r_aaffaf73a42bbf58fd4d7749a1af2c842"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#aaffaf73a42bbf58fd4d7749a1af2c842">forceKey</a> (XSpreadsheetDocument xDoc, String key)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:ad710c186d9c678bd5fdfae2e4fbcbcfe" id="r_ad710c186d9c678bd5fdfae2e4fbcbcfe"><td class="memItemLeft">final <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad710c186d9c678bd5fdfae2e4fbcbcfe">erwartesTurnierSystem</a></td></tr>
+<tr class="memitem:a885cc36b00ba6bd7099b4e4af629eaeb" id="r_a885cc36b00ba6bd7099b4e4af629eaeb"><td class="memItemLeft">final ConcurrentHashMap&lt; String, Boolean &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a885cc36b00ba6bd7099b4e4af629eaeb">forceNextCheck</a> = new ConcurrentHashMap&lt;&gt;()</td></tr>
+<tr class="memdesc:a885cc36b00ba6bd7099b4e4af629eaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">forceNextCheck pro (Doc-IdentityHash + Schlüssel): gesetzt nach erschöpften Transient-Retries oder bei abgelaufener Safety-Revalidation.  <br /></td></tr>
+<tr class="memitem:a6a87e7c3d434ec87ca843541f28bbed1" id="r_a6a87e7c3d434ec87ca843541f28bbed1"><td class="memItemLeft">final Set&lt; XSpreadsheetDocument &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6a87e7c3d434ec87ca843541f28bbed1">registriert</a></td></tr>
+<tr class="memdesc:a6a87e7c3d434ec87ca843541f28bbed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bereits registrierte Dokumente – verhindert Doppelregistrierung.  <br /></td></tr>
+<tr class="memitem:a778e9315c77c96b35c0dc3e3839016a6" id="r_a778e9315c77c96b35c0dc3e3839016a6"><td class="memItemLeft">final BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a778e9315c77c96b35c0dc3e3839016a6">runnerFactory</a></td></tr>
+<tr class="memitem:ab6f75a9a146c072de24c5a36880ae678" id="r_ab6f75a9a146c072de24c5a36880ae678"><td class="memItemLeft">final BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, String &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab6f75a9a146c072de24c5a36880ae678">schluesselLieferant</a></td></tr>
+<tr class="memdesc:ab6f75a9a146c072de24c5a36880ae678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Persistenz-Schlüssel pro (Doc, Ziel-Sheet).  <br /></td></tr>
+<tr class="memitem:a6c1d3106e52f2716fe96f1e914b4f6ef" id="r_a6c1d3106e52f2716fe96f1e914b4f6ef"><td class="memItemLeft">final BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6c1d3106e52f2716fe96f1e914b4f6ef">signaturLieferant</a></td></tr>
+<tr class="memdesc:a6c1d3106e52f2716fe96f1e914b4f6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signatur-Engine pro (Doc, Ziel-Sheet).  <br /></td></tr>
+<tr class="memitem:a3b74b6442b45058d64e27d44ab7d08b0" id="r_a3b74b6442b45058d64e27d44ab7d08b0"><td class="memItemLeft">final XComponentContext&#160;</td><td class="memItemRight"><a class="el" href="#a3b74b6442b45058d64e27d44ab7d08b0">xContext</a></td></tr>
+<tr class="memitem:a7088cbd1c307e17313ff7cc0b2c5e196" id="r_a7088cbd1c307e17313ff7cc0b2c5e196"><td class="memItemLeft">final BiPredicate&lt; XSpreadsheetDocument, XSpreadsheet &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7088cbd1c307e17313ff7cc0b2c5e196">zielSheetMatch</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:ace7609d435cf040ea67429e81491c27e" id="r_ace7609d435cf040ea67429e81491c27e"><td class="memItemLeft">static final Logger&#160;</td><td class="memItemRight"><a class="el" href="#ace7609d435cf040ea67429e81491c27e">logger</a> = LogManager.getLogger(SheetSyncListener.class)</td></tr>
+<tr class="memitem:a342d3083301f75abf99c9d1110d5df1c" id="r_a342d3083301f75abf99c9d1110d5df1c"><td class="memItemLeft">static final Duration&#160;</td><td class="memItemRight"><a class="el" href="#a342d3083301f75abf99c9d1110d5df1c">VERIFY_INTERVAL</a> = Duration.ofMinutes(10)</td></tr>
+<tr class="memdesc:a342d3083301f75abf99c9d1110d5df1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safety-Revalidation: nach diesem Intervall wird der gespeicherte Hash neu bestätigt.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Erkennung über kanonische SHA-256-Signatur (<code><a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a></code>), Vergleich mit persistiertem Hash im Dokument (<code><a class="el" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html">SheetSyncSignaturStore</a></code>). Trigger werden vor dem Hash-Check über den <code><a class="el" href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html">SheetSyncDebouncer</a></code> entkoppelt, damit Event-Stürme zu einem Check zusammengezogen werden und der Hash-Check nicht im UI-Thread läuft. </p>
+<p>Generisch nutzbar für jede Sheet-Art, deren Daten aus einer Eingabe-Quelle abgeleitet werden (Rangliste aus Meldeliste+Spielrunden, Teilnehmerliste aus Meldeliste, …). </p>
+<p>Architekturregeln siehe <code class="JavaDocCode">turniersysteme/RANGLISTE_LISTENER.md</code>. </p>
+<p>Zusätzlich <code><a class="el" href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html">ITurnierEventListener</a></code>: Ein <code class="JavaDocCode">PropertiesChanged</code>-Event (z.B. Wechsel des Sortiermodus im Konfig-Dialog) ist nicht aus Sheet-Zellen ableitbar und löst daher keinen Tab-Wechsel/Fokus-Trigger aus. Reagiert der Listener auf das Event, wird – sofern das Ziel-Sheet gerade aktiv ist – sofort ein Hash-Check geplant; bei geänderter Signatur (Sortier-Zusatzkontext) folgt der Re-Sync live. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00060">60</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a4cfc99ca252222aac4d76811e335da48" name="a4cfc99ca252222aac4d76811e335da48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfc99ca252222aac4d76811e335da48">&#9670;&#160;</a></span>SheetSyncListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.SheetSyncListener </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiPredicate&lt; XSpreadsheetDocument, XSpreadsheet &gt;</td>          <td class="paramname"><span class="paramname"><em>zielSheetMatch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></td>          <td class="paramname"><span class="paramname"><em>erwartesTurnierSystem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>signaturLieferant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, String &gt;</td>          <td class="paramname"><span class="paramname"><em>schluesselLieferant</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>runnerFactory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00164">164</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  170</span>        this.xContext = checkNotNull(xContext);</div>
+<div class="line"><span class="lineno">  171</span>        this.zielSheetMatch = checkNotNull(zielSheetMatch);</div>
+<div class="line"><span class="lineno">  172</span>        this.erwartesTurnierSystem = checkNotNull(erwartesTurnierSystem);</div>
+<div class="line"><span class="lineno">  173</span>        this.signaturLieferant = checkNotNull(signaturLieferant);</div>
+<div class="line"><span class="lineno">  174</span>        this.schluesselLieferant = checkNotNull(schluesselLieferant);</div>
+<div class="line"><span class="lineno">  175</span>        this.runnerFactory = checkNotNull(runnerFactory);</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a0071ddad99d105556afcfd95a5c1a854" name="a0071ddad99d105556afcfd95a5c1a854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0071ddad99d105556afcfd95a5c1a854">&#9670;&#160;</a></span>aktivesSheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XSpreadsheet de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.aktivesSheet </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00335">335</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  335</span>                                                                        {</div>
+<div class="line"><span class="lineno">  336</span>        XModel xModel = Lo.qi(XModel.class, xDoc);</div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">if</span> (xModel == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  338</span>        XSpreadsheetView view = Lo.qi(XSpreadsheetView.class, xModel.getCurrentController());</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> (view == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">return</span> view.getActiveSheet();</div>
+<div class="line"><span class="lineno">  341</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaffaf73a42bbf58fd4d7749a1af2c842" name="aaffaf73a42bbf58fd4d7749a1af2c842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffaf73a42bbf58fd4d7749a1af2c842">&#9670;&#160;</a></span>forceKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.forceKey </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00449">449</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  449</span>                                                                          {</div>
+<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">return</span> System.identityHashCode(xDoc) + <span class="stringliteral">&quot;:&quot;</span> + key;</div>
+<div class="line"><span class="lineno">  451</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b24b1617d950f4411bfe723b75776b2" name="a6b24b1617d950f4411bfe723b75776b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b24b1617d950f4411bfe723b75776b2">&#9670;&#160;</a></span>fuerSchluessel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.fuerSchluessel </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>namedRangeKey</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></td>          <td class="paramname"><span class="paramname"><em>erwartesTurnierSystem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a></td>          <td class="paramname"><span class="paramname"><em>signatur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>runnerFactory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00092">92</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                                                     {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> SheetSyncListener(xContext,</div>
+<div class="line"><span class="lineno">   99</span>                (xDoc, sheet) -&gt; SheetMetadataHelper.istRegistriertesSheet(xDoc, sheet, namedRangeKey),</div>
+<div class="line"><span class="lineno">  100</span>                erwartesTurnierSystem,</div>
+<div class="line"><span class="lineno">  101</span>                (xDoc, sheet) -&gt; signatur,</div>
+<div class="line"><span class="lineno">  102</span>                (xDoc, sheet) -&gt; namedRangeKey,</div>
+<div class="line"><span class="lineno">  103</span>                runnerFactory);</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaa4f6d1b3ccc6f79bb4277e1f7d1a617" name="aaa4f6d1b3ccc6f79bb4277e1f7d1a617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4f6d1b3ccc6f79bb4277e1f7d1a617">&#9670;&#160;</a></span>fuerSpieltagRangliste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.fuerSpieltagRangliste </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></td>          <td class="paramname"><span class="paramname"><em>erwartesTurnierSystem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntFunction&lt; <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>signaturProSpieltagNr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>runnerFactory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pro Spieltag-Nr gibt es eine eigene Signatur und einen eigenen Persistenz-Schlüssel.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signaturProSpieltagNr</td><td>Funktion <code class="JavaDocCode">spieltagNr → EingabeSignatur</code>. Wird intern pro Nr gecached. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00113">113</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> fuerSpieltagSheet(xContext, erwartesTurnierSystem,</div>
+<div class="line"><span class="lineno">  119</span>                SheetMetadataHelper::findeSpieltagNr,</div>
+<div class="line"><span class="lineno">  120</span>                <span class="stringliteral">&quot;SUPERMELEE_SPIELTAG_&quot;</span>,</div>
+<div class="line"><span class="lineno">  121</span>                signaturProSpieltagNr, runnerFactory);</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d9e52cd645d611bcc90655499bc5b86" name="a4d9e52cd645d611bcc90655499bc5b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9e52cd645d611bcc90655499bc5b86">&#9670;&#160;</a></span>fuerSpieltagSheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.fuerSpieltagSheet </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></td>          <td class="paramname"><span class="paramname"><em>erwartesTurnierSystem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; XSpreadsheetDocument, XSpreadsheet, Optional&lt; <a class="el" href="../../d4/d06/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_tag_nr.html">SpielTagNr</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>spieltagNrLookup</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>persistenzPrefix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntFunction&lt; <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>signaturProSpieltagNr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>runnerFactory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00143">143</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  150</span>        ConcurrentHashMap&lt;Integer, EingabeSignatur&gt; cache = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</div>
+<div class="line"><span class="lineno">  151</span>        BiFunction&lt;XSpreadsheetDocument, XSpreadsheet, Optional&lt;Integer&gt;&gt; nrLookup =</div>
+<div class="line"><span class="lineno">  152</span>                (xDoc, sheet) -&gt; spieltagNrLookup.apply(xDoc, sheet).map(SpielTagNr::getNr);</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> SheetSyncListener(xContext,</div>
+<div class="line"><span class="lineno">  154</span>                (xDoc, sheet) -&gt; nrLookup.apply(xDoc, sheet).isPresent(),</div>
+<div class="line"><span class="lineno">  155</span>                erwartesTurnierSystem,</div>
+<div class="line"><span class="lineno">  156</span>                (xDoc, sheet) -&gt; nrLookup.apply(xDoc, sheet)</div>
+<div class="line"><span class="lineno">  157</span>                        .map(n -&gt; cache.computeIfAbsent(n, signaturProSpieltagNr::apply))</div>
+<div class="line"><span class="lineno">  158</span>                        .orElse(<span class="keyword">null</span>),</div>
+<div class="line"><span class="lineno">  159</span>                (xDoc, sheet) -&gt; nrLookup.apply(xDoc, sheet)</div>
+<div class="line"><span class="lineno">  160</span>                        .map(n -&gt; persistenzPrefix + n).orElse(<span class="keyword">null</span>),</div>
+<div class="line"><span class="lineno">  161</span>                runnerFactory);</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abdcbc02097e9d2d45f3b0c3e196218ac" name="abdcbc02097e9d2d45f3b0c3e196218ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcbc02097e9d2d45f3b0c3e196218ac">&#9670;&#160;</a></span>fuerSpieltagTeilnehmer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4cfc99ca252222aac4d76811e335da48">SheetSyncListener</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.fuerSpieltagTeilnehmer </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a></td>          <td class="paramname"><span class="paramname"><em>erwartesTurnierSystem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntFunction&lt; <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>signaturProSpieltagNr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BiFunction&lt; <a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>runnerFactory</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pro Spieltag-Nr gibt es eine eigene Signatur und einen eigenen Persistenz-Schlüssel. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00128">128</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> fuerSpieltagSheet(xContext, erwartesTurnierSystem,</div>
+<div class="line"><span class="lineno">  134</span>                SheetMetadataHelper::findeTeilnehmerSpieltagNr,</div>
+<div class="line"><span class="lineno">  135</span>                <span class="stringliteral">&quot;SUPERMELEE_TEILNEHMER_&quot;</span>,</div>
+<div class="line"><span class="lineno">  136</span>                signaturProSpieltagNr, runnerFactory);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af459aae68faf7095cfa46529d6e3c7cd" name="af459aae68faf7095cfa46529d6e3c7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af459aae68faf7095cfa46529d6e3c7cd">&#9670;&#160;</a></span>handleOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.handleOk </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>grund</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>hash</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00381">381</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  382</span>                                       {</div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordtype">boolean</span> force = verbrauchForce(xDoc, key);</div>
+<div class="line"><span class="lineno">  384</span>        Optional&lt;String&gt; gespeichert = SheetSyncSignaturStore.ladeHash(xDoc, key);</div>
+<div class="line"><span class="lineno">  385</span>        <span class="keywordflow">if</span> (!force &amp;&amp; gespeichert.isPresent() &amp;&amp; gespeichert.get().equals(hash)) {</div>
+<div class="line"><span class="lineno">  386</span>            SheetSyncSignaturStore.aktualisiereVerifyZeit(xDoc, key);</div>
+<div class="line"><span class="lineno">  387</span>            logger.debug(<span class="stringliteral">&quot;Sheet-Sync übersprungen (Hash unverändert, key={})&quot;</span>, key);</div>
+<div class="line"><span class="lineno">  388</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  389</span>        }</div>
+<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">if</span> (SheetRunner.isRunning()) {</div>
+<div class="line"><span class="lineno">  391</span>            logger.debug(<span class="stringliteral">&quot;Sheet-Sync ausgelassen – SheetRunner läuft (key={})&quot;</span>, key);</div>
+<div class="line"><span class="lineno">  392</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  393</span>        }</div>
+<div class="line"><span class="lineno">  394</span>        String effektiverGrund = force ? <span class="stringliteral">&quot;forcedRevalidation&quot;</span></div>
+<div class="line"><span class="lineno">  395</span>                : (gespeichert.isEmpty() ? <span class="stringliteral">&quot;erstaufbau&quot;</span> : <span class="stringliteral">&quot;hashMismatch&quot;</span>);</div>
+<div class="line"><span class="lineno">  396</span>        logger.debug(<span class="stringliteral">&quot;Sheet-Sync START – key={}, trigger={}, grund={}&quot;</span>,</div>
+<div class="line"><span class="lineno">  397</span>                key, grund, effektiverGrund);</div>
+<div class="line"><span class="lineno">  398</span>        <span class="comment">// Hash vor dem asynchronen Runner speichern: stimmt mit den jetzt gelesenen Eingaben</span></div>
+<div class="line"><span class="lineno">  399</span>        <span class="comment">// überein. Sollte der Rebuild scheitern, wird beim nächsten Trigger der dann frische</span></div>
+<div class="line"><span class="lineno">  400</span>        <span class="comment">// Hash neu verglichen.</span></div>
+<div class="line"><span class="lineno">  401</span>        SheetSyncSignaturStore.speichereNachRebuild(xDoc, key, hash, effektiverGrund);</div>
+<div class="line"><span class="lineno">  402</span>        runnerFactory.apply(<span class="keyword">new</span> WorkingSpreadsheet(xContext, xDoc), sheet).startSilent();</div>
+<div class="line"><span class="lineno">  403</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5d5d46a53c1f3aa913dee60ae8b0ea3d" name="a5d5d46a53c1f3aa913dee60ae8b0ea3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5d46a53c1f3aa913dee60ae8b0ea3d">&#9670;&#160;</a></span>handleSheetFehlt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.handleSheetFehlt </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html#ad0ffb519b110b4aae8d4dbecfdcade3a">SignaturErgebnis.SheetFehlt</a></td>          <td class="paramname"><span class="paramname"><em>fehlt</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00405">405</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  406</span>                                               {</div>
+<div class="line"><span class="lineno">  407</span>        <span class="keywordflow">if</span> (!fehlt.erwartet()) {</div>
+<div class="line"><span class="lineno">  408</span>            logger.debug(<span class="stringliteral">&quot;Sheet-Sync-Quelle &#39;{}&#39; fehlt (optional) – skip&quot;</span>, fehlt.stabileId());</div>
+<div class="line"><span class="lineno">  409</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  410</span>        }</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">if</span> (SheetSyncSignaturStore.recoveryBereitsVersucht(xDoc, key)) {</div>
+<div class="line"><span class="lineno">  412</span>            logger.debug(<span class="stringliteral">&quot;Sheet-Sync-Quelle &#39;{}&#39; fehlt erwartet, Recovery bereits versucht – skip&quot;</span>,</div>
+<div class="line"><span class="lineno">  413</span>                    fehlt.stabileId());</div>
+<div class="line"><span class="lineno">  414</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  415</span>        }</div>
+<div class="line"><span class="lineno">  416</span>        <span class="keywordflow">if</span> (SheetRunner.isRunning()) {</div>
+<div class="line"><span class="lineno">  417</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  418</span>        }</div>
+<div class="line"><span class="lineno">  419</span>        logger.warn(<span class="stringliteral">&quot;Sheet-Sync-Quelle &#39;{}&#39; fehlt erwartet (key={}) – Recovery-Rebuild&quot;</span>,</div>
+<div class="line"><span class="lineno">  420</span>                fehlt.stabileId(), key);</div>
+<div class="line"><span class="lineno">  421</span>        SheetSyncSignaturStore.markiereRecoveryVersucht(xDoc, key);</div>
+<div class="line"><span class="lineno">  422</span>        runnerFactory.apply(<span class="keyword">new</span> WorkingSpreadsheet(xContext, xDoc), sheet).startSilent();</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0ce585c69c97e709c40f71c0d736eb1" name="ac0ce585c69c97e709c40f71c0d736eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ce585c69c97e709c40f71c0d736eb1">&#9670;&#160;</a></span>handleTransient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.handleTransient </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a></td>          <td class="paramname"><span class="paramname"><em>signatur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>grund</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html#a8d6cea4d6e4e6ebdad3fcd979950dddc">SignaturErgebnis.TransientFehler</a></td>          <td class="paramname"><span class="paramname"><em>te</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00425">425</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  427</span>                                                 {</div>
+<div class="line"><span class="lineno">  428</span>        <span class="keywordflow">if</span> (te.versuch() &lt; SheetSyncDebouncer.MAX_RETRY) {</div>
+<div class="line"><span class="lineno">  429</span>            <span class="keywordtype">int</span> naechster = te.versuch() + 1;</div>
+<div class="line"><span class="lineno">  430</span>            logger.debug(<span class="stringliteral">&quot;Sheet-Sync-Signatur transient fehlgeschlagen (key={}, versuch={}): {} – Retry&quot;</span>,</div>
+<div class="line"><span class="lineno">  431</span>                    key, te.versuch(), te.grund());</div>
+<div class="line"><span class="lineno">  432</span>            SheetSyncDebouncer.get().scheduleRetry(xDoc, key, naechster,</div>
+<div class="line"><span class="lineno">  433</span>                    () -&gt; pruefeUndStarte(xDoc, sheet, signatur, key, grund, naechster));</div>
+<div class="line"><span class="lineno">  434</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  435</span>            logger.warn(<span class="stringliteral">&quot;Sheet-Sync-Signatur transient fehlgeschlagen (key={}, versuch={}): {} – &quot;</span></div>
+<div class="line"><span class="lineno">  436</span>                    + <span class="stringliteral">&quot;forceNextCheck gesetzt&quot;</span>, key, te.versuch(), te.grund(), te.cause());</div>
+<div class="line"><span class="lineno">  437</span>            markiereForce(xDoc, key);</div>
+<div class="line"><span class="lineno">  438</span>        }</div>
+<div class="line"><span class="lineno">  439</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a44ef3ea1cc4025a27ca78a117633cb04" name="a44ef3ea1cc4025a27ca78a117633cb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ef3ea1cc4025a27ca78a117633cb04">&#9670;&#160;</a></span>istPassendesDokument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.istPassendesDokument </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00178">178</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                                    {</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> DocumentPropertiesHelper(xDoc).getTurnierSystemAusDocument() == erwartesTurnierSystem;</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab00baa2c2136de02fb49a7e08a35826a" name="ab00baa2c2136de02fb49a7e08a35826a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00baa2c2136de02fb49a7e08a35826a">&#9670;&#160;</a></span>markiereForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.markiereForce </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00441">441</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  441</span>                                                                      {</div>
+<div class="line"><span class="lineno">  442</span>        forceNextCheck.put(forceKey(xDoc, key), Boolean.TRUE);</div>
+<div class="line"><span class="lineno">  443</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2bb445fb393a07645e011495496c8f8f" name="a2bb445fb393a07645e011495496c8f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb445fb393a07645e011495496c8f8f">&#9670;&#160;</a></span>onFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.onFocus </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00274">274</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  274</span>                                       {</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  276</span>            XModel xModel = Lo.qi(XModel.class, source);</div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">if</span> (xModel == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>            XSpreadsheetDocument xDoc = Lo.qi(XSpreadsheetDocument.class, xModel);</div>
+<div class="line"><span class="lineno">  280</span>            <span class="keywordflow">if</span> (xDoc == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>            var aktuellerController = xModel.getCurrentController();</div>
+<div class="line"><span class="lineno">  283</span>            XSpreadsheetView view = Lo.qi(XSpreadsheetView.class, aktuellerController);</div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span> (view == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>            XSpreadsheet aktuellesSheet = view.getActiveSheet();</div>
+<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">if</span> (aktuellesSheet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">if</span> (!zielSheetMatch.test(xDoc, aktuellesSheet)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">if</span> (SheetRunner.isRunning()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (!istPassendesDokument(xDoc)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  292</span>            <span class="keywordflow">if</span> (SheetRunner.consumeSelectionChangeSuppression()) {</div>
+<div class="line"><span class="lineno">  293</span>                logger.debug(<span class="stringliteral">&quot;onFocus: Unterdrückt – ausgelöst durch setActiveSheet()&quot;</span>);</div>
+<div class="line"><span class="lineno">  294</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  295</span>            }</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>            String key = schluesselLieferant.apply(xDoc, aktuellesSheet);</div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (key != <span class="keyword">null</span> &amp;&amp; SheetSyncSignaturStore.verifyVeraltet(xDoc, key, VERIFY_INTERVAL)) {</div>
+<div class="line"><span class="lineno">  299</span>                markiereForce(xDoc, key);</div>
+<div class="line"><span class="lineno">  300</span>            }</div>
+<div class="line"><span class="lineno">  301</span>            plane(xDoc, aktuellesSheet, <span class="stringliteral">&quot;onFocus&quot;</span>);</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>        } <span class="keywordflow">catch</span> (RuntimeException t) {</div>
+<div class="line"><span class="lineno">  304</span>            logger.error(<span class="stringliteral">&quot;Fehler beim OnFocus-Sheet-Sync&quot;</span>, t);</div>
+<div class="line"><span class="lineno">  305</span>        }</div>
+<div class="line"><span class="lineno">  306</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4528d7a33b9eae4de57e69caff5099c3" name="a4528d7a33b9eae4de57e69caff5099c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4528d7a33b9eae4de57e69caff5099c3">&#9670;&#160;</a></span>onLoadFinished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.onLoadFinished </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00185">185</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>                                              {</div>
+<div class="line"><span class="lineno">  186</span>        registriereListener(source);</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab415c2829f7bcef4738640163a2f2888" name="ab415c2829f7bcef4738640163a2f2888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab415c2829f7bcef4738640163a2f2888">&#9670;&#160;</a></span>onNew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.onNew </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00190">190</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>                                     {</div>
+<div class="line"><span class="lineno">  191</span>        registriereListener(source);</div>
+<div class="line"><span class="lineno">  192</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2664ff9db1c908e10ef982eb8251a37c" name="a2664ff9db1c908e10ef982eb8251a37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2664ff9db1c908e10ef982eb8251a37c">&#9670;&#160;</a></span>onPropertiesChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.onPropertiesChanged </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a></td>          <td class="paramname"><span class="paramname"><em>eventObj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nur bei tatsächlich geänderter Signatur (z.B. neuer Sortier-Zusatzkontext) startet danach der Re-Sync – andere Property-Änderungen lassen den Hash unverändert und werden so übersprungen. </p>
+
+<p>Implementiert <a class="el" href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html#a3e29cc892b8cce30851b487011e97616">de.petanqueturniermanager.comp.turnierevent.ITurnierEventListener</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00317">317</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  317</span>                                                            {</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">if</span> (eventObj == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  320</span>            XSpreadsheetDocument xDoc = eventObj.getWorkingSpreadsheetDocument();</div>
+<div class="line"><span class="lineno">  321</span>            <span class="keywordflow">if</span> (xDoc == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  322</span>            <span class="keywordflow">if</span> (SheetRunner.isRunning()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">if</span> (!istPassendesDokument(xDoc)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>            XSpreadsheet aktuellesSheet = aktivesSheet(xDoc);</div>
+<div class="line"><span class="lineno">  326</span>            <span class="keywordflow">if</span> (aktuellesSheet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  327</span>            <span class="keywordflow">if</span> (!zielSheetMatch.test(xDoc, aktuellesSheet)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>            plane(xDoc, aktuellesSheet, <span class="stringliteral">&quot;propertiesChanged&quot;</span>);</div>
+<div class="line"><span class="lineno">  330</span>        } <span class="keywordflow">catch</span> (RuntimeException t) {</div>
+<div class="line"><span class="lineno">  331</span>            logger.error(<span class="stringliteral">&quot;Fehler beim PropertiesChanged-Sheet-Sync&quot;</span>, t);</div>
+<div class="line"><span class="lineno">  332</span>        }</div>
+<div class="line"><span class="lineno">  333</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d5e6ce280be3289e8795cdc5b8db84c" name="a4d5e6ce280be3289e8795cdc5b8db84c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5e6ce280be3289e8795cdc5b8db84c">&#9670;&#160;</a></span>onViewCreated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.onViewCreated </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00195">195</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>                                             {</div>
+<div class="line"><span class="lineno">  196</span>        registriereListener(source);</div>
+<div class="line"><span class="lineno">  197</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7f8fbe90ea3a95b3b131d5c363d8bc4d" name="a7f8fbe90ea3a95b3b131d5c363d8bc4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f8fbe90ea3a95b3b131d5c363d8bc4d">&#9670;&#160;</a></span>plane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.plane </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>grund</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00345">345</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  345</span>                                                                                    {</div>
+<div class="line"><span class="lineno">  346</span>        String key = schluesselLieferant.apply(xDoc, sheet);</div>
+<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (key == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  348</span>            logger.warn(<span class="stringliteral">&quot;Kein Persistenz-Schlüssel ermittelbar – Sync übersprungen&quot;</span>);</div>
+<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  350</span>        }</div>
+<div class="line"><span class="lineno">  351</span>        EingabeSignatur sig = signaturLieferant.apply(xDoc, sheet);</div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">if</span> (sig == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  353</span>            logger.warn(<span class="stringliteral">&quot;Keine Signatur-Engine ermittelbar (key={}) – Sync übersprungen&quot;</span>, key);</div>
+<div class="line"><span class="lineno">  354</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  355</span>        }</div>
+<div class="line"><span class="lineno">  356</span>        SheetSyncDebouncer.get().schedule(xDoc, key,</div>
+<div class="line"><span class="lineno">  357</span>                () -&gt; pruefeUndStarte(xDoc, sheet, sig, key, grund, 1));</div>
+<div class="line"><span class="lineno">  358</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab83d7d0a7972ae61776392dc023692ef" name="ab83d7d0a7972ae61776392dc023692ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83d7d0a7972ae61776392dc023692ef">&#9670;&#160;</a></span>pruefeUndStarte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.pruefeUndStarte </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a></td>          <td class="paramname"><span class="paramname"><em>signatur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>grund</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>versuch</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00360">360</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>                                                                             {</div>
+<div class="line"><span class="lineno">  362</span>        <span class="keywordtype">long</span> startNs = System.nanoTime();</div>
+<div class="line"><span class="lineno">  363</span>        <span class="keywordtype">long</span> hashStartNs = startNs;</div>
+<div class="line"><span class="lineno">  364</span>        SignaturErgebnis ergebnis = signatur.berechne(xDoc, versuch);</div>
+<div class="line"><span class="lineno">  365</span>        <span class="keywordtype">long</span> hashDauerMs = (System.nanoTime() - hashStartNs) / 1_000_000L;</div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">switch</span> (ergebnis) {</div>
+<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">case</span> SignaturErgebnis.Ok ok -&gt; handleOk(xDoc, sheet, key, grund, ok.hash());</div>
+<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">case</span> SignaturErgebnis.SheetFehlt fehlt -&gt; handleSheetFehlt(xDoc, sheet, key, fehlt);</div>
+<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">case</span> SignaturErgebnis.TransientFehler te -&gt;</div>
+<div class="line"><span class="lineno">  370</span>                handleTransient(xDoc, sheet, signatur, key, grund, te);</div>
+<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">case</span> SignaturErgebnis.PermanenterFehler pe -&gt; logger.warn(</div>
+<div class="line"><span class="lineno">  372</span>                    <span class="stringliteral">&quot;Sheet-Sync-Signatur fehlgeschlagen (permanent, key={}): {}&quot;</span>, key, pe.grund(),</div>
+<div class="line"><span class="lineno">  373</span>                    pe.cause());</div>
+<div class="line"><span class="lineno">  374</span>        }</div>
+<div class="line"><span class="lineno">  375</span>        <span class="keywordtype">long</span> gesamtMs = (System.nanoTime() - startNs) / 1_000_000L;</div>
+<div class="line"><span class="lineno">  376</span>        PerfLog.log(logger, <span class="stringliteral">&quot;[WORKER-TIMING] SheetSyncListener.pruefeUndStarte key={} system={} hash={} ms gesamt={} ms ergebnis={} thread={}&quot;</span>,</div>
+<div class="line"><span class="lineno">  377</span>                key, erwartesTurnierSystem, hashDauerMs, gesamtMs,</div>
+<div class="line"><span class="lineno">  378</span>                ergebnis.getClass().getSimpleName(), Thread.currentThread().getName());</div>
+<div class="line"><span class="lineno">  379</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a239bc1ad1095b550ec3a37029478b6f5" name="a239bc1ad1095b550ec3a37029478b6f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239bc1ad1095b550ec3a37029478b6f5">&#9670;&#160;</a></span>registriereListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.registriereListener </td>
+          <td>(</td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00199">199</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>                                                    {</div>
+<div class="line"><span class="lineno">  200</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  201</span>            XModel xModel = Lo.qi(XModel.class, source);</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">if</span> (xModel == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  203</span>            XSpreadsheetDocument xDoc = Lo.qi(XSpreadsheetDocument.class, xModel);</div>
+<div class="line"><span class="lineno">  204</span>            <span class="keywordflow">if</span> (xDoc == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>            <span class="keyword">synchronized</span> (registriert) {</div>
+<div class="line"><span class="lineno">  207</span>                <span class="keywordflow">if</span> (registriert.contains(xDoc)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  208</span>                registriert.add(xDoc);</div>
+<div class="line"><span class="lineno">  209</span>            }</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>            registriereSelectionChangeListener(xModel, xDoc);</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>        } <span class="keywordflow">catch</span> (RuntimeException t) {</div>
+<div class="line"><span class="lineno">  214</span>            logger.error(<span class="stringliteral">&quot;Fehler beim Registrieren der Listener&quot;</span>, t);</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abc1cad76e5fe57c20705094d798d8a22" name="abc1cad76e5fe57c20705094d798d8a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1cad76e5fe57c20705094d798d8a22">&#9670;&#160;</a></span>registriereSelectionChangeListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.registriereSelectionChangeListener </td>
+          <td>(</td>
+          <td class="paramtype">XModel</td>          <td class="paramname"><span class="paramname"><em>xModel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00218">218</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  219</span>        var controller = xModel.getCurrentController();</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">if</span> (controller == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordtype">boolean</span> istSpreadsheetView = Lo.qi(XSpreadsheetView.class, controller) != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  222</span>        logger.debug(<span class="stringliteral">&quot;registriereSelectionChangeListener: controller-typ={}&quot;</span>,</div>
+<div class="line"><span class="lineno">  223</span>                istSpreadsheetView ? <span class="stringliteral">&quot;ScTabViewShell&quot;</span> : <span class="stringliteral">&quot;Druckvorschau/Sonstige&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (!istSpreadsheetView) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  225</span>        XSelectionSupplier selSupplier = Lo.qi(XSelectionSupplier.class, controller);</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">if</span> (selSupplier == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>        selSupplier.addSelectionChangeListener(<span class="keyword">new</span> XSelectionChangeListener() {</div>
+<div class="line"><span class="lineno">  229</span>            <span class="keyword">private</span> XSpreadsheet letztesSheet = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>            @Override</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> selectionChanged(EventObject e) {</div>
+<div class="line"><span class="lineno">  233</span>                <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  234</span>                    XSpreadsheetView view = Lo.qi(XSpreadsheetView.class, e.Source);</div>
+<div class="line"><span class="lineno">  235</span>                    <span class="keywordflow">if</span> (view == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>                    XSpreadsheet aktuellesSheet = view.getActiveSheet();</div>
+<div class="line"><span class="lineno">  238</span>                    <span class="keywordflow">if</span> (aktuellesSheet == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>                    XSpreadsheet vorherigesSheet = letztesSheet;</div>
+<div class="line"><span class="lineno">  241</span>                    letztesSheet = aktuellesSheet;</div>
+<div class="line"><span class="lineno">  242</span> </div>
+<div class="line"><span class="lineno">  243</span>                    <span class="keywordflow">if</span> (aktuellesSheet == vorherigesSheet) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>                    <span class="keywordtype">boolean</span> istAufZielSheet = zielSheetMatch.test(xDoc, aktuellesSheet);</div>
+<div class="line"><span class="lineno">  246</span>                    <span class="keywordtype">boolean</span> warAufZielSheet = vorherigesSheet != <span class="keyword">null</span></div>
+<div class="line"><span class="lineno">  247</span>                            &amp;&amp; zielSheetMatch.test(xDoc, vorherigesSheet);</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>                    <span class="keywordflow">if</span> (istAufZielSheet &amp;&amp; !warAufZielSheet &amp;&amp; !SheetRunner.isRunning()</div>
+<div class="line"><span class="lineno">  250</span>                            &amp;&amp; istPassendesDokument(xDoc)) {</div>
+<div class="line"><span class="lineno">  251</span>                        <span class="keywordflow">if</span> (SheetRunner.consumeSelectionChangeSuppression()) {</div>
+<div class="line"><span class="lineno">  252</span>                            logger.trace(<span class="stringliteral">&quot;selectionChanged: Unterdrückt – ausgelöst durch setActiveSheet()&quot;</span>);</div>
+<div class="line"><span class="lineno">  253</span>                            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  254</span>                        }</div>
+<div class="line"><span class="lineno">  255</span>                        plane(xDoc, aktuellesSheet, <span class="stringliteral">&quot;selectionChanged&quot;</span>);</div>
+<div class="line"><span class="lineno">  256</span>                    }</div>
+<div class="line"><span class="lineno">  257</span>                } <span class="keywordflow">catch</span> (RuntimeException t) {</div>
+<div class="line"><span class="lineno">  258</span>                    logger.error(<span class="stringliteral">&quot;Fehler im SelectionChangeListener&quot;</span>, t);</div>
+<div class="line"><span class="lineno">  259</span>                }</div>
+<div class="line"><span class="lineno">  260</span>            }</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>            @Override</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) {</div>
+<div class="line"><span class="lineno">  264</span>                SheetSyncDebouncer.get().cancelAlle(xDoc);</div>
+<div class="line"><span class="lineno">  265</span>            }</div>
+<div class="line"><span class="lineno">  266</span>        });</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>        logger.debug(<span class="stringliteral">&quot;XSelectionChangeListener für Sheet-Sync registriert&quot;</span>);</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6f3459cb2c56e7c12367f3fc573c0dd4" name="a6f3459cb2c56e7c12367f3fc573c0dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3459cb2c56e7c12367f3fc573c0dd4">&#9670;&#160;</a></span>verbrauchForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.verbrauchForce </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00445">445</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  445</span>                                                                          {</div>
+<div class="line"><span class="lineno">  446</span>        <span class="keywordflow">return</span> forceNextCheck.remove(forceKey(xDoc, key)) != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  447</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="ad710c186d9c678bd5fdfae2e4fbcbcfe" name="ad710c186d9c678bd5fdfae2e4fbcbcfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad710c186d9c678bd5fdfae2e4fbcbcfe">&#9670;&#160;</a></span>erwartesTurnierSystem</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.erwartesTurnierSystem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00069">69</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a885cc36b00ba6bd7099b4e4af629eaeb" name="a885cc36b00ba6bd7099b4e4af629eaeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a885cc36b00ba6bd7099b4e4af629eaeb">&#9670;&#160;</a></span>forceNextCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ConcurrentHashMap&lt;String, Boolean&gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.forceNextCheck = new ConcurrentHashMap&lt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Beim nächsten Trigger wird der Skip-Pfad umgangen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00085">85</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="ace7609d435cf040ea67429e81491c27e" name="ace7609d435cf040ea67429e81491c27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7609d435cf040ea67429e81491c27e">&#9670;&#160;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.logger = LogManager.getLogger(SheetSyncListener.class)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00062">62</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a6a87e7c3d434ec87ca843541f28bbed1" name="a6a87e7c3d434ec87ca843541f28bbed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a87e7c3d434ec87ca843541f28bbed1">&#9670;&#160;</a></span>registriert</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Set&lt;XSpreadsheetDocument&gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.registriert</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">                      =</div>
+<div class="line">Collections.newSetFromMap(<span class="keyword">new</span> WeakHashMap&lt;&gt;())</div>
+</div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00077">77</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a778e9315c77c96b35c0dc3e3839016a6" name="a778e9315c77c96b35c0dc3e3839016a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778e9315c77c96b35c0dc3e3839016a6">&#9670;&#160;</a></span>runnerFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final BiFunction&lt;<a class="el" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a>, XSpreadsheet, <a class="el" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a>&gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.runnerFactory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00070">70</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="ab6f75a9a146c072de24c5a36880ae678" name="ab6f75a9a146c072de24c5a36880ae678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f75a9a146c072de24c5a36880ae678">&#9670;&#160;</a></span>schluesselLieferant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final BiFunction&lt;XSpreadsheetDocument, XSpreadsheet, String&gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.schluesselLieferant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Spieltag-Variante: inkl. Nr. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00074">74</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a6c1d3106e52f2716fe96f1e914b4f6ef" name="a6c1d3106e52f2716fe96f1e914b4f6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c1d3106e52f2716fe96f1e914b4f6ef">&#9670;&#160;</a></span>signaturLieferant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final BiFunction&lt;XSpreadsheetDocument, XSpreadsheet, <a class="el" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a>&gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.signaturLieferant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Spieltag-Variante: dynamisch pro Spieltag-Nr. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00072">72</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a342d3083301f75abf99c9d1110d5df1c" name="a342d3083301f75abf99c9d1110d5df1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a342d3083301f75abf99c9d1110d5df1c">&#9670;&#160;</a></span>VERIFY_INTERVAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Duration de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.VERIFY_INTERVAL = Duration.ofMinutes(10)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00065">65</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a3b74b6442b45058d64e27d44ab7d08b0" name="a3b74b6442b45058d64e27d44ab7d08b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b74b6442b45058d64e27d44ab7d08b0">&#9670;&#160;</a></span>xContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final XComponentContext de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.xContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00067">67</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<a id="a7088cbd1c307e17313ff7cc0b2c5e196" name="a7088cbd1c307e17313ff7cc0b2c5e196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7088cbd1c307e17313ff7cc0b2c5e196">&#9670;&#160;</a></span>zielSheetMatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final BiPredicate&lt;XSpreadsheetDocument, XSpreadsheet&gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncListener.zielSheetMatch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html#l00068">68</a> der Datei <a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/helper/sheetsync/<a class="el" href="../../d1/dfa/_sheet_sync_listener_8java_source.html">SheetSyncListener.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">helper</a></li><li class="navelem"><a href="../../d6/de4/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync.html">sheetsync</a></li><li class="navelem"><a href="../../d0/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_listener.html">SheetSyncListener</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

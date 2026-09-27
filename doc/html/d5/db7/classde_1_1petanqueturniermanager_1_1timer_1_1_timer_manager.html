@@ -1,0 +1,1183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.timer.TimerManager Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/db7/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_manager.html','../../','d5/d8b/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.timer.TimerManager Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Verwaltet den Rundenzeit-Timer.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a1d49b207169bb9b8e0486c0715feb0ab" id="r_a1d49b207169bb9b8e0486c0715feb0ab"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1d49b207169bb9b8e0486c0715feb0ab">addListener</a> (<a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a> listener)</td></tr>
+<tr class="memdesc:a1d49b207169bb9b8e0486c0715feb0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registriert einen Listener, der bei jeder Zustandsänderung benachrichtigt wird.  <br /></td></tr>
+<tr class="memitem:a5cd8d352a9d796b764085b568ca49f1d" id="r_a5cd8d352a9d796b764085b568ca49f1d"><td class="memItemLeft"><a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5cd8d352a9d796b764085b568ca49f1d">getAktuellerZustand</a> ()</td></tr>
+<tr class="memdesc:a5cd8d352a9d796b764085b568ca49f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt den aktuellen Zustand zurück (für Polling, z.B.  <br /></td></tr>
+<tr class="memitem:a44b39985425dc51a496e57da892dd5a2" id="r_a44b39985425dc51a496e57da892dd5a2"><td class="memItemLeft"><a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html">TimerZustand</a>&#160;</td><td class="memItemRight"><a class="el" href="#a44b39985425dc51a496e57da892dd5a2">getZustand</a> ()</td></tr>
+<tr class="memdesc:a44b39985425dc51a496e57da892dd5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert den aktuellen <code><a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html">TimerZustand</a></code>.  <br /></td></tr>
+<tr class="memitem:acc778e4a6a98fd8da4bbb78eebb14f04" id="r_acc778e4a6a98fd8da4bbb78eebb14f04"><td class="memItemLeft">synchronized void&#160;</td><td class="memItemRight"><a class="el" href="#acc778e4a6a98fd8da4bbb78eebb14f04">pauseOderFortsetzen</a> ()</td></tr>
+<tr class="memdesc:acc778e4a6a98fd8da4bbb78eebb14f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wechselt zwischen Pause und Fortsetzen.  <br /></td></tr>
+<tr class="memitem:a4c1ba85506f99a2aeaf4254bc2127a37" id="r_a4c1ba85506f99a2aeaf4254bc2127a37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c1ba85506f99a2aeaf4254bc2127a37">removeListener</a> (<a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a> listener)</td></tr>
+<tr class="memdesc:a4c1ba85506f99a2aeaf4254bc2127a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entfernt einen Listener.  <br /></td></tr>
+<tr class="memitem:a99701c4e3d96a0186fa9286f59ccb5e8" id="r_a99701c4e3d96a0186fa9286f59ccb5e8"><td class="memItemLeft">synchronized void&#160;</td><td class="memItemRight"><a class="el" href="#a99701c4e3d96a0186fa9286f59ccb5e8">snooze</a> ()</td></tr>
+<tr class="memdesc:a99701c4e3d96a0186fa9286f59ccb5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schaltet den wiederholten End-Gong stumm.  <br /></td></tr>
+<tr class="memitem:af3880ad5efba4dfd10a2d19e4ad6c5e7" id="r_af3880ad5efba4dfd10a2d19e4ad6c5e7"><td class="memItemLeft">synchronized void&#160;</td><td class="memItemRight"><a class="el" href="#af3880ad5efba4dfd10a2d19e4ad6c5e7">starten</a> (long dauerSekunden, String bezeichnung, int port, int hintergrundFarbe)</td></tr>
+<tr class="memdesc:af3880ad5efba4dfd10a2d19e4ad6c5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet den Timer.  <br /></td></tr>
+<tr class="memitem:a74c6f50493b27ca1917bd7cfeb6c180d" id="r_a74c6f50493b27ca1917bd7cfeb6c180d"><td class="memItemLeft">synchronized void&#160;</td><td class="memItemRight"><a class="el" href="#a74c6f50493b27ca1917bd7cfeb6c180d">stoppen</a> ()</td></tr>
+<tr class="memdesc:a74c6f50493b27ca1917bd7cfeb6c180d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stoppt den Timer und setzt den Zustand auf INAKTIV zurück.  <br /></td></tr>
+<tr class="memitem:a31f4b2da9fae5cdf75e9432994dc5ae5" id="r_a31f4b2da9fae5cdf75e9432994dc5ae5"><td class="memItemLeft">synchronized void&#160;</td><td class="memItemRight"><a class="el" href="#a31f4b2da9fae5cdf75e9432994dc5ae5">zeitAnpassen</a> (long deltaSekunden)</td></tr>
+<tr class="memdesc:a31f4b2da9fae5cdf75e9432994dc5ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passt die verbleibende Zeit an.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a7a92d6280aadf2c9cb6f7cc7f87cf581" id="r_a7a92d6280aadf2c9cb6f7cc7f87cf581"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7a92d6280aadf2c9cb6f7cc7f87cf581">dispose</a> ()</td></tr>
+<tr class="memdesc:a7a92d6280aadf2c9cb6f7cc7f87cf581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fährt den <a class="el" href="../../d5/db7/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_manager.html" title="Verwaltet den Rundenzeit-Timer.">TimerManager</a> sauber herunter.  <br /></td></tr>
+<tr class="memitem:abf7c82af49bbd74da065bb8936e018dd" id="r_abf7c82af49bbd74da065bb8936e018dd"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#abf7c82af49bbd74da065bb8936e018dd">formatiere</a> (long sekunden)</td></tr>
+<tr class="memdesc:abf7c82af49bbd74da065bb8936e018dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formatiert Sekunden als "MM:SS".  <br /></td></tr>
+<tr class="memitem:aa857c7ae9db582ff49db64c353eaa593" id="r_aa857c7ae9db582ff49db64c353eaa593"><td class="memItemLeft">static <a class="el" href="#af06e0157fe7233454223fe31c863c762">TimerManager</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa857c7ae9db582ff49db64c353eaa593">get</a> ()</td></tr>
+<tr class="memdesc:aa857c7ae9db582ff49db64c353eaa593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt die aktive Instanz zurück.  <br /></td></tr>
+<tr class="memitem:a0a48f81f7abb5dbc89e63e0d3cfdaa41" id="r_a0a48f81f7abb5dbc89e63e0d3cfdaa41"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0a48f81f7abb5dbc89e63e0d3cfdaa41">init</a> (XComponentContext xContext)</td></tr>
+<tr class="memdesc:a0a48f81f7abb5dbc89e63e0d3cfdaa41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert den <a class="el" href="../../d5/db7/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_manager.html" title="Verwaltet den Rundenzeit-Timer.">TimerManager</a>.  <br /></td></tr>
+<tr class="memitem:a4010e4f8848feab7132006cfb147a39e" id="r_a4010e4f8848feab7132006cfb147a39e"><td class="memItemLeft">static long&#160;</td><td class="memItemRight"><a class="el" href="#a4010e4f8848feab7132006cfb147a39e">parseDauer</a> (String mmss)</td></tr>
+<tr class="memdesc:a4010e4f8848feab7132006cfb147a39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst einen "MM:SS"-String in Sekunden.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ab96d6cf3d28e684134f464fb5d5e99ff" id="r_ab96d6cf3d28e684134f464fb5d5e99ff"><td class="memItemLeft"><a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab96d6cf3d28e684134f464fb5d5e99ff">aktuellerState</a> ()</td></tr>
+<tr class="memitem:a58eee88a67104c6e3ae70200e42b582d" id="r_a58eee88a67104c6e3ae70200e42b582d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a58eee88a67104c6e3ae70200e42b582d">emittiere</a> (<a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a> state)</td></tr>
+<tr class="memitem:a10b97a3ff53e1c38de8eb3f067b61e00" id="r_a10b97a3ff53e1c38de8eb3f067b61e00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a10b97a3ff53e1c38de8eb3f067b61e00">stoppeTickTask</a> ()</td></tr>
+<tr class="memitem:a4981bddd18908fdb6c42c7ff8f784a02" id="r_a4981bddd18908fdb6c42c7ff8f784a02"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4981bddd18908fdb6c42c7ff8f784a02">tick</a> ()</td></tr>
+<tr class="memitem:af06e0157fe7233454223fe31c863c762" id="r_af06e0157fe7233454223fe31c863c762"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af06e0157fe7233454223fe31c863c762">TimerManager</a> (XComponentContext xContext)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a1561878892cf7159145938c2e8b0b384" id="r_a1561878892cf7159145938c2e8b0b384"><td class="memItemLeft">volatile String&#160;</td><td class="memItemRight"><a class="el" href="#a1561878892cf7159145938c2e8b0b384">bezeichnung</a> = &quot;&quot;</td></tr>
+<tr class="memitem:a6939ee8d2e0509fbfa820656204a3b88" id="r_a6939ee8d2e0509fbfa820656204a3b88"><td class="memItemLeft">volatile long&#160;</td><td class="memItemRight"><a class="el" href="#a6939ee8d2e0509fbfa820656204a3b88">endNanos</a></td></tr>
+<tr class="memitem:a65ee3856b11de4e8f1a4bfc0073c590b" id="r_a65ee3856b11de4e8f1a4bfc0073c590b"><td class="memItemLeft">final ScheduledExecutorService&#160;</td><td class="memItemRight"><a class="el" href="#a65ee3856b11de4e8f1a4bfc0073c590b">executor</a></td></tr>
+<tr class="memitem:aeab694e88c0b6fb92176d870bee6a4ab" id="r_aeab694e88c0b6fb92176d870bee6a4ab"><td class="memItemLeft">volatile String&#160;</td><td class="memItemRight"><a class="el" href="#aeab694e88c0b6fb92176d870bee6a4ab">hintergrundFarbeHex</a> = &quot;#000000&quot;</td></tr>
+<tr class="memitem:aae1ca4b2a9fb135bb6a4956993c3f688" id="r_aae1ca4b2a9fb135bb6a4956993c3f688"><td class="memItemLeft">final List&lt; <a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aae1ca4b2a9fb135bb6a4956993c3f688">listeners</a> = new CopyOnWriteArrayList&lt;&gt;()</td></tr>
+<tr class="memitem:aa208bece581be37eab5205e853cb3d7e" id="r_aa208bece581be37eab5205e853cb3d7e"><td class="memItemLeft">volatile long&#160;</td><td class="memItemRight"><a class="el" href="#aa208bece581be37eab5205e853cb3d7e">restNanos</a></td></tr>
+<tr class="memitem:ad631480302d5c6971acd2f5a3a3cb42b" id="r_ad631480302d5c6971acd2f5a3a3cb42b"><td class="memItemLeft">volatile boolean&#160;</td><td class="memItemRight"><a class="el" href="#ad631480302d5c6971acd2f5a3a3cb42b">snoozed</a></td></tr>
+<tr class="memitem:a28b120757ba17c42953cb75a9a910f47" id="r_a28b120757ba17c42953cb75a9a910f47"><td class="memItemLeft">volatile ScheduledFuture&lt;?&gt;&#160;</td><td class="memItemRight"><a class="el" href="#a28b120757ba17c42953cb75a9a910f47">tickTask</a></td></tr>
+<tr class="memitem:af091d2d535e2cc6f02f7368d6426c8e2" id="r_af091d2d535e2cc6f02f7368d6426c8e2"><td class="memItemLeft">final XComponentContext&#160;</td><td class="memItemRight"><a class="el" href="#af091d2d535e2cc6f02f7368d6426c8e2">xContext</a></td></tr>
+<tr class="memitem:ae059f35ce6fe082855c263886b89037d" id="r_ae059f35ce6fe082855c263886b89037d"><td class="memItemLeft">volatile <a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html">TimerZustand</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae059f35ce6fe082855c263886b89037d">zustand</a> = <a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html#a252bc69730df55e58589aecc925d64ea">TimerZustand.INAKTIV</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:ac4ad74684e52fa8b37fb146d3e41f447" id="r_ac4ad74684e52fa8b37fb146d3e41f447"><td class="memItemLeft">static volatile <a class="el" href="#af06e0157fe7233454223fe31c863c762">TimerManager</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac4ad74684e52fa8b37fb146d3e41f447">instanz</a></td></tr>
+<tr class="memitem:aa790f477f46c341d776ca366fd7acc21" id="r_aa790f477f46c341d776ca366fd7acc21"><td class="memItemLeft">static final Logger&#160;</td><td class="memItemRight"><a class="el" href="#aa790f477f46c341d776ca366fd7acc21">logger</a> = LogManager.getLogger(TimerManager.class)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Lifecycle: Wird von <code class="JavaDocCode">PetanqueTurnierMngrSingleton.init()</code> initialisiert und von <code class="JavaDocCode">PetanqueTurnierMngrSingleton.dispose()</code> heruntergefahren. </p>
+<p>Countdown-Berechnung basiert auf <code><a class="el" href="">System#nanoTime()</a></code> um Drift zu vermeiden. </p>
+<p>Alle Zustandsänderungen werden über den <code><a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a></code>-Mechanismus an registrierte Listener emittiert (Observer-Pattern). </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00033">33</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="af06e0157fe7233454223fe31c863c762" name="af06e0157fe7233454223fe31c863c762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06e0157fe7233454223fe31c863c762">&#9670;&#160;</a></span>TimerManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.timer.TimerManager.TimerManager </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00051">51</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                     {</div>
+<div class="line"><span class="lineno">   52</span>        this.xContext = xContext;</div>
+<div class="line"><span class="lineno">   53</span>        this.executor = Executors.newSingleThreadScheduledExecutor(r -&gt; {</div>
+<div class="line"><span class="lineno">   54</span>            var t = <span class="keyword">new</span> Thread(r, <span class="stringliteral">&quot;PTM-Timer&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span>            t.setDaemon(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> t;</div>
+<div class="line"><span class="lineno">   57</span>        });</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a1d49b207169bb9b8e0486c0715feb0ab" name="a1d49b207169bb9b8e0486c0715feb0ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d49b207169bb9b8e0486c0715feb0ab">&#9670;&#160;</a></span>addListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.addListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a></td>          <td class="paramname"><span class="paramname"><em>listener</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00111">111</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                    {</div>
+<div class="line"><span class="lineno">  112</span>        listeners.add(listener);</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab96d6cf3d28e684134f464fb5d5e99ff" name="ab96d6cf3d28e684134f464fb5d5e99ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96d6cf3d28e684134f464fb5d5e99ff">&#9670;&#160;</a></span>aktuellerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a> de.petanqueturniermanager.timer.TimerManager.aktuellerState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00272">272</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>                                        {</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordtype">long</span> verbleibend = zustand == TimerZustand.PAUSIERT</div>
+<div class="line"><span class="lineno">  274</span>                ? restNanos / 1_000_000_000L</div>
+<div class="line"><span class="lineno">  275</span>                : Math.max(0, (endNanos - System.nanoTime()) / 1_000_000_000L);</div>
+<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a>(formatiere(verbleibend), verbleibend, zustand, bezeichnung, hintergrundFarbeHex, snoozed);</div>
+<div class="line"><span class="lineno">  277</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1timer_html_af52f092c2349d95e06c7879d9552b0c0"><div class="ttname"><a href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">de.petanqueturniermanager.timer.TimerState</a></div><div class="ttdeci">record TimerState(String anzeige, long sekunden, TimerZustand zustand, String bezeichnung, String hintergrundFarbe, boolean snoozed)</div><div class="ttdoc">Unveränderlicher Schnappschuss des Timer-Zustands.</div><div class="ttdef"><b>Definition</b> <a href="../../df/dd7/_timer_state_8java_source.html#l00015">TimerState.java:15</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7a92d6280aadf2c9cb6f7cc7f87cf581" name="a7a92d6280aadf2c9cb6f7cc7f87cf581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a92d6280aadf2c9cb6f7cc7f87cf581">&#9670;&#160;</a></span>dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.dispose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Wird von <code class="JavaDocCode">PetanqueTurnierMngrSingleton.dispose()</code> aufgerufen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00096">96</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                                 {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keyword">synchronized</span> (TimerManager.class) {</div>
+<div class="line"><span class="lineno">   98</span>            var tm = instanz;</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (tm != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  100</span>                tm.stoppen();</div>
+<div class="line"><span class="lineno">  101</span>                tm.executor.shutdownNow();</div>
+<div class="line"><span class="lineno">  102</span>                instanz = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  103</span>                logger.debug(<span class="stringliteral">&quot;TimerManager disposed&quot;</span>);</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a58eee88a67104c6e3ae70200e42b582d" name="a58eee88a67104c6e3ae70200e42b582d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58eee88a67104c6e3ae70200e42b582d">&#9670;&#160;</a></span>emittiere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.emittiere </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00262">262</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>                                             {</div>
+<div class="line"><span class="lineno">  263</span>        listeners.forEach(l -&gt; {</div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  265</span>                l.onChange(state);</div>
+<div class="line"><span class="lineno">  266</span>            } <span class="keywordflow">catch</span> (Exception e) {</div>
+<div class="line"><span class="lineno">  267</span>                logger.error(<span class="stringliteral">&quot;Fehler in TimerListener&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  268</span>            }</div>
+<div class="line"><span class="lineno">  269</span>        });</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abf7c82af49bbd74da065bb8936e018dd" name="abf7c82af49bbd74da065bb8936e018dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7c82af49bbd74da065bb8936e018dd">&#9670;&#160;</a></span>formatiere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.timer.TimerManager.formatiere </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>sekunden</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sekunden</td><td>nicht-negativer Sekundenwert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>z.B. "04:32" </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00285">285</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                   {</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordtype">long</span> s = Math.max(0, sekunden);</div>
+<div class="line"><span class="lineno">  287</span>        <span class="keywordflow">return</span> String.format(<span class="stringliteral">&quot;%02d:%02d&quot;</span>, s / 60, s % 60);</div>
+<div class="line"><span class="lineno">  288</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa857c7ae9db582ff49db64c353eaa593" name="aa857c7ae9db582ff49db64c353eaa593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa857c7ae9db582ff49db64c353eaa593">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af06e0157fe7233454223fe31c863c762">TimerManager</a> de.petanqueturniermanager.timer.TimerManager.get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="exception"><dt>Ausnahmebehandlung</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalStateException</td><td>wenn <code><a class="el" href="#a0a48f81f7abb5dbc89e63e0d3cfdaa41">init</a></code> noch nicht aufgerufen wurde </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00084">84</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                     {</div>
+<div class="line"><span class="lineno">   85</span>        var tm = instanz;</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">if</span> (tm == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="stringliteral">&quot;TimerManager nicht initialisiert&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> tm;</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5cd8d352a9d796b764085b568ca49f1d" name="a5cd8d352a9d796b764085b568ca49f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd8d352a9d796b764085b568ca49f1d">&#9670;&#160;</a></span>getAktuellerZustand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a> de.petanqueturniermanager.timer.TimerManager.getAktuellerZustand </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>durch Statusleiste bei Update). </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00121">121</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                            {</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> aktuellerState();</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a44b39985425dc51a496e57da892dd5a2" name="a44b39985425dc51a496e57da892dd5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b39985425dc51a496e57da892dd5a2">&#9670;&#160;</a></span>getZustand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html">TimerZustand</a> de.petanqueturniermanager.timer.TimerManager.getZustand </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00227">227</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>                                     {</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">return</span> zustand;</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0a48f81f7abb5dbc89e63e0d3cfdaa41" name="a0a48f81f7abb5dbc89e63e0d3cfdaa41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a48f81f7abb5dbc89e63e0d3cfdaa41">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.init </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Darf nur einmal aufgerufen werden. Wird von <code class="JavaDocCode">PetanqueTurnierMngrSingleton.init()</code> aufgerufen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00066">66</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                        {</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (instanz == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keyword">synchronized</span> (TimerManager.class) {</div>
+<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">if</span> (instanz == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   70</span>                    var tm = <span class="keyword">new</span> TimerManager(xContext);</div>
+<div class="line"><span class="lineno">   71</span>                    tm.addListener(<span class="keyword">new</span> TimerSoundPlayer());</div>
+<div class="line"><span class="lineno">   72</span>                    instanz = tm;</div>
+<div class="line"><span class="lineno">   73</span>                    logger.debug(<span class="stringliteral">&quot;TimerManager initialisiert&quot;</span>);</div>
+<div class="line"><span class="lineno">   74</span>                }</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4010e4f8848feab7132006cfb147a39e" name="a4010e4f8848feab7132006cfb147a39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4010e4f8848feab7132006cfb147a39e">&#9670;&#160;</a></span>parseDauer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long de.petanqueturniermanager.timer.TimerManager.parseDauer </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>mmss</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gültiges Format: <code class="JavaDocCode">^\d{1,2}:[0-5]\d$</code>, Gesamtwert &gt; 0.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mmss</td><td>Eingabe-String </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Sekunden als long </dd></dl>
+<dl class="exception"><dt>Ausnahmebehandlung</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalArgumentException</td><td>wenn das Format ungültig ist </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00298">298</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>                                               {</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">if</span> (mmss == <span class="keyword">null</span> || !mmss.matches(<span class="stringliteral">&quot;^\\d{1,2}:[0-5]\\d$&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  300</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="stringliteral">&quot;Ungültiges Format: &quot;</span> + mmss);</div>
+<div class="line"><span class="lineno">  301</span>        }</div>
+<div class="line"><span class="lineno">  302</span>        var teile = mmss.split(<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordtype">long</span> minuten = Long.parseLong(teile[0]);</div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordtype">long</span> sekunden = Long.parseLong(teile[1]);</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keywordtype">long</span> gesamt = minuten * 60 + sekunden;</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (gesamt &lt;= 0) {</div>
+<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="stringliteral">&quot;Dauer muss größer als 0 sein&quot;</span>);</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">return</span> gesamt;</div>
+<div class="line"><span class="lineno">  310</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acc778e4a6a98fd8da4bbb78eebb14f04" name="acc778e4a6a98fd8da4bbb78eebb14f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc778e4a6a98fd8da4bbb78eebb14f04">&#9670;&#160;</a></span>pauseOderFortsetzen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.petanqueturniermanager.timer.TimerManager.pauseOderFortsetzen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ohne Wirkung wenn Timer inaktiv oder beendet. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00162">162</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                                                   {</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">switch</span> (zustand) {</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">case</span> LAEUFT -&gt; {</div>
+<div class="line"><span class="lineno">  165</span>                restNanos = endNanos - System.nanoTime();</div>
+<div class="line"><span class="lineno">  166</span>                <span class="keywordflow">if</span> (restNanos &lt; 0) restNanos = 0;</div>
+<div class="line"><span class="lineno">  167</span>                stoppeTickTask();</div>
+<div class="line"><span class="lineno">  168</span>                zustand = TimerZustand.PAUSIERT;</div>
+<div class="line"><span class="lineno">  169</span>                emittiere(aktuellerState());</div>
+<div class="line"><span class="lineno">  170</span>                logger.debug(<span class="stringliteral">&quot;Timer pausiert, restNanos={}&quot;</span>, restNanos);</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">case</span> PAUSIERT -&gt; {</div>
+<div class="line"><span class="lineno">  173</span>                endNanos = System.nanoTime() + restNanos;</div>
+<div class="line"><span class="lineno">  174</span>                zustand = TimerZustand.LAEUFT;</div>
+<div class="line"><span class="lineno">  175</span>                tickTask = executor.scheduleAtFixedRate(this::tick, 0, 1, TimeUnit.SECONDS);</div>
+<div class="line"><span class="lineno">  176</span>                logger.debug(<span class="stringliteral">&quot;Timer fortgesetzt&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">default</span> -&gt; logger.debug(<span class="stringliteral">&quot;pauseOderFortsetzen() im Zustand {} ignoriert&quot;</span>, zustand);</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c1ba85506f99a2aeaf4254bc2127a37" name="a4c1ba85506f99a2aeaf4254bc2127a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1ba85506f99a2aeaf4254bc2127a37">&#9670;&#160;</a></span>removeListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.removeListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a></td>          <td class="paramname"><span class="paramname"><em>listener</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00116">116</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                       {</div>
+<div class="line"><span class="lineno">  117</span>        listeners.remove(listener);</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a99701c4e3d96a0186fa9286f59ccb5e8" name="a99701c4e3d96a0186fa9286f59ccb5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99701c4e3d96a0186fa9286f59ccb5e8">&#9670;&#160;</a></span>snooze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.petanqueturniermanager.timer.TimerManager.snooze </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wirkt nur, solange der Zustand <code><a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html#a9c4f8af9aa41beca68f880f7cd7b2ed4">TimerZustand#BEENDET</a></code> ist – beim nächsten <code><a class="el" href="#af3880ad5efba4dfd10a2d19e4ad6c5e7">starten</a></code> wird die Flagge automatisch wieder zurückgesetzt. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00217">217</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  217</span>                                      {</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> (zustand != TimerZustand.BEENDET || snoozed) {</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  220</span>        }</div>
+<div class="line"><span class="lineno">  221</span>        snoozed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  222</span>        emittiere(aktuellerState());</div>
+<div class="line"><span class="lineno">  223</span>        logger.debug(<span class="stringliteral">&quot;Timer-Snooze aktiviert&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af3880ad5efba4dfd10a2d19e4ad6c5e7" name="af3880ad5efba4dfd10a2d19e4ad6c5e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3880ad5efba4dfd10a2d19e4ad6c5e7">&#9670;&#160;</a></span>starten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.petanqueturniermanager.timer.TimerManager.starten </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>dauerSekunden</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>bezeichnung</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>port</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hintergrundFarbe</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ein eventuell laufender Timer wird zuerst gestoppt.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dauerSekunden</td><td>Gesamtdauer in Sekunden (muss &gt; 0 sein) </td></tr>
+    <tr><td class="paramname">bezeichnung</td><td>optionaler Rundenname (darf null sein) </td></tr>
+    <tr><td class="paramname">port</td><td>Webserver-Port für die Timer-Anzeige </td></tr>
+    <tr><td class="paramname">hintergrundFarbe</td><td>Hintergrundfarbe als RGB-Integer (z.B. <code class="JavaDocCode">0x1a2b3c</code>) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00135">135</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                                             {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (dauerSekunden &lt;= 0) {</div>
+<div class="line"><span class="lineno">  137</span>            logger.warn(<span class="stringliteral">&quot;starten() mit ungültiger Dauer aufgerufen: {}&quot;</span>, dauerSekunden);</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>        stoppeTickTask();</div>
+<div class="line"><span class="lineno">  141</span>        this.bezeichnung = bezeichnung != <span class="keyword">null</span> ? bezeichnung : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  142</span>        this.hintergrundFarbeHex = <span class="stringliteral">&quot;#&quot;</span> + String.format(<span class="stringliteral">&quot;%06x&quot;</span>, hintergrundFarbe &amp; 0xFFFFFF);</div>
+<div class="line"><span class="lineno">  143</span>        this.snoozed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  145</span>            WebServerManager.get().timerServerBesorgen(port);</div>
+<div class="line"><span class="lineno">  146</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><span class="lineno">  147</span>            logger.error(<span class="stringliteral">&quot;Timer-Webserver konnte nicht gestartet werden auf Port {}: {}&quot;</span>, port, e.getMessage(), e);</div>
+<div class="line"><span class="lineno">  148</span>            MessageBox.from(xContext, MessageBoxTypeEnum.ERROR_OK)</div>
+<div class="line"><span class="lineno">  149</span>                    .caption(I18n.get(<span class="stringliteral">&quot;timer.dialog.titel&quot;</span>))</div>
+<div class="line"><span class="lineno">  150</span>                    .message(I18n.get(<span class="stringliteral">&quot;timer.fehler.webserver.port.belegt&quot;</span>, port))</div>
+<div class="line"><span class="lineno">  151</span>                    .show();</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>        endNanos = System.nanoTime() + dauerSekunden * 1_000_000_000L;</div>
+<div class="line"><span class="lineno">  155</span>        zustand = TimerZustand.LAEUFT;</div>
+<div class="line"><span class="lineno">  156</span>        tickTask = executor.scheduleAtFixedRate(this::tick, 0, 1, TimeUnit.SECONDS);</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>        logger.info(<span class="stringliteral">&quot;Timer gestartet: {} Sekunden, Port {}&quot;</span>, dauerSekunden, port);</div>
+<div class="line"><span class="lineno">  159</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74c6f50493b27ca1917bd7cfeb6c180d" name="a74c6f50493b27ca1917bd7cfeb6c180d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c6f50493b27ca1917bd7cfeb6c180d">&#9670;&#160;</a></span>stoppen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.petanqueturniermanager.timer.TimerManager.stoppen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00201">201</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>                                       {</div>
+<div class="line"><span class="lineno">  202</span>        stoppeTickTask();</div>
+<div class="line"><span class="lineno">  203</span>        zustand = TimerZustand.INAKTIV;</div>
+<div class="line"><span class="lineno">  204</span>        bezeichnung = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  205</span>        snoozed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  206</span>        <span class="comment">// hintergrundFarbeHex wird bewusst nicht zurückgesetzt –</span></div>
+<div class="line"><span class="lineno">  207</span>        <span class="comment">// die zuletzt gewählte Farbe bleibt im INAKTIV-Zustand sichtbar.</span></div>
+<div class="line"><span class="lineno">  208</span>        emittiere(<span class="keyword">new</span> <a class="code hl_function" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a>(<span class="stringliteral">&quot;--:--&quot;</span>, 0, TimerZustand.INAKTIV, <span class="stringliteral">&quot;&quot;</span>, hintergrundFarbeHex, <span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">  209</span>        logger.debug(<span class="stringliteral">&quot;Timer gestoppt&quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a10b97a3ff53e1c38de8eb3f067b61e00" name="a10b97a3ff53e1c38de8eb3f067b61e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10b97a3ff53e1c38de8eb3f067b61e00">&#9670;&#160;</a></span>stoppeTickTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.stoppeTickTask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00254">254</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  254</span>                                  {</div>
+<div class="line"><span class="lineno">  255</span>        var task = tickTask;</div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">if</span> (task != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  257</span>            task.cancel(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  258</span>            tickTask = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  259</span>        }</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4981bddd18908fdb6c42c7ff8f784a02" name="a4981bddd18908fdb6c42c7ff8f784a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4981bddd18908fdb6c42c7ff8f784a02">&#9670;&#160;</a></span>tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.timer.TimerManager.tick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00233">233</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  233</span>                        {</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordtype">long</span> verbleibend;</div>
+<div class="line"><span class="lineno">  235</span>        TimerZustand neuerZustand;</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  238</span>            verbleibend = (endNanos - System.nanoTime()) / 1_000_000_000L;</div>
+<div class="line"><span class="lineno">  239</span>            <span class="keywordflow">if</span> (verbleibend &lt;= 0) {</div>
+<div class="line"><span class="lineno">  240</span>                verbleibend = 0;</div>
+<div class="line"><span class="lineno">  241</span>                neuerZustand = TimerZustand.BEENDET;</div>
+<div class="line"><span class="lineno">  242</span>                stoppeTickTask();</div>
+<div class="line"><span class="lineno">  243</span>                zustand = TimerZustand.BEENDET;</div>
+<div class="line"><span class="lineno">  244</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  245</span>                neuerZustand = TimerZustand.LAEUFT;</div>
+<div class="line"><span class="lineno">  246</span>            }</div>
+<div class="line"><span class="lineno">  247</span>        }</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>        emittiere(<span class="keyword">new</span> <a class="code hl_function" href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html#af52f092c2349d95e06c7879d9552b0c0">TimerState</a>(formatiere(verbleibend), verbleibend, neuerZustand, bezeichnung, hintergrundFarbeHex, snoozed));</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a31f4b2da9fae5cdf75e9432994dc5ae5" name="a31f4b2da9fae5cdf75e9432994dc5ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f4b2da9fae5cdf75e9432994dc5ae5">&#9670;&#160;</a></span>zeitAnpassen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.petanqueturniermanager.timer.TimerManager.zeitAnpassen </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>deltaSekunden</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Funktioniert während LAEUFT und PAUSIERT.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deltaSekunden</td><td>positive oder negative Anzahl Sekunden (z.B. +60 oder -60) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00187">187</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                              {</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">if</span> (zustand == TimerZustand.INAKTIV || zustand == TimerZustand.BEENDET) {</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  190</span>        }</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (zustand == TimerZustand.LAEUFT) {</div>
+<div class="line"><span class="lineno">  192</span>            endNanos = Math.max(System.nanoTime(), endNanos + deltaSekunden * 1_000_000_000L);</div>
+<div class="line"><span class="lineno">  193</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  194</span>            restNanos = Math.max(0, restNanos + deltaSekunden * 1_000_000_000L);</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+<div class="line"><span class="lineno">  196</span>        emittiere(aktuellerState());</div>
+<div class="line"><span class="lineno">  197</span>        logger.debug(<span class="stringliteral">&quot;Zeit angepasst um {} s, neuer Zustand: {}&quot;</span>, deltaSekunden, aktuellerState().anzeige());</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a1561878892cf7159145938c2e8b0b384" name="a1561878892cf7159145938c2e8b0b384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1561878892cf7159145938c2e8b0b384">&#9670;&#160;</a></span>bezeichnung</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile String de.petanqueturniermanager.timer.TimerManager.bezeichnung = &quot;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00046">46</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="a6939ee8d2e0509fbfa820656204a3b88" name="a6939ee8d2e0509fbfa820656204a3b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6939ee8d2e0509fbfa820656204a3b88">&#9670;&#160;</a></span>endNanos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile long de.petanqueturniermanager.timer.TimerManager.endNanos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00044">44</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="a65ee3856b11de4e8f1a4bfc0073c590b" name="a65ee3856b11de4e8f1a4bfc0073c590b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ee3856b11de4e8f1a4bfc0073c590b">&#9670;&#160;</a></span>executor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ScheduledExecutorService de.petanqueturniermanager.timer.TimerManager.executor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00040">40</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="aeab694e88c0b6fb92176d870bee6a4ab" name="aeab694e88c0b6fb92176d870bee6a4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab694e88c0b6fb92176d870bee6a4ab">&#9670;&#160;</a></span>hintergrundFarbeHex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile String de.petanqueturniermanager.timer.TimerManager.hintergrundFarbeHex = &quot;#000000&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00047">47</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="ac4ad74684e52fa8b37fb146d3e41f447" name="ac4ad74684e52fa8b37fb146d3e41f447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ad74684e52fa8b37fb146d3e41f447">&#9670;&#160;</a></span>instanz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile <a class="el" href="#af06e0157fe7233454223fe31c863c762">TimerManager</a> de.petanqueturniermanager.timer.TimerManager.instanz</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00037">37</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="aae1ca4b2a9fb135bb6a4956993c3f688" name="aae1ca4b2a9fb135bb6a4956993c3f688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae1ca4b2a9fb135bb6a4956993c3f688">&#9670;&#160;</a></span>listeners</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final List&lt;<a class="el" href="../../d9/d06/interfacede_1_1petanqueturniermanager_1_1timer_1_1_timer_listener.html">TimerListener</a>&gt; de.petanqueturniermanager.timer.TimerManager.listeners = new CopyOnWriteArrayList&lt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00041">41</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="aa790f477f46c341d776ca366fd7acc21" name="aa790f477f46c341d776ca366fd7acc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa790f477f46c341d776ca366fd7acc21">&#9670;&#160;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger de.petanqueturniermanager.timer.TimerManager.logger = LogManager.getLogger(TimerManager.class)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00035">35</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="aa208bece581be37eab5205e853cb3d7e" name="aa208bece581be37eab5205e853cb3d7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa208bece581be37eab5205e853cb3d7e">&#9670;&#160;</a></span>restNanos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile long de.petanqueturniermanager.timer.TimerManager.restNanos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00045">45</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="ad631480302d5c6971acd2f5a3a3cb42b" name="ad631480302d5c6971acd2f5a3a3cb42b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad631480302d5c6971acd2f5a3a3cb42b">&#9670;&#160;</a></span>snoozed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile boolean de.petanqueturniermanager.timer.TimerManager.snoozed</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00049">49</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="a28b120757ba17c42953cb75a9a910f47" name="a28b120757ba17c42953cb75a9a910f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b120757ba17c42953cb75a9a910f47">&#9670;&#160;</a></span>tickTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile ScheduledFuture&lt;?&gt; de.petanqueturniermanager.timer.TimerManager.tickTask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00048">48</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="af091d2d535e2cc6f02f7368d6426c8e2" name="af091d2d535e2cc6f02f7368d6426c8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af091d2d535e2cc6f02f7368d6426c8e2">&#9670;&#160;</a></span>xContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final XComponentContext de.petanqueturniermanager.timer.TimerManager.xContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00039">39</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<a id="ae059f35ce6fe082855c263886b89037d" name="ae059f35ce6fe082855c263886b89037d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae059f35ce6fe082855c263886b89037d">&#9670;&#160;</a></span>zustand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile <a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html">TimerZustand</a> de.petanqueturniermanager.timer.TimerManager.zustand = <a class="el" href="../../d4/d87/enumde_1_1petanqueturniermanager_1_1timer_1_1_timer_zustand.html#a252bc69730df55e58589aecc925d64ea">TimerZustand.INAKTIV</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d8a/_timer_manager_8java_source.html#l00043">43</a> der Datei <a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/timer/<a class="el" href="../../df/d8a/_timer_manager_8java_source.html">TimerManager.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../d4/d57/namespacede_1_1petanqueturniermanager_1_1timer.html">timer</a></li><li class="navelem"><a href="../../d5/db7/classde_1_1petanqueturniermanager_1_1timer_1_1_timer_manager.html">TimerManager</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

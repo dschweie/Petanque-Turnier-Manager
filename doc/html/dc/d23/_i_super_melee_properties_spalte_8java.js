@@ -1,0 +1,4 @@
+var _i_super_melee_properties_spalte_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.konfiguration.ISuperMeleePropertiesSpalte", "d9/d42/interfacede_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_i_super_melee_properties_spalte.html", "d9/d42/interfacede_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_i_super_melee_properties_spalte" ]
+];

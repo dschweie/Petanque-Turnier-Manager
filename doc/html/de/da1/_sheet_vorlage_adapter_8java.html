@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/vorlage/SheetVorlageAdapter.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/da1/_sheet_vorlage_adapter_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SheetVorlageAdapter.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.ArrayList;</code><br />
+<code>import java.util.HashMap;</code><br />
+<code>import java.util.List;</code><br />
+<code>import java.util.Map;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheetDocument;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.SheetNamen;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.RangeHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.rangedata.CellData;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.rangedata.RangeData;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.rangedata.RowData;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.AbgleichQuelle;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.AbgleichStatusSenke;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.AbgleichStatusSenke.AbgleichStatus;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.AbgleichStatusSenke.ZeilenStatus;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.MeldelisteSpielerDaten;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SheetVorlageAdapter.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/dc1/_sheet_vorlage_adapter_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2spielerdb_2vorlage_2_sheet_vorlage_adapter_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2spielerdb_2vorlage_2_sheet_vorlage_adapter_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2spielerdb_2vorlage_2_sheet_vorlage_adapter_8java">
+<area shape="rect" title=" " alt="" coords="2196,5,2473,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,128,131"/>
+<area shape="poly" title=" " alt="" coords="2193,28,1754,33,1161,43,856,51,571,63,326,79,140,99,121,102,120,97,139,93,325,73,570,58,855,46,1161,37,1754,28,2198,28"/>
+<area shape="rect" title=" " alt="" coords="151,104,278,131"/>
+<area shape="poly" title=" " alt="" coords="2193,29,1782,35,1232,46,688,66,462,80,291,99,271,102,270,97,290,93,462,75,688,60,1232,40,1781,30,2198,28"/>
+<area shape="rect" title=" " alt="" coords="302,104,394,131"/>
+<area shape="poly" title=" " alt="" coords="2193,28,1802,32,1285,40,1022,49,776,61,565,77,406,99,393,102,392,96,405,93,565,72,776,55,1021,43,1285,35,1802,26,2198,27"/>
+<area shape="rect" title=" " alt="" coords="418,104,513,131"/>
+<area shape="poly" title=" " alt="" coords="2193,28,1825,34,1343,43,1098,52,870,64,674,79,526,99,512,102,511,97,525,93,673,74,869,58,1098,47,1343,38,1825,28,2198,28"/>
+<area shape="rect" title=" " alt="" coords="537,96,702,139"/>
+<area shape="poly" title=" " alt="" coords="2193,31,1448,55,1033,74,857,86,718,98,718,93,857,80,1033,69,1448,50,2198,31"/>
+<area shape="rect" title=" " alt="" coords="726,96,892,139"/>
+<area shape="poly" title=" " alt="" coords="2193,27,1954,32,1636,42,1275,62,1090,78,908,98,907,93,1090,73,1275,57,1636,36,1954,27,2198,27"/>
+<area shape="rect" title=" " alt="" coords="916,104,1135,131"/>
+<area shape="poly" title=" " alt="" coords="2193,31,1730,53,1440,72,1148,99,1110,104,1109,98,1148,93,1439,67,1730,48,2198,31"/>
+<area shape="rect" title=" " alt="" coords="1160,96,1379,139"/>
+<area shape="poly" title=" " alt="" coords="2198,34,1837,58,1618,76,1394,98,1394,93,1617,70,1836,53,2193,34"/>
+<area shape="rect" title=" " alt="" coords="1403,96,1621,139"/>
+<area shape="poly" title=" " alt="" coords="2198,39,1940,64,1637,98,1636,93,1940,59,2193,39"/>
+<area shape="rect" title=" " alt="" coords="1645,96,1888,139"/>
+<area shape="poly" title=" " alt="" coords="2204,48,1903,98,1903,92,2199,49"/>
+<area shape="rect" title=" " alt="" coords="1912,104,2186,131"/>
+<area shape="poly" title=" " alt="" coords="2270,48,2105,102,2104,96,2265,49"/>
+<area shape="rect" title=" " alt="" coords="2210,96,2459,139"/>
+<area shape="poly" title=" " alt="" coords="2336,47,2336,82,2333,79,2333,50"/>
+<area shape="rect" title=" " alt="" coords="2483,96,2754,139"/>
+<area shape="poly" title=" " alt="" coords="2401,46,2540,91,2535,91,2401,51"/>
+<area shape="rect" title=" " alt="" coords="2778,96,3035,139"/>
+<area shape="poly" title=" " alt="" coords="2469,46,2765,94,2760,94,2468,51"/>
+<area shape="rect" title=" " alt="" coords="3059,96,3316,139"/>
+<area shape="poly" title=" " alt="" coords="2474,37,2735,60,3046,96,3041,95,2734,65,2474,42"/>
+<area shape="rect" title=" " alt="" coords="3341,96,3659,139"/>
+<area shape="poly" title=" " alt="" coords="2474,33,2854,56,3328,96,3323,96,2853,61,2473,38"/>
+<area shape="rect" title=" " alt="" coords="3683,96,4002,139"/>
+<area shape="poly" title=" " alt="" coords="2474,29,2994,50,3327,69,3670,96,3665,96,3327,74,2994,56,2474,35"/>
+<area shape="rect" title=" " alt="" coords="4026,96,4344,139"/>
+<area shape="poly" title=" " alt="" coords="2473,27,3132,45,3566,65,4013,96,4008,96,3566,70,3132,51,2473,33"/>
+<area shape="rect" title=" " alt="" coords="4369,96,4607,139"/>
+<area shape="poly" title=" " alt="" coords="2473,24,2804,26,3267,34,3804,55,4081,72,4356,96,4350,96,4080,77,3803,60,3267,39,2804,31,2473,30"/>
+<area shape="rect" title=" " alt="" coords="4631,96,4870,139"/>
+<area shape="poly" title=" " alt="" coords="2474,27,3536,48,4153,68,4413,80,4619,96,4613,96,4413,85,4152,73,3536,54,2474,33"/>
+<area shape="rect" title=" " alt="" coords="4894,96,5132,139"/>
+<area shape="poly" title=" " alt="" coords="2473,27,2971,33,3659,46,4355,66,4650,78,4881,96,4876,96,4650,84,4355,71,3659,51,2971,39,2474,32"/>
+<area shape="rect" title=" " alt="" coords="5157,96,5395,139"/>
+<area shape="poly" title=" " alt="" coords="2473,26,3018,32,3782,44,4559,64,4888,77,5144,96,5139,96,4887,83,4559,69,3782,49,3018,37,2474,32"/>
+<area shape="rect" title=" " alt="" coords="5419,96,5658,139"/>
+<area shape="poly" title=" " alt="" coords="2474,26,3064,31,3904,42,4762,62,5124,76,5406,96,5401,96,5124,81,4762,67,3904,47,3064,36,2474,31"/>
+</map>
+</div>
+</div>
+<p><a href="../../de/da1/_sheet_vorlage_adapter_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Espielerdb_2Evorlage_2ESheetVorlageAdapter" id="r_de_2Epetanqueturniermanager_2Espielerdb_2Evorlage_2ESheetVorlageAdapter"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d0a/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter.html">de.petanqueturniermanager.spielerdb.vorlage.SheetVorlageAdapter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest das flache Vorlage-Sheet (Vorname | Nachname | Verein) als read-only-Quelle für den Spieler-DB-Abgleich und schreibt nach dem Import Status + Fehlerursache pro Zeile zurück (Spalten D / E).  <a href="../../df/d0a/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter.html#details">Mehr ...</a><br /></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Espielerdb_2Evorlage_2ESheetVorlageAdapter_2EVorlageNichtVerfuegbarException" id="r_de_2Epetanqueturniermanager_2Espielerdb_2Evorlage_2ESheetVorlageAdapter_2EVorlageNichtVerfuegbarException"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d0d/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter_1_1_vorlage_nicht_verfuegbar_exception.html">de.petanqueturniermanager.spielerdb.vorlage.SheetVorlageAdapter.VorlageNichtVerfuegbarException</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wird vom Dispatcher gefangen und als <a class="el" href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html">MessageBox</a> angezeigt.  <a href="../../df/d0d/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter_1_1_vorlage_nicht_verfuegbar_exception.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Espielerdb_2Evorlage" id="r_de_2Epetanqueturniermanager_2Espielerdb_2Evorlage"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d81/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage.html">de.petanqueturniermanager.spielerdb.vorlage</a></td></tr>
+<tr class="memdesc:d1/d81/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vorlage-basierte Quelle für den Spieler-DB-Abgleich. <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_81174e65265c69238572920caec25fe8.html">vorlage</a></li><li class="navelem"><a href="../../de/da1/_sheet_vorlage_adapter_8java.html">SheetVorlageAdapter.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

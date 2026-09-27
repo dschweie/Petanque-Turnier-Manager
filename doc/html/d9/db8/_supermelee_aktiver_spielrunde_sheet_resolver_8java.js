@@ -1,0 +1,4 @@
+var _supermelee_aktiver_spielrunde_sheet_resolver_8java =
+[
+    [ "de.petanqueturniermanager.webserver.SupermeleeAktiverSpielrundeSheetResolver", "de/dc0/classde_1_1petanqueturniermanager_1_1webserver_1_1_supermelee_aktiver_spielrunde_sheet_resolver.html", "de/dc0/classde_1_1petanqueturniermanager_1_1webserver_1_1_supermelee_aktiver_spielrunde_sheet_resolver" ]
+];

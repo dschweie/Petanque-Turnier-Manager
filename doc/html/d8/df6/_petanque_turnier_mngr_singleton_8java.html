@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/comp/PetanqueTurnierMngrSingleton.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/df6/_petanque_turnier_mngr_singleton_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PetanqueTurnierMngrSingleton.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.concurrent.atomic.AtomicBoolean;</code><br />
+<code>import javax.swing.UIManager;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.document.XEventBroadcaster;</code><br />
+<code>import com.sun.star.uno.XComponentContext;</code><br />
+<code>import de.petanqueturniermanager.addins.UpdatePropertieFunctionsSheetRecalcOnLoad;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.EingabeSignatur;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.SheetSyncListener;</code><br />
+<code>import de.petanqueturniermanager.helper.rangliste.SignaturQuellen;</code><br />
+<code>import de.petanqueturniermanager.helper.perflog.PerfLog;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.formulex.meldeliste.FormuleXCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.formulex.meldeliste.FormuleXTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.formulex.rangliste.FormuleXRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.meldeliste.JGJCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.meldeliste.JGJTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.rangliste.JGJRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.formulex.blattschutz.FormuleXBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.formulex.konfiguration.FormuleXKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.formulex.spielrunde.FormuleXAbstractSpielrundeSheet;</code><br />
+<code>import de.petanqueturniermanager.helper.position.Position;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.search.RangeSearchHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.SpielplanFormatiererActivationListener;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.SpielplanFormatiererKonfig;</code><br />
+<code>import de.petanqueturniermanager.helper.sheetsync.SpielplanFormatiererSheetRunner;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.blattschutz.JGJBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.konfiguration.JGJKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.jedergegenjeden.spielplan.JGJSpielPlanSheet;</code><br />
+<code>import de.petanqueturniermanager.liga.blattschutz.LigaBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.liga.konfiguration.LigaKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.liga.rangliste.LigaRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.liga.spielplan.LigaSpielPlanSheet;</code><br />
+<code>import de.petanqueturniermanager.maastrichter.blattschutz.MaastrichterBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.maastrichter.konfiguration.MaastrichterKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.schweizer.blattschutz.SchweizerBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.schweizer.konfiguration.SchweizerKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet;</code><br />
+<code>import de.petanqueturniermanager.supermelee.blattschutz.SupermeleeBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.supermelee.spielrunde.SpielrundeSheetKonstanten;</code><br />
+<code>import de.petanqueturniermanager.triptete.blattschutz.TripTeteBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.triptete.konfiguration.TripTeteKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.triptete.spielplan.TripTeteSpielPlanSheet;</code><br />
+<code>import de.petanqueturniermanager.kaskade.meldeliste.KaskadeCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.kaskade.meldeliste.KaskadeTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.kaskade.spielrunde.KaskadeGruppenRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.ko.meldeliste.KoCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.ko.meldeliste.KoTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.maastrichter.meldeliste.MaastrichterCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.maastrichter.meldeliste.MaastrichterTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.maastrichter.rangliste.MaastrichterVorrundenRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.poule.meldeliste.PouleCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.poule.meldeliste.PouleTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.poule.rangliste.PouleVorrundenRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.schweizer.meldeliste.SchweizerCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.schweizer.meldeliste.SchweizerTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.schweizer.rangliste.SchweizerRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.triptete.meldeliste.TripTeteCheckinListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.triptete.meldeliste.TripTeteTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.triptete.rangliste.TripTeteRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.supermelee.SpielTagNr;</code><br />
+<code>import de.petanqueturniermanager.supermelee.endrangliste.EndranglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.supermelee.meldeliste.AnmeldungenSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.supermelee.meldeliste.SupermeleeTeilnehmerSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.timer.TimerManager;</code><br />
+<code>import de.petanqueturniermanager.webserver.WebServerManager;</code><br />
+<code>import de.petanqueturniermanager.comp.adapter.GlobalEventListener;</code><br />
+<code>import de.petanqueturniermanager.comp.adapter.IGlobalEventListener;</code><br />
+<code>import de.petanqueturniermanager.comp.newrelease.ReleaseUpdateService;</code><br />
+<code>import de.petanqueturniermanager.sidebar.SidebarAnzeigenListener;</code><br />
+<code>import de.petanqueturniermanager.sidebar.SidebarPanelDelegator;</code><br />
+<code>import de.petanqueturniermanager.toolbar.TimerToolbarSteuerung;</code><br />
+<code>import de.petanqueturniermanager.toolbar.ToolbarAnzeigenListener;</code><br />
+<code>import de.petanqueturniermanager.comp.turnierevent.ITurnierEvent;</code><br />
+<code>import de.petanqueturniermanager.comp.turnierevent.ITurnierEventListener;</code><br />
+<code>import de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler;</code><br />
+<code>import de.petanqueturniermanager.comp.turnierevent.TurnierEventType;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+<code>import de.petanqueturniermanager.helper.msgbox.ProcessBox;</code><br />
+</div>
+<p><a href="../../d8/df6/_petanque_turnier_mngr_singleton_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ecomp_2EPetanqueTurnierMngrSingleton" id="r_de_2Epetanqueturniermanager_2Ecomp_2EPetanqueTurnierMngrSingleton"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html">de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ecomp" id="r_de_2Epetanqueturniermanager_2Ecomp"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d8c/namespacede_1_1petanqueturniermanager_1_1comp.html">de.petanqueturniermanager.comp</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_703d3c4b9989bf1c20a29a3ebe047f31.html">comp</a></li><li class="navelem"><a href="../../d8/df6/_petanque_turnier_mngr_singleton_8java.html">PetanqueTurnierMngrSingleton.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

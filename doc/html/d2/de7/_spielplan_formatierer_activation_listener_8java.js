@@ -1,0 +1,4 @@
+var _spielplan_formatierer_activation_listener_8java =
+[
+    [ "de.petanqueturniermanager.helper.sheetsync.SpielplanFormatiererActivationListener", "db/dcc/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_activation_listener.html", "db/dcc/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_activation_listener" ]
+];

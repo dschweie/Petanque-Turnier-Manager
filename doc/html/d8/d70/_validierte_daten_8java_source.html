@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/importer/ValidierteDaten.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/d70/_validierte_daten_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ValidierteDaten.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d70/_validierte_daten_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.importer;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">   12</a></span><span class="keyword">public</span> record <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">ValidierteDaten</a>(</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        List&lt;ValSpieler&gt; spieler,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        List&lt;ValVerein&gt; vereine,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        List&lt;ValLabel&gt; labels,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        List&lt;ValSpielerLabel&gt; spielerLabels,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        List&lt;ImportWarnung&gt; warnungen) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">ValidierteDaten</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        spieler = List.copyOf(spieler);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        vereine = List.copyOf(vereine);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        labels = List.copyOf(labels);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        spielerLabels = List.copyOf(spielerLabels);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        warnungen = List.copyOf(warnungen);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">public</span> record ValSpieler(</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            @Nullable Integer altNr,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            String vorname,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            String nachname,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            @Nullable Integer altVereinNr,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            @Nullable String vereinName,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            @Nullable String lizenznr,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            @Nullable Integer quellZeile) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">public</span> ValSpieler(@Nullable Integer altNr, String vorname, String nachname,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                @Nullable Integer altVereinNr, @Nullable String vereinName,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                @Nullable String lizenznr) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keyword">this</span>(altNr, vorname, nachname, altVereinNr, vereinName, lizenznr, <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">public</span> record ValVerein(@Nullable Integer altNr, String name) { }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">public</span> record ValLabel(@Nullable Integer altNr, String name) { }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">public</span> record ValSpielerLabel(<span class="keywordtype">int</span> altSpielerNr, <span class="keywordtype">int</span> altLabelNr) { }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_acded9e8745d8489c2d0b0fa1c995fe7a"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#acded9e8745d8489c2d0b0fa1c995fe7a">de.petanqueturniermanager.spielerdb.importer.ValidierteDaten</a></div><div class="ttdeci">record ValidierteDaten(List&lt; ValSpieler &gt; spieler, List&lt; ValVerein &gt; vereine, List&lt; ValLabel &gt; labels, List&lt; ValSpielerLabel &gt; spielerLabels, List&lt; ImportWarnung &gt; warnungen)</div><div class="ttdoc">Ergebnis der Validierungs-Stufe: Pflichtfelder garantiert, Junction-Refs konsistent (oder bereits aus...</div><div class="ttdef"><b>Definition</b> <a href="#l00012">ValidierteDaten.java:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_b04589d758b323be9502941c6b1fb23c.html">importer</a></li><li class="navelem"><a href="../../d8/d70/_validierte_daten_8java.html">ValidierteDaten.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+var _i_freispiel_properties_spalte_8java =
+[
+    [ "de.petanqueturniermanager.basesheet.konfiguration.IFreispielPropertiesSpalte", "d5/d6b/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_freispiel_properties_spalte.html", "d5/d6b/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_freispiel_properties_spalte" ]
+];

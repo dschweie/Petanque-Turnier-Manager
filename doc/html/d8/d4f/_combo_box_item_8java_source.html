@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/konfigdialog/ComboBoxItem.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/d4f/_combo_box_item_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComboBoxItem.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d4f/_combo_box_item_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 31.01.2020 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.konfigdialog;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkArgument;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.apache.commons.lang3.StringUtils;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html">   14</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a820369b37cc29f1c5c3f0f26192c69c3">ComboBoxItem</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">   15</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">key</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">   16</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">text</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a820369b37cc29f1c5c3f0f26192c69c3">   18</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a820369b37cc29f1c5c3f0f26192c69c3">ComboBoxItem</a>(String <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">key</a>, String <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">text</a>) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        checkArgument(StringUtils.isNotEmpty(<a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">key</a>));</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        checkArgument(StringUtils.isNotEmpty(<a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">text</a>));</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        this.key = <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">key</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        this.text = <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">text</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a837708dd3d6ac0ed8c9b3bf1b3252923">   25</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a837708dd3d6ac0ed8c9b3bf1b3252923">getKey</a>() {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">key</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a3df8ef4734caa0aa15e2b6f48cdbab39">   29</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a3df8ef4734caa0aa15e2b6f48cdbab39">getText</a>() {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">text</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item_html_a3df8ef4734caa0aa15e2b6f48cdbab39"><div class="ttname"><a href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a3df8ef4734caa0aa15e2b6f48cdbab39">de.petanqueturniermanager.konfigdialog.ComboBoxItem.getText</a></div><div class="ttdeci">String getText()</div><div class="ttdef"><b>Definition</b> <a href="#l00029">ComboBoxItem.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item_html_a820369b37cc29f1c5c3f0f26192c69c3"><div class="ttname"><a href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a820369b37cc29f1c5c3f0f26192c69c3">de.petanqueturniermanager.konfigdialog.ComboBoxItem.ComboBoxItem</a></div><div class="ttdeci">ComboBoxItem(String key, String text)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ComboBoxItem.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item_html_a837708dd3d6ac0ed8c9b3bf1b3252923"><div class="ttname"><a href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#a837708dd3d6ac0ed8c9b3bf1b3252923">de.petanqueturniermanager.konfigdialog.ComboBoxItem.getKey</a></div><div class="ttdeci">String getKey()</div><div class="ttdef"><b>Definition</b> <a href="#l00025">ComboBoxItem.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item_html_ab275f3ca2b49b487aa7fe88c4d1fa943"><div class="ttname"><a href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ab275f3ca2b49b487aa7fe88c4d1fa943">de.petanqueturniermanager.konfigdialog.ComboBoxItem.key</a></div><div class="ttdeci">final String key</div><div class="ttdef"><b>Definition</b> <a href="#l00015">ComboBoxItem.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item_html_ae9204dd2097cbdfad22efea3a388ce1e"><div class="ttname"><a href="../../d5/d91/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_combo_box_item.html#ae9204dd2097cbdfad22efea3a388ce1e">de.petanqueturniermanager.konfigdialog.ComboBoxItem.text</a></div><div class="ttdeci">final String text</div><div class="ttdef"><b>Definition</b> <a href="#l00016">ComboBoxItem.java:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_5dc56744c2def96656232e2a15016d12.html">konfigdialog</a></li><li class="navelem"><a href="../../d8/d4f/_combo_box_item_8java.html">ComboBoxItem.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/comp/turnierevent/TurnierEventHandler.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d2/d6e/_turnier_event_handler_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TurnierEventHandler.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d6e/_turnier_event_handler_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 17.01.2020 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.comp.turnierevent;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Collections;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.concurrent.atomic.AtomicInteger;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.concurrent.atomic.AtomicReference;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.awt.XCallback;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.star.awt.XRequestCallback;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.lang.DisposedException;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> com.sun.star.uno.XComponentContext;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.SheetRunner;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> de.petanqueturniermanager.helper.perflog.PerfLog;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html">   44</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a46a0ad76090a2ccf52d8ea55436e5e5c">TurnierEventHandler</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">   46</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a46a0ad76090a2ccf52d8ea55436e5e5c">TurnierEventHandler</a>.class);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">   48</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;ITurnierEventListener&gt; <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae4eab29d476ec03c2aa34d663a5103f3">   49</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> AtomicReference&lt;ITurnierEvent&gt; <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae4eab29d476ec03c2aa34d663a5103f3">pending</a> = <span class="keyword">new</span> AtomicReference&lt;&gt;();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a34a6d809652f8ab28c71a09cac5e4bbc">   50</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> AtomicInteger <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a34a6d809652f8ab28c71a09cac5e4bbc">coalescedSeitFlush</a> = <span class="keyword">new</span> AtomicInteger();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">   51</a></span>    <span class="keyword">private</span> <span class="keyword">volatile</span> XRequestCallback <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a46a0ad76090a2ccf52d8ea55436e5e5c">   53</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a46a0ad76090a2ccf52d8ea55436e5e5c">TurnierEventHandler</a>() {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a> = Collections.synchronizedList(<span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae24d225239ad01125fc295e87bf699cc">   57</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae24d225239ad01125fc295e87bf699cc">trigger</a>(<a class="code hl_class" href="../../da/d69/enumde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_type.html">TurnierEventType</a> type, <a class="code hl_interface" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a> eventObj) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">case</span> PropertiesChanged:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a55453b6422dc74c7ab11b2aba06ecb1b">onPropertiesChanged</a>(eventObj);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a55453b6422dc74c7ab11b2aba06ecb1b">   67</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a55453b6422dc74c7ab11b2aba06ecb1b">onPropertiesChanged</a>(<a class="code hl_interface" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a> eventObj) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a>.<a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#ab890d5fc3cc4309b1ac35ee22126750d">isRunning</a>()) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae4eab29d476ec03c2aa34d663a5103f3">pending</a>.set(eventObj);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a34a6d809652f8ab28c71a09cac5e4bbc">coalescedSeitFlush</a>.incrementAndGet();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae564f2136a7bbfb233ce846a80de243c">dispatch</a>(eventObj, <span class="stringliteral">&quot;trigger&quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#acd1834c050907e3314c46d40a1ae5f40">   81</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#acd1834c050907e3314c46d40a1ae5f40">flushPending</a>() {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_interface" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a> ev = <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae4eab29d476ec03c2aa34d663a5103f3">pending</a>.getAndSet(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">int</span> coalesced = <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a34a6d809652f8ab28c71a09cac5e4bbc">coalescedSeitFlush</a>.getAndSet(0);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span> (ev != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <a class="code hl_class" href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html">PerfLog</a>.<a class="code hl_function" href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html#acb2eec057644913d1e62131549e72eb9">log</a>(<a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>, <span class="stringliteral">&quot;[WORKER-TIMING] TurnierEventHandler.flushPending koalesziert={}&quot;</span>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    coalesced);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae564f2136a7bbfb233ce846a80de243c">dispatch</a>(ev, <span class="stringliteral">&quot;flushPending&quot;</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae564f2136a7bbfb233ce846a80de243c">   91</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae564f2136a7bbfb233ce846a80de243c">dispatch</a>(<a class="code hl_interface" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a> eventObj, String quelle) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        XRequestCallback d = <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a61636842e6b0e5ce80ece212335cbdc4">getDispatcher</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (d == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a15b67b9c031594277f55a179431617bc">broadcastSync</a>(eventObj, quelle, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            d.addCallback((XCallback) data -&gt; <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a15b67b9c031594277f55a179431617bc">broadcastSync</a>(eventObj, quelle, <span class="keyword">false</span>), <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>.debug(<span class="stringliteral">&quot;AsyncCallback-Post fehlgeschlagen – synchroner Fallback&quot;</span>, e);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a15b67b9c031594277f55a179431617bc">broadcastSync</a>(eventObj, quelle, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a15b67b9c031594277f55a179431617bc">  105</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a15b67b9c031594277f55a179431617bc">broadcastSync</a>(<a class="code hl_interface" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">ITurnierEvent</a> eventObj, String quelle, <span class="keywordtype">boolean</span> synchronerPfad) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordtype">long</span> startNs = System.nanoTime();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">int</span> anzahl;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        String eventDoc = eventObj == <span class="keyword">null</span> ? <span class="stringliteral">&quot;null&quot;</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                : de.petanqueturniermanager.comp.ProtocolHandler.beschreibeDokument(</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                        eventObj.<a class="code hl_function" href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html#a67153b9a992e8abc6c741776c3d57c2b">getWorkingSpreadsheetDocument</a>());</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keyword">synchronized</span> (<a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            anzahl = <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>.size();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>.trace(<span class="stringliteral">&quot;[FOKUS-TRACE] TurnierEvent broadcast START quelle={} pfad={} eventDoc={} listeners={} thread={}&quot;</span>,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    quelle, synchronerPfad ? <span class="stringliteral">&quot;sync&quot;</span> : <span class="stringliteral">&quot;main&quot;</span>, eventDoc, anzahl,</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>.currentThread().getName());</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">for</span> (<a class="code hl_interface" href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html">ITurnierEventListener</a> listner : <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    listner.onPropertiesChanged(eventObj);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                    <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>.warn(<span class="stringliteral">&quot;Listener-Aufruf fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">long</span> dauerMs = (System.nanoTime() - startNs) / 1_000_000L;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>.trace(<span class="stringliteral">&quot;[FOKUS-TRACE] TurnierEvent broadcast ENDE quelle={} dauerMs={} listener={}&quot;</span>,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                quelle, dauerMs, anzahl);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_class" href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html">PerfLog</a>.<a class="code hl_function" href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html#acb2eec057644913d1e62131549e72eb9">log</a>(<a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>, <span class="stringliteral">&quot;[WORKER-TIMING] TurnierEventHandler broadcast PropertiesChanged quelle={} pfad={} : {} ms, listener={}, thread={}&quot;</span>,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                quelle, synchronerPfad ? <span class="stringliteral">&quot;sync&quot;</span> : <span class="stringliteral">&quot;main&quot;</span>, dauerMs, anzahl,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <a class="code hl_class" href="../../d8/d18/class_thread.html">Thread</a>.currentThread().getName());</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a61636842e6b0e5ce80ece212335cbdc4">  132</a></span>    <span class="keyword">private</span> XRequestCallback <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a61636842e6b0e5ce80ece212335cbdc4">getDispatcher</a>() {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        XRequestCallback d = <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">if</span> (d != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> d;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        XComponentContext ctx = <a class="code hl_class" href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html">PetanqueTurnierMngrSingleton</a>.<a class="code hl_function" href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ae790221a3bfa9fda9716b0b0e897c5b4">getContext</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">if</span> (ctx == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                Object asyncCallback = ctx.getServiceManager()</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        .createInstanceWithContext(<span class="stringliteral">&quot;com.sun.star.awt.AsyncCallback&quot;</span>, ctx);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a> = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XRequestCallback.class, asyncCallback);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>.warn(<span class="stringliteral">&quot;AsyncCallback-Service nicht verfügbar – Fallback synchron&quot;</span>, e);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            } <span class="keywordflow">catch</span> (DisposedException e) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                <span class="comment">// LO-Bridge tot (z.B. nach Office-Shutdown zwischen UI-Test-Klassen).</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                <span class="comment">// Synchroner Fallback. sharedContext bleibt stale; das ist Aufruferproblem.</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">logger</a>.debug(<span class="stringliteral">&quot;LO-Bridge disposed – Fallback synchron&quot;</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="}">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#af24867de4aa709746e81f7fac3986db1">  160</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#af24867de4aa709746e81f7fac3986db1">addTurnierEventListener</a>(<a class="code hl_interface" href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html">ITurnierEventListener</a> listner) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>.add(listner);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#abc11189f222b325e0f3cb803348ac34b">  164</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#abc11189f222b325e0f3cb803348ac34b">removeTurnierEventListener</a>(<a class="code hl_interface" href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html">ITurnierEventListener</a> listner) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>.remove(listner);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#af5e6ea4c10fa93f964728b52ab815435">  168</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#af5e6ea4c10fa93f964728b52ab815435">disposing</a>() {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">listeners</a>.clear();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae4eab29d476ec03c2aa34d663a5103f3">pending</a>.set(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a34a6d809652f8ab28c71a09cac5e4bbc">coalescedSeitFlush</a>.set(0);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_variable" href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">dispatcher</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclass_thread_html"><div class="ttname"><a href="../../d8/d18/class_thread.html">Thread</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">de.petanqueturniermanager.SheetRunner</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00042">SheetRunner.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_ab890d5fc3cc4309b1ac35ee22126750d"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#ab890d5fc3cc4309b1ac35ee22126750d">de.petanqueturniermanager.SheetRunner.isRunning</a></div><div class="ttdeci">static boolean isRunning()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00573">SheetRunner.java:573</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton_html"><div class="ttname"><a href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html">de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/df6/_petanque_turnier_mngr_singleton_8java_source.html#l00099">PetanqueTurnierMngrSingleton.java:99</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton_html_ae790221a3bfa9fda9716b0b0e897c5b4"><div class="ttname"><a href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ae790221a3bfa9fda9716b0b0e897c5b4">de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton.getContext</a></div><div class="ttdeci">static XComponentContext getContext()</div><div class="ttdoc">Liefert den LibreOffice-Komponentenkontext (nach init verfügbar).</div><div class="ttdef"><b>Definition</b> <a href="../../d8/df6/_petanque_turnier_mngr_singleton_8java_source.html#l00126">PetanqueTurnierMngrSingleton.java:126</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_a07f5b2e9bede106be1eb5d9d6840cd36"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a07f5b2e9bede106be1eb5d9d6840cd36">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00046">TurnierEventHandler.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_a15b67b9c031594277f55a179431617bc"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a15b67b9c031594277f55a179431617bc">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.broadcastSync</a></div><div class="ttdeci">void broadcastSync(ITurnierEvent eventObj, String quelle, boolean synchronerPfad)</div><div class="ttdef"><b>Definition</b> <a href="#l00105">TurnierEventHandler.java:105</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_a34a6d809652f8ab28c71a09cac5e4bbc"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a34a6d809652f8ab28c71a09cac5e4bbc">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.coalescedSeitFlush</a></div><div class="ttdeci">final AtomicInteger coalescedSeitFlush</div><div class="ttdef"><b>Definition</b> <a href="#l00050">TurnierEventHandler.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_a46a0ad76090a2ccf52d8ea55436e5e5c"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a46a0ad76090a2ccf52d8ea55436e5e5c">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.TurnierEventHandler</a></div><div class="ttdeci">TurnierEventHandler()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">TurnierEventHandler.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_a55453b6422dc74c7ab11b2aba06ecb1b"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a55453b6422dc74c7ab11b2aba06ecb1b">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.onPropertiesChanged</a></div><div class="ttdeci">void onPropertiesChanged(ITurnierEvent eventObj)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">TurnierEventHandler.java:67</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_a61636842e6b0e5ce80ece212335cbdc4"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#a61636842e6b0e5ce80ece212335cbdc4">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.getDispatcher</a></div><div class="ttdeci">XRequestCallback getDispatcher()</div><div class="ttdef"><b>Definition</b> <a href="#l00132">TurnierEventHandler.java:132</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_abc11189f222b325e0f3cb803348ac34b"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#abc11189f222b325e0f3cb803348ac34b">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.removeTurnierEventListener</a></div><div class="ttdeci">void removeTurnierEventListener(ITurnierEventListener listner)</div><div class="ttdef"><b>Definition</b> <a href="#l00164">TurnierEventHandler.java:164</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_acd1834c050907e3314c46d40a1ae5f40"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#acd1834c050907e3314c46d40a1ae5f40">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.flushPending</a></div><div class="ttdeci">void flushPending()</div><div class="ttdoc">Feuert einen ggf.</div><div class="ttdef"><b>Definition</b> <a href="#l00081">TurnierEventHandler.java:81</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_ad7f29076a2df322f8eb371bd5a641357"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ad7f29076a2df322f8eb371bd5a641357">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.dispatcher</a></div><div class="ttdeci">volatile XRequestCallback dispatcher</div><div class="ttdef"><b>Definition</b> <a href="#l00051">TurnierEventHandler.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_ae24d225239ad01125fc295e87bf699cc"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae24d225239ad01125fc295e87bf699cc">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.trigger</a></div><div class="ttdeci">void trigger(TurnierEventType type, ITurnierEvent eventObj)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">TurnierEventHandler.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_ae4eab29d476ec03c2aa34d663a5103f3"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae4eab29d476ec03c2aa34d663a5103f3">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.pending</a></div><div class="ttdeci">final AtomicReference&lt; ITurnierEvent &gt; pending</div><div class="ttdef"><b>Definition</b> <a href="#l00049">TurnierEventHandler.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_ae564f2136a7bbfb233ce846a80de243c"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae564f2136a7bbfb233ce846a80de243c">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.dispatch</a></div><div class="ttdeci">void dispatch(ITurnierEvent eventObj, String quelle)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">TurnierEventHandler.java:91</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_ae7e3cca17a10d9858d2547044e6a32e2"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#ae7e3cca17a10d9858d2547044e6a32e2">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.listeners</a></div><div class="ttdeci">final List&lt; ITurnierEventListener &gt; listeners</div><div class="ttdef"><b>Definition</b> <a href="#l00048">TurnierEventHandler.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_af24867de4aa709746e81f7fac3986db1"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#af24867de4aa709746e81f7fac3986db1">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.addTurnierEventListener</a></div><div class="ttdeci">void addTurnierEventListener(ITurnierEventListener listner)</div><div class="ttdef"><b>Definition</b> <a href="#l00160">TurnierEventHandler.java:160</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler_html_af5e6ea4c10fa93f964728b52ab815435"><div class="ttname"><a href="../../d2/dea/classde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_handler.html#af5e6ea4c10fa93f964728b52ab815435">de.petanqueturniermanager.comp.turnierevent.TurnierEventHandler.disposing</a></div><div class="ttdeci">void disposing()</div><div class="ttdef"><b>Definition</b> <a href="#l00168">TurnierEventHandler.java:168</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log_html"><div class="ttname"><a href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html">de.petanqueturniermanager.helper.perflog.PerfLog</a></div><div class="ttdoc">Zentrales Gate für Performance-/Zeitmessungs-Logs (Tags [WORKER-TIMING], [STARTUP-TIMING],...</div><div class="ttdef"><b>Definition</b> <a href="../../d6/dc5/_perf_log_8java_source.html#l00018">PerfLog.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log_html_acb2eec057644913d1e62131549e72eb9"><div class="ttname"><a href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html#acb2eec057644913d1e62131549e72eb9">de.petanqueturniermanager.helper.perflog.PerfLog.log</a></div><div class="ttdeci">static void log(Logger logger, String message)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/dc5/_perf_log_8java_source.html#l00044">PerfLog.java:44</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_type_html"><div class="ttname"><a href="../../da/d69/enumde_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_turnier_event_type.html">de.petanqueturniermanager.comp.turnierevent.TurnierEventType</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/db2/_turnier_event_type_8java_source.html#l00010">TurnierEventType.java:10</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_html"><div class="ttname"><a href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html">de.petanqueturniermanager.comp.turnierevent.ITurnierEvent</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/dee/_i_turnier_event_8java_source.html#l00012">ITurnierEvent.java:12</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_html_a67153b9a992e8abc6c741776c3d57c2b"><div class="ttname"><a href="../../de/d52/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event.html#a67153b9a992e8abc6c741776c3d57c2b">de.petanqueturniermanager.comp.turnierevent.ITurnierEvent.getWorkingSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument getWorkingSpreadsheetDocument()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener_html"><div class="ttname"><a href="../../d0/df9/interfacede_1_1petanqueturniermanager_1_1comp_1_1turnierevent_1_1_i_turnier_event_listener.html">de.petanqueturniermanager.comp.turnierevent.ITurnierEventListener</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d8e/_i_turnier_event_listener_8java_source.html#l00010">ITurnierEventListener.java:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_703d3c4b9989bf1c20a29a3ebe047f31.html">comp</a></li><li class="navelem"><a href="../../dir_883eed0968bd0ff2675937a0db71244d.html">turnierevent</a></li><li class="navelem"><a href="../../d2/d6e/_turnier_event_handler_8java.html">TurnierEventHandler.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

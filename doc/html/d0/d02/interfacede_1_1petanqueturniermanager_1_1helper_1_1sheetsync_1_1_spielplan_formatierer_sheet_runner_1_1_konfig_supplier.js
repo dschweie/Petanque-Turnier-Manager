@@ -1,0 +1,4 @@
+var interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_sheet_runner_1_1_konfig_supplier =
+[
+    [ "berechne", "d0/d02/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_spielplan_formatierer_sheet_runner_1_1_konfig_supplier.html#acc5126ca6e0296f9ecb37ea286039e73", null ]
+];

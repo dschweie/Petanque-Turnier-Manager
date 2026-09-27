@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/jedergegenjeden/konfiguration/IJGJProperiesSpalte.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d21/_i_j_g_j_properies_spalte_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IJGJProperiesSpalte.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d21/_i_j_g_j_properies_spalte_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d0/d54/namespacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration.html">    1</a></span><span class="keyword">package </span>de.petanqueturniermanager.jedergegenjeden.konfiguration;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.meldeliste.Formation;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> de.petanqueturniermanager.helper.upload.IUploadKonfigurierbar;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.petanqueturniermanager.schweizer.konfiguration.SpielplanTeamAnzeige;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html">   12</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html">IJGJProperiesSpalte</a> <span class="keyword">extends</span> de.<a class="code hl_package" href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a>.<a class="code hl_package" href="../../d3/d17/namespacede_1_1petanqueturniermanager_1_1basesheet.html">basesheet</a>.<a class="code hl_package" href="../../d0/d54/namespacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration.html">konfiguration</a>.IFreispielPropertiesSpalte, <a class="code hl_interface" href="../../d9/d35/interfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_i_upload_konfigurierbar.html">IUploadKonfigurierbar</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#aa27f5ddbe4838c8e549d26379c2a1a5f">   13</a></span>    Integer <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#aa27f5ddbe4838c8e549d26379c2a1a5f">getSpielPlanHeaderFarbe</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a660bd602fb388781b140ed9ca42769a6">   15</a></span>    Integer <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a660bd602fb388781b140ed9ca42769a6">getSpielPlanHintergrundFarbeUnGerade</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#ac01d8ad407b1907eb9d8cb9fa0f45a19">   17</a></span>    Integer <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#ac01d8ad407b1907eb9d8cb9fa0f45a19">getSpielPlanHintergrundFarbeGerade</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a50a2d699aabb9191d0a8a947e722f15e">   19</a></span>    String <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a50a2d699aabb9191d0a8a947e722f15e">getKopfZeileLinks</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a814823ea21c4ebffd725e35cc13c9a10">   21</a></span>    String <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a814823ea21c4ebffd725e35cc13c9a10">getKopfZeileMitte</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a97022a5307d0561ddf35eba95b5005d2">   23</a></span>    String <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a97022a5307d0561ddf35eba95b5005d2">getKopfZeileRechts</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a35ae36b616ddeea4e562fe543e0fc97f">   25</a></span>    <a class="code hl_class" href="../../d9/d71/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation.html">Formation</a> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a35ae36b616ddeea4e562fe543e0fc97f">getMeldeListeFormation</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a87a3a8d73d3ae8e22a361f782762ff20">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a87a3a8d73d3ae8e22a361f782762ff20">setMeldeListeFormation</a>(<a class="code hl_class" href="../../d9/d71/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation.html">Formation</a> formation);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a2ef15a65efabba9d724765dc6539720b">   29</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a2ef15a65efabba9d724765dc6539720b">isMeldeListeTeamnameAnzeigen</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#af7cf3f13cc7de71d14241153f42ff713">   31</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#af7cf3f13cc7de71d14241153f42ff713">setMeldeListeTeamnameAnzeigen</a>(<span class="keywordtype">boolean</span> anzeigen);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a37b4b3162bd3d7b1d746dd02c2a8aa7b">   33</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a37b4b3162bd3d7b1d746dd02c2a8aa7b">isMeldeListeVereinsnameAnzeigen</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#ab48c96a1ac1f8ed0543b8a507633b5da">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#ab48c96a1ac1f8ed0543b8a507633b5da">setMeldeListeVereinsnameAnzeigen</a>(<span class="keywordtype">boolean</span> anzeigen);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a42cebe131cd19395f7e3cb94c1b6c4b4">   37</a></span>    <a class="code hl_class" href="../../d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html">SpielplanTeamAnzeige</a> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a42cebe131cd19395f7e3cb94c1b6c4b4">getSpielplanTeamAnzeige</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a1e193de27182efd044fee1efcd9cb8c5">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a1e193de27182efd044fee1efcd9cb8c5">setSpielplanTeamAnzeige</a>(<a class="code hl_class" href="../../d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html">SpielplanTeamAnzeige</a> anzeige);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a110b94cccf261ddc5642c6aa35f46328">   41</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a110b94cccf261ddc5642c6aa35f46328">getGruppengroesse</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a6a75a411c78a4f31601957023c27b72c">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a6a75a411c78a4f31601957023c27b72c">setGruppengroesse</a>(<span class="keywordtype">int</span> groesse);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a55c313d890c05d307d0574063c03276d">   45</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a55c313d890c05d307d0574063c03276d">isRueckrunde</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a3991e2cb77a869a745bfbda84f7d9d8a">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a3991e2cb77a869a745bfbda84f7d9d8a">setRueckrunde</a>(<span class="keywordtype">boolean</span> mitRueckrunde);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation_html"><div class="ttname"><a href="../../d9/d71/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_formation.html">de.petanqueturniermanager.basesheet.meldeliste.Formation</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/db5/_formation_8java_source.html#l00009">Formation.java:9</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige_html"><div class="ttname"><a href="../../d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html">de.petanqueturniermanager.schweizer.konfiguration.SpielplanTeamAnzeige</a></div><div class="ttdoc">Steuert, welche Team-Kennung in Spielplänen und Ranglisten angezeigt wird.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d5d/_spielplan_team_anzeige_8java_source.html#l00006">SpielplanTeamAnzeige.java:6</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_i_upload_konfigurierbar_html"><div class="ttname"><a href="../../d9/d35/interfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_i_upload_konfigurierbar.html">de.petanqueturniermanager.helper.upload.IUploadKonfigurierbar</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_i_upload_konfigurierbar_8java_source.html#l00003">IUploadKonfigurierbar.java:3</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte</a></div><div class="ttdoc">Erstellung 01.08.2022 / Michael Massee.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">IJGJProperiesSpalte.java:12</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a110b94cccf261ddc5642c6aa35f46328"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a110b94cccf261ddc5642c6aa35f46328">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getGruppengroesse</a></div><div class="ttdeci">int getGruppengroesse()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a1e193de27182efd044fee1efcd9cb8c5"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a1e193de27182efd044fee1efcd9cb8c5">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.setSpielplanTeamAnzeige</a></div><div class="ttdeci">void setSpielplanTeamAnzeige(SpielplanTeamAnzeige anzeige)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a2ef15a65efabba9d724765dc6539720b"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a2ef15a65efabba9d724765dc6539720b">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.isMeldeListeTeamnameAnzeigen</a></div><div class="ttdeci">boolean isMeldeListeTeamnameAnzeigen()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a35ae36b616ddeea4e562fe543e0fc97f"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a35ae36b616ddeea4e562fe543e0fc97f">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getMeldeListeFormation</a></div><div class="ttdeci">Formation getMeldeListeFormation()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a37b4b3162bd3d7b1d746dd02c2a8aa7b"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a37b4b3162bd3d7b1d746dd02c2a8aa7b">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.isMeldeListeVereinsnameAnzeigen</a></div><div class="ttdeci">boolean isMeldeListeVereinsnameAnzeigen()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a3991e2cb77a869a745bfbda84f7d9d8a"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a3991e2cb77a869a745bfbda84f7d9d8a">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.setRueckrunde</a></div><div class="ttdeci">void setRueckrunde(boolean mitRueckrunde)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a42cebe131cd19395f7e3cb94c1b6c4b4"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a42cebe131cd19395f7e3cb94c1b6c4b4">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getSpielplanTeamAnzeige</a></div><div class="ttdeci">SpielplanTeamAnzeige getSpielplanTeamAnzeige()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a50a2d699aabb9191d0a8a947e722f15e"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a50a2d699aabb9191d0a8a947e722f15e">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getKopfZeileLinks</a></div><div class="ttdeci">String getKopfZeileLinks()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a55c313d890c05d307d0574063c03276d"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a55c313d890c05d307d0574063c03276d">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.isRueckrunde</a></div><div class="ttdeci">boolean isRueckrunde()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a660bd602fb388781b140ed9ca42769a6"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a660bd602fb388781b140ed9ca42769a6">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getSpielPlanHintergrundFarbeUnGerade</a></div><div class="ttdeci">Integer getSpielPlanHintergrundFarbeUnGerade()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a6a75a411c78a4f31601957023c27b72c"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a6a75a411c78a4f31601957023c27b72c">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.setGruppengroesse</a></div><div class="ttdeci">void setGruppengroesse(int groesse)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a814823ea21c4ebffd725e35cc13c9a10"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a814823ea21c4ebffd725e35cc13c9a10">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getKopfZeileMitte</a></div><div class="ttdeci">String getKopfZeileMitte()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a87a3a8d73d3ae8e22a361f782762ff20"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a87a3a8d73d3ae8e22a361f782762ff20">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.setMeldeListeFormation</a></div><div class="ttdeci">void setMeldeListeFormation(Formation formation)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_a97022a5307d0561ddf35eba95b5005d2"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#a97022a5307d0561ddf35eba95b5005d2">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getKopfZeileRechts</a></div><div class="ttdeci">String getKopfZeileRechts()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_aa27f5ddbe4838c8e549d26379c2a1a5f"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#aa27f5ddbe4838c8e549d26379c2a1a5f">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getSpielPlanHeaderFarbe</a></div><div class="ttdeci">Integer getSpielPlanHeaderFarbe()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_ab48c96a1ac1f8ed0543b8a507633b5da"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#ab48c96a1ac1f8ed0543b8a507633b5da">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.setMeldeListeVereinsnameAnzeigen</a></div><div class="ttdeci">void setMeldeListeVereinsnameAnzeigen(boolean anzeigen)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_ac01d8ad407b1907eb9d8cb9fa0f45a19"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#ac01d8ad407b1907eb9d8cb9fa0f45a19">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.getSpielPlanHintergrundFarbeGerade</a></div><div class="ttdeci">Integer getSpielPlanHintergrundFarbeGerade()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte_html_af7cf3f13cc7de71d14241153f42ff713"><div class="ttname"><a href="../../dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html#af7cf3f13cc7de71d14241153f42ff713">de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte.setMeldeListeTeamnameAnzeigen</a></div><div class="ttdeci">void setMeldeListeTeamnameAnzeigen(boolean anzeigen)</div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1basesheet_html"><div class="ttname"><a href="../../d3/d17/namespacede_1_1petanqueturniermanager_1_1basesheet.html">de.petanqueturniermanager.basesheet</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_html"><div class="ttname"><a href="../../d0/d54/namespacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration.html">de.petanqueturniermanager.jedergegenjeden.konfiguration</a></div><div class="ttdef"><b>Definition</b> <a href="#l00001">IJGJProperiesSpalte.java:1</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_html"><div class="ttname"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">de.petanqueturniermanager</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_022dbf1e070988f55d81c8dd54a68ba4.html">jedergegenjeden</a></li><li class="navelem"><a href="../../dir_be1aa66d8cb4cd7551dc1ddb1006ec34.html">konfiguration</a></li><li class="navelem"><a href="../../dd/d21/_i_j_g_j_properies_spalte_8java.html">IJGJProperiesSpalte.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

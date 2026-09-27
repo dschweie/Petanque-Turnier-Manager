@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/meldeliste/AnmeldungenSheet.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/dd0/_anmeldungen_sheet_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AnmeldungenSheet.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.google.common.base.Preconditions.checkNotNull;</code><br />
+<code>import java.util.List;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.AbstractTeilnehmerNamenCheckinListeSheet;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.Formation;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.ISheet;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.SheetNamen;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.DefaultSheetPos;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.NewSheet;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.TurnierSheet;</code><br />
+<code>import de.petanqueturniermanager.model.IMeldung;</code><br />
+<code>import de.petanqueturniermanager.supermelee.SpielTagNr;</code><br />
+<code>import de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeKonfigurationSheet;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für AnmeldungenSheet.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/dc9/_anmeldungen_sheet_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2meldeliste_2_anmeldungen_sheet_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2meldeliste_2_anmeldungen_sheet_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2meldeliste_2_anmeldungen_sheet_8java">
+<area shape="rect" title=" " alt="" coords="2154,5,2454,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,302,139"/>
+<area shape="poly" title=" " alt="" coords="2151,29,1825,35,1372,45,850,65,582,80,317,98,317,93,581,75,850,60,1371,40,1825,30,2156,28"/>
+<area shape="rect" title=" " alt="" coords="325,104,416,131"/>
+<area shape="poly" title=" " alt="" coords="2151,28,1768,33,1271,42,1019,50,784,62,583,78,430,99,417,102,416,96,429,93,582,73,784,57,1018,45,1271,37,1768,27,2156,28"/>
+<area shape="rect" title=" " alt="" coords="441,104,660,131"/>
+<area shape="poly" title=" " alt="" coords="2151,28,1877,34,1509,44,1092,65,880,80,672,99,633,104,633,98,672,93,880,74,1092,59,1508,39,1877,29,2156,28"/>
+<area shape="rect" title=" " alt="" coords="684,96,994,139"/>
+<area shape="poly" title=" " alt="" coords="2151,33,1650,56,1333,75,1009,98,1009,93,1332,69,1650,51,2156,32"/>
+<area shape="rect" title=" " alt="" coords="1018,96,1327,139"/>
+<area shape="poly" title=" " alt="" coords="2156,36,1789,62,1342,98,1342,93,1788,57,2151,36"/>
+<area shape="rect" title=" " alt="" coords="1351,96,1660,139"/>
+<area shape="poly" title=" " alt="" coords="2156,44,1676,98,1676,93,2151,44"/>
+<area shape="rect" title=" " alt="" coords="1684,96,1903,139"/>
+<area shape="poly" title=" " alt="" coords="2187,48,1918,97,1918,92,2182,49"/>
+<area shape="rect" title=" " alt="" coords="1927,96,2169,139"/>
+<area shape="poly" title=" " alt="" coords="2247,48,2123,93,2122,88,2242,49"/>
+<area shape="rect" title=" " alt="" coords="2194,96,2415,139"/>
+<area shape="poly" title=" " alt="" coords="2306,47,2306,82,2302,79,2302,50"/>
+<area shape="rect" title=" " alt="" coords="2440,96,2689,139"/>
+<area shape="poly" title=" " alt="" coords="2366,46,2492,91,2486,90,2365,51"/>
+<area shape="rect" title=" " alt="" coords="2713,96,2970,139"/>
+<area shape="poly" title=" " alt="" coords="2430,46,2703,93,2698,93,2430,51"/>
+<area shape="rect" title=" " alt="" coords="2994,96,3252,139"/>
+<area shape="poly" title=" " alt="" coords="2455,39,2697,62,2981,96,2976,95,2696,67,2455,44"/>
+<area shape="rect" title=" " alt="" coords="3276,96,3533,139"/>
+<area shape="poly" title=" " alt="" coords="2455,33,2818,55,3037,72,3262,96,3257,95,3037,77,2817,60,2455,38"/>
+<area shape="rect" title=" " alt="" coords="3557,96,3814,139"/>
+<area shape="poly" title=" " alt="" coords="2455,29,2935,49,3236,68,3544,96,3539,96,3235,73,2935,55,2455,35"/>
+<area shape="rect" title=" " alt="" coords="3839,96,4060,139"/>
+<area shape="poly" title=" " alt="" coords="2455,26,2712,31,3050,41,3433,61,3826,96,3821,96,3433,67,3050,47,2711,36,2455,32"/>
+<area shape="rect" title=" " alt="" coords="4084,96,4338,139"/>
+<area shape="poly" title=" " alt="" coords="2455,26,2750,30,3148,40,3604,60,3838,75,4071,96,4066,96,3837,80,3603,65,3148,45,2749,35,2455,31"/>
+<area shape="rect" title=" " alt="" coords="4361,96,4692,139"/>
+<area shape="poly" title=" " alt="" coords="2454,26,2791,31,3258,41,3795,61,4348,96,4343,96,3795,67,3258,47,2791,36,2455,32"/>
+</map>
+</div>
+</div>
+<p><a href="../../d5/dd0/_anmeldungen_sheet_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Esupermelee_2Emeldeliste_2EAnmeldungenSheet" id="r_de_2Epetanqueturniermanager_2Esupermelee_2Emeldeliste_2EAnmeldungenSheet"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/deb/classde_1_1petanqueturniermanager_1_1supermelee_1_1meldeliste_1_1_anmeldungen_sheet.html">de.petanqueturniermanager.supermelee.meldeliste.AnmeldungenSheet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checkin-Liste des Supermelee-Systems je Spieltag (früher "Anmeldungen").  <a href="../../d6/deb/classde_1_1petanqueturniermanager_1_1supermelee_1_1meldeliste_1_1_anmeldungen_sheet.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Esupermelee_2Emeldeliste" id="r_de_2Epetanqueturniermanager_2Esupermelee_2Emeldeliste"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d50/namespacede_1_1petanqueturniermanager_1_1supermelee_1_1meldeliste.html">de.petanqueturniermanager.supermelee.meldeliste</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../dir_b51ec16ed47f4c6475507d956c7b2af5.html">meldeliste</a></li><li class="navelem"><a href="../../d5/dd0/_anmeldungen_sheet_8java.html">AnmeldungenSheet.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

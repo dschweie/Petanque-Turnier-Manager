@@ -1,0 +1,4 @@
+var _streich_spieltag_hintergrund_farbe_un_gerade_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.StreichSpieltagHintergrundFarbeUnGeradeStyle", "dd/d70/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_streich_spieltag_hintergrund_farbe_un_gerade_style.html", "dd/d70/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_streich_spieltag_hintergrund_farbe_un_gerade_style" ]
+];

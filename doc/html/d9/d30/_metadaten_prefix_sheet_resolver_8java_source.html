@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/webserver/MetadatenPrefixSheetResolver.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d30/_metadaten_prefix_sheet_resolver_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MetadatenPrefixSheetResolver.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d30/_metadaten_prefix_sheet_resolver_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.webserver;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.Optional;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.regex.Matcher;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.regex.Pattern;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html">   23</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#aa15165c40dfdb99ded85276a0f11011a">MetadatenPrefixSheetResolver</a> <span class="keyword">implements</span> <a class="code hl_interface" href="../../de/dfc/interfacede_1_1petanqueturniermanager_1_1webserver_1_1_sheet_resolver.html">SheetResolver</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#ac5636b4134cb1baf5fe7284c84f98c30">   25</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#ac5636b4134cb1baf5fe7284c84f98c30">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#aa15165c40dfdb99ded85276a0f11011a">MetadatenPrefixSheetResolver</a>.class);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a202f2e0af2f19eb78f4f7261cb6a3b5a">   26</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Pattern <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a202f2e0af2f19eb78f4f7261cb6a3b5a">NUMMER_PATTERN</a> = Pattern.compile(<span class="stringliteral">&quot;^(\\d+)&quot;</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">   28</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">schluesselPrefix</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">   29</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">schluesselSuffix</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a5ddb763cc36bd8974685e4b41486a0e9">   30</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a5ddb763cc36bd8974685e4b41486a0e9">anzeigeName</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">   33</a></span>    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">letzteNummer</a> = -1;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#aa15165c40dfdb99ded85276a0f11011a">   35</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#aa15165c40dfdb99ded85276a0f11011a">MetadatenPrefixSheetResolver</a>(String <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">schluesselPrefix</a>, String <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">schluesselSuffix</a>, String <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a5ddb763cc36bd8974685e4b41486a0e9">anzeigeName</a>) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        this.schluesselPrefix = <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">schluesselPrefix</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        this.schluesselSuffix = <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">schluesselSuffix</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        this.anzeigeName = <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a5ddb763cc36bd8974685e4b41486a0e9">anzeigeName</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    @Override</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a64475e0e634c9609c8d6d2c51326002d">   42</a></span>    <span class="keyword">public</span> Optional&lt;XSpreadsheet&gt; <a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a64475e0e634c9609c8d6d2c51326002d">resolve</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        var doc = ws.<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">getWorkingSpreadsheetDocument</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (doc == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            String[] schluessel = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#afcb0ea4a33c6a56e88eb6c725eab3a44">getSchluesselMitPrefix</a>(doc, <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">schluesselPrefix</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordtype">int</span> hoesteNr = -1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            String hoesteSchluessel = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">for</span> (String name : schluessel) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">if</span> (!name.endsWith(<a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">schluesselSuffix</a>)) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordtype">int</span> nr = <a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6c465795dd17032003a8882b243e6e6a">extrahiereNummer</a>(name);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">if</span> (nr &gt; hoesteNr) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    hoesteNr = nr;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    hoesteSchluessel = name;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">if</span> (hoesteSchluessel == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">letzteNummer</a> = -1;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">letzteNummer</a> = hoesteNr;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a87cf7540d5e6db2a5d076af8bf90e757">findeSheet</a>(doc, hoesteSchluessel);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> e) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#ac5636b4134cb1baf5fe7284c84f98c30">logger</a>.error(<span class="stringliteral">&quot;Fehler beim Auflösen via Prefix &#39;{}&#39;&quot;</span>, <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">schluesselPrefix</a>, e);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    @Override</div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8a09b23acff24e2b4c7d3251c0e3ec7c">   74</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8a09b23acff24e2b4c7d3251c0e3ec7c">getAnzeigeName</a>() {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a5ddb763cc36bd8974685e4b41486a0e9">anzeigeName</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    @Override</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6708102cbd289f80bb36ba9ddffe3463">   79</a></span>    <span class="keyword">public</span> Optional&lt;Integer&gt; <a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6708102cbd289f80bb36ba9ddffe3463">getNummer</a>(XSpreadsheet sheet) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">letzteNummer</a> &gt;= 0 ? Optional.of(<a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">letzteNummer</a>) : Optional.empty();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6c465795dd17032003a8882b243e6e6a">   83</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6c465795dd17032003a8882b243e6e6a">extrahiereNummer</a>(String schluessel) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        String mittelTeil = schluessel.substring(<a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">schluesselPrefix</a>.length(),</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                schluessel.length() - <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">schluesselSuffix</a>.length());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Matcher matcher = <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a202f2e0af2f19eb78f4f7261cb6a3b5a">NUMMER_PATTERN</a>.matcher(mittelTeil);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">if</span> (matcher.find()) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                <span class="keywordflow">return</span> Integer.parseInt(matcher.group(1));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            } <span class="keywordflow">catch</span> (NumberFormatException e) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <a class="code hl_variable" href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#ac5636b4134cb1baf5fe7284c84f98c30">logger</a>.debug(<span class="stringliteral">&quot;Keine gültige Zahl in Schlüssel &#39;{}&#39;&quot;</span>, schluessel);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+</div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_a31c86015e8e43a961f4b0441a8d4cb5d"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">de.petanqueturniermanager.comp.WorkingSpreadsheet.getWorkingSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument getWorkingSpreadsheetDocument()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00101">WorkingSpreadsheet.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper</a></div><div class="ttdoc">Schreibt und liest Sheet-Metadaten als benannte Bereiche im Dokument.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00050">SheetMetadataHelper.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_a87cf7540d5e6db2a5d076af8bf90e757"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a87cf7540d5e6db2a5d076af8bf90e757">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.findeSheet</a></div><div class="ttdeci">static Optional&lt; XSpreadsheet &gt; findeSheet(XSpreadsheetDocument xDoc, String namedRangeKey)</div><div class="ttdoc">Sucht das Sheet, das dem gegebenen Named-Range-Schlüssel zugeordnet ist.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00506">SheetMetadataHelper.java:506</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_afcb0ea4a33c6a56e88eb6c725eab3a44"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#afcb0ea4a33c6a56e88eb6c725eab3a44">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.getSchluesselMitPrefix</a></div><div class="ttdeci">static String[] getSchluesselMitPrefix(XSpreadsheetDocument xDoc, String prefix)</div><div class="ttdoc">Liefert alle Metadaten-Schlüsselnamen, die mit dem gegebenen Prefix beginnen.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00484">SheetMetadataHelper.java:484</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a202f2e0af2f19eb78f4f7261cb6a3b5a"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a202f2e0af2f19eb78f4f7261cb6a3b5a">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.NUMMER_PATTERN</a></div><div class="ttdeci">static final Pattern NUMMER_PATTERN</div><div class="ttdef"><b>Definition</b> <a href="#l00026">MetadatenPrefixSheetResolver.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a26e1fc1b385ad4f79c9ff468acc7dffd"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a26e1fc1b385ad4f79c9ff468acc7dffd">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.schluesselPrefix</a></div><div class="ttdeci">final String schluesselPrefix</div><div class="ttdef"><b>Definition</b> <a href="#l00028">MetadatenPrefixSheetResolver.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a4e5b8bb025c9ffdc7257cacaa324ecc5"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a4e5b8bb025c9ffdc7257cacaa324ecc5">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.letzteNummer</a></div><div class="ttdeci">volatile int letzteNummer</div><div class="ttdoc">Zuletzt gefundene Nummer – gecacht für getNummer(XSpreadsheet).</div><div class="ttdef"><b>Definition</b> <a href="#l00033">MetadatenPrefixSheetResolver.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a5ddb763cc36bd8974685e4b41486a0e9"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a5ddb763cc36bd8974685e4b41486a0e9">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.anzeigeName</a></div><div class="ttdeci">final String anzeigeName</div><div class="ttdef"><b>Definition</b> <a href="#l00030">MetadatenPrefixSheetResolver.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a64475e0e634c9609c8d6d2c51326002d"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a64475e0e634c9609c8d6d2c51326002d">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.resolve</a></div><div class="ttdeci">Optional&lt; XSpreadsheet &gt; resolve(WorkingSpreadsheet ws)</div><div class="ttdoc">Liefert das Sheet, das für diesen Port angezeigt werden soll.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">MetadatenPrefixSheetResolver.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a6708102cbd289f80bb36ba9ddffe3463"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6708102cbd289f80bb36ba9ddffe3463">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.getNummer</a></div><div class="ttdeci">Optional&lt; Integer &gt; getNummer(XSpreadsheet sheet)</div><div class="ttdoc">Optionale laufende Nummer des Sheets, z.B.</div><div class="ttdef"><b>Definition</b> <a href="#l00079">MetadatenPrefixSheetResolver.java:79</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a6c465795dd17032003a8882b243e6e6a"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a6c465795dd17032003a8882b243e6e6a">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.extrahiereNummer</a></div><div class="ttdeci">int extrahiereNummer(String schluessel)</div><div class="ttdef"><b>Definition</b> <a href="#l00083">MetadatenPrefixSheetResolver.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a8249d4d6edcc65a50df6e2173c4a4009"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8249d4d6edcc65a50df6e2173c4a4009">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.schluesselSuffix</a></div><div class="ttdeci">final String schluesselSuffix</div><div class="ttdef"><b>Definition</b> <a href="#l00029">MetadatenPrefixSheetResolver.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_a8a09b23acff24e2b4c7d3251c0e3ec7c"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#a8a09b23acff24e2b4c7d3251c0e3ec7c">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.getAnzeigeName</a></div><div class="ttdeci">String getAnzeigeName()</div><div class="ttdoc">Anzeigename für den HTML-Titel, z.B.</div><div class="ttdef"><b>Definition</b> <a href="#l00074">MetadatenPrefixSheetResolver.java:74</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_aa15165c40dfdb99ded85276a0f11011a"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#aa15165c40dfdb99ded85276a0f11011a">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.MetadatenPrefixSheetResolver</a></div><div class="ttdeci">MetadatenPrefixSheetResolver(String schluesselPrefix, String schluesselSuffix, String anzeigeName)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">MetadatenPrefixSheetResolver.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver_html_ac5636b4134cb1baf5fe7284c84f98c30"><div class="ttname"><a href="../../d7/da6/classde_1_1petanqueturniermanager_1_1webserver_1_1_metadaten_prefix_sheet_resolver.html#ac5636b4134cb1baf5fe7284c84f98c30">de.petanqueturniermanager.webserver.MetadatenPrefixSheetResolver.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00025">MetadatenPrefixSheetResolver.java:25</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1webserver_1_1_sheet_resolver_html"><div class="ttname"><a href="../../de/dfc/interfacede_1_1petanqueturniermanager_1_1webserver_1_1_sheet_resolver.html">de.petanqueturniermanager.webserver.SheetResolver</a></div><div class="ttdoc">Löst den zu einem Webserver-Port konfigurierten Sheet-Namen dynamisch auf.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd3/_sheet_resolver_8java_source.html#l00014">SheetResolver.java:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_76781b525c19a99b082f593a6c41c2ff.html">webserver</a></li><li class="navelem"><a href="../../d9/d30/_metadaten_prefix_sheet_resolver_8java.html">MetadatenPrefixSheetResolver.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+var _i_j_g_j_properies_spalte_8java =
+[
+    [ "de.petanqueturniermanager.jedergegenjeden.konfiguration.IJGJProperiesSpalte", "dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte.html", "dd/dfa/interfacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1konfiguration_1_1_i_j_g_j_properies_spalte" ]
+];

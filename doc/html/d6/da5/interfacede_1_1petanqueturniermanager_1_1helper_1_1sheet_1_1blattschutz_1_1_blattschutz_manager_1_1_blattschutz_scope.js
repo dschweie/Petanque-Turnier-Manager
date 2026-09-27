@@ -1,0 +1,4 @@
+var interfacede_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager_1_1_blattschutz_scope =
+[
+    [ "close", "d6/da5/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager_1_1_blattschutz_scope.html#a8839a72228b1b0e0c5c1c6c08a0f9b83", null ]
+];

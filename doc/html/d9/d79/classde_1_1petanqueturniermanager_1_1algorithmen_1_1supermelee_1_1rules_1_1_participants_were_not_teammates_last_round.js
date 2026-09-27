@@ -1,0 +1,5 @@
+var classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_last_round =
+[
+    [ "ParticipantsWereNotTeammatesLastRound", "d9/d79/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_last_round.html#a71657be0f8cc2ad0ded4bd083b2d1ba9", null ],
+    [ "performCheck", "d9/d79/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_last_round.html#a9e0190c989534ab89dc0f51cee4142da", null ]
+];

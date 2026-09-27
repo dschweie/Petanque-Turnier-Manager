@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_nicht_gespielt_hintergrund_farbe_un_gerade_style =
+[
+    [ "NichtGespieltHintergrundFarbeUnGeradeStyle", "d5/d64/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_nicht_gespielt_hintergrund_farbe_un_gerade_style.html#a41885dd20251990cf9b731dc2c385440", null ]
+];

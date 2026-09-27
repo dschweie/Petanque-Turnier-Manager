@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/konfigdialog/gui/LabelPlusBackgrColorAndColorChooser.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d19/_label_plus_backgr_color_and_color_chooser_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LabelPlusBackgrColorAndColorChooser.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.HashMap;</code><br />
+<code>import java.util.Map;</code><br />
+<code>import com.sun.star.awt.ActionEvent;</code><br />
+<code>import com.sun.star.awt.ImageAlign;</code><br />
+<code>import com.sun.star.awt.Rectangle;</code><br />
+<code>import com.sun.star.awt.XActionListener;</code><br />
+<code>import com.sun.star.awt.XButton;</code><br />
+<code>import com.sun.star.awt.XControl;</code><br />
+<code>import com.sun.star.awt.XFixedText;</code><br />
+<code>import com.sun.star.awt.XToolkit;</code><br />
+<code>import com.sun.star.awt.XWindowPeer;</code><br />
+<code>import com.sun.star.beans.XMultiPropertySet;</code><br />
+<code>import com.sun.star.lang.EventObject;</code><br />
+<code>import com.sun.star.lang.XMultiComponentFactory;</code><br />
+<code>import com.sun.star.style.VerticalAlignment;</code><br />
+<code>import com.sun.star.uno.XComponentContext;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+<code>import de.petanqueturniermanager.helper.StringTools;</code><br />
+<code>import de.petanqueturniermanager.sidebar.GuiFactory;</code><br />
+<code>import de.petanqueturniermanager.sidebar.GuiFactoryCreateParam;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für LabelPlusBackgrColorAndColorChooser.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d7b/_label_plus_backgr_color_and_color_chooser_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2gui_2_label_plus_backgr_color_and_color_chooser_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2gui_2_label_plus_backgr_color_and_color_chooser_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2gui_2_label_plus_backgr_color_and_color_chooser_8java">
+<area shape="rect" title=" " alt="" coords="1793,5,2064,64"/>
+<area shape="rect" title=" " alt="" coords="5,120,132,147"/>
+<area shape="poly" title=" " alt="" coords="1790,38,1427,48,952,62,484,83,291,98,144,115,125,118,123,113,143,109,290,92,484,78,952,56,1427,42,1795,38"/>
+<area shape="rect" title=" " alt="" coords="156,120,251,147"/>
+<area shape="poly" title=" " alt="" coords="1790,38,1450,46,1009,59,577,81,399,96,264,115,250,118,249,113,263,109,398,91,577,75,1009,53,1450,41,1795,37"/>
+<area shape="rect" title=" " alt="" coords="275,120,472,147"/>
+<area shape="poly" title=" " alt="" coords="1790,38,1547,46,1222,58,855,80,668,96,485,115,451,120,450,114,484,109,667,90,855,75,1222,53,1547,40,1795,37"/>
+<area shape="rect" title=" " alt="" coords="497,120,688,147"/>
+<area shape="poly" title=" " alt="" coords="1790,39,1581,49,1309,62,1005,83,699,115,668,119,667,114,699,109,1005,78,1309,57,1581,43,1795,39"/>
+<area shape="rect" title=" " alt="" coords="712,120,897,147"/>
+<area shape="poly" title=" " alt="" coords="1790,41,1395,67,1152,87,909,115,879,119,878,114,908,109,1152,82,1395,61,1795,41"/>
+<area shape="rect" title=" " alt="" coords="921,112,1093,155"/>
+<area shape="poly" title=" " alt="" coords="1795,44,1484,71,1298,90,1109,114,1108,109,1297,85,1483,66,1790,44"/>
+<area shape="rect" title=" " alt="" coords="1118,120,1291,147"/>
+<area shape="poly" title=" " alt="" coords="1795,49,1564,78,1304,115,1278,119,1277,114,1303,109,1563,73,1790,50"/>
+<area shape="rect" title=" " alt="" coords="1316,120,1493,147"/>
+<area shape="poly" title=" " alt="" coords="1795,60,1506,115,1483,119,1482,114,1505,109,1790,60"/>
+<area shape="rect" title=" " alt="" coords="1518,120,1710,147"/>
+<area shape="poly" title=" " alt="" coords="1838,64,1670,118,1669,112,1832,65"/>
+<area shape="rect" title=" " alt="" coords="1734,120,1907,147"/>
+<area shape="poly" title=" " alt="" coords="1899,63,1847,112,1845,107,1894,65"/>
+<area shape="rect" title=" " alt="" coords="1932,120,2141,147"/>
+<area shape="poly" title=" " alt="" coords="1961,62,2014,111,2009,109,1959,67"/>
+<area shape="rect" title=" " alt="" coords="2165,112,2342,155"/>
+<area shape="poly" title=" " alt="" coords="2026,62,2172,107,2167,107,2025,67"/>
+<area shape="rect" title=" " alt="" coords="2366,120,2568,147"/>
+<area shape="poly" title=" " alt="" coords="2065,58,2356,109,2384,117,2379,117,2355,115,2064,63"/>
+<area shape="rect" title=" " alt="" coords="2592,112,2758,155"/>
+<area shape="poly" title=" " alt="" coords="2065,46,2300,71,2579,112,2574,111,2299,76,2064,51"/>
+<area shape="rect" title=" " alt="" coords="2783,112,2959,155"/>
+<area shape="poly" title=" " alt="" coords="2065,41,2382,66,2573,85,2771,112,2765,112,2572,90,2381,71,2064,47"/>
+<area shape="rect" title=" " alt="" coords="2983,112,3186,155"/>
+<area shape="poly" title=" " alt="" coords="2065,39,2466,62,2715,82,2971,112,2966,112,2714,88,2466,67,2065,44"/>
+<area shape="rect" title=" " alt="" coords="3210,120,3445,147"/>
+<area shape="poly" title=" " alt="" coords="2065,37,2564,60,2880,81,3198,109,3241,117,3236,117,3198,115,2880,86,2564,65,2065,43"/>
+<area shape="rect" title=" " alt="" coords="3468,112,3690,155"/>
+<area shape="poly" title=" " alt="" coords="2065,35,2321,41,2663,53,3054,75,3456,112,3451,112,3054,81,2663,59,2320,46,2065,40"/>
+<area shape="rect" title=" " alt="" coords="3714,112,3943,155"/>
+<area shape="poly" title=" " alt="" coords="2065,34,2358,38,2761,50,3225,72,3464,89,3702,112,3696,112,3463,94,3224,77,2761,55,2358,43,2065,39"/>
+<area shape="rect" title=" " alt="" coords="3966,112,4195,155"/>
+<area shape="poly" title=" " alt="" coords="2065,33,2396,35,2861,45,3400,68,3678,86,3954,112,3948,112,3677,91,3399,73,2861,50,2396,40,2065,38"/>
+</map>
+</div>
+</div>
+<p><a href="../../d7/d19/_label_plus_backgr_color_and_color_chooser_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekonfigdialog_2Egui_2ELabelPlusBackgrColorAndColorChooser" id="r_de_2Epetanqueturniermanager_2Ekonfigdialog_2Egui_2ELabelPlusBackgrColorAndColorChooser"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/d03/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_backgr_color_and_color_chooser.html">de.petanqueturniermanager.konfigdialog.gui.LabelPlusBackgrColorAndColorChooser</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Label mit Color feld + Btn für Colorchooser.  <a href="../../d1/d03/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1gui_1_1_label_plus_backgr_color_and_color_chooser.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekonfigdialog_2Egui" id="r_de_2Epetanqueturniermanager_2Ekonfigdialog_2Egui"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d97/namespacede_1_1petanqueturniermanager_1_1konfigdialog_1_1gui.html">de.petanqueturniermanager.konfigdialog.gui</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_5dc56744c2def96656232e2a15016d12.html">konfigdialog</a></li><li class="navelem"><a href="../../dir_f3a4e22500b8f7895199c1d77539386d.html">gui</a></li><li class="navelem"><a href="../../d7/d19/_label_plus_backgr_color_and_color_chooser_8java.html">LabelPlusBackgrColorAndColorChooser.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

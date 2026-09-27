@@ -1,0 +1,5 @@
+var classde_1_1petanqueturniermanager_1_1webserver_1_1_composite_view_liste_dialog_1_1_ungueltige_eingabe_exception =
+[
+    [ "UngueltigeEingabeException", "df/d30/classde_1_1petanqueturniermanager_1_1webserver_1_1_composite_view_liste_dialog_1_1_ungueltige_eingabe_exception.html#ac3d0030d7776ba55c0ac0a784dd7fd36", null ],
+    [ "serialVersionUID", "df/d30/classde_1_1petanqueturniermanager_1_1webserver_1_1_composite_view_liste_dialog_1_1_ungueltige_eingabe_exception.html#a73bfb544b8b172cbce25d12ff5690cb6", null ]
+];

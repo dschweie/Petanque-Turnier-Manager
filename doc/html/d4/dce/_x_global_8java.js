@@ -1,0 +1,4 @@
+var _x_global_8java =
+[
+    [ "de.petanqueturniermanager.addin.XGlobal", "de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html", "de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global" ]
+];

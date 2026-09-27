@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/db3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_json_import_reader.html','../../','dd/de8/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_json_import_reader-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Liest eine JSON-Datei mit Top-Level-Struktur <code class="JavaDocCode">{meta, spieler, vereine, labels, spielerLabels}</code>.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/d68/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_json_import_reader__inherit__graph.png" border="0" usemap="#ade_8petanqueturniermanager_8spielerdb_8importer_8_spieler_db_json_import_reader_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="ade_8petanqueturniermanager_8spielerdb_8importer_8_spieler_db_json_import_reader_inherit__map" id="ade_8petanqueturniermanager_8spielerdb_8importer_8_spieler_db_json_import_reader_inherit__map">
+<area shape="rect" title="Liest eine JSON&#45;Datei mit Top&#45;Level&#45;Struktur {meta, spieler, vereine, labels, spielerLabels}..." alt="" coords="5,96,295,139"/>
+<area shape="rect" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html" title="Liest eine Import&#45;Quelle in ImportRohdaten ein." alt="" coords="5,5,295,48"/>
+<area shape="poly" title=" " alt="" coords="152,62,152,97,148,95,148,66"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a100b090c582a554588bfaf179ca534fe" id="r_a100b090c582a554588bfaf179ca534fe"><td class="memItemLeft"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a>&#160;</td><td class="memItemRight"><a class="el" href="#a100b090c582a554588bfaf179ca534fe">read</a> (<a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#aa6f41c6b64ae681e2d9963e3562bf26a">ImportRequest</a> request)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:a730b67ad9641cfe348a48a2b86d9fb0c" id="r_a730b67ad9641cfe348a48a2b86d9fb0c"><td class="memItemLeft">static JsonArray&#160;</td><td class="memItemRight"><a class="el" href="#a730b67ad9641cfe348a48a2b86d9fb0c">holeArrayPflicht</a> (Path datei, JsonObject root, String key)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:afa0006e8e41880f6cf1b37547585d92e" id="r_afa0006e8e41880f6cf1b37547585d92e"><td class="memItemLeft">static List&lt; RohSpielerLabel &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afa0006e8e41880f6cf1b37547585d92e">leseJunction</a> (Path datei, JsonArray arr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a64b01a01418b6bc4c848bbbd28fd7ef7" id="r_a64b01a01418b6bc4c848bbbd28fd7ef7"><td class="memItemLeft">static List&lt; RohLabel &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a64b01a01418b6bc4c848bbbd28fd7ef7">leseLabels</a> (Path datei, JsonArray arr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a902de37ed3e6c43a71d0274165c6dcf9" id="r_a902de37ed3e6c43a71d0274165c6dcf9"><td class="memItemLeft">static JsonObject&#160;</td><td class="memItemRight"><a class="el" href="#a902de37ed3e6c43a71d0274165c6dcf9">leseRoot</a> (Path datei)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a0b5f19678bdf95280c751c24dbb56760" id="r_a0b5f19678bdf95280c751c24dbb56760"><td class="memItemLeft">static List&lt; RohSpieler &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0b5f19678bdf95280c751c24dbb56760">leseSpieler</a> (Path datei, JsonArray arr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a1a17ae599a1c0bdacd5b3f36746d0d48" id="r_a1a17ae599a1c0bdacd5b3f36746d0d48"><td class="memItemLeft">static List&lt; RohVerein &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a17ae599a1c0bdacd5b3f36746d0d48">leseVereine</a> (Path datei, JsonArray arr)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a672f07972fc6c7241991866bb96ca74c" id="r_a672f07972fc6c7241991866bb96ca74c"><td class="memItemLeft">static Integer&#160;</td><td class="memItemRight"><a class="el" href="#a672f07972fc6c7241991866bb96ca74c">nullableInt</a> (JsonObject o, String key)</td></tr>
+<tr class="memitem:abdee4d99170e18d453cc005002670425" id="r_abdee4d99170e18d453cc005002670425"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#abdee4d99170e18d453cc005002670425">nullableString</a> (JsonObject o, String key)</td></tr>
+<tr class="memitem:a954d5536ff2293bd0bd124dbe8ae08f3" id="r_a954d5536ff2293bd0bd124dbe8ae08f3"><td class="memItemLeft">static JsonObject&#160;</td><td class="memItemRight"><a class="el" href="#a954d5536ff2293bd0bd124dbe8ae08f3">pflichtObjekt</a> (Path datei, JsonArray arr, int i, String section)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a5bb9e520898b925d46bd3b9824decfc5" id="r_a5bb9e520898b925d46bd3b9824decfc5"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a5bb9e520898b925d46bd3b9824decfc5">pflichtString</a> (Path datei, JsonObject o, String key)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Symmetrisch zu <code class="JavaDocCode">SpielerDbJsonExporter</code>. Fehlt eine Sektion für eine Scope-Entity, schlägt der Reader hart fehl. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00034">34</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a730b67ad9641cfe348a48a2b86d9fb0c" name="a730b67ad9641cfe348a48a2b86d9fb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730b67ad9641cfe348a48a2b86d9fb0c">&#9670;&#160;</a></span>holeArrayPflicht()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JsonArray de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.holeArrayPflicht </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonObject</td>          <td class="paramname"><span class="paramname"><em>root</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00075">75</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                                      {</div>
+<div class="line"><span class="lineno">   77</span>        JsonElement el = root.get(key);</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (el == <span class="keyword">null</span> || el.isJsonNull()) {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Datei &quot;</span> + datei + <span class="stringliteral">&quot; enthält keine Sektion &#39;&quot;</span> + key + <span class="stringliteral">&quot;&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">if</span> (!el.isJsonArray()) {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Sektion &#39;&quot;</span> + key + <span class="stringliteral">&quot;&#39; in &quot;</span> + datei + <span class="stringliteral">&quot; ist kein Array&quot;</span>);</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> el.getAsJsonArray();</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa0006e8e41880f6cf1b37547585d92e" name="afa0006e8e41880f6cf1b37547585d92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0006e8e41880f6cf1b37547585d92e">&#9670;&#160;</a></span>leseJunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohSpielerLabel &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.leseJunction </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonArray</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00123">123</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                      {</div>
+<div class="line"><span class="lineno">  125</span>        List&lt;RohSpielerLabel&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;(arr.size());</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; arr.size(); i++) {</div>
+<div class="line"><span class="lineno">  127</span>            JsonObject o = pflichtObjekt(datei, arr, i, <span class="stringliteral">&quot;spielerLabels&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>            Integer sNr = nullableInt(o, <span class="stringliteral">&quot;spielerNr&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>            Integer lNr = nullableInt(o, <span class="stringliteral">&quot;labelNr&quot;</span>);</div>
+<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">if</span> (sNr == <span class="keyword">null</span> || lNr == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Junction-Eintrag &quot;</span> + i</div>
+<div class="line"><span class="lineno">  132</span>                        + <span class="stringliteral">&quot; in &quot;</span> + datei + <span class="stringliteral">&quot; hat fehlende NR&quot;</span>);</div>
+<div class="line"><span class="lineno">  133</span>            }</div>
+<div class="line"><span class="lineno">  134</span>            erg.add(<span class="keyword">new</span> RohSpielerLabel(sNr, lNr));</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64b01a01418b6bc4c848bbbd28fd7ef7" name="a64b01a01418b6bc4c848bbbd28fd7ef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b01a01418b6bc4c848bbbd28fd7ef7">&#9670;&#160;</a></span>leseLabels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohLabel &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.leseLabels </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonArray</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00113">113</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                      {</div>
+<div class="line"><span class="lineno">  115</span>        List&lt;RohLabel&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;(arr.size());</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; arr.size(); i++) {</div>
+<div class="line"><span class="lineno">  117</span>            JsonObject o = pflichtObjekt(datei, arr, i, <span class="stringliteral">&quot;labels&quot;</span>);</div>
+<div class="line"><span class="lineno">  118</span>            erg.add(<span class="keyword">new</span> RohLabel(nullableInt(o, <span class="stringliteral">&quot;nr&quot;</span>), pflichtString(datei, o, <span class="stringliteral">&quot;name&quot;</span>)));</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a902de37ed3e6c43a71d0274165c6dcf9" name="a902de37ed3e6c43a71d0274165c6dcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902de37ed3e6c43a71d0274165c6dcf9">&#9670;&#160;</a></span>leseRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JsonObject de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.leseRoot </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00063">63</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                             {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">try</span> (Reader r = Files.newBufferedReader(datei, StandardCharsets.UTF_8)) {</div>
+<div class="line"><span class="lineno">   65</span>            JsonElement root = JsonParser.parseReader(r);</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (!root.isJsonObject()) {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Wurzel in &quot;</span> + datei + <span class="stringliteral">&quot; ist kein Objekt&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> root.getAsJsonObject();</div>
+<div class="line"><span class="lineno">   70</span>        } <span class="keywordflow">catch</span> (IOException | JsonSyntaxException e) {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Lesen fehlgeschlagen: &quot;</span> + datei, e);</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0b5f19678bdf95280c751c24dbb56760" name="a0b5f19678bdf95280c751c24dbb56760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5f19678bdf95280c751c24dbb56760">&#9670;&#160;</a></span>leseSpieler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohSpieler &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.leseSpieler </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonArray</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00087">87</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                      {</div>
+<div class="line"><span class="lineno">   89</span>        List&lt;RohSpieler&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;(arr.size());</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; arr.size(); i++) {</div>
+<div class="line"><span class="lineno">   91</span>            JsonObject o = pflichtObjekt(datei, arr, i, <span class="stringliteral">&quot;spieler&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>            erg.add(<span class="keyword">new</span> RohSpieler(</div>
+<div class="line"><span class="lineno">   93</span>                    nullableInt(o, <span class="stringliteral">&quot;nr&quot;</span>),</div>
+<div class="line"><span class="lineno">   94</span>                    pflichtString(datei, o, <span class="stringliteral">&quot;vorname&quot;</span>),</div>
+<div class="line"><span class="lineno">   95</span>                    pflichtString(datei, o, <span class="stringliteral">&quot;nachname&quot;</span>),</div>
+<div class="line"><span class="lineno">   96</span>                    nullableInt(o, <span class="stringliteral">&quot;vereinNr&quot;</span>),</div>
+<div class="line"><span class="lineno">   97</span>                    <span class="keyword">null</span>,</div>
+<div class="line"><span class="lineno">   98</span>                    nullableString(o, <span class="stringliteral">&quot;lizenznr&quot;</span>)));</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1a17ae599a1c0bdacd5b3f36746d0d48" name="a1a17ae599a1c0bdacd5b3f36746d0d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a17ae599a1c0bdacd5b3f36746d0d48">&#9670;&#160;</a></span>leseVereine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohVerein &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.leseVereine </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonArray</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00103">103</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                      {</div>
+<div class="line"><span class="lineno">  105</span>        List&lt;RohVerein&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;(arr.size());</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; arr.size(); i++) {</div>
+<div class="line"><span class="lineno">  107</span>            JsonObject o = pflichtObjekt(datei, arr, i, <span class="stringliteral">&quot;vereine&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>            erg.add(<span class="keyword">new</span> RohVerein(nullableInt(o, <span class="stringliteral">&quot;nr&quot;</span>), pflichtString(datei, o, <span class="stringliteral">&quot;name&quot;</span>)));</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a672f07972fc6c7241991866bb96ca74c" name="a672f07972fc6c7241991866bb96ca74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672f07972fc6c7241991866bb96ca74c">&#9670;&#160;</a></span>nullableInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Integer de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.nullableInt </td>
+          <td>(</td>
+          <td class="paramtype">JsonObject</td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00169">169</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>                                                                 {</div>
+<div class="line"><span class="lineno">  170</span>        JsonElement el = o.get(key);</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">if</span> (el == <span class="keyword">null</span> || el == JsonNull.INSTANCE || el.isJsonNull()) {</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  173</span>        }</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span> el.getAsInt();</div>
+<div class="line"><span class="lineno">  176</span>        } <span class="keywordflow">catch</span> (NumberFormatException | UnsupportedOperationException e) {</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  178</span>        }</div>
+<div class="line"><span class="lineno">  179</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abdee4d99170e18d453cc005002670425" name="abdee4d99170e18d453cc005002670425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdee4d99170e18d453cc005002670425">&#9670;&#160;</a></span>nullableString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.nullableString </td>
+          <td>(</td>
+          <td class="paramtype">JsonObject</td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00159">159</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                                   {</div>
+<div class="line"><span class="lineno">  160</span>        JsonElement el = o.get(key);</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (el == <span class="keyword">null</span> || el.isJsonNull()) {</div>
+<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  164</span>        String s = el.getAsString();</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">return</span> s.isEmpty() ? null : s;</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a954d5536ff2293bd0bd124dbe8ae08f3" name="a954d5536ff2293bd0bd124dbe8ae08f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954d5536ff2293bd0bd124dbe8ae08f3">&#9670;&#160;</a></span>pflichtObjekt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JsonObject de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.pflichtObjekt </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonArray</td>          <td class="paramname"><span class="paramname"><em>arr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>section</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00139">139</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                                      {</div>
+<div class="line"><span class="lineno">  141</span>        JsonElement el = arr.get(i);</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (!el.isJsonObject()) {</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Eintrag &quot;</span> + i + <span class="stringliteral">&quot; in Sektion &#39;&quot;</span> + section</div>
+<div class="line"><span class="lineno">  144</span>                    + <span class="stringliteral">&quot;&#39; (&quot;</span> + datei + <span class="stringliteral">&quot;) ist kein Objekt&quot;</span>);</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> el.getAsJsonObject();</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5bb9e520898b925d46bd3b9824decfc5" name="a5bb9e520898b925d46bd3b9824decfc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb9e520898b925d46bd3b9824decfc5">&#9670;&#160;</a></span>pflichtString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.pflichtString </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonObject</td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00149">149</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>                                      {</div>
+<div class="line"><span class="lineno">  151</span>        JsonElement el = o.get(key);</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (el == <span class="keyword">null</span> || el.isJsonNull()) {</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Feld &#39;&quot;</span> + key + <span class="stringliteral">&quot;&#39; fehlt in &quot;</span> + datei);</div>
+<div class="line"><span class="lineno">  154</span>        }</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> el.getAsString();</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a100b090c582a554588bfaf179ca534fe" name="a100b090c582a554588bfaf179ca534fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100b090c582a554588bfaf179ca534fe">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a> de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader.read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#aa6f41c6b64ae681e2d9963e3562bf26a">ImportRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementiert <a class="el" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html#a83ad716b34610bfdd57fb0c476ad312d">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportReader</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html#l00037">37</a> der Datei <a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                                {</div>
+<div class="line"><span class="lineno">   38</span>        Path datei = request.source();</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!Files.isRegularFile(datei)) {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;JSON-Datei fehlt: &quot;</span> + datei);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span>        EnumSet&lt;ExportEntity&gt; entities = request.entities();</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        JsonObject root = leseRoot(datei);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>        List&lt;RohSpieler&gt; spieler = entities.contains(ExportEntity.SPIELER)</div>
+<div class="line"><span class="lineno">   47</span>                ? leseSpieler(datei, holeArrayPflicht(datei, root, <span class="stringliteral">&quot;spieler&quot;</span>))</div>
+<div class="line"><span class="lineno">   48</span>                : List.of();</div>
+<div class="line"><span class="lineno">   49</span>        List&lt;RohVerein&gt; vereine = entities.contains(ExportEntity.VEREINE)</div>
+<div class="line"><span class="lineno">   50</span>                ? leseVereine(datei, holeArrayPflicht(datei, root, <span class="stringliteral">&quot;vereine&quot;</span>))</div>
+<div class="line"><span class="lineno">   51</span>                : List.of();</div>
+<div class="line"><span class="lineno">   52</span>        List&lt;RohLabel&gt; labels = entities.contains(ExportEntity.LABELS)</div>
+<div class="line"><span class="lineno">   53</span>                ? leseLabels(datei, holeArrayPflicht(datei, root, <span class="stringliteral">&quot;labels&quot;</span>))</div>
+<div class="line"><span class="lineno">   54</span>                : List.of();</div>
+<div class="line"><span class="lineno">   55</span>        List&lt;RohSpielerLabel&gt; junction =</div>
+<div class="line"><span class="lineno">   56</span>                entities.contains(ExportEntity.SPIELER) &amp;&amp; entities.contains(ExportEntity.LABELS)</div>
+<div class="line"><span class="lineno">   57</span>                        ? leseJunction(datei, holeArrayPflicht(datei, root, <span class="stringliteral">&quot;spielerLabels&quot;</span>))</div>
+<div class="line"><span class="lineno">   58</span>                        : List.of();</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a>(spieler, vereine, labels, junction);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_afc7ed4612e551a6e2c49a34365206931"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">de.petanqueturniermanager.spielerdb.importer.ImportRohdaten</a></div><div class="ttdeci">record ImportRohdaten(List&lt; RohSpieler &gt; spieler, List&lt; RohVerein &gt; vereine, List&lt; RohLabel &gt; labels, List&lt; RohSpielerLabel &gt; spielerLabels)</div><div class="ttdoc">Rohe (noch nicht validierte) Daten aus einer Import-Quelle.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/ddb/_import_rohdaten_8java_source.html#l00018">ImportRohdaten.java:18</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/spielerdb/importer/<a class="el" href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">SpielerDbJsonImportReader.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html">spielerdb</a></li><li class="navelem"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html">importer</a></li><li class="navelem"><a href="../../df/db3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_json_import_reader.html">SpielerDbJsonImportReader</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/konfigdialog/AbstractUnoDialog.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/d08/_abstract_uno_dialog_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AbstractUnoDialog.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.sun.star.awt.XControl;</code><br />
+<code>import com.sun.star.awt.XControlModel;</code><br />
+<code>import com.sun.star.awt.XDialog;</code><br />
+<code>import com.sun.star.awt.XToolkit;</code><br />
+<code>import com.sun.star.awt.XWindow;</code><br />
+<code>import com.sun.star.awt.XWindowPeer;</code><br />
+<code>import com.sun.star.beans.XPropertySet;</code><br />
+<code>import com.sun.star.container.XNameContainer;</code><br />
+<code>import com.sun.star.lang.XComponent;</code><br />
+<code>import com.sun.star.lang.XMultiComponentFactory;</code><br />
+<code>import com.sun.star.lang.XMultiServiceFactory;</code><br />
+<code>import com.sun.star.uno.XComponentContext;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für AbstractUnoDialog.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/dab/_abstract_uno_dialog_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2_abstract_uno_dialog_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2_abstract_uno_dialog_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2_abstract_uno_dialog_8java">
+<area shape="rect" title=" " alt="" coords="1220,5,1480,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,183,131"/>
+<area shape="poly" title=" " alt="" coords="1217,30,1021,38,765,49,480,69,194,99,165,103,164,98,194,93,480,64,765,44,1021,33,1222,30"/>
+<area shape="rect" title=" " alt="" coords="207,96,384,139"/>
+<area shape="poly" title=" " alt="" coords="1217,32,854,54,629,72,400,98,400,93,629,67,854,49,1222,32"/>
+<area shape="rect" title=" " alt="" coords="408,104,580,131"/>
+<area shape="poly" title=" " alt="" coords="1217,36,932,60,762,77,593,99,566,103,565,98,592,93,761,72,931,55,1222,35"/>
+<area shape="rect" title=" " alt="" coords="605,104,778,131"/>
+<area shape="poly" title=" " alt="" coords="1222,41,1017,67,790,99,764,103,764,98,790,93,1017,61,1217,41"/>
+<area shape="rect" title=" " alt="" coords="802,104,984,131"/>
+<area shape="poly" title=" " alt="" coords="1245,48,996,99,973,103,972,98,995,93,1239,49"/>
+<area shape="rect" title=" " alt="" coords="1008,104,1217,131"/>
+<area shape="poly" title=" " alt="" coords="1297,48,1161,101,1160,96,1292,49"/>
+<area shape="rect" title=" " alt="" coords="1241,104,1459,131"/>
+<area shape="poly" title=" " alt="" coords="1352,47,1352,90,1348,87,1348,50"/>
+<area shape="rect" title=" " alt="" coords="1484,96,1686,139"/>
+<area shape="poly" title=" " alt="" coords="1405,46,1518,90,1513,90,1405,51"/>
+<area shape="rect" title=" " alt="" coords="1710,104,1915,131"/>
+<area shape="poly" title=" " alt="" coords="1459,46,1734,101,1729,101,1458,51"/>
+<area shape="rect" title=" " alt="" coords="1939,96,2105,139"/>
+<area shape="poly" title=" " alt="" coords="1481,37,1685,60,1926,96,1921,95,1685,65,1480,43"/>
+<area shape="rect" title=" " alt="" coords="2130,96,2296,139"/>
+<area shape="poly" title=" " alt="" coords="1481,32,1767,54,1939,71,2117,96,2111,96,1938,76,1767,59,1481,38"/>
+<area shape="rect" title=" " alt="" coords="2320,96,2522,139"/>
+<area shape="poly" title=" " alt="" coords="1481,30,1847,51,2074,69,2307,96,2302,96,2073,74,1847,56,1480,36"/>
+<area shape="rect" title=" " alt="" coords="2546,104,2781,131"/>
+<area shape="poly" title=" " alt="" coords="1480,29,1946,48,2239,67,2534,93,2577,101,2572,101,2534,99,2239,72,1946,54,1480,34"/>
+</map>
+</div>
+</div>
+<p><a href="../../d1/d08/_abstract_uno_dialog_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekonfigdialog_2EAbstractUnoDialog" id="r_de_2Epetanqueturniermanager_2Ekonfigdialog_2EAbstractUnoDialog"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html">de.petanqueturniermanager.konfigdialog.AbstractUnoDialog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstrakte Basisklasse für modale UNO-Dialoge.  <a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1_abstract_uno_dialog.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekonfigdialog" id="r_de_2Epetanqueturniermanager_2Ekonfigdialog"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d49/namespacede_1_1petanqueturniermanager_1_1konfigdialog.html">de.petanqueturniermanager.konfigdialog</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_5dc56744c2def96656232e2a15016d12.html">konfigdialog</a></li><li class="navelem"><a href="../../d1/d08/_abstract_uno_dialog_8java.html">AbstractUnoDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

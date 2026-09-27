@@ -1,0 +1,4 @@
+var _schweizer_rangliste_sheet_sort_only_8java =
+[
+    [ "de.petanqueturniermanager.schweizer.rangliste.SchweizerRanglisteSheetSortOnly", "db/ddb/classde_1_1petanqueturniermanager_1_1schweizer_1_1rangliste_1_1_schweizer_rangliste_sheet_sort_only.html", "db/ddb/classde_1_1petanqueturniermanager_1_1schweizer_1_1rangliste_1_1_schweizer_rangliste_sheet_sort_only" ]
+];

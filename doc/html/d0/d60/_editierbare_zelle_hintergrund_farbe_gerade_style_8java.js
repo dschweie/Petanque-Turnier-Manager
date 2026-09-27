@@ -1,0 +1,4 @@
+var _editierbare_zelle_hintergrund_farbe_gerade_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeGeradeStyle", "d1/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_gerade_style.html", "d1/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_gerade_style" ]
+];

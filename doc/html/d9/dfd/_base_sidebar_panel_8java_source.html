@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/sidebar/BaseSidebarPanel.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/dfd/_base_sidebar_panel_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BaseSidebarPanel.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/dfd/_base_sidebar_panel_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 21.01.2020 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Neu geschrieben 2026-03</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.sidebar;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.awt.XWindow;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.frame.XFrame;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.sun.star.lib.uno.helper.ComponentBase;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.ui.UIElementType;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.star.ui.XSidebar;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.ui.XUIElement;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.comp.adapter.IGlobalEventListener;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html">   40</a></span><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aed800ed953f79d21816473705ee47ce9">BaseSidebarPanel</a> <span class="keyword">extends</span> <a class="code hl_class" href="../../d5/db3/class_component_base.html">ComponentBase</a> implements <a class="code hl_class" href="../../d0/d9f/class_x_u_i_element.html">XUIElement</a>, <a class="code hl_interface" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">IGlobalEventListener</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a9d5ceb8f39254fd4a85c34b8e3430904">   42</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a9d5ceb8f39254fd4a85c34b8e3430904">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aed800ed953f79d21816473705ee47ce9">BaseSidebarPanel</a>.class);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a1bfd1b86bd1b7886e6b3d42c3d878012">   44</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a1bfd1b86bd1b7886e6b3d42c3d878012">resourceUrl</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">   45</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html">BaseSidebarContent</a> <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aed800ed953f79d21816473705ee47ce9">   47</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aed800ed953f79d21816473705ee47ce9">BaseSidebarPanel</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> workingSpreadsheet, XWindow parentWindow, String <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a1bfd1b86bd1b7886e6b3d42c3d878012">resourceUrl</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            XSidebar xSidebar) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this.resourceUrl = checkNotNull(<a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a1bfd1b86bd1b7886e6b3d42c3d878012">resourceUrl</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a> = <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a5ea4d29f2e94d4bd53cbe87e81f79e2f">neuesPanel</a>(workingSpreadsheet, parentWindow, xSidebar);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">// Erst NACH dem Subklassen-Konstruktor initialisieren, damit alle</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">// Field-Initializers (z.B. itemListener-Instanzen) abgearbeitet sind,</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// bevor felderHinzufuegen() sie an die UNO-Bridge übergibt.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a>.<a class="code hl_function" href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html#a0ac68b0038fb8d8f8dbabde717f7b1c2">initialisieren</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html">PetanqueTurnierMngrSingleton</a>.<a class="code hl_function" href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a5baa7ce2f4443af92af2c5b99d6a3cc6">isDruckvorschauAktiv</a>()) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_class" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html">SidebarPanelDelegator</a>.<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a88f5dd1bc1e59ac7dd73a191a870d3c7">get</a>().<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7cf331511dfa9aba13041f9fffe677aa">registrieren</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    @Override</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#abc36618deb4a865e6c456d7d68e7f9d1">   65</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#abc36618deb4a865e6c456d7d68e7f9d1">onViewCreated</a>(Object source) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a>.<a class="code hl_function" href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html#a1c8fcfbd43bba78e1fd2da99d28a9309">onViewCreated</a>(source);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_class" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html">SidebarPanelDelegator</a>.<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a88f5dd1bc1e59ac7dd73a191a870d3c7">get</a>().<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a0f0597f484aea313e1dd44be40d63249">entfernen</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    @Override</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af7219a4d2b88fdc00238ac40d1b6d3c0">   77</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af7219a4d2b88fdc00238ac40d1b6d3c0">dispose</a>() {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a9d5ceb8f39254fd4a85c34b8e3430904">logger</a>.debug(<span class="stringliteral">&quot;BaseSidebarPanel.dispose – bereinige panel&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_class" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html">SidebarPanelDelegator</a>.<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a88f5dd1bc1e59ac7dd73a191a870d3c7">get</a>().<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a0f0597f484aea313e1dd44be40d63249">entfernen</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a>.<a class="code hl_function" href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html#a625aae3ea341af2d6b61e738e63dae7a">bereinigen</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        super.dispose();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    @Override</div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aa80ea1ce2503c256f83178d99aa2b64d">   88</a></span>    <span class="keyword">public</span> <span class="keyword">final</span> XFrame <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aa80ea1ce2503c256f83178d99aa2b64d">getFrame</a>() {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    @Override</div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a78ea5d305f8137d316288b6406639af1">   93</a></span>    <span class="keyword">public</span> <span class="keyword">final</span> Object <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a78ea5d305f8137d316288b6406639af1">getRealInterface</a>() {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">panel</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    @Override</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#ad840032c416cdff541f70856a0e068c7">   98</a></span>    <span class="keyword">public</span> <span class="keyword">final</span> String <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#ad840032c416cdff541f70856a0e068c7">getResourceURL</a>() {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a1bfd1b86bd1b7886e6b3d42c3d878012">resourceUrl</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    @Override</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#afb8567d26f9160d827289b1e273e8084">  103</a></span>    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#afb8567d26f9160d827289b1e273e8084">getType</a>() {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">return</span> UIElementType.TOOLPANEL;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a5ea4d29f2e94d4bd53cbe87e81f79e2f">  107</a></span>    <span class="keyword">protected</span> <span class="keyword">abstract</span> <a class="code hl_class" href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html">BaseSidebarContent</a> <a class="code hl_function" href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a5ea4d29f2e94d4bd53cbe87e81f79e2f">neuesPanel</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> workingSpreadsheet, XWindow parentWindow,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            XSidebar xSidebar);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+</div>
+<div class="ttc" id="aclass_component_base_html"><div class="ttname"><a href="../../d5/db3/class_component_base.html">ComponentBase</a></div></div>
+<div class="ttc" id="aclass_x_u_i_element_html"><div class="ttname"><a href="../../d0/d9f/class_x_u_i_element.html">XUIElement</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton_html"><div class="ttname"><a href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html">de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/df6/_petanque_turnier_mngr_singleton_8java_source.html#l00099">PetanqueTurnierMngrSingleton.java:99</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton_html_a5baa7ce2f4443af92af2c5b99d6a3cc6"><div class="ttname"><a href="../../d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a5baa7ce2f4443af92af2c5b99d6a3cc6">de.petanqueturniermanager.comp.PetanqueTurnierMngrSingleton.isDruckvorschauAktiv</a></div><div class="ttdeci">static boolean isDruckvorschauAktiv()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/df6/_petanque_turnier_mngr_singleton_8java_source.html#l00114">PetanqueTurnierMngrSingleton.java:114</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content_html"><div class="ttname"><a href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html">de.petanqueturniermanager.sidebar.BaseSidebarContent</a></div><div class="ttdoc">Saubere Basisklasse für Sidebar-Panels.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d86/_base_sidebar_content_8java_source.html#l00060">BaseSidebarContent.java:61</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content_html_a0ac68b0038fb8d8f8dbabde717f7b1c2"><div class="ttname"><a href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html#a0ac68b0038fb8d8f8dbabde717f7b1c2">de.petanqueturniermanager.sidebar.BaseSidebarContent.initialisieren</a></div><div class="ttdeci">final void initialisieren()</div><div class="ttdoc">Schließt die Initialisierung ab, sobald die Subklasse vollständig konstruiert ist.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d86/_base_sidebar_content_8java_source.html#l00135">BaseSidebarContent.java:135</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content_html_a1c8fcfbd43bba78e1fd2da99d28a9309"><div class="ttname"><a href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html#a1c8fcfbd43bba78e1fd2da99d28a9309">de.petanqueturniermanager.sidebar.BaseSidebarContent.onViewCreated</a></div><div class="ttdeci">void onViewCreated(Object source)</div><div class="ttdoc">Schließt die verzögerte Initialisierung ab, sobald der ScTabViewShell-Controller aktiv ist (nach Fill...</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d86/_base_sidebar_content_8java_source.html#l00382">BaseSidebarContent.java:382</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content_html_a625aae3ea341af2d6b61e738e63dae7a"><div class="ttname"><a href="../../de/d09/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_content.html#a625aae3ea341af2d6b61e738e63dae7a">de.petanqueturniermanager.sidebar.BaseSidebarContent.bereinigen</a></div><div class="ttdeci">void bereinigen()</div><div class="ttdoc">Räumt diesen Content auf: entfernt Fenster-Listener, Turnier-Event-Listener und disposed das Kind-Fen...</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d86/_base_sidebar_content_8java_source.html#l00253">BaseSidebarContent.java:253</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_a1bfd1b86bd1b7886e6b3d42c3d878012"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a1bfd1b86bd1b7886e6b3d42c3d878012">de.petanqueturniermanager.sidebar.BaseSidebarPanel.resourceUrl</a></div><div class="ttdeci">final String resourceUrl</div><div class="ttdef"><b>Definition</b> <a href="#l00044">BaseSidebarPanel.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_a5ea4d29f2e94d4bd53cbe87e81f79e2f"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a5ea4d29f2e94d4bd53cbe87e81f79e2f">de.petanqueturniermanager.sidebar.BaseSidebarPanel.neuesPanel</a></div><div class="ttdeci">abstract BaseSidebarContent neuesPanel(WorkingSpreadsheet workingSpreadsheet, XWindow parentWindow, XSidebar xSidebar)</div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_a78ea5d305f8137d316288b6406639af1"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a78ea5d305f8137d316288b6406639af1">de.petanqueturniermanager.sidebar.BaseSidebarPanel.getRealInterface</a></div><div class="ttdeci">final Object getRealInterface()</div><div class="ttdef"><b>Definition</b> <a href="#l00093">BaseSidebarPanel.java:93</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_a9d5ceb8f39254fd4a85c34b8e3430904"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#a9d5ceb8f39254fd4a85c34b8e3430904">de.petanqueturniermanager.sidebar.BaseSidebarPanel.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00042">BaseSidebarPanel.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_aa80ea1ce2503c256f83178d99aa2b64d"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aa80ea1ce2503c256f83178d99aa2b64d">de.petanqueturniermanager.sidebar.BaseSidebarPanel.getFrame</a></div><div class="ttdeci">final XFrame getFrame()</div><div class="ttdef"><b>Definition</b> <a href="#l00088">BaseSidebarPanel.java:88</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_abc36618deb4a865e6c456d7d68e7f9d1"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#abc36618deb4a865e6c456d7d68e7f9d1">de.petanqueturniermanager.sidebar.BaseSidebarPanel.onViewCreated</a></div><div class="ttdeci">void onViewCreated(Object source)</div><div class="ttdoc">Schließt die verzögerte Initialisierung ab: leitet onViewCreated an den Content weiter und trägt sich...</div><div class="ttdef"><b>Definition</b> <a href="#l00065">BaseSidebarPanel.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_ad840032c416cdff541f70856a0e068c7"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#ad840032c416cdff541f70856a0e068c7">de.petanqueturniermanager.sidebar.BaseSidebarPanel.getResourceURL</a></div><div class="ttdeci">final String getResourceURL()</div><div class="ttdef"><b>Definition</b> <a href="#l00098">BaseSidebarPanel.java:98</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_aed800ed953f79d21816473705ee47ce9"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#aed800ed953f79d21816473705ee47ce9">de.petanqueturniermanager.sidebar.BaseSidebarPanel.BaseSidebarPanel</a></div><div class="ttdeci">BaseSidebarPanel(WorkingSpreadsheet workingSpreadsheet, XWindow parentWindow, String resourceUrl, XSidebar xSidebar)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">BaseSidebarPanel.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_af4d2a309863a9f1bb651f18975d727bb"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af4d2a309863a9f1bb651f18975d727bb">de.petanqueturniermanager.sidebar.BaseSidebarPanel.panel</a></div><div class="ttdeci">BaseSidebarContent panel</div><div class="ttdef"><b>Definition</b> <a href="#l00045">BaseSidebarPanel.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_af7219a4d2b88fdc00238ac40d1b6d3c0"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#af7219a4d2b88fdc00238ac40d1b6d3c0">de.petanqueturniermanager.sidebar.BaseSidebarPanel.dispose</a></div><div class="ttdeci">void dispose()</div><div class="ttdoc">Wenn LibreOffice das XUIElement disposes, auch den Content bereinigen.</div><div class="ttdef"><b>Definition</b> <a href="#l00077">BaseSidebarPanel.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel_html_afb8567d26f9160d827289b1e273e8084"><div class="ttname"><a href="../../d8/da1/classde_1_1petanqueturniermanager_1_1sidebar_1_1_base_sidebar_panel.html#afb8567d26f9160d827289b1e273e8084">de.petanqueturniermanager.sidebar.BaseSidebarPanel.getType</a></div><div class="ttdeci">final short getType()</div><div class="ttdef"><b>Definition</b> <a href="#l00103">BaseSidebarPanel.java:103</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html">de.petanqueturniermanager.sidebar.SidebarPanelDelegator</a></div><div class="ttdoc">Delegiert globale LO-Events an aktive Sidebar-Panels.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d01/_sidebar_panel_delegator_8java_source.html#l00022">SidebarPanelDelegator.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a0f0597f484aea313e1dd44be40d63249"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a0f0597f484aea313e1dd44be40d63249">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.entfernen</a></div><div class="ttdeci">void entfernen(IGlobalEventListener panel)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d01/_sidebar_panel_delegator_8java_source.html#l00041">SidebarPanelDelegator.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a7cf331511dfa9aba13041f9fffe677aa"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7cf331511dfa9aba13041f9fffe677aa">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.registrieren</a></div><div class="ttdeci">void registrieren(IGlobalEventListener panel)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d01/_sidebar_panel_delegator_8java_source.html#l00036">SidebarPanelDelegator.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a88f5dd1bc1e59ac7dd73a191a870d3c7"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a88f5dd1bc1e59ac7dd73a191a870d3c7">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.get</a></div><div class="ttdeci">static SidebarPanelDelegator get()</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d01/_sidebar_panel_delegator_8java_source.html#l00032">SidebarPanelDelegator.java:32</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">de.petanqueturniermanager.comp.adapter.IGlobalEventListener</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00010">IGlobalEventListener.java:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_a830c9564d52213ae7b278a6a086a685.html">sidebar</a></li><li class="navelem"><a href="../../d9/dfd/_base_sidebar_panel_8java.html">BaseSidebarPanel.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

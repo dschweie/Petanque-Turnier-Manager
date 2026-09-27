@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/konfigdialog/properties/FarbenDialog.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d3f/_farben_dialog_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FarbenDialog.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d3f/_farben_dialog_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 08.05.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.konfigdialog.properties;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.function.Predicate;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.stream.Collectors;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.awt.Rectangle;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.konfiguration.KonfigurationSingleton;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.konfigdialog.ConfigProperty;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.konfigdialog.ConfigPropertyType;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.sidebar.GuiFactory;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.sidebar.GuiFactoryCreateParam;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> de.petanqueturniermanager.konfigdialog.properties.element.AddConfigElementsToWindow;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> de.petanqueturniermanager.sidebar.layout.ControlLayout;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html">   28</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ac1b24aab36af9178ae1fda94f690a59a">FarbenDialog</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#a56695423ccab1bdc28e505a0e5c5bb4e">BasePropertiesDialog</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a58da968d426d649bccd84317a4ee2554">   30</a></span>    <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a58da968d426d649bccd84317a4ee2554">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ac1b24aab36af9178ae1fda94f690a59a">FarbenDialog</a>.class);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ac1b24aab36af9178ae1fda94f690a59a">   32</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ac1b24aab36af9178ae1fda94f690a59a">FarbenDialog</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#a02929660a4027bdaa12890758c3ce4a7">currentSpreadsheet</a>) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        super(<a class="code hl_variable" href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#a02929660a4027bdaa12890758c3ce4a7">currentSpreadsheet</a>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    @Override</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a7abe351e74421958b82b41c34073a254">   37</a></span>    <span class="keyword">protected</span> Predicate&lt;ConfigProperty&lt;?&gt;&gt; <a class="code hl_function" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a7abe351e74421958b82b41c34073a254">getKonfigFieldFilter</a>() {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> konfigprop -&gt; konfigprop.getType() == <a class="code hl_variable" href="../../d7/df4/enumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type.html#a9529bedfa2022899c86a0b0913402d55">ConfigPropertyType.COLOR</a> &amp;&amp; !konfigprop.isTabFarbe();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    @Override</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ab5a26d41614dfb9d7066be846d0e3062">   42</a></span>    <span class="keyword">protected</span> String <a class="code hl_function" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ab5a26d41614dfb9d7066be846d0e3062">getTitle</a>() {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;dialog.title.farben&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    @Override</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a43570c018515082e961098beb2eec218">   47</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a43570c018515082e961098beb2eec218">erstelleNachHauptFelder</a>(<a class="code hl_class" href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html">GuiFactoryCreateParam</a> param,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_class" href="../../d8/d55/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window.html">AddConfigElementsToWindow</a> addConfigElementsToWindow) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        List&lt;ConfigProperty&lt;?&gt;&gt; konfigProperties = <a class="code hl_class" href="../../d4/dd2/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton.html">KonfigurationSingleton</a>.<a class="code hl_function" href="../../d4/dd2/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton.html#af31313f41984dbdec86d192b29f353b6">getKonfigProperties</a>(<a class="code hl_variable" href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#a02929660a4027bdaa12890758c3ce4a7">currentSpreadsheet</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (konfigProperties == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        var tabFarbProps = konfigProperties.stream()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                .filter(p -&gt; p.getType() == <a class="code hl_class" href="../../d7/df4/enumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type.html">ConfigPropertyType</a>.<a class="code hl_variable" href="../../d7/df4/enumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type.html#a9529bedfa2022899c86a0b0913402d55">COLOR</a> &amp;&amp; p.isTabFarbe())</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                .collect(Collectors.toList());</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (tabFarbProps.isEmpty()) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        var trennlinie = <a class="code hl_class" href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html">GuiFactory</a>.<a class="code hl_function" href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html#a1a13499b642774237a8f7aba3d564842">createHLine</a>(param, <span class="keyword">new</span> Rectangle(0, 0, 190, 4), <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_variable" href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#ab6933bfe0275aa7e9b2173cddd8fd723">layout</a>.<a class="code hl_function" href="../../dd/dc6/interfacede_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_layout.html#ab80e3ddfdcbdace0537a092f83758369">addLayout</a>(<span class="keyword">new</span> <a class="code hl_function" href="../../d3/de9/classde_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_control_layout.html#a4fffdb167fc163ca3b4ab95719ac3ede">ControlLayout</a>(trennlinie), 1);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        tabFarbProps.forEach(addConfigElementsToWindow::addPropToPanel);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton_html"><div class="ttname"><a href="../../d4/dd2/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton.html">de.petanqueturniermanager.basesheet.konfiguration.KonfigurationSingleton</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d10/_konfiguration_singleton_8java_source.html#l00030">KonfigurationSingleton.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton_html_af31313f41984dbdec86d192b29f353b6"><div class="ttname"><a href="../../d4/dd2/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton.html#af31313f41984dbdec86d192b29f353b6">de.petanqueturniermanager.basesheet.konfiguration.KonfigurationSingleton.getKonfigProperties</a></div><div class="ttdeci">static List&lt; ConfigProperty&lt;?&gt; &gt; getKonfigProperties(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d10/_konfiguration_singleton_8java_source.html#l00039">KonfigurationSingleton.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">de.petanqueturniermanager.helper.i18n.I18n</a></div><div class="ttdoc">Lokalisierungs-Helfer.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00029">I18n.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html_a09756390c5ee255a5223ddad55a3910d"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">de.petanqueturniermanager.helper.i18n.I18n.get</a></div><div class="ttdeci">static String get(String key)</div><div class="ttdoc">Gibt den lokalisierten Text für den angegebenen Schlüssel zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00083">I18n.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog_html_a02929660a4027bdaa12890758c3ce4a7"><div class="ttname"><a href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#a02929660a4027bdaa12890758c3ce4a7">de.petanqueturniermanager.konfigdialog.properties.BasePropertiesDialog.currentSpreadsheet</a></div><div class="ttdeci">WorkingSpreadsheet currentSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d03/_base_properties_dialog_8java_source.html#l00054">BasePropertiesDialog.java:54</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog_html_a56695423ccab1bdc28e505a0e5c5bb4e"><div class="ttname"><a href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#a56695423ccab1bdc28e505a0e5c5bb4e">de.petanqueturniermanager.konfigdialog.properties.BasePropertiesDialog.BasePropertiesDialog</a></div><div class="ttdeci">BasePropertiesDialog(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d03/_base_properties_dialog_8java_source.html#l00057">BasePropertiesDialog.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog_html_ab6933bfe0275aa7e9b2173cddd8fd723"><div class="ttname"><a href="../../de/d97/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_base_properties_dialog.html#ab6933bfe0275aa7e9b2173cddd8fd723">de.petanqueturniermanager.konfigdialog.properties.BasePropertiesDialog.layout</a></div><div class="ttdeci">Layout layout</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d03/_base_properties_dialog_8java_source.html#l00055">BasePropertiesDialog.java:55</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog_html_a43570c018515082e961098beb2eec218"><div class="ttname"><a href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a43570c018515082e961098beb2eec218">de.petanqueturniermanager.konfigdialog.properties.FarbenDialog.erstelleNachHauptFelder</a></div><div class="ttdeci">void erstelleNachHauptFelder(GuiFactoryCreateParam param, AddConfigElementsToWindow addConfigElementsToWindow)</div><div class="ttdoc">Erweiterungspunkt: wird nach den Haupt-Feldern aufgerufen.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">FarbenDialog.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog_html_a58da968d426d649bccd84317a4ee2554"><div class="ttname"><a href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a58da968d426d649bccd84317a4ee2554">de.petanqueturniermanager.konfigdialog.properties.FarbenDialog.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00030">FarbenDialog.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog_html_a7abe351e74421958b82b41c34073a254"><div class="ttname"><a href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#a7abe351e74421958b82b41c34073a254">de.petanqueturniermanager.konfigdialog.properties.FarbenDialog.getKonfigFieldFilter</a></div><div class="ttdeci">Predicate&lt; ConfigProperty&lt;?&gt; &gt; getKonfigFieldFilter()</div><div class="ttdef"><b>Definition</b> <a href="#l00037">FarbenDialog.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog_html_ab5a26d41614dfb9d7066be846d0e3062"><div class="ttname"><a href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ab5a26d41614dfb9d7066be846d0e3062">de.petanqueturniermanager.konfigdialog.properties.FarbenDialog.getTitle</a></div><div class="ttdeci">String getTitle()</div><div class="ttdef"><b>Definition</b> <a href="#l00042">FarbenDialog.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog_html_ac1b24aab36af9178ae1fda94f690a59a"><div class="ttname"><a href="../../d6/d18/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1_farben_dialog.html#ac1b24aab36af9178ae1fda94f690a59a">de.petanqueturniermanager.konfigdialog.properties.FarbenDialog.FarbenDialog</a></div><div class="ttdeci">FarbenDialog(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">FarbenDialog.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window_html"><div class="ttname"><a href="../../d8/d55/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window.html">de.petanqueturniermanager.konfigdialog.properties.element.AddConfigElementsToWindow</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d9c/_add_config_elements_to_window_8java_source.html#l00019">AddConfigElementsToWindow.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param_html"><div class="ttname"><a href="../../d0/d42/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_create_param.html">de.petanqueturniermanager.sidebar.GuiFactoryCreateParam</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/de5/_gui_factory_create_param_8java_source.html#l00017">GuiFactoryCreateParam.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_html"><div class="ttname"><a href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html">de.petanqueturniermanager.sidebar.GuiFactory</a></div><div class="ttdoc">Die Factory enthält Hilfsfunktionen zum einfacheren Erzeugen von UNO-Steuerelementen.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_gui_factory_8java_source.html#l00044">GuiFactory.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory_html_a1a13499b642774237a8f7aba3d564842"><div class="ttname"><a href="../../d8/d48/classde_1_1petanqueturniermanager_1_1sidebar_1_1_gui_factory.html#a1a13499b642774237a8f7aba3d564842">de.petanqueturniermanager.sidebar.GuiFactory.createHLine</a></div><div class="ttdeci">static XControl createHLine(GuiFactoryCreateParam guiFactoryCreateParam, Rectangle size, SortedMap&lt; String, Object &gt; props)</div><div class="ttdef"><b>Definition</b> <a href="../../da/dd6/_gui_factory_8java_source.html#l00273">GuiFactory.java:273</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_control_layout_html_a4fffdb167fc163ca3b4ab95719ac3ede"><div class="ttname"><a href="../../d3/de9/classde_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_control_layout.html#a4fffdb167fc163ca3b4ab95719ac3ede">de.petanqueturniermanager.sidebar.layout.ControlLayout.ControlLayout</a></div><div class="ttdeci">ControlLayout(XWindow control, int fixWidth)</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d3e/_control_layout_8java_source.html#l00023">ControlLayout.java:23</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type_html"><div class="ttname"><a href="../../d7/df4/enumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type.html">de.petanqueturniermanager.konfigdialog.ConfigPropertyType</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d4d/_config_property_type_8java_source.html#l00007">ConfigPropertyType.java:7</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type_html_a9529bedfa2022899c86a0b0913402d55"><div class="ttname"><a href="../../d7/df4/enumde_1_1petanqueturniermanager_1_1konfigdialog_1_1_config_property_type.html#a9529bedfa2022899c86a0b0913402d55">de.petanqueturniermanager.konfigdialog.ConfigPropertyType.COLOR</a></div><div class="ttdeci">COLOR</div><div class="ttdef"><b>Definition</b> <a href="../../db/d4d/_config_property_type_8java_source.html#l00008">ConfigPropertyType.java:8</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_layout_html_ab80e3ddfdcbdace0537a092f83758369"><div class="ttname"><a href="../../dd/dc6/interfacede_1_1petanqueturniermanager_1_1sidebar_1_1layout_1_1_layout.html#ab80e3ddfdcbdace0537a092f83758369">de.petanqueturniermanager.sidebar.layout.Layout.addLayout</a></div><div class="ttdeci">void addLayout(Layout layout, int weight)</div><div class="ttdoc">Fügt den Layout ein weiteres Sub-Layout hinzu.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_5dc56744c2def96656232e2a15016d12.html">konfigdialog</a></li><li class="navelem"><a href="../../dir_e99037cf48de7693619c633b09524b85.html">properties</a></li><li class="navelem"><a href="../../d4/d3f/_farben_dialog_8java.html">FarbenDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

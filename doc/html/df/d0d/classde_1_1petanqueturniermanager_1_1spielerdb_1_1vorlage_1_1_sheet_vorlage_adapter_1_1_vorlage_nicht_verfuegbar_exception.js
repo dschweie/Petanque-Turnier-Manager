@@ -1,0 +1,5 @@
+var classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter_1_1_vorlage_nicht_verfuegbar_exception =
+[
+    [ "VorlageNichtVerfuegbarException", "df/d0d/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter_1_1_vorlage_nicht_verfuegbar_exception.html#abd687dd84cc159a394620936d6f12b57", null ],
+    [ "serialVersionUID", "df/d0d/classde_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage_1_1_sheet_vorlage_adapter_1_1_vorlage_nicht_verfuegbar_exception.html#aea3f6aa012a82098c42e9aa835c441f5", null ]
+];

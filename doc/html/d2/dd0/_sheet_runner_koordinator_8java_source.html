@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/SheetRunnerKoordinator.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d2/dd0/_sheet_runner_koordinator_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SheetRunnerKoordinator.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/dd0/_sheet_runner_koordinator_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 14.03.2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.Collections;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.concurrent.atomic.AtomicBoolean;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html">SheetRunnerKoordinator</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#af362082856fcb6df5e24fa493ef14323">   28</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#af362082856fcb6df5e24fa493ef14323">logger</a> = LogManager.getLogger(<a class="code hl_class" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html">SheetRunnerKoordinator</a>.class);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">   30</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> AtomicBoolean <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">laeuft</a> = <span class="keyword">new</span> AtomicBoolean();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ab341203d0529368d74415a27082bd8ba">   31</a></span>    <span class="keyword">private</span> <span class="keyword">volatile</span> <a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ab341203d0529368d74415a27082bd8ba">aktuellerRunner</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">   32</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;Runnable&gt; <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">zustandsListener</a> =</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            Collections.synchronizedList(<span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>());</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a59077991e3d8c28505d1f842df64ee56">   42</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> AtomicBoolean <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a59077991e3d8c28505d1f842df64ee56">selectionChangeUnterdrücken</a> = <span class="keyword">new</span> AtomicBoolean(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#addc30448dee1808fb476b6b684dd2919">   45</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#addc30448dee1808fb476b6b684dd2919">isRunning</a>() {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">laeuft</a>.get();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ad3c2d691361dd56526a4f06d05a5b355">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ad3c2d691361dd56526a4f06d05a5b355">abbrechen</a>() {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> snapshot = <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ab341203d0529368d74415a27082bd8ba">aktuellerRunner</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (snapshot != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            snapshot.interrupt();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a4fdecf62513f70cc48c964c4e8684b59">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a4fdecf62513f70cc48c964c4e8684b59">abbrechenPruefen</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> snapshot = <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ab341203d0529368d74415a27082bd8ba">aktuellerRunner</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (snapshot != <span class="keyword">null</span> &amp;&amp; snapshot.isInterrupted()) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html#a617f28fab400157a3f87a458682968cf">GenerateException</a>(<a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a>.<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a79cff5f53f329bdde298c4d663bb6c8f">VERARBEITUNG_ABGEBROCHEN</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#aa2b47318ab00357d83ba57a878523c0e">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#aa2b47318ab00357d83ba57a878523c0e">addZustandsListener</a>(Runnable listener) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">zustandsListener</a>.add(listener);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#aaaac066a60754dbc03cfde1435a9f32f">   77</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#aaaac066a60754dbc03cfde1435a9f32f">removeZustandsListener</a>(Runnable listener) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">zustandsListener</a>.remove(listener);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a15d6fe2b00ba7baad8169808db73745a">   87</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a15d6fe2b00ba7baad8169808db73745a">getAndSetLaeuft</a>(<span class="keywordtype">boolean</span> neuerWert) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">laeuft</a>.getAndSet(neuerWert);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a6f17d296d0babd95c419ccc0f8909575">   92</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a6f17d296d0babd95c419ccc0f8909575">setRunner</a>(<a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a> runner) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        this.aktuellerRunner = runner;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a0cd7cd0fc3d070b061568e5f58b3e572">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a0cd7cd0fc3d070b061568e5f58b3e572">setLaeuft</a>(<span class="keywordtype">boolean</span> wert) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">laeuft</a>.set(wert);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a3d6beac3d54c5d2c0789548c056e3be0">  106</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a3d6beac3d54c5d2c0789548c056e3be0">unterdrückeNaechstesSelectionChange</a>() {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a59077991e3d8c28505d1f842df64ee56">selectionChangeUnterdrücken</a>.set(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a0b345fca82855303e00b2c992be7f3c4">  115</a></span>    <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a0b345fca82855303e00b2c992be7f3c4">consumeSelectionChangeSuppression</a>() {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a59077991e3d8c28505d1f842df64ee56">selectionChangeUnterdrücken</a>.getAndSet(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a8ff5e83945f892a77f0aa211850b75aa">  120</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a8ff5e83945f892a77f0aa211850b75aa">benachrichtigeListener</a>() {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">for</span> (Runnable r : <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(<a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">zustandsListener</a>)) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                r.run();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> e) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#af362082856fcb6df5e24fa493ef14323">logger</a>.warn(<span class="stringliteral">&quot;ZustandsListener-Fehler: {}&quot;</span>, e.getMessage());</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a9759a7c3ac7deaf71638a80b52b07f30">  131</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a9759a7c3ac7deaf71638a80b52b07f30">zuruecksetzen</a>() {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">laeuft</a>.set(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ab341203d0529368d74415a27082bd8ba">aktuellerRunner</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">zustandsListener</a>.clear();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_variable" href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a59077991e3d8c28505d1f842df64ee56">selectionChangeUnterdrücken</a>.set(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">de.petanqueturniermanager.SheetRunner</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00042">SheetRunner.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a79cff5f53f329bdde298c4d663bb6c8f"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a79cff5f53f329bdde298c4d663bb6c8f">de.petanqueturniermanager.SheetRunner.VERARBEITUNG_ABGEBROCHEN</a></div><div class="ttdeci">static final String VERARBEITUNG_ABGEBROCHEN</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00046">SheetRunner.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html">de.petanqueturniermanager.SheetRunnerKoordinator</a></div><div class="ttdoc">Verwaltet den Laufzustand von SheetRunner-Threads.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">SheetRunnerKoordinator.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a0b345fca82855303e00b2c992be7f3c4"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a0b345fca82855303e00b2c992be7f3c4">de.petanqueturniermanager.SheetRunnerKoordinator.consumeSelectionChangeSuppression</a></div><div class="ttdeci">boolean consumeSelectionChangeSuppression()</div><div class="ttdoc">Liest und löscht das Unterdrückungs-Flag atomar.</div><div class="ttdef"><b>Definition</b> <a href="#l00115">SheetRunnerKoordinator.java:115</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a0cd7cd0fc3d070b061568e5f58b3e572"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a0cd7cd0fc3d070b061568e5f58b3e572">de.petanqueturniermanager.SheetRunnerKoordinator.setLaeuft</a></div><div class="ttdeci">void setLaeuft(boolean wert)</div><div class="ttdoc">Setzt das Lauf-Flag direkt.</div><div class="ttdef"><b>Definition</b> <a href="#l00097">SheetRunnerKoordinator.java:97</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a15d6fe2b00ba7baad8169808db73745a"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a15d6fe2b00ba7baad8169808db73745a">de.petanqueturniermanager.SheetRunnerKoordinator.getAndSetLaeuft</a></div><div class="ttdeci">boolean getAndSetLaeuft(boolean neuerWert)</div><div class="ttdoc">Atomares getAndSet auf dem Lauf-Flag.</div><div class="ttdef"><b>Definition</b> <a href="#l00087">SheetRunnerKoordinator.java:87</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a3d6beac3d54c5d2c0789548c056e3be0"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a3d6beac3d54c5d2c0789548c056e3be0">de.petanqueturniermanager.SheetRunnerKoordinator.unterdrückeNaechstesSelectionChange</a></div><div class="ttdeci">void unterdrückeNaechstesSelectionChange()</div><div class="ttdoc">Signalisiert, dass das nächste selectionChanged-Ereignis, das auf die Rangliste zeigt,...</div><div class="ttdef"><b>Definition</b> <a href="#l00106">SheetRunnerKoordinator.java:106</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a4fdecf62513f70cc48c964c4e8684b59"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a4fdecf62513f70cc48c964c4e8684b59">de.petanqueturniermanager.SheetRunnerKoordinator.abbrechenPruefen</a></div><div class="ttdeci">void abbrechenPruefen()</div><div class="ttdoc">Wirft eine GenerateException, wenn der aktuelle Runner unterbrochen wurde.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">SheetRunnerKoordinator.java:64</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a59077991e3d8c28505d1f842df64ee56"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a59077991e3d8c28505d1f842df64ee56">de.petanqueturniermanager.SheetRunnerKoordinator.selectionChangeUnterdrücken</a></div><div class="ttdeci">final AtomicBoolean selectionChangeUnterdrücken</div><div class="ttdoc">Wird gesetzt wenn der Runner setActiveSheet() aufruft, damit der de.petanqueturniermanager....</div><div class="ttdef"><b>Definition</b> <a href="#l00042">SheetRunnerKoordinator.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a5b7b002dcb57a03ea17f97d1c77d4f91"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a5b7b002dcb57a03ea17f97d1c77d4f91">de.petanqueturniermanager.SheetRunnerKoordinator.zustandsListener</a></div><div class="ttdeci">final List&lt; Runnable &gt; zustandsListener</div><div class="ttdef"><b>Definition</b> <a href="#l00032">SheetRunnerKoordinator.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a6f17d296d0babd95c419ccc0f8909575"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a6f17d296d0babd95c419ccc0f8909575">de.petanqueturniermanager.SheetRunnerKoordinator.setRunner</a></div><div class="ttdeci">void setRunner(SheetRunner runner)</div><div class="ttdoc">Setzt den aktuell aktiven Runner (oder null nach Abschluss).</div><div class="ttdef"><b>Definition</b> <a href="#l00092">SheetRunnerKoordinator.java:92</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a8ff5e83945f892a77f0aa211850b75aa"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a8ff5e83945f892a77f0aa211850b75aa">de.petanqueturniermanager.SheetRunnerKoordinator.benachrichtigeListener</a></div><div class="ttdeci">void benachrichtigeListener()</div><div class="ttdoc">Benachrichtigt alle registrierten Zustandslistener.</div><div class="ttdef"><b>Definition</b> <a href="#l00120">SheetRunnerKoordinator.java:120</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_a9759a7c3ac7deaf71638a80b52b07f30"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#a9759a7c3ac7deaf71638a80b52b07f30">de.petanqueturniermanager.SheetRunnerKoordinator.zuruecksetzen</a></div><div class="ttdeci">void zuruecksetzen()</div><div class="ttdoc">Setzt den gesamten Zustand zurück – ausschließlich für Tests.</div><div class="ttdef"><b>Definition</b> <a href="#l00131">SheetRunnerKoordinator.java:131</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_aa2b47318ab00357d83ba57a878523c0e"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#aa2b47318ab00357d83ba57a878523c0e">de.petanqueturniermanager.SheetRunnerKoordinator.addZustandsListener</a></div><div class="ttdeci">void addZustandsListener(Runnable listener)</div><div class="ttdoc">Registriert einen Listener, der bei Zustandsänderungen benachrichtigt wird.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">SheetRunnerKoordinator.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_aaaac066a60754dbc03cfde1435a9f32f"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#aaaac066a60754dbc03cfde1435a9f32f">de.petanqueturniermanager.SheetRunnerKoordinator.removeZustandsListener</a></div><div class="ttdeci">void removeZustandsListener(Runnable listener)</div><div class="ttdoc">Entfernt einen zuvor registrierten Zustandslistener.</div><div class="ttdef"><b>Definition</b> <a href="#l00077">SheetRunnerKoordinator.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_ab341203d0529368d74415a27082bd8ba"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ab341203d0529368d74415a27082bd8ba">de.petanqueturniermanager.SheetRunnerKoordinator.aktuellerRunner</a></div><div class="ttdeci">volatile SheetRunner aktuellerRunner</div><div class="ttdef"><b>Definition</b> <a href="#l00031">SheetRunnerKoordinator.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_ad3c2d691361dd56526a4f06d05a5b355"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ad3c2d691361dd56526a4f06d05a5b355">de.petanqueturniermanager.SheetRunnerKoordinator.abbrechen</a></div><div class="ttdeci">void abbrechen()</div><div class="ttdoc">Unterbricht den aktuell laufenden SheetRunner, falls vorhanden.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">SheetRunnerKoordinator.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_addc30448dee1808fb476b6b684dd2919"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#addc30448dee1808fb476b6b684dd2919">de.petanqueturniermanager.SheetRunnerKoordinator.isRunning</a></div><div class="ttdeci">boolean isRunning()</div><div class="ttdoc">Gibt zurück, ob aktuell ein SheetRunner aktiv ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">SheetRunnerKoordinator.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_ae9fe10841e5d6f51301c6cc8e8b25570"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#ae9fe10841e5d6f51301c6cc8e8b25570">de.petanqueturniermanager.SheetRunnerKoordinator.laeuft</a></div><div class="ttdeci">final AtomicBoolean laeuft</div><div class="ttdef"><b>Definition</b> <a href="#l00030">SheetRunnerKoordinator.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator_html_af362082856fcb6df5e24fa493ef14323"><div class="ttname"><a href="../../d5/d73/classde_1_1petanqueturniermanager_1_1_sheet_runner_koordinator.html#af362082856fcb6df5e24fa493ef14323">de.petanqueturniermanager.SheetRunnerKoordinator.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SheetRunnerKoordinator.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html_a617f28fab400157a3f87a458682968cf"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html#a617f28fab400157a3f87a458682968cf">de.petanqueturniermanager.exception.GenerateException.GenerateException</a></div><div class="ttdeci">GenerateException(String msg)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00010">GenerateException.java:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../d2/dd0/_sheet_runner_koordinator_8java.html">SheetRunnerKoordinator.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color =
+[
+    [ "BackgrnColorConfigElement", "dc/daa/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color_1_1_backgrn_color_config_element.html", "dc/daa/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color_1_1_backgrn_color_config_element" ]
+];

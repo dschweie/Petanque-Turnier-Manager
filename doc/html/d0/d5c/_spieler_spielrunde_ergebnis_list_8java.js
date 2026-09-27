@@ -1,0 +1,4 @@
+var _spieler_spielrunde_ergebnis_list_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.spielrunde.SpielerSpielrundeErgebnisList", "d1/d3f/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis_list.html", "d1/d3f/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spieler_spielrunde_ergebnis_list" ]
+];

@@ -1,0 +1,4 @@
+var _maastrichter_checkin_liste_sheet_update_8java =
+[
+    [ "de.petanqueturniermanager.maastrichter.meldeliste.MaastrichterCheckinListeSheetUpdate", "d2/d01/classde_1_1petanqueturniermanager_1_1maastrichter_1_1meldeliste_1_1_maastrichter_checkin_liste_sheet_update.html", "d2/d01/classde_1_1petanqueturniermanager_1_1maastrichter_1_1meldeliste_1_1_maastrichter_checkin_liste_sheet_update" ]
+];

@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1schweizer_1_1blattschutz =
+[
+    [ "SchweizerBlattschutzKonfiguration", "de/dc3/classde_1_1petanqueturniermanager_1_1schweizer_1_1blattschutz_1_1_schweizer_blattschutz_konfiguration.html", "de/dc3/classde_1_1petanqueturniermanager_1_1schweizer_1_1blattschutz_1_1_schweizer_blattschutz_konfiguration" ]
+];

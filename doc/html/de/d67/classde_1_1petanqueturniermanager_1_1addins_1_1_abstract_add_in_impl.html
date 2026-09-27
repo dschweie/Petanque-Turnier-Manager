@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.addins.AbstractAddInImpl Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html','../../','d5/d03/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.addins.AbstractAddInImpl Klassenreferenz<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Erstellung 23.05.2022 / Michael Massee <a href="http://biochemfusion.com/doc/Calc_addin_howto.html">http://biochemfusion.com/doc/Calc_addin_howto.html</a><br  />
+ <a href="https://wiki.openoffice.org/wiki/Calc/Add-In/Project_Type#Generated_Code">https://wiki.openoffice.org/wiki/Calc/Add-In/Project_Type#Generated_Code</a><br  />
+ <a href="https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Spreadsheet_Add-Ins">https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Spreadsheet_Add-Ins</a><br  />
+ <a href="https://github.com/hernad/libreoffice-sdk-examples/blob/4b767eac97f79e3bdb5c16e461891d89ab991470/examples/DevelopersGuide/Spreadsheet/ExampleAddIn.java">https://github.com/hernad/libreoffice-sdk-examples/blob/4b767eac97f79e3bdb5c16e461891d89ab991470/examples/DevelopersGuide/Spreadsheet/ExampleAddIn.java</a>.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für de.petanqueturniermanager.addins.AbstractAddInImpl:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/da6/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl__inherit__graph.png" border="0" usemap="#ade_8petanqueturniermanager_8addins_8_abstract_add_in_impl_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="ade_8petanqueturniermanager_8addins_8_abstract_add_in_impl_inherit__map" id="ade_8petanqueturniermanager_8addins_8_abstract_add_in_impl_inherit__map">
+<area shape="rect" title="Erstellung 23.05.2022 / Michael Massee http://biochemfusion.com/doc/Calc_addin_howto...." alt="" coords="210,89,434,132"/>
+<area shape="rect" href="../../dd/d0b/classde_1_1petanqueturniermanager_1_1addins_1_1_global_impl.html" title=" " alt="" coords="482,89,706,132"/>
+<area shape="poly" title=" " alt="" coords="449,108,484,110,479,111,450,113"/>
+<area shape="rect" href="../../d5/da7/class_weak_base.html" title=" " alt="" coords="41,5,126,32"/>
+<area shape="poly" title=" " alt="" coords="140,34,163,42,274,88,269,90,161,46,141,39"/>
+<area shape="rect" title=" " alt="" coords="15,56,152,99"/>
+<area shape="poly" title=" " alt="" coords="167,86,212,94,207,96,168,92"/>
+<area shape="rect" href="../../de/d53/classcom_1_1sun_1_1star_1_1sheet_1_1_x_add_in.html" title=" " alt="" coords="11,123,156,165"/>
+<area shape="poly" title=" " alt="" coords="171,129,211,125,207,127,173,134"/>
+<area shape="rect" href="../../d1/df0/classcom_1_1sun_1_1star_1_1sheet_1_1_x_compatibility_names.html" title=" " alt="" coords="5,189,162,232"/>
+<area shape="poly" title=" " alt="" coords="149,180,266,133,272,132,151,185"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:addf1e6a093cf96f9218ea2a9145a6f4d" id="r_addf1e6a093cf96f9218ea2a9145a6f4d"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#addf1e6a093cf96f9218ea2a9145a6f4d">getArgumentDescription</a> (String aProgrammaticFunctionName, int nArgument)</td></tr>
+<tr class="memitem:a06d8ae4144a2e885c37231cd1c0dd3be" id="r_a06d8ae4144a2e885c37231cd1c0dd3be"><td class="memItemLeft">com.sun.star.sheet.LocalizedName[]&#160;</td><td class="memItemRight"><a class="el" href="#a06d8ae4144a2e885c37231cd1c0dd3be">getCompatibilityNames</a> (String aProgrammaticName)</td></tr>
+<tr class="memitem:af0ac904a5e8fbd762dca56920fd31143" id="r_af0ac904a5e8fbd762dca56920fd31143"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#af0ac904a5e8fbd762dca56920fd31143">getDisplayArgumentName</a> (String aProgrammaticFunctionName, int nArgument)</td></tr>
+<tr class="memitem:a1f24a6eea8376e9596bb8065a7aa1c5c" id="r_a1f24a6eea8376e9596bb8065a7aa1c5c"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a1f24a6eea8376e9596bb8065a7aa1c5c">getDisplayCategoryName</a> (String aProgrammaticFunctionName)</td></tr>
+<tr class="memitem:aec81ec0f8e3fec48c799719c17f9f474" id="r_aec81ec0f8e3fec48c799719c17f9f474"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aec81ec0f8e3fec48c799719c17f9f474">getDisplayFunctionName</a> (String aProgrammaticName)</td></tr>
+<tr class="memitem:afa8805293e837c6bcb5bdcd9cb9efb13" id="r_afa8805293e837c6bcb5bdcd9cb9efb13"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#afa8805293e837c6bcb5bdcd9cb9efb13">getFunctionDescription</a> (String aProgrammaticName)</td></tr>
+<tr class="memitem:a9ec62ffec74dbad1b3f1e16c38dc54a3" id="r_a9ec62ffec74dbad1b3f1e16c38dc54a3"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a9ec62ffec74dbad1b3f1e16c38dc54a3">getImplementationName</a> ()</td></tr>
+<tr class="memitem:a9fa14617c6ba219a89a5a788503226f0" id="r_a9fa14617c6ba219a89a5a788503226f0"><td class="memItemLeft">com.sun.star.lang.Locale&#160;</td><td class="memItemRight"><a class="el" href="#a9fa14617c6ba219a89a5a788503226f0">getLocale</a> ()</td></tr>
+<tr class="memitem:a1838d898164b0b7b5761381fded24d36" id="r_a1838d898164b0b7b5761381fded24d36"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a1838d898164b0b7b5761381fded24d36">getProgrammaticCategoryName</a> (String aProgrammaticFunctionName)</td></tr>
+<tr class="memitem:a4072f7aed3320544bdddd68d79716f5e" id="r_a4072f7aed3320544bdddd68d79716f5e"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a4072f7aed3320544bdddd68d79716f5e">getProgrammaticFuntionName</a> (String aDisplayName)</td></tr>
+<tr class="memitem:a82206dfc53b8e2b11bd2f0c74cd2cf64" id="r_a82206dfc53b8e2b11bd2f0c74cd2cf64"><td class="memItemLeft">String[]&#160;</td><td class="memItemRight"><a class="el" href="#a82206dfc53b8e2b11bd2f0c74cd2cf64">getSupportedServiceNames</a> ()</td></tr>
+<tr class="memitem:a4ac13e57f06cc0fe446bc46e3359a405" id="r_a4ac13e57f06cc0fe446bc46e3359a405"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ac13e57f06cc0fe446bc46e3359a405">setLocale</a> (com.sun.star.lang.Locale l)</td></tr>
+<tr class="memitem:a0af71a1014b4ba8c41dce12251730082" id="r_a0af71a1014b4ba8c41dce12251730082"><td class="memItemLeft">boolean&#160;</td><td class="memItemRight"><a class="el" href="#a0af71a1014b4ba8c41dce12251730082">supportsService</a> (String sService)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
+Paketfunktionen</h2></td></tr>
+<tr class="memitem:ae23e517f3bdbb08f2ddb44eee30e8758" id="r_ae23e517f3bdbb08f2ddb44eee30e8758"><td class="memItemLeft">abstract String&#160;</td><td class="memItemRight"><a class="el" href="#ae23e517f3bdbb08f2ddb44eee30e8758">getImplName</a> ()</td></tr>
+<tr class="memitem:af55d9dd8ae3c645f2975da1c81da896a" id="r_af55d9dd8ae3c645f2975da1c81da896a"><td class="memItemLeft">abstract String[]&#160;</td><td class="memItemRight"><a class="el" href="#af55d9dd8ae3c645f2975da1c81da896a">getServiceNames</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:ae62c4983bfc1180e19d5648a8fc3acac" id="r_ae62c4983bfc1180e19d5648a8fc3acac"><td class="memItemLeft">com.sun.star.lang.Locale&#160;</td><td class="memItemRight"><a class="el" href="#ae62c4983bfc1180e19d5648a8fc3acac">locale</a> = new com.sun.star.lang.Locale()</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock">
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00012">12</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="addf1e6a093cf96f9218ea2a9145a6f4d" name="addf1e6a093cf96f9218ea2a9145a6f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf1e6a093cf96f9218ea2a9145a6f4d">&#9670;&#160;</a></span>getArgumentDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getArgumentDescription </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticFunctionName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nArgument</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00055">55</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                                                          {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="comment">// Return empty - descriptions come from XCU file</span></div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a06d8ae4144a2e885c37231cd1c0dd3be" name="a06d8ae4144a2e885c37231cd1c0dd3be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d8ae4144a2e885c37231cd1c0dd3be">&#9670;&#160;</a></span>getCompatibilityNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.sun.star.sheet.LocalizedName[] de.petanqueturniermanager.addins.AbstractAddInImpl.getCompatibilityNames </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00096">96</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                                                                                              {</div>
+<div class="line"><span class="lineno">   97</span>        <span class="comment">// Return empty array - compatibility names come from XCU file</span></div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> com.sun.star.sheet.LocalizedName[0];</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af0ac904a5e8fbd762dca56920fd31143" name="af0ac904a5e8fbd762dca56920fd31143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ac904a5e8fbd762dca56920fd31143">&#9670;&#160;</a></span>getDisplayArgumentName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getDisplayArgumentName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticFunctionName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nArgument</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00049">49</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                                          {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="comment">// Return empty - parameter names come from XCU file</span></div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1f24a6eea8376e9596bb8065a7aa1c5c" name="a1f24a6eea8376e9596bb8065a7aa1c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f24a6eea8376e9596bb8065a7aa1c5c">&#9670;&#160;</a></span>getDisplayCategoryName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getDisplayCategoryName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticFunctionName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00067">67</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>                                                                           {</div>
+<div class="line"><span class="lineno">   68</span>        <span class="comment">// Return empty - categories come from XCU file</span></div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aec81ec0f8e3fec48c799719c17f9f474" name="aec81ec0f8e3fec48c799719c17f9f474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec81ec0f8e3fec48c799719c17f9f474">&#9670;&#160;</a></span>getDisplayFunctionName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getDisplayFunctionName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00038">38</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                   {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa8805293e837c6bcb5bdcd9cb9efb13" name="afa8805293e837c6bcb5bdcd9cb9efb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8805293e837c6bcb5bdcd9cb9efb13">&#9670;&#160;</a></span>getFunctionDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getFunctionDescription </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00043">43</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                   {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="comment">// Return empty - descriptions come from XCU file</span></div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9ec62ffec74dbad1b3f1e16c38dc54a3" name="a9ec62ffec74dbad1b3f1e16c38dc54a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec62ffec74dbad1b3f1e16c38dc54a3">&#9670;&#160;</a></span>getImplementationName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getImplementationName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00073">73</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                          {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> getImplName();</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae23e517f3bdbb08f2ddb44eee30e8758" name="ae23e517f3bdbb08f2ddb44eee30e8758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23e517f3bdbb08f2ddb44eee30e8758">&#9670;&#160;</a></span>getImplName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract String de.petanqueturniermanager.addins.AbstractAddInImpl.getImplName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="../../dd/d0b/classde_1_1petanqueturniermanager_1_1addins_1_1_global_impl.html#a59c3670f875c1baa0db5ff9bfc859563">de.petanqueturniermanager.addins.GlobalImpl</a>.</p>
+
+</div>
+</div>
+<a id="a9fa14617c6ba219a89a5a788503226f0" name="a9fa14617c6ba219a89a5a788503226f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa14617c6ba219a89a5a788503226f0">&#9670;&#160;</a></span>getLocale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.sun.star.lang.Locale de.petanqueturniermanager.addins.AbstractAddInImpl.getLocale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00025">25</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                {</div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">return</span> locale;</div>
+<div class="line"><span class="lineno">   27</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1838d898164b0b7b5761381fded24d36" name="a1838d898164b0b7b5761381fded24d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1838d898164b0b7b5761381fded24d36">&#9670;&#160;</a></span>getProgrammaticCategoryName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getProgrammaticCategoryName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aProgrammaticFunctionName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00061">61</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                                                {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="comment">// Return empty - categories come from XCU file</span></div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4072f7aed3320544bdddd68d79716f5e" name="a4072f7aed3320544bdddd68d79716f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4072f7aed3320544bdddd68d79716f5e">&#9670;&#160;</a></span>getProgrammaticFuntionName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.addins.AbstractAddInImpl.getProgrammaticFuntionName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>aDisplayName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00033">33</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                                  {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af55d9dd8ae3c645f2975da1c81da896a" name="af55d9dd8ae3c645f2975da1c81da896a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55d9dd8ae3c645f2975da1c81da896a">&#9670;&#160;</a></span>getServiceNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract String[] de.petanqueturniermanager.addins.AbstractAddInImpl.getServiceNames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel abstract">abstract</span><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="../../dd/d0b/classde_1_1petanqueturniermanager_1_1addins_1_1_global_impl.html#a15e5d377658581de47ad40b7381eaa4c">de.petanqueturniermanager.addins.GlobalImpl</a>.</p>
+
+</div>
+</div>
+<a id="a82206dfc53b8e2b11bd2f0c74cd2cf64" name="a82206dfc53b8e2b11bd2f0c74cd2cf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82206dfc53b8e2b11bd2f0c74cd2cf64">&#9670;&#160;</a></span>getSupportedServiceNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String[] de.petanqueturniermanager.addins.AbstractAddInImpl.getSupportedServiceNames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00090">90</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>                                               {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordflow">return</span> getServiceNames();</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4ac13e57f06cc0fe446bc46e3359a405" name="a4ac13e57f06cc0fe446bc46e3359a405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac13e57f06cc0fe446bc46e3359a405">&#9670;&#160;</a></span>setLocale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.addins.AbstractAddInImpl.setLocale </td>
+          <td>(</td>
+          <td class="paramtype">com.sun.star.lang.Locale</td>          <td class="paramname"><span class="paramname"><em>l</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00020">20</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                      {</div>
+<div class="line"><span class="lineno">   21</span>        locale = l;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0af71a1014b4ba8c41dce12251730082" name="a0af71a1014b4ba8c41dce12251730082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af71a1014b4ba8c41dce12251730082">&#9670;&#160;</a></span>supportsService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.addins.AbstractAddInImpl.supportsService </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>sService</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00080">80</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                    {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; getServiceNames().length; i++) {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (sService.equals(getServiceNames()[i])) {</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="ae62c4983bfc1180e19d5648a8fc3acac" name="ae62c4983bfc1180e19d5648a8fc3acac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62c4983bfc1180e19d5648a8fc3acac">&#9670;&#160;</a></span>locale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.sun.star.lang.Locale de.petanqueturniermanager.addins.AbstractAddInImpl.locale = new com.sun.star.lang.Locale()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html#l00016">16</a> der Datei <a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/addins/<a class="el" href="../../dd/da2/_abstract_add_in_impl_8java_source.html">AbstractAddInImpl.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../d8/d46/namespacede_1_1petanqueturniermanager_1_1addins.html">addins</a></li><li class="navelem"><a href="../../de/d67/classde_1_1petanqueturniermanager_1_1addins_1_1_abstract_add_in_impl.html">AbstractAddInImpl</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

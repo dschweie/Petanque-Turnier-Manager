@@ -1,0 +1,6 @@
+var _super_melee_paarungen_v2_8java =
+[
+    [ "de.petanqueturniermanager.algorithmen.supermelee.SuperMeleePaarungenV2.BacktrackingErgebnis", "d7/da9/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_paarungen_v2_1_1_backtracking_ergebnis.html", "d7/da9/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_paarungen_v2_1_1_backtracking_ergebnis" ],
+    [ "de.petanqueturniermanager.algorithmen.supermelee.SuperMeleePaarungenV2.RundenKandidat", "df/d4a/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_paarungen_v2_1_1_runden_kandidat.html", "df/d4a/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_paarungen_v2_1_1_runden_kandidat" ],
+    [ "de.petanqueturniermanager.algorithmen.supermelee.SuperMeleePaarungenV2", "d2/ddc/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_paarungen_v2.html", "d2/ddc/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_paarungen_v2" ]
+];

@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/kaskade/spielrunde/KaskadeRundenErgebnisLeser.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d77/_kaskade_runden_ergebnis_leser_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KaskadeRundenErgebnisLeser.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/d77/_kaskade_runden_ergebnis_leser_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.kaskade.spielrunde;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Collections;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.HashSet;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.Set;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.algorithmen.kaskaden.KaskadenFeldBelegung;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.algorithmen.kaskaden.KaskadenKoGruppenRunde;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.algorithmen.kaskaden.KaskadenKoRundenPlan;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.SheetNamen;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.RangePosition;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.RangeHelper;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.rangedata.RangeData;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html">   39</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#aa4d5283c548298ea11dc12f8c0465cf4">KaskadeRundenErgebnisLeser</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a568c151a924a2eea972c3ab92c832af9">   41</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a568c151a924a2eea972c3ab92c832af9">LOGGER</a> = LogManager.getLogger(<a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#aa4d5283c548298ea11dc12f8c0465cf4">KaskadeRundenErgebnisLeser</a>.class);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a042c0b1de67a53470e7b6f1b66d1e7d5">   47</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a042c0b1de67a53470e7b6f1b66d1e7d5">TEAM_A_SPALTE</a>     = <a class="code hl_class" href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html">KaskadeSpielrundeSheet</a>.<a class="code hl_variable" href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html#a1dfc53bff3ed3b7064401ce7d75b2d65">TEAM_A_SPALTE</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a28474bca372f46f77726bb0bd553b6c3">   48</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a28474bca372f46f77726bb0bd553b6c3">ERG_TEAM_B_SPALTE</a> = <a class="code hl_class" href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html">KaskadeSpielrundeSheet</a>.<a class="code hl_variable" href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html#a6c68eb132406190e5b306f988d321606">ERG_TEAM_B_SPALTE</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a234d8960f8d3dca11d56860ad1555cb0">   49</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a234d8960f8d3dca11d56860ad1555cb0">ERSTE_DATEN_ZEILE</a> = <a class="code hl_class" href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html">KaskadeSpielrundeSheet</a>.<a class="code hl_variable" href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html#a49ae1c8b694b9c5ae9aae9b1970ccb26">ERSTE_DATEN_ZEILE</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a6993153f51b7a754b9135066a5aa16d5">   51</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a6993153f51b7a754b9135066a5aa16d5">workingSpreadsheet</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#aa4d5283c548298ea11dc12f8c0465cf4">   53</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#aa4d5283c548298ea11dc12f8c0465cf4">KaskadeRundenErgebnisLeser</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a6993153f51b7a754b9135066a5aa16d5">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        this.workingSpreadsheet = <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a6993153f51b7a754b9135066a5aa16d5">workingSpreadsheet</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a2648a91a42af12a343d111f81011dcc8">   69</a></span>    <span class="keyword">public</span> List&lt;KaskadenFeldBelegung&gt; <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a2648a91a42af12a343d111f81011dcc8">ladeFeldBelegungen</a>(KaskadenKoRundenPlan plan) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment">// naechsteRundeNr = kaskadenStufen + 1: &quot;die Runde nach allen Kaskaden&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        var pfadMap = <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a033a0da99bae92e3771d2a4649689722">teamPositionenBerechnen</a>(plan.kaskadenStufen() + 1, plan);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        var ergebnis = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;KaskadenFeldBelegung&gt;</a>(plan.felder().size());</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">for</span> (var feld : plan.felder()) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            var teams = pfadMap.getOrDefault(feld.pfad(), List.of());</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            ergebnis.add(<span class="keyword">new</span> KaskadenFeldBelegung(feld, Collections.unmodifiableList(teams)));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> Collections.unmodifiableList(ergebnis);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#ad87ae233f017e304bc0b50a8ea90cb57">   91</a></span>    Map&lt;String, List&lt;Integer&gt;&gt; <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#ad87ae233f017e304bc0b50a8ea90cb57">ladeZwischenPositionen</a>(<span class="keywordtype">int</span> naechsteRundeNr, KaskadenKoRundenPlan plan)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a033a0da99bae92e3771d2a4649689722">teamPositionenBerechnen</a>(naechsteRundeNr, plan);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// Interne Berechnungslogik (aus KaskadeSpielrundeSheet extrahiert)</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a033a0da99bae92e3771d2a4649689722">  114</a></span>    <span class="keyword">private</span> Map&lt;String, List&lt;Integer&gt;&gt; <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a033a0da99bae92e3771d2a4649689722">teamPositionenBerechnen</a>(<span class="keywordtype">int</span> naechsteRundeNr, KaskadenKoRundenPlan plan)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        Map&lt;String, List&lt;Integer&gt;&gt; aktuelleMap = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dfe/class_hash_map.html">HashMap&lt;&gt;</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        Set&lt;Integer&gt; bereitsFreilosTeams = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rundenNr = 1; rundenNr &lt; naechsteRundeNr; rundenNr++) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            var rundenInfo  = plan.kaskadeRunden().get(rundenNr - 1);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            var sheetDaten  = <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a3d26f1fca84523c8a38a3515efdfd634">leseRundenSheetDaten</a>(rundenNr);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            var naechsteMap = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dfe/class_hash_map.html">HashMap&lt;String, List&lt;Integer&gt;</a>&gt;();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordtype">int</span> zeilenOffset = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">for</span> (var gruppe : rundenInfo.gruppenRunden()) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                var pfad          = gruppe.pfad();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                var teamsInGruppe = (rundenNr == 1)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        ? <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#af2e2e14631a9593877e44b7caa13ee73">leseTeamNrsAusGruppe</a>(sheetDaten, zeilenOffset, gruppe)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                        : aktuelleMap.getOrDefault(pfad, Collections.emptyList());</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                List&lt;Integer&gt; sieger    = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                List&lt;Integer&gt; verlierer = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; gruppe.spielPaare().size(); i++) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    var spiel = gruppe.spielPaare().get(i);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    <span class="keywordtype">int</span> teamA = spiel.positionA() &lt;= teamsInGruppe.size()</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                            ? teamsInGruppe.get(spiel.positionA() - 1) : 0;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    <span class="keywordtype">int</span> teamB = spiel.positionB() &lt;= teamsInGruppe.size()</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                            ? teamsInGruppe.get(spiel.positionB() - 1) : 0;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    var row  = sheetDaten.get(zeilenOffset + i);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                    <span class="keywordtype">int</span> ergA = row.size() &gt; 2 ? row.get(2).getIntVal(0) : 0;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    <span class="keywordtype">int</span> ergB = row.size() &gt; 3 ? row.get(3).getIntVal(0) : 0;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    <span class="keywordflow">if</span> (ergA &gt;= ergB) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        sieger.add(teamA);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        verlierer.add(teamB);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        sieger.add(teamB);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        verlierer.add(teamA);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <span class="keywordflow">if</span> (gruppe.anzFreilose() &gt; 0) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                    <span class="keywordtype">int</span> freilosPos  = gruppe.anzTeams() - 1;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                    <span class="keywordtype">int</span> freilosTeam = freilosPos &lt; teamsInGruppe.size()</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                            ? teamsInGruppe.get(freilosPos) : 0;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                    var freilosRow  = sheetDaten.get(zeilenOffset + gruppe.spielPaare().size());</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    <span class="keywordtype">int</span> freilosErgA = freilosRow.size() &gt; 2 ? freilosRow.get(2).getIntVal(0) : 0;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    <span class="keywordtype">int</span> freilosErgB = freilosRow.size() &gt; 3 ? freilosRow.get(3).getIntVal(0) : 0;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    <span class="keywordflow">if</span> (freilosTeam &gt; 0) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                        bereitsFreilosTeams.add(freilosTeam);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    <span class="keywordflow">if</span> (freilosErgA &gt; freilosErgB) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                        sieger.add(freilosTeam);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                        verlierer.add(freilosTeam);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                sieger    = <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a34fef1790a98fca0a3e827408acbe24f">verhindereFreilosDuplikat</a>(sieger,    bereitsFreilosTeams);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                verlierer = <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a34fef1790a98fca0a3e827408acbe24f">verhindereFreilosDuplikat</a>(verlierer, bereitsFreilosTeams);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                naechsteMap.put(pfad + <span class="stringliteral">&quot;S&quot;</span>, Collections.unmodifiableList(sieger));</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                naechsteMap.put(pfad + <span class="stringliteral">&quot;V&quot;</span>, Collections.unmodifiableList(verlierer));</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                zeilenOffset += gruppe.spielPaare().size() + gruppe.anzFreilose();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            aktuelleMap = naechsteMap;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">return</span> aktuelleMap;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
+</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span></div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a3d26f1fca84523c8a38a3515efdfd634">  193</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="../../d1/d25/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data.html">RangeData</a> <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a3d26f1fca84523c8a38a3515efdfd634">leseRundenSheetDaten</a>(<span class="keywordtype">int</span> rundenNr) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        var xDoc  = <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a6993153f51b7a754b9135066a5aa16d5">workingSpreadsheet</a>.<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">getWorkingSpreadsheetDocument</a>();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        var sheet = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#afba0569bb2b15913916371950bbc82ea">findeSheetUndHeile</a>(xDoc,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a6a7de19081f1c5f4d86f3ac9d2e4d0f1">schluesselKaskadenRunde</a>(rundenNr),</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                <a class="code hl_class" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">SheetNamen</a>.<a class="code hl_function" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#acffbb6131d6a295d2e229a9ff95ea678">kaskadenRunde</a>(rundenNr));</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d1/d25/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data.html#ab603f846c840727d8f1aaf1e6d576fa5">RangeData</a>();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        var readRange = <a class="code hl_class" href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">RangePosition</a>.<a class="code hl_function" href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html#a6e45b45d6c61ff07c3f314f097cc1d51">from</a>(<a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a042c0b1de67a53470e7b6f1b66d1e7d5">TEAM_A_SPALTE</a>, <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a234d8960f8d3dca11d56860ad1555cb0">ERSTE_DATEN_ZEILE</a>,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a28474bca372f46f77726bb0bd553b6c3">ERG_TEAM_B_SPALTE</a>, <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a234d8960f8d3dca11d56860ad1555cb0">ERSTE_DATEN_ZEILE</a> + 999);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html">RangeHelper</a>.<a class="code hl_function" href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#acb08065a3e43c57df0f665a910772153">from</a>(sheet, xDoc, readRange).<a class="code hl_function" href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a0416108f24c09faf9be13bd481ba1f34">getDataFromRange</a>();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span></div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#af2e2e14631a9593877e44b7caa13ee73">  213</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;Integer&gt; <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#af2e2e14631a9593877e44b7caa13ee73">leseTeamNrsAusGruppe</a>(<a class="code hl_class" href="../../d1/d25/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data.html">RangeData</a> sheetDaten, <span class="keywordtype">int</span> zeilenOffset,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            KaskadenKoGruppenRunde gruppe) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        var teams = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;Integer&gt;</a>(gruppe.anzTeams());</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; gruppe.spielPaare().size(); i++) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            var row = sheetDaten.get(zeilenOffset + i);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            teams.add(row.size() &gt; 0 ? row.get(0).getIntVal(0) : 0);  <span class="comment">// Team A</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            teams.add(row.size() &gt; 1 ? row.get(1).getIntVal(0) : 0);  <span class="comment">// Team B</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">if</span> (gruppe.anzFreilose() &gt; 0) {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            var freilosRow = sheetDaten.get(zeilenOffset + gruppe.spielPaare().size());</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            teams.add(freilosRow.size() &gt; 0 ? freilosRow.get(0).getIntVal(0) : 0);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">return</span> teams;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
+</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span></div>
+<div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a34fef1790a98fca0a3e827408acbe24f">  239</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;Integer&gt; <a class="code hl_function" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a34fef1790a98fca0a3e827408acbe24f">verhindereFreilosDuplikat</a>(</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            List&lt;Integer&gt; teams, Set&lt;Integer&gt; bereitsFreilosTeams) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">if</span> (teams.size() % 2 == 0) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordflow">return</span> teams;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordtype">int</span> letzteIdx = teams.size() - 1;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="keywordflow">if</span> (!bereitsFreilosTeams.contains(teams.get(letzteIdx))) {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">return</span> teams;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = letzteIdx - 1; i &gt;= 0; i--) {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keywordflow">if</span> (!bereitsFreilosTeams.contains(teams.get(i))) {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                var ergebnis = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(teams);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                Collections.swap(ergebnis, i, letzteIdx);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">return</span> ergebnis;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <a class="code hl_variable" href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a568c151a924a2eea972c3ab92c832af9">LOGGER</a>.warn(<span class="stringliteral">&quot;Alle Teams in Gruppe hatten bereits ein Freilos. Kein Tausch möglich.&quot;</span>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">return</span> teams;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    }</div>
+</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_hash_map_html"><div class="ttname"><a href="../../d8/dfe/class_hash_map.html">HashMap</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_a31c86015e8e43a961f4b0441a8d4cb5d"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">de.petanqueturniermanager.comp.WorkingSpreadsheet.getWorkingSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument getWorkingSpreadsheetDocument()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00101">WorkingSpreadsheet.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">de.petanqueturniermanager.helper.i18n.SheetNamen</a></div><div class="ttdoc">Zentraler Zugriffspunkt für alle lokalisierten Tabellennamen im Petanque-Turnier-Manager.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00022">SheetNamen.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html_acffbb6131d6a295d2e229a9ff95ea678"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#acffbb6131d6a295d2e229a9ff95ea678">de.petanqueturniermanager.helper.i18n.SheetNamen.kaskadenRunde</a></div><div class="ttdeci">static String kaskadenRunde(int rundeNr)</div><div class="ttdoc">Kaskaden-KO-Runde: z.B.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00397">SheetNamen.java:397</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position_html"><div class="ttname"><a href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">de.petanqueturniermanager.helper.position.RangePosition</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/df3/_range_position_8java_source.html#l00012">RangePosition.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position_html_a6e45b45d6c61ff07c3f314f097cc1d51"><div class="ttname"><a href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html#a6e45b45d6c61ff07c3f314f097cc1d51">de.petanqueturniermanager.helper.position.RangePosition.from</a></div><div class="ttdeci">static RangePosition from(String startSpalte, int startZeile, int endeSpalte, int endeZeile)</div><div class="ttdoc">clone end und start Position</div><div class="ttdef"><b>Definition</b> <a href="../../d8/df3/_range_position_8java_source.html#l00031">RangePosition.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper_html"><div class="ttname"><a href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html">de.petanqueturniermanager.helper.sheet.RangeHelper</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d18/_range_helper_8java_source.html#l00035">RangeHelper.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper_html_a0416108f24c09faf9be13bd481ba1f34"><div class="ttname"><a href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a0416108f24c09faf9be13bd481ba1f34">de.petanqueturniermanager.helper.sheet.RangeHelper.getDataFromRange</a></div><div class="ttdeci">RangeData getDataFromRange()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d18/_range_helper_8java_source.html#l00117">RangeHelper.java:117</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper_html_acb08065a3e43c57df0f665a910772153"><div class="ttname"><a href="../../d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#acb08065a3e43c57df0f665a910772153">de.petanqueturniermanager.helper.sheet.RangeHelper.from</a></div><div class="ttdeci">static RangeHelper from(XSpreadsheet xSpreadsheet, XSpreadsheetDocument workingSpreadsheetDocument, RangePosition rangePos)</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d18/_range_helper_8java_source.html#l00053">RangeHelper.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper</a></div><div class="ttdoc">Schreibt und liest Sheet-Metadaten als benannte Bereiche im Dokument.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00050">SheetMetadataHelper.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_a6a7de19081f1c5f4d86f3ac9d2e4d0f1"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a6a7de19081f1c5f4d86f3ac9d2e4d0f1">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.schluesselKaskadenRunde</a></div><div class="ttdeci">static String schluesselKaskadenRunde(int rundeNr)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00350">SheetMetadataHelper.java:350</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_afba0569bb2b15913916371950bbc82ea"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#afba0569bb2b15913916371950bbc82ea">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.findeSheetUndHeile</a></div><div class="ttdeci">static XSpreadsheet findeSheetUndHeile(XSpreadsheetDocument xDoc, String schluessel, String fallbackName)</div><div class="ttdoc">Sucht ein Sheet primär über den sicheren benannten Bereich.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00545">SheetMetadataHelper.java:545</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data_html"><div class="ttname"><a href="../../d1/d25/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data.html">de.petanqueturniermanager.helper.sheet.rangedata.RangeData</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d48/_range_data_8java_source.html#l00022">RangeData.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data_html_ab603f846c840727d8f1aaf1e6d576fa5"><div class="ttname"><a href="../../d1/d25/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1rangedata_1_1_range_data.html#ab603f846c840727d8f1aaf1e6d576fa5">de.petanqueturniermanager.helper.sheet.rangedata.RangeData.RangeData</a></div><div class="ttdeci">RangeData()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d48/_range_data_8java_source.html#l00024">RangeData.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a033a0da99bae92e3771d2a4649689722"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a033a0da99bae92e3771d2a4649689722">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.teamPositionenBerechnen</a></div><div class="ttdeci">Map&lt; String, List&lt; Integer &gt; &gt; teamPositionenBerechnen(int naechsteRundeNr, KaskadenKoRundenPlan plan)</div><div class="ttdoc">Berechnet die Teampositionen für Runde naechsteRundeNr aus den Ergebnissen aller vorherigen Runden.</div><div class="ttdef"><b>Definition</b> <a href="#l00114">KaskadeRundenErgebnisLeser.java:114</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a042c0b1de67a53470e7b6f1b66d1e7d5"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a042c0b1de67a53470e7b6f1b66d1e7d5">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.TEAM_A_SPALTE</a></div><div class="ttdeci">static final int TEAM_A_SPALTE</div><div class="ttdoc">Spaltenoffsets im Kaskadenrunden-Sheet (entsprechen den Konstanten in KaskadeSpielrundeSheet).</div><div class="ttdef"><b>Definition</b> <a href="#l00047">KaskadeRundenErgebnisLeser.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a234d8960f8d3dca11d56860ad1555cb0"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a234d8960f8d3dca11d56860ad1555cb0">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.ERSTE_DATEN_ZEILE</a></div><div class="ttdeci">static final int ERSTE_DATEN_ZEILE</div><div class="ttdef"><b>Definition</b> <a href="#l00049">KaskadeRundenErgebnisLeser.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a2648a91a42af12a343d111f81011dcc8"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a2648a91a42af12a343d111f81011dcc8">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.ladeFeldBelegungen</a></div><div class="ttdeci">List&lt; KaskadenFeldBelegung &gt; ladeFeldBelegungen(KaskadenKoRundenPlan plan)</div><div class="ttdoc">Berechnet aus den Kaskadenrunden-Sheets die endgültige Teamverteilung auf alle Endfelder des Plans.</div><div class="ttdef"><b>Definition</b> <a href="#l00069">KaskadeRundenErgebnisLeser.java:69</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a28474bca372f46f77726bb0bd553b6c3"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a28474bca372f46f77726bb0bd553b6c3">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.ERG_TEAM_B_SPALTE</a></div><div class="ttdeci">static final int ERG_TEAM_B_SPALTE</div><div class="ttdef"><b>Definition</b> <a href="#l00048">KaskadeRundenErgebnisLeser.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a34fef1790a98fca0a3e827408acbe24f"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a34fef1790a98fca0a3e827408acbe24f">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.verhindereFreilosDuplikat</a></div><div class="ttdeci">static List&lt; Integer &gt; verhindereFreilosDuplikat(List&lt; Integer &gt; teams, Set&lt; Integer &gt; bereitsFreilosTeams)</div><div class="ttdoc">Verhindert, dass ein Team ein zweites Freilos erhält.</div><div class="ttdef"><b>Definition</b> <a href="#l00239">KaskadeRundenErgebnisLeser.java:239</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a3d26f1fca84523c8a38a3515efdfd634"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a3d26f1fca84523c8a38a3515efdfd634">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.leseRundenSheetDaten</a></div><div class="ttdeci">RangeData leseRundenSheetDaten(int rundenNr)</div><div class="ttdoc">Liest das Daten-Array (Team A bis Erg.</div><div class="ttdef"><b>Definition</b> <a href="#l00193">KaskadeRundenErgebnisLeser.java:193</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a568c151a924a2eea972c3ab92c832af9"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a568c151a924a2eea972c3ab92c832af9">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="#l00041">KaskadeRundenErgebnisLeser.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_a6993153f51b7a754b9135066a5aa16d5"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#a6993153f51b7a754b9135066a5aa16d5">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="#l00051">KaskadeRundenErgebnisLeser.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_aa4d5283c548298ea11dc12f8c0465cf4"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#aa4d5283c548298ea11dc12f8c0465cf4">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.KaskadeRundenErgebnisLeser</a></div><div class="ttdeci">KaskadeRundenErgebnisLeser(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">KaskadeRundenErgebnisLeser.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_ad87ae233f017e304bc0b50a8ea90cb57"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#ad87ae233f017e304bc0b50a8ea90cb57">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.ladeZwischenPositionen</a></div><div class="ttdeci">Map&lt; String, List&lt; Integer &gt; &gt; ladeZwischenPositionen(int naechsteRundeNr, KaskadenKoRundenPlan plan)</div><div class="ttdoc">Berechnet die Teamverteilung auf Gruppen für die angegebene Folgerunde.</div><div class="ttdef"><b>Definition</b> <a href="#l00091">KaskadeRundenErgebnisLeser.java:91</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser_html_af2e2e14631a9593877e44b7caa13ee73"><div class="ttname"><a href="../../d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html#af2e2e14631a9593877e44b7caa13ee73">de.petanqueturniermanager.kaskade.spielrunde.KaskadeRundenErgebnisLeser.leseTeamNrsAusGruppe</a></div><div class="ttdeci">static List&lt; Integer &gt; leseTeamNrsAusGruppe(RangeData sheetDaten, int zeilenOffset, KaskadenKoGruppenRunde gruppe)</div><div class="ttdoc">Liest aus dem Sheet-Daten-Array die Teamnummern einer Gruppe in Runde 1.</div><div class="ttdef"><b>Definition</b> <a href="#l00213">KaskadeRundenErgebnisLeser.java:213</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet_html"><div class="ttname"><a href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html">de.petanqueturniermanager.kaskade.spielrunde.KaskadeSpielrundeSheet</a></div><div class="ttdoc">Erstellt das Rundenplan-Sheet für die nächste Kaskadenrunde.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d57/_kaskade_spielrunde_sheet_8java_source.html#l00071">KaskadeSpielrundeSheet.java:71</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet_html_a1dfc53bff3ed3b7064401ce7d75b2d65"><div class="ttname"><a href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html#a1dfc53bff3ed3b7064401ce7d75b2d65">de.petanqueturniermanager.kaskade.spielrunde.KaskadeSpielrundeSheet.TEAM_A_SPALTE</a></div><div class="ttdeci">static final int TEAM_A_SPALTE</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d57/_kaskade_spielrunde_sheet_8java_source.html#l00075">KaskadeSpielrundeSheet.java:75</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet_html_a49ae1c8b694b9c5ae9aae9b1970ccb26"><div class="ttname"><a href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html#a49ae1c8b694b9c5ae9aae9b1970ccb26">de.petanqueturniermanager.kaskade.spielrunde.KaskadeSpielrundeSheet.ERSTE_DATEN_ZEILE</a></div><div class="ttdeci">static final int ERSTE_DATEN_ZEILE</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d57/_kaskade_spielrunde_sheet_8java_source.html#l00083">KaskadeSpielrundeSheet.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet_html_a6c68eb132406190e5b306f988d321606"><div class="ttname"><a href="../../d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html#a6c68eb132406190e5b306f988d321606">de.petanqueturniermanager.kaskade.spielrunde.KaskadeSpielrundeSheet.ERG_TEAM_B_SPALTE</a></div><div class="ttdeci">static final int ERG_TEAM_B_SPALTE</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d57/_kaskade_spielrunde_sheet_8java_source.html#l00078">KaskadeSpielrundeSheet.java:78</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_851147c5a079ca862d6f0a1a0c929383.html">kaskade</a></li><li class="navelem"><a href="../../dir_419e7ad372f61ea09f4c007c921fe4df.html">spielrunde</a></li><li class="navelem"><a href="../../d0/d77/_kaskade_runden_ergebnis_leser_8java.html">KaskadeRundenErgebnisLeser.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

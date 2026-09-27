@@ -1,0 +1,5 @@
+var _spielrunde_ergebnis_leser_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.ergebnis.SpielrundeErgebnisLeser", "d1/d5c/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spielrunde_ergebnis_leser.html", "d1/d5c/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spielrunde_ergebnis_leser" ],
+    [ "de.petanqueturniermanager.supermelee.ergebnis.SpielrundeErgebnisLeser.SpieltagErgebnisse", "da/d2f/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spielrunde_ergebnis_leser_1_1_spieltag_ergebnisse.html", "da/d2f/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spielrunde_ergebnis_leser_1_1_spieltag_ergebnisse" ]
+];

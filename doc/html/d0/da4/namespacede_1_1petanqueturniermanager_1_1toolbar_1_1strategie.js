@@ -1,0 +1,14 @@
+var namespacede_1_1petanqueturniermanager_1_1toolbar_1_1strategie =
+[
+    [ "FormuleXToolbarStrategie", "d8/d40/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_formule_x_toolbar_strategie.html", "d8/d40/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_formule_x_toolbar_strategie" ],
+    [ "JGJToolbarStrategie", "de/d97/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_j_g_j_toolbar_strategie.html", "de/d97/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_j_g_j_toolbar_strategie" ],
+    [ "KaskadeToolbarStrategie", "dc/d39/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_kaskade_toolbar_strategie.html", "dc/d39/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_kaskade_toolbar_strategie" ],
+    [ "KoToolbarStrategie", "d4/dfc/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_ko_toolbar_strategie.html", "d4/dfc/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_ko_toolbar_strategie" ],
+    [ "LigaToolbarStrategie", "d2/db3/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_liga_toolbar_strategie.html", "d2/db3/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_liga_toolbar_strategie" ],
+    [ "MaastrichterToolbarStrategie", "db/d03/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_maastrichter_toolbar_strategie.html", "db/d03/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_maastrichter_toolbar_strategie" ],
+    [ "NichtVerfuegbarToolbarStrategie", "d7/df1/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_nicht_verfuegbar_toolbar_strategie.html", "d7/df1/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_nicht_verfuegbar_toolbar_strategie" ],
+    [ "PouleToolbarStrategie", "d5/d2b/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_poule_toolbar_strategie.html", "d5/d2b/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_poule_toolbar_strategie" ],
+    [ "SchweizerToolbarStrategie", "da/da9/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_schweizer_toolbar_strategie.html", "da/da9/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_schweizer_toolbar_strategie" ],
+    [ "SupermeleeToolbarStrategie", "dd/dbe/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_supermelee_toolbar_strategie.html", "dd/dbe/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_supermelee_toolbar_strategie" ],
+    [ "TripTeteToolbarStrategie", "d7/da7/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_trip_tete_toolbar_strategie.html", "d7/da7/classde_1_1petanqueturniermanager_1_1toolbar_1_1strategie_1_1_trip_tete_toolbar_strategie" ]
+];

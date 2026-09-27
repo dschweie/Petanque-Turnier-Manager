@@ -1,0 +1,4 @@
+var _participants_meet_doublette_value_8java =
+[
+    [ "de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsMeetDoubletteValue", "dd/d5b/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_meet_doublette_value.html", "dd/d5b/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_meet_doublette_value" ]
+];

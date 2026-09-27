@@ -1,0 +1,4 @@
+var _schweizer_spielrunde_sheet_update_8java =
+[
+    [ "de.petanqueturniermanager.schweizer.spielrunde.SchweizerSpielrundeSheetUpdate", "d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html", "d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update" ]
+];

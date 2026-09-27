@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1jedergegenjeden_1_1blattschutz =
+[
+    [ "JGJBlattschutzKonfiguration", "d3/d89/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1blattschutz_1_1_j_g_j_blattschutz_konfiguration.html", "d3/d89/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1blattschutz_1_1_j_g_j_blattschutz_konfiguration" ]
+];

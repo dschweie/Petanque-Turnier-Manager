@@ -1,0 +1,8 @@
+var namespacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup =
+[
+    [ "AbstractConfigurableRuleDecorator", "d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html", "d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator" ],
+    [ "AbstractRuleDecorator", "d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html", "d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator" ],
+    [ "AbstractStrictRuleDecorator", "d5/d51/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_strict_rule_decorator.html", "d5/d51/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_strict_rule_decorator" ],
+    [ "DefaultCoreRule", "d6/da4/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_default_core_rule.html", "d6/da4/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_default_core_rule" ],
+    [ "IMatchup", "d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html", "d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup" ]
+];

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/endrangliste/EndRanglisteFormatter.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d0a/_end_rangliste_formatter_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EndRanglisteFormatter.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.google.common.base.Preconditions.checkNotNull;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.properties.ICommonProperties.IS_TEXT_WRAPPED;</code><br />
+<code>import java.util.ArrayList;</code><br />
+<code>import java.util.List;</code><br />
+<code>import com.sun.star.table.CellHoriJustify;</code><br />
+<code>import com.sun.star.table.TableBorder2;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldungenSpalte;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.border.BorderFactory;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.StringCellValue;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.properties.ICommonProperties;</code><br />
+<code>import de.petanqueturniermanager.helper.position.Position;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.model.Spieler;</code><br />
+<code>import de.petanqueturniermanager.model.SpielerMeldungen;</code><br />
+<code>import de.petanqueturniermanager.supermelee.AbstractSuperMeleeRanglisteFormatter;</code><br />
+<code>import de.petanqueturniermanager.supermelee.konfiguration.ISuperMeleePropertiesSpalte;</code><br />
+<code>import de.petanqueturniermanager.supermelee.konfiguration.SuprMleEndranglisteSortMode;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für EndRanglisteFormatter.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d34/_end_rangliste_formatter_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2endrangliste_2_end_rangliste_formatter_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2endrangliste_2_end_rangliste_formatter_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2endrangliste_2_end_rangliste_formatter_8java">
+<area shape="rect" title=" " alt="" coords="2053,5,2385,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,302,139"/>
+<area shape="poly" title=" " alt="" coords="2050,29,1734,36,1305,47,816,67,317,98,317,93,816,61,1305,42,1734,31,2055,29"/>
+<area shape="rect" title=" " alt="" coords="326,96,664,139"/>
+<area shape="poly" title=" " alt="" coords="2050,32,1451,54,1069,73,679,98,679,93,1068,68,1451,49,2055,32"/>
+<area shape="rect" title=" " alt="" coords="687,104,809,131"/>
+<area shape="poly" title=" " alt="" coords="2050,32,1759,42,1405,55,1067,74,928,86,822,99,803,102,802,97,821,93,928,80,1067,69,1405,50,1759,37,2055,31"/>
+<area shape="rect" title=" " alt="" coords="833,104,924,131"/>
+<area shape="poly" title=" " alt="" coords="2050,31,1782,41,1461,53,1157,72,1032,84,937,99,925,102,924,96,936,93,1032,79,1157,67,1461,48,1782,35,2055,31"/>
+<area shape="rect" title=" " alt="" coords="949,96,1129,139"/>
+<area shape="poly" title=" " alt="" coords="2050,32,1868,41,1643,53,1396,72,1145,98,1144,93,1395,66,1643,48,1868,36,2055,32"/>
+<area shape="rect" title=" " alt="" coords="1153,96,1317,139"/>
+<area shape="poly" title=" " alt="" coords="2055,34,1724,57,1530,75,1333,98,1332,93,1529,69,1723,52,2049,34"/>
+<area shape="rect" title=" " alt="" coords="1342,96,1651,139"/>
+<area shape="poly" title=" " alt="" coords="2055,48,1666,98,1666,93,2049,48"/>
+<area shape="rect" title=" " alt="" coords="1675,96,1917,139"/>
+<area shape="poly" title=" " alt="" coords="2122,48,1911,95,1910,90,2117,49"/>
+<area shape="rect" title=" " alt="" coords="1942,96,2203,139"/>
+<area shape="poly" title=" " alt="" coords="2187,48,2120,90,2118,85,2182,49"/>
+<area shape="rect" title=" " alt="" coords="2227,96,2504,139"/>
+<area shape="poly" title=" " alt="" coords="2254,46,2321,89,2316,87,2253,51"/>
+<area shape="rect" title=" " alt="" coords="2528,96,2865,139"/>
+<area shape="poly" title=" " alt="" coords="2331,46,2572,93,2566,92,2331,51"/>
+<area shape="rect" title=" " alt="" coords="2889,96,3159,139"/>
+<area shape="poly" title=" " alt="" coords="2386,41,2876,96,2871,95,2385,46"/>
+<area shape="rect" title=" " alt="" coords="3184,96,3454,139"/>
+<area shape="poly" title=" " alt="" coords="2386,34,2741,57,3171,96,3166,96,2741,62,2385,39"/>
+<area shape="rect" title=" " alt="" coords="3478,96,3699,139"/>
+<area shape="poly" title=" " alt="" coords="2386,29,2865,47,3161,66,3465,96,3459,96,3161,72,2865,53,2386,34"/>
+<area shape="rect" title=" " alt="" coords="3723,96,3944,139"/>
+<area shape="poly" title=" " alt="" coords="2385,27,2639,31,2966,42,3334,62,3710,96,3705,96,3333,67,2966,48,2639,37,2385,32"/>
+<area shape="rect" title=" " alt="" coords="3968,96,4222,139"/>
+<area shape="poly" title=" " alt="" coords="2385,26,2678,30,3065,41,3505,61,3955,96,3950,96,3505,66,3065,46,2677,36,2385,31"/>
+<area shape="rect" title=" " alt="" coords="4245,96,4576,139"/>
+<area shape="poly" title=" " alt="" coords="2386,27,2721,31,3176,42,3698,62,4232,96,4227,96,3697,67,3176,48,2721,37,2386,32"/>
+<area shape="rect" title=" " alt="" coords="4601,96,4932,139"/>
+<area shape="poly" title=" " alt="" coords="2385,25,2774,28,3317,38,3944,58,4268,74,4589,96,4584,96,4268,79,3944,64,3317,43,2774,34,2385,31"/>
+</map>
+</div>
+</div>
+<p><a href="../../de/d0a/_end_rangliste_formatter_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Esupermelee_2Eendrangliste_2EEndRanglisteFormatter" id="r_de_2Epetanqueturniermanager_2Esupermelee_2Eendrangliste_2EEndRanglisteFormatter"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/dac/classde_1_1petanqueturniermanager_1_1supermelee_1_1endrangliste_1_1_end_rangliste_formatter.html">de.petanqueturniermanager.supermelee.endrangliste.EndRanglisteFormatter</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Esupermelee_2Eendrangliste" id="r_de_2Epetanqueturniermanager_2Esupermelee_2Eendrangliste"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d20/namespacede_1_1petanqueturniermanager_1_1supermelee_1_1endrangliste.html">de.petanqueturniermanager.supermelee.endrangliste</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../dir_80be571d0c32225c33d222a4ba3e61de.html">endrangliste</a></li><li class="navelem"><a href="../../de/d0a/_end_rangliste_formatter_8java.html">EndRanglisteFormatter.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/sheet/DefaultSheetPos.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/d51/_default_sheet_pos_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DefaultSheetPos.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d51/_default_sheet_pos_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 13.05.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.helper.sheet;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ab4c413bc3ecbdf6802d971cea00ff99f">DefaultSheetPos</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ab4c413bc3ecbdf6802d971cea00ff99f">   13</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ab4c413bc3ecbdf6802d971cea00ff99f">DefaultSheetPos</a>() {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a563e02977ab3b04b3604e8273232723f">   17</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a563e02977ab3b04b3604e8273232723f">MELDELISTE</a> = 0;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a53ea11592b0f6a81f819e60ae782af60">   18</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a53ea11592b0f6a81f819e60ae782af60">SUPERMELEE_TEAMS</a> = 2;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a67e02429353d52867bc5a8d7168e1a91">   19</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a67e02429353d52867bc5a8d7168e1a91">SUPERMELEE_ENDRANGLISTE</a> = 3;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a90ddd0c7fce3f0cedd3434ec918fc80a">   20</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a90ddd0c7fce3f0cedd3434ec918fc80a">SUPERMELEE_WORK</a> = 3; <span class="comment">// Spielrunden, Spieltag rangliste, Anmeldungen, Teilnehmer, etc</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7666527df52d09e1de5c8e726bcc81f0">   22</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7666527df52d09e1de5c8e726bcc81f0">MELEE_WORK</a> = 3; <span class="comment">// Spielrunden, Spieltag rangliste, Anmeldungen, Teilnehmer, etc</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa975ad963fdda24614ecd397dda441f6">   24</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa975ad963fdda24614ecd397dda441f6">LIGA_WORK</a> = 2; <span class="comment">// Liga Spielplan</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7c65f06338224e10b4c08b11a7c19150">   25</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7c65f06338224e10b4c08b11a7c19150">LIGA_ENDRANGLISTE</a> = 3;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a6ec351779e5f3ff1cdb58da8ad79727d">   26</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a6ec351779e5f3ff1cdb58da8ad79727d">LIGA_DIREKTEVERGLEICH</a> = 4;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ae4661c1dcc2c527f901011070a9d614d">   28</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ae4661c1dcc2c527f901011070a9d614d">JGJ_WORK</a> = 2; <span class="comment">// Jeder gegen Jeden Spielplan</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#afa83b59501a720a3ff3a8195030c5c81">   29</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#afa83b59501a720a3ff3a8195030c5c81">JGJ_ENDRANGLISTE</a> = 3;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#acf0660fbd37fdf20dcec49153518c7c8">   30</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#acf0660fbd37fdf20dcec49153518c7c8">JGJ_DIREKTEVERGLEICH</a> = 4;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a1648d581f7714749d78f2e127fd5cd24">   32</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a1648d581f7714749d78f2e127fd5cd24">SCHWEIZER_WORK</a> = 2; <span class="comment">// Schweizer Spielrunden</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a9bf909348882de581a472022dd7e10c2">   33</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a9bf909348882de581a472022dd7e10c2">SCHWEIZER_ENDRANGLISTE</a> = 3;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ac3b053007ac95a9a9a2f4fb9a3883af1">   34</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ac3b053007ac95a9a9a2f4fb9a3883af1">SCHWEIZER_DIREKTEVERGLEICH</a> = 4;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a48af3d579a8b54913b010c3db0a13979">   36</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a48af3d579a8b54913b010c3db0a13979">KO_TURNIERBAUM</a> = 2; <span class="comment">// K.-O. Turnierbaum</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a0147fbee81ec0cc811189d83b7481345">   38</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a0147fbee81ec0cc811189d83b7481345">MAASTRICHTER_WORK</a> = 2;   <span class="comment">// Maastrichter Teilnehmer und andere Arbeitsblätter</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a165bc9a5dcbc96cf7f861a481a71fad4">   39</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a165bc9a5dcbc96cf7f861a481a71fad4">MAASTRICHTER_FINALE</a> = 4; <span class="comment">// Maastrichter A/B/C-Finale-Blätter</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ad55bf411d2490c28780b3584c08b30b0">   41</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ad55bf411d2490c28780b3584c08b30b0">POULE_WORK</a>      = 2; <span class="comment">// Poule Teilnehmer, etc.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ac866ba1ed50465fe727fa0ce79fe2386">   42</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ac866ba1ed50465fe727fa0ce79fe2386">POULE_RANGLISTE</a> = 3; <span class="comment">// Poule Vorrunden-Rangliste</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a0ca22618b923a7b2cd9840f31e59e8fc">   43</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a0ca22618b923a7b2cd9840f31e59e8fc">POULE_KO</a>        = 4; <span class="comment">// Poule KO-Bracket-Blätter (A-Finale, B-Finale)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a25bbc505faabaa5f622f71967b8934a2">   45</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a25bbc505faabaa5f622f71967b8934a2">KASKADE_WORK</a>            = 2; <span class="comment">// Kaskaden-KO Rundenplan-Sheets</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a215d3918c5c980aea18d2c9eb951a472">   46</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a215d3918c5c980aea18d2c9eb951a472">KASKADE_GRUPPENRANGLISTE</a> = 3; <span class="comment">// Kaskaden-KO Gruppenrangliste</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a00d96a190141d2a66be104a9fbc5e63b">   47</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a00d96a190141d2a66be104a9fbc5e63b">KASKADE_FELDER</a>           = 4; <span class="comment">// Kaskaden-KO KO-Feld-Sheets (A/B/C/D)</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa5b742032bc10718af3208deabd4eeea">   49</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa5b742032bc10718af3208deabd4eeea">TRIPTETE_WORK</a>         = 2; <span class="comment">// Trip-Tête Spielplan</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa488a41395a2d013b8e0e2b9c4be554e">   50</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa488a41395a2d013b8e0e2b9c4be554e">TRIPTETE_ENDRANGLISTE</a> = 3;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a00d96a190141d2a66be104a9fbc5e63b"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a00d96a190141d2a66be104a9fbc5e63b">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.KASKADE_FELDER</a></div><div class="ttdeci">static final short KASKADE_FELDER</div><div class="ttdef"><b>Definition</b> <a href="#l00047">DefaultSheetPos.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a0147fbee81ec0cc811189d83b7481345"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a0147fbee81ec0cc811189d83b7481345">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.MAASTRICHTER_WORK</a></div><div class="ttdeci">static final short MAASTRICHTER_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00038">DefaultSheetPos.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a0ca22618b923a7b2cd9840f31e59e8fc"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a0ca22618b923a7b2cd9840f31e59e8fc">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.POULE_KO</a></div><div class="ttdeci">static final short POULE_KO</div><div class="ttdef"><b>Definition</b> <a href="#l00043">DefaultSheetPos.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a1648d581f7714749d78f2e127fd5cd24"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a1648d581f7714749d78f2e127fd5cd24">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.SCHWEIZER_WORK</a></div><div class="ttdeci">static final short SCHWEIZER_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00032">DefaultSheetPos.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a165bc9a5dcbc96cf7f861a481a71fad4"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a165bc9a5dcbc96cf7f861a481a71fad4">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.MAASTRICHTER_FINALE</a></div><div class="ttdeci">static final short MAASTRICHTER_FINALE</div><div class="ttdef"><b>Definition</b> <a href="#l00039">DefaultSheetPos.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a215d3918c5c980aea18d2c9eb951a472"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a215d3918c5c980aea18d2c9eb951a472">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.KASKADE_GRUPPENRANGLISTE</a></div><div class="ttdeci">static final short KASKADE_GRUPPENRANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00046">DefaultSheetPos.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a25bbc505faabaa5f622f71967b8934a2"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a25bbc505faabaa5f622f71967b8934a2">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.KASKADE_WORK</a></div><div class="ttdeci">static final short KASKADE_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00045">DefaultSheetPos.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a48af3d579a8b54913b010c3db0a13979"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a48af3d579a8b54913b010c3db0a13979">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.KO_TURNIERBAUM</a></div><div class="ttdeci">static final short KO_TURNIERBAUM</div><div class="ttdef"><b>Definition</b> <a href="#l00036">DefaultSheetPos.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a53ea11592b0f6a81f819e60ae782af60"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a53ea11592b0f6a81f819e60ae782af60">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.SUPERMELEE_TEAMS</a></div><div class="ttdeci">static final short SUPERMELEE_TEAMS</div><div class="ttdef"><b>Definition</b> <a href="#l00018">DefaultSheetPos.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a563e02977ab3b04b3604e8273232723f"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a563e02977ab3b04b3604e8273232723f">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.MELDELISTE</a></div><div class="ttdeci">static final short MELDELISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00017">DefaultSheetPos.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a67e02429353d52867bc5a8d7168e1a91"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a67e02429353d52867bc5a8d7168e1a91">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.SUPERMELEE_ENDRANGLISTE</a></div><div class="ttdeci">static final short SUPERMELEE_ENDRANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00019">DefaultSheetPos.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a6ec351779e5f3ff1cdb58da8ad79727d"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a6ec351779e5f3ff1cdb58da8ad79727d">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.LIGA_DIREKTEVERGLEICH</a></div><div class="ttdeci">static final short LIGA_DIREKTEVERGLEICH</div><div class="ttdef"><b>Definition</b> <a href="#l00026">DefaultSheetPos.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a7666527df52d09e1de5c8e726bcc81f0"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7666527df52d09e1de5c8e726bcc81f0">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.MELEE_WORK</a></div><div class="ttdeci">static final short MELEE_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00022">DefaultSheetPos.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a7c65f06338224e10b4c08b11a7c19150"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7c65f06338224e10b4c08b11a7c19150">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.LIGA_ENDRANGLISTE</a></div><div class="ttdeci">static final short LIGA_ENDRANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00025">DefaultSheetPos.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a90ddd0c7fce3f0cedd3434ec918fc80a"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a90ddd0c7fce3f0cedd3434ec918fc80a">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.SUPERMELEE_WORK</a></div><div class="ttdeci">static final short SUPERMELEE_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00020">DefaultSheetPos.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a9bf909348882de581a472022dd7e10c2"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a9bf909348882de581a472022dd7e10c2">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.SCHWEIZER_ENDRANGLISTE</a></div><div class="ttdeci">static final short SCHWEIZER_ENDRANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00033">DefaultSheetPos.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_aa488a41395a2d013b8e0e2b9c4be554e"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa488a41395a2d013b8e0e2b9c4be554e">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.TRIPTETE_ENDRANGLISTE</a></div><div class="ttdeci">static final short TRIPTETE_ENDRANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00050">DefaultSheetPos.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_aa5b742032bc10718af3208deabd4eeea"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa5b742032bc10718af3208deabd4eeea">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.TRIPTETE_WORK</a></div><div class="ttdeci">static final short TRIPTETE_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00049">DefaultSheetPos.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_aa975ad963fdda24614ecd397dda441f6"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#aa975ad963fdda24614ecd397dda441f6">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.LIGA_WORK</a></div><div class="ttdeci">static final short LIGA_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00024">DefaultSheetPos.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_ab4c413bc3ecbdf6802d971cea00ff99f"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ab4c413bc3ecbdf6802d971cea00ff99f">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.DefaultSheetPos</a></div><div class="ttdeci">DefaultSheetPos()</div><div class="ttdef"><b>Definition</b> <a href="#l00013">DefaultSheetPos.java:13</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_ac3b053007ac95a9a9a2f4fb9a3883af1"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ac3b053007ac95a9a9a2f4fb9a3883af1">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.SCHWEIZER_DIREKTEVERGLEICH</a></div><div class="ttdeci">static final short SCHWEIZER_DIREKTEVERGLEICH</div><div class="ttdef"><b>Definition</b> <a href="#l00034">DefaultSheetPos.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_ac866ba1ed50465fe727fa0ce79fe2386"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ac866ba1ed50465fe727fa0ce79fe2386">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.POULE_RANGLISTE</a></div><div class="ttdeci">static final short POULE_RANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00042">DefaultSheetPos.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_acf0660fbd37fdf20dcec49153518c7c8"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#acf0660fbd37fdf20dcec49153518c7c8">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.JGJ_DIREKTEVERGLEICH</a></div><div class="ttdeci">static final short JGJ_DIREKTEVERGLEICH</div><div class="ttdef"><b>Definition</b> <a href="#l00030">DefaultSheetPos.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_ad55bf411d2490c28780b3584c08b30b0"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ad55bf411d2490c28780b3584c08b30b0">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.POULE_WORK</a></div><div class="ttdeci">static final short POULE_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00041">DefaultSheetPos.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_ae4661c1dcc2c527f901011070a9d614d"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#ae4661c1dcc2c527f901011070a9d614d">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.JGJ_WORK</a></div><div class="ttdeci">static final short JGJ_WORK</div><div class="ttdef"><b>Definition</b> <a href="#l00028">DefaultSheetPos.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_afa83b59501a720a3ff3a8195030c5c81"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#afa83b59501a720a3ff3a8195030c5c81">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.JGJ_ENDRANGLISTE</a></div><div class="ttdeci">static final short JGJ_ENDRANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="#l00029">DefaultSheetPos.java:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_441e592da67819dcc226e3740cc2a092.html">sheet</a></li><li class="navelem"><a href="../../d7/d51/_default_sheet_pos_8java.html">DefaultSheetPos.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper =
+[
+    [ "RangeHelper", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#af515c576f86412c4f11b331ab6d1f311", null ],
+    [ "RangeHelper", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#abf7a6ab3e7551fdd66eeb9e029826e76", null ],
+    [ "clearRange", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#ada84991f60b43a246b4d4179fd7b8e2e", null ],
+    [ "from", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a03172dd2b6f069272e7893709bde907b", null ],
+    [ "from", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a52107e5db477e1977a7420d454cd9d2a", null ],
+    [ "from", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a173dc55d84bbebf8865fd6deda2ac0aa", null ],
+    [ "from", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#acb08065a3e43c57df0f665a910772153", null ],
+    [ "getCellRange", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a9bfe5732ffc083fc5c242f1db21aaf07", null ],
+    [ "getCellRangesQuery", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a014540abebe930976d56e5b8caaaab09", null ],
+    [ "getDataFromRange", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a0416108f24c09faf9be13bd481ba1f34", null ],
+    [ "getPropertySet", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#ab8b66876dff9078bfcaff692a9f6f009", null ],
+    [ "getRangePos", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a10f8fcea822c4082e25199d6fca882e4", null ],
+    [ "getWorkingSpreadsheetDocument", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a9f9b6333345a132f1e1ad97661c60e57", null ],
+    [ "getXCellRangeData", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a4027d5d7b6077ffea6cf944c5b76fd8b", null ],
+    [ "getXSpreadSheet", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#ad5864f045883256ee337500fe0193487", null ],
+    [ "setArrayFormula", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a418003b4f894d3034672ed076320c4e3", null ],
+    [ "setDataInRange", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a9bc58d2a53a7317651efb0f4782e5a36", null ],
+    [ "setDataInRange", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a48817a03191a7a4052f6ff6967f1cea3", null ],
+    [ "setDataInRange", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a2b40f0db121252d24d3ae649c4147e5f", null ],
+    [ "setRangeProperties", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a59819e51dc86ded0826a55ec9e3ee026", null ],
+    [ "logger", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#ac735588c5140d2492a1b92f6bf8bef75", null ],
+    [ "rangePos", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a54dda3e2c9261b31309d78a02fe5b838", null ],
+    [ "workingSpreadsheetDocument", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a59841a1b79c30e7728ce89ab640fc92f", null ],
+    [ "xSpreadsheet", "d4/da9/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_range_helper.html#a5626cacf25c02f613de0999c509680b8", null ]
+];

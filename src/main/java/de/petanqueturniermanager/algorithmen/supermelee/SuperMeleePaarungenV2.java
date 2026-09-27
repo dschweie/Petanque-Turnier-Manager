@@ -154,7 +154,7 @@ public class SuperMeleePaarungenV2 {
     }
 
     /** Spieltag-Nummer ausschließlich zur Anreicherung der Log-Meldungen; {@code 0} = nicht gesetzt. */
-    private int spieltagNrFuerLog;
+    protected int spieltagNrFuerLog;
 
     // =========================================================================
     // Öffentliche API — kompatibel zu SuperMeleePaarungen (V1)

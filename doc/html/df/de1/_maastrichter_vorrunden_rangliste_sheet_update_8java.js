@@ -1,0 +1,4 @@
+var _maastrichter_vorrunden_rangliste_sheet_update_8java =
+[
+    [ "de.petanqueturniermanager.maastrichter.rangliste.MaastrichterVorrundenRanglisteSheetUpdate", "dd/d69/classde_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste_1_1_maastrichter_vorrunden_rangliste_sheet_update.html", "dd/d69/classde_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste_1_1_maastrichter_vorrunden_rangliste_sheet_update" ]
+];

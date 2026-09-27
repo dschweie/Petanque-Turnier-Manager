@@ -1,0 +1,8 @@
+var namespacede_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration =
+[
+    [ "ISuperMeleePropertiesSpalte", "d9/d42/interfacede_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_i_super_melee_properties_spalte.html", "d9/d42/interfacede_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_i_super_melee_properties_spalte" ],
+    [ "SuperMeleeKonfigurationSheet", "da/d29/classde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_konfiguration_sheet.html", "da/d29/classde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_konfiguration_sheet" ],
+    [ "SuperMeleeMode", "d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode.html", "d9/d4b/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_mode" ],
+    [ "SuperMeleePropertiesSpalte", "dc/dfd/classde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_properties_spalte.html", "dc/dfd/classde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_properties_spalte" ],
+    [ "SuprMleEndranglisteSortMode", "d4/ded/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_supr_mle_endrangliste_sort_mode.html", "d4/ded/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_supr_mle_endrangliste_sort_mode" ]
+];

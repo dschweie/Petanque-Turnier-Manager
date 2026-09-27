@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/ergebnis/SpielerEndranglisteErgebnis.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/de7/_spieler_endrangliste_ergebnis_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerEndranglisteErgebnis.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/de7/_spieler_endrangliste_ergebnis_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* Erstellung : 17.03.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">**/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.supermelee.ergebnis;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> java.util.Collections.reverseOrder;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> <span class="keyword">static</span> java.util.Comparator.comparingInt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.util.Comparator;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ada624b1d020228af7107fe9e6a3d3975">SpielerEndranglisteErgebnis</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a40b319a147309788465a49e88a755e3d">AbstractErgebnis</a>&lt;SpielerEndranglisteErgebnis&gt;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        implements <a class="code hl_class" href="../../d3/d10/class_comparable.html">Comparable</a>&lt;SpielerEndranglisteErgebnis&gt; {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ada624b1d020228af7107fe9e6a3d3975">   15</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ada624b1d020228af7107fe9e6a3d3975">SpielerEndranglisteErgebnis</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a0f962a20324fae8075bf6c6322959268">spielerNr</a>) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        super(<a class="code hl_variable" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a0f962a20324fae8075bf6c6322959268">spielerNr</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ad350f1074684428a926d6aa08cec9aab">   19</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ad350f1074684428a926d6aa08cec9aab">isValid</a>() {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> this.<a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a5cd299442813faf609156f0ffa6deae5">getSpielerNr</a>() &gt; 0 &amp;&amp; <a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#af03ddaf005c37613a8ebf35dad7c0d51">getSpielPlus</a>() &gt; -1 &amp;&amp; <a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#ac53088d5c77361e124a8fc72898321f0">getSpielMinus</a>() &gt; -1 &amp;&amp; <a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#ad24e549b46d3c07fbf85cd7f015ac213">getPunktePlus</a>() &gt; -1</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                &amp;&amp; <a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#af406a4dc9d978a65d6df4dc9f6774aa5">getPunkteMinus</a>() &gt; -1;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a56546d7f78e5ebc1e9a2aa64ccd47a98">   24</a></span>    <span class="keyword">private</span> Comparator&lt;SpielerEndranglisteErgebnis&gt; <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a56546d7f78e5ebc1e9a2aa64ccd47a98">getComparator</a>() {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> Comparator.comparingInt(<a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#af03ddaf005c37613a8ebf35dad7c0d51">SpielerEndranglisteErgebnis::getSpielPlus</a>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                .thenComparingInt(<a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a3bf8fca931048edae072badd4c9f1778">SpielerEndranglisteErgebnis::getSpielDiv</a>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                .thenComparingInt(<a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#aab73543aa7586de620588d573e57bd31">SpielerEndranglisteErgebnis::getPunkteDiv</a>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                .thenComparingInt(<a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#ad24e549b46d3c07fbf85cd7f015ac213">SpielerEndranglisteErgebnis::getPunktePlus</a>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                .thenComparing(reverseOrder(comparingInt(<a class="code hl_function" href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a5cd299442813faf609156f0ffa6deae5">SpielerEndranglisteErgebnis::getSpielerNr</a>)));</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a9fdc37c46a581e39cb37a812246f5444">   32</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a9fdc37c46a581e39cb37a812246f5444">reversedCompareTo</a>(<a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ada624b1d020228af7107fe9e6a3d3975">SpielerEndranglisteErgebnis</a> o) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// schlechteste an erste stelle</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a56546d7f78e5ebc1e9a2aa64ccd47a98">getComparator</a>().reversed().compare(o, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    @Override</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a818603abfec117cbf62c09660480f1b2">   38</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a818603abfec117cbf62c09660480f1b2">compareTo</a>(<a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ada624b1d020228af7107fe9e6a3d3975">SpielerEndranglisteErgebnis</a> o) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// beste an erste stelle</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a56546d7f78e5ebc1e9a2aa64ccd47a98">getComparator</a>().compare(o, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="ttc" id="aclass_comparable_html"><div class="ttname"><a href="../../d3/d10/class_comparable.html">Comparable</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_a0f962a20324fae8075bf6c6322959268"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a0f962a20324fae8075bf6c6322959268">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::spielerNr</a></div><div class="ttdeci">final int spielerNr</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00015">AbstractErgebnis.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_a3bf8fca931048edae072badd4c9f1778"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a3bf8fca931048edae072badd4c9f1778">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getSpielDiv</a></div><div class="ttdeci">final int getSpielDiv()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00031">AbstractErgebnis.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_a40b319a147309788465a49e88a755e3d"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a40b319a147309788465a49e88a755e3d">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::AbstractErgebnis</a></div><div class="ttdeci">AbstractErgebnis(int spielerNr)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00026">AbstractErgebnis.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_a5cd299442813faf609156f0ffa6deae5"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#a5cd299442813faf609156f0ffa6deae5">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getSpielerNr</a></div><div class="ttdeci">final int getSpielerNr()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00079">AbstractErgebnis.java:79</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_aab73543aa7586de620588d573e57bd31"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#aab73543aa7586de620588d573e57bd31">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getPunkteDiv</a></div><div class="ttdeci">final int getPunkteDiv()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00055">AbstractErgebnis.java:55</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_ac53088d5c77361e124a8fc72898321f0"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#ac53088d5c77361e124a8fc72898321f0">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getSpielMinus</a></div><div class="ttdeci">final int getSpielMinus()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00045">AbstractErgebnis.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_ad24e549b46d3c07fbf85cd7f015ac213"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#ad24e549b46d3c07fbf85cd7f015ac213">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getPunktePlus</a></div><div class="ttdeci">final int getPunktePlus()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00059">AbstractErgebnis.java:59</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_af03ddaf005c37613a8ebf35dad7c0d51"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#af03ddaf005c37613a8ebf35dad7c0d51">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getSpielPlus</a></div><div class="ttdeci">final int getSpielPlus()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00035">AbstractErgebnis.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis_html_af406a4dc9d978a65d6df4dc9f6774aa5"><div class="ttname"><a href="../../df/d78/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_abstract_ergebnis.html#af406a4dc9d978a65d6df4dc9f6774aa5">de.petanqueturniermanager.supermelee.ergebnis.AbstractErgebnis&lt; SpielerEndranglisteErgebnis &gt;::getPunkteMinus</a></div><div class="ttdeci">final int getPunkteMinus()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d7f/_abstract_ergebnis_8java_source.html#l00069">AbstractErgebnis.java:69</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis_html_a56546d7f78e5ebc1e9a2aa64ccd47a98"><div class="ttname"><a href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a56546d7f78e5ebc1e9a2aa64ccd47a98">de.petanqueturniermanager.supermelee.ergebnis.SpielerEndranglisteErgebnis.getComparator</a></div><div class="ttdeci">Comparator&lt; SpielerEndranglisteErgebnis &gt; getComparator()</div><div class="ttdef"><b>Definition</b> <a href="#l00024">SpielerEndranglisteErgebnis.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis_html_a818603abfec117cbf62c09660480f1b2"><div class="ttname"><a href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a818603abfec117cbf62c09660480f1b2">de.petanqueturniermanager.supermelee.ergebnis.SpielerEndranglisteErgebnis.compareTo</a></div><div class="ttdeci">int compareTo(SpielerEndranglisteErgebnis o)</div><div class="ttdef"><b>Definition</b> <a href="#l00038">SpielerEndranglisteErgebnis.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis_html_a9fdc37c46a581e39cb37a812246f5444"><div class="ttname"><a href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#a9fdc37c46a581e39cb37a812246f5444">de.petanqueturniermanager.supermelee.ergebnis.SpielerEndranglisteErgebnis.reversedCompareTo</a></div><div class="ttdeci">int reversedCompareTo(SpielerEndranglisteErgebnis o)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">SpielerEndranglisteErgebnis.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis_html_ad350f1074684428a926d6aa08cec9aab"><div class="ttname"><a href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ad350f1074684428a926d6aa08cec9aab">de.petanqueturniermanager.supermelee.ergebnis.SpielerEndranglisteErgebnis.isValid</a></div><div class="ttdeci">boolean isValid()</div><div class="ttdef"><b>Definition</b> <a href="#l00019">SpielerEndranglisteErgebnis.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis_html_ada624b1d020228af7107fe9e6a3d3975"><div class="ttname"><a href="../../df/ddd/classde_1_1petanqueturniermanager_1_1supermelee_1_1ergebnis_1_1_spieler_endrangliste_ergebnis.html#ada624b1d020228af7107fe9e6a3d3975">de.petanqueturniermanager.supermelee.ergebnis.SpielerEndranglisteErgebnis.SpielerEndranglisteErgebnis</a></div><div class="ttdeci">SpielerEndranglisteErgebnis(int spielerNr)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">SpielerEndranglisteErgebnis.java:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../dir_f43ed0c9935b2a2afccf6259eebf69b4.html">ergebnis</a></li><li class="navelem"><a href="../../d9/de7/_spieler_endrangliste_ergebnis_8java.html">SpielerEndranglisteErgebnis.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

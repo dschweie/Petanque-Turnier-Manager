@@ -1,0 +1,8 @@
+var namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration =
+[
+    [ "ISchweizerPropertiesSpalte", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte" ],
+    [ "SchweizerKonfigurationSheet", "d9/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet.html", "d9/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet" ],
+    [ "SchweizerPropertiesSpalte", "da/de6/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_properties_spalte.html", "da/de6/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_properties_spalte" ],
+    [ "SchweizerRankingModus", "d1/d90/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_ranking_modus.html", "d1/d90/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_ranking_modus" ],
+    [ "SpielplanTeamAnzeige", "d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige.html", "d5/d29/enumde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_spielplan_team_anzeige" ]
+];

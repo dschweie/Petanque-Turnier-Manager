@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/export/SpielerDbExportLoader.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/da4/_spieler_db_export_loader_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbExportLoader.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/da4/_spieler_db_export_loader_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.spielerdb.export;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.time.Instant;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.EnumSet;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.LabelDatensatz;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.LabelRepository;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerDbException;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerMitVerein;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.SpielerRepository;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.VereinDatensatz;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.spielerdb.VereinRepository;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html">   25</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7f7ccebc4fdf44830eddf7fd7a14210a">SpielerDbExportLoader</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a81f2664bfe2c3299f5ca59113be1a717">   27</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html">SpielerRepository</a> <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a81f2664bfe2c3299f5ca59113be1a717">spielerRepo</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7147c3e4c78a01bc64382d468df4f51a">   28</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html">VereinRepository</a> <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7147c3e4c78a01bc64382d468df4f51a">vereinRepo</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#ab40881c3c2d334e7b8201c65b5b59158">   29</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html">LabelRepository</a> <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#ab40881c3c2d334e7b8201c65b5b59158">labelRepo</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7f7ccebc4fdf44830eddf7fd7a14210a">   31</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7f7ccebc4fdf44830eddf7fd7a14210a">SpielerDbExportLoader</a>(<a class="code hl_class" href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html">SpielerRepository</a> <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a81f2664bfe2c3299f5ca59113be1a717">spielerRepo</a>, <a class="code hl_class" href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html">VereinRepository</a> <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7147c3e4c78a01bc64382d468df4f51a">vereinRepo</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_class" href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html">LabelRepository</a> <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#ab40881c3c2d334e7b8201c65b5b59158">labelRepo</a>) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        this.spielerRepo = <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a81f2664bfe2c3299f5ca59113be1a717">spielerRepo</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        this.vereinRepo = <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7147c3e4c78a01bc64382d468df4f51a">vereinRepo</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        this.labelRepo = <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#ab40881c3c2d334e7b8201c65b5b59158">labelRepo</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a0134a3b18dc4256b98805dc2251786e9">   44</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">SpielerDbExportData</a> <a class="code hl_function" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a0134a3b18dc4256b98805dc2251786e9">lade</a>(EnumSet&lt;ExportEntity&gt; scope, @Nullable String appVersion)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">boolean</span> ladeSpieler = scope.contains(<a class="code hl_class" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html">ExportEntity</a>.<a class="code hl_variable" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#a04b4b85ae739d3179fb9ace42ee7ce18">SPIELER</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">boolean</span> ladeVereine = scope.contains(<a class="code hl_class" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html">ExportEntity</a>.<a class="code hl_variable" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#a3461d97b5429540ebb35eb1c76ca2e3f">VEREINE</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">boolean</span> ladeLabels = scope.contains(<a class="code hl_class" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html">ExportEntity</a>.<a class="code hl_variable" href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#ab89c57eb77b9f3f16976a12a18625e09">LABELS</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">boolean</span> ladeJunction = ladeSpieler &amp;&amp; ladeLabels;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        List&lt;SpielerMitVerein&gt; spieler = ladeSpieler ? <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a81f2664bfe2c3299f5ca59113be1a717">spielerRepo</a>.<a class="code hl_function" href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html#a6db9f26ce3388e15794e691be05c8184">findAll</a>() : List.of();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        List&lt;VereinDatensatz&gt; vereine = ladeVereine ? <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7147c3e4c78a01bc64382d468df4f51a">vereinRepo</a>.<a class="code hl_function" href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html#a42cee388fa7442ebd03ef8d957ddfb47">findAll</a>() : List.of();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        List&lt;LabelDatensatz&gt; labels = ladeLabels ? <a class="code hl_variable" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#ab40881c3c2d334e7b8201c65b5b59158">labelRepo</a>.<a class="code hl_function" href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html#a12a87e27accbeae208b93faac6f985f2">findAll</a>() : List.of();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        List&lt;SpielerLabelZuordnung&gt; junction = ladeJunction</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                ? <a class="code hl_function" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a8578498f0a88379166398d533daa81c8">extrahiereJunction</a>(spieler)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                : List.of();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#a2ad65486cb1734a461864ddf88f80fa6">ExportMeta</a> meta = <span class="keyword">new</span> <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#a2ad65486cb1734a461864ddf88f80fa6">ExportMeta</a>(<a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#a2ad65486cb1734a461864ddf88f80fa6">ExportMeta</a>.AKTUELLE_VERSION, Instant.now(), appVersion);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">SpielerDbExportData</a>(meta, spieler, vereine, labels, junction);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a8578498f0a88379166398d533daa81c8">   62</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> List&lt;SpielerLabelZuordnung&gt; <a class="code hl_function" href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a8578498f0a88379166398d533daa81c8">extrahiereJunction</a>(List&lt;SpielerMitVerein&gt; spieler) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        List&lt;SpielerLabelZuordnung&gt; ergebnis = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">for</span> (<a class="code hl_function" href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">SpielerMitVerein</a> s : spieler) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">for</span> (Integer labelNr : s.labelNrs()) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                ergebnis.add(<span class="keyword">new</span> <a class="code hl_function" href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#a5c580a7b24befb12f2b213683c3b24ae">SpielerLabelZuordnung</a>(s.nr(), labelNr));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> ergebnis;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository_html"><div class="ttname"><a href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html">de.petanqueturniermanager.spielerdb.LabelRepository</a></div><div class="ttdoc">CRUD für LabelDatensatz.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/ddf/_label_repository_8java_source.html#l00017">LabelRepository.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository_html_a12a87e27accbeae208b93faac6f985f2"><div class="ttname"><a href="../../d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html#a12a87e27accbeae208b93faac6f985f2">de.petanqueturniermanager.spielerdb.LabelRepository.findAll</a></div><div class="ttdeci">List&lt; LabelDatensatz &gt; findAll()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/ddf/_label_repository_8java_source.html#l00025">LabelRepository.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception_html"><div class="ttname"><a href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">de.petanqueturniermanager.spielerdb.SpielerDbException</a></div><div class="ttdoc">Fehler aus der Spieler-DB-Schicht.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ded/_spieler_db_exception_8java_source.html#l00008">SpielerDbException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_html"><div class="ttname"><a href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html">de.petanqueturniermanager.spielerdb.SpielerRepository</a></div><div class="ttdoc">CRUD für SpielerDatensatz mit JOIN auf VEREIN für Anzeige (SpielerMitVerein).</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d69/_spieler_repository_8java_source.html#l00020">SpielerRepository.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository_html_a6db9f26ce3388e15794e691be05c8184"><div class="ttname"><a href="../../d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html#a6db9f26ce3388e15794e691be05c8184">de.petanqueturniermanager.spielerdb.SpielerRepository.findAll</a></div><div class="ttdeci">List&lt; SpielerMitVerein &gt; findAll()</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d69/_spieler_repository_8java_source.html#l00087">SpielerRepository.java:87</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository_html"><div class="ttname"><a href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html">de.petanqueturniermanager.spielerdb.VereinRepository</a></div><div class="ttdoc">CRUD für VereinDatensatz.</div><div class="ttdef"><b>Definition</b> <a href="../../da/dda/_verein_repository_8java_source.html#l00016">VereinRepository.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository_html_a42cee388fa7442ebd03ef8d957ddfb47"><div class="ttname"><a href="../../d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html#a42cee388fa7442ebd03ef8d957ddfb47">de.petanqueturniermanager.spielerdb.VereinRepository.findAll</a></div><div class="ttdeci">List&lt; VereinDatensatz &gt; findAll()</div><div class="ttdef"><b>Definition</b> <a href="../../da/dda/_verein_repository_8java_source.html#l00024">VereinRepository.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader_html_a0134a3b18dc4256b98805dc2251786e9"><div class="ttname"><a href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a0134a3b18dc4256b98805dc2251786e9">de.petanqueturniermanager.spielerdb.export.SpielerDbExportLoader.lade</a></div><div class="ttdeci">SpielerDbExportData lade(EnumSet&lt; ExportEntity &gt; scope, @Nullable String appVersion)</div><div class="ttdoc">Lädt alle Daten für den gegebenen Scope.</div><div class="ttdef"><b>Definition</b> <a href="#l00044">SpielerDbExportLoader.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader_html_a7147c3e4c78a01bc64382d468df4f51a"><div class="ttname"><a href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7147c3e4c78a01bc64382d468df4f51a">de.petanqueturniermanager.spielerdb.export.SpielerDbExportLoader.vereinRepo</a></div><div class="ttdeci">final VereinRepository vereinRepo</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SpielerDbExportLoader.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader_html_a7f7ccebc4fdf44830eddf7fd7a14210a"><div class="ttname"><a href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a7f7ccebc4fdf44830eddf7fd7a14210a">de.petanqueturniermanager.spielerdb.export.SpielerDbExportLoader.SpielerDbExportLoader</a></div><div class="ttdeci">SpielerDbExportLoader(SpielerRepository spielerRepo, VereinRepository vereinRepo, LabelRepository labelRepo)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">SpielerDbExportLoader.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader_html_a81f2664bfe2c3299f5ca59113be1a717"><div class="ttname"><a href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a81f2664bfe2c3299f5ca59113be1a717">de.petanqueturniermanager.spielerdb.export.SpielerDbExportLoader.spielerRepo</a></div><div class="ttdeci">final SpielerRepository spielerRepo</div><div class="ttdef"><b>Definition</b> <a href="#l00027">SpielerDbExportLoader.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader_html_a8578498f0a88379166398d533daa81c8"><div class="ttname"><a href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#a8578498f0a88379166398d533daa81c8">de.petanqueturniermanager.spielerdb.export.SpielerDbExportLoader.extrahiereJunction</a></div><div class="ttdeci">static List&lt; SpielerLabelZuordnung &gt; extrahiereJunction(List&lt; SpielerMitVerein &gt; spieler)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SpielerDbExportLoader.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader_html_ab40881c3c2d334e7b8201c65b5b59158"><div class="ttname"><a href="../../d4/d5e/classde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_spieler_db_export_loader.html#ab40881c3c2d334e7b8201c65b5b59158">de.petanqueturniermanager.spielerdb.export.SpielerDbExportLoader.labelRepo</a></div><div class="ttdeci">final LabelRepository labelRepo</div><div class="ttdef"><b>Definition</b> <a href="#l00029">SpielerDbExportLoader.java:29</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity_html"><div class="ttname"><a href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html">de.petanqueturniermanager.spielerdb.export.ExportEntity</a></div><div class="ttdoc">Logische Einheit, die exportiert werden kann.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d50/_export_entity_8java_source.html#l00011">ExportEntity.java:11</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity_html_a04b4b85ae739d3179fb9ace42ee7ce18"><div class="ttname"><a href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#a04b4b85ae739d3179fb9ace42ee7ce18">de.petanqueturniermanager.spielerdb.export.ExportEntity.SPIELER</a></div><div class="ttdeci">SPIELER</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d50/_export_entity_8java_source.html#l00012">ExportEntity.java:12</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity_html_a3461d97b5429540ebb35eb1c76ca2e3f"><div class="ttname"><a href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#a3461d97b5429540ebb35eb1c76ca2e3f">de.petanqueturniermanager.spielerdb.export.ExportEntity.VEREINE</a></div><div class="ttdeci">VEREINE</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d50/_export_entity_8java_source.html#l00013">ExportEntity.java:13</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity_html_ab89c57eb77b9f3f16976a12a18625e09"><div class="ttname"><a href="../../d6/d19/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1export_1_1_export_entity.html#ab89c57eb77b9f3f16976a12a18625e09">de.petanqueturniermanager.spielerdb.export.ExportEntity.LABELS</a></div><div class="ttdeci">LABELS</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d50/_export_entity_8java_source.html#l00014">ExportEntity.java:14</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_a2ad65486cb1734a461864ddf88f80fa6"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#a2ad65486cb1734a461864ddf88f80fa6">de.petanqueturniermanager.spielerdb.export.ExportMeta</a></div><div class="ttdeci">record ExportMeta(int version, Instant exportedAt, @Nullable String appVersion)</div><div class="ttdoc">Versionierte Meta-Information jedes Exports.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/df6/_export_meta_8java_source.html#l00016">ExportMeta.java:16</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_a5c580a7b24befb12f2b213683c3b24ae"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#a5c580a7b24befb12f2b213683c3b24ae">de.petanqueturniermanager.spielerdb.export.SpielerLabelZuordnung</a></div><div class="ttdeci">record SpielerLabelZuordnung(int spielerNr, int labelNr)</div><div class="ttdoc">Junction-Eintrag aus SPIELER_LABEL.</div><div class="ttdef"><b>Definition</b> <a href="../../de/dbe/_spieler_label_zuordnung_8java_source.html#l00004">SpielerLabelZuordnung.java:4</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export_html_ac662546311ca3ded8852cffe88d97333"><div class="ttname"><a href="../../d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html#ac662546311ca3ded8852cffe88d97333">de.petanqueturniermanager.spielerdb.export.SpielerDbExportData</a></div><div class="ttdeci">record SpielerDbExportData(ExportMeta meta, List&lt; SpielerMitVerein &gt; spieler, List&lt; VereinDatensatz &gt; vereine, List&lt; LabelDatensatz &gt; labels, List&lt; SpielerLabelZuordnung &gt; spielerLabels)</div><div class="ttdoc">In-Memory-Repräsentation aller Daten, die ein konkreter Export schreibt.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dfe/_spieler_db_export_data_8java_source.html#l00017">SpielerDbExportData.java:17</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_html_a738f3eaecc711ab94b90e3511c031ab7"><div class="ttname"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7">de.petanqueturniermanager.spielerdb.SpielerMitVerein</a></div><div class="ttdeci">record SpielerMitVerein(int nr, String vorname, String nachname, @Nullable Integer vereinNr, @Nullable String vereinName, List&lt; Integer &gt; labelNrs, List&lt; String &gt; labelNamen, @Nullable String lizenznr)</div><div class="ttdoc">Anzeige-Record für die Trefferliste der Suche: Spielerfelder denormalisiert mit Vereinsname und Liste...</div><div class="ttdef"><b>Definition</b> <a href="../../db/d70/_spieler_mit_verein_8java_source.html#l00012">SpielerMitVerein.java:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_5f460adda081a765fa21a09550c6289d.html">export</a></li><li class="navelem"><a href="../../de/da4/_spieler_db_export_loader_8java.html">SpielerDbExportLoader.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

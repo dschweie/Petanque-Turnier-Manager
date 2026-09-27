@@ -1,0 +1,26 @@
+var classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator =
+[
+    [ "SuperMeleeWithDecorator", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a92f98c2458682c37b362a5e76642e6f1", null ],
+    [ "buildDoublette", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a6b38a2d358341067e977c37f5936d23e", null ],
+    [ "buildTriplette", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#ada9ec2b00abcb1e66bb56a2bcdc7794f", null ],
+    [ "decreaseUniqueTeamId", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#ae24578ddba7485060848452c3365f7be", null ],
+    [ "finalizeGrid", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a770a98a6101349f7af63a615107551cb", null ],
+    [ "getDoubletteMaximum", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a78a90dd610a942b2e8d8dc489e758b07", null ],
+    [ "getMatchdayNumber", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#aeece406bbcd0c98af48fd24ac5b39c8a", null ],
+    [ "getUniqueTeamId", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a0b9e6edf38280b112f285f4f8085fd25", null ],
+    [ "neueSpielrunde", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a2ba16ecae509852d19a400c8c9bedad9", null ],
+    [ "neueSpielrundeTripletteMode", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#ada37559da99e9d668e9069dd3f601067", null ],
+    [ "resetPermutationGenerator", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#af9ae8a1c7f3821e5e2f4d32d75097053", null ],
+    [ "tryDoubletteVSDoublette", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#ab7e11a579e96aa84d8db2806dd47581f", null ],
+    [ "tryDoubletteVSTriplette", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a343ce58e28de7af195f248187b353599", null ],
+    [ "tryEncounter", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a9384a0e6400823799571b82f96bdccb2", null ],
+    [ "tryTripletteVSTriplette", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a1e578b0e35e5f86c7e995a1a3f81f79c", null ],
+    [ "updateDoubletteValue", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a14e002b3635ddae08dd77bba240f2136", null ],
+    [ "updateParticipants", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#adaea5688c31f1027eec156d267cf6054", null ],
+    [ "generator", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a8b3f48e2b7bc149a369b0af685cdc458", null ],
+    [ "logger", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a71313126c0ba1cdd251afd109ecce79a", null ],
+    [ "maximumForDoublette", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#affcb0532e313cb4424f8f40dc85dc01b", null ],
+    [ "participants", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a9cd9003ed0b395d1ecad35ac9738dbed", null ],
+    [ "ruleset", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#aa0cd5cb059d2a1a03f436f97431eda1a", null ],
+    [ "uniqueTeamId", "d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#a2278b46e6709bf81c2175a22df908929", null ]
+];

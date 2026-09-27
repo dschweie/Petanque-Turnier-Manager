@@ -1,0 +1,4 @@
+var _participants_were_not_teammates_last_round_8java =
+[
+    [ "de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsWereNotTeammatesLastRound", "d9/d79/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_last_round.html", "d9/d79/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_last_round" ]
+];

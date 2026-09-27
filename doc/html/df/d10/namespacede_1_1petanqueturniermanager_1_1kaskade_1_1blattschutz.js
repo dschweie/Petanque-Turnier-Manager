@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1kaskade_1_1blattschutz =
+[
+    [ "KaskadeBlattschutzKonfiguration", "d6/d86/classde_1_1petanqueturniermanager_1_1kaskade_1_1blattschutz_1_1_kaskade_blattschutz_konfiguration.html", "d6/d86/classde_1_1petanqueturniermanager_1_1kaskade_1_1blattschutz_1_1_kaskade_blattschutz_konfiguration" ]
+];

@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/comp/newrelease/DirectUpdate.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/d2c/_direct_update_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DirectUpdate.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d2c/_direct_update_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.comp.newrelease;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.net.MalformedURLException;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.net.URI;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.net.URL;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.nio.file.Files;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> java.nio.file.Path;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.commons.io.FileUtils;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> org.jspecify.annotations.Nullable;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.system.SystemShellExecuteFlags;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> com.sun.star.system.XSystemShellExecute;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.SheetRunner;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.konfiguration.IKonfigurationSheet;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">import</span> de.petanqueturniermanager.helper.msgbox.MessageBox;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">import</span> de.petanqueturniermanager.helper.msgbox.MessageBoxTypeEnum;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html">   35</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a1dda409c10c2d4a78ef22c8e0d313c5e">DirectUpdate</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a8d590bab2bf677f507cb1533369c0c88">SheetRunner</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a5ae304a5aa479b75c8ce96a1c5e3ebf7">   37</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a5ae304a5aa479b75c8ce96a1c5e3ebf7">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a1dda409c10c2d4a78ef22c8e0d313c5e">DirectUpdate</a>.class);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a1dda409c10c2d4a78ef22c8e0d313c5e">   39</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a1dda409c10c2d4a78ef22c8e0d313c5e">DirectUpdate</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        super(<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>, <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a>.<a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3700c34c813fea16dc9365e0a3ec8a2f">KEIN</a>, <span class="stringliteral">&quot;Direkt-Aktualisierung&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    @Override</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a830a0e724630af30f7ca15279c209dc6">   44</a></span>    <span class="keyword">protected</span> @Nullable <a class="code hl_interface" href="../../df/d4e/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_konfiguration_sheet.html">IKonfigurationSheet</a> <a class="code hl_function" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a830a0e724630af30f7ca15279c209dc6">getKonfigurationSheet</a>() {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    @Override</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a43a3a3b55d702d6c3537d8c0f4a269c8">   49</a></span>    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a43a3a3b55d702d6c3537d8c0f4a269c8">doRun</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html">ExtensionsHelper</a> extensionsHelper = <a class="code hl_class" href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html">ExtensionsHelper</a>.<a class="code hl_function" href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html#aca2f353324adb45faaf2f6f78bbfd2e2">from</a>(<a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a3a040d006f6587fff8d367ee47b97527">getxContext</a>());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.direkt.aktualisierung.start&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.installierte.version&quot;</span>, extensionsHelper.<a class="code hl_function" href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html#a25bd6f90b5637404977a74f0fbe1e8c8">getVersionNummer</a>());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_function" href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">ReleaseInfo</a> release;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            release = <a class="code hl_class" href="../../df/d7c/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service.html">ReleaseUpdateService</a>.<a class="code hl_function" href="../../df/d7c/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service.html#a3c340f4b1b2e90e2bc5b86f3173d28ab">get</a>().<a class="code hl_function" href="../../df/d7c/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service.html#aac6e244e68eab4bc1660eb68c3a2185c">getAktuellesRelease</a>().orElse(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        } <span class="keywordflow">catch</span> (IllegalStateException e) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            release = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (release == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">processBox</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">fehler</a>(<span class="stringliteral">&quot;Keine &quot;</span> + <a class="code hl_class" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html">DownloadExtension</a>.<a class="code hl_variable" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html#a8868caf0fdf00c5840e60da974485792">EXTENSION_FILE_SUFFIX</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    + <span class="stringliteral">&quot; Datei zum Download vorhanden.&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        var oxtAsset = release.findeAsset(</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <a class="code hl_class" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html">DownloadExtension</a>.<a class="code hl_variable" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html#aeaece7a097f3206330aac9d12405b7ee">EXTENSION_FILE_PREFIX</a>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <a class="code hl_class" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html">DownloadExtension</a>.<a class="code hl_variable" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html#a8868caf0fdf00c5840e60da974485792">EXTENSION_FILE_SUFFIX</a>).orElse(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (oxtAsset == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">processBox</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">fehler</a>(<span class="stringliteral">&quot;Keine &quot;</span> + <a class="code hl_class" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html">DownloadExtension</a>.<a class="code hl_variable" href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html#a8868caf0fdf00c5840e60da974485792">EXTENSION_FILE_SUFFIX</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    + <span class="stringliteral">&quot; Datei zum Download vorhanden.&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        URL downloadURL;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            downloadURL = URI.create(oxtAsset.downloadUrl()).toURL();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        } <span class="keywordflow">catch</span> (IllegalArgumentException | MalformedURLException e) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">processBox</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">fehler</a>(<span class="stringliteral">&quot;Ungültige Download-URL: &quot;</span> + e.getMessage());</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.lade.herunter&quot;</span>, downloadURL.toString());</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            Path tempDir = Files.createTempDirectory(<span class="stringliteral">&quot;ptm_update&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            Path tempFile = tempDir.resolve(oxtAsset.name());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            FileUtils.copyURLToFile(downloadURL, tempFile.toFile(), 30000, 30000);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.download.abgeschlossen.installation&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            var xShell = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#a0f8dab9f808c840ab3728413ed143c1d">createInstanceMCF</a>(</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    XSystemShellExecute.class,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <span class="stringliteral">&quot;com.sun.star.system.SystemShellExecute&quot;</span>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a3a040d006f6587fff8d367ee47b97527">getxContext</a>().getServiceManager(),</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a3a040d006f6587fff8d367ee47b97527">getxContext</a>());</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">if</span> (xShell == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html#a617f28fab400157a3f87a458682968cf">GenerateException</a>(<span class="stringliteral">&quot;SystemShellExecute nicht verfügbar.&quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            xShell.execute(tempFile.toUri().toString(), <span class="stringliteral">&quot;&quot;</span>, (<span class="keywordtype">short</span>) SystemShellExecuteFlags.URIS_ONLY);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.neue.version.installiert&quot;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_class" href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html">MessageBox</a>.<a class="code hl_function" href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html#a9c3722f42ee497fa0ddb0f9bf3161441">from</a>(<a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a3a040d006f6587fff8d367ee47b97527">getxContext</a>(), <a class="code hl_class" href="../../dd/d29/enumde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_type_enum.html">MessageBoxTypeEnum</a>.<a class="code hl_variable" href="../../dd/d29/enumde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_type_enum.html#a8292ba74018fb6df5906f7f9ceb34efc">INFO_OK</a>)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    .<a class="code hl_variable" href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html#a86e38f3a8c905f0e4fe29fb635d1023b">caption</a>(<a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;msg.caption.aktualisierung.abgeschlossen&quot;</span>))</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    .message(<a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;msg.text.aktualisierung.abgeschlossen&quot;</span>))</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    .show();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> e) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_variable" href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a5ae304a5aa479b75c8ce96a1c5e3ebf7">logger</a>.error(e.getMessage(), e);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">processBox</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">fehler</a>(e.getMessage());</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+</div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a2fbd04aa5d4d2750ee8b86b339bf0852"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">de.petanqueturniermanager.SheetRunner.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00602">SheetRunner.java:602</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a3a040d006f6587fff8d367ee47b97527"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a3a040d006f6587fff8d367ee47b97527">de.petanqueturniermanager.SheetRunner.getxContext</a></div><div class="ttdeci">XComponentContext getxContext()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00565">SheetRunner.java:565</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a4e2265626d9734997efd9e9e004bc215"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">de.petanqueturniermanager.SheetRunner.processBox</a></div><div class="ttdeci">ProcessBox processBox()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00606">SheetRunner.java:606</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a5d3fce9090dbab6b8a3b10d4a550a8ec"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">de.petanqueturniermanager.SheetRunner.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00047">SheetRunner.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a8d590bab2bf677f507cb1533369c0c88"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a8d590bab2bf677f507cb1533369c0c88">de.petanqueturniermanager.SheetRunner.SheetRunner</a></div><div class="ttdeci">SheetRunner(WorkingSpreadsheet workingSpreadsheet, TurnierSystem spielSystem, String logPrefix)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00095">SheetRunner.java:95</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update_html_a1dda409c10c2d4a78ef22c8e0d313c5e"><div class="ttname"><a href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a1dda409c10c2d4a78ef22c8e0d313c5e">de.petanqueturniermanager.comp.newrelease.DirectUpdate.DirectUpdate</a></div><div class="ttdeci">DirectUpdate(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">DirectUpdate.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update_html_a43a3a3b55d702d6c3537d8c0f4a269c8"><div class="ttname"><a href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a43a3a3b55d702d6c3537d8c0f4a269c8">de.petanqueturniermanager.comp.newrelease.DirectUpdate.doRun</a></div><div class="ttdeci">void doRun()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">DirectUpdate.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update_html_a5ae304a5aa479b75c8ce96a1c5e3ebf7"><div class="ttname"><a href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a5ae304a5aa479b75c8ce96a1c5e3ebf7">de.petanqueturniermanager.comp.newrelease.DirectUpdate.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00037">DirectUpdate.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update_html_a830a0e724630af30f7ca15279c209dc6"><div class="ttname"><a href="../../d6/d9a/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_direct_update.html#a830a0e724630af30f7ca15279c209dc6">de.petanqueturniermanager.comp.newrelease.DirectUpdate.getKonfigurationSheet</a></div><div class="ttdeci">IKonfigurationSheet getKonfigurationSheet()</div><div class="ttdef"><b>Definition</b> <a href="#l00044">DirectUpdate.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension_html"><div class="ttname"><a href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html">de.petanqueturniermanager.comp.newrelease.DownloadExtension</a></div><div class="ttdoc">Lädt das aktuellste OXT-Release in ein vom Nutzer gewähltes Verzeichnis.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d2a/_download_extension_8java_source.html#l00031">DownloadExtension.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension_html_a8868caf0fdf00c5840e60da974485792"><div class="ttname"><a href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html#a8868caf0fdf00c5840e60da974485792">de.petanqueturniermanager.comp.newrelease.DownloadExtension.EXTENSION_FILE_SUFFIX</a></div><div class="ttdeci">static final String EXTENSION_FILE_SUFFIX</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d2a/_download_extension_8java_source.html#l00034">DownloadExtension.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension_html_aeaece7a097f3206330aac9d12405b7ee"><div class="ttname"><a href="../../d6/d8e/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_download_extension.html#aeaece7a097f3206330aac9d12405b7ee">de.petanqueturniermanager.comp.newrelease.DownloadExtension.EXTENSION_FILE_PREFIX</a></div><div class="ttdeci">static final String EXTENSION_FILE_PREFIX</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d2a/_download_extension_8java_source.html#l00033">DownloadExtension.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper_html"><div class="ttname"><a href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html">de.petanqueturniermanager.comp.newrelease.ExtensionsHelper</a></div><div class="ttdoc">Wrapper um XPackageInformationProvider mit defensiver Programmierung.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dbc/_extensions_helper_8java_source.html#l00027">ExtensionsHelper.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper_html_a25bd6f90b5637404977a74f0fbe1e8c8"><div class="ttname"><a href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html#a25bd6f90b5637404977a74f0fbe1e8c8">de.petanqueturniermanager.comp.newrelease.ExtensionsHelper.getVersionNummer</a></div><div class="ttdeci">String getVersionNummer()</div><div class="ttdoc">Liefert die installierte Plugin-Version oder null, wenn sie nicht ermittelbar ist (LibreOffice-Init n...</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dbc/_extensions_helper_8java_source.html#l00061">ExtensionsHelper.java:61</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper_html_aca2f353324adb45faaf2f6f78bbfd2e2"><div class="ttname"><a href="../../db/da9/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_extensions_helper.html#aca2f353324adb45faaf2f6f78bbfd2e2">de.petanqueturniermanager.comp.newrelease.ExtensionsHelper.from</a></div><div class="ttdeci">static ExtensionsHelper from(XComponentContext xComponentContext)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dbc/_extensions_helper_8java_source.html#l00039">ExtensionsHelper.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service_html"><div class="ttname"><a href="../../df/d7c/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service.html">de.petanqueturniermanager.comp.newrelease.ReleaseUpdateService</a></div><div class="ttdoc">Zentraler Service für die Plugin-Versionserkennung und den Update-Check.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d2e/_release_update_service_8java_source.html#l00053">ReleaseUpdateService.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service_html_a3c340f4b1b2e90e2bc5b86f3173d28ab"><div class="ttname"><a href="../../df/d7c/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service.html#a3c340f4b1b2e90e2bc5b86f3173d28ab">de.petanqueturniermanager.comp.newrelease.ReleaseUpdateService.get</a></div><div class="ttdeci">static ReleaseUpdateService get()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d2e/_release_update_service_8java_source.html#l00113">ReleaseUpdateService.java:113</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service_html_aac6e244e68eab4bc1660eb68c3a2185c"><div class="ttname"><a href="../../df/d7c/classde_1_1petanqueturniermanager_1_1comp_1_1newrelease_1_1_release_update_service.html#aac6e244e68eab4bc1660eb68c3a2185c">de.petanqueturniermanager.comp.newrelease.ReleaseUpdateService.getAktuellesRelease</a></div><div class="ttdeci">Optional&lt; ReleaseInfo &gt; getAktuellesRelease()</div><div class="ttdoc">Zuletzt bekannte neueste Release-Info (aus Cache oder live abgerufen).</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d2e/_release_update_service_8java_source.html#l00197">ReleaseUpdateService.java:197</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html_a617f28fab400157a3f87a458682968cf"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html#a617f28fab400157a3f87a458682968cf">de.petanqueturniermanager.exception.GenerateException.GenerateException</a></div><div class="ttdeci">GenerateException(String msg)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00010">GenerateException.java:10</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_a0f8dab9f808c840ab3728413ed143c1d"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#a0f8dab9f808c840ab3728413ed143c1d">de.petanqueturniermanager.helper.Lo.createInstanceMCF</a></div><div class="ttdeci">static&lt; T &gt; T createInstanceMCF(Class&lt; T &gt; aType, String serviceName, XMultiComponentFactory mcFactory, XComponentContext xComponentContext)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00051">Lo.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">de.petanqueturniermanager.helper.i18n.I18n</a></div><div class="ttdoc">Lokalisierungs-Helfer.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00029">I18n.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html_a09756390c5ee255a5223ddad55a3910d"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">de.petanqueturniermanager.helper.i18n.I18n.get</a></div><div class="ttdeci">static String get(String key)</div><div class="ttdoc">Gibt den lokalisierten Text für den angegebenen Schlüssel zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00083">I18n.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_html"><div class="ttname"><a href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html">de.petanqueturniermanager.helper.msgbox.MessageBox</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/dac/_message_box_8java_source.html#l00020">MessageBox.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_html_a86e38f3a8c905f0e4fe29fb635d1023b"><div class="ttname"><a href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html#a86e38f3a8c905f0e4fe29fb635d1023b">de.petanqueturniermanager.helper.msgbox.MessageBox.caption</a></div><div class="ttdeci">String caption</div><div class="ttdef"><b>Definition</b> <a href="../../db/dac/_message_box_8java_source.html#l00027">MessageBox.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_html_a9c3722f42ee497fa0ddb0f9bf3161441"><div class="ttname"><a href="../../df/d12/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box.html#a9c3722f42ee497fa0ddb0f9bf3161441">de.petanqueturniermanager.helper.msgbox.MessageBox.from</a></div><div class="ttdeci">static final MessageBox from(XComponentContext xContext, MessageBoxTypeEnum type)</div><div class="ttdef"><b>Definition</b> <a href="../../db/dac/_message_box_8java_source.html#l00036">MessageBox.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a5d15b32119e93eab9e02a144899cad08"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">de.petanqueturniermanager.helper.msgbox.ProcessBox.fehler</a></div><div class="ttdeci">synchronized ProcessBox fehler(String logMsg)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00577">ProcessBox.java:577</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_turnier_system_8java_source.html#l00009">TurnierSystem.java:9</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a3700c34c813fea16dc9365e0a3ec8a2f"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a3700c34c813fea16dc9365e0a3ec8a2f">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.KEIN</a></div><div class="ttdeci">KEIN</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_turnier_system_8java_source.html#l00011">TurnierSystem.java:11</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_type_enum_html"><div class="ttname"><a href="../../dd/d29/enumde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_type_enum.html">de.petanqueturniermanager.helper.msgbox.MessageBoxTypeEnum</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d56/_message_box_type_enum_8java_source.html#l00007">MessageBoxTypeEnum.java:7</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_type_enum_html_a8292ba74018fb6df5906f7f9ceb34efc"><div class="ttname"><a href="../../dd/d29/enumde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_message_box_type_enum.html#a8292ba74018fb6df5906f7f9ceb34efc">de.petanqueturniermanager.helper.msgbox.MessageBoxTypeEnum.INFO_OK</a></div><div class="ttdeci">INFO_OK</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d56/_message_box_type_enum_8java_source.html#l00008">MessageBoxTypeEnum.java:8</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_konfiguration_sheet_html"><div class="ttname"><a href="../../df/d4e/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_konfiguration_sheet.html">de.petanqueturniermanager.basesheet.konfiguration.IKonfigurationSheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d57/_i_konfiguration_sheet_8java_source.html#l00013">IKonfigurationSheet.java:13</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease_html_abbb11f9b137e66b13f8ccaf1905a235b"><div class="ttname"><a href="../../d7/d70/namespacede_1_1petanqueturniermanager_1_1comp_1_1newrelease.html#abbb11f9b137e66b13f8ccaf1905a235b">de.petanqueturniermanager.comp.newrelease.ReleaseInfo</a></div><div class="ttdeci">record ReleaseInfo(String tagName, String name, @Nullable Instant publishedAt, boolean prerelease, @Nullable String body, List&lt; AssetInfo &gt; assets)</div><div class="ttdoc">Reduzierte, projektinterne Darstellung einer GitHub-Release-Antwort.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/dea/_release_info_8java_source.html#l00029">ReleaseInfo.java:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_703d3c4b9989bf1c20a29a3ebe047f31.html">comp</a></li><li class="navelem"><a href="../../dir_12ee4ffd85c43ae1dced1e5b29ae0b5d.html">newrelease</a></li><li class="navelem"><a href="../../d6/d2c/_direct_update_8java.html">DirectUpdate.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

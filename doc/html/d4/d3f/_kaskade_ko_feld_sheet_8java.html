@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/kaskade/spielrunde/KaskadeKoFeldSheet.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d3f/_kaskade_ko_feld_sheet_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KaskadeKoFeldSheet.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.List;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.SheetRunner;</code><br />
+<code>import de.petanqueturniermanager.algorithmen.kaskaden.KaskadenFeldBelegung;</code><br />
+<code>import de.petanqueturniermanager.algorithmen.kaskaden.KaskadenKoRundenPlaner;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.ISheet;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.SheetNamen;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.DefaultSheetPos;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.TurnierSheet;</code><br />
+<code>import de.petanqueturniermanager.kaskade.konfiguration.KaskadeKoBracketKonfigAdapter;</code><br />
+<code>import de.petanqueturniermanager.kaskade.konfiguration.KaskadeKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.kaskade.meldeliste.KaskadeMeldeListeSheetUpdate;</code><br />
+<code>import de.petanqueturniermanager.ko.KoTurnierbaumSheet;</code><br />
+<code>import de.petanqueturniermanager.model.Team;</code><br />
+<code>import de.petanqueturniermanager.model.TeamMeldungen;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für KaskadeKoFeldSheet.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d53/_kaskade_ko_feld_sheet_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2kaskade_2spielrunde_2_kaskade_ko_feld_sheet_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2kaskade_2spielrunde_2_kaskade_ko_feld_sheet_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2kaskade_2spielrunde_2_kaskade_ko_feld_sheet_8java">
+<area shape="rect" title=" " alt="" coords="2355,5,2651,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,97,131"/>
+<area shape="poly" title=" " alt="" coords="2352,30,1829,39,1131,52,484,72,248,84,109,99,97,101,95,96,108,93,248,79,483,67,1131,47,1829,34,2358,29"/>
+<area shape="rect" title=" " alt="" coords="120,96,286,139"/>
+<area shape="poly" title=" " alt="" coords="2352,29,1915,37,1329,49,742,68,494,82,301,99,301,93,494,77,742,63,1329,43,1915,32,2357,29"/>
+<area shape="rect" title=" " alt="" coords="310,96,475,139"/>
+<area shape="poly" title=" " alt="" coords="2352,30,1951,39,1419,51,889,70,666,83,491,98,490,93,665,78,889,65,1419,45,1950,33,2357,30"/>
+<area shape="rect" title=" " alt="" coords="499,104,718,131"/>
+<area shape="poly" title=" " alt="" coords="2352,28,2057,33,1654,42,1195,63,961,78,731,99,691,104,691,98,731,93,960,73,1195,57,1654,37,2057,27,2358,27"/>
+<area shape="rect" title=" " alt="" coords="742,96,925,139"/>
+<area shape="poly" title=" " alt="" coords="2352,27,2092,32,1742,41,1345,62,1141,78,941,98,940,93,1141,72,1345,56,1742,36,2092,27,2358,27"/>
+<area shape="rect" title=" " alt="" coords="949,96,1262,139"/>
+<area shape="poly" title=" " alt="" coords="2357,33,1880,58,1582,75,1278,98,1278,93,1581,70,1879,52,2352,33"/>
+<area shape="rect" title=" " alt="" coords="1286,96,1600,139"/>
+<area shape="poly" title=" " alt="" coords="2358,37,2021,64,1615,98,1615,93,2020,58,2352,38"/>
+<area shape="rect" title=" " alt="" coords="1623,96,1842,139"/>
+<area shape="poly" title=" " alt="" coords="2358,41,2125,66,1857,98,1857,93,2125,61,2352,41"/>
+<area shape="rect" title=" " alt="" coords="1866,96,2108,139"/>
+<area shape="poly" title=" " alt="" coords="2385,48,2123,95,2123,90,2379,49"/>
+<area shape="rect" title=" " alt="" coords="2132,96,2354,139"/>
+<area shape="poly" title=" " alt="" coords="2445,48,2319,93,2318,88,2439,49"/>
+<area shape="rect" title=" " alt="" coords="2378,96,2628,139"/>
+<area shape="poly" title=" " alt="" coords="2505,47,2505,82,2501,79,2501,50"/>
+<area shape="rect" title=" " alt="" coords="2652,96,2909,139"/>
+<area shape="poly" title=" " alt="" coords="2568,46,2703,91,2698,90,2568,51"/>
+<area shape="rect" title=" " alt="" coords="2933,96,3190,139"/>
+<area shape="poly" title=" " alt="" coords="2634,46,2920,93,2915,93,2634,51"/>
+<area shape="rect" title=" " alt="" coords="3214,96,3472,139"/>
+<area shape="poly" title=" " alt="" coords="2651,38,2903,61,3202,96,3196,95,2903,66,2651,43"/>
+<area shape="rect" title=" " alt="" coords="3496,96,3809,139"/>
+<area shape="poly" title=" " alt="" coords="2651,33,3023,57,3483,96,3477,96,3023,62,2651,39"/>
+<area shape="rect" title=" " alt="" coords="3833,96,4146,139"/>
+<area shape="poly" title=" " alt="" coords="2651,30,3163,51,3488,69,3821,96,3815,96,3487,74,3163,56,2651,35"/>
+<area shape="rect" title=" " alt="" coords="4170,96,4468,139"/>
+<area shape="poly" title=" " alt="" coords="2651,27,2928,33,3300,45,3723,64,4157,96,4152,96,3723,69,3300,50,2928,38,2651,33"/>
+<area shape="rect" title=" " alt="" coords="4492,96,4692,139"/>
+<area shape="poly" title=" " alt="" coords="2651,28,3569,49,4087,68,4306,80,4480,96,4474,96,4305,85,4087,73,3568,54,2651,33"/>
+<area shape="rect" title=" " alt="" coords="4716,104,4970,131"/>
+<area shape="poly" title=" " alt="" coords="2651,28,3688,50,4275,69,4519,81,4705,93,4754,101,4749,101,4704,99,4519,86,4275,75,3688,55,2651,33"/>
+<area shape="rect" title=" " alt="" coords="4994,96,5215,139"/>
+<area shape="poly" title=" " alt="" coords="2651,27,3140,33,3805,46,4476,65,4759,78,4981,96,4976,96,4758,83,4475,70,3805,51,3140,38,2651,32"/>
+<area shape="rect" title=" " alt="" coords="5239,96,5548,139"/>
+<area shape="poly" title=" " alt="" coords="2651,27,3920,49,4665,68,4980,80,5226,96,5221,96,4980,85,4665,73,3920,54,2651,33"/>
+</map>
+</div>
+</div>
+<p><a href="../../d4/d3f/_kaskade_ko_feld_sheet_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekaskade_2Espielrunde_2EKaskadeKoFeldSheet" id="r_de_2Epetanqueturniermanager_2Ekaskade_2Espielrunde_2EKaskadeKoFeldSheet"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/db7/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_ko_feld_sheet.html">de.petanqueturniermanager.kaskade.spielrunde.KaskadeKoFeldSheet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt für jedes Kaskaden-Endfeld (A, B, C, D …) einen visuellen KO-Turnierbaum.  <a href="../../d6/db7/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_ko_feld_sheet.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekaskade_2Espielrunde" id="r_de_2Epetanqueturniermanager_2Ekaskade_2Espielrunde"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../db/da9/namespacede_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde.html">de.petanqueturniermanager.kaskade.spielrunde</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_851147c5a079ca862d6f0a1a0c929383.html">kaskade</a></li><li class="navelem"><a href="../../dir_419e7ad372f61ea09f4c007c921fe4df.html">spielrunde</a></li><li class="navelem"><a href="../../d4/d3f/_kaskade_ko_feld_sheet_8java.html">KaskadeKoFeldSheet.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/schweizer/spielrunde/SchweizerSpielrundeSheetUpdate.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/dff/_schweizer_spielrunde_sheet_update_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SchweizerSpielrundeSheetUpdate.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/dff/_schweizer_spielrunde_sheet_update_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.schweizer.spielrunde;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> de.petanqueturniermanager.algorithmen.schweizer.SchweizerTeamErgebnis;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.petanqueturniermanager.model.TeamMeldungen;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.supermelee.SpielRundeNr;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html">   16</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a633a1d01fb9444e3f684d53eae3abdbf">SchweizerSpielrundeSheetUpdate</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a384f73008dd66740759126c496038a4e">SchweizerAbstractSpielrundeSheet</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a633a1d01fb9444e3f684d53eae3abdbf">   18</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a633a1d01fb9444e3f684d53eae3abdbf">SchweizerSpielrundeSheetUpdate</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        super(<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a901cf03a1d1507d87d903367cfee80b7">   22</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a901cf03a1d1507d87d903367cfee80b7">SchweizerSpielrundeSheetUpdate</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> ts, String <a class="code hl_variable" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a20330cf2d85c896859e0d24300d89b44">sheetBaseName</a>) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        super(<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>, ts, <a class="code hl_variable" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a20330cf2d85c896859e0d24300d89b44">sheetBaseName</a>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    @Override</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a7a9cc0a02af5771b74e75cf1dc9186b0">   28</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a7a9cc0a02af5771b74e75cf1dc9186b0">doRun</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a83171a0a25ea9ee3371f801245b94b5a">getxCalculatable</a>().enableAutomaticCalculation(<span class="keyword">false</span>); <span class="comment">// speed up</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html">SpielRundeNr</a> aktuelleSpielrunde = <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a231b7b20e404dedce15876578d6f691d">getKonfigurationSheet</a>().<a class="code hl_function" href="../../d9/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet.html#af27aa15084c853351d8f30fa2ec7e6f2">getAktiveSpielRunde</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.aktuelle.spielrunde&quot;</span>, aktuelleSpielrunde.<a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">getNr</a>());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a4dd49a386ee0f74c4417fd35a94cd064">setSpielRundeNrInSheet</a>(aktuelleSpielrunde);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#ab16358cdce560a0807a062207335d03e">getMeldeListe</a>().<a class="code hl_function" href="../../d4/d55/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_update.html#a5decc5ea0d702fc789c9206c1d1282ac">upDateSheet</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">TeamMeldungen</a> aktiveMeldungen = <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#ab16358cdce560a0807a062207335d03e">getMeldeListe</a>().<a class="code hl_function" href="../../d4/d55/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_update.html#ad517c723d8986c4434b22d96db0e136d">getAktiveMeldungen</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a81cbda464c84843d64659160c0b3e384">canStart</a>(aktiveMeldungen)) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        List&lt;SchweizerTeamErgebnis&gt; ergebnisse = <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a65187e60556b928110b712b4f4d28479">gespieltenRundenEinlesen</a>(aktiveMeldungen, 1,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                aktuelleSpielrunde.<a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">getNr</a>() - 1);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// Teams nach Rangliste sortieren (ab Runde 2)</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">TeamMeldungen</a> meldungenFuerAuslosung = (aktuelleSpielrunde.<a class="code hl_function" href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">getNr</a>() &gt; 1)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                ? <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a97d07dfda1b6a81e0e9048d4402877ea">sortierteTeamMeldungen</a>(aktiveMeldungen, ergebnisse)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                : aktiveMeldungen;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#ae61d24649d8eee6ea4f305821c7b4b72">neueSpielrunde</a>(meldungenFuerAuslosung, aktuelleSpielrunde, ergebnisse);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a5d3fce9090dbab6b8a3b10d4a550a8ec"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">de.petanqueturniermanager.SheetRunner.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00047">SheetRunner.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a83171a0a25ea9ee3371f801245b94b5a"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a83171a0a25ea9ee3371f801245b94b5a">de.petanqueturniermanager.SheetRunner.getxCalculatable</a></div><div class="ttdeci">XCalculatable getxCalculatable()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00569">SheetRunner.java:569</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen_html"><div class="ttname"><a href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">de.petanqueturniermanager.model.TeamMeldungen</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/dcd/_team_meldungen_8java_source.html#l00019">TeamMeldungen.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet_html_af27aa15084c853351d8f30fa2ec7e6f2"><div class="ttname"><a href="../../d9/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet.html#af27aa15084c853351d8f30fa2ec7e6f2">de.petanqueturniermanager.schweizer.konfiguration.SchweizerKonfigurationSheet.getAktiveSpielRunde</a></div><div class="ttdeci">final SpielRundeNr getAktiveSpielRunde()</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d39/_schweizer_konfiguration_sheet_8java_source.html#l00093">SchweizerKonfigurationSheet.java:93</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_update_html_a5decc5ea0d702fc789c9206c1d1282ac"><div class="ttname"><a href="../../d4/d55/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_update.html#a5decc5ea0d702fc789c9206c1d1282ac">de.petanqueturniermanager.schweizer.meldeliste.SchweizerMeldeListeSheetUpdate.upDateSheet</a></div><div class="ttdeci">void upDateSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_schweizer_melde_liste_sheet_update_8java_source.html#l00083">SchweizerMeldeListeSheetUpdate.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_update_html_ad517c723d8986c4434b22d96db0e136d"><div class="ttname"><a href="../../d4/d55/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_update.html#ad517c723d8986c4434b22d96db0e136d">de.petanqueturniermanager.schweizer.meldeliste.SchweizerMeldeListeSheetUpdate.getAktiveMeldungen</a></div><div class="ttdeci">TeamMeldungen getAktiveMeldungen()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da7/_schweizer_melde_liste_sheet_update_8java_source.html#l00123">SchweizerMeldeListeSheetUpdate.java:123</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a20330cf2d85c896859e0d24300d89b44"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a20330cf2d85c896859e0d24300d89b44">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.sheetBaseName</a></div><div class="ttdeci">final String sheetBaseName</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00094">SchweizerAbstractSpielrundeSheet.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a231b7b20e404dedce15876578d6f691d"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a231b7b20e404dedce15876578d6f691d">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.getKonfigurationSheet</a></div><div class="ttdeci">SchweizerKonfigurationSheet getKonfigurationSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00120">SchweizerAbstractSpielrundeSheet.java:120</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a384f73008dd66740759126c496038a4e"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a384f73008dd66740759126c496038a4e">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.SchweizerAbstractSpielrundeSheet</a></div><div class="ttdeci">SchweizerAbstractSpielrundeSheet(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00100">SchweizerAbstractSpielrundeSheet.java:100</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a4dd49a386ee0f74c4417fd35a94cd064"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a4dd49a386ee0f74c4417fd35a94cd064">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.setSpielRundeNrInSheet</a></div><div class="ttdeci">void setSpielRundeNrInSheet(SpielRundeNr spielRundeNrInSheet)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00195">SchweizerAbstractSpielrundeSheet.java:195</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a65187e60556b928110b712b4f4d28479"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a65187e60556b928110b712b4f4d28479">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.gespieltenRundenEinlesen</a></div><div class="ttdeci">List&lt; SchweizerTeamErgebnis &gt; gespieltenRundenEinlesen(TeamMeldungen aktiveMeldungen, int abSpielrunde, int bisSpielrunde)</div><div class="ttdoc">Liest alle gespielten Runden ein und befüllt:</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00215">SchweizerAbstractSpielrundeSheet.java:215</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a81cbda464c84843d64659160c0b3e384"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a81cbda464c84843d64659160c0b3e384">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.canStart</a></div><div class="ttdeci">final boolean canStart(TeamMeldungen meldungen)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00124">SchweizerAbstractSpielrundeSheet.java:124</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a97d07dfda1b6a81e0e9048d4402877ea"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a97d07dfda1b6a81e0e9048d4402877ea">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.sortierteTeamMeldungen</a></div><div class="ttdeci">TeamMeldungen sortierteTeamMeldungen(TeamMeldungen aktiveMeldungen, List&lt; SchweizerTeamErgebnis &gt; ergebnisse)</div><div class="ttdoc">Sortiert die aktiven Teams nach Ranglisten-Kriterien (Schweizer System) und gibt eine neue TeamMeldun...</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00327">SchweizerAbstractSpielrundeSheet.java:327</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_ab16358cdce560a0807a062207335d03e"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#ab16358cdce560a0807a062207335d03e">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.getMeldeListe</a></div><div class="ttdeci">SchweizerMeldeListeSheetUpdate getMeldeListe()</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00199">SchweizerAbstractSpielrundeSheet.java:199</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_ae61d24649d8eee6ea4f305821c7b4b72"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#ae61d24649d8eee6ea4f305821c7b4b72">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.neueSpielrunde</a></div><div class="ttdeci">boolean neueSpielrunde(TeamMeldungen meldungen, SpielRundeNr neueSpielrundeNr, List&lt; SchweizerTeamErgebnis &gt; ergebnisse)</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00585">SchweizerAbstractSpielrundeSheet.java:585</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update_html_a633a1d01fb9444e3f684d53eae3abdbf"><div class="ttname"><a href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a633a1d01fb9444e3f684d53eae3abdbf">de.petanqueturniermanager.schweizer.spielrunde.SchweizerSpielrundeSheetUpdate.SchweizerSpielrundeSheetUpdate</a></div><div class="ttdeci">SchweizerSpielrundeSheetUpdate(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">SchweizerSpielrundeSheetUpdate.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update_html_a7a9cc0a02af5771b74e75cf1dc9186b0"><div class="ttname"><a href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a7a9cc0a02af5771b74e75cf1dc9186b0">de.petanqueturniermanager.schweizer.spielrunde.SchweizerSpielrundeSheetUpdate.doRun</a></div><div class="ttdeci">void doRun()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SchweizerSpielrundeSheetUpdate.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update_html_a901cf03a1d1507d87d903367cfee80b7"><div class="ttname"><a href="../../d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html#a901cf03a1d1507d87d903367cfee80b7">de.petanqueturniermanager.schweizer.spielrunde.SchweizerSpielrundeSheetUpdate.SchweizerSpielrundeSheetUpdate</a></div><div class="ttdeci">SchweizerSpielrundeSheetUpdate(WorkingSpreadsheet workingSpreadsheet, TurnierSystem ts, String sheetBaseName)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SchweizerSpielrundeSheetUpdate.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html">de.petanqueturniermanager.supermelee.SpielRundeNr</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/dad/_spiel_runde_nr_8java_source.html#l00011">SpielRundeNr.java:11</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr_html_a82bcfea8561178f65456fe09cb852c0e"><div class="ttname"><a href="../../de/dae/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_runde_nr.html#a82bcfea8561178f65456fe09cb852c0e">de.petanqueturniermanager.supermelee.SpielRundeNr.getNr</a></div><div class="ttdeci">int getNr()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dad/_spiel_runde_nr_8java_source.html#l00019">SpielRundeNr.java:19</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_turnier_system_8java_source.html#l00009">TurnierSystem.java:9</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_ab2c7bea29fa41fa048b599ed07b220c2"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">de.petanqueturniermanager.helper.ISheet.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f2dc274b2ef50bd726f96278ffd481c8.html">schweizer</a></li><li class="navelem"><a href="../../dir_8ddafef893dbbd62f5bdd1c30c6cc8f9.html">spielrunde</a></li><li class="navelem"><a href="../../d9/dff/_schweizer_spielrunde_sheet_update_8java.html">SchweizerSpielrundeSheetUpdate.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

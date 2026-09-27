@@ -1,0 +1,4 @@
+var _supermelee_turnier_test_daten_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.spieltagrangliste.SupermeleeTurnierTestDaten", "d1/d1f/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_supermelee_turnier_test_daten.html", "d1/d1f/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_supermelee_turnier_test_daten" ]
+];

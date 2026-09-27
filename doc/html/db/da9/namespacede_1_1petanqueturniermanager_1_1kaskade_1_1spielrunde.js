@@ -1,0 +1,10 @@
+var namespacede_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde =
+[
+    [ "KaskadeAktuelleRundeSheet", "d6/d43/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_aktuelle_runde_sheet.html", "d6/d43/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_aktuelle_runde_sheet" ],
+    [ "KaskadeGruppenRanglisteSheet", "dc/dfd/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_gruppen_rangliste_sheet.html", "dc/dfd/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_gruppen_rangliste_sheet" ],
+    [ "KaskadeGruppenRanglisteSheetUpdate", "d7/dee/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_gruppen_rangliste_sheet_update.html", "d7/dee/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_gruppen_rangliste_sheet_update" ],
+    [ "KaskadeKoFeldSheet", "d6/db7/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_ko_feld_sheet.html", "d6/db7/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_ko_feld_sheet" ],
+    [ "KaskadenRanglistenAktualisierer", "db/daa/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskaden_ranglisten_aktualisierer.html", "db/daa/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskaden_ranglisten_aktualisierer" ],
+    [ "KaskadeRundenErgebnisLeser", "d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser.html", "d3/d6e/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_runden_ergebnis_leser" ],
+    [ "KaskadeSpielrundeSheet", "d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet.html", "d2/d40/classde_1_1petanqueturniermanager_1_1kaskade_1_1spielrunde_1_1_kaskade_spielrunde_sheet" ]
+];

@@ -1,0 +1,4 @@
+var _nicht_gespielt_hintergrund_farbe_gerade_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.NichtGespieltHintergrundFarbeGeradeStyle", "d3/d6d/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_nicht_gespielt_hintergrund_farbe_gerade_style.html", "d3/d6d/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_nicht_gespielt_hintergrund_farbe_gerade_style" ]
+];

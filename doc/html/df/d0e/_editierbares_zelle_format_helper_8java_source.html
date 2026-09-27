@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/sheet/EditierbaresZelleFormatHelper.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('df/d0e/_editierbares_zelle_format_helper_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EditierbaresZelleFormatHelper.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d0e/_editierbares_zelle_format_helper_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 16.04.2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.helper.sheet;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.petanqueturniermanager.helper.DocumentPropertiesHelper;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.helper.ISheet;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeGeradeStyle;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeUnGeradeStyle;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.RangePosition;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html">   25</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a0af177f5c1f1676c27a6d93959f5073f">EditierbaresZelleFormatHelper</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#aed12a281dd2d4d72a04ac3c75c8f174b">   28</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#aed12a281dd2d4d72a04ac3c75c8f174b">EDITIERBAR_GERADE_FARBE</a> = 0xFFF3E0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#af77b41f9c605b4af0671edc7aef10ce8">   31</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#af77b41f9c605b4af0671edc7aef10ce8">EDITIERBAR_UNGERADE_FARBE</a> = 0xFFE0B2;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">   34</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">PROPERTY_KEY</a> = <span class="stringliteral">&quot;editierbareFelderHervorheben&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a0af177f5c1f1676c27a6d93959f5073f">   36</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a0af177f5c1f1676c27a6d93959f5073f">EditierbaresZelleFormatHelper</a>() {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// Hilfsklasse – kein Instantiieren</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a029e2fc14e4b43556641093415efdf3e">   51</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a029e2fc14e4b43556641093415efdf3e">anwenden</a>(<a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_package" href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">sheet</a>, <a class="code hl_class" href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">RangePosition</a> range) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(<a class="code hl_package" href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">sheet</a>.getWorkingSpreadsheet()).initBooleanPropertyIfAbsent(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">PROPERTY_KEY</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        var geradeStyle = <span class="keyword">new</span> <a class="code hl_function" href="../../d1/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_gerade_style.html#abc740b7064b9f6f5fcc171c89ae2464f">EditierbareZelleHintergrundFarbeGeradeStyle</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#aed12a281dd2d4d72a04ac3c75c8f174b">EDITIERBAR_GERADE_FARBE</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        var ungeradeStyle = <span class="keyword">new</span> <a class="code hl_function" href="../../dc/ded/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_un_gerade_style.html#a614caea056c45415afb24f419f4bd144">EditierbareZelleHintergrundFarbeUnGeradeStyle</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#af77b41f9c605b4af0671edc7aef10ce8">EDITIERBAR_UNGERADE_FARBE</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html">ConditionalFormatHelper</a>.<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a4768115fa6f66a19e5bf8b963dcb6201">from</a>(<a class="code hl_package" href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">sheet</a>, range).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a9afdd9c9dc7b0f7f7b0e56757915fca5">append</a>()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                .<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a1ead4ecdf24d0aba19f02918eba954e9">formulaIsEvenRowAndBoolProp</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">PROPERTY_KEY</a>).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a673b4f4d3276edd9a35dc9e3eb60e283">style</a>(geradeStyle).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a6560fd81748a695b253b93dd671b3046">applyAndDoReset</a>()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                .<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a0812ebfa9bebb35b612b0ad369ca1a7d">formulaIsOddRowAndBoolProp</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">PROPERTY_KEY</a>).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a673b4f4d3276edd9a35dc9e3eb60e283">style</a>(ungeradeStyle).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a6560fd81748a695b253b93dd671b3046">applyAndDoReset</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a9150f0ed2e5c7158862002bf8168207e">   65</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a9150f0ed2e5c7158862002bf8168207e">anwendenFuerTeam</a>(<a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_package" href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">sheet</a>, <a class="code hl_class" href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">RangePosition</a> range, <span class="keywordtype">boolean</span> istTeamA) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(<a class="code hl_package" href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">sheet</a>.getWorkingSpreadsheet()).initBooleanPropertyIfAbsent(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">PROPERTY_KEY</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        var style = istTeamA</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                ? <span class="keyword">new</span> <a class="code hl_function" href="../../d1/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_gerade_style.html#abc740b7064b9f6f5fcc171c89ae2464f">EditierbareZelleHintergrundFarbeGeradeStyle</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#aed12a281dd2d4d72a04ac3c75c8f174b">EDITIERBAR_GERADE_FARBE</a>)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                : <span class="keyword">new</span> <a class="code hl_function" href="../../dc/ded/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_un_gerade_style.html#a614caea056c45415afb24f419f4bd144">EditierbareZelleHintergrundFarbeUnGeradeStyle</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#af77b41f9c605b4af0671edc7aef10ce8">EDITIERBAR_UNGERADE_FARBE</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_class" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html">ConditionalFormatHelper</a>.<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a4768115fa6f66a19e5bf8b963dcb6201">from</a>(<a class="code hl_package" href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">sheet</a>, range).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a9afdd9c9dc7b0f7f7b0e56757915fca5">append</a>()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                .<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a7ec784c9f4f101f08a861d9b375cbedb">formulaBoolProp</a>(<a class="code hl_variable" href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">PROPERTY_KEY</a>).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a673b4f4d3276edd9a35dc9e3eb60e283">style</a>(style).<a class="code hl_function" href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a6560fd81748a695b253b93dd671b3046">applyAndDoReset</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a0a0cf75e4c5ea77ae70ffae3d3c72042"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">de.petanqueturniermanager.helper.DocumentPropertiesHelper.DocumentPropertiesHelper</a></div><div class="ttdeci">DocumentPropertiesHelper(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00065">DocumentPropertiesHelper.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_gerade_style_html_abc740b7064b9f6f5fcc171c89ae2464f"><div class="ttname"><a href="../../d1/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_gerade_style.html#abc740b7064b9f6f5fcc171c89ae2464f">de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeGeradeStyle.EditierbareZelleHintergrundFarbeGeradeStyle</a></div><div class="ttdeci">EditierbareZelleHintergrundFarbeGeradeStyle(int farbe)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d60/_editierbare_zelle_hintergrund_farbe_gerade_style_8java_source.html#l00009">EditierbareZelleHintergrundFarbeGeradeStyle.java:9</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_un_gerade_style_html_a614caea056c45415afb24f419f4bd144"><div class="ttname"><a href="../../dc/ded/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_editierbare_zelle_hintergrund_farbe_un_gerade_style.html#a614caea056c45415afb24f419f4bd144">de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeUnGeradeStyle.EditierbareZelleHintergrundFarbeUnGeradeStyle</a></div><div class="ttdeci">EditierbareZelleHintergrundFarbeUnGeradeStyle(int farbe)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/df7/_editierbare_zelle_hintergrund_farbe_un_gerade_style_8java_source.html#l00009">EditierbareZelleHintergrundFarbeUnGeradeStyle.java:9</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position_html"><div class="ttname"><a href="../../d1/d8a/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_range_position.html">de.petanqueturniermanager.helper.position.RangePosition</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/df3/_range_position_8java_source.html#l00012">RangePosition.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00029">ConditionalFormatHelper.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a0812ebfa9bebb35b612b0ad369ca1a7d"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a0812ebfa9bebb35b612b0ad369ca1a7d">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.formulaIsOddRowAndBoolProp</a></div><div class="ttdeci">ConditionalFormatHelper formulaIsOddRowAndBoolProp(String propKey)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00129">ConditionalFormatHelper.java:129</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a1ead4ecdf24d0aba19f02918eba954e9"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a1ead4ecdf24d0aba19f02918eba954e9">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.formulaIsEvenRowAndBoolProp</a></div><div class="ttdeci">ConditionalFormatHelper formulaIsEvenRowAndBoolProp(String propKey)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00123">ConditionalFormatHelper.java:123</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a4768115fa6f66a19e5bf8b963dcb6201"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a4768115fa6f66a19e5bf8b963dcb6201">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.from</a></div><div class="ttdeci">static ConditionalFormatHelper from(ISheet sheet, RangePosition rangePos)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00056">ConditionalFormatHelper.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a6560fd81748a695b253b93dd671b3046"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a6560fd81748a695b253b93dd671b3046">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.applyAndDoReset</a></div><div class="ttdeci">ConditionalFormatHelper applyAndDoReset()</div><div class="ttdoc">Formatierung anwenden und Builder zurücksetzen.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00197">ConditionalFormatHelper.java:197</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a673b4f4d3276edd9a35dc9e3eb60e283"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a673b4f4d3276edd9a35dc9e3eb60e283">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.style</a></div><div class="ttdeci">ConditionalFormatHelper style(String styleName)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00160">ConditionalFormatHelper.java:160</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a7ec784c9f4f101f08a861d9b375cbedb"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a7ec784c9f4f101f08a861d9b375cbedb">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.formulaBoolProp</a></div><div class="ttdeci">ConditionalFormatHelper formulaBoolProp(String propKey)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00135">ConditionalFormatHelper.java:135</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper_html_a9afdd9c9dc7b0f7f7b0e56757915fca5"><div class="ttname"><a href="../../d3/da1/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_conditional_format_helper.html#a9afdd9c9dc7b0f7f7b0e56757915fca5">de.petanqueturniermanager.helper.sheet.ConditionalFormatHelper.append</a></div><div class="ttdeci">ConditionalFormatHelper append()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d71/_conditional_format_helper_8java_source.html#l00078">ConditionalFormatHelper.java:78</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper_html_a029e2fc14e4b43556641093415efdf3e"><div class="ttname"><a href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a029e2fc14e4b43556641093415efdf3e">de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper.anwenden</a></div><div class="ttdeci">static void anwenden(ISheet sheet, RangePosition range)</div><div class="ttdoc">Wendet das Lachsorange-Zebra-Muster als bedingte Formatierung auf den angegebenen Bereich an.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">EditierbaresZelleFormatHelper.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper_html_a0af177f5c1f1676c27a6d93959f5073f"><div class="ttname"><a href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a0af177f5c1f1676c27a6d93959f5073f">de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper.EditierbaresZelleFormatHelper</a></div><div class="ttdeci">EditierbaresZelleFormatHelper()</div><div class="ttdef"><b>Definition</b> <a href="#l00036">EditierbaresZelleFormatHelper.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper_html_a6c3c25dcdf2f690198db3b72258de5bd"><div class="ttname"><a href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a6c3c25dcdf2f690198db3b72258de5bd">de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper.PROPERTY_KEY</a></div><div class="ttdeci">static final String PROPERTY_KEY</div><div class="ttdoc">Property-Key für &quot;Editierbare Felder hervorheben&quot; – kein Leerzeichen, kein Tippfehlerrisiko.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">EditierbaresZelleFormatHelper.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper_html_a9150f0ed2e5c7158862002bf8168207e"><div class="ttname"><a href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#a9150f0ed2e5c7158862002bf8168207e">de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper.anwendenFuerTeam</a></div><div class="ttdeci">static void anwendenFuerTeam(ISheet sheet, RangePosition range, boolean istTeamA)</div><div class="ttdoc">Wendet die editierbare Zellenfarbe auf eine einzelne Zelle an, basierend auf der Team-Position.</div><div class="ttdef"><b>Definition</b> <a href="#l00065">EditierbaresZelleFormatHelper.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper_html_aed12a281dd2d4d72a04ac3c75c8f174b"><div class="ttname"><a href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#aed12a281dd2d4d72a04ac3c75c8f174b">de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper.EDITIERBAR_GERADE_FARBE</a></div><div class="ttdeci">static final int EDITIERBAR_GERADE_FARBE</div><div class="ttdoc">Hintergrundfarbe für gerade Zeilen: helles Orange/Creme.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">EditierbaresZelleFormatHelper.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper_html_af77b41f9c605b4af0671edc7aef10ce8"><div class="ttname"><a href="../../d9/d63/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_editierbares_zelle_format_helper.html#af77b41f9c605b4af0671edc7aef10ce8">de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper.EDITIERBAR_UNGERADE_FARBE</a></div><div class="ttdeci">static final int EDITIERBAR_UNGERADE_FARBE</div><div class="ttdoc">Hintergrundfarbe für ungerade Zeilen: helles Amber.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">EditierbaresZelleFormatHelper.java:31</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">de.petanqueturniermanager.helper.ISheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/dae/_i_sheet_8java_source.html#l00017">ISheet.java:17</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1helper_1_1sheet_html"><div class="ttname"><a href="../../da/d75/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheet.html">de.petanqueturniermanager.helper.sheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d75/_base_helper_8java_source.html#l00004">BaseHelper.java:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_441e592da67819dcc226e3740cc2a092.html">sheet</a></li><li class="navelem"><a href="../../df/d0e/_editierbares_zelle_format_helper_8java.html">EditierbaresZelleFormatHelper.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/toolbar/ToolbarAktionDispatcher.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('de/d21/_toolbar_aktion_dispatcher_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ToolbarAktionDispatcher.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d21/_toolbar_aktion_dispatcher_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.toolbar;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.petanqueturniermanager.helper.DocumentPropertiesHelper;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html">   15</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a569b6b12a5f5f9e503a359ea88c47a0f">ToolbarAktionDispatcher</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a569b6b12a5f5f9e503a359ea88c47a0f">   17</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a569b6b12a5f5f9e503a359ea88c47a0f">ToolbarAktionDispatcher</a>() {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a0d68b82d0627ccb1b3d9a7f7371ea702">   23</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a0d68b82d0627ccb1b3d9a7f7371ea702">weiter</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a537cf4e2ddccc78f0264c7408a884a09">weiter</a>(ws);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a2b1ef64cd93dd6fd46007877f7ed9051">   31</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a2b1ef64cd93dd6fd46007877f7ed9051">vorrundenRangliste</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a717a2ec7ddfea361a73e50c195dd45ac">vorrundenRangliste</a>(ws);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a160f9d42251265708f02dad9843b87f8">   39</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a160f9d42251265708f02dad9843b87f8">teilnehmer</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a231593a469aa818e63d19e2d8bb0324d">teilnehmer</a>(ws);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a1e177af6019fdf7054eae0230c2b6c56">   47</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a1e177af6019fdf7054eae0230c2b6c56">checkin</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a7a0def42cc5a019ea752bfa6fe1acc2a">checkin</a>(ws);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#ae02e8971b24109398c0a54393033938f">   55</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#ae02e8971b24109398c0a54393033938f">neuAuslosen</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#ad0f876a01ace4479cf47b7546ae62e6f">neuAuslosen</a>(ws);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a3fca770ff08a091a4e41aba15f19f64e">   63</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a3fca770ff08a091a4e41aba15f19f64e">abschluss</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#add1316d034c1c49575c2e1043efc37db">abschluss</a>(ws);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a3104c109a29973bca4f0ef3471840b66">   71</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a3104c109a29973bca4f0ef3471840b66">naechsterSpieltag</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a90a7119a028018e7c6f3760acf72a7a7">naechsterSpieltag</a>(ws);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a70fba4d30ac184a136506cfdc04f2ce2">   79</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a70fba4d30ac184a136506cfdc04f2ce2">gesamtrangliste</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a> system = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(ws).getTurnierSystemAusDocument();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_class" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">TurnierSystemToolbarStrategieRegistry</a>.<a class="code hl_function" href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">get</a>(system).<a class="code hl_function" href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a9f8504cd2d00612bb492ddad9f750c11">gesamtrangliste</a>(ws);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+</div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a0a0cf75e4c5ea77ae70ffae3d3c72042"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">de.petanqueturniermanager.helper.DocumentPropertiesHelper.DocumentPropertiesHelper</a></div><div class="ttdeci">DocumentPropertiesHelper(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00065">DocumentPropertiesHelper.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a0d68b82d0627ccb1b3d9a7f7371ea702"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a0d68b82d0627ccb1b3d9a7f7371ea702">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.weiter</a></div><div class="ttdeci">static void weiter(WorkingSpreadsheet ws)</div><div class="ttdoc">Startet die nächste Spielrunde des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ToolbarAktionDispatcher.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a160f9d42251265708f02dad9843b87f8"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a160f9d42251265708f02dad9843b87f8">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.teilnehmer</a></div><div class="ttdeci">static void teilnehmer(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt das Teilnehmer-Sheet des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">ToolbarAktionDispatcher.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a1e177af6019fdf7054eae0230c2b6c56"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a1e177af6019fdf7054eae0230c2b6c56">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.checkin</a></div><div class="ttdeci">static void checkin(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt die Checkin-Liste des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">ToolbarAktionDispatcher.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a2b1ef64cd93dd6fd46007877f7ed9051"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a2b1ef64cd93dd6fd46007877f7ed9051">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.vorrundenRangliste</a></div><div class="ttdeci">static void vorrundenRangliste(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt die Vorrunden-Rangliste des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">ToolbarAktionDispatcher.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a3104c109a29973bca4f0ef3471840b66"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a3104c109a29973bca4f0ef3471840b66">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.naechsterSpieltag</a></div><div class="ttdeci">static void naechsterSpieltag(WorkingSpreadsheet ws)</div><div class="ttdoc">Wechselt zum nächsten Spieltag des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00071">ToolbarAktionDispatcher.java:71</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a3fca770ff08a091a4e41aba15f19f64e"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a3fca770ff08a091a4e41aba15f19f64e">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.abschluss</a></div><div class="ttdeci">static void abschluss(WorkingSpreadsheet ws)</div><div class="ttdoc">Startet die Abschlussphase des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">ToolbarAktionDispatcher.java:63</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a569b6b12a5f5f9e503a359ea88c47a0f"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a569b6b12a5f5f9e503a359ea88c47a0f">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.ToolbarAktionDispatcher</a></div><div class="ttdeci">ToolbarAktionDispatcher()</div><div class="ttdef"><b>Definition</b> <a href="#l00017">ToolbarAktionDispatcher.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_a70fba4d30ac184a136506cfdc04f2ce2"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#a70fba4d30ac184a136506cfdc04f2ce2">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.gesamtrangliste</a></div><div class="ttdeci">static void gesamtrangliste(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt die Gesamtrangliste des aktiven Turniersystems.</div><div class="ttdef"><b>Definition</b> <a href="#l00079">ToolbarAktionDispatcher.java:79</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher_html_ae02e8971b24109398c0a54393033938f"><div class="ttname"><a href="../../df/d62/classde_1_1petanqueturniermanager_1_1toolbar_1_1_toolbar_aktion_dispatcher.html#ae02e8971b24109398c0a54393033938f">de.petanqueturniermanager.toolbar.ToolbarAktionDispatcher.neuAuslosen</a></div><div class="ttdeci">static void neuAuslosen(WorkingSpreadsheet ws)</div><div class="ttdoc">Löst die aktuelle Spielrunde des aktiven Turniersystems neu aus.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">ToolbarAktionDispatcher.java:55</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry_html"><div class="ttname"><a href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html">de.petanqueturniermanager.toolbar.TurnierSystemToolbarStrategieRegistry</a></div><div class="ttdoc">Registry, die jedem TurnierSystem eine passende ITurnierSystemToolbarStrategie zuordnet.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d28/_turnier_system_toolbar_strategie_registry_8java_source.html#l00025">TurnierSystemToolbarStrategieRegistry.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry_html_a4eefd02c7d58282394910a0002c3a53c"><div class="ttname"><a href="../../d6/d76/classde_1_1petanqueturniermanager_1_1toolbar_1_1_turnier_system_toolbar_strategie_registry.html#a4eefd02c7d58282394910a0002c3a53c">de.petanqueturniermanager.toolbar.TurnierSystemToolbarStrategieRegistry.get</a></div><div class="ttdeci">static ITurnierSystemToolbarStrategie get(TurnierSystem system)</div><div class="ttdoc">Gibt die Strategie für das angegebene Turniersystem zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d28/_turnier_system_toolbar_strategie_registry_8java_source.html#l00050">TurnierSystemToolbarStrategieRegistry.java:50</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_turnier_system_8java_source.html#l00009">TurnierSystem.java:9</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_a231593a469aa818e63d19e2d8bb0324d"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a231593a469aa818e63d19e2d8bb0324d">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.teilnehmer</a></div><div class="ttdeci">void teilnehmer(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt oder aktualisiert das Teilnehmer-Sheet des Turniersystems.</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_a537cf4e2ddccc78f0264c7408a884a09"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a537cf4e2ddccc78f0264c7408a884a09">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.weiter</a></div><div class="ttdeci">void weiter(WorkingSpreadsheet ws)</div><div class="ttdoc">Startet die nächste Spielrunde bzw.</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_a717a2ec7ddfea361a73e50c195dd45ac"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a717a2ec7ddfea361a73e50c195dd45ac">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.vorrundenRangliste</a></div><div class="ttdeci">void vorrundenRangliste(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt oder aktualisiert die Vorrunden-Rangliste des Turniersystems.</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_a7a0def42cc5a019ea752bfa6fe1acc2a"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a7a0def42cc5a019ea752bfa6fe1acc2a">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.checkin</a></div><div class="ttdeci">void checkin(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt oder aktualisiert die Checkin-Liste des Turniersystems.</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_a90a7119a028018e7c6f3760acf72a7a7"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a90a7119a028018e7c6f3760acf72a7a7">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.naechsterSpieltag</a></div><div class="ttdeci">default void naechsterSpieltag(WorkingSpreadsheet ws)</div><div class="ttdoc">Wechselt zum nächsten Spieltag.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d3c/_i_turnier_system_toolbar_strategie_8java_source.html#l00066">ITurnierSystemToolbarStrategie.java:66</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_a9f8504cd2d00612bb492ddad9f750c11"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#a9f8504cd2d00612bb492ddad9f750c11">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.gesamtrangliste</a></div><div class="ttdeci">default void gesamtrangliste(WorkingSpreadsheet ws)</div><div class="ttdoc">Erstellt oder aktualisiert die Gesamtrangliste.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d3c/_i_turnier_system_toolbar_strategie_8java_source.html#l00074">ITurnierSystemToolbarStrategie.java:74</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_ad0f876a01ace4479cf47b7546ae62e6f"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#ad0f876a01ace4479cf47b7546ae62e6f">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.neuAuslosen</a></div><div class="ttdeci">void neuAuslosen(WorkingSpreadsheet ws)</div><div class="ttdoc">Löst die aktuelle Spielrunde neu aus.</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie_html_add1316d034c1c49575c2e1043efc37db"><div class="ttname"><a href="../../d9/d42/interfacede_1_1petanqueturniermanager_1_1toolbar_1_1_i_turnier_system_toolbar_strategie.html#add1316d034c1c49575c2e1043efc37db">de.petanqueturniermanager.toolbar.ITurnierSystemToolbarStrategie.abschluss</a></div><div class="ttdeci">void abschluss(WorkingSpreadsheet ws)</div><div class="ttdoc">Startet die Abschlussphase (KO-Runde, Finalrunde, Turnierbaum).</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_415ebf5c3b9e7ae8fc6f8641e29d27fc.html">toolbar</a></li><li class="navelem"><a href="../../de/d21/_toolbar_aktion_dispatcher_8java.html">ToolbarAktionDispatcher.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

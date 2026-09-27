@@ -1,0 +1,4 @@
+var _supr_mle_endrangliste_sort_mode_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.konfiguration.SuprMleEndranglisteSortMode", "d4/ded/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_supr_mle_endrangliste_sort_mode.html", "d4/ded/enumde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_supr_mle_endrangliste_sort_mode" ]
+];

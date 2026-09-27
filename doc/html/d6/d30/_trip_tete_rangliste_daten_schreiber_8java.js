@@ -1,0 +1,4 @@
+var _trip_tete_rangliste_daten_schreiber_8java =
+[
+    [ "de.petanqueturniermanager.triptete.rangliste.TripTeteRanglisteDatenSchreiber", "d6/daf/classde_1_1petanqueturniermanager_1_1triptete_1_1rangliste_1_1_trip_tete_rangliste_daten_schreiber.html", "d6/daf/classde_1_1petanqueturniermanager_1_1triptete_1_1rangliste_1_1_trip_tete_rangliste_daten_schreiber" ]
+];

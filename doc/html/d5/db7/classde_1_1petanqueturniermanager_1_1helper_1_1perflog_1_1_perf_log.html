@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.helper.perflog.PerfLog Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html','../../','de/d7e/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.helper.perflog.PerfLog Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Zentrales Gate für Performance-/Zeitmessungs-Logs (Tags <code class="JavaDocCode">[WORKER-TIMING]</code>, <code class="JavaDocCode">[STARTUP-TIMING]</code>, <code class="JavaDocCode">[SIDEBAR-TIMING]</code>).  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a1b10eedda37641320525d13a55617144" id="r_a1b10eedda37641320525d13a55617144"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a1b10eedda37641320525d13a55617144">invalidateCache</a> ()</td></tr>
+<tr class="memitem:a4ad55c7a437ce4280c929cc8cb4b5ee0" id="r_a4ad55c7a437ce4280c929cc8cb4b5ee0"><td class="memItemLeft">static boolean&#160;</td><td class="memItemRight"><a class="el" href="#a4ad55c7a437ce4280c929cc8cb4b5ee0">isEnabled</a> ()</td></tr>
+<tr class="memitem:a219fdbbbb34e59f9fd8e8230b1a4dcdb" id="r_a219fdbbbb34e59f9fd8e8230b1a4dcdb"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a219fdbbbb34e59f9fd8e8230b1a4dcdb">log</a> (Logger logger, String format, Object arg)</td></tr>
+<tr class="memitem:a0488c05707fb6ca57f3d2d01e26967e8" id="r_a0488c05707fb6ca57f3d2d01e26967e8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a0488c05707fb6ca57f3d2d01e26967e8">log</a> (Logger logger, String format, Object arg1, Object arg2)</td></tr>
+<tr class="memitem:a2a4853ba81e8360aff08efc8185eb4a8" id="r_a2a4853ba81e8360aff08efc8185eb4a8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a2a4853ba81e8360aff08efc8185eb4a8">log</a> (Logger logger, String format, Object... args)</td></tr>
+<tr class="memitem:acb2eec057644913d1e62131549e72eb9" id="r_acb2eec057644913d1e62131549e72eb9"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acb2eec057644913d1e62131549e72eb9">log</a> (Logger logger, String message)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ad0ab2f7ed2d5f5f1e599a2cef3fe498b" id="r_ad0ab2f7ed2d5f5f1e599a2cef3fe498b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad0ab2f7ed2d5f5f1e599a2cef3fe498b">PerfLog</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:a09998dfe00e69a92887740fbc3ad5d24" id="r_a09998dfe00e69a92887740fbc3ad5d24"><td class="memItemLeft">static volatile Boolean&#160;</td><td class="memItemRight"><a class="el" href="#a09998dfe00e69a92887740fbc3ad5d24">cached</a> = null</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Aktivierung über die Property <code class="JavaDocCode">performance.logging</code> in den <code><a class="el" href="../../d9/dae/classde_1_1petanqueturniermanager_1_1comp_1_1_global_properties.html">GlobalProperties</a></code>. Default ist deaktiviert.</p>
+<p>Der Flag-Wert wird in einem <code class="JavaDocCode">volatile boolean</code>-Feld gecached, damit Hot-Paths nicht bei jedem Aufruf die Properties-Map lesen. Beim Speichern aus dem Konfig-Dialog wird der Cache via <code><a class="el" href="#a1b10eedda37641320525d13a55617144">invalidateCache()</a></code> verworfen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00018">18</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="ad0ab2f7ed2d5f5f1e599a2cef3fe498b" name="ad0ab2f7ed2d5f5f1e599a2cef3fe498b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ab2f7ed2d5f5f1e599a2cef3fe498b">&#9670;&#160;</a></span>PerfLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.helper.perflog.PerfLog.PerfLog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00022">22</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                      {</div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a1b10eedda37641320525d13a55617144" name="a1b10eedda37641320525d13a55617144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b10eedda37641320525d13a55617144">&#9670;&#160;</a></span>invalidateCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.perflog.PerfLog.invalidateCache </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00040">40</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                         {</div>
+<div class="line"><span class="lineno">   41</span>        cached = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   42</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4ad55c7a437ce4280c929cc8cb4b5ee0" name="a4ad55c7a437ce4280c929cc8cb4b5ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad55c7a437ce4280c929cc8cb4b5ee0">&#9670;&#160;</a></span>isEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean de.petanqueturniermanager.helper.perflog.PerfLog.isEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00025">25</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                      {</div>
+<div class="line"><span class="lineno">   26</span>        Boolean lokal = cached;</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span> (lokal != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">return</span> lokal;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">boolean</span> aktuell = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   32</span>            aktuell = GlobalProperties.get().isPerformanceLogging();</div>
+<div class="line"><span class="lineno">   33</span>        } <span class="keywordflow">catch</span> (Exception ignored) {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="comment">// GlobalProperties noch nicht initialisierbar (sehr früher Startup) -&gt; aus</span></div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>        cached = aktuell;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> aktuell;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a219fdbbbb34e59f9fd8e8230b1a4dcdb" name="a219fdbbbb34e59f9fd8e8230b1a4dcdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219fdbbbb34e59f9fd8e8230b1a4dcdb">&#9670;&#160;</a></span>log() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.perflog.PerfLog.log </td>
+          <td>(</td>
+          <td class="paramtype">Logger</td>          <td class="paramname"><span class="paramname"><em>logger</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00050">50</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                     {</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> (isEnabled()) {</div>
+<div class="line"><span class="lineno">   52</span>            logger.info(format, arg);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0488c05707fb6ca57f3d2d01e26967e8" name="a0488c05707fb6ca57f3d2d01e26967e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0488c05707fb6ca57f3d2d01e26967e8">&#9670;&#160;</a></span>log() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.perflog.PerfLog.log </td>
+          <td>(</td>
+          <td class="paramtype">Logger</td>          <td class="paramname"><span class="paramname"><em>logger</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object</td>          <td class="paramname"><span class="paramname"><em>arg2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00056">56</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                                                   {</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (isEnabled()) {</div>
+<div class="line"><span class="lineno">   58</span>            logger.info(format, arg1, arg2);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a4853ba81e8360aff08efc8185eb4a8" name="a2a4853ba81e8360aff08efc8185eb4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4853ba81e8360aff08efc8185eb4a8">&#9670;&#160;</a></span>log() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.perflog.PerfLog.log </td>
+          <td>(</td>
+          <td class="paramtype">Logger</td>          <td class="paramname"><span class="paramname"><em>logger</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00062">62</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                         {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (isEnabled()) {</div>
+<div class="line"><span class="lineno">   64</span>            logger.info(format, args);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acb2eec057644913d1e62131549e72eb9" name="acb2eec057644913d1e62131549e72eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2eec057644913d1e62131549e72eb9">&#9670;&#160;</a></span>log() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.perflog.PerfLog.log </td>
+          <td>(</td>
+          <td class="paramtype">Logger</td>          <td class="paramname"><span class="paramname"><em>logger</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00044">44</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                          {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (isEnabled()) {</div>
+<div class="line"><span class="lineno">   46</span>            logger.info(message);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a09998dfe00e69a92887740fbc3ad5d24" name="a09998dfe00e69a92887740fbc3ad5d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09998dfe00e69a92887740fbc3ad5d24">&#9670;&#160;</a></span>cached</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile Boolean de.petanqueturniermanager.helper.perflog.PerfLog.cached = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d6/dc5/_perf_log_8java_source.html#l00020">20</a> der Datei <a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/helper/perflog/<a class="el" href="../../d6/dc5/_perf_log_8java_source.html">PerfLog.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">helper</a></li><li class="navelem"><a href="../../d7/d39/namespacede_1_1petanqueturniermanager_1_1helper_1_1perflog.html">perflog</a></li><li class="navelem"><a href="../../d5/db7/classde_1_1petanqueturniermanager_1_1helper_1_1perflog_1_1_perf_log.html">PerfLog</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

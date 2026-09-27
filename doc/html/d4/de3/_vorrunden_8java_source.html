@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/maastrichter/korunde/Vorrunden.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/de3/_vorrunden_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Vorrunden.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/de3/_vorrunden_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 27.05.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.maastrichter.korunde;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> org.apache.commons.lang3.StringUtils;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.google.common.collect.ImmutableList;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.SheetRunner;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> de.petanqueturniermanager.helper.ISheet;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.Position;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.DefaultSheetPos;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.NewSheet;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.SheetHelper;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.SheetNamen;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.model.Team;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.model.TeamRangliste;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html">   47</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a3608f23291d816720bcf734e2938e6f9">Vorrunden</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac96360a94c2a9b757f659f38af2595c8">   49</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac96360a94c2a9b757f659f38af2595c8">RNDHEADER</a> = <span class="stringliteral">&quot;Rnd&quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">   51</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">parentSheet</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a3608f23291d816720bcf734e2938e6f9">   53</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a3608f23291d816720bcf734e2938e6f9">Vorrunden</a>(<a class="code hl_interface" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">ISheet</a> <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">parentSheet</a>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        this.parentSheet = <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">parentSheet</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a73cec32ab40a70013db1d8ff482b1b9f">   57</a></span>    <span class="keyword">public</span> XSpreadsheet <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a73cec32ab40a70013db1d8ff482b1b9f">getSheet</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        var sheetName = <a class="code hl_class" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">SheetNamen</a>.<a class="code hl_function" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#aee365cc86a75788b12a10fabd0a5bb84">vorrundenHilfsblatt</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        XSpreadsheet vorRunden = <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">getSheetHelper</a>().<a class="code hl_function" href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#ab7667bccaa53ee38d16471c59532979a">findByName</a>(sheetName);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (<span class="keyword">null</span> != vorRunden) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">getSheetHelper</a>().<a class="code hl_function" href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#ae4f2032a913290624cf73feff83a4321">setActiveSheet</a>(vorRunden);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            vorRunden = <a class="code hl_class" href="../../d6/d7a/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_new_sheet.html">NewSheet</a>.<a class="code hl_variable" href="../../d6/d7a/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_new_sheet.html#a117c32383aeac3400a2dff7de41e8488">temporary</a>(<a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">parentSheet</a>, sheetName).pos(<a class="code hl_class" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html">DefaultSheetPos</a>.<a class="code hl_variable" href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7666527df52d09e1de5c8e726bcc81f0">MELEE_WORK</a>).forceCreate().setActiv().create().getSheet();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> vorRunden;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ad9b3140e4bc6c73fd16b1e5febd8f98f">   70</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ad9b3140e4bc6c73fd16b1e5febd8f98f">vorRundenEinlesen</a>(<a class="code hl_class" href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html">TeamRangliste</a> <a class="code hl_package" href="../../d8/d45/namespacede_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste.html">rangliste</a>) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">int</span> headerZeile = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">int</span> ersteTeamNrZeile = 1;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        XSpreadsheet vorRunden = <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a73cec32ab40a70013db1d8ff482b1b9f">getSheet</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a1ee652c3052209422e78905da45697dc">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.vorrunden.einlesen&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        ImmutableList&lt;Team&gt; teamList = <a class="code hl_package" href="../../d8/d45/namespacede_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste.html">rangliste</a>.getTeamListe();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> headerPos = <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(0, headerZeile);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> spalteCnt = 0; spalteCnt &lt; 20; spalteCnt += 2) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_class" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">SheetRunner</a>.<a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#ab61970feadeeb948861eb84bb8c22b8c">testDoCancelTask</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            headerPos.<a class="code hl_variable" href="../../df/d25/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_abstract_position.html#a4e1ee0bc0bdb7ce77f09dee02e866b0b">spalte</a>(spalteCnt);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            String header = <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">getSheetHelper</a>().<a class="code hl_function" href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#afebec47f0645bca7eeaa39a99d0a3c4e">getTextFromCell</a>(vorRunden, headerPos);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">if</span> (StringUtils.isNotEmpty(header) &amp;&amp; header.regionMatches(<span class="keyword">true</span>, 0, <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac96360a94c2a9b757f659f38af2595c8">RNDHEADER</a>, 0, <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac96360a94c2a9b757f659f38af2595c8">RNDHEADER</a>.length())) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> zeileCntr = ersteTeamNrZeile; zeileCntr &lt; 999; zeileCntr++) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    Integer cellNumTeamA = <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">getSheetHelper</a>().<a class="code hl_function" href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#acec898fdeca6b55bb8d55316afc107c0">getIntFromCell</a>(vorRunden, <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(spalteCnt, zeileCntr));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    <span class="keywordflow">if</span> (cellNumTeamA &gt; 0) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                        var teamA = <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a>.<a class="code hl_function" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a452751e43d0e2036a54f7be88adda26c">from</a>(cellNumTeamA);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                        var teamAInListe = teamList.stream().filter(teamA::equals).findFirst().orElse(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                        <span class="keywordflow">if</span> (teamAInListe != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                            Integer cellNumTeamB = <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">getSheetHelper</a>().<a class="code hl_function" href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#acec898fdeca6b55bb8d55316afc107c0">getIntFromCell</a>(vorRunden, <a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(spalteCnt + 1, zeileCntr));</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                            <span class="keywordflow">if</span> (cellNumTeamB &gt; 0) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                var teamB = <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a>.<a class="code hl_function" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a452751e43d0e2036a54f7be88adda26c">from</a>(cellNumTeamB);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                teamList.stream().filter(teamB::equals).findFirst()</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                        .ifPresent(teamBInListe -&gt; teamBInListe.addGegner(teamAInListe));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a1ee652c3052209422e78905da45697dc">  111</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a1ee652c3052209422e78905da45697dc">processBoxinfo</a>(String i18nKey, Object... args) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">parentSheet</a>.<a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">processBoxinfo</a>(i18nKey, args);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">  116</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html">SheetHelper</a> <a class="code hl_function" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">getSheetHelper</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">parentSheet</a>.<a class="code hl_function" href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ad175eefade501c4841f77f09f94e2d94">getSheetHelper</a>();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html">de.petanqueturniermanager.SheetRunner</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00042">SheetRunner.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_ab61970feadeeb948861eb84bb8c22b8c"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#ab61970feadeeb948861eb84bb8c22b8c">de.petanqueturniermanager.SheetRunner.testDoCancelTask</a></div><div class="ttdeci">static final void testDoCancelTask()</div><div class="ttdoc">wenn thread is interrupted dann ein Abbruch Exception werfen</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00113">SheetRunner.java:113</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">de.petanqueturniermanager.helper.i18n.SheetNamen</a></div><div class="ttdoc">Zentraler Zugriffspunkt für alle lokalisierten Tabellennamen im Petanque-Turnier-Manager.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00022">SheetNamen.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html_aee365cc86a75788b12a10fabd0a5bb84"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#aee365cc86a75788b12a10fabd0a5bb84">de.petanqueturniermanager.helper.i18n.SheetNamen.vorrundenHilfsblatt</a></div><div class="ttdeci">static String vorrundenHilfsblatt()</div><div class="ttdoc">Temporäres Rechenhilfsblatt für Vorrunden-Paarungsdaten: z.B.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00194">SheetNamen.java:194</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_abstract_position_html_a4e1ee0bc0bdb7ce77f09dee02e866b0b"><div class="ttname"><a href="../../df/d25/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_abstract_position.html#a4e1ee0bc0bdb7ce77f09dee02e866b0b">de.petanqueturniermanager.helper.position.AbstractPosition.spalte</a></div><div class="ttdeci">int spalte</div><div class="ttdef"><b>Definition</b> <a href="../../db/d59/_abstract_position_8java_source.html#l00014">AbstractPosition.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">de.petanqueturniermanager.helper.position.Position</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00007">Position.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html_a85ef35b47cbfd4319229d2c4d5e41c41"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">de.petanqueturniermanager.helper.position.Position.from</a></div><div class="ttdeci">static Position from(int spalte, int zeile)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00023">Position.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html">de.petanqueturniermanager.helper.sheet.DefaultSheetPos</a></div><div class="ttdoc">Beim erstellen von sheets diese Position verwenden.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d51/_default_sheet_pos_8java_source.html#l00011">DefaultSheetPos.java:11</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos_html_a7666527df52d09e1de5c8e726bcc81f0"><div class="ttname"><a href="../../df/da0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_default_sheet_pos.html#a7666527df52d09e1de5c8e726bcc81f0">de.petanqueturniermanager.helper.sheet.DefaultSheetPos.MELEE_WORK</a></div><div class="ttdeci">static final short MELEE_WORK</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d51/_default_sheet_pos_8java_source.html#l00022">DefaultSheetPos.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_new_sheet_html"><div class="ttname"><a href="../../d6/d7a/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_new_sheet.html">de.petanqueturniermanager.helper.sheet.NewSheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d1b/_new_sheet_8java_source.html#l00031">NewSheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_new_sheet_html_a117c32383aeac3400a2dff7de41e8488"><div class="ttname"><a href="../../d6/d7a/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_new_sheet.html#a117c32383aeac3400a2dff7de41e8488">de.petanqueturniermanager.helper.sheet.NewSheet.temporary</a></div><div class="ttdeci">final boolean temporary</div><div class="ttdef"><b>Definition</b> <a href="../../da/d1b/_new_sheet_8java_source.html#l00037">NewSheet.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper_html"><div class="ttname"><a href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html">de.petanqueturniermanager.helper.sheet.SheetHelper</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d2b/_sheet_helper_8java_source.html#l00073">SheetHelper.java:73</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper_html_ab7667bccaa53ee38d16471c59532979a"><div class="ttname"><a href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#ab7667bccaa53ee38d16471c59532979a">de.petanqueturniermanager.helper.sheet.SheetHelper.findByName</a></div><div class="ttdeci">XSpreadsheet findByName(String sheetName)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d2b/_sheet_helper_8java_source.html#l00120">SheetHelper.java:120</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper_html_acec898fdeca6b55bb8d55316afc107c0"><div class="ttname"><a href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#acec898fdeca6b55bb8d55316afc107c0">de.petanqueturniermanager.helper.sheet.SheetHelper.getIntFromCell</a></div><div class="ttdeci">Integer getIntFromCell(ISheet iSheet, Position pos)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d2b/_sheet_helper_8java_source.html#l00450">SheetHelper.java:450</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper_html_ae4f2032a913290624cf73feff83a4321"><div class="ttname"><a href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#ae4f2032a913290624cf73feff83a4321">de.petanqueturniermanager.helper.sheet.SheetHelper.setActiveSheet</a></div><div class="ttdeci">void setActiveSheet(XSpreadsheet spreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d2b/_sheet_helper_8java_source.html#l00535">SheetHelper.java:535</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper_html_afebec47f0645bca7eeaa39a99d0a3c4e"><div class="ttname"><a href="../../d1/dcb/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_helper.html#afebec47f0645bca7eeaa39a99d0a3c4e">de.petanqueturniermanager.helper.sheet.SheetHelper.getTextFromCell</a></div><div class="ttdeci">String getTextFromCell(XSpreadsheet sheet, Position pos)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d2b/_sheet_helper_8java_source.html#l00474">SheetHelper.java:474</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_a1ee652c3052209422e78905da45697dc"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a1ee652c3052209422e78905da45697dc">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div><div class="ttdoc">Gibt eine Prozessbox-Meldung über das übergeordnete Sheet aus.</div><div class="ttdef"><b>Definition</b> <a href="#l00111">Vorrunden.java:111</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_a3608f23291d816720bcf734e2938e6f9"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a3608f23291d816720bcf734e2938e6f9">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.Vorrunden</a></div><div class="ttdeci">Vorrunden(ISheet parentSheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">Vorrunden.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_a73cec32ab40a70013db1d8ff482b1b9f"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#a73cec32ab40a70013db1d8ff482b1b9f">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.getSheet</a></div><div class="ttdeci">XSpreadsheet getSheet()</div><div class="ttdef"><b>Definition</b> <a href="#l00057">Vorrunden.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_ac04d13945a3c060e6a1123f2df767e2d"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac04d13945a3c060e6a1123f2df767e2d">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.parentSheet</a></div><div class="ttdeci">final ISheet parentSheet</div><div class="ttdef"><b>Definition</b> <a href="#l00051">Vorrunden.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_ac96360a94c2a9b757f659f38af2595c8"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ac96360a94c2a9b757f659f38af2595c8">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.RNDHEADER</a></div><div class="ttdeci">static final String RNDHEADER</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Vorrunden.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_ad9b3140e4bc6c73fd16b1e5febd8f98f"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#ad9b3140e4bc6c73fd16b1e5febd8f98f">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.vorRundenEinlesen</a></div><div class="ttdeci">void vorRundenEinlesen(TeamRangliste rangliste)</div><div class="ttdef"><b>Definition</b> <a href="#l00070">Vorrunden.java:70</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden_html_afe28b1cec201f3893280ef9a8d4b5ef2"><div class="ttname"><a href="../../d2/d4a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1korunde_1_1_vorrunden.html#afe28b1cec201f3893280ef9a8d4b5ef2">de.petanqueturniermanager.maastrichter.korunde.Vorrunden.getSheetHelper</a></div><div class="ttdeci">SheetHelper getSheetHelper()</div><div class="ttdoc">Gibt den SheetHelper des übergeordneten Sheets zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00116">Vorrunden.java:116</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">de.petanqueturniermanager.model.Team</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00019">Team.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html_a452751e43d0e2036a54f7be88adda26c"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a452751e43d0e2036a54f7be88adda26c">de.petanqueturniermanager.model.Team.from</a></div><div class="ttdeci">static Team from(int nr)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00031">Team.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste_html"><div class="ttname"><a href="../../df/d06/classde_1_1petanqueturniermanager_1_1model_1_1_team_rangliste.html">de.petanqueturniermanager.model.TeamRangliste</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d07/_team_rangliste_8java_source.html#l00018">TeamRangliste.java:18</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html">de.petanqueturniermanager.helper.ISheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/dae/_i_sheet_8java_source.html#l00017">ISheet.java:17</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_ab2c7bea29fa41fa048b599ed07b220c2"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ab2c7bea29fa41fa048b599ed07b220c2">de.petanqueturniermanager.helper.ISheet.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet_html_ad175eefade501c4841f77f09f94e2d94"><div class="ttname"><a href="../../d2/d30/interfacede_1_1petanqueturniermanager_1_1helper_1_1_i_sheet.html#ad175eefade501c4841f77f09f94e2d94">de.petanqueturniermanager.helper.ISheet.getSheetHelper</a></div><div class="ttdeci">SheetHelper getSheetHelper()</div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste_html"><div class="ttname"><a href="../../d8/d45/namespacede_1_1petanqueturniermanager_1_1maastrichter_1_1rangliste.html">de.petanqueturniermanager.maastrichter.rangliste</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/de1/_maastrichter_gruppen_spalte_helper_8java_source.html#l00004">MaastrichterGruppenSpalteHelper.java:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f435ceaf791809f4c24283e793e1abe5.html">maastrichter</a></li><li class="navelem"><a href="../../dir_4431543bd5e9b29f5e7365e7e80e32a9.html">korunde</a></li><li class="navelem"><a href="../../d4/de3/_vorrunden_8java.html">Vorrunden.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

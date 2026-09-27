@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1formulex_1_1blattschutz =
+[
+    [ "FormuleXBlattschutzKonfiguration", "d1/d77/classde_1_1petanqueturniermanager_1_1formulex_1_1blattschutz_1_1_formule_x_blattschutz_konfiguration.html", "d1/d77/classde_1_1petanqueturniermanager_1_1formulex_1_1blattschutz_1_1_formule_x_blattschutz_konfiguration" ]
+];

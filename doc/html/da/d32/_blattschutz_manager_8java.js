@@ -1,0 +1,6 @@
+var _blattschutz_manager_8java =
+[
+    [ "de.petanqueturniermanager.helper.sheet.blattschutz.BlattschutzManager", "d6/d19/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager.html", "d6/d19/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager" ],
+    [ "de.petanqueturniermanager.helper.sheet.blattschutz.BlattschutzManager.BlattschutzScope", "d6/da5/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager_1_1_blattschutz_scope.html", "d6/da5/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager_1_1_blattschutz_scope" ],
+    [ "de.petanqueturniermanager.helper.sheet.blattschutz.BlattschutzManager.ScopeState", "d5/d77/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager_1_1_scope_state.html", "d5/d77/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1blattschutz_1_1_blattschutz_manager_1_1_scope_state" ]
+];

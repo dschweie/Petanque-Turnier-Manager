@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/algorithmen/supermelee/rules/ParticipantsDidNotMeetToday.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d6/da8/_participants_did_not_meet_today_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ParticipantsDidNotMeetToday.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/da8/_participants_did_not_meet_today_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.algorithmen.supermelee.rules;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.petanqueturniermanager.algorithmen.common.ruleset.matchup.IMatchup;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> de.petanqueturniermanager.algorithmen.supermelee.SuperMeleeWithDecorator;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> de.petanqueturniermanager.model.Team;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html">   16</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2331190b8f854889bbb6f908219371df">ParticipantsDidNotMeetToday</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../dd/de7/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet.html#ae85f5586904b96cbae116b4a41fb1852">ParticipantsDidNotMeet</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2331190b8f854889bbb6f908219371df">   45</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2331190b8f854889bbb6f908219371df">ParticipantsDidNotMeetToday</a>(<span class="keywordtype">boolean</span> <a class="code hl_variable" href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#acda70800e8ecfc79348908ff571e0ae1">effective</a>, <span class="keywordtype">boolean</span> <a class="code hl_variable" href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#a604dfedb3a18f4001e2dee306cba106e">suspendable</a>, <a class="code hl_interface" href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html">IMatchup</a> component, <a class="code hl_class" href="../../d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html">SuperMeleeWithDecorator</a> instance) </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        super(<a class="code hl_variable" href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#acda70800e8ecfc79348908ff571e0ae1">effective</a>, <a class="code hl_variable" href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#a604dfedb3a18f4001e2dee306cba106e">suspendable</a>, component, instance);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    @Override</div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a7f44acaa68e598f7923393a0aa946f9d">   72</a></span>    <span class="keyword">protected</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a7f44acaa68e598f7923393a0aa946f9d">performCheck</a>(<a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> first, <a class="code hl_class" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">Team</a> second) </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    @Override</div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2018b903b215aa6388a6fbb105817da6">  100</a></span>    <span class="keyword">protected</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2018b903b215aa6388a6fbb105817da6">suspend</a>() </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span>(this.<a class="code hl_variable" href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#a604dfedb3a18f4001e2dee306cba106e">suspendable</a> &amp;&amp; this.<a class="code hl_variable" href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#acda70800e8ecfc79348908ff571e0ae1">effective</a>)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="comment">// Regel wird selbst auf deaktiviert gesetzt </span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            this.effective = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment">// In die Kette kommen &quot;weichere&quot; Regeln hinein</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">if</span>((<span class="keyword">null</span> != this.<a class="code hl_variable" href="../../dd/de7/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet.html#a33b1667b46b9970090580435afd8a5b4">algorithmInstance</a>) &amp;&amp; (0 &lt; this.<a class="code hl_variable" href="../../dd/de7/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet.html#a33b1667b46b9970090580435afd8a5b4">algorithmInstance</a>.<a class="code hl_function" href="../../d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#aeece406bbcd0c98af48fd24ac5b39c8a">getMatchdayNumber</a>()))</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            { <span class="comment">// Es ist eine Spieltagnummer gesetzt und damit sollen sich Spieler heute nicht begegnen</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                this.nextMatchupRule = <span class="keyword">new</span> <a class="code hl_function" href="../../d7/db4/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_today.html#a309c91f336e361d1cfa0162284241b09">ParticipantsWereNotTeammatesToday</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, this.<a class="code hl_variable" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a55a3672d5d11cf8786f05bbd4b3d7c80">nextMatchupRule</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            this.nextMatchupRule = <span class="keyword">new</span> <a class="code hl_function" href="../../d3/d0a/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_last_round.html#a59af754e0a0b086be015423d7348e915">ParticipantsDidNotMeetLastRound</a>(<span class="keyword">true</span>, <span class="keyword">false</span>, this.<a class="code hl_variable" href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a55a3672d5d11cf8786f05bbd4b3d7c80">nextMatchupRule</a>, this.<a class="code hl_variable" href="../../dd/de7/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet.html#a33b1667b46b9970090580435afd8a5b4">algorithmInstance</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator_html_a604dfedb3a18f4001e2dee306cba106e"><div class="ttname"><a href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#a604dfedb3a18f4001e2dee306cba106e">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractConfigurableRuleDecorator.suspendable</a></div><div class="ttdeci">boolean suspendable</div><div class="ttdoc">Attribut hält die Information, ob die Instanz deaktiviert werden kann.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d93/_abstract_configurable_rule_decorator_8java_source.html#l00043">AbstractConfigurableRuleDecorator.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator_html_acda70800e8ecfc79348908ff571e0ae1"><div class="ttname"><a href="../../d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html#acda70800e8ecfc79348908ff571e0ae1">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractConfigurableRuleDecorator.effective</a></div><div class="ttdeci">boolean effective</div><div class="ttdoc">Attribut hält die Information, ob die Instanz hinsichtlich der Prüfung aktiv ist.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d93/_abstract_configurable_rule_decorator_8java_source.html#l00051">AbstractConfigurableRuleDecorator.java:51</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator_html_a55a3672d5d11cf8786f05bbd4b3d7c80"><div class="ttname"><a href="../../d1/dbf/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_rule_decorator.html#a55a3672d5d11cf8786f05bbd4b3d7c80">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractRuleDecorator.nextMatchupRule</a></div><div class="ttdeci">IMatchup nextMatchupRule</div><div class="ttdoc">In dem Attribut wird die folgende Komponente gehalten.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/de1/_abstract_rule_decorator_8java_source.html#l00046">AbstractRuleDecorator.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator_html"><div class="ttname"><a href="../../d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html">de.petanqueturniermanager.algorithmen.supermelee.SuperMeleeWithDecorator</a></div><div class="ttdoc">Diese Klasse bildet Runden mit einem dynamischen Regelwerk.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/de0/_super_melee_with_decorator_8java_source.html#l00031">SuperMeleeWithDecorator.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator_html_aeece406bbcd0c98af48fd24ac5b39c8a"><div class="ttname"><a href="../../d0/d22/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1_super_melee_with_decorator.html#aeece406bbcd0c98af48fd24ac5b39c8a">de.petanqueturniermanager.algorithmen.supermelee.SuperMeleeWithDecorator.getMatchdayNumber</a></div><div class="ttdeci">int getMatchdayNumber()</div><div class="ttdoc">Getter-Methode für die Nummer des Spieltags.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/de0/_super_melee_with_decorator_8java_source.html#l00460">SuperMeleeWithDecorator.java:460</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_html_a33b1667b46b9970090580435afd8a5b4"><div class="ttname"><a href="../../dd/de7/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet.html#a33b1667b46b9970090580435afd8a5b4">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsDidNotMeet.algorithmInstance</a></div><div class="ttdeci">SuperMeleeWithDecorator algorithmInstance</div><div class="ttdoc">In dem Attribut wird die Referenz zum Algorithmus gehalten.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d8c/_participants_did_not_meet_8java_source.html#l00036">ParticipantsDidNotMeet.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_html_ae85f5586904b96cbae116b4a41fb1852"><div class="ttname"><a href="../../dd/de7/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet.html#ae85f5586904b96cbae116b4a41fb1852">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsDidNotMeet.ParticipantsDidNotMeet</a></div><div class="ttdeci">ParticipantsDidNotMeet()</div><div class="ttdoc">Konstruktor ohne Parameter.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d8c/_participants_did_not_meet_8java_source.html#l00043">ParticipantsDidNotMeet.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_last_round_html_a59af754e0a0b086be015423d7348e915"><div class="ttname"><a href="../../d3/d0a/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_last_round.html#a59af754e0a0b086be015423d7348e915">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsDidNotMeetLastRound.ParticipantsDidNotMeetLastRound</a></div><div class="ttdeci">ParticipantsDidNotMeetLastRound(boolean effective, boolean suspendable, IMatchup component, SuperMeleeWithDecorator instance)</div><div class="ttdoc">Konstruktor mit allen Parametern.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d15/_participants_did_not_meet_last_round_8java_source.html#l00047">ParticipantsDidNotMeetLastRound.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today_html_a2018b903b215aa6388a6fbb105817da6"><div class="ttname"><a href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2018b903b215aa6388a6fbb105817da6">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsDidNotMeetToday.suspend</a></div><div class="ttdeci">boolean suspend()</div><div class="ttdoc">Die Methode deaktiviert die Regel und ergänzt das Regelwerk um mindestens eine Regel.</div><div class="ttdef"><b>Definition</b> <a href="#l00100">ParticipantsDidNotMeetToday.java:100</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today_html_a2331190b8f854889bbb6f908219371df"><div class="ttname"><a href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a2331190b8f854889bbb6f908219371df">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsDidNotMeetToday.ParticipantsDidNotMeetToday</a></div><div class="ttdeci">ParticipantsDidNotMeetToday(boolean effective, boolean suspendable, IMatchup component, SuperMeleeWithDecorator instance)</div><div class="ttdoc">Konstruktor mit allen Parametern.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">ParticipantsDidNotMeetToday.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today_html_a7f44acaa68e598f7923393a0aa946f9d"><div class="ttname"><a href="../../d8/dac/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_did_not_meet_today.html#a7f44acaa68e598f7923393a0aa946f9d">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsDidNotMeetToday.performCheck</a></div><div class="ttdeci">boolean performCheck(Team first, Team second)</div><div class="ttdoc">Die Methode prüft, ob kein Spieler bereits einem der anderen am heutigen Spieltag begegnet ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">ParticipantsDidNotMeetToday.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_today_html_a309c91f336e361d1cfa0162284241b09"><div class="ttname"><a href="../../d7/db4/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_teammates_today.html#a309c91f336e361d1cfa0162284241b09">de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsWereNotTeammatesToday.ParticipantsWereNotTeammatesToday</a></div><div class="ttdeci">ParticipantsWereNotTeammatesToday(boolean effective, boolean suspendable, IMatchup component)</div><div class="ttdoc">Konstruktor mit alle Parametern.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dd9/_participants_were_not_teammates_today_8java_source.html#l00034">ParticipantsWereNotTeammatesToday.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html">de.petanqueturniermanager.model.Team</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00019">Team.java:19</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup_html"><div class="ttname"><a href="../../d8/db7/interfacede_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_i_matchup.html">de.petanqueturniermanager.algorithmen.common.ruleset.matchup.IMatchup</a></div><div class="ttdoc">Das Interface repräsentiert die Komponente gemäß des Strukturmusters des Dekorierers.</div><div class="ttdef"><b>Definition</b> <a href="../../da/d12/_i_matchup_8java_source.html#l00080">IMatchup.java:80</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_946f460c4ad1c6933c7b147c1968aa38.html">algorithmen</a></li><li class="navelem"><a href="../../dir_54955038e43b98e4565ba12eaadaeb52.html">supermelee</a></li><li class="navelem"><a href="../../dir_770dd5daff8caf95bf81e23f1806ce5e.html">rules</a></li><li class="navelem"><a href="../../d6/da8/_participants_did_not_meet_today_8java.html">ParticipantsDidNotMeetToday.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

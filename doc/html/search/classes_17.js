@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['xactionlistener_0',['XActionListener',['../d2/d91/classcom_1_1sun_1_1star_1_1awt_1_1_x_action_listener.html',1,'com::sun::star::awt']]],
+  ['xaddin_1',['XAddIn',['../de/d53/classcom_1_1sun_1_1star_1_1sheet_1_1_x_add_in.html',1,'com::sun::star::sheet']]],
+  ['xcompatibilitynames_2',['XCompatibilityNames',['../d1/df0/classcom_1_1sun_1_1star_1_1sheet_1_1_x_compatibility_names.html',1,'com::sun::star::sheet']]],
+  ['xdispatch_3',['XDispatch',['../d1/d3b/class_x_dispatch.html',1,'']]],
+  ['xdispatchprovider_4',['XDispatchProvider',['../d7/dc4/class_x_dispatch_provider.html',1,'']]],
+  ['xeventlistener_5',['XEventListener',['../d5/db9/class_x_event_listener.html',1,'']]],
+  ['xglobal_6',['XGlobal',['../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html',1,'de::petanqueturniermanager::addin']]],
+  ['xinitialization_7',['XInitialization',['../d8/dcb/class_x_initialization.html',1,'']]],
+  ['xinterface_8',['XInterface',['../db/da8/class_x_interface.html',1,'']]],
+  ['xitemlistener_9',['XItemListener',['../d8/d33/class_x_item_listener.html',1,'']]],
+  ['xmodifylistener_10',['XModifyListener',['../d4/dea/class_x_modify_listener.html',1,'']]],
+  ['xpropertyhelper_11',['XPropertyHelper',['../db/d89/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_x_property_helper.html',1,'de::petanqueturniermanager::helper::sheet']]],
+  ['xserviceinfo_12',['XServiceInfo',['../d0/d04/class_x_service_info.html',1,'']]],
+  ['xsidebarpanel_13',['XSidebarPanel',['../d9/de8/class_x_sidebar_panel.html',1,'']]],
+  ['xterminatelistener_14',['XTerminateListener',['../d0/d63/class_x_terminate_listener.html',1,'']]],
+  ['xtextlistener_15',['XTextListener',['../d9/d37/class_x_text_listener.html',1,'']]],
+  ['xtoolpanel_16',['XToolPanel',['../d2/df3/class_x_tool_panel.html',1,'']]],
+  ['xtopwindowlistener_17',['XTopWindowListener',['../d7/d6c/class_x_top_window_listener.html',1,'']]],
+  ['xuielement_18',['XUIElement',['../d0/d9f/class_x_u_i_element.html',1,'']]],
+  ['xuielementfactory_19',['XUIElementFactory',['../de/da7/class_x_u_i_element_factory.html',1,'']]],
+  ['xwindowlistener_20',['XWindowListener',['../dc/d5e/class_x_window_listener.html',1,'']]]
+];

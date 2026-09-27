@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/konfigdialog/properties/element/color/BackgrnColorConfigElement.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/dfa/_backgrn_color_config_element_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BackgrnColorConfigElement.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.google.common.base.Preconditions.checkNotNull;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.awt.ActionEvent;</code><br />
+<code>import com.sun.star.awt.XActionListener;</code><br />
+<code>import com.sun.star.awt.XWindowPeer;</code><br />
+<code>import com.sun.star.lang.EventObject;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.helper.DocumentPropertiesHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.farbe.FarbwahlDialog;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.ConfigProperty;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.gui.LabelPlusBackgrColorAndColorChooser;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.properties.element.ConfigElement;</code><br />
+<code>import de.petanqueturniermanager.sidebar.GuiFactoryCreateParam;</code><br />
+<code>import de.petanqueturniermanager.sidebar.layout.Layout;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für BackgrnColorConfigElement.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/d98/_backgrn_color_config_element_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2properties_2element_2color_2_backgrn_color_config_element_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2properties_2element_2color_2_backgrn_color_config_element_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2konfigdialog_2properties_2element_2color_2_backgrn_color_config_element_8java">
+<area shape="rect" title=" " alt="" coords="1559,5,1820,64"/>
+<area shape="rect" title=" " alt="" coords="5,112,302,155"/>
+<area shape="poly" title=" " alt="" coords="1556,40,1022,66,673,87,317,114,317,109,673,82,1021,61,1562,40"/>
+<area shape="rect" title=" " alt="" coords="326,112,491,155"/>
+<area shape="poly" title=" " alt="" coords="1556,38,1358,47,1098,60,805,82,506,114,506,109,804,76,1097,55,1358,42,1562,38"/>
+<area shape="rect" title=" " alt="" coords="515,112,680,155"/>
+<area shape="poly" title=" " alt="" coords="1556,41,1176,65,938,85,696,114,695,109,937,80,1175,60,1562,40"/>
+<area shape="rect" title=" " alt="" coords="704,120,902,147"/>
+<area shape="poly" title=" " alt="" coords="1561,45,1263,74,914,115,883,119,882,114,913,109,1263,69,1556,46"/>
+<area shape="rect" title=" " alt="" coords="926,112,1098,155"/>
+<area shape="poly" title=" " alt="" coords="1562,50,1354,79,1114,114,1113,109,1353,73,1556,51"/>
+<area shape="rect" title=" " alt="" coords="1122,120,1332,147"/>
+<area shape="poly" title=" " alt="" coords="1561,63,1303,119,1302,114,1556,63"/>
+<area shape="rect" title=" " alt="" coords="1356,120,1557,147"/>
+<area shape="poly" title=" " alt="" coords="1623,64,1501,116,1500,111,1618,65"/>
+<area shape="rect" title=" " alt="" coords="1580,112,1799,155"/>
+<area shape="poly" title=" " alt="" coords="1691,62,1691,98,1688,95,1688,66"/>
+<area shape="rect" title=" " alt="" coords="1823,112,2044,155"/>
+<area shape="poly" title=" " alt="" coords="1763,62,1870,106,1864,105,1762,67"/>
+<area shape="rect" title=" " alt="" coords="2068,112,2322,155"/>
+<area shape="poly" title=" " alt="" coords="1821,58,2074,109,2069,108,1820,64"/>
+<area shape="rect" title=" " alt="" coords="2346,112,2601,155"/>
+<area shape="poly" title=" " alt="" coords="1820,48,2333,112,2328,112,1820,53"/>
+<area shape="rect" title=" " alt="" coords="2625,112,2901,155"/>
+<area shape="poly" title=" " alt="" coords="1820,42,2172,68,2612,112,2606,112,2172,74,1820,47"/>
+<area shape="rect" title=" " alt="" coords="2925,112,3291,155"/>
+<area shape="poly" title=" " alt="" coords="1820,40,2296,66,2912,112,2907,112,2296,71,1820,45"/>
+<area shape="rect" title=" " alt="" coords="3315,112,3544,155"/>
+<area shape="poly" title=" " alt="" coords="1820,35,2088,40,2453,52,2872,74,3087,90,3302,112,3297,112,3087,95,2871,80,2453,58,2088,45,1820,40"/>
+<area shape="rect" title=" " alt="" coords="3568,112,3835,155"/>
+<area shape="poly" title=" " alt="" coords="1820,34,2126,39,2553,51,3047,73,3301,89,3555,112,3550,112,3301,95,3046,79,2553,57,2125,45,1820,40"/>
+</map>
+</div>
+</div>
+<p><a href="../../db/dfa/_backgrn_color_config_element_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekonfigdialog_2Eproperties_2Eelement_2Ecolor_2EBackgrnColorConfigElement" id="r_de_2Epetanqueturniermanager_2Ekonfigdialog_2Eproperties_2Eelement_2Ecolor_2EBackgrnColorConfigElement"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/daa/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color_1_1_backgrn_color_config_element.html">de.petanqueturniermanager.konfigdialog.properties.element.color.BackgrnColorConfigElement</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ekonfigdialog_2Eproperties_2Eelement_2Ecolor" id="r_de_2Epetanqueturniermanager_2Ekonfigdialog_2Eproperties_2Eelement_2Ecolor"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d7/ddb/namespacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color.html">de.petanqueturniermanager.konfigdialog.properties.element.color</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_5dc56744c2def96656232e2a15016d12.html">konfigdialog</a></li><li class="navelem"><a href="../../dir_e99037cf48de7693619c633b09524b85.html">properties</a></li><li class="navelem"><a href="../../dir_e302701e88314b3838c1f9fa2895b47b.html">element</a></li><li class="navelem"><a href="../../dir_5ce0c3fcb030cb01eb5bcd5bfeb27941.html">color</a></li><li class="navelem"><a href="../../db/dfa/_backgrn_color_config_element_8java.html">BackgrnColorConfigElement.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

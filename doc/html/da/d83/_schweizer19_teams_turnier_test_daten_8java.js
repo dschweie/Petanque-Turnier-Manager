@@ -1,0 +1,4 @@
+var _schweizer19_teams_turnier_test_daten_8java =
+[
+    [ "de.petanqueturniermanager.schweizer.spielrunde.Schweizer19TeamsTurnierTestDaten", "d6/d67/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer19_teams_turnier_test_daten.html", "d6/d67/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer19_teams_turnier_test_daten" ]
+];

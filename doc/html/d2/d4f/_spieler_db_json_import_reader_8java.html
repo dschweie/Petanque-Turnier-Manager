@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/spielerdb/importer/SpielerDbJsonImportReader.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d2/d4f/_spieler_db_json_import_reader_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpielerDbJsonImportReader.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.io.IOException;</code><br />
+<code>import java.io.Reader;</code><br />
+<code>import java.nio.charset.StandardCharsets;</code><br />
+<code>import java.nio.file.Files;</code><br />
+<code>import java.nio.file.Path;</code><br />
+<code>import java.util.ArrayList;</code><br />
+<code>import java.util.EnumSet;</code><br />
+<code>import java.util.List;</code><br />
+<code>import org.jspecify.annotations.Nullable;</code><br />
+<code>import com.google.gson.JsonArray;</code><br />
+<code>import com.google.gson.JsonElement;</code><br />
+<code>import com.google.gson.JsonNull;</code><br />
+<code>import com.google.gson.JsonObject;</code><br />
+<code>import com.google.gson.JsonParser;</code><br />
+<code>import com.google.gson.JsonSyntaxException;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.SpielerDbException;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.export.ExportEntity;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohLabel;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohSpieler;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohSpielerLabel;</code><br />
+<code>import de.petanqueturniermanager.spielerdb.importer.ImportRohdaten.RohVerein;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SpielerDbJsonImportReader.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/d11/_spieler_db_json_import_reader_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2spielerdb_2importer_2_spieler_db_json_import_reader_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2spielerdb_2importer_2_spieler_db_json_import_reader_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2spielerdb_2importer_2_spieler_db_json_import_reader_8java">
+<area shape="rect" title=" " alt="" coords="1547,5,1807,64"/>
+<area shape="rect" title=" " alt="" coords="5,120,141,147"/>
+<area shape="poly" title=" " alt="" coords="1544,39,1232,51,830,66,438,87,276,100,152,115,131,119,130,113,151,109,275,95,437,82,830,61,1232,46,1549,39"/>
+<area shape="rect" title=" " alt="" coords="164,120,270,147"/>
+<area shape="poly" title=" " alt="" coords="1544,39,1256,50,892,65,538,86,392,99,281,115,267,118,266,113,281,109,392,94,538,81,892,59,1256,45,1549,39"/>
+<area shape="rect" title=" " alt="" coords="294,112,463,155"/>
+<area shape="poly" title=" " alt="" coords="1544,38,1343,47,1079,60,782,81,479,114,478,109,781,76,1079,54,1343,42,1549,38"/>
+<area shape="rect" title=" " alt="" coords="487,120,606,147"/>
+<area shape="poly" title=" " alt="" coords="1544,37,1363,45,1131,57,875,79,745,95,619,115,601,118,600,113,618,109,745,90,874,74,1131,52,1363,39,1549,37"/>
+<area shape="rect" title=" " alt="" coords="630,120,748,147"/>
+<area shape="poly" title=" " alt="" coords="1544,39,1387,48,1190,61,975,83,760,115,743,118,743,113,759,109,974,78,1190,56,1387,43,1549,39"/>
+<area shape="rect" title=" " alt="" coords="772,120,894,147"/>
+<area shape="poly" title=" " alt="" coords="1549,42,1252,68,1079,88,907,115,890,118,889,113,906,109,1078,82,1252,62,1544,42"/>
+<area shape="rect" title=" " alt="" coords="919,120,1043,147"/>
+<area shape="poly" title=" " alt="" coords="1549,46,1317,74,1186,92,1056,115,1039,118,1038,113,1055,109,1185,87,1316,69,1544,47"/>
+<area shape="rect" title=" " alt="" coords="1067,120,1159,147"/>
+<area shape="poly" title=" " alt="" coords="1549,49,1367,76,1268,93,1171,115,1160,118,1159,112,1170,109,1267,88,1367,70,1544,49"/>
+<area shape="rect" title=" " alt="" coords="1182,112,1345,155"/>
+<area shape="poly" title=" " alt="" coords="1557,64,1360,112,1359,107,1551,65"/>
+<area shape="rect" title=" " alt="" coords="1369,120,1553,147"/>
+<area shape="poly" title=" " alt="" coords="1615,64,1504,116,1503,111,1610,65"/>
+<area shape="rect" title=" " alt="" coords="1577,120,1777,147"/>
+<area shape="poly" title=" " alt="" coords="1679,62,1679,106,1675,102,1675,66"/>
+<area shape="rect" title=" " alt="" coords="1801,120,1977,147"/>
+<area shape="poly" title=" " alt="" coords="1741,62,1850,114,1845,113,1739,67"/>
+<area shape="rect" title=" " alt="" coords="2000,120,2191,147"/>
+<area shape="poly" title=" " alt="" coords="1802,62,2029,116,2023,116,1801,67"/>
+<area shape="rect" title=" " alt="" coords="2215,120,2406,147"/>
+<area shape="poly" title=" " alt="" coords="1807,51,2203,109,2232,117,2227,117,2202,115,1807,56"/>
+<area shape="rect" title=" " alt="" coords="2430,112,2623,155"/>
+<area shape="poly" title=" " alt="" coords="1808,44,2083,69,2417,112,2411,112,2082,75,1808,49"/>
+<area shape="rect" title=" " alt="" coords="2647,112,2886,155"/>
+<area shape="poly" title=" " alt="" coords="1808,41,2175,66,2401,85,2635,112,2629,112,2401,91,2174,71,1807,46"/>
+<area shape="rect" title=" " alt="" coords="2910,112,3188,155"/>
+<area shape="poly" title=" " alt="" coords="1808,39,2282,63,2585,83,2897,112,2892,112,2585,88,2282,68,1808,44"/>
+<area shape="rect" title=" " alt="" coords="3212,112,3502,155"/>
+<area shape="poly" title=" " alt="" coords="1808,36,2404,58,2796,80,3199,112,3194,112,2796,85,2404,64,1808,42"/>
+<area shape="rect" title=" " alt="" coords="3526,112,3815,155"/>
+<area shape="poly" title=" " alt="" coords="1808,35,2109,41,2529,53,3013,75,3512,112,3507,112,3013,81,2528,59,2109,46,1808,40"/>
+<area shape="rect" title=" " alt="" coords="3839,112,4128,155"/>
+<area shape="poly" title=" " alt="" coords="1808,34,2155,38,2651,49,3230,71,3529,88,3826,112,3821,112,3529,93,3230,77,2651,54,2155,43,1808,39"/>
+<area shape="rect" title=" " alt="" coords="4152,112,4442,155"/>
+<area shape="poly" title=" " alt="" coords="1807,33,2199,35,2773,45,3445,67,3794,86,4139,112,4134,112,3794,91,3445,73,2772,50,2199,40,1808,38"/>
+</map>
+</div>
+</div>
+<p><a href="../../d2/d4f/_spieler_db_json_import_reader_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Espielerdb_2Eimporter_2ESpielerDbJsonImportReader" id="r_de_2Epetanqueturniermanager_2Espielerdb_2Eimporter_2ESpielerDbJsonImportReader"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/db3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_json_import_reader.html">de.petanqueturniermanager.spielerdb.importer.SpielerDbJsonImportReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest eine JSON-Datei mit Top-Level-Struktur <code class="JavaDocCode">{meta, spieler, vereine, labels, spielerLabels}</code>.  <a href="../../df/db3/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_json_import_reader.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Espielerdb_2Eimporter" id="r_de_2Epetanqueturniermanager_2Espielerdb_2Eimporter"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html">de.petanqueturniermanager.spielerdb.importer</a></td></tr>
+<tr class="memdesc:df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spieler-DB-Import. <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_1b82cc273ad50832255d72f36d926731.html">spielerdb</a></li><li class="navelem"><a href="../../dir_b04589d758b323be9502941c6b1fb23c.html">importer</a></li><li class="navelem"><a href="../../d2/d4f/_spieler_db_json_import_reader_8java.html">SpielerDbJsonImportReader.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

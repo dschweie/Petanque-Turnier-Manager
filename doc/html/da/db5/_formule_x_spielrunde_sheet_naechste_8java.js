@@ -1,0 +1,4 @@
+var _formule_x_spielrunde_sheet_naechste_8java =
+[
+    [ "de.petanqueturniermanager.formulex.spielrunde.FormuleXSpielrundeSheetNaechste", "d7/d6e/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_spielrunde_sheet_naechste.html", "d7/d6e/classde_1_1petanqueturniermanager_1_1formulex_1_1spielrunde_1_1_formule_x_spielrunde_sheet_naechste" ]
+];

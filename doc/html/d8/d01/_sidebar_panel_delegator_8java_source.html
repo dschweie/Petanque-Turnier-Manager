@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/sidebar/SidebarPanelDelegator.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/d01/_sidebar_panel_delegator_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SidebarPanelDelegator.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/d01/_sidebar_panel_delegator_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.sidebar;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.Collections;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.function.BiConsumer;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.comp.adapter.IGlobalEventListener;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.helper.LogUtil;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html">   22</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">SidebarPanelDelegator</a> <span class="keyword">implements</span> <a class="code hl_interface" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">IGlobalEventListener</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7e273da73d1b7c936742c7cea7550f70">   24</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7e273da73d1b7c936742c7cea7550f70">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">SidebarPanelDelegator</a>.class);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af4a6de4acb187231ffb31398aee50ec0">   25</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">SidebarPanelDelegator</a> <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af4a6de4acb187231ffb31398aee50ec0">INSTANCE</a> = <span class="keyword">new</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">SidebarPanelDelegator</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">   27</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> List&lt;IGlobalEventListener&gt; <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">panels</a> = Collections.synchronizedList(<span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">   29</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">SidebarPanelDelegator</a>() {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a88f5dd1bc1e59ac7dd73a191a870d3c7">   32</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">SidebarPanelDelegator</a> <span class="keyword">get</span>() {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af4a6de4acb187231ffb31398aee50ec0">INSTANCE</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7cf331511dfa9aba13041f9fffe677aa">   36</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7cf331511dfa9aba13041f9fffe677aa">registrieren</a>(<a class="code hl_interface" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">IGlobalEventListener</a> panel) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">panels</a>.add(panel);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7e273da73d1b7c936742c7cea7550f70">logger</a>.debug(<span class="stringliteral">&quot;Panel registriert: {}, gesamt={}&quot;</span>, panel.getClass().getSimpleName(), <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">panels</a>.size());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a0f0597f484aea313e1dd44be40d63249">   41</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a0f0597f484aea313e1dd44be40d63249">entfernen</a>(<a class="code hl_interface" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">IGlobalEventListener</a> panel) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">panels</a>.remove(panel);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7e273da73d1b7c936742c7cea7550f70">logger</a>.debug(<span class="stringliteral">&quot;Panel entfernt: {}, gesamt={}&quot;</span>, panel.getClass().getSimpleName(), <a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">panels</a>.size());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    @Override</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6487322867ce914f2c9bb72b812dfd98">   47</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6487322867ce914f2c9bb72b812dfd98">onNew</a>(Object source) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onNew&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a359412816d816472c737ac4a641e3595">IGlobalEventListener::onNew</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    @Override</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a880b4d47d0f4bcd55cb7ea0b40c6dfcf">   52</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a880b4d47d0f4bcd55cb7ea0b40c6dfcf">onLoad</a>(Object source) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onLoad&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#acaec9bd45deb17eb3dc47a8490b02b74">IGlobalEventListener::onLoad</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    @Override</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a9e4dbe7ca1f9339d8093e7c1703eab94">   57</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a9e4dbe7ca1f9339d8093e7c1703eab94">onUnload</a>(Object source) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onUnload&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a6e736eab93c9b49fec92e79b4122e73d">IGlobalEventListener::onUnload</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    @Override</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#afb23559018299102cd297d785fa01143">   62</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#afb23559018299102cd297d785fa01143">onUnfocus</a>(Object source) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onUnfocus&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a70929a52c012af581bc13a50c217e3a9">IGlobalEventListener::onUnfocus</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    @Override</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af1226ee8f714e23eafb87bd112dec2ae">   67</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af1226ee8f714e23eafb87bd112dec2ae">onViewCreated</a>(Object source) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onViewCreated&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a0ec207956c3b1e91a1363cce9ce29cdf">IGlobalEventListener::onViewCreated</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    @Override</div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a4945648b5e32da40d529d1fea14349b6">   72</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a4945648b5e32da40d529d1fea14349b6">onViewClosed</a>(Object source) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onViewClosed&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a843d58e0d00f4f810ddcb722f68626a1">IGlobalEventListener::onViewClosed</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    @Override</div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a2cabd7f086539430ef5fdc551873c0b0">   77</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a2cabd7f086539430ef5fdc551873c0b0">onLoadFinished</a>(Object source) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onLoadFinished&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a40f04cad3fd62f3c9f6818e654795608">IGlobalEventListener::onLoadFinished</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    @Override</div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a81e2c00f1f6718672122d80b934bdd7b">   82</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a81e2c00f1f6718672122d80b934bdd7b">onFocus</a>(Object source) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(<span class="stringliteral">&quot;onFocus&quot;</span>, source, <a class="code hl_function" href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a630ced1ef161922cc17145f2ab08c9e6">IGlobalEventListener::onFocus</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">   86</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">verteile</a>(String eventName, Object source, BiConsumer&lt;IGlobalEventListener, Object&gt; dispatch) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">for</span> (var panel : <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af22aa2c65d1686b1c84e913db239fd63">snapshot</a>()) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                dispatch.accept(panel, source);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> e) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <a class="code hl_class" href="../../dc/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1_log_util.html">LogUtil</a>.<a class="code hl_function" href="../../dc/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1_log_util.html#a4747e0454bc08b59a311a55a901e92d6">warn</a>(<a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7e273da73d1b7c936742c7cea7550f70">logger</a>, <span class="stringliteral">&quot;Sidebar-Event &quot;</span> + eventName + <span class="stringliteral">&quot; an &quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                        + panel.getClass().getSimpleName() + <span class="stringliteral">&quot; fehlgeschlagen&quot;</span>, e);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            } <span class="keywordflow">catch</span> (Error e) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">throw</span> e;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af22aa2c65d1686b1c84e913db239fd63">   99</a></span>    <span class="keyword">private</span> List&lt;IGlobalEventListener&gt; <a class="code hl_function" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af22aa2c65d1686b1c84e913db239fd63">snapshot</a>() {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(<a class="code hl_variable" href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">panels</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_log_util_html"><div class="ttname"><a href="../../dc/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1_log_util.html">de.petanqueturniermanager.helper.LogUtil</a></div><div class="ttdoc">Logging-Hilfsmethoden, die Kontextverlust bei Throwable.getMessage() == null verhindern (z....</div><div class="ttdef"><b>Definition</b> <a href="../../d8/dd7/_log_util_8java_source.html#l00009">LogUtil.java:9</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_log_util_html_a4747e0454bc08b59a311a55a901e92d6"><div class="ttname"><a href="../../dc/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1_log_util.html#a4747e0454bc08b59a311a55a901e92d6">de.petanqueturniermanager.helper.LogUtil.warn</a></div><div class="ttdeci">static void warn(Logger logger, String kontext, Throwable t)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/dd7/_log_util_8java_source.html#l00020">LogUtil.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a0f0597f484aea313e1dd44be40d63249"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a0f0597f484aea313e1dd44be40d63249">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.entfernen</a></div><div class="ttdeci">void entfernen(IGlobalEventListener panel)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">SidebarPanelDelegator.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a2cabd7f086539430ef5fdc551873c0b0"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a2cabd7f086539430ef5fdc551873c0b0">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onLoadFinished</a></div><div class="ttdeci">void onLoadFinished(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00077">SidebarPanelDelegator.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a3e3e848b6458b8463347215c5a4ce64d"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a3e3e848b6458b8463347215c5a4ce64d">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.SidebarPanelDelegator</a></div><div class="ttdeci">SidebarPanelDelegator()</div><div class="ttdef"><b>Definition</b> <a href="#l00029">SidebarPanelDelegator.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a4945648b5e32da40d529d1fea14349b6"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a4945648b5e32da40d529d1fea14349b6">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onViewClosed</a></div><div class="ttdeci">void onViewClosed(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00072">SidebarPanelDelegator.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a6487322867ce914f2c9bb72b812dfd98"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6487322867ce914f2c9bb72b812dfd98">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onNew</a></div><div class="ttdeci">void onNew(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">SidebarPanelDelegator.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a6bbdba63ad6cb929da2e7d673963c486"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a6bbdba63ad6cb929da2e7d673963c486">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.verteile</a></div><div class="ttdeci">void verteile(String eventName, Object source, BiConsumer&lt; IGlobalEventListener, Object &gt; dispatch)</div><div class="ttdef"><b>Definition</b> <a href="#l00086">SidebarPanelDelegator.java:86</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a7cf331511dfa9aba13041f9fffe677aa"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7cf331511dfa9aba13041f9fffe677aa">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.registrieren</a></div><div class="ttdeci">void registrieren(IGlobalEventListener panel)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">SidebarPanelDelegator.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a7e273da73d1b7c936742c7cea7550f70"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a7e273da73d1b7c936742c7cea7550f70">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00024">SidebarPanelDelegator.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a81e2c00f1f6718672122d80b934bdd7b"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a81e2c00f1f6718672122d80b934bdd7b">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onFocus</a></div><div class="ttdeci">void onFocus(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">SidebarPanelDelegator.java:82</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a880b4d47d0f4bcd55cb7ea0b40c6dfcf"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a880b4d47d0f4bcd55cb7ea0b40c6dfcf">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onLoad</a></div><div class="ttdeci">void onLoad(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00052">SidebarPanelDelegator.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_a9e4dbe7ca1f9339d8093e7c1703eab94"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#a9e4dbe7ca1f9339d8093e7c1703eab94">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onUnload</a></div><div class="ttdeci">void onUnload(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">SidebarPanelDelegator.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_aec385c337cda46f42ba1a6236fb6c6a3"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#aec385c337cda46f42ba1a6236fb6c6a3">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.panels</a></div><div class="ttdeci">final List&lt; IGlobalEventListener &gt; panels</div><div class="ttdef"><b>Definition</b> <a href="#l00027">SidebarPanelDelegator.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_af1226ee8f714e23eafb87bd112dec2ae"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af1226ee8f714e23eafb87bd112dec2ae">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onViewCreated</a></div><div class="ttdeci">void onViewCreated(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">SidebarPanelDelegator.java:67</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_af22aa2c65d1686b1c84e913db239fd63"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af22aa2c65d1686b1c84e913db239fd63">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.snapshot</a></div><div class="ttdeci">List&lt; IGlobalEventListener &gt; snapshot()</div><div class="ttdef"><b>Definition</b> <a href="#l00099">SidebarPanelDelegator.java:99</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_af4a6de4acb187231ffb31398aee50ec0"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#af4a6de4acb187231ffb31398aee50ec0">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.INSTANCE</a></div><div class="ttdeci">static final SidebarPanelDelegator INSTANCE</div><div class="ttdef"><b>Definition</b> <a href="#l00025">SidebarPanelDelegator.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator_html_afb23559018299102cd297d785fa01143"><div class="ttname"><a href="../../dc/d49/classde_1_1petanqueturniermanager_1_1sidebar_1_1_sidebar_panel_delegator.html#afb23559018299102cd297d785fa01143">de.petanqueturniermanager.sidebar.SidebarPanelDelegator.onUnfocus</a></div><div class="ttdeci">void onUnfocus(Object source)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SidebarPanelDelegator.java:62</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html">de.petanqueturniermanager.comp.adapter.IGlobalEventListener</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00010">IGlobalEventListener.java:10</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a0ec207956c3b1e91a1363cce9ce29cdf"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a0ec207956c3b1e91a1363cce9ce29cdf">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onViewCreated</a></div><div class="ttdeci">default void onViewCreated(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00029">IGlobalEventListener.java:29</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a359412816d816472c737ac4a641e3595"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a359412816d816472c737ac4a641e3595">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onNew</a></div><div class="ttdeci">default void onNew(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00017">IGlobalEventListener.java:17</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a40f04cad3fd62f3c9f6818e654795608"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a40f04cad3fd62f3c9f6818e654795608">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onLoadFinished</a></div><div class="ttdeci">default void onLoadFinished(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00035">IGlobalEventListener.java:35</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a630ced1ef161922cc17145f2ab08c9e6"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a630ced1ef161922cc17145f2ab08c9e6">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onFocus</a></div><div class="ttdeci">default void onFocus(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00038">IGlobalEventListener.java:38</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a6e736eab93c9b49fec92e79b4122e73d"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a6e736eab93c9b49fec92e79b4122e73d">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onUnload</a></div><div class="ttdeci">default void onUnload(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00023">IGlobalEventListener.java:23</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a70929a52c012af581bc13a50c217e3a9"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a70929a52c012af581bc13a50c217e3a9">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onUnfocus</a></div><div class="ttdeci">default void onUnfocus(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00026">IGlobalEventListener.java:26</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_a843d58e0d00f4f810ddcb722f68626a1"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#a843d58e0d00f4f810ddcb722f68626a1">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onViewClosed</a></div><div class="ttdeci">default void onViewClosed(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00032">IGlobalEventListener.java:32</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener_html_acaec9bd45deb17eb3dc47a8490b02b74"><div class="ttname"><a href="../../d0/def/interfacede_1_1petanqueturniermanager_1_1comp_1_1adapter_1_1_i_global_event_listener.html#acaec9bd45deb17eb3dc47a8490b02b74">de.petanqueturniermanager.comp.adapter.IGlobalEventListener.onLoad</a></div><div class="ttdeci">default void onLoad(@SuppressWarnings(&quot;unused&quot;) Object source)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d2d/_i_global_event_listener_8java_source.html#l00020">IGlobalEventListener.java:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_a830c9564d52213ae7b278a6a086a685.html">sidebar</a></li><li class="navelem"><a href="../../d8/d01/_sidebar_panel_delegator_8java.html">SidebarPanelDelegator.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

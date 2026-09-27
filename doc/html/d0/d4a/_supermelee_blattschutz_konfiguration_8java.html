@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/blattschutz/SupermeleeBlattschutzKonfiguration.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d4a/_supermelee_blattschutz_konfiguration_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SupermeleeBlattschutzKonfiguration.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.ArrayList;</code><br />
+<code>import java.util.List;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheetDocument;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import com.sun.star.table.CellContentType;</code><br />
+<code>import com.sun.star.table.XCell;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldeListeKonstanten;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldungenSpalte;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.CellStyleHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeUnGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.IBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.SheetSchutzInfo;</code><br />
+<code>import de.petanqueturniermanager.supermelee.spielrunde.SpielrundeSheetKonstanten;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SupermeleeBlattschutzKonfiguration.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d01/_supermelee_blattschutz_konfiguration_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2blattschutz_2_supermelee_blattschutz_konfiguration_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2blattschutz_2_supermelee_blattschutz_konfiguration_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2supermelee_2blattschutz_2_supermelee_blattschutz_konfiguration_8java">
+<area shape="rect" title=" " alt="" coords="2058,5,2358,64"/>
+<area shape="rect" title=" " alt="" coords="5,120,128,147"/>
+<area shape="poly" title=" " alt="" coords="2055,37,1637,45,1084,57,538,80,312,95,140,115,121,118,120,113,139,109,311,90,538,74,1083,52,1637,40,2060,37"/>
+<area shape="rect" title=" " alt="" coords="152,120,243,147"/>
+<area shape="poly" title=" " alt="" coords="2055,36,1658,42,1137,53,873,62,626,75,415,93,255,115,243,118,242,112,254,109,415,87,626,70,872,57,1137,47,1658,37,2060,36"/>
+<area shape="rect" title=" " alt="" coords="266,112,432,155"/>
+<area shape="poly" title=" " alt="" coords="2055,40,1243,66,790,88,598,100,447,114,447,109,598,95,789,82,1242,61,2060,39"/>
+<area shape="rect" title=" " alt="" coords="456,112,621,155"/>
+<area shape="poly" title=" " alt="" coords="2055,35,1793,41,1441,51,1043,74,838,92,637,114,636,109,838,87,1042,69,1441,46,1793,35,2061,35"/>
+<area shape="rect" title=" " alt="" coords="645,112,864,155"/>
+<area shape="poly" title=" " alt="" coords="2055,40,1832,50,1541,63,1213,84,880,115,879,109,1213,79,1540,58,1832,44,2060,39"/>
+<area shape="rect" title=" " alt="" coords="889,120,1108,147"/>
+<area shape="poly" title=" " alt="" coords="2060,42,1636,69,1379,89,1121,115,1084,120,1084,114,1121,109,1378,83,1635,63,2055,42"/>
+<area shape="rect" title=" " alt="" coords="1133,120,1363,147"/>
+<area shape="poly" title=" " alt="" coords="2060,47,1743,76,1375,115,1338,120,1337,114,1374,109,1743,70,2055,47"/>
+<area shape="rect" title=" " alt="" coords="1386,120,1552,147"/>
+<area shape="poly" title=" " alt="" coords="2060,50,1825,78,1564,115,1540,119,1539,114,1563,109,1824,73,2055,50"/>
+<area shape="rect" title=" " alt="" coords="1576,112,1885,155"/>
+<area shape="poly" title=" " alt="" coords="2069,64,1848,111,1848,106,2063,65"/>
+<area shape="rect" title=" " alt="" coords="1909,112,2218,155"/>
+<area shape="poly" title=" " alt="" coords="2168,64,2108,105,2107,100,2162,65"/>
+<area shape="rect" title=" " alt="" coords="2243,112,2461,155"/>
+<area shape="poly" title=" " alt="" coords="2251,62,2311,104,2306,102,2250,67"/>
+<area shape="rect" title=" " alt="" coords="2484,112,2758,155"/>
+<area shape="poly" title=" " alt="" coords="2331,62,2520,108,2515,108,2330,67"/>
+<area shape="rect" title=" " alt="" coords="2782,112,3066,155"/>
+<area shape="poly" title=" " alt="" coords="2358,53,2770,111,2764,111,2358,59"/>
+<area shape="rect" title=" " alt="" coords="3090,112,3390,155"/>
+<area shape="poly" title=" " alt="" coords="2358,45,2683,72,3077,112,3071,112,2682,77,2358,50"/>
+<area shape="rect" title=" " alt="" coords="3414,112,3684,155"/>
+<area shape="poly" title=" " alt="" coords="2358,39,2819,64,3107,84,3401,112,3396,112,3106,89,2819,69,2358,45"/>
+<area shape="rect" title=" " alt="" coords="3708,112,3966,155"/>
+<area shape="poly" title=" " alt="" coords="2358,37,2609,44,2939,58,3313,79,3696,112,3690,112,3312,84,2939,63,2609,49,2358,42"/>
+<area shape="rect" title=" " alt="" coords="3990,112,4247,155"/>
+<area shape="poly" title=" " alt="" coords="2358,35,2653,40,3053,53,3509,75,3977,112,3971,112,3508,80,3052,58,2653,46,2358,40"/>
+<area shape="rect" title=" " alt="" coords="4272,112,4597,155"/>
+<area shape="poly" title=" " alt="" coords="2358,35,2696,41,3164,54,3704,75,4259,112,4254,112,3704,81,3164,59,2696,46,2358,40"/>
+<area shape="rect" title=" " alt="" coords="4621,112,4946,155"/>
+<area shape="poly" title=" " alt="" coords="2358,34,2747,38,3301,49,3945,72,4278,88,4608,112,4603,112,4278,94,3945,77,3301,54,2747,43,2358,39"/>
+<area shape="rect" title=" " alt="" coords="4971,112,5287,155"/>
+<area shape="poly" title=" " alt="" coords="2358,33,2797,34,3437,44,4186,67,4574,85,4958,112,4953,112,4574,91,4186,72,3437,49,2797,40,2358,38"/>
+</map>
+</div>
+</div>
+<p><a href="../../d0/d4a/_supermelee_blattschutz_konfiguration_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Esupermelee_2Eblattschutz_2ESupermeleeBlattschutzKonfiguration" id="r_de_2Epetanqueturniermanager_2Esupermelee_2Eblattschutz_2ESupermeleeBlattschutzKonfiguration"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d7/d97/classde_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz_1_1_supermelee_blattschutz_konfiguration.html">de.petanqueturniermanager.supermelee.blattschutz.SupermeleeBlattschutzKonfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blattschutz-Konfiguration für das Supermelee-Turniersystem.  <a href="../../d7/d97/classde_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz_1_1_supermelee_blattschutz_konfiguration.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Esupermelee_2Eblattschutz" id="r_de_2Epetanqueturniermanager_2Esupermelee_2Eblattschutz"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d52/namespacede_1_1petanqueturniermanager_1_1supermelee_1_1blattschutz.html">de.petanqueturniermanager.supermelee.blattschutz</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../dir_76ee1722eb188ff426dbd69f8616395e.html">blattschutz</a></li><li class="navelem"><a href="../../d0/d4a/_supermelee_blattschutz_konfiguration_8java.html">SupermeleeBlattschutzKonfiguration.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

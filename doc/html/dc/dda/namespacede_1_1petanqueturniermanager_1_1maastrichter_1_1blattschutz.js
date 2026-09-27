@@ -1,0 +1,4 @@
+var namespacede_1_1petanqueturniermanager_1_1maastrichter_1_1blattschutz =
+[
+    [ "MaastrichterBlattschutzKonfiguration", "dc/d8a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1blattschutz_1_1_maastrichter_blattschutz_konfiguration.html", "dc/d8a/classde_1_1petanqueturniermanager_1_1maastrichter_1_1blattschutz_1_1_maastrichter_blattschutz_konfiguration" ]
+];

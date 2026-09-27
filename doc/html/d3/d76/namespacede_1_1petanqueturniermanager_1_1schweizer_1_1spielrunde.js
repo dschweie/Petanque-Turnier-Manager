@@ -1,0 +1,9 @@
+var namespacede_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde =
+[
+    [ "Schweizer19TeamsTurnierTestDaten", "d6/d67/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer19_teams_turnier_test_daten.html", "d6/d67/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer19_teams_turnier_test_daten" ],
+    [ "SchweizerAbstractSpielrundeSheet", "d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html", "d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet" ],
+    [ "SchweizerSpielrundeSheetNaechste", "d5/d68/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_naechste.html", "d5/d68/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_naechste" ],
+    [ "SchweizerSpielrundeSheetTestDaten", "d4/d6b/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_test_daten.html", "d4/d6b/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_test_daten" ],
+    [ "SchweizerSpielrundeSheetUpdate", "d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update.html", "d7/db4/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_spielrunde_sheet_update" ],
+    [ "SchweizerTurnierTestDaten", "d2/d4e/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_turnier_test_daten.html", "d2/d4e/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_turnier_test_daten" ]
+];

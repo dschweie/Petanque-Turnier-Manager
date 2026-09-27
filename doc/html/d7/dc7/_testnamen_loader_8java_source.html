@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/TestnamenLoader.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d7/dc7/_testnamen_loader_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TestnamenLoader.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/dc7/_testnamen_loader_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.helper;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.io.InputStream;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.io.InputStreamReader;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.nio.charset.StandardCharsets;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.opencsv.CSVParser;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.opencsv.CSVParserBuilder;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.opencsv.CSVReader;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.opencsv.CSVReaderBuilder;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.opencsv.exceptions.CsvException;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html">   23</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html">TestnamenLoader</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#abc3934779859fb92a20fe703266f513e">   25</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#abc3934779859fb92a20fe703266f513e">logger</a> = LogManager.getLogger(<a class="code hl_class" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html">TestnamenLoader</a>.class);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ab0f16efc21ddc6e686a685f51b59edf7">   27</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ab0f16efc21ddc6e686a685f51b59edf7">TESTNAMEN_1000_CSV</a> = <span class="stringliteral">&quot;testnamen_1000.csv&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a4b4e10da800e5c254483476b0ac863aa">   29</a></span>    <span class="keyword">public</span> List&lt;String&gt; <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a4b4e10da800e5c254483476b0ac863aa">listeMitTestNamen</a>(<span class="keywordtype">int</span> anzahl) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a4b4e10da800e5c254483476b0ac863aa">listeMitTestNamen</a>(anzahl, 0);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a072d702cfce4ec8a74e8d029ace980e7">   33</a></span>    <span class="keyword">public</span> List&lt;String&gt; <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a072d702cfce4ec8a74e8d029ace980e7">listeMitTestNamen</a>(<span class="keywordtype">int</span> anzahl, <span class="keywordtype">int</span> skip) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        List&lt;String&gt; testNamen = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        InputStream csvFile = <a class="code hl_class" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html">TestnamenLoader</a>.class.getResourceAsStream(<a class="code hl_variable" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ab0f16efc21ddc6e686a685f51b59edf7">TESTNAMEN_1000_CSV</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (csvFile == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            String errmsg = <a class="code hl_variable" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ab0f16efc21ddc6e686a685f51b59edf7">TESTNAMEN_1000_CSV</a> + <span class="stringliteral">&quot; File not found&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_variable" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#abc3934779859fb92a20fe703266f513e">logger</a>.error(errmsg);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> NullPointerException(errmsg);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        CSVParser parser = <span class="keyword">new</span> CSVParserBuilder().withSeparator(<span class="charliteral">&#39;;&#39;</span>).withIgnoreQuotations(<span class="keyword">true</span>).build();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">try</span> (CSVReader reader = <span class="keyword">new</span> CSVReaderBuilder(<span class="keyword">new</span> InputStreamReader(csvFile, StandardCharsets.UTF_8))</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                .withSkipLines(1 + skip)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                .withCSVParser(parser).build()) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            String[] nextLine;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">int</span> anzRead = 1;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">while</span> ((nextLine = reader.readNext()) != <span class="keyword">null</span> &amp;&amp; anzRead &lt;= anzahl) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                testNamen.add(nextLine[2] + <span class="stringliteral">&quot;, &quot;</span> + nextLine[1]);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                anzRead++;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        } <span class="keywordflow">catch</span> (IOException | CsvException e) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_variable" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#abc3934779859fb92a20fe703266f513e">logger</a>.error(e.getMessage(), e);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> testNamen;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a493793e4e7fc240b5ae4694c46a4e5be">   62</a></span>    <span class="keyword">public</span> record <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a493793e4e7fc240b5ae4694c46a4e5be">SpielerTestname</a>(String vorname, String nachname) {}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ae45c860735d79cdb7b1060ab5934740d">   64</a></span>    <span class="keyword">public</span> List&lt;SpielerTestname&gt; <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ae45c860735d79cdb7b1060ab5934740d">listeMitSpielerTestNamen</a>(<span class="keywordtype">int</span> anzahl) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a4b4e10da800e5c254483476b0ac863aa">listeMitTestNamen</a>(anzahl).stream().map(name -&gt; {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            String[] parts = name.split(<span class="stringliteral">&quot;, &quot;</span>, 2);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> parts.length &gt; 1 ? <span class="keyword">new</span> <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a493793e4e7fc240b5ae4694c46a4e5be">SpielerTestname</a>(parts[1], parts[0]) : <span class="keyword">new</span> <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a493793e4e7fc240b5ae4694c46a4e5be">SpielerTestname</a>(parts[0], <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }).toList();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// Testdaten Generator</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// http://migano.de/testdaten.php</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    @Deprecated</div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a54b8c080ab197e4fc5d60b5bd6636c90">   75</a></span>    <span class="keyword">public</span> List&lt;String&gt; <a class="code hl_function" href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a54b8c080ab197e4fc5d60b5bd6636c90">listeMitTestNamen</a>() {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        List&lt;String&gt; testNamen = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        testNamen.add(<span class="stringliteral">&quot;Wegner, Silas&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        testNamen.add(<span class="stringliteral">&quot;Wright, Silvia&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        testNamen.add(<span class="stringliteral">&quot;Karrer, Milan&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        testNamen.add(<span class="stringliteral">&quot;Böhme, Bjarne&quot;</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        testNamen.add(<span class="stringliteral">&quot;Cummings, Kay&quot;</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        testNamen.add(<span class="stringliteral">&quot;Trost, Simon&quot;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        testNamen.add(<span class="stringliteral">&quot;Adrian, Isabella&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        testNamen.add(<span class="stringliteral">&quot;Gruber, Chantall&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        testNamen.add(<span class="stringliteral">&quot;Erpel, Leander&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        testNamen.add(<span class="stringliteral">&quot;Breunig, Lili&quot;</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        testNamen.add(<span class="stringliteral">&quot;Schulte, Catharina&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        testNamen.add(<span class="stringliteral">&quot;Lau, Henrik&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        testNamen.add(<span class="stringliteral">&quot;Seel, Dominic&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        testNamen.add(<span class="stringliteral">&quot;Edwards, Victor&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        testNamen.add(<span class="stringliteral">&quot;Hoffmann, Arne&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        testNamen.add(<span class="stringliteral">&quot;Morgenroth, Waldtraut&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        testNamen.add(<span class="stringliteral">&quot;Töpfer, Lilian&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        testNamen.add(<span class="stringliteral">&quot;Reiter, Enno&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        testNamen.add(<span class="stringliteral">&quot;Schaeffer, Thorsten&quot;</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        testNamen.add(<span class="stringliteral">&quot;Kübler, Matis&quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        testNamen.add(<span class="stringliteral">&quot;Barber, Arne&quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        testNamen.add(<span class="stringliteral">&quot;Sinn, Lya&quot;</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        testNamen.add(<span class="stringliteral">&quot;Schreiber, Justus&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        testNamen.add(<span class="stringliteral">&quot;Weaver, Erwin&quot;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        testNamen.add(<span class="stringliteral">&quot;Crawford, Lorena&quot;</span>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        testNamen.add(<span class="stringliteral">&quot;Malone, Thorben&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        testNamen.add(<span class="stringliteral">&quot;Hagedorn, Rosemarie&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        testNamen.add(<span class="stringliteral">&quot;Gäbler, Katharina&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        testNamen.add(<span class="stringliteral">&quot;Schmidt, Peter&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        testNamen.add(<span class="stringliteral">&quot;Schubert, Linus&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        testNamen.add(<span class="stringliteral">&quot;Both, Dominik&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        testNamen.add(<span class="stringliteral">&quot;Derksen, Cedric&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        testNamen.add(<span class="stringliteral">&quot;Wieczorek, Kristine&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        testNamen.add(<span class="stringliteral">&quot;Cooper, Hartmut&quot;</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        testNamen.add(<span class="stringliteral">&quot;Lehmann, Ralf&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        testNamen.add(<span class="stringliteral">&quot;Gerth, Natalie&quot;</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        testNamen.add(<span class="stringliteral">&quot;Schüller, Joshua&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        testNamen.add(<span class="stringliteral">&quot;Schreiber, Silas&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        testNamen.add(<span class="stringliteral">&quot;Axmann, Jamie&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        testNamen.add(<span class="stringliteral">&quot;Lerch, Cedrik&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        testNamen.add(<span class="stringliteral">&quot;Wiener, Lennart&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        testNamen.add(<span class="stringliteral">&quot;Heymann, Anthony&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        testNamen.add(<span class="stringliteral">&quot;Reuter, Denise&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        testNamen.add(<span class="stringliteral">&quot;Tietz, Felix&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        testNamen.add(<span class="stringliteral">&quot;Hertwig, Louise&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        testNamen.add(<span class="stringliteral">&quot;Dahms, Carlotta&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        testNamen.add(<span class="stringliteral">&quot;Penner, Elias&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        testNamen.add(<span class="stringliteral">&quot;Moody, Lieselotte&quot;</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        testNamen.add(<span class="stringliteral">&quot;Clarke, Paula&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        testNamen.add(<span class="stringliteral">&quot;Sacher, Kurt&quot;</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        testNamen.add(<span class="stringliteral">&quot;Axmann, Jacqueline&quot;</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        testNamen.add(<span class="stringliteral">&quot;Wood, Kilian&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        testNamen.add(<span class="stringliteral">&quot;Gerhardt, Erna&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        testNamen.add(<span class="stringliteral">&quot;Goodman, Luc&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        testNamen.add(<span class="stringliteral">&quot;Wulf, Anette&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        testNamen.add(<span class="stringliteral">&quot;Bacher, Anneliese&quot;</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        testNamen.add(<span class="stringliteral">&quot;Bridges, Anneliese&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        testNamen.add(<span class="stringliteral">&quot;Buchner, Edith&quot;</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        testNamen.add(<span class="stringliteral">&quot;Penner, Thomas&quot;</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        testNamen.add(<span class="stringliteral">&quot;Schütz, John&quot;</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        testNamen.add(<span class="stringliteral">&quot;Steuermann, Claudia&quot;</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        testNamen.add(<span class="stringliteral">&quot;Senioren, Piet&quot;</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        testNamen.add(<span class="stringliteral">&quot;Schaub, Timo&quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        testNamen.add(<span class="stringliteral">&quot;Geis, Kira&quot;</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        testNamen.add(<span class="stringliteral">&quot;Bruckner, Karina&quot;</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        testNamen.add(<span class="stringliteral">&quot;Hughes, Astrid&quot;</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        testNamen.add(<span class="stringliteral">&quot;Brehmer, Tristan&quot;</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        testNamen.add(<span class="stringliteral">&quot;Jacobi, Thorsten&quot;</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        testNamen.add(<span class="stringliteral">&quot;Förster, Chris&quot;</span>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        testNamen.add(<span class="stringliteral">&quot;Friedel, Selina&quot;</span>);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        testNamen.add(<span class="stringliteral">&quot;Wienecke, Marianne&quot;</span>);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        testNamen.add(<span class="stringliteral">&quot;Gehrmann, Michelle&quot;</span>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        testNamen.add(<span class="stringliteral">&quot;Fisher, Helena&quot;</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        testNamen.add(<span class="stringliteral">&quot;Normann, Petra&quot;</span>);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        testNamen.add(<span class="stringliteral">&quot;Siemon, Henrik&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        testNamen.add(<span class="stringliteral">&quot;Pauli, Swenja&quot;</span>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        testNamen.add(<span class="stringliteral">&quot;Langhans, Leonie&quot;</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        testNamen.add(<span class="stringliteral">&quot;Yilmaz, Gabriele&quot;</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        testNamen.add(<span class="stringliteral">&quot;Deckert, Volker&quot;</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        testNamen.add(<span class="stringliteral">&quot;Love, Bruno&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        testNamen.add(<span class="stringliteral">&quot;Ruppert, Susanne&quot;</span>);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        testNamen.add(<span class="stringliteral">&quot;Scheerer, Mattis&quot;</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        testNamen.add(<span class="stringliteral">&quot;Obermaier, Swen&quot;</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        testNamen.add(<span class="stringliteral">&quot;Kehl, Lennart&quot;</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        testNamen.add(<span class="stringliteral">&quot;Fassbender, Anouk&quot;</span>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        testNamen.add(<span class="stringliteral">&quot;Zoeller, Tara&quot;</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        testNamen.add(<span class="stringliteral">&quot;Häger, Stina&quot;</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        testNamen.add(<span class="stringliteral">&quot;Powell, Rike&quot;</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        testNamen.add(<span class="stringliteral">&quot;Wilde, Lewin&quot;</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        testNamen.add(<span class="stringliteral">&quot;Hoff, Sophia&quot;</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        testNamen.add(<span class="stringliteral">&quot;Jakobs, Walter&quot;</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        testNamen.add(<span class="stringliteral">&quot;Tag, Madita&quot;</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        testNamen.add(<span class="stringliteral">&quot;Rhodes, Lya&quot;</span>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        testNamen.add(<span class="stringliteral">&quot;Maass, Wilhelm&quot;</span>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        testNamen.add(<span class="stringliteral">&quot;Seeber, Rudolph&quot;</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        testNamen.add(<span class="stringliteral">&quot;Otterbach, Malin&quot;</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        testNamen.add(<span class="stringliteral">&quot;Hüttner, Margarethe&quot;</span>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        testNamen.add(<span class="stringliteral">&quot;Struck, Marlon&quot;</span>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        testNamen.add(<span class="stringliteral">&quot;Cross, Stephan&quot;</span>);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        testNamen.add(<span class="stringliteral">&quot;Schultheiss, Merle&quot;</span>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> testNamen;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html">de.petanqueturniermanager.helper.TestnamenLoader</a></div><div class="ttdoc">Erstellung 09.03.2024 / Michael Massee.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">TestnamenLoader.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_a072d702cfce4ec8a74e8d029ace980e7"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a072d702cfce4ec8a74e8d029ace980e7">de.petanqueturniermanager.helper.TestnamenLoader.listeMitTestNamen</a></div><div class="ttdeci">List&lt; String &gt; listeMitTestNamen(int anzahl, int skip)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">TestnamenLoader.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_a493793e4e7fc240b5ae4694c46a4e5be"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a493793e4e7fc240b5ae4694c46a4e5be">de.petanqueturniermanager.helper.TestnamenLoader.SpielerTestname</a></div><div class="ttdeci">record SpielerTestname(String vorname, String nachname)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">TestnamenLoader.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_a4b4e10da800e5c254483476b0ac863aa"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a4b4e10da800e5c254483476b0ac863aa">de.petanqueturniermanager.helper.TestnamenLoader.listeMitTestNamen</a></div><div class="ttdeci">List&lt; String &gt; listeMitTestNamen(int anzahl)</div><div class="ttdef"><b>Definition</b> <a href="#l00029">TestnamenLoader.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_a54b8c080ab197e4fc5d60b5bd6636c90"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#a54b8c080ab197e4fc5d60b5bd6636c90">de.petanqueturniermanager.helper.TestnamenLoader.listeMitTestNamen</a></div><div class="ttdeci">List&lt; String &gt; listeMitTestNamen()</div><div class="ttdef"><b>Definition</b> <a href="#l00075">TestnamenLoader.java:75</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_ab0f16efc21ddc6e686a685f51b59edf7"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ab0f16efc21ddc6e686a685f51b59edf7">de.petanqueturniermanager.helper.TestnamenLoader.TESTNAMEN_1000_CSV</a></div><div class="ttdeci">static final String TESTNAMEN_1000_CSV</div><div class="ttdef"><b>Definition</b> <a href="#l00027">TestnamenLoader.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_abc3934779859fb92a20fe703266f513e"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#abc3934779859fb92a20fe703266f513e">de.petanqueturniermanager.helper.TestnamenLoader.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00025">TestnamenLoader.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader_html_ae45c860735d79cdb7b1060ab5934740d"><div class="ttname"><a href="../../dd/d7d/classde_1_1petanqueturniermanager_1_1helper_1_1_testnamen_loader.html#ae45c860735d79cdb7b1060ab5934740d">de.petanqueturniermanager.helper.TestnamenLoader.listeMitSpielerTestNamen</a></div><div class="ttdeci">List&lt; SpielerTestname &gt; listeMitSpielerTestNamen(int anzahl)</div><div class="ttdef"><b>Definition</b> <a href="#l00064">TestnamenLoader.java:64</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../d7/dc7/_testnamen_loader_8java.html">TestnamenLoader.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

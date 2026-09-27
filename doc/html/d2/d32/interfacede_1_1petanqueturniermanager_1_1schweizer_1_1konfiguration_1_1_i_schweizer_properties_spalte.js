@@ -1,0 +1,25 @@
+var interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte =
+[
+    [ "getAktiveSpielRunde", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a9eed2bcfd45ffb5c21b396da5c078c14", null ],
+    [ "getKopfZeileLinks", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#adf05373ea3ff53d02095e21d791eea05", null ],
+    [ "getKopfZeileMitte", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d63baa54a5650014612af6e763638c4", null ],
+    [ "getKopfZeileRechts", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a75f9a4860b43483129d654013914e320", null ],
+    [ "getMeldeListeFormation", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a4b3dbcc379516c9617e23bdfe347b421", null ],
+    [ "getRankingModus", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#abbc5a99e6de8a47a22b4779c219da0d7", null ],
+    [ "getSpielplanTeamAnzeige", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#aa958485900a32aafd6bfafd19d3e5259", null ],
+    [ "getSpielRundeHeaderFarbe", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a2f7e41fe1c5941d63337eb04a08c6a59", null ],
+    [ "getSpielRundeHintergrundFarbeGerade", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a54ff112e896ff638ee2964eb6a559c38", null ],
+    [ "getSpielRundeHintergrundFarbeGeradeStyle", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a36d084f1bfd937c3dd4e0a62094a6169", null ],
+    [ "getSpielRundeHintergrundFarbeUnGerade", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a02d56edbc6dcaf6d3e8498f5b4c5fe53", null ],
+    [ "getSpielRundeHintergrundFarbeUnGeradeStyle", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a1462372bf2418bdec36f1dfdcc4002d1", null ],
+    [ "getSpielrundeSpielbahn", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a74284db65fa1a80f8892d6d64d8c6c7b", null ],
+    [ "isMeldeListeTeamnameAnzeigen", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ab22a2b946eff5ec4d48e09939e587deb", null ],
+    [ "isMeldeListeVereinsnameAnzeigen", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#ad451dd179223540cb76b62ae2b8075a5", null ],
+    [ "setAktiveSpielRunde", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0fe31decad761f5548e78308e1bce3bb", null ],
+    [ "setMeldeListeFormation", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a8d75e43e4bd5bd82144e2a08ec201219", null ],
+    [ "setMeldeListeTeamnameAnzeigen", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#afc0907ad83a224639aaf367826c1a25e", null ],
+    [ "setMeldeListeVereinsnameAnzeigen", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a5965c7273d6a1c45e71c5584b67425ba", null ],
+    [ "setRankingModus", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a0ff8ee6d954acee0f3b22c9af1dafa3f", null ],
+    [ "setSpielplanTeamAnzeige", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a3b2bf576bebdc51563474fad8de2ef89", null ],
+    [ "setSpielrundeSpielbahn", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html#a45f3e9a42644014b5db856336371e4df", null ]
+];

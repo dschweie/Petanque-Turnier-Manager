@@ -1,0 +1,27 @@
+var classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis =
+[
+    [ "TripTeteTeamErgebnis", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a91e5eedcf1e97124d89db3be4cea028f", null ],
+    [ "compareTo", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a871e52701347b249e88ba868993c6e9c", null ],
+    [ "getBegegnungenGespielt", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a75ce04ee3994ea389380e4d00940a0b6", null ],
+    [ "getBegegnungenGewonnen", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ae0df06139a883da400832c3a1b52670f", null ],
+    [ "getBegegnungenUnentschieden", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a02b4d438db967ddb271632e59d93120c", null ],
+    [ "getBegegnungenVerloren", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ac7f4f258100a3d1ae90489fd6b69f940", null ],
+    [ "getPartienGewonnen", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ac6cff919bf11c76db30022530b7485cb", null ],
+    [ "getPartienVerloren", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ae09297cb249beb109abc02c7ba75b4a9", null ],
+    [ "getSpielPunkteDiff", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a41ad632809bf2fab842267528497b044", null ],
+    [ "getSpielPunkteMinus", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a7569c0a51f3224e1d6e95cfb3999b4c3", null ],
+    [ "getSpielPunktePlus", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a1b8344ffcc905492fdc18b8134767095", null ],
+    [ "getTeam", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a6762857c578b312a206ebf0d49e44f3c", null ],
+    [ "toString", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a63f8fe201d2d0c4d77f393a60deadd5a", null ],
+    [ "verbucheBegegnung", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ab6a6336aaba40d7b94d9491b8b30ebe9", null ],
+    [ "begegnungenGespielt", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#acb5b67e8bbf9b860346ec554669b1857", null ],
+    [ "begegnungenGewonnen", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#aa74e954564895ff8f65d3d62f7848b24", null ],
+    [ "begegnungenUnentschieden", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ada694a2cf552aee79fbc6589d71fa1a8", null ],
+    [ "begegnungenVerloren", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a68a1ee2d2168cf94008319cf43050b49", null ],
+    [ "partienGewonnen", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#ab6897b9aca75e88bbf9d03528990caa3", null ],
+    [ "partienVerloren", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a2410b061b025d1e9c4854aedfd484938", null ],
+    [ "SORTIERUNG", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a306da230121b989bf25c92c4f6acb502", null ],
+    [ "spielpunkteMinus", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a5f7fbcb1b52cbe5027172be66acc215e", null ],
+    [ "spielpunktePlus", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#af106c353b58ebfd467dcd0c5994fc1ff", null ],
+    [ "team", "d4/d27/classde_1_1petanqueturniermanager_1_1algorithmen_1_1triptete_1_1_trip_tete_team_ergebnis.html#a7eceb43aa432744a5f02e44f1de5e855", null ]
+];

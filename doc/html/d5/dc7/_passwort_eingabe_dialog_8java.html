@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/upload/PasswortEingabeDialog.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/dc7/_passwort_eingabe_dialog_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PasswortEingabeDialog.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.Optional;</code><br />
+<code>import java.util.concurrent.CompletableFuture;</code><br />
+<code>import java.util.concurrent.ExecutionException;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import org.jspecify.annotations.Nullable;</code><br />
+<code>import com.sun.star.awt.ActionEvent;</code><br />
+<code>import com.sun.star.awt.PushButtonType;</code><br />
+<code>import com.sun.star.awt.XActionListener;</code><br />
+<code>import com.sun.star.awt.XButton;</code><br />
+<code>import com.sun.star.awt.XCheckBox;</code><br />
+<code>import com.sun.star.awt.XControlContainer;</code><br />
+<code>import com.sun.star.awt.XDialog;</code><br />
+<code>import com.sun.star.awt.XTextComponent;</code><br />
+<code>import com.sun.star.awt.XToolkit;</code><br />
+<code>import com.sun.star.awt.XWindowPeer;</code><br />
+<code>import com.sun.star.beans.XPropertySet;</code><br />
+<code>import com.sun.star.container.XNameContainer;</code><br />
+<code>import com.sun.star.lang.EventObject;</code><br />
+<code>import com.sun.star.lang.XMultiComponentFactory;</code><br />
+<code>import com.sun.star.lang.XMultiServiceFactory;</code><br />
+<code>import com.sun.star.uno.XComponentContext;</code><br />
+<code>import de.petanqueturniermanager.comp.GlobalProperties;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+<code>import de.petanqueturniermanager.helper.LoMainThread;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.AbstractUnoDialog;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für PasswortEingabeDialog.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d5c/_passwort_eingabe_dialog_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2helper_2upload_2_passwort_eingabe_dialog_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2helper_2upload_2_passwort_eingabe_dialog_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2helper_2upload_2_passwort_eingabe_dialog_8java">
+<area shape="rect" title=" " alt="" coords="2845,5,3118,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,124,131"/>
+<area shape="poly" title=" " alt="" coords="2842,29,2235,39,1392,52,598,72,308,85,137,99,118,102,117,97,136,93,308,79,598,67,1392,47,2235,34,2847,29"/>
+<area shape="rect" title=" " alt="" coords="148,96,357,139"/>
+<area shape="poly" title=" " alt="" coords="2842,29,2336,37,1628,48,910,68,607,82,372,99,371,93,606,77,910,63,1628,43,2336,31,2848,29"/>
+<area shape="rect" title=" " alt="" coords="381,96,574,139"/>
+<area shape="poly" title=" " alt="" coords="2842,29,2374,37,1730,49,1079,69,804,82,590,99,590,93,803,77,1079,64,1730,44,2374,32,2847,29"/>
+<area shape="rect" title=" " alt="" coords="599,96,764,139"/>
+<area shape="poly" title=" " alt="" coords="2842,29,2408,37,1819,48,1226,68,975,82,780,99,780,93,975,77,1225,63,1818,43,2408,32,2847,29"/>
+<area shape="rect" title=" " alt="" coords="788,96,954,139"/>
+<area shape="poly" title=" " alt="" coords="2842,30,2443,38,1908,50,1372,70,1146,83,969,99,969,93,1145,78,1372,65,1908,45,2443,33,2847,29"/>
+<area shape="rect" title=" " alt="" coords="978,96,1140,139"/>
+<area shape="poly" title=" " alt="" coords="2842,30,2478,40,1997,52,1518,72,1315,84,1156,98,1156,93,1314,79,1517,66,1997,47,2478,34,2848,30"/>
+<area shape="rect" title=" " alt="" coords="1164,104,1362,131"/>
+<area shape="poly" title=" " alt="" coords="2842,28,2574,33,2208,42,1793,63,1582,78,1374,99,1340,103,1339,98,1374,93,1581,73,1793,57,2208,37,2574,27,2847,27"/>
+<area shape="rect" title=" " alt="" coords="1385,104,1608,131"/>
+<area shape="poly" title=" " alt="" coords="2842,30,2612,38,2307,49,1965,69,1619,99,1580,104,1580,98,1619,93,1964,64,2307,44,2612,33,2847,30"/>
+<area shape="rect" title=" " alt="" coords="1632,96,1804,139"/>
+<area shape="poly" title=" " alt="" coords="2842,30,2647,38,2393,49,2109,68,1820,98,1819,93,2109,63,2393,44,2647,32,2848,30"/>
+<area shape="rect" title=" " alt="" coords="1828,104,2002,131"/>
+<area shape="poly" title=" " alt="" coords="2847,32,2469,54,2242,73,2014,99,1986,103,1986,98,2013,93,2241,67,2469,49,2842,32"/>
+<area shape="rect" title=" " alt="" coords="2026,104,2223,131"/>
+<area shape="poly" title=" " alt="" coords="2847,37,2563,62,2398,79,2234,99,2203,103,2203,98,2233,93,2397,73,2562,57,2842,37"/>
+<area shape="rect" title=" " alt="" coords="2246,96,2424,139"/>
+<area shape="poly" title=" " alt="" coords="2848,42,2657,67,2439,98,2439,93,2656,62,2842,42"/>
+<area shape="rect" title=" " alt="" coords="2448,104,2620,131"/>
+<area shape="poly" title=" " alt="" coords="2877,48,2633,99,2611,103,2611,98,2632,93,2872,49"/>
+<area shape="rect" title=" " alt="" coords="2644,104,2872,131"/>
+<area shape="poly" title=" " alt="" coords="2932,48,2805,100,2804,95,2927,49"/>
+<area shape="rect" title=" " alt="" coords="2895,104,3068,131"/>
+<area shape="poly" title=" " alt="" coords="2984,47,2984,90,2980,86,2980,50"/>
+<area shape="rect" title=" " alt="" coords="3093,104,3302,131"/>
+<area shape="poly" title=" " alt="" coords="3033,46,3155,98,3150,97,3032,51"/>
+<area shape="rect" title=" " alt="" coords="3326,104,3544,131"/>
+<area shape="poly" title=" " alt="" coords="3088,46,3358,101,3353,100,3088,51"/>
+<area shape="rect" title=" " alt="" coords="3569,96,3771,139"/>
+<area shape="poly" title=" " alt="" coords="3119,39,3320,62,3556,96,3551,95,3320,67,3119,45"/>
+<area shape="rect" title=" " alt="" coords="3794,104,3996,131"/>
+<area shape="poly" title=" " alt="" coords="3119,33,3424,56,3604,72,3784,93,3818,101,3813,101,3783,99,3604,78,3424,61,3119,38"/>
+<area shape="rect" title=" " alt="" coords="4020,96,4186,139"/>
+<area shape="poly" title=" " alt="" coords="3119,28,3294,35,3513,46,3757,65,4007,96,4002,96,3757,70,3513,52,3294,40,3119,34"/>
+<area shape="rect" title=" " alt="" coords="4211,96,4377,139"/>
+<area shape="poly" title=" " alt="" coords="3119,26,3325,31,3592,42,3891,62,4198,96,4193,96,3890,67,3591,47,3325,36,3119,32"/>
+<area shape="rect" title=" " alt="" coords="4401,96,4603,139"/>
+<area shape="poly" title=" " alt="" coords="3119,26,3356,31,3669,41,4024,61,4388,96,4383,96,4023,67,3669,47,3356,36,3119,32"/>
+<area shape="rect" title=" " alt="" coords="4627,96,4846,139"/>
+<area shape="poly" title=" " alt="" coords="3119,25,3391,29,3760,38,4181,59,4398,74,4615,96,4609,96,4398,79,4181,64,3759,44,3391,34,3119,31"/>
+<area shape="rect" title=" " alt="" coords="4870,96,5088,139"/>
+<area shape="poly" title=" " alt="" coords="3119,24,3428,26,3856,34,4350,55,4604,72,4857,96,4852,96,4604,77,4349,60,3856,39,3427,31,3119,30"/>
+<area shape="rect" title=" " alt="" coords="5113,96,5355,139"/>
+<area shape="poly" title=" " alt="" coords="3119,28,4104,50,4671,69,4910,80,5100,96,5095,96,4910,86,4670,74,4104,55,3119,33"/>
+<area shape="rect" title=" " alt="" coords="5379,104,5614,131"/>
+<area shape="poly" title=" " alt="" coords="3119,27,3593,34,4242,47,4892,67,5162,79,5367,93,5413,101,5408,101,5367,99,5162,84,4891,72,4242,53,3593,39,3119,32"/>
+<area shape="rect" title=" " alt="" coords="5638,96,5859,139"/>
+<area shape="poly" title=" " alt="" coords="3119,26,3634,32,4350,44,5077,64,5385,77,5625,96,5620,96,5384,82,5077,69,4350,49,3633,37,3119,32"/>
+<area shape="rect" title=" " alt="" coords="5883,104,6158,131"/>
+<area shape="poly" title=" " alt="" coords="3119,27,3683,33,4478,46,5281,66,5617,78,5871,93,5926,102,5921,101,5871,99,5617,84,5281,71,4478,51,3683,38,3119,32"/>
+<area shape="rect" title=" " alt="" coords="6182,96,6438,139"/>
+<area shape="poly" title=" " alt="" coords="3119,26,3728,31,4602,42,5497,62,5875,76,6169,96,6164,96,5875,81,5497,68,4602,47,3728,36,3119,31"/>
+</map>
+</div>
+</div>
+<p><a href="../../d5/dc7/_passwort_eingabe_dialog_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Eupload_2EPasswortEingabeDialog" id="r_de_2Epetanqueturniermanager_2Ehelper_2Eupload_2EPasswortEingabeDialog"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/d2b/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_passwort_eingabe_dialog.html">de.petanqueturniermanager.helper.upload.PasswortEingabeDialog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modaler Dialog zur Eingabe des FTP/SFTP-Passworts.  <a href="../../d8/d2b/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_passwort_eingabe_dialog.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ehelper_2Eupload" id="r_de_2Epetanqueturniermanager_2Ehelper_2Eupload"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../da/d7d/namespacede_1_1petanqueturniermanager_1_1helper_1_1upload.html">de.petanqueturniermanager.helper.upload</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_55a89787825c4377ac52f5a84e2d2576.html">upload</a></li><li class="navelem"><a href="../../d5/dc7/_passwort_eingabe_dialog_8java.html">PasswortEingabeDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

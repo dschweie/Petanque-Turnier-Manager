@@ -1,0 +1,26 @@
+var classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet =
+[
+    [ "LigaKonfigurationSheet", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a6326b480a2271e647139b2bbcc39d95c", null ],
+    [ "doRun", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a369c838148efab0dfc46bb28fa821aff", null ],
+    [ "getFreispielPunkteMinus", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a28795e74718ef24e5cb8e3926b92d60b", null ],
+    [ "getFreispielPunktePlus", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#ae0017629c60f8291a100f052be1ecc6e", null ],
+    [ "getGruppenname", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a85bf3c456fbeefef13efe0fb26360c1b", null ],
+    [ "getKonfigurationSheet", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a877f988a55174c8ee6273cb8539bae22", null ],
+    [ "getKopfZeileLinks", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a72c11caa4103c5d284e7ee87757e4647", null ],
+    [ "getKopfZeileMitte", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a20003e3a9b30de329459b319713b1d5f", null ],
+    [ "getKopfZeileRechts", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#af774a9bbe4907ea4e529e753d42aeec5", null ],
+    [ "getPropertiesSpalte", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a592e0c49a225932c669f7a625beed28a", null ],
+    [ "getSpielPlanHeaderFarbe", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a669bdd2e15a46f0556201f2ae36421a3", null ],
+    [ "getSpielPlanHintergrundFarbeGerade", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a49cf679839d5560ca61c73951f3e0d63", null ],
+    [ "getSpielPlanHintergrundFarbeUnGerade", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#aad0b82e8f94909a06a4325a5e12005f4", null ],
+    [ "getUploadBenutzer", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a733958418d37509f4b239051583c5bab", null ],
+    [ "getUploadHost", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#ab1b3de4ecf6408670d98b5f50ce167b9", null ],
+    [ "getUploadPort", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a3d142482fb31a6292e3d269dc9c6bca5", null ],
+    [ "getUploadProtokoll", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#afff870a787c2a1a6adc6ef5a13c4bb89", null ],
+    [ "getUploadVerzeichnis", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#af878907314a445e897130d0377bb1fee", null ],
+    [ "initPageStylesTurnierSystem", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#acba37d9e1f0b7dae418c1c453911b5f9", null ],
+    [ "setGruppenname", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a5e74c0822ae2012452c8610a6225b066", null ],
+    [ "setKopfZeileMitte", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#ad24fd29bbdc55e6196f96d5aa365c271", null ],
+    [ "LIGA_MELDUNG_NAME_WIDTH", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a33f99134ffdab16e7efca8c9df91a4be", null ],
+    [ "propertiesSpalte", "d7/dec/classde_1_1petanqueturniermanager_1_1liga_1_1konfiguration_1_1_liga_konfiguration_sheet.html#a1140fa3a79188684f22c123ab2bfa4e9", null ]
+];

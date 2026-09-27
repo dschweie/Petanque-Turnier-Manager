@@ -1,0 +1,4 @@
+var _maastrichter_properties_spalte_8java =
+[
+    [ "de.petanqueturniermanager.maastrichter.konfiguration.MaastrichterPropertiesSpalte", "dc/d9e/classde_1_1petanqueturniermanager_1_1maastrichter_1_1konfiguration_1_1_maastrichter_properties_spalte.html", "dc/d9e/classde_1_1petanqueturniermanager_1_1maastrichter_1_1konfiguration_1_1_maastrichter_properties_spalte" ]
+];

@@ -1,0 +1,4 @@
+var _add_config_elements_to_window_8java =
+[
+    [ "de.petanqueturniermanager.konfigdialog.properties.element.AddConfigElementsToWindow", "d8/d55/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window.html", "d8/d55/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window" ]
+];

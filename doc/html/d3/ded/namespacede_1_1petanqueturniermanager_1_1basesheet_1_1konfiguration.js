@@ -1,0 +1,11 @@
+var namespacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration =
+[
+    [ "BaseKonfigurationSheet", "de/de1/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_base_konfiguration_sheet.html", "de/de1/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_base_konfiguration_sheet" ],
+    [ "BasePropertiesSpalte", "d6/d07/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_base_properties_spalte.html", "d6/d07/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_base_properties_spalte" ],
+    [ "IFreispielPropertiesSpalte", "d5/d6b/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_freispiel_properties_spalte.html", "d5/d6b/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_freispiel_properties_spalte" ],
+    [ "IKonfigurationSheet", "df/d4e/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_konfiguration_sheet.html", "df/d4e/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_konfiguration_sheet" ],
+    [ "IPropertiesSpalte", "dd/d80/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_properties_spalte.html", "dd/d80/interfacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_i_properties_spalte" ],
+    [ "KonfigurationSheetRegistry", "d6/d08/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_sheet_registry.html", "d6/d08/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_sheet_registry" ],
+    [ "KonfigurationSingleton", "d4/dd2/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton.html", "d4/dd2/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_konfiguration_singleton" ],
+    [ "SeitenstileDebouncer", "d6/d10/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_seitenstile_debouncer.html", "d6/d10/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_seitenstile_debouncer" ]
+];

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/basesheet/konfiguration/BasePropertiesSpalte.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d5d/_base_properties_spalte_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BasePropertiesSpalte.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import com.google.common.base.Preconditions.checkNotNull;</code><br />
+<code>import java.util.List;</code><br />
+<code>import com.google.common.annotations.VisibleForTesting;</code><br />
+<code>import com.sun.star.table.TableBorder2;</code><br />
+<code>import de.petanqueturniermanager.basesheet.SheetTabFarben;</code><br />
+<code>import de.petanqueturniermanager.comp.GlobalProperties;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.helper.DocumentPropertiesHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.ISheet;</code><br />
+<code>import de.petanqueturniermanager.helper.Lo;</code><br />
+<code>import de.petanqueturniermanager.helper.StringTools;</code><br />
+<code>import de.petanqueturniermanager.helper.border.BorderFactory;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.MeldungenHintergrundFarbeGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.MeldungenHintergrundFarbeUnGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TeilnehmerListeSortModus;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.upload.UploadKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.helper.upload.UploadProtokoll;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.AuswahlConfigProperty;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.ConfigProperty;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.ConfigPropertyType;</code><br />
+<code>import de.petanqueturniermanager.konfigdialog.HeaderFooterConfigProperty;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für BasePropertiesSpalte.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/da9/_base_properties_spalte_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2basesheet_2konfiguration_2_base_properties_spalte_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2basesheet_2konfiguration_2_base_properties_spalte_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2basesheet_2konfiguration_2_base_properties_spalte_8java">
+<area shape="rect" title=" " alt="" coords="2621,5,2881,64"/>
+<area shape="rect" title=" " alt="" coords="5,112,302,155"/>
+<area shape="poly" title=" " alt="" coords="2618,36,2232,41,1666,51,1001,74,656,92,317,114,317,109,656,86,1000,68,1666,46,2232,36,2623,36"/>
+<area shape="rect" title=" " alt="" coords="325,120,416,147"/>
+<area shape="poly" title=" " alt="" coords="2617,38,2115,50,1433,65,797,87,566,100,429,115,416,118,415,112,428,109,565,95,797,82,1433,60,2114,44,2623,38"/>
+<area shape="rect" title=" " alt="" coords="441,112,658,155"/>
+<area shape="poly" title=" " alt="" coords="2617,35,2283,39,1803,48,1530,57,1245,71,957,90,674,114,673,109,957,84,1245,66,1529,52,1803,42,2283,33,2623,35"/>
+<area shape="rect" title=" " alt="" coords="682,112,846,155"/>
+<area shape="poly" title=" " alt="" coords="2617,38,2243,49,1742,64,1240,86,1028,99,862,115,861,109,1027,94,1240,81,1742,59,2243,44,2623,38"/>
+<area shape="rect" title=" " alt="" coords="870,112,1117,155"/>
+<area shape="poly" title=" " alt="" coords="2617,38,2351,46,1984,59,1563,81,1132,114,1132,109,1562,75,1984,53,2351,41,2623,38"/>
+<area shape="rect" title=" " alt="" coords="1140,112,1359,155"/>
+<area shape="poly" title=" " alt="" coords="2617,39,2389,48,2081,61,1731,83,1375,114,1374,109,1731,77,2081,56,2388,43,2623,38"/>
+<area shape="rect" title=" " alt="" coords="1383,112,1601,155"/>
+<area shape="poly" title=" " alt="" coords="2623,40,2180,66,1901,87,1617,114,1617,109,1901,81,2179,61,2618,41"/>
+<area shape="rect" title=" " alt="" coords="1626,112,1847,155"/>
+<area shape="poly" title=" " alt="" coords="2623,44,2281,72,2074,91,1862,114,1862,109,2073,86,2281,67,2617,44"/>
+<area shape="rect" title=" " alt="" coords="1871,112,2092,155"/>
+<area shape="poly" title=" " alt="" coords="2623,49,2386,79,2108,114,2107,109,2386,73,2618,50"/>
+<area shape="rect" title=" " alt="" coords="2116,120,2351,147"/>
+<area shape="poly" title=" " alt="" coords="2623,60,2317,119,2316,114,2618,60"/>
+<area shape="rect" title=" " alt="" coords="2375,112,2596,155"/>
+<area shape="poly" title=" " alt="" coords="2675,64,2557,109,2556,104,2669,65"/>
+<area shape="rect" title=" " alt="" coords="2620,112,2882,155"/>
+<area shape="poly" title=" " alt="" coords="2753,62,2753,98,2749,95,2749,66"/>
+<area shape="rect" title=" " alt="" coords="2906,112,3180,155"/>
+<area shape="poly" title=" " alt="" coords="2838,62,2969,107,2963,106,2837,67"/>
+<area shape="rect" title=" " alt="" coords="3204,112,3477,155"/>
+<area shape="poly" title=" " alt="" coords="2882,55,3202,109,3197,109,2881,60"/>
+<area shape="rect" title=" " alt="" coords="3502,112,3811,155"/>
+<area shape="poly" title=" " alt="" coords="2881,46,3488,112,3483,112,2881,51"/>
+<area shape="rect" title=" " alt="" coords="3836,112,4093,155"/>
+<area shape="poly" title=" " alt="" coords="2882,40,3296,65,3555,84,3823,112,3818,112,3555,90,3295,70,2881,45"/>
+<area shape="rect" title=" " alt="" coords="4116,112,4380,155"/>
+<area shape="poly" title=" " alt="" coords="2881,37,3410,59,3752,80,4104,112,4098,112,3752,86,3410,65,2881,42"/>
+<area shape="rect" title=" " alt="" coords="4404,112,4668,155"/>
+<area shape="poly" title=" " alt="" coords="2881,35,3153,42,3525,55,3952,76,4392,112,4386,112,3952,82,3525,60,3153,47,2881,41"/>
+<area shape="rect" title=" " alt="" coords="4692,112,4948,155"/>
+<area shape="poly" title=" " alt="" coords="2882,34,3197,38,3639,49,4152,72,4416,88,4680,112,4674,112,4416,94,4151,77,3639,55,3197,43,2882,39"/>
+<area shape="rect" title=" " alt="" coords="4972,112,5228,155"/>
+<area shape="poly" title=" " alt="" coords="2881,33,3237,35,3748,45,4345,68,4653,86,4959,112,4954,112,4653,91,4344,73,3748,50,3237,40,2881,38"/>
+<area shape="rect" title=" " alt="" coords="5252,112,5508,155"/>
+<area shape="poly" title=" " alt="" coords="2882,35,4040,60,4724,82,5013,95,5240,112,5234,112,5013,100,4724,87,4040,65,2882,41"/>
+<area shape="rect" title=" " alt="" coords="5532,112,5788,155"/>
+<area shape="poly" title=" " alt="" coords="2882,35,3415,43,4170,58,4940,80,5265,93,5520,112,5514,112,5265,99,4940,85,4170,63,3415,48,2882,40"/>
+<area shape="rect" title=" " alt="" coords="5812,120,6087,147"/>
+<area shape="poly" title=" " alt="" coords="2882,35,3470,42,4313,57,5171,79,5529,93,5800,109,5855,118,5849,117,5800,115,5529,98,5170,84,4313,62,3470,48,2882,40"/>
+</map>
+</div>
+</div>
+<p><a href="../../d9/d5d/_base_properties_spalte_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ebasesheet_2Ekonfiguration_2EBasePropertiesSpalte" id="r_de_2Epetanqueturniermanager_2Ebasesheet_2Ekonfiguration_2EBasePropertiesSpalte"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d07/classde_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration_1_1_base_properties_spalte.html">de.petanqueturniermanager.basesheet.konfiguration.BasePropertiesSpalte</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Ebasesheet_2Ekonfiguration" id="r_de_2Epetanqueturniermanager_2Ebasesheet_2Ekonfiguration"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d3/ded/namespacede_1_1petanqueturniermanager_1_1basesheet_1_1konfiguration.html">de.petanqueturniermanager.basesheet.konfiguration</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_96101c8b80d9fa0dd034af8b328d52d6.html">basesheet</a></li><li class="navelem"><a href="../../dir_0bbe867331d1b52292cf987dafd3e7e2.html">konfiguration</a></li><li class="navelem"><a href="../../d9/d5d/_base_properties_spalte_8java.html">BasePropertiesSpalte.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

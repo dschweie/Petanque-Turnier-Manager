@@ -1,0 +1,25 @@
+var classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton =
+[
+    [ "PetanqueTurnierMngrSingleton", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ac6d86824e56a248dd6c05636b5aa5744", null ],
+    [ "addGlobalEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a64cf96ddd3a89e7f82792bb5a8912964", null ],
+    [ "addSheetSyncMitPropertyTrigger", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#aef3c29e83c65caaf2d752637a87b77d0", null ],
+    [ "addTurnierEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a835848376e64db39a1f17e9a9fca9355", null ],
+    [ "dispose", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#af9f720c9610c9aaf09d36a01b66ba65a", null ],
+    [ "flushPendingTurnierEvent", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a512d546afbedec6fa99acc9de7bc433f", null ],
+    [ "getContext", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ae790221a3bfa9fda9716b0b0e897c5b4", null ],
+    [ "globalEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a229a27d85d208c99edd866f4148c34c3", null ],
+    [ "init", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ad887638cc9c1b1efa8ad20a2e6375b52", null ],
+    [ "isDruckvorschauAktiv", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a5baa7ce2f4443af92af2c5b99d6a3cc6", null ],
+    [ "logTimingAndReset", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ae085a96d37eb88cf84a05da55ca5078e", null ],
+    [ "removeGlobalEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#aa6405281983607e0a5b5f10e52d4b962", null ],
+    [ "removeTurnierEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#ac6d66bb34931cca254df41cdff1ce849", null ],
+    [ "resetForTest", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a07e5889fca06bc4e0642d4e00202d8fb", null ],
+    [ "setDruckvorschauAktiv", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a73a9a3cd0cc1a311ec3df2312609d49e", null ],
+    [ "triggerTurnierEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#afd84bc3d134cc72eb9935cd7f5c086e1", null ],
+    [ "didRun", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a613ac62e99f4fcf0de09fa061906bd26", null ],
+    [ "druckvorschauAktiv", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a39f4d90fd09bf7efa8e0194e385e7e6c", null ],
+    [ "globalEventListener", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#aa23c8cebcba905bfd2a7f5dcaba3b5d3", null ],
+    [ "logger", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a2f3de9335d17e2780cf5e63ce2c24e72", null ],
+    [ "sharedContext", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a4147681c68ce086084b73f15757a88e5", null ],
+    [ "turnierEventHandler", "d2/da8/classde_1_1petanqueturniermanager_1_1comp_1_1_petanque_turnier_mngr_singleton.html#a776d602df71f21c3d2c19ee1b3be4df5", null ]
+];

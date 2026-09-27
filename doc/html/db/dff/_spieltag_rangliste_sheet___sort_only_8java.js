@@ -1,0 +1,4 @@
+var _spieltag_rangliste_sheet___sort_only_8java =
+[
+    [ "de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet_SortOnly", "dd/d0c/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet___sort_only.html", "dd/d0c/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet___sort_only" ]
+];

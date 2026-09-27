@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/supermelee/spieltagrangliste/SpieltagRanglisteSheetUpdate.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/dbd/_spieltag_rangliste_sheet_update_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SpieltagRanglisteSheetUpdate.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/dbd/_spieltag_rangliste_sheet_update_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung: 2026-05-11 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.supermelee.spieltagrangliste;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.concurrent.ConcurrentHashMap;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.concurrent.atomic.AtomicBoolean;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheetDocument;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.helper.rangliste.RanglisteUpdateHelper;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.supermelee.SpielTagNr;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html">   33</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aba17237e89f6e78f93e2d361cd18722f">SpieltagRanglisteSheetUpdate</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ae13cda4f323d0f39f3d3d3d2c2b226ed">SpieltagRanglisteSheet</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#abbd1ad25f2fbc02edea2c164560ceaab">   35</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#abbd1ad25f2fbc02edea2c164560ceaab">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aba17237e89f6e78f93e2d361cd18722f">SpieltagRanglisteSheetUpdate</a>.class);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aa4e9c58ef034ac9b296115f6c5b5de92">   37</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ConcurrentHashMap&lt;XSpreadsheetDocument, ReentrancyState&gt; <a class="code hl_variable" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aa4e9c58ef034ac9b296115f6c5b5de92">STATES</a> = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aba17237e89f6e78f93e2d361cd18722f">   39</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aba17237e89f6e78f93e2d361cd18722f">SpieltagRanglisteSheetUpdate</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>, <a class="code hl_class" href="../../d4/d06/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_tag_nr.html">SpielTagNr</a> spieltagNr) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        super(<a class="code hl_variable" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">workingSpreadsheet</a>, spieltagNr);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    @Override</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a8e0d4183097218b01477ef43a70da39e">   44</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a8e0d4183097218b01477ef43a70da39e">doRun</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        XSpreadsheetDocument doc = <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a34c7b61fa178fc0bd109b24ffb9b9df1">getWorkingSpreadsheet</a>().<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">getWorkingSpreadsheetDocument</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html">ReentrancyState</a> state = <a class="code hl_variable" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aa4e9c58ef034ac9b296115f6c5b5de92">STATES</a>.computeIfAbsent(doc, k -&gt; <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html">ReentrancyState</a>());</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> (!state.<a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#ab026fa08dc59353dab641b5393eab5e2">running</a>.compareAndSet(<span class="keyword">false</span>, <span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            state.<a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#aa2acd9d66e3f41ecf48d21b8d9e52a3e">dirty</a>.set(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_variable" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#abbd1ad25f2fbc02edea2c164560ceaab">logger</a>.debug(<span class="stringliteral">&quot;RanglisteUpdate bereits aktiv – Dirty-Rerun vorgemerkt&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">do</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                state.<a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#aa2acd9d66e3f41ecf48d21b8d9e52a3e">dirty</a>.set(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_function" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a898ac0bf431e82b873598f910253270e">updateIntern</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            } <span class="keywordflow">while</span> (state.<a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#aa2acd9d66e3f41ecf48d21b8d9e52a3e">dirty</a>.get());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            state.<a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#ab026fa08dc59353dab641b5393eab5e2">running</a>.set(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a898ac0bf431e82b873598f910253270e">   62</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a898ac0bf431e82b873598f910253270e">updateIntern</a>() throws <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// SpielTagNr aus dem Refresh-Parameter ins Delegate übertragen –</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// sonst NPE in getSpieltagNr() (delegate.spielTagNr wird sonst nur</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// via generate() gesetzt, und das überspringen wir im Update-Pfad).</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_class" href="../../d4/d06/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_tag_nr.html">SpielTagNr</a> spielTagNr = <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ad4b41f27a6ac21a758817106c4fb8dbc">getSpielTagFuerRefresh</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (spielTagNr == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            spielTagNr = <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a1411d8fa3ae72b1b30ca65ab179d8e5c">getKonfigurationSheet</a>().<a class="code hl_function" href="../../da/d29/classde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_konfiguration_sheet.html#aa79fa2e42058e9363541bae86a8e3e7c">getAktiveSpieltag</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a4e1a5d381ffaa00b1b17f5b4bf6fb3c7">setSpieltagNr</a>(spielTagNr);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        XSpreadsheet sheet = <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a4a501110b3f1592856a2c368db25bcf9">getXSpreadSheet</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_variable" href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#abbd1ad25f2fbc02edea2c164560ceaab">logger</a>.debug(<span class="stringliteral">&quot;Spieltag-Rangliste-Sheet fehlt – vollständiger Erstaufbau&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keyword">new</span> <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ae13cda4f323d0f39f3d3d3d2c2b226ed">SpieltagRanglisteSheet</a>(<a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a34c7b61fa178fc0bd109b24ffb9b9df1">getWorkingSpreadsheet</a>(), <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a6ac1f2fc7b6dd215da577b32d1eec121">getSpieltagNr</a>()).doRun();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">processBoxinfo</a>(<span class="stringliteral">&quot;processbox.rangliste.aktualisieren&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">int</span> anzSpielRunden = <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ada966c2c3fd6499167e9f443cfbec56d">getAktuelleSpielrundeSheet</a>().<a class="code hl_function" href="../../d6/dd1/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spielrunde_sheet___update.html#a38243dff5134110323ed04ec43eca7a8">countNumberOfSpielRundenSheets</a>(<a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a6ac1f2fc7b6dd215da577b32d1eec121">getSpieltagNr</a>());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (anzSpielRunden &lt; 1) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">int</span> spielerAnzahl = <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a41a69653497dd6295a3c789ae2ec9e9d">getSpielerSpalte</a>().getSpielerNrList().size();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_class" href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html">RanglisteUpdateHelper</a>.<a class="code hl_function" href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html#aa406b5cd8006c4431fd1c83adf1ec780">loescheDatenzeilen</a>(<span class="keyword">this</span>, sheet, spielerAnzahl);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a133a6dab674778990ac384a213ea9d3a">berechnungUndSchreiben</a>(sheet, anzSpielRunden);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a83171a0a25ea9ee3371f801245b94b5a">getxCalculatable</a>().calculate();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#aaf374cae56a3231de4d00b97323710bd">getRangListeSorter</a>().<a class="code hl_function" href="../../dd/daa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rang_liste_sorter.html#a40800f720c76e47ec0e175a0bf77b362">doSort</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a7c869ba803039c746b2fda856e0adba2">getRangListeSpalte</a>().<a class="code hl_function" href="../../d3/d20/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rang_liste_spalte.html#ae341ed25e781b121b2442b800f3cfb9f">upDateRanglisteSpalte</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="};">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html">   94</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html">ReentrancyState</a> {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#ab026fa08dc59353dab641b5393eab5e2">   95</a></span>        <span class="keyword">final</span> AtomicBoolean <a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#ab026fa08dc59353dab641b5393eab5e2">running</a> = <span class="keyword">new</span> AtomicBoolean(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#aa2acd9d66e3f41ecf48d21b8d9e52a3e">   96</a></span>        <span class="keyword">final</span> AtomicBoolean <a class="code hl_variable" href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#aa2acd9d66e3f41ecf48d21b8d9e52a3e">dirty</a> = <span class="keyword">new</span> AtomicBoolean(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a2fbd04aa5d4d2750ee8b86b339bf0852"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a2fbd04aa5d4d2750ee8b86b339bf0852">de.petanqueturniermanager.SheetRunner.processBoxinfo</a></div><div class="ttdeci">void processBoxinfo(String i18nKey, Object... args)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00602">SheetRunner.java:602</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a34c7b61fa178fc0bd109b24ffb9b9df1"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a34c7b61fa178fc0bd109b24ffb9b9df1">de.petanqueturniermanager.SheetRunner.getWorkingSpreadsheet</a></div><div class="ttdeci">WorkingSpreadsheet getWorkingSpreadsheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00613">SheetRunner.java:613</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a5d3fce9090dbab6b8a3b10d4a550a8ec"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a5d3fce9090dbab6b8a3b10d4a550a8ec">de.petanqueturniermanager.SheetRunner.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00047">SheetRunner.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a83171a0a25ea9ee3371f801245b94b5a"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a83171a0a25ea9ee3371f801245b94b5a">de.petanqueturniermanager.SheetRunner.getxCalculatable</a></div><div class="ttdeci">XCalculatable getxCalculatable()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00569">SheetRunner.java:569</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_a31c86015e8e43a961f4b0441a8d4cb5d"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">de.petanqueturniermanager.comp.WorkingSpreadsheet.getWorkingSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument getWorkingSpreadsheetDocument()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00101">WorkingSpreadsheet.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rang_liste_sorter_html_a40800f720c76e47ec0e175a0bf77b362"><div class="ttname"><a href="../../dd/daa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rang_liste_sorter.html#a40800f720c76e47ec0e175a0bf77b362">de.petanqueturniermanager.helper.rangliste.RangListeSorter.doSort</a></div><div class="ttdeci">void doSort()</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d5d/_rang_liste_sorter_8java_source.html#l00204">RangListeSorter.java:204</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rang_liste_spalte_html_ae341ed25e781b121b2442b800f3cfb9f"><div class="ttname"><a href="../../d3/d20/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rang_liste_spalte.html#ae341ed25e781b121b2442b800f3cfb9f">de.petanqueturniermanager.helper.rangliste.RangListeSpalte.upDateRanglisteSpalte</a></div><div class="ttdeci">void upDateRanglisteSpalte()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d64/_rang_liste_spalte_8java_source.html#l00072">RangListeSpalte.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper_html"><div class="ttname"><a href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html">de.petanqueturniermanager.helper.rangliste.RanglisteUpdateHelper</a></div><div class="ttdoc">Gemeinsame Hilfsmethoden für *RanglisteSheetUpdate-Klassen.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dad/_rangliste_update_helper_8java_source.html#l00014">RanglisteUpdateHelper.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper_html_aa406b5cd8006c4431fd1c83adf1ec780"><div class="ttname"><a href="../../da/dfa/classde_1_1petanqueturniermanager_1_1helper_1_1rangliste_1_1_rangliste_update_helper.html#aa406b5cd8006c4431fd1c83adf1ec780">de.petanqueturniermanager.helper.rangliste.RanglisteUpdateHelper.loescheDatenzeilen</a></div><div class="ttdeci">static void loescheDatenzeilen(IRangliste rangliste, XSpreadsheet sheet, int neueTeamAnzahl)</div><div class="ttdoc">Löscht veraltete Datenzeilen wenn sich die Teamanzahl verringert hat.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dad/_rangliste_update_helper_8java_source.html#l00027">RanglisteUpdateHelper.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_tag_nr_html"><div class="ttname"><a href="../../d4/d06/classde_1_1petanqueturniermanager_1_1supermelee_1_1_spiel_tag_nr.html">de.petanqueturniermanager.supermelee.SpielTagNr</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d37/_spiel_tag_nr_8java_source.html#l00011">SpielTagNr.java:11</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_konfiguration_sheet_html_aa79fa2e42058e9363541bae86a8e3e7c"><div class="ttname"><a href="../../da/d29/classde_1_1petanqueturniermanager_1_1supermelee_1_1konfiguration_1_1_super_melee_konfiguration_sheet.html#aa79fa2e42058e9363541bae86a8e3e7c">de.petanqueturniermanager.supermelee.konfiguration.SuperMeleeKonfigurationSheet.getAktiveSpieltag</a></div><div class="ttdeci">final SpielTagNr getAktiveSpieltag()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/dbd/_super_melee_konfiguration_sheet_8java_source.html#l00158">SuperMeleeKonfigurationSheet.java:158</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spielrunde_sheet___update_html_a38243dff5134110323ed04ec43eca7a8"><div class="ttname"><a href="../../d6/dd1/classde_1_1petanqueturniermanager_1_1supermelee_1_1spielrunde_1_1_spielrunde_sheet___update.html#a38243dff5134110323ed04ec43eca7a8">de.petanqueturniermanager.supermelee.spielrunde.SpielrundeSheet_Update.countNumberOfSpielRundenSheets</a></div><div class="ttdeci">int countNumberOfSpielRundenSheets(SpielTagNr spieltag)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dfb/_spielrunde_sheet___update_8java_source.html#l00200">SpielrundeSheet_Update.java:200</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a133a6dab674778990ac384a213ea9d3a"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a133a6dab674778990ac384a213ea9d3a">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.berechnungUndSchreiben</a></div><div class="ttdeci">void berechnungUndSchreiben(XSpreadsheet sheet, int anzSpielRunden)</div><div class="ttdoc">Schreibt alle Spielrunden-Ergebnisse, Summen und Nicht-Gespielt-Flags als Werte (keine Formeln) per B...</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00247">SpieltagRanglisteSheet.java:247</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a1411d8fa3ae72b1b30ca65ab179d8e5c"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a1411d8fa3ae72b1b30ca65ab179d8e5c">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getKonfigurationSheet</a></div><div class="ttdeci">SuperMeleeKonfigurationSheet getKonfigurationSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00125">SpieltagRanglisteSheet.java:125</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a41a69653497dd6295a3c789ae2ec9e9d"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a41a69653497dd6295a3c789ae2ec9e9d">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getSpielerSpalte</a></div><div class="ttdeci">MeldungenSpalte&lt; SpielerMeldungen, Spieler &gt; getSpielerSpalte()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00137">SpieltagRanglisteSheet.java:137</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a4a501110b3f1592856a2c368db25bcf9"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a4a501110b3f1592856a2c368db25bcf9">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getXSpreadSheet</a></div><div class="ttdeci">XSpreadsheet getXSpreadSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00115">SpieltagRanglisteSheet.java:115</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a4e1a5d381ffaa00b1b17f5b4bf6fb3c7"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a4e1a5d381ffaa00b1b17f5b4bf6fb3c7">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.setSpieltagNr</a></div><div class="ttdeci">void setSpieltagNr(SpielTagNr spieltagNr)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00133">SpieltagRanglisteSheet.java:133</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a6ac1f2fc7b6dd215da577b32d1eec121"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a6ac1f2fc7b6dd215da577b32d1eec121">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getSpieltagNr</a></div><div class="ttdeci">SpielTagNr getSpieltagNr()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00129">SpieltagRanglisteSheet.java:129</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_a7c869ba803039c746b2fda856e0adba2"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#a7c869ba803039c746b2fda856e0adba2">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getRangListeSpalte</a></div><div class="ttdeci">RangListeSpalte getRangListeSpalte()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00586">SpieltagRanglisteSheet.java:586</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_aaf374cae56a3231de4d00b97323710bd"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#aaf374cae56a3231de4d00b97323710bd">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getRangListeSorter</a></div><div class="ttdeci">RangListeSorter getRangListeSorter()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00604">SpieltagRanglisteSheet.java:604</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_ad4b41f27a6ac21a758817106c4fb8dbc"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ad4b41f27a6ac21a758817106c4fb8dbc">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getSpielTagFuerRefresh</a></div><div class="ttdeci">SpielTagNr getSpielTagFuerRefresh()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00090">SpieltagRanglisteSheet.java:90</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_ada966c2c3fd6499167e9f443cfbec56d"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ada966c2c3fd6499167e9f443cfbec56d">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.getAktuelleSpielrundeSheet</a></div><div class="ttdeci">SpielrundeSheet_Update getAktuelleSpielrundeSheet()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00633">SpieltagRanglisteSheet.java:633</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_html_ae13cda4f323d0f39f3d3d3d2c2b226ed"><div class="ttname"><a href="../../d1/dc9/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet.html#ae13cda4f323d0f39f3d3d3d2c2b226ed">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheet.SpieltagRanglisteSheet</a></div><div class="ttdeci">SpieltagRanglisteSheet(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../df/d46/_spieltag_rangliste_sheet_8java_source.html#l00094">SpieltagRanglisteSheet.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state_html"><div class="ttname"><a href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.ReentrancyState</a></div><div class="ttdef"><b>Definition</b> <a href="#l00094">SpieltagRanglisteSheetUpdate.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state_html_aa2acd9d66e3f41ecf48d21b8d9e52a3e"><div class="ttname"><a href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#aa2acd9d66e3f41ecf48d21b8d9e52a3e">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.ReentrancyState.dirty</a></div><div class="ttdeci">final AtomicBoolean dirty</div><div class="ttdef"><b>Definition</b> <a href="#l00096">SpieltagRanglisteSheetUpdate.java:96</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state_html_ab026fa08dc59353dab641b5393eab5e2"><div class="ttname"><a href="../../d8/dd6/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_1_1_reentrancy_state.html#ab026fa08dc59353dab641b5393eab5e2">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.ReentrancyState.running</a></div><div class="ttdeci">final AtomicBoolean running</div><div class="ttdef"><b>Definition</b> <a href="#l00095">SpieltagRanglisteSheetUpdate.java:95</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_html_a898ac0bf431e82b873598f910253270e"><div class="ttname"><a href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a898ac0bf431e82b873598f910253270e">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.updateIntern</a></div><div class="ttdeci">void updateIntern()</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SpieltagRanglisteSheetUpdate.java:62</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_html_a8e0d4183097218b01477ef43a70da39e"><div class="ttname"><a href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#a8e0d4183097218b01477ef43a70da39e">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.doRun</a></div><div class="ttdeci">void doRun()</div><div class="ttdef"><b>Definition</b> <a href="#l00044">SpieltagRanglisteSheetUpdate.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_html_aa4e9c58ef034ac9b296115f6c5b5de92"><div class="ttname"><a href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aa4e9c58ef034ac9b296115f6c5b5de92">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.STATES</a></div><div class="ttdeci">static final ConcurrentHashMap&lt; XSpreadsheetDocument, ReentrancyState &gt; STATES</div><div class="ttdef"><b>Definition</b> <a href="#l00037">SpieltagRanglisteSheetUpdate.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_html_aba17237e89f6e78f93e2d361cd18722f"><div class="ttname"><a href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#aba17237e89f6e78f93e2d361cd18722f">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.SpieltagRanglisteSheetUpdate</a></div><div class="ttdeci">SpieltagRanglisteSheetUpdate(WorkingSpreadsheet workingSpreadsheet, SpielTagNr spieltagNr)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">SpieltagRanglisteSheetUpdate.java:39</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update_html_abbd1ad25f2fbc02edea2c164560ceaab"><div class="ttname"><a href="../../dc/d8e/classde_1_1petanqueturniermanager_1_1supermelee_1_1spieltagrangliste_1_1_spieltag_rangliste_sheet_update.html#abbd1ad25f2fbc02edea2c164560ceaab">de.petanqueturniermanager.supermelee.spieltagrangliste.SpieltagRanglisteSheetUpdate.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00035">SpieltagRanglisteSheetUpdate.java:35</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_29d0e46a7ae6d203e4fffac6e4fbe882.html">supermelee</a></li><li class="navelem"><a href="../../dir_fb4a2d0167325766a264191991cff90c.html">spieltagrangliste</a></li><li class="navelem"><a href="../../d4/dbd/_spieltag_rangliste_sheet_update_8java.html">SpieltagRanglisteSheetUpdate.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

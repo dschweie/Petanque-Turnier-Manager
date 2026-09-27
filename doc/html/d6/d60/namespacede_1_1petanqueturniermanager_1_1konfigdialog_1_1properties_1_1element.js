@@ -1,0 +1,11 @@
+var namespacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element =
+[
+    [ "color", "d7/ddb/namespacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color.html", "d7/ddb/namespacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1color" ],
+    [ "AddConfigElementsToWindow", "d8/d55/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window.html", "d8/d55/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_add_config_elements_to_window" ],
+    [ "AuswahlConfigElement", "d1/d80/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_auswahl_config_element.html", "d1/d80/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_auswahl_config_element" ],
+    [ "BooleanConfigElement", "d6/dd3/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_boolean_config_element.html", "d6/dd3/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_boolean_config_element" ],
+    [ "ConfigElement", "d6/df2/interfacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_config_element.html", "d6/df2/interfacede_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_config_element" ],
+    [ "IntegerConfigElement", "dc/d04/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_integer_config_element.html", "dc/d04/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_integer_config_element" ],
+    [ "StringConfigElement", "dc/dfc/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_string_config_element.html", "dc/dfc/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_string_config_element" ],
+    [ "TextAreaDialog", "d3/d24/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_text_area_dialog.html", "d3/d24/classde_1_1petanqueturniermanager_1_1konfigdialog_1_1properties_1_1element_1_1_text_area_dialog" ]
+];

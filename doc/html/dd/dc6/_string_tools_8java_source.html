@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/StringTools.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/dc6/_string_tools_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StringTools.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/dc6/_string_tools_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 26.01.2020 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.helper;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html">    6</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a62bba437bd0980be4d52cb9c96f0291f">StringTools</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a62bba437bd0980be4d52cb9c96f0291f">    8</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a62bba437bd0980be4d52cb9c96f0291f">StringTools</a>() {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
+</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a1e7c07579d27ca86dbec9ad4daf9aa80">   11</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a1e7c07579d27ca86dbec9ad4daf9aa80">booleanToString</a>(<span class="keywordtype">boolean</span> booleanProp) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordflow">return</span> booleanProp ? <span class="stringliteral">&quot;J&quot;</span> : <span class="stringliteral">&quot;N&quot;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a51bfc5c1616bee0aa421b6741fc3dc33">   15</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a51bfc5c1616bee0aa421b6741fc3dc33">stringToBoolean</a>(String booleanProp) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">containsIgnoreCase</a>(booleanProp, <span class="stringliteral">&quot;J&quot;</span>)) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> Boolean.parseBoolean(booleanProp);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#adfb86de977cc73b9c227004b98bdb9c0">   23</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#adfb86de977cc73b9c227004b98bdb9c0">equalsIgnoreCase</a>(String a, String b) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (a == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> b == <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">if</span> (b == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> a.equalsIgnoreCase(b);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">   34</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">containsIgnoreCase</a>(String haystack, String needle) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (haystack == <span class="keyword">null</span> || needle == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> haystack.toLowerCase().contains(needle.toLowerCase());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a761e2e550a1e7ca1b2f0f510fec87d5f">   42</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a761e2e550a1e7ca1b2f0f510fec87d5f">appendIfMissing</a>(String text, String suffix) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> (text == <span class="keyword">null</span> || suffix == <span class="keyword">null</span> || suffix.isEmpty() || text.endsWith(suffix)) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> text;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> text + suffix;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_a16d4807fea5145993b873c5a8d5e2d2d"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">de.petanqueturniermanager.helper.StringTools.containsIgnoreCase</a></div><div class="ttdeci">static boolean containsIgnoreCase(String haystack, String needle)</div><div class="ttdoc">Null-sicher: liefert false, wenn einer der Werte null ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">StringTools.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_a1e7c07579d27ca86dbec9ad4daf9aa80"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a1e7c07579d27ca86dbec9ad4daf9aa80">de.petanqueturniermanager.helper.StringTools.booleanToString</a></div><div class="ttdeci">static String booleanToString(boolean booleanProp)</div><div class="ttdef"><b>Definition</b> <a href="#l00011">StringTools.java:11</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_a51bfc5c1616bee0aa421b6741fc3dc33"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a51bfc5c1616bee0aa421b6741fc3dc33">de.petanqueturniermanager.helper.StringTools.stringToBoolean</a></div><div class="ttdeci">static boolean stringToBoolean(String booleanProp)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">StringTools.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_a62bba437bd0980be4d52cb9c96f0291f"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a62bba437bd0980be4d52cb9c96f0291f">de.petanqueturniermanager.helper.StringTools.StringTools</a></div><div class="ttdeci">StringTools()</div><div class="ttdef"><b>Definition</b> <a href="#l00008">StringTools.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_a761e2e550a1e7ca1b2f0f510fec87d5f"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a761e2e550a1e7ca1b2f0f510fec87d5f">de.petanqueturniermanager.helper.StringTools.appendIfMissing</a></div><div class="ttdeci">static String appendIfMissing(String text, String suffix)</div><div class="ttdoc">Apache-kompatibel: hängt das Suffix nur an, wenn es nicht bereits vorhanden ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">StringTools.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_adfb86de977cc73b9c227004b98bdb9c0"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#adfb86de977cc73b9c227004b98bdb9c0">de.petanqueturniermanager.helper.StringTools.equalsIgnoreCase</a></div><div class="ttdeci">static boolean equalsIgnoreCase(String a, String b)</div><div class="ttdoc">Null-sicher: beide null → true; sonst a.equalsIgnoreCase(b).</div><div class="ttdef"><b>Definition</b> <a href="#l00023">StringTools.java:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dd/dc6/_string_tools_8java.html">StringTools.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

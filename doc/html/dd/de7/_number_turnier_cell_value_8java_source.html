@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/cellvalue/NumberTurnierCellValue.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/de7/_number_turnier_cell_value_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">NumberTurnierCellValue.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/de7/_number_turnier_cell_value_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 27.03.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.helper.cellvalue;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> org.apache.commons.lang3.math.NumberUtils;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.helper.position.Position;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html">   14</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a006f7182c400e2abdc3d05c6867a76dc">AbstractCellValue</a>&lt;NumberTurnierCellValue, Double&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        implements <a class="code hl_interface" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html">ICellValue</a>&lt;Double&gt; {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">   17</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>() {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#af55c04d2775223e3d819ef8bd1b49d8d">   20</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#af55c04d2775223e3d819ef8bd1b49d8d">NumberTurnierCellValue</a>(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">this</span>(<a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>, (double) <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#adc97b406aee4fd60ee39e1f5b89ac459">   24</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#adc97b406aee4fd60ee39e1f5b89ac459">NumberTurnierCellValue</a>(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        super(<a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a63099d68b4d7189a613b1873be2a2d39">setValue</a>(<a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    @Override</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ac1f37ffd1d63599700538115416e4613">   30</a></span>    <span class="keyword">protected</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ac1f37ffd1d63599700538115416e4613">copyCommonAttr</a>(<a class="code hl_interface" href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html">ICellValue&lt;?&gt;</a> abstractCellValue) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        super.<a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ac1f37ffd1d63599700538115416e4613">copyCommonAttr</a>(abstractCellValue);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a6da48eeefc7dec3012d775e8c3abf526">   35</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a6da48eeefc7dec3012d775e8c3abf526">from</a>(<a class="code hl_class" href="../../d0/d69/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_string_turnier_cell_value.html">StringTurnierCellValue</a> cellVal) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> numberCellValue = <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        numberCellValue.<a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ac1f37ffd1d63599700538115416e4613">copyCommonAttr</a>(cellVal).<a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a63099d68b4d7189a613b1873be2a2d39">setValue</a>(NumberUtils.toDouble(cellVal.<a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#aee759f2eea2d436818d150fa8140a694">getValue</a>(), -1));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> numberCellValue;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a5d223343d5e52d05fecb9456729ec6c0">   41</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a5d223343d5e52d05fecb9456729ec6c0">from</a>(<a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> cellVal) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>().<a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#aa9e599a637065ca4c159075df84b2dd4">copyAttr</a>(cellVal);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a89b01f29c3fa3226d56b9b7d519a91a2">   45</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a89b01f29c3fa3226d56b9b7d519a91a2">from</a>(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(<a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>), 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a81114690aaa7c41dea9f9095f884864a">   49</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a81114690aaa7c41dea9f9095f884864a">from</a>(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(<a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">pos</a>), <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a8317a6aa4e9181ac98ea2ed2ffa50552">   53</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a8317a6aa4e9181ac98ea2ed2ffa50552">from</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ae69bb28e2f70323bcf349bf3065abbb7">spalte</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a6ef5a905bbef9bf5ffeaa2e78bb937b5">zeile</a>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>.from(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(<a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ae69bb28e2f70323bcf349bf3065abbb7">spalte</a>, <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a6ef5a905bbef9bf5ffeaa2e78bb937b5">zeile</a>), 0);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ab18fba2daf6f54af2e94bcc1599d7f60">   57</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ab18fba2daf6f54af2e94bcc1599d7f60">from</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ae69bb28e2f70323bcf349bf3065abbb7">spalte</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a6ef5a905bbef9bf5ffeaa2e78bb937b5">zeile</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">NumberTurnierCellValue</a>.from(<a class="code hl_class" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">Position</a>.<a class="code hl_function" href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">from</a>(<a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ae69bb28e2f70323bcf349bf3065abbb7">spalte</a>, <a class="code hl_function" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a6ef5a905bbef9bf5ffeaa2e78bb937b5">zeile</a>), <a class="code hl_variable" href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">value</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_a006f7182c400e2abdc3d05c6867a76dc"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a006f7182c400e2abdc3d05c6867a76dc">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; NumberTurnierCellValue, Double &gt;::AbstractCellValue</a></div><div class="ttdeci">AbstractCellValue()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00037">AbstractCellValue.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_a63099d68b4d7189a613b1873be2a2d39"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a63099d68b4d7189a613b1873be2a2d39">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; NumberTurnierCellValue, Double &gt;::setValue</a></div><div class="ttdeci">T setValue(V value)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00166">AbstractCellValue.java:166</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_a6ef5a905bbef9bf5ffeaa2e78bb937b5"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a6ef5a905bbef9bf5ffeaa2e78bb937b5">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; NumberTurnierCellValue, Double &gt;::zeile</a></div><div class="ttdeci">T zeile(int val)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00206">AbstractCellValue.java:206</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_a82c0c6fd147a23b8e6552ca34ea38510"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#a82c0c6fd147a23b8e6552ca34ea38510">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; NumberTurnierCellValue, Double &gt;::value</a></div><div class="ttdeci">V value</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00027">AbstractCellValue.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_aa9e599a637065ca4c159075df84b2dd4"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#aa9e599a637065ca4c159075df84b2dd4">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue.copyAttr</a></div><div class="ttdeci">T copyAttr(T abstractCellValue)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00143">AbstractCellValue.java:143</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_ac63367bc07f6b79d55e70c0ea115dc23"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ac63367bc07f6b79d55e70c0ea115dc23">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; NumberTurnierCellValue, Double &gt;::pos</a></div><div class="ttdeci">Position pos</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00028">AbstractCellValue.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_ae69bb28e2f70323bcf349bf3065abbb7"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#ae69bb28e2f70323bcf349bf3065abbb7">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue&lt; NumberTurnierCellValue, Double &gt;::spalte</a></div><div class="ttdeci">T spalte(int val)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00185">AbstractCellValue.java:185</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value_html_aee759f2eea2d436818d150fa8140a694"><div class="ttname"><a href="../../d3/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_abstract_cell_value.html#aee759f2eea2d436818d150fa8140a694">de.petanqueturniermanager.helper.cellvalue.AbstractCellValue.getValue</a></div><div class="ttdeci">V getValue()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/db3/_abstract_cell_value_8java_source.html#l00161">AbstractCellValue.java:161</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_a59c9c4a42f1f923664d7c343cf73b37e"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a59c9c4a42f1f923664d7c343cf73b37e">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.NumberTurnierCellValue</a></div><div class="ttdeci">NumberTurnierCellValue()</div><div class="ttdef"><b>Definition</b> <a href="#l00017">NumberTurnierCellValue.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_a5d223343d5e52d05fecb9456729ec6c0"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a5d223343d5e52d05fecb9456729ec6c0">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.from</a></div><div class="ttdeci">static final NumberTurnierCellValue from(NumberTurnierCellValue cellVal)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">NumberTurnierCellValue.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_a6da48eeefc7dec3012d775e8c3abf526"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a6da48eeefc7dec3012d775e8c3abf526">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.from</a></div><div class="ttdeci">static NumberTurnierCellValue from(StringTurnierCellValue cellVal)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">NumberTurnierCellValue.java:35</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_a81114690aaa7c41dea9f9095f884864a"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a81114690aaa7c41dea9f9095f884864a">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.from</a></div><div class="ttdeci">static final NumberTurnierCellValue from(Position pos, double value)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">NumberTurnierCellValue.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_a8317a6aa4e9181ac98ea2ed2ffa50552"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a8317a6aa4e9181ac98ea2ed2ffa50552">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.from</a></div><div class="ttdeci">static final NumberTurnierCellValue from(int spalte, int zeile)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">NumberTurnierCellValue.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_a89b01f29c3fa3226d56b9b7d519a91a2"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#a89b01f29c3fa3226d56b9b7d519a91a2">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.from</a></div><div class="ttdeci">static final NumberTurnierCellValue from(Position pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">NumberTurnierCellValue.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_ab18fba2daf6f54af2e94bcc1599d7f60"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ab18fba2daf6f54af2e94bcc1599d7f60">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.from</a></div><div class="ttdeci">static final NumberTurnierCellValue from(int spalte, int zeile, double value)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">NumberTurnierCellValue.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_ac1f37ffd1d63599700538115416e4613"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#ac1f37ffd1d63599700538115416e4613">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.copyCommonAttr</a></div><div class="ttdeci">NumberTurnierCellValue copyCommonAttr(ICellValue&lt;?&gt; abstractCellValue)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">NumberTurnierCellValue.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_adc97b406aee4fd60ee39e1f5b89ac459"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#adc97b406aee4fd60ee39e1f5b89ac459">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.NumberTurnierCellValue</a></div><div class="ttdeci">NumberTurnierCellValue(Position pos, double value)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">NumberTurnierCellValue.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value_html_af55c04d2775223e3d819ef8bd1b49d8d"><div class="ttname"><a href="../../d8/d56/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_number_turnier_cell_value.html#af55c04d2775223e3d819ef8bd1b49d8d">de.petanqueturniermanager.helper.cellvalue.NumberTurnierCellValue.NumberTurnierCellValue</a></div><div class="ttdeci">NumberTurnierCellValue(Position pos, int value)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">NumberTurnierCellValue.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_string_turnier_cell_value_html"><div class="ttname"><a href="../../d0/d69/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_string_turnier_cell_value.html">de.petanqueturniermanager.helper.cellvalue.StringTurnierCellValue</a></div><div class="ttdoc">neue Version von StringCellValue</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d3d/_string_turnier_cell_value_8java_source.html#l00018">StringTurnierCellValue.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html">de.petanqueturniermanager.helper.position.Position</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00007">Position.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position_html_a85ef35b47cbfd4319229d2c4d5e41c41"><div class="ttname"><a href="../../df/d92/classde_1_1petanqueturniermanager_1_1helper_1_1position_1_1_position.html#a85ef35b47cbfd4319229d2c4d5e41c41">de.petanqueturniermanager.helper.position.Position.from</a></div><div class="ttdeci">static Position from(int spalte, int zeile)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d49/_position_8java_source.html#l00023">Position.java:23</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value_html"><div class="ttname"><a href="../../d4/d6c/interfacede_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1_i_cell_value.html">de.petanqueturniermanager.helper.cellvalue.ICellValue</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d90/_i_cell_value_8java_source.html#l00015">ICellValue.java:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_1974395012eff4559c140bfbeed91b40.html">cellvalue</a></li><li class="navelem"><a href="../../dd/de7/_number_turnier_cell_value_8java.html">NumberTurnierCellValue.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

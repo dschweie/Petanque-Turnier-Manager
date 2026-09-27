@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_streich_spieltag_hintergrund_farbe_gerade_style =
+[
+    [ "StreichSpieltagHintergrundFarbeGeradeStyle", "dc/db7/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_streich_spieltag_hintergrund_farbe_gerade_style.html#ac8ae24e7ad0678eb1aaf2404e9c70eac", null ]
+];

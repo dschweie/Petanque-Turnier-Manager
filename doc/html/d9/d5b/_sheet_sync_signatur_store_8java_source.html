@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/sheetsync/SheetSyncSignaturStore.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d5b/_sheet_sync_signatur_store_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SheetSyncSignaturStore.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d5b/_sheet_sync_signatur_store_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.helper.sheetsync;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.time.Duration;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.time.Instant;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Optional;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheetDocument;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.helper.DocumentPropertiesHelper;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html">   38</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae9865b945d808bf981cb50a96b369b02">SheetSyncSignaturStore</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">   40</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae9865b945d808bf981cb50a96b369b02">SheetSyncSignaturStore</a>.class);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a0a7a771f9087b3d2e87138667443939f">   42</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a0a7a771f9087b3d2e87138667443939f">PREFIX</a> = <span class="stringliteral">&quot;ranking.&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ad20fc88b2186e0b9e242247344aa78ac">   43</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ad20fc88b2186e0b9e242247344aa78ac">SUFFIX_HASH</a> = <span class="stringliteral">&quot;.last.rebuild.hash&quot;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa61a70450bedb16f2b197c8fe2e36248">   44</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa61a70450bedb16f2b197c8fe2e36248">SUFFIX_REBUILD_TS</a> = <span class="stringliteral">&quot;.last.rebuild.ts&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa28c6bc00f0575009564ac020c75c382">   45</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa28c6bc00f0575009564ac020c75c382">SUFFIX_REASON</a> = <span class="stringliteral">&quot;.last.rebuild.reason&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af47ddea8e4b0e5f4a652d668ce87c19a">   46</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af47ddea8e4b0e5f4a652d668ce87c19a">SUFFIX_VERIFY_TS</a> = <span class="stringliteral">&quot;.last.verify.ts&quot;</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34c37045b3be9efbe35edcd80f9d58e3">   47</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34c37045b3be9efbe35edcd80f9d58e3">SUFFIX_RECOVERY</a> = <span class="stringliteral">&quot;.recovery.attempted&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae9865b945d808bf981cb50a96b369b02">   49</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae9865b945d808bf981cb50a96b369b02">SheetSyncSignaturStore</a>() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">   52</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> String <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(String schluessel, String suffix) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a0a7a771f9087b3d2e87138667443939f">PREFIX</a> + schluessel + suffix;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34a879e3f6df0b177538565d8084dcf7">   56</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> Optional&lt;String&gt; <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34a879e3f6df0b177538565d8084dcf7">ladeHash</a>(XSpreadsheetDocument xDoc, String schluessel) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            String wert = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(xDoc)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    .getStringProperty(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ad20fc88b2186e0b9e242247344aa78ac">SUFFIX_HASH</a>), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> wert.isEmpty() ? Optional.empty() : Optional.of(wert);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.warn(<span class="stringliteral">&quot;Hash lesen fehlgeschlagen für &#39;{}&#39;&quot;</span>, schluessel, e);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1d987cfac2a6cf0ee9f09977dad82ede">   74</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1d987cfac2a6cf0ee9f09977dad82ede">speichereNachRebuild</a>(XSpreadsheetDocument xDoc, String schluessel,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            String hash, String reason) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        checkNotNull(hash);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        checkNotNull(reason);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <a class="code hl_class" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html">DocumentPropertiesHelper</a> props = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(xDoc);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            String jetzt = Instant.now().toString();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a05ce9dee8f6767625457cb0c3e53bb28">ohneModifiedFlag</a>(() -&gt; {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a416417bdf82115299952663831a6f02d">setStringPropertyOhneEvent</a>(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ad20fc88b2186e0b9e242247344aa78ac">SUFFIX_HASH</a>), hash);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a416417bdf82115299952663831a6f02d">setStringPropertyOhneEvent</a>(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa61a70450bedb16f2b197c8fe2e36248">SUFFIX_REBUILD_TS</a>), jetzt);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a416417bdf82115299952663831a6f02d">setStringPropertyOhneEvent</a>(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa28c6bc00f0575009564ac020c75c382">SUFFIX_REASON</a>), reason);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a416417bdf82115299952663831a6f02d">setStringPropertyOhneEvent</a>(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af47ddea8e4b0e5f4a652d668ce87c19a">SUFFIX_VERIFY_TS</a>), jetzt);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a4ac4f969b9624c66921c38bce9c9993e">setBooleanPropertyOhneEvent</a>(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34c37045b3be9efbe35edcd80f9d58e3">SUFFIX_RECOVERY</a>), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            });</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.warn(<span class="stringliteral">&quot;Hash speichern fehlgeschlagen für &#39;{}&#39;&quot;</span>, schluessel, e);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1dd7d27046d1afc709dce8634045af20">  100</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1dd7d27046d1afc709dce8634045af20">aktualisiereVerifyZeit</a>(XSpreadsheetDocument xDoc, String schluessel) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_class" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html">DocumentPropertiesHelper</a> props = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(xDoc);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a05ce9dee8f6767625457cb0c3e53bb28">ohneModifiedFlag</a>(() -&gt; props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a416417bdf82115299952663831a6f02d">setStringPropertyOhneEvent</a>(</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af47ddea8e4b0e5f4a652d668ce87c19a">SUFFIX_VERIFY_TS</a>), Instant.now().toString()));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.warn(<span class="stringliteral">&quot;Verify-Zeit aktualisieren fehlgeschlagen für &#39;{}&#39;&quot;</span>, schluessel, e);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a139f6b3094d6c1a3538442ab3c577cf0">  116</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> Optional&lt;Instant&gt; <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a139f6b3094d6c1a3538442ab3c577cf0">ladeVerifyZeit</a>(XSpreadsheetDocument xDoc, String schluessel) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            String wert = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(xDoc)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    .getStringProperty(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af47ddea8e4b0e5f4a652d668ce87c19a">SUFFIX_VERIFY_TS</a>), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (wert.isEmpty()) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">return</span> Optional.of(Instant.parse(wert));</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.warn(<span class="stringliteral">&quot;Verify-Zeit lesen fehlgeschlagen für &#39;{}&#39;&quot;</span>, schluessel, e);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">return</span> Optional.empty();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a6a2987c9c103719a19bd96bc5f539b17">  133</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a6a2987c9c103719a19bd96bc5f539b17">verifyVeraltet</a>(XSpreadsheetDocument xDoc, String schluessel,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            Duration intervall) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        Optional&lt;Instant&gt; verify = <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a139f6b3094d6c1a3538442ab3c577cf0">ladeVerifyZeit</a>(xDoc, schluessel);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (verify.isEmpty()) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> Duration.between(verify.get(), Instant.now()).compareTo(intervall) &gt; 0;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a3fce6883c9cdebe3e86cec793c1cf438">  142</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a3fce6883c9cdebe3e86cec793c1cf438">recoveryBereitsVersucht</a>(XSpreadsheetDocument xDoc, String schluessel) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(xDoc)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    .getBooleanProperty(<a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34c37045b3be9efbe35edcd80f9d58e3">SUFFIX_RECOVERY</a>), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.warn(<span class="stringliteral">&quot;Recovery-Flag lesen fehlgeschlagen für &#39;{}&#39;&quot;</span>, schluessel, e);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae77b4880924c15e981ebcddfbfd26c05">  164</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae77b4880924c15e981ebcddfbfd26c05">commitVollaufbau</a>(XSpreadsheetDocument xDoc, String schluessel,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <a class="code hl_class" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">EingabeSignatur</a> signatur) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        checkNotNull(signatur);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <a class="code hl_interface" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html">SignaturErgebnis</a> ergebnis = signatur.<a class="code hl_function" href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html#af3e4c08f0a1f157e15e7a97cf3574c69">berechne</a>(xDoc, 1);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">if</span> (ergebnis instanceof <a class="code hl_interface" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html">SignaturErgebnis</a>.<a class="code hl_function" href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html#a5e13d8e09b317d12b5298f13d794f528">Ok</a> ok) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1d987cfac2a6cf0ee9f09977dad82ede">speichereNachRebuild</a>(xDoc, schluessel, ok.hash(), <span class="stringliteral">&quot;fullBuild&quot;</span>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.debug(<span class="stringliteral">&quot;commitVollaufbau: Hash nicht gespeichert für &#39;{}&#39; (Signatur != Ok): {}&quot;</span>,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                    schluessel, ergebnis);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a91ed39e442aa9d51cf1853e9d41dae1f">  178</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a91ed39e442aa9d51cf1853e9d41dae1f">markiereRecoveryVersucht</a>(XSpreadsheetDocument xDoc, String schluessel) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        checkNotNull(xDoc);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        checkNotNull(schluessel);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <a class="code hl_class" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html">DocumentPropertiesHelper</a> props = <span class="keyword">new</span> <a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">DocumentPropertiesHelper</a>(xDoc);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a05ce9dee8f6767625457cb0c3e53bb28">ohneModifiedFlag</a>(() -&gt; props.<a class="code hl_function" href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a4ac4f969b9624c66921c38bce9c9993e">setBooleanPropertyOhneEvent</a>(</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    <a class="code hl_function" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">propName</a>(schluessel, <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34c37045b3be9efbe35edcd80f9d58e3">SUFFIX_RECOVERY</a>), <span class="keyword">true</span>));</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../d9/da8/class_runtime_exception.html">RuntimeException</a> e) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_variable" href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">logger</a>.warn(<span class="stringliteral">&quot;Recovery-Flag setzen fehlgeschlagen für &#39;{}&#39;&quot;</span>, schluessel, e);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
+</div>
+<div class="ttc" id="aclass_runtime_exception_html"><div class="ttname"><a href="../../d9/da8/class_runtime_exception.html">RuntimeException</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html">de.petanqueturniermanager.helper.DocumentPropertiesHelper</a></div><div class="ttdoc">http://www.openoffice.org/api/docs/common/ref/com/sun/star/document/XDocumentProperties....</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00052">DocumentPropertiesHelper.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a05ce9dee8f6767625457cb0c3e53bb28"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a05ce9dee8f6767625457cb0c3e53bb28">de.petanqueturniermanager.helper.DocumentPropertiesHelper.ohneModifiedFlag</a></div><div class="ttdeci">void ohneModifiedFlag(Runnable aktion)</div><div class="ttdoc">Führt aktion aus und stellt anschließend das Modified-Flag des Dokuments wieder her,...</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00182">DocumentPropertiesHelper.java:182</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a0a0cf75e4c5ea77ae70ffae3d3c72042"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a0a0cf75e4c5ea77ae70ffae3d3c72042">de.petanqueturniermanager.helper.DocumentPropertiesHelper.DocumentPropertiesHelper</a></div><div class="ttdeci">DocumentPropertiesHelper(WorkingSpreadsheet currentSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00065">DocumentPropertiesHelper.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a416417bdf82115299952663831a6f02d"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a416417bdf82115299952663831a6f02d">de.petanqueturniermanager.helper.DocumentPropertiesHelper.setStringPropertyOhneEvent</a></div><div class="ttdeci">void setStringPropertyOhneEvent(String propName, String val)</div><div class="ttdoc">Wie setStringProperty(String, String), aber ohne TurnierEventType#PropertiesChanged-Event zu feuern.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00156">DocumentPropertiesHelper.java:156</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper_html_a4ac4f969b9624c66921c38bce9c9993e"><div class="ttname"><a href="../../df/d5b/classde_1_1petanqueturniermanager_1_1helper_1_1_document_properties_helper.html#a4ac4f969b9624c66921c38bce9c9993e">de.petanqueturniermanager.helper.DocumentPropertiesHelper.setBooleanPropertyOhneEvent</a></div><div class="ttdeci">void setBooleanPropertyOhneEvent(String propName, Boolean newVal)</div><div class="ttdoc">Wie setBooleanProperty(String, Boolean), aber ohne TurnierEvent.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d16/_document_properties_helper_8java_source.html#l00170">DocumentPropertiesHelper.java:170</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur_html"><div class="ttname"><a href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html">de.petanqueturniermanager.helper.sheetsync.EingabeSignatur</a></div><div class="ttdoc">Berechnet eine kanonische SHA-256-Signatur über die semantisch relevanten Eingangsdaten eines synchro...</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dbe/_eingabe_signatur_8java_source.html#l00044">EingabeSignatur.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur_html_af3e4c08f0a1f157e15e7a97cf3574c69"><div class="ttname"><a href="../../d5/d5f/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_eingabe_signatur.html#af3e4c08f0a1f157e15e7a97cf3574c69">de.petanqueturniermanager.helper.sheetsync.EingabeSignatur.berechne</a></div><div class="ttdeci">SignaturErgebnis berechne(XSpreadsheetDocument xDoc, int versuch)</div><div class="ttdoc">Berechnet das Signatur-Ergebnis für das angegebene Dokument.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dbe/_eingabe_signatur_8java_source.html#l00088">EingabeSignatur.java:88</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a0a7a771f9087b3d2e87138667443939f"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a0a7a771f9087b3d2e87138667443939f">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.PREFIX</a></div><div class="ttdeci">static final String PREFIX</div><div class="ttdef"><b>Definition</b> <a href="#l00042">SheetSyncSignaturStore.java:42</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a139f6b3094d6c1a3538442ab3c577cf0"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a139f6b3094d6c1a3538442ab3c577cf0">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.ladeVerifyZeit</a></div><div class="ttdeci">static Optional&lt; Instant &gt; ladeVerifyZeit(XSpreadsheetDocument xDoc, String schluessel)</div><div class="ttdoc">Liest den letzten Verifikations-Zeitstempel.</div><div class="ttdef"><b>Definition</b> <a href="#l00116">SheetSyncSignaturStore.java:116</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a1d987cfac2a6cf0ee9f09977dad82ede"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1d987cfac2a6cf0ee9f09977dad82ede">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.speichereNachRebuild</a></div><div class="ttdeci">static void speichereNachRebuild(XSpreadsheetDocument xDoc, String schluessel, String hash, String reason)</div><div class="ttdoc">Schreibt Hash + Zeitstempel + Grund nach erfolgreichem Rebuild und setzt das Recovery-Flag zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00074">SheetSyncSignaturStore.java:74</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a1dd7d27046d1afc709dce8634045af20"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a1dd7d27046d1afc709dce8634045af20">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.aktualisiereVerifyZeit</a></div><div class="ttdeci">static void aktualisiereVerifyZeit(XSpreadsheetDocument xDoc, String schluessel)</div><div class="ttdoc">Aktualisiert ausschließlich den Verify-Zeitstempel – ohne Rebuild.</div><div class="ttdef"><b>Definition</b> <a href="#l00100">SheetSyncSignaturStore.java:100</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a34a879e3f6df0b177538565d8084dcf7"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34a879e3f6df0b177538565d8084dcf7">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.ladeHash</a></div><div class="ttdeci">static Optional&lt; String &gt; ladeHash(XSpreadsheetDocument xDoc, String schluessel)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">SheetSyncSignaturStore.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a34c37045b3be9efbe35edcd80f9d58e3"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a34c37045b3be9efbe35edcd80f9d58e3">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.SUFFIX_RECOVERY</a></div><div class="ttdeci">static final String SUFFIX_RECOVERY</div><div class="ttdef"><b>Definition</b> <a href="#l00047">SheetSyncSignaturStore.java:47</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a3fce6883c9cdebe3e86cec793c1cf438"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a3fce6883c9cdebe3e86cec793c1cf438">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.recoveryBereitsVersucht</a></div><div class="ttdeci">static boolean recoveryBereitsVersucht(XSpreadsheetDocument xDoc, String schluessel)</div><div class="ttdef"><b>Definition</b> <a href="#l00142">SheetSyncSignaturStore.java:142</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a6a2987c9c103719a19bd96bc5f539b17"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a6a2987c9c103719a19bd96bc5f539b17">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.verifyVeraltet</a></div><div class="ttdeci">static boolean verifyVeraltet(XSpreadsheetDocument xDoc, String schluessel, Duration intervall)</div><div class="ttdoc">true wenn die letzte Verifikation länger als intervall her ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00133">SheetSyncSignaturStore.java:133</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_a91ed39e442aa9d51cf1853e9d41dae1f"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#a91ed39e442aa9d51cf1853e9d41dae1f">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.markiereRecoveryVersucht</a></div><div class="ttdeci">static void markiereRecoveryVersucht(XSpreadsheetDocument xDoc, String schluessel)</div><div class="ttdef"><b>Definition</b> <a href="#l00178">SheetSyncSignaturStore.java:178</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_aa28c6bc00f0575009564ac020c75c382"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa28c6bc00f0575009564ac020c75c382">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.SUFFIX_REASON</a></div><div class="ttdeci">static final String SUFFIX_REASON</div><div class="ttdef"><b>Definition</b> <a href="#l00045">SheetSyncSignaturStore.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_aa61a70450bedb16f2b197c8fe2e36248"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#aa61a70450bedb16f2b197c8fe2e36248">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.SUFFIX_REBUILD_TS</a></div><div class="ttdeci">static final String SUFFIX_REBUILD_TS</div><div class="ttdef"><b>Definition</b> <a href="#l00044">SheetSyncSignaturStore.java:44</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_abaefb02b799ab70d1358d6227c8f2b55"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#abaefb02b799ab70d1358d6227c8f2b55">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00040">SheetSyncSignaturStore.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_ad20fc88b2186e0b9e242247344aa78ac"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ad20fc88b2186e0b9e242247344aa78ac">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.SUFFIX_HASH</a></div><div class="ttdeci">static final String SUFFIX_HASH</div><div class="ttdef"><b>Definition</b> <a href="#l00043">SheetSyncSignaturStore.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_ae77b4880924c15e981ebcddfbfd26c05"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae77b4880924c15e981ebcddfbfd26c05">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.commitVollaufbau</a></div><div class="ttdeci">static void commitVollaufbau(XSpreadsheetDocument xDoc, String schluessel, EingabeSignatur signatur)</div><div class="ttdoc">Berechnet die aktuelle Eingabe-Signatur und schreibt sie nach einem Vollaufbau (forceCreate-Pfad) in ...</div><div class="ttdef"><b>Definition</b> <a href="#l00164">SheetSyncSignaturStore.java:164</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_ae9865b945d808bf981cb50a96b369b02"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#ae9865b945d808bf981cb50a96b369b02">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.SheetSyncSignaturStore</a></div><div class="ttdeci">SheetSyncSignaturStore()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">SheetSyncSignaturStore.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_af01b08e39a1be0438dcfe872bb9975a3"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af01b08e39a1be0438dcfe872bb9975a3">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.propName</a></div><div class="ttdeci">static String propName(String schluessel, String suffix)</div><div class="ttdef"><b>Definition</b> <a href="#l00052">SheetSyncSignaturStore.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store_html_af47ddea8e4b0e5f4a652d668ce87c19a"><div class="ttname"><a href="../../df/d8d/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_signatur_store.html#af47ddea8e4b0e5f4a652d668ce87c19a">de.petanqueturniermanager.helper.sheetsync.SheetSyncSignaturStore.SUFFIX_VERIFY_TS</a></div><div class="ttdeci">static final String SUFFIX_VERIFY_TS</div><div class="ttdef"><b>Definition</b> <a href="#l00046">SheetSyncSignaturStore.java:46</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis_html"><div class="ttname"><a href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html">de.petanqueturniermanager.helper.sheetsync.SignaturErgebnis</a></div><div class="ttdoc">Ergebnis-Typ von EingabeSignatur#berechne.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dad/_signatur_ergebnis_8java_source.html#l00014">SignaturErgebnis.java:14</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis_html_a5e13d8e09b317d12b5298f13d794f528"><div class="ttname"><a href="../../d0/db6/interfacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_signatur_ergebnis.html#a5e13d8e09b317d12b5298f13d794f528">de.petanqueturniermanager.helper.sheetsync.SignaturErgebnis.Ok</a></div><div class="ttdeci">record Ok(String hash) implements SignaturErgebnis</div><div class="ttdoc">Hash erfolgreich berechnet.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dad/_signatur_ergebnis_8java_source.html#l00017">SignaturErgebnis.java:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_4a87b3b2cbeffc285fa362e36e4b59d8.html">sheetsync</a></li><li class="navelem"><a href="../../d9/d5b/_sheet_sync_signatur_store_8java.html">SheetSyncSignaturStore.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

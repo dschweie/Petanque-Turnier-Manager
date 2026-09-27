@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/addin/XGlobal.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/dce/_x_global_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">XGlobal.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/dce/_x_global_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../d7/dc5/namespacede_1_1petanqueturniermanager_1_1addin.html">    1</a></span><span class="keyword">package </span>de.petanqueturniermanager.addin;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> com.sun.star.lib.uno.typeinfo.MethodTypeInfo;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> com.sun.star.lib.uno.typeinfo.TypeInfo;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> com.sun.star.uno.XInterface;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html">   14</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html">XGlobal</a> <span class="keyword">extends</span> <a class="code hl_class" href="../../db/da8/class_x_interface.html">XInterface</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// UNO Type Info - method indices must match IDL order</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad006620ce3dbc4a647f21d4ccfc06172">   17</a></span>    TypeInfo[] <a class="code hl_variable" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad006620ce3dbc4a647f21d4ccfc06172">UNOTYPEINFO</a> = {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmstringproperty&quot;</span>, 0, 0),</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmintproperty&quot;</span>, 1, 0),</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmturniersystem&quot;</span>, 2, 0),</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmdirektvergleich&quot;</span>, 3, 0),</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmaktuellerunde&quot;</span>, 4, 0),</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmaktuellerspieltag&quot;</span>, 5, 0),</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmoperationaktiv&quot;</span>, 6, 0),</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmtriplanzdoublette&quot;</span>,  7, 0),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmtriplanztriplette&quot;</span>,  8, 0),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmnurdoublette&quot;</span>,       9, 0),</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmdouplanzdoublette&quot;</span>, 10, 0),</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptgsmdouplanztriplette&quot;</span>, 11, 0),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptgsmnurtriplette&quot;</span>,                 12, 0),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmtriplanzpaarungen&quot;</span>,            13, 0),</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmtriplanzbahnen&quot;</span>,               14, 0),</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmdouplanzpaarungen&quot;</span>,            15, 0),</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmdoupanzbahnen&quot;</span>,                16, 0),</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmvalide&quot;</span>,                       17, 0),</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmanztriplwennnurtriplette&quot;</span>,     18, 0),</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmsmanzdoublwennnurdoublette&quot;</span>,     19, 0),</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmcadrageanzteams&quot;</span>,                20, 0),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmcadragezielanz&quot;</span>,                 21, 0),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmcadrageanzfreilose&quot;</span>,             22, 0),</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmpouleanzgruppen&quot;</span>,                23, 0),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmpouleanzvierergruppen&quot;</span>,          24, 0),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmpouleanzdreiergruppen&quot;</span>,          25, 0),</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmbooleanproperty&quot;</span>,                26, 0),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmdbspieleranzahl&quot;</span>,                27, 0),</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">new</span> MethodTypeInfo(<span class="stringliteral">&quot;ptmdbspielersuche&quot;</span>,                 28, 0),</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a565705a09639aac8a661d815238ef291">   49</a></span>    String <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a565705a09639aac8a661d815238ef291">ptmstringproperty</a>(String propname);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a64980d59343fb37b76e1be381642af91">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a64980d59343fb37b76e1be381642af91">ptmintproperty</a>(String propname);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a2deb8bb0cfefab028944765c574431df">   53</a></span>    String <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a2deb8bb0cfefab028944765c574431df">ptmturniersystem</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ab05aa68340f565fd569c17e1d0e9576d">   55</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ab05aa68340f565fd569c17e1d0e9576d">ptmdirektvergleich</a>(<span class="keywordtype">int</span> teamA, <span class="keywordtype">int</span> teamB, <span class="keywordtype">int</span>[][] begegnungen, <span class="keywordtype">int</span>[][] siege, <span class="keywordtype">int</span>[][] spielpunkte);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ac5fdc91c470e3371fec09bb4e2ab37de">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ac5fdc91c470e3371fec09bb4e2ab37de">ptmaktuellerunde</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a1e8c154b7afdc3a09380f3f7559ebc9c">   59</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a1e8c154b7afdc3a09380f3f7559ebc9c">ptmaktuellerspieltag</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a0916aa8ad85590750734a9240203bd8f">   61</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a0916aa8ad85590750734a9240203bd8f">ptmoperationaktiv</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ade65db1f6afbd4ec00ce796f795bdaed">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ade65db1f6afbd4ec00ce796f795bdaed">ptmsmtriplanzdoublette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a36a08741ba98403dbf3138a32b9584ae">   65</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a36a08741ba98403dbf3138a32b9584ae">ptmsmtriplanztriplette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a25529e9ac0965b1e072844183c902fb7">   67</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a25529e9ac0965b1e072844183c902fb7">ptmsmnurdoublette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#acd10f9ae367a93689028be53334577ba">   69</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#acd10f9ae367a93689028be53334577ba">ptmsmdouplanzdoublette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aa599798a2a6626bb4c47538f660d3f93">   71</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aa599798a2a6626bb4c47538f660d3f93">ptgsmdouplanztriplette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ab3bb38fd396dc98246ce8e5af4cbdccd">   73</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ab3bb38fd396dc98246ce8e5af4cbdccd">ptgsmnurtriplette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a73d2cef33f4b4212e67c6443f31e5a94">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a73d2cef33f4b4212e67c6443f31e5a94">ptmsmtriplanzpaarungen</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a589283d498b5eed0cf505fb6b0294953">   77</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a589283d498b5eed0cf505fb6b0294953">ptmsmtriplanzbahnen</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad3408c7f6fad36a4945e00dce395970a">   79</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad3408c7f6fad36a4945e00dce395970a">ptmsmdouplanzpaarungen</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a9d52045326d63109ace4b5d45f474ab4">   81</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a9d52045326d63109ace4b5d45f474ab4">ptmsmdoupanzbahnen</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a8f0b7e1e4e542e6084784557c995e504">   83</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a8f0b7e1e4e542e6084784557c995e504">ptmsmvalide</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a590f9006cb4bee90ab30cd25b1a93b65">   85</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a590f9006cb4bee90ab30cd25b1a93b65">ptmsmanztriplwennnurtriplette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#acf15490e3bc71a92df5772b0d5983d7b">   87</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#acf15490e3bc71a92df5772b0d5983d7b">ptmsmanzdoublwennnurdoublette</a>(<span class="keywordtype">int</span> anzSpieler);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a63945022a1a9dd06efab13ab1f8d5b40">   89</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a63945022a1a9dd06efab13ab1f8d5b40">ptmcadrageanzteams</a>(<span class="keywordtype">int</span> anzTeams);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aca7fe719f09fc85cb75c3db1d3c1d4b1">   91</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aca7fe719f09fc85cb75c3db1d3c1d4b1">ptmcadragezielanz</a>(<span class="keywordtype">int</span> anzTeams);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a13bdf33b4777885c4ff42d4be5f2a685">   93</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a13bdf33b4777885c4ff42d4be5f2a685">ptmcadrageanzfreilose</a>(<span class="keywordtype">int</span> anzTeams);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a0b38682a49d0f4af30ca421afcf939e9">   95</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a0b38682a49d0f4af30ca421afcf939e9">ptmpouleanzgruppen</a>(<span class="keywordtype">int</span> anzTeams);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a1516bc44ab3e7af340ab285c1bae7e2b">   97</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a1516bc44ab3e7af340ab285c1bae7e2b">ptmpouleanzvierergruppen</a>(<span class="keywordtype">int</span> anzTeams);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a5337a3a03d8784ca09605e3a3cab0db3">   99</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a5337a3a03d8784ca09605e3a3cab0db3">ptmpouleanzdreiergruppen</a>(<span class="keywordtype">int</span> anzTeams);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aefc006a4c97c6790fe4c5c19adc8aab3">  101</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aefc006a4c97c6790fe4c5c19adc8aab3">ptmbooleanproperty</a>(String propname);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a925708b8c6ce80ce438b0b70c897ac6b">  103</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a925708b8c6ce80ce438b0b70c897ac6b">ptmdbspieleranzahl</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad755d20891d0305a40cc3c742cafbe6f">  105</a></span>    String[][] <a class="code hl_function" href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad755d20891d0305a40cc3c742cafbe6f">ptmdbspielersuche</a>(String suche, <span class="keywordtype">boolean</span> wildcard);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+</div>
+<div class="ttc" id="aclass_x_interface_html"><div class="ttname"><a href="../../db/da8/class_x_interface.html">XInterface</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html">de.petanqueturniermanager.addin.XGlobal</a></div><div class="ttdoc">UNO Interface for GlobalAddIn service providing Petanque Tournament Manager Calc functions.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">XGlobal.java:14</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a0916aa8ad85590750734a9240203bd8f"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a0916aa8ad85590750734a9240203bd8f">de.petanqueturniermanager.addin.XGlobal.ptmoperationaktiv</a></div><div class="ttdeci">int ptmoperationaktiv()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a0b38682a49d0f4af30ca421afcf939e9"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a0b38682a49d0f4af30ca421afcf939e9">de.petanqueturniermanager.addin.XGlobal.ptmpouleanzgruppen</a></div><div class="ttdeci">int ptmpouleanzgruppen(int anzTeams)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a13bdf33b4777885c4ff42d4be5f2a685"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a13bdf33b4777885c4ff42d4be5f2a685">de.petanqueturniermanager.addin.XGlobal.ptmcadrageanzfreilose</a></div><div class="ttdeci">int ptmcadrageanzfreilose(int anzTeams)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a1516bc44ab3e7af340ab285c1bae7e2b"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a1516bc44ab3e7af340ab285c1bae7e2b">de.petanqueturniermanager.addin.XGlobal.ptmpouleanzvierergruppen</a></div><div class="ttdeci">int ptmpouleanzvierergruppen(int anzTeams)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a1e8c154b7afdc3a09380f3f7559ebc9c"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a1e8c154b7afdc3a09380f3f7559ebc9c">de.petanqueturniermanager.addin.XGlobal.ptmaktuellerspieltag</a></div><div class="ttdeci">int ptmaktuellerspieltag()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a25529e9ac0965b1e072844183c902fb7"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a25529e9ac0965b1e072844183c902fb7">de.petanqueturniermanager.addin.XGlobal.ptmsmnurdoublette</a></div><div class="ttdeci">int ptmsmnurdoublette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a2deb8bb0cfefab028944765c574431df"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a2deb8bb0cfefab028944765c574431df">de.petanqueturniermanager.addin.XGlobal.ptmturniersystem</a></div><div class="ttdeci">String ptmturniersystem()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a36a08741ba98403dbf3138a32b9584ae"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a36a08741ba98403dbf3138a32b9584ae">de.petanqueturniermanager.addin.XGlobal.ptmsmtriplanztriplette</a></div><div class="ttdeci">int ptmsmtriplanztriplette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a5337a3a03d8784ca09605e3a3cab0db3"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a5337a3a03d8784ca09605e3a3cab0db3">de.petanqueturniermanager.addin.XGlobal.ptmpouleanzdreiergruppen</a></div><div class="ttdeci">int ptmpouleanzdreiergruppen(int anzTeams)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a565705a09639aac8a661d815238ef291"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a565705a09639aac8a661d815238ef291">de.petanqueturniermanager.addin.XGlobal.ptmstringproperty</a></div><div class="ttdeci">String ptmstringproperty(String propname)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a589283d498b5eed0cf505fb6b0294953"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a589283d498b5eed0cf505fb6b0294953">de.petanqueturniermanager.addin.XGlobal.ptmsmtriplanzbahnen</a></div><div class="ttdeci">int ptmsmtriplanzbahnen(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a590f9006cb4bee90ab30cd25b1a93b65"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a590f9006cb4bee90ab30cd25b1a93b65">de.petanqueturniermanager.addin.XGlobal.ptmsmanztriplwennnurtriplette</a></div><div class="ttdeci">int ptmsmanztriplwennnurtriplette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a63945022a1a9dd06efab13ab1f8d5b40"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a63945022a1a9dd06efab13ab1f8d5b40">de.petanqueturniermanager.addin.XGlobal.ptmcadrageanzteams</a></div><div class="ttdeci">int ptmcadrageanzteams(int anzTeams)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a64980d59343fb37b76e1be381642af91"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a64980d59343fb37b76e1be381642af91">de.petanqueturniermanager.addin.XGlobal.ptmintproperty</a></div><div class="ttdeci">int ptmintproperty(String propname)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a73d2cef33f4b4212e67c6443f31e5a94"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a73d2cef33f4b4212e67c6443f31e5a94">de.petanqueturniermanager.addin.XGlobal.ptmsmtriplanzpaarungen</a></div><div class="ttdeci">int ptmsmtriplanzpaarungen(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a8f0b7e1e4e542e6084784557c995e504"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a8f0b7e1e4e542e6084784557c995e504">de.petanqueturniermanager.addin.XGlobal.ptmsmvalide</a></div><div class="ttdeci">int ptmsmvalide(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a925708b8c6ce80ce438b0b70c897ac6b"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a925708b8c6ce80ce438b0b70c897ac6b">de.petanqueturniermanager.addin.XGlobal.ptmdbspieleranzahl</a></div><div class="ttdeci">int ptmdbspieleranzahl()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_a9d52045326d63109ace4b5d45f474ab4"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#a9d52045326d63109ace4b5d45f474ab4">de.petanqueturniermanager.addin.XGlobal.ptmsmdoupanzbahnen</a></div><div class="ttdeci">int ptmsmdoupanzbahnen(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_aa599798a2a6626bb4c47538f660d3f93"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aa599798a2a6626bb4c47538f660d3f93">de.petanqueturniermanager.addin.XGlobal.ptgsmdouplanztriplette</a></div><div class="ttdeci">int ptgsmdouplanztriplette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ab05aa68340f565fd569c17e1d0e9576d"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ab05aa68340f565fd569c17e1d0e9576d">de.petanqueturniermanager.addin.XGlobal.ptmdirektvergleich</a></div><div class="ttdeci">int ptmdirektvergleich(int teamA, int teamB, int[][] begegnungen, int[][] siege, int[][] spielpunkte)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ab3bb38fd396dc98246ce8e5af4cbdccd"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ab3bb38fd396dc98246ce8e5af4cbdccd">de.petanqueturniermanager.addin.XGlobal.ptgsmnurtriplette</a></div><div class="ttdeci">int ptgsmnurtriplette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ac5fdc91c470e3371fec09bb4e2ab37de"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ac5fdc91c470e3371fec09bb4e2ab37de">de.petanqueturniermanager.addin.XGlobal.ptmaktuellerunde</a></div><div class="ttdeci">int ptmaktuellerunde()</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_aca7fe719f09fc85cb75c3db1d3c1d4b1"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aca7fe719f09fc85cb75c3db1d3c1d4b1">de.petanqueturniermanager.addin.XGlobal.ptmcadragezielanz</a></div><div class="ttdeci">int ptmcadragezielanz(int anzTeams)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_acd10f9ae367a93689028be53334577ba"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#acd10f9ae367a93689028be53334577ba">de.petanqueturniermanager.addin.XGlobal.ptmsmdouplanzdoublette</a></div><div class="ttdeci">int ptmsmdouplanzdoublette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_acf15490e3bc71a92df5772b0d5983d7b"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#acf15490e3bc71a92df5772b0d5983d7b">de.petanqueturniermanager.addin.XGlobal.ptmsmanzdoublwennnurdoublette</a></div><div class="ttdeci">int ptmsmanzdoublwennnurdoublette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ad006620ce3dbc4a647f21d4ccfc06172"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad006620ce3dbc4a647f21d4ccfc06172">de.petanqueturniermanager.addin.XGlobal.UNOTYPEINFO</a></div><div class="ttdeci">TypeInfo[] UNOTYPEINFO</div><div class="ttdef"><b>Definition</b> <a href="#l00017">XGlobal.java:17</a></div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ad3408c7f6fad36a4945e00dce395970a"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad3408c7f6fad36a4945e00dce395970a">de.petanqueturniermanager.addin.XGlobal.ptmsmdouplanzpaarungen</a></div><div class="ttdeci">int ptmsmdouplanzpaarungen(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ad755d20891d0305a40cc3c742cafbe6f"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ad755d20891d0305a40cc3c742cafbe6f">de.petanqueturniermanager.addin.XGlobal.ptmdbspielersuche</a></div><div class="ttdeci">String[][] ptmdbspielersuche(String suche, boolean wildcard)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_ade65db1f6afbd4ec00ce796f795bdaed"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#ade65db1f6afbd4ec00ce796f795bdaed">de.petanqueturniermanager.addin.XGlobal.ptmsmtriplanzdoublette</a></div><div class="ttdeci">int ptmsmtriplanzdoublette(int anzSpieler)</div></div>
+<div class="ttc" id="ainterfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global_html_aefc006a4c97c6790fe4c5c19adc8aab3"><div class="ttname"><a href="../../de/d63/interfacede_1_1petanqueturniermanager_1_1addin_1_1_x_global.html#aefc006a4c97c6790fe4c5c19adc8aab3">de.petanqueturniermanager.addin.XGlobal.ptmbooleanproperty</a></div><div class="ttdeci">int ptmbooleanproperty(String propname)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_a1e04be645cff54da13401d5d13897a8.html">addin</a></li><li class="navelem"><a href="../../d4/dce/_x_global_8java.html">XGlobal.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

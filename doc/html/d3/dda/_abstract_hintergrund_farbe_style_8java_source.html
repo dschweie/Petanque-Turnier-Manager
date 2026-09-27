@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/cellstyle/AbstractHintergrundFarbeStyle.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d3/dda/_abstract_hintergrund_farbe_style_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AbstractHintergrundFarbeStyle.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/dda/_abstract_hintergrund_farbe_style_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">* Erstellung : 21.05.2018 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">**/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.helper.cellstyle;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.petanqueturniermanager.helper.cellvalue.properties.CellProperties;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html">   11</a></span><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_function" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#aef9d89a4d997b000cee3c7b3a69669d8">AbstractHintergrundFarbeStyle</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#a3a83ddc3e9dc38291f782fbf3831163f">AbstractCellStyleDef</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#abe8bbe9b0dc7fdc849d29ec619e77b1c">   13</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#abe8bbe9b0dc7fdc849d29ec619e77b1c">farbe</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#aef9d89a4d997b000cee3c7b3a69669d8">   15</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#aef9d89a4d997b000cee3c7b3a69669d8">AbstractHintergrundFarbeStyle</a>(<a class="code hl_class" href="../../dc/ddd/enumde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_def_name.html">CellStyleDefName</a> <a class="code hl_variable" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#afaa3dd6d587f6938c6fda39f4dd466b8">name</a>, Integer color) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        super(checkNotNull(<a class="code hl_variable" href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#afaa3dd6d587f6938c6fda39f4dd466b8">name</a>, <span class="stringliteral">&quot;name=null&quot;</span>), <a class="code hl_function" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#ab6dc4c773f1c7d7092bebafa7dad96b3">buildCellProperties</a>(checkNotNull(color, <span class="stringliteral">&quot;color=null&quot;</span>)));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this.farbe = color;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#a8a0fea139abc6be7e1475b08818d6ec5">   20</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#a8a0fea139abc6be7e1475b08818d6ec5">getFarbe</a>() {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#abe8bbe9b0dc7fdc849d29ec619e77b1c">farbe</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#ab6dc4c773f1c7d7092bebafa7dad96b3">   24</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code hl_class" href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html">CellProperties</a> <a class="code hl_function" href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#ab6dc4c773f1c7d7092bebafa7dad96b3">buildCellProperties</a>(Integer backgrColor) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html">CellProperties</a>.<a class="code hl_function" href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html#a3bb4ccac50d090bb51c79d1a75dc7001">from</a>().<a class="code hl_function" href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#ab04f047294555111739622981d9809be">setCellBackColor</a>(backgrColor).setCellbackgroundTransparent(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def_html_a3a83ddc3e9dc38291f782fbf3831163f"><div class="ttname"><a href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#a3a83ddc3e9dc38291f782fbf3831163f">de.petanqueturniermanager.helper.cellstyle.AbstractCellStyleDef.AbstractCellStyleDef</a></div><div class="ttdeci">AbstractCellStyleDef(CellStyleDefName name, CellProperties cellProperties)</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6a/_abstract_cell_style_def_8java_source.html#l00016">AbstractCellStyleDef.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def_html_afaa3dd6d587f6938c6fda39f4dd466b8"><div class="ttname"><a href="../../de/d92/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_cell_style_def.html#afaa3dd6d587f6938c6fda39f4dd466b8">de.petanqueturniermanager.helper.cellstyle.AbstractCellStyleDef.name</a></div><div class="ttdeci">final CellStyleDefName name</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6a/_abstract_cell_style_def_8java_source.html#l00013">AbstractCellStyleDef.java:13</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style_html_a8a0fea139abc6be7e1475b08818d6ec5"><div class="ttname"><a href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#a8a0fea139abc6be7e1475b08818d6ec5">de.petanqueturniermanager.helper.cellstyle.AbstractHintergrundFarbeStyle.getFarbe</a></div><div class="ttdeci">int getFarbe()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">AbstractHintergrundFarbeStyle.java:20</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style_html_ab6dc4c773f1c7d7092bebafa7dad96b3"><div class="ttname"><a href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#ab6dc4c773f1c7d7092bebafa7dad96b3">de.petanqueturniermanager.helper.cellstyle.AbstractHintergrundFarbeStyle.buildCellProperties</a></div><div class="ttdeci">static CellProperties buildCellProperties(Integer backgrColor)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">AbstractHintergrundFarbeStyle.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style_html_abe8bbe9b0dc7fdc849d29ec619e77b1c"><div class="ttname"><a href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#abe8bbe9b0dc7fdc849d29ec619e77b1c">de.petanqueturniermanager.helper.cellstyle.AbstractHintergrundFarbeStyle.farbe</a></div><div class="ttdeci">final int farbe</div><div class="ttdef"><b>Definition</b> <a href="#l00013">AbstractHintergrundFarbeStyle.java:13</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style_html_aef9d89a4d997b000cee3c7b3a69669d8"><div class="ttname"><a href="../../dc/da9/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_hintergrund_farbe_style.html#aef9d89a4d997b000cee3c7b3a69669d8">de.petanqueturniermanager.helper.cellstyle.AbstractHintergrundFarbeStyle.AbstractHintergrundFarbeStyle</a></div><div class="ttdeci">AbstractHintergrundFarbeStyle(CellStyleDefName name, Integer color)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">AbstractHintergrundFarbeStyle.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties_html"><div class="ttname"><a href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html">de.petanqueturniermanager.helper.cellvalue.properties.CellProperties</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d8f/_cell_properties_8java_source.html#l00009">CellProperties.java:9</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties_html_a3bb4ccac50d090bb51c79d1a75dc7001"><div class="ttname"><a href="../../d8/db5/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_cell_properties.html#a3bb4ccac50d090bb51c79d1a75dc7001">de.petanqueturniermanager.helper.cellvalue.properties.CellProperties.from</a></div><div class="ttdeci">static CellProperties from()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d8f/_cell_properties_8java_source.html#l00016">CellProperties.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties_html_ab04f047294555111739622981d9809be"><div class="ttname"><a href="../../d1/def/classde_1_1petanqueturniermanager_1_1helper_1_1cellvalue_1_1properties_1_1_common_properties.html#ab04f047294555111739622981d9809be">de.petanqueturniermanager.helper.cellvalue.properties.CommonProperties.setCellBackColor</a></div><div class="ttdeci">T setCellBackColor(Integer color)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d31/_common_properties_8java_source.html#l00138">CommonProperties.java:138</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_def_name_html"><div class="ttname"><a href="../../dc/ddd/enumde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_cell_style_def_name.html">de.petanqueturniermanager.helper.cellstyle.CellStyleDefName</a></div><div class="ttdoc">Erstellung 26.06.2022 / Michael Massee.</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d8f/_cell_style_def_name_8java_source.html#l00007">CellStyleDefName.java:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_19cb19fd21f3b955bc7c24760ae80588.html">cellstyle</a></li><li class="navelem"><a href="../../d3/dda/_abstract_hintergrund_farbe_style_8java.html">AbstractHintergrundFarbeStyle.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

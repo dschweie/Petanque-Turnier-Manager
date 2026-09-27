@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('db/d21/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_calc_import_reader.html','../../','db/db2/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_calc_import_reader-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Liest eine ODS-Datei mit Sheets <code class="JavaDocCode">Spieler</code>/<code class="JavaDocCode">Vereine</code>/<code class="JavaDocCode">Labels</code>/ <code class="JavaDocCode">SpielerLabels</code>.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/ddc/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_calc_import_reader__inherit__graph.png" border="0" usemap="#ade_8petanqueturniermanager_8spielerdb_8importer_8_spieler_db_calc_import_reader_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="ade_8petanqueturniermanager_8spielerdb_8importer_8_spieler_db_calc_import_reader_inherit__map" id="ade_8petanqueturniermanager_8spielerdb_8importer_8_spieler_db_calc_import_reader_inherit__map">
+<area shape="rect" title="Liest eine ODS&#45;Datei mit Sheets Spieler/Vereine/Labels/ SpielerLabels." alt="" coords="5,96,295,139"/>
+<area shape="rect" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html" title="Liest eine Import&#45;Quelle in ImportRohdaten ein." alt="" coords="5,5,295,48"/>
+<area shape="poly" title=" " alt="" coords="152,62,152,97,148,95,148,66"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:adfe5df8d3bb383b1403dd0ffd817b616" id="r_adfe5df8d3bb383b1403dd0ffd817b616"><td class="memItemLeft"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a>&#160;</td><td class="memItemRight"><a class="el" href="#adfe5df8d3bb383b1403dd0ffd817b616">read</a> (<a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#aa6f41c6b64ae681e2d9963e3562bf26a">ImportRequest</a> request)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a4c064468cb483bcecf311a78b66271c8" id="r_a4c064468cb483bcecf311a78b66271c8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4c064468cb483bcecf311a78b66271c8">SpielerDbCalcImportReader</a> (XComponentContext xContext)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ad548ed0f6e6c9970dcd24ec4d6eb2f90" id="r_ad548ed0f6e6c9970dcd24ec4d6eb2f90"><td class="memItemLeft">XSpreadsheetDocument&#160;</td><td class="memItemRight"><a class="el" href="#ad548ed0f6e6c9970dcd24ec4d6eb2f90">oeffneVersteckt</a> (Path datei)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:a9f921c059e4171e8361525c4a9958f4b" id="r_a9f921c059e4171e8361525c4a9958f4b"><td class="memItemLeft">static XSpreadsheet&#160;</td><td class="memItemRight"><a class="el" href="#a9f921c059e4171e8361525c4a9958f4b">holePflichtSheet</a> (XSpreadsheets sheets, String name)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:adda15067322e8757777c6967e208f50e" id="r_adda15067322e8757777c6967e208f50e"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#adda15067322e8757777c6967e208f50e">leerAlsNull</a> (String s)</td></tr>
+<tr class="memitem:a74553759a764d56a7c793f5239bd9508" id="r_a74553759a764d56a7c793f5239bd9508"><td class="memItemLeft">static Integer&#160;</td><td class="memItemRight"><a class="el" href="#a74553759a764d56a7c793f5239bd9508">leseInteger</a> (XSpreadsheet sheet, int col, int row)</td></tr>
+<tr class="memitem:a5ca6eaa176252868ac50d3ce549fa745" id="r_a5ca6eaa176252868ac50d3ce549fa745"><td class="memItemLeft">static List&lt; RohSpielerLabel &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5ca6eaa176252868ac50d3ce549fa745">leseJunction</a> (XSpreadsheets sheets)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a2d60d24afdaa363bcb1867b1e6216696" id="r_a2d60d24afdaa363bcb1867b1e6216696"><td class="memItemLeft">static List&lt; RohLabel &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2d60d24afdaa363bcb1867b1e6216696">leseLabels</a> (XSpreadsheets sheets)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a6675b606b11ec6b4d1bbe97d164e34c4" id="r_a6675b606b11ec6b4d1bbe97d164e34c4"><td class="memItemLeft">static List&lt; RohSpieler &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6675b606b11ec6b4d1bbe97d164e34c4">leseSpieler</a> (XSpreadsheets sheets)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a043f5f189a9cd11f5f71d7516feefd3a" id="r_a043f5f189a9cd11f5f71d7516feefd3a"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a043f5f189a9cd11f5f71d7516feefd3a">leseString</a> (XSpreadsheet sheet, int col, int row)</td></tr>
+<tr class="memitem:afef60e82a51f7b83e87581c8d5a8200e" id="r_afef60e82a51f7b83e87581c8d5a8200e"><td class="memItemLeft">static List&lt; RohVerein &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afef60e82a51f7b83e87581c8d5a8200e">leseVereine</a> (XSpreadsheets sheets)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+<tr class="memitem:a7d862327473af1c7c8af814e667e4eed" id="r_a7d862327473af1c7c8af814e667e4eed"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a7d862327473af1c7c8af814e667e4eed">validiereHeader</a> (XSpreadsheet sheet, String sheetName, String... erwartet)  throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:aa160bb65903b9b3a4767a4cdf49ec2b9" id="r_aa160bb65903b9b3a4767a4cdf49ec2b9"><td class="memItemLeft">final XComponentContext&#160;</td><td class="memItemRight"><a class="el" href="#aa160bb65903b9b3a4767a4cdf49ec2b9">xContext</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:a43d4aa9dcfc078b875236d1f33aeda2e" id="r_a43d4aa9dcfc078b875236d1f33aeda2e"><td class="memItemLeft">static final Logger&#160;</td><td class="memItemRight"><a class="el" href="#a43d4aa9dcfc078b875236d1f33aeda2e">logger</a> = LogManager.getLogger(SpielerDbCalcImportReader.class)</td></tr>
+<tr class="memitem:ae88d6c0d8715f2883f3247ca1c331a50" id="r_ae88d6c0d8715f2883f3247ca1c331a50"><td class="memItemLeft">static final int&#160;</td><td class="memItemRight"><a class="el" href="#ae88d6c0d8715f2883f3247ca1c331a50">MAX_ZEILEN</a> = 100_000</td></tr>
+<tr class="memdesc:ae88d6c0d8715f2883f3247ca1c331a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximale Zeilenzahl, die eingelesen wird (Schutz gegen ewig-Schleife).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p><b>Strikt</b>: Sheet-Namen und Header-Zeile 1 müssen exakt mit dem Export-Schema übereinstimmen — abweichende Strukturen führen zum Abbruch.</p>
+<p>Calc-Import ist als experimentell markiert; ODS ist kein robustes Datenaustauschformat (User können Spalten verschieben, Filter setzen, Leerzeilen einfügen). Strikte Validierung schützt vor stillem Datenverlust. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00043">43</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a4c064468cb483bcecf311a78b66271c8" name="a4c064468cb483bcecf311a78b66271c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c064468cb483bcecf311a78b66271c8">&#9670;&#160;</a></span>SpielerDbCalcImportReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.SpielerDbCalcImportReader </td>
+          <td>(</td>
+          <td class="paramtype">XComponentContext</td>          <td class="paramname"><span class="paramname"><em>xContext</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00052">52</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                                 {</div>
+<div class="line"><span class="lineno">   53</span>        this.xContext = xContext;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a9f921c059e4171e8361525c4a9958f4b" name="a9f921c059e4171e8361525c4a9958f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f921c059e4171e8361525c4a9958f4b">&#9670;&#160;</a></span>holePflichtSheet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XSpreadsheet de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.holePflichtSheet </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheets</td>          <td class="paramname"><span class="paramname"><em>sheets</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00183">183</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>                                      {</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (!sheets.hasByName(name)) {</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Sheet &#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; fehlt im ODS-Dokument&quot;</span>);</div>
+<div class="line"><span class="lineno">  187</span>        }</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  189</span>            XSpreadsheet sheet = Lo.qi(XSpreadsheet.class, sheets.getByName(name));</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (sheet == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Sheet &#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; kann nicht gelesen werden&quot;</span>);</div>
+<div class="line"><span class="lineno">  192</span>            }</div>
+<div class="line"><span class="lineno">  193</span>            <span class="keywordflow">return</span> sheet;</div>
+<div class="line"><span class="lineno">  194</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><span class="lineno">  195</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Sheet &#39;&quot;</span> + name + <span class="stringliteral">&quot;&#39; kann nicht gelesen werden&quot;</span>, e);</div>
+<div class="line"><span class="lineno">  196</span>        }</div>
+<div class="line"><span class="lineno">  197</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adda15067322e8757777c6967e208f50e" name="adda15067322e8757777c6967e208f50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda15067322e8757777c6967e208f50e">&#9670;&#160;</a></span>leerAlsNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leerAlsNull </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00240">240</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>                                                {</div>
+<div class="line"><span class="lineno">  241</span>        <span class="keywordflow">return</span> s.isEmpty() ? null : s;</div>
+<div class="line"><span class="lineno">  242</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74553759a764d56a7c793f5239bd9508" name="a74553759a764d56a7c793f5239bd9508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74553759a764d56a7c793f5239bd9508">&#9670;&#160;</a></span>leseInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Integer de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leseInteger </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00222">222</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                             {</div>
+<div class="line"><span class="lineno">  223</span>        String s = leseString(sheet, col, row).strip();</div>
+<div class="line"><span class="lineno">  224</span>        <span class="keywordflow">if</span> (s.isEmpty()) {</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  226</span>        }</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">return</span> Integer.valueOf(s);</div>
+<div class="line"><span class="lineno">  229</span>        } <span class="keywordflow">catch</span> (NumberFormatException e) {</div>
+<div class="line"><span class="lineno">  230</span>            <span class="comment">// Calc liefert numerische Zellen als „1234&quot; oder „1234,0&quot; je nach Locale.</span></div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) Double.parseDouble(s.replace(<span class="charliteral">&#39;,&#39;</span>, <span class="charliteral">&#39;.&#39;</span>));</div>
+<div class="line"><span class="lineno">  233</span>            } <span class="keywordflow">catch</span> (NumberFormatException ex) {</div>
+<div class="line"><span class="lineno">  234</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  235</span>            }</div>
+<div class="line"><span class="lineno">  236</span>        }</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5ca6eaa176252868ac50d3ce549fa745" name="a5ca6eaa176252868ac50d3ce549fa745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca6eaa176252868ac50d3ce549fa745">&#9670;&#160;</a></span>leseJunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohSpielerLabel &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leseJunction </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheets</td>          <td class="paramname"><span class="paramname"><em>sheets</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00163">163</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>                                      {</div>
+<div class="line"><span class="lineno">  165</span>        XSpreadsheet sheet = holePflichtSheet(sheets, <span class="stringliteral">&quot;SpielerLabels&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>        validiereHeader(sheet, <span class="stringliteral">&quot;SpielerLabels&quot;</span>, <span class="stringliteral">&quot;spielerNr&quot;</span>, <span class="stringliteral">&quot;labelNr&quot;</span>);</div>
+<div class="line"><span class="lineno">  167</span>        List&lt;RohSpielerLabel&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 1; row &lt; MAX_ZEILEN; row++) {</div>
+<div class="line"><span class="lineno">  169</span>            Integer sNr = leseInteger(sheet, 0, row);</div>
+<div class="line"><span class="lineno">  170</span>            Integer lNr = leseInteger(sheet, 1, row);</div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">if</span> (sNr == <span class="keyword">null</span> &amp;&amp; lNr == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  173</span>            }</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (sNr == <span class="keyword">null</span> || lNr == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  175</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Junction-Sheet &#39;SpielerLabels&#39; Zeile &quot;</span></div>
+<div class="line"><span class="lineno">  176</span>                        + (row + 1) + <span class="stringliteral">&quot;: leere NR&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            erg.add(<span class="keyword">new</span> RohSpielerLabel(sNr, lNr));</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2d60d24afdaa363bcb1867b1e6216696" name="a2d60d24afdaa363bcb1867b1e6216696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d60d24afdaa363bcb1867b1e6216696">&#9670;&#160;</a></span>leseLabels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohLabel &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leseLabels </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheets</td>          <td class="paramname"><span class="paramname"><em>sheets</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00149">149</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  150</span>        XSpreadsheet sheet = holePflichtSheet(sheets, <span class="stringliteral">&quot;Labels&quot;</span>);</div>
+<div class="line"><span class="lineno">  151</span>        validiereHeader(sheet, <span class="stringliteral">&quot;Labels&quot;</span>, <span class="stringliteral">&quot;nr&quot;</span>, <span class="stringliteral">&quot;name&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span>        List&lt;RohLabel&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 1; row &lt; MAX_ZEILEN; row++) {</div>
+<div class="line"><span class="lineno">  154</span>            String name = leseString(sheet, 1, row);</div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (name.isEmpty() &amp;&amp; leseString(sheet, 0, row).isEmpty()) {</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>            erg.add(<span class="keyword">new</span> RohLabel(leseInteger(sheet, 0, row), name));</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6675b606b11ec6b4d1bbe97d164e34c4" name="a6675b606b11ec6b4d1bbe97d164e34c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6675b606b11ec6b4d1bbe97d164e34c4">&#9670;&#160;</a></span>leseSpieler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohSpieler &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leseSpieler </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheets</td>          <td class="paramname"><span class="paramname"><em>sheets</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00112">112</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                                                                {</div>
+<div class="line"><span class="lineno">  113</span>        XSpreadsheet sheet = holePflichtSheet(sheets, <span class="stringliteral">&quot;Spieler&quot;</span>);</div>
+<div class="line"><span class="lineno">  114</span>        validiereHeader(sheet, <span class="stringliteral">&quot;Spieler&quot;</span>, <span class="stringliteral">&quot;nr&quot;</span>, <span class="stringliteral">&quot;vorname&quot;</span>, <span class="stringliteral">&quot;nachname&quot;</span>,</div>
+<div class="line"><span class="lineno">  115</span>                <span class="stringliteral">&quot;vereinNr&quot;</span>, <span class="stringliteral">&quot;vereinName&quot;</span>, <span class="stringliteral">&quot;lizenznr&quot;</span>);</div>
+<div class="line"><span class="lineno">  116</span>        List&lt;RohSpieler&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 1; row &lt; MAX_ZEILEN; row++) {</div>
+<div class="line"><span class="lineno">  118</span>            String vorname = leseString(sheet, 1, row);</div>
+<div class="line"><span class="lineno">  119</span>            String nachname = leseString(sheet, 2, row);</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (vorname.isEmpty() &amp;&amp; nachname.isEmpty()</div>
+<div class="line"><span class="lineno">  121</span>                    &amp;&amp; leseString(sheet, 0, row).isEmpty()) {</div>
+<div class="line"><span class="lineno">  122</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  123</span>            }</div>
+<div class="line"><span class="lineno">  124</span>            erg.add(<span class="keyword">new</span> RohSpieler(</div>
+<div class="line"><span class="lineno">  125</span>                    leseInteger(sheet, 0, row),</div>
+<div class="line"><span class="lineno">  126</span>                    vorname,</div>
+<div class="line"><span class="lineno">  127</span>                    nachname,</div>
+<div class="line"><span class="lineno">  128</span>                    leseInteger(sheet, 3, row),</div>
+<div class="line"><span class="lineno">  129</span>                    leerAlsNull(leseString(sheet, 4, row)),</div>
+<div class="line"><span class="lineno">  130</span>                    leerAlsNull(leseString(sheet, 5, row))));</div>
+<div class="line"><span class="lineno">  131</span>        }</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a043f5f189a9cd11f5f71d7516feefd3a" name="a043f5f189a9cd11f5f71d7516feefd3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043f5f189a9cd11f5f71d7516feefd3a">&#9670;&#160;</a></span>leseString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leseString </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00210">210</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                                           {</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  212</span>            XCell cell = sheet.getCellByPosition(col, row);</div>
+<div class="line"><span class="lineno">  213</span>            XText text = Lo.qi(XText.class, cell);</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">return</span> text == <span class="keyword">null</span> ? <span class="stringliteral">&quot;&quot;</span> : text.getString();</div>
+<div class="line"><span class="lineno">  215</span>        } <span class="keywordflow">catch</span> (com.sun.star.lang.IndexOutOfBoundsException e) {</div>
+<div class="line"><span class="lineno">  216</span>            logger.debug(<span class="stringliteral">&quot;Zelle ({}, {}) nicht zugreifbar: {}&quot;</span>, col, row, e.getMessage());</div>
+<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afef60e82a51f7b83e87581c8d5a8200e" name="afef60e82a51f7b83e87581c8d5a8200e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef60e82a51f7b83e87581c8d5a8200e">&#9670;&#160;</a></span>leseVereine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; RohVerein &gt; de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.leseVereine </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheets</td>          <td class="paramname"><span class="paramname"><em>sheets</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00135">135</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  136</span>        XSpreadsheet sheet = holePflichtSheet(sheets, <span class="stringliteral">&quot;Vereine&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>        validiereHeader(sheet, <span class="stringliteral">&quot;Vereine&quot;</span>, <span class="stringliteral">&quot;nr&quot;</span>, <span class="stringliteral">&quot;name&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>        List&lt;RohVerein&gt; erg = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 1; row &lt; MAX_ZEILEN; row++) {</div>
+<div class="line"><span class="lineno">  140</span>            String name = leseString(sheet, 1, row);</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (name.isEmpty() &amp;&amp; leseString(sheet, 0, row).isEmpty()) {</div>
+<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span>            erg.add(<span class="keyword">new</span> RohVerein(leseInteger(sheet, 0, row), name));</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> erg;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad548ed0f6e6c9970dcd24ec4d6eb2f90" name="ad548ed0f6e6c9970dcd24ec4d6eb2f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad548ed0f6e6c9970dcd24ec4d6eb2f90">&#9670;&#160;</a></span>oeffneVersteckt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XSpreadsheetDocument de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.oeffneVersteckt </td>
+          <td>(</td>
+          <td class="paramtype">Path</td>          <td class="paramname"><span class="paramname"><em>datei</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00088">88</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                       {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   90</span>            Object desktop = xContext.getServiceManager().createInstanceWithContext(</div>
+<div class="line"><span class="lineno">   91</span>                    <span class="stringliteral">&quot;com.sun.star.frame.Desktop&quot;</span>, xContext);</div>
+<div class="line"><span class="lineno">   92</span>            XComponentLoader loader = Lo.qi(XComponentLoader.class, desktop);</div>
+<div class="line"><span class="lineno">   93</span>            String url = datei.toAbsolutePath().toUri().toURL().toExternalForm();</div>
+<div class="line"><span class="lineno">   94</span>            PropertyValue hidden = <span class="keyword">new</span> PropertyValue();</div>
+<div class="line"><span class="lineno">   95</span>            hidden.Name = <span class="stringliteral">&quot;Hidden&quot;</span>;</div>
+<div class="line"><span class="lineno">   96</span>            hidden.Value = Boolean.TRUE;</div>
+<div class="line"><span class="lineno">   97</span>            PropertyValue readonly = <span class="keyword">new</span> PropertyValue();</div>
+<div class="line"><span class="lineno">   98</span>            readonly.Name = <span class="stringliteral">&quot;ReadOnly&quot;</span>;</div>
+<div class="line"><span class="lineno">   99</span>            readonly.Value = Boolean.TRUE;</div>
+<div class="line"><span class="lineno">  100</span>            XComponent comp = loader.loadComponentFromURL(url, <span class="stringliteral">&quot;_blank&quot;</span>, 0,</div>
+<div class="line"><span class="lineno">  101</span>                    <span class="keyword">new</span> PropertyValue[] { hidden, readonly });</div>
+<div class="line"><span class="lineno">  102</span>            XSpreadsheetDocument doc = Lo.qi(XSpreadsheetDocument.class, comp);</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (doc == <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;ODS-Datei ist kein Calc-Dokument: &quot;</span> + datei);</div>
+<div class="line"><span class="lineno">  105</span>            }</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">return</span> doc;</div>
+<div class="line"><span class="lineno">  107</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception | MalformedURLException e) {</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;ODS-Öffnen fehlgeschlagen: &quot;</span> + datei, e);</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfe5df8d3bb383b1403dd0ffd817b616" name="adfe5df8d3bb383b1403dd0ffd817b616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe5df8d3bb383b1403dd0ffd817b616">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a> de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#aa6f41c6b64ae681e2d9963e3562bf26a">ImportRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td> throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementiert <a class="el" href="../../de/d96/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_import_reader.html#a83ad716b34610bfdd57fb0c476ad312d">de.petanqueturniermanager.spielerdb.importer.SpielerDbImportReader</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00057">57</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                                {</div>
+<div class="line"><span class="lineno">   58</span>        Path datei = request.source();</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!Files.isRegularFile(datei)) {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;ODS-Datei fehlt: &quot;</span> + datei);</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="line"><span class="lineno">   62</span>        EnumSet&lt;ExportEntity&gt; entities = request.entities();</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>        XSpreadsheetDocument doc = oeffneVersteckt(datei);</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   66</span>            XSpreadsheets sheets = doc.getSheets();</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>            List&lt;RohSpieler&gt; spieler = entities.contains(ExportEntity.SPIELER)</div>
+<div class="line"><span class="lineno">   69</span>                    ? leseSpieler(sheets)</div>
+<div class="line"><span class="lineno">   70</span>                    : List.of();</div>
+<div class="line"><span class="lineno">   71</span>            List&lt;RohVerein&gt; vereine = entities.contains(ExportEntity.VEREINE)</div>
+<div class="line"><span class="lineno">   72</span>                    ? leseVereine(sheets)</div>
+<div class="line"><span class="lineno">   73</span>                    : List.of();</div>
+<div class="line"><span class="lineno">   74</span>            List&lt;RohLabel&gt; labels = entities.contains(ExportEntity.LABELS)</div>
+<div class="line"><span class="lineno">   75</span>                    ? leseLabels(sheets)</div>
+<div class="line"><span class="lineno">   76</span>                    : List.of();</div>
+<div class="line"><span class="lineno">   77</span>            List&lt;RohSpielerLabel&gt; junction =</div>
+<div class="line"><span class="lineno">   78</span>                    entities.contains(ExportEntity.SPIELER) &amp;&amp; entities.contains(ExportEntity.LABELS)</div>
+<div class="line"><span class="lineno">   79</span>                            ? leseJunction(sheets)</div>
+<div class="line"><span class="lineno">   80</span>                            : List.of();</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">ImportRohdaten</a>(spieler, vereine, labels, junction);</div>
+<div class="line"><span class="lineno">   83</span>        } <span class="keywordflow">finally</span> {</div>
+<div class="line"><span class="lineno">   84</span>            OfficeDocumentHelper.closeDoc(doc);</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer_html_afc7ed4612e551a6e2c49a34365206931"><div class="ttname"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html#afc7ed4612e551a6e2c49a34365206931">de.petanqueturniermanager.spielerdb.importer.ImportRohdaten</a></div><div class="ttdeci">record ImportRohdaten(List&lt; RohSpieler &gt; spieler, List&lt; RohVerein &gt; vereine, List&lt; RohLabel &gt; labels, List&lt; RohSpielerLabel &gt; spielerLabels)</div><div class="ttdoc">Rohe (noch nicht validierte) Daten aus einer Import-Quelle.</div><div class="ttdef"><b>Definition</b> <a href="../../d3/ddb/_import_rohdaten_8java_source.html#l00018">ImportRohdaten.java:18</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7d862327473af1c7c8af814e667e4eed" name="a7d862327473af1c7c8af814e667e4eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d862327473af1c7c8af814e667e4eed">&#9670;&#160;</a></span>validiereHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.validiereHeader </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheet</td>          <td class="paramname"><span class="paramname"><em>sheet</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>sheetName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String...</td>          <td class="paramname"><span class="paramname"><em>erwartet</em></span>&#160;) throws <a class="el" href="../../d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html">SpielerDbException</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00199">199</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>                                      {</div>
+<div class="line"><span class="lineno">  201</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; erwartet.length; i++) {</div>
+<div class="line"><span class="lineno">  202</span>            String wert = leseString(sheet, i, 0);</div>
+<div class="line"><span class="lineno">  203</span>            <span class="keywordflow">if</span> (!erwartet[i].equals(wert)) {</div>
+<div class="line"><span class="lineno">  204</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> SpielerDbException(<span class="stringliteral">&quot;Sheet &#39;&quot;</span> + sheetName + <span class="stringliteral">&quot;&#39; Spalte &quot;</span> + (i + 1)</div>
+<div class="line"><span class="lineno">  205</span>                        + <span class="stringliteral">&quot; erwartet Header &#39;&quot;</span> + erwartet[i] + <span class="stringliteral">&quot;&#39;, gefunden &#39;&quot;</span> + wert + <span class="stringliteral">&quot;&#39;&quot;</span>);</div>
+<div class="line"><span class="lineno">  206</span>            }</div>
+<div class="line"><span class="lineno">  207</span>        }</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a43d4aa9dcfc078b875236d1f33aeda2e" name="a43d4aa9dcfc078b875236d1f33aeda2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d4aa9dcfc078b875236d1f33aeda2e">&#9670;&#160;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.logger = LogManager.getLogger(SpielerDbCalcImportReader.class)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00045">45</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+
+</div>
+</div>
+<a id="ae88d6c0d8715f2883f3247ca1c331a50" name="ae88d6c0d8715f2883f3247ca1c331a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae88d6c0d8715f2883f3247ca1c331a50">&#9670;&#160;</a></span>MAX_ZEILEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.MAX_ZEILEN = 100_000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00048">48</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+
+</div>
+</div>
+<a id="aa160bb65903b9b3a4767a4cdf49ec2b9" name="aa160bb65903b9b3a4767a4cdf49ec2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa160bb65903b9b3a4767a4cdf49ec2b9">&#9670;&#160;</a></span>xContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final XComponentContext de.petanqueturniermanager.spielerdb.importer.SpielerDbCalcImportReader.xContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html#l00050">50</a> der Datei <a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/spielerdb/importer/<a class="el" href="../../d3/d07/_spieler_db_calc_import_reader_8java_source.html">SpielerDbCalcImportReader.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html">spielerdb</a></li><li class="navelem"><a href="../../df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html">importer</a></li><li class="navelem"><a href="../../db/d21/classde_1_1petanqueturniermanager_1_1spielerdb_1_1importer_1_1_spieler_db_calc_import_reader.html">SpielerDbCalcImportReader</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

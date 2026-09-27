@@ -1,0 +1,27 @@
+var namespacede_1_1petanqueturniermanager_1_1spielerdb =
+[
+    [ "export", "d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export.html", "d5/dc1/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1export" ],
+    [ "importer", "df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer.html", "df/d1e/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1importer" ],
+    [ "matching", "de/d6b/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1matching.html", "de/d6b/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1matching" ],
+    [ "ui", "d7/d89/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1ui.html", "d7/d89/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1ui" ],
+    [ "vorlage", "d1/d81/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage.html", "d1/d81/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1vorlage" ],
+    [ "webview", "d0/de4/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1webview.html", "d0/de4/namespacede_1_1petanqueturniermanager_1_1spielerdb_1_1webview" ],
+    [ "AbgleichQuelle", "d1/db5/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1_abgleich_quelle.html", "d1/db5/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1_abgleich_quelle" ],
+    [ "AbgleichStatusSenke", "d1/d4d/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1_abgleich_status_senke.html", "d1/d4d/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1_abgleich_status_senke" ],
+    [ "LabelRepository", "d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository.html", "d4/dca/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_label_repository" ],
+    [ "MeldelisteZiel", "d9/d2f/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1_meldeliste_ziel.html", "d9/d2f/interfacede_1_1petanqueturniermanager_1_1spielerdb_1_1_meldeliste_ziel" ],
+    [ "MeldelisteZielFactory", "d8/db6/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_meldeliste_ziel_factory.html", "d8/db6/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_meldeliste_ziel_factory" ],
+    [ "SheetMeldelisteAdapter", "d0/d7a/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_sheet_meldeliste_adapter.html", "d0/d7a/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_sheet_meldeliste_adapter" ],
+    [ "SpielerAddInCache", "d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache.html", "d1/d95/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_add_in_cache" ],
+    [ "SpielerDbConnection", "d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection.html", "d1/d6b/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_connection" ],
+    [ "SpielerDbCsvFormat", "dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format.html", "dd/d15/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_csv_format" ],
+    [ "SpielerDbDateiFormat", "d4/db6/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_datei_format.html", "d4/db6/enumde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_datei_format" ],
+    [ "SpielerDbException", "d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception.html", "d3/d72/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_db_exception" ],
+    [ "SpielerRepository", "d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository.html", "d1/de0/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_spieler_repository" ],
+    [ "VereinRepository", "d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository.html", "d6/de4/classde_1_1petanqueturniermanager_1_1spielerdb_1_1_verein_repository" ],
+    [ "LabelDatensatz", "dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a4033b9346122ef1e05130740bfcf76da", null ],
+    [ "MeldelisteSpielerDaten", "dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a66ee04554ded76de4dbfe76a32467560", null ],
+    [ "SpielerDatensatz", "dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#adfea849579ae9d23a2b79a1af84df75f", null ],
+    [ "SpielerMitVerein", "dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a738f3eaecc711ab94b90e3511c031ab7", null ],
+    [ "VereinDatensatz", "dc/dd6/namespacede_1_1petanqueturniermanager_1_1spielerdb.html#a6a6a9327d86fa4fac48b36ff66153abb", null ]
+];

@@ -1,0 +1,4 @@
+var _abstract_vordergrund_hintergrund_farbe_style_8java =
+[
+    [ "de.petanqueturniermanager.helper.cellstyle.AbstractVordergrundHintergrundFarbeStyle", "d3/d0e/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_vordergrund_hintergrund_farbe_style.html", "d3/d0e/classde_1_1petanqueturniermanager_1_1helper_1_1cellstyle_1_1_abstract_vordergrund_hintergrund_farbe_style" ]
+];

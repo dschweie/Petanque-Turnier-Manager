@@ -1,0 +1,4 @@
+var interfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_1_1_pdf_export_aktion =
+[
+    [ "exportiere", "d5/d8e/interfacede_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_1_1_pdf_export_aktion.html#ad993df983f2007e6976b2392f2926c15", null ]
+];

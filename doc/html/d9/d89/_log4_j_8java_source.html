@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/comp/Log4J.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d9/d89/_log4_j_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Log4J.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d89/_log4_j_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 05.05.2019 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.comp;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.io.File;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> org.apache.logging.log4j.core.Appender;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> org.apache.logging.log4j.core.LoggerContext;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> org.apache.logging.log4j.core.appender.RollingFileAppender;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> org.apache.logging.log4j.core.config.Configuration;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.helper.StringTools;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.helper.msgbox.ProcessBox;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html">   24</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html">Log4J</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#ae0f6e5088c44de83449d605af56de4eb">   25</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#ae0f6e5088c44de83449d605af56de4eb">logger</a> = LogManager.getLogger(<a class="code hl_class" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html">Log4J</a>.class);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// https://logging.apache.org/log4j/2.x/manual/configuration.html</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// 5. If no such file is found the XML ConfigurationFactory will look for</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// log4j2-test.xml in the classpath.</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// &lt;RollingFile name=&quot;infofile&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// fileName=&quot;${sys:user.home}/.petanqueturniermanager/info.log&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// ignoreExceptions=&quot;false&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// public static final File logFile = new</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// File(PetanqueTurnierManagerImpl.BASE_INTERNAL_DIR, &quot;info.log&quot;);</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a5bd7ee7324db227f0e5b72106d7ffa39">   36</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a5bd7ee7324db227f0e5b72106d7ffa39">LOGGERNAME</a> = <span class="stringliteral">&quot;de.petanqueturniermanager&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">   38</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> File <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">logFile</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">static</span> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">// logfile aus configuration lesen</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">final</span> LoggerContext ctx = (LoggerContext) LogManager.getContext(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">final</span> Configuration config = ctx.getConfiguration();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        Map&lt;String, Appender&gt; appenders = config.getAppenders();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        RollingFileAppender fileAppender = (RollingFileAppender) appenders.entrySet().stream()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                .filter(e -&gt; e.getValue() instanceof RollingFileAppender).map(Map.Entry::getValue).findFirst()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                .orElse(<span class="keyword">null</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (fileAppender != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">logFile</a> = <span class="keyword">new</span> File(fileAppender.getFileName());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a39cf676b6a4c4b7c8ddd0262510664b3">   55</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a39cf676b6a4c4b7c8ddd0262510664b3">openLogFile</a>() {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">logFile</a> != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_class" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html">ProcessBox</a>.<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a45528ee1e6fd2d79179eb7833332adc2">from</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#aa72f7ce6e8be06b1bd85f8775abe7e02">prefix</a>(<span class="stringliteral">&quot;Log4J&quot;</span>).<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a392667a3c362d0658b391e59d34f69fc">info</a>(<span class="stringliteral">&quot;Open:&quot;</span> + <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">logFile</a>.getCanonicalPath());</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                String[] cmd = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="comment">// AWT Desktop =&gt; coredump, not working</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="comment">// https://stackoverflow.com/questions/526037/how-to-open-user-system-preferred-editor-for-given-file</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                String osName = System.getProperty(<span class="stringliteral">&quot;os.name&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                String filePath = <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">logFile</a>.getCanonicalPath();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html">StringTools</a>.<a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">containsIgnoreCase</a>(osName, <span class="stringliteral">&quot;win&quot;</span>)) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    cmd = <span class="keyword">new</span> String[] { <span class="stringliteral">&quot;rundll32&quot;</span>, <span class="stringliteral">&quot;url.dll,FileProtocolHandler&quot;</span>, filePath };</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html">StringTools</a>.<a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">containsIgnoreCase</a>(osName, <span class="stringliteral">&quot;linux&quot;</span>)) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    cmd = <span class="keyword">new</span> String[] { <span class="stringliteral">&quot;xdg-open&quot;</span>, filePath };</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html">StringTools</a>.<a class="code hl_function" href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">containsIgnoreCase</a>(osName, <span class="stringliteral">&quot;mac&quot;</span>)) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    cmd = <span class="keyword">new</span> String[] { <span class="stringliteral">&quot;open&quot;</span>, filePath };</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">if</span> (cmd != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#ae0f6e5088c44de83449d605af56de4eb">logger</a>.info(String.join(<span class="stringliteral">&quot; &quot;</span>, cmd));</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    Runtime.getRuntime().exec(cmd);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <a class="code hl_variable" href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#ae0f6e5088c44de83449d605af56de4eb">logger</a>.error(e);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_class" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html">ProcessBox</a>.<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a45528ee1e6fd2d79179eb7833332adc2">from</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#aa72f7ce6e8be06b1bd85f8775abe7e02">prefix</a>(<span class="stringliteral">&quot;Log4J&quot;</span>).<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">fehler</a>(<span class="stringliteral">&quot;Kann Logdatei nicht ermitteln&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_log4_j_html"><div class="ttname"><a href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html">de.petanqueturniermanager.comp.Log4J</a></div><div class="ttdef"><b>Definition</b> <a href="#l00024">Log4J.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_log4_j_html_a39cf676b6a4c4b7c8ddd0262510664b3"><div class="ttname"><a href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a39cf676b6a4c4b7c8ddd0262510664b3">de.petanqueturniermanager.comp.Log4J.openLogFile</a></div><div class="ttdeci">static final void openLogFile()</div><div class="ttdef"><b>Definition</b> <a href="#l00055">Log4J.java:55</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_log4_j_html_a547beaf3c79306d79f89b51e659ee6d7"><div class="ttname"><a href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a547beaf3c79306d79f89b51e659ee6d7">de.petanqueturniermanager.comp.Log4J.logFile</a></div><div class="ttdeci">static File logFile</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Log4J.java:38</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_log4_j_html_a5bd7ee7324db227f0e5b72106d7ffa39"><div class="ttname"><a href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#a5bd7ee7324db227f0e5b72106d7ffa39">de.petanqueturniermanager.comp.Log4J.LOGGERNAME</a></div><div class="ttdeci">static final String LOGGERNAME</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Log4J.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_log4_j_html_ae0f6e5088c44de83449d605af56de4eb"><div class="ttname"><a href="../../df/d37/classde_1_1petanqueturniermanager_1_1comp_1_1_log4_j.html#ae0f6e5088c44de83449d605af56de4eb">de.petanqueturniermanager.comp.Log4J.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00025">Log4J.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html">de.petanqueturniermanager.helper.StringTools</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dc6/_string_tools_8java_source.html#l00006">StringTools.java:6</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_string_tools_html_a16d4807fea5145993b873c5a8d5e2d2d"><div class="ttname"><a href="../../d9/db8/classde_1_1petanqueturniermanager_1_1helper_1_1_string_tools.html#a16d4807fea5145993b873c5a8d5e2d2d">de.petanqueturniermanager.helper.StringTools.containsIgnoreCase</a></div><div class="ttdeci">static boolean containsIgnoreCase(String haystack, String needle)</div><div class="ttdoc">Null-sicher: liefert false, wenn einer der Werte null ist.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dc6/_string_tools_8java_source.html#l00034">StringTools.java:34</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html">de.petanqueturniermanager.helper.msgbox.ProcessBox</a></div><div class="ttdoc">Process-Statusfenster als modeloser UNO-Dialog.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00079">ProcessBox.java:79</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a392667a3c362d0658b391e59d34f69fc"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a392667a3c362d0658b391e59d34f69fc">de.petanqueturniermanager.helper.msgbox.ProcessBox.info</a></div><div class="ttdeci">synchronized ProcessBox info(String logMsg)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00583">ProcessBox.java:583</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a45528ee1e6fd2d79179eb7833332adc2"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a45528ee1e6fd2d79179eb7833332adc2">de.petanqueturniermanager.helper.msgbox.ProcessBox.from</a></div><div class="ttdeci">static ProcessBox from()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00120">ProcessBox.java:120</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a5d15b32119e93eab9e02a144899cad08"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a5d15b32119e93eab9e02a144899cad08">de.petanqueturniermanager.helper.msgbox.ProcessBox.fehler</a></div><div class="ttdeci">synchronized ProcessBox fehler(String logMsg)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00577">ProcessBox.java:577</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_aa72f7ce6e8be06b1bd85f8775abe7e02"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#aa72f7ce6e8be06b1bd85f8775abe7e02">de.petanqueturniermanager.helper.msgbox.ProcessBox.prefix</a></div><div class="ttdeci">ProcessBox prefix(String nextLogPrefix)</div><div class="ttdoc">Setzt einen Log-Prefix für den nächsten info(String)-Aufruf desselben Threads.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00560">ProcessBox.java:560</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_703d3c4b9989bf1c20a29a3ebe047f31.html">comp</a></li><li class="navelem"><a href="../../d9/d89/_log4_j_8java.html">Log4J.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

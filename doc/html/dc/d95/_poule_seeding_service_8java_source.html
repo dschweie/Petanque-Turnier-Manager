@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/poule/vorrunde/PouleSeedingService.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d95/_poule_seeding_service_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PouleSeedingService.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d95/_poule_seeding_service_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>de.petanqueturniermanager.poule.vorrunde;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Comparator;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> de.petanqueturniermanager.model.Team;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> de.petanqueturniermanager.model.TeamMeldungen;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html">   20</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa5bc1b050784b93253b9da033a489582">PouleSeedingService</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#a7a35c806ee49f716c51a89bc1709040e">   28</a></span>    <span class="keyword">public</span> record <a class="code hl_function" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#a7a35c806ee49f716c51a89bc1709040e">Poule</a>(<span class="keywordtype">int</span> pouleNr, List&lt;Team&gt; teams) {}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa5bc1b050784b93253b9da033a489582">   30</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa5bc1b050784b93253b9da033a489582">PouleSeedingService</a>() {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa0208a4355005529ebd004db7e915d27">   49</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;Poule&gt; <a class="code hl_function" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa0208a4355005529ebd004db7e915d27">verteileTeams</a>(<a class="code hl_class" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">TeamMeldungen</a> meldungen, List&lt;Integer&gt; gruppenGroessen) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        var sortiertTeams = meldungen.<a class="code hl_function" href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html#ac45c5f6a77fc763b4e7c764ca0661b43">teams</a>().stream()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                .sorted(Comparator.comparingInt(<a class="code hl_function" href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a2dbe002eef2f49615e2f16ad65ed2345">Team::getSetzPos</a>).reversed()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                        .thenComparingInt(<a class="code hl_function" href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">Team::getNr</a>))</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                .toList();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">int</span> anzGruppen = gruppenGroessen.size();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        List&lt;List&lt;Team&gt;&gt; pouleTeams = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(anzGruppen);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; anzGruppen; i++) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            pouleTeams.add(<span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sortiertTeams.size(); i++) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordtype">int</span> runde = i / anzGruppen;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordtype">int</span> posInRunde = i % anzGruppen;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordtype">int</span> pouleIdx = (runde % 2 == 0) ? posInRunde : (anzGruppen - 1 - posInRunde);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            pouleTeams.get(pouleIdx).add(sortiertTeams.get(i));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        List&lt;Poule&gt; poules = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>(anzGruppen);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; anzGruppen; i++) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            poules.add(<span class="keyword">new</span> <a class="code hl_function" href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#a7a35c806ee49f716c51a89bc1709040e">Poule</a>(i + 1, List.copyOf(pouleTeams.get(i))));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> List.copyOf(poules);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable_html_a0eedbc0c50986365122894596e47d11a"><div class="ttname"><a href="../../d0/dbe/classde_1_1petanqueturniermanager_1_1model_1_1_nr_comparable.html#a0eedbc0c50986365122894596e47d11a">de.petanqueturniermanager.model.NrComparable.getNr</a></div><div class="ttdeci">final int getNr()</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_nr_comparable_8java_source.html#l00022">NrComparable.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_html_a2dbe002eef2f49615e2f16ad65ed2345"><div class="ttname"><a href="../../d0/d1c/classde_1_1petanqueturniermanager_1_1model_1_1_team.html#a2dbe002eef2f49615e2f16ad65ed2345">de.petanqueturniermanager.model.Team.getSetzPos</a></div><div class="ttdeci">int getSetzPos()</div><div class="ttdef"><b>Definition</b> <a href="../../df/d66/_team_8java_source.html#l00195">Team.java:195</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen_html"><div class="ttname"><a href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html">de.petanqueturniermanager.model.TeamMeldungen</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/dcd/_team_meldungen_8java_source.html#l00019">TeamMeldungen.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen_html_ac45c5f6a77fc763b4e7c764ca0661b43"><div class="ttname"><a href="../../d9/d1a/classde_1_1petanqueturniermanager_1_1model_1_1_team_meldungen.html#ac45c5f6a77fc763b4e7c764ca0661b43">de.petanqueturniermanager.model.TeamMeldungen.teams</a></div><div class="ttdeci">List&lt; Team &gt; teams()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dcd/_team_meldungen_8java_source.html#l00072">TeamMeldungen.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service_html_a7a35c806ee49f716c51a89bc1709040e"><div class="ttname"><a href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#a7a35c806ee49f716c51a89bc1709040e">de.petanqueturniermanager.poule.vorrunde.PouleSeedingService.Poule</a></div><div class="ttdeci">record Poule(int pouleNr, List&lt; Team &gt; teams)</div><div class="ttdoc">Eine Poule-Gruppe mit ihrer fortlaufenden Nummer (1-basiert) und den zugewiesenen Teams.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">PouleSeedingService.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service_html_aa0208a4355005529ebd004db7e915d27"><div class="ttname"><a href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa0208a4355005529ebd004db7e915d27">de.petanqueturniermanager.poule.vorrunde.PouleSeedingService.verteileTeams</a></div><div class="ttdeci">static List&lt; Poule &gt; verteileTeams(TeamMeldungen meldungen, List&lt; Integer &gt; gruppenGroessen)</div><div class="ttdoc">Sortiert die aktiven Meldungen nach Setzposition (absteigend) und verteilt sie per Snake-Seeding auf ...</div><div class="ttdef"><b>Definition</b> <a href="#l00049">PouleSeedingService.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service_html_aa5bc1b050784b93253b9da033a489582"><div class="ttname"><a href="../../d5/da0/classde_1_1petanqueturniermanager_1_1poule_1_1vorrunde_1_1_poule_seeding_service.html#aa5bc1b050784b93253b9da033a489582">de.petanqueturniermanager.poule.vorrunde.PouleSeedingService.PouleSeedingService</a></div><div class="ttdeci">PouleSeedingService()</div><div class="ttdef"><b>Definition</b> <a href="#l00030">PouleSeedingService.java:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_3e115d8eb363b15d7137260a7ff66a3e.html">poule</a></li><li class="navelem"><a href="../../dir_48e9998671e323f00f71eec8db80aad3.html">vorrunde</a></li><li class="navelem"><a href="../../dc/d95/_poule_seeding_service_8java.html">PouleSeedingService.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

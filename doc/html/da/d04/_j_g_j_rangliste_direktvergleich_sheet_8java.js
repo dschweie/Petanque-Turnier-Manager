@@ -1,0 +1,4 @@
+var _j_g_j_rangliste_direktvergleich_sheet_8java =
+[
+    [ "de.petanqueturniermanager.jedergegenjeden.rangliste.JGJRanglisteDirektvergleichSheet", "d3/d83/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1rangliste_1_1_j_g_j_rangliste_direktvergleich_sheet.html", "d3/d83/classde_1_1petanqueturniermanager_1_1jedergegenjeden_1_1rangliste_1_1_j_g_j_rangliste_direktvergleich_sheet" ]
+];

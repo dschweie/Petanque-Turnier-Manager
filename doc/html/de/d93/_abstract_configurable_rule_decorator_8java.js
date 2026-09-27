@@ -1,0 +1,4 @@
+var _abstract_configurable_rule_decorator_8java =
+[
+    [ "de.petanqueturniermanager.algorithmen.common.ruleset.matchup.AbstractConfigurableRuleDecorator", "d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator.html", "d2/d76/classde_1_1petanqueturniermanager_1_1algorithmen_1_1common_1_1ruleset_1_1matchup_1_1_abstract_configurable_rule_decorator" ]
+];

@@ -1,0 +1,28 @@
+var classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten =
+[
+    [ "SchweizerMeldeListeSheetTestDaten", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a68768d1965052fc7f1f740d9ce6ec24c", null ],
+    [ "SchweizerMeldeListeSheetTestDaten", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#ad28b1eb65704c62a63e96105e5d1c920", null ],
+    [ "doRun", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a553571f3b45881e62c2c4f5e58b7297a", null ],
+    [ "getAktiveMeldungen", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#ab99a57d082557442b441f432e814781c", null ],
+    [ "getAktivSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#ade80aecafa576cea08600a0be03873f8", null ],
+    [ "getErsteDatenZiele", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a4592aaeb83a021557d6ac626ba8322e1", null ],
+    [ "getKonfigurationSheet", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#aaadb128a429eeca657c186a25d4f55e1", null ],
+    [ "getLetzteDatenZeileUseMin", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a2423f0fd6ba9e3f9cbb0e21de7ed541a", null ],
+    [ "getNachnameSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#ad6566abca43aeff3840036317f7be9a3", null ],
+    [ "getSpielerNameErsteSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a1cf9076477dc564e58dbea10e7868114", null ],
+    [ "getTeamnameSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a8adeed5b1a9aba2af62c8cd3525a053e", null ],
+    [ "getTeamNrSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a2ecba9ea165b595c18eabe1e4a04e7d6", null ],
+    [ "getTurnierSheet", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a7850ea1326f8653a6db32f077a5f3943", null ],
+    [ "getVereinsnameSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#af9ad1720995c6ad5b980b18239857a05", null ],
+    [ "getVornameSpalte", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a937828bdab82c5dc6d3397fbaa1c81dc", null ],
+    [ "getXSpreadSheet", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a12fdd2783e744d61a591b33e9a874c2a", null ],
+    [ "setAktiveSpielRunde", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a90a18359c91820f8f7b8439a72cd5ca6", null ],
+    [ "testNamenEinfuegen", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a68186aa87d6fe6139f6f0902c7f84b19", null ],
+    [ "ANZ_TEAMS_DEFAULT", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a15308c7fed9d16fcd28351e270235e68", null ],
+    [ "anzTeams", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a94d9cde846f06aaa29dbd69e649b4af2", null ],
+    [ "delegate", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a6f259197a35eb3c79e1c98c3f9ea8929", null ],
+    [ "ERSTE_DATEN_ZEILE", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#af62e6e10a027f069e481896f402effa7", null ],
+    [ "meldeListe", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a9d68becbe8f2a49db523a2f9679cbcb4", null ],
+    [ "TEST_FORMATION", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a74658c4715dbea03dde4574167bd8a6e", null ],
+    [ "testnamenLoader", "d6/d45/classde_1_1petanqueturniermanager_1_1schweizer_1_1meldeliste_1_1_schweizer_melde_liste_sheet_test_daten.html#a4a0625ac1585aca5057fddf62518bcd4", null ]
+];

@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/liga/meldeliste/LigaStartDialog.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('da/d63/_liga_start_dialog_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LigaStartDialog.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/d63/_liga_start_dialog_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung : 15.03.2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> **/</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>de.petanqueturniermanager.liga.meldeliste;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Optional;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.awt.ActionEvent;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.sun.star.awt.XActionListener;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.sun.star.awt.XButton;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.awt.XControl;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.awt.XControlContainer;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.sun.star.awt.XControlModel;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> com.sun.star.awt.XDialog;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> com.sun.star.awt.XTextComponent;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> com.sun.star.awt.XToolkit;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> com.sun.star.awt.XWindow;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> com.sun.star.beans.XPropertySet;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> com.sun.star.container.XNameContainer;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> com.sun.star.lang.EventObject;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> com.sun.star.lang.XComponent;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> com.sun.star.lang.XMultiComponentFactory;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">import</span> com.sun.star.lang.XMultiServiceFactory;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">import</span> com.sun.star.uno.XComponentContext;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">import</span> de.petanqueturniermanager.helper.msgbox.ProcessBox;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html">   39</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a636483cbf340d02f0caf20b00b53d0ed">LigaStartDialog</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#af04faa30d3a8eafe496e8273d41f58ac">   42</a></span>    <span class="keyword">public</span> record <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#af04faa30d3a8eafe496e8273d41f58ac">StartParameter</a>(String gruppenname) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">   45</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">workingSpreadsheet</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a3f9c2a760f21c65506b4612c1d64f306">   46</a></span>    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keywordtype">boolean</span> <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a3f9c2a760f21c65506b4612c1d64f306">okPressed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a636483cbf340d02f0caf20b00b53d0ed">   48</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a636483cbf340d02f0caf20b00b53d0ed">LigaStartDialog</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this.workingSpreadsheet = <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">workingSpreadsheet</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a68488d27189372b7c5524f135bc545fc">   57</a></span>    <span class="keyword">public</span> Optional&lt;StartParameter&gt; <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a68488d27189372b7c5524f135bc545fc">show</a>() throws com.sun.star.uno.<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_class" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html">ProcessBox</a>.<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a45528ee1e6fd2d79179eb7833332adc2">from</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a038a9b3145d4577e2eaade78ecb889d3">hide</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        XComponentContext context = <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">workingSpreadsheet</a>.<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#ac33f37dfe8d60ce32075e159b75f3d0c">getxContext</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        XMultiComponentFactory xMCF = context.getServiceManager();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// 1. Dialog-Modell anlegen</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        Object dialogModel = xMCF.createInstanceWithContext(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlDialogModel&quot;</span>, context);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        XPropertySet dlgProps = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, dialogModel);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        dlgProps.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, Integer.valueOf(50));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        dlgProps.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, Integer.valueOf(50));</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        dlgProps.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, Integer.valueOf(200));</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        dlgProps.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, Integer.valueOf(75));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        dlgProps.setPropertyValue(<span class="stringliteral">&quot;Title&quot;</span>, <span class="stringliteral">&quot;Neue Liga-Meldeliste&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        dlgProps.setPropertyValue(<span class="stringliteral">&quot;Moveable&quot;</span>, Boolean.TRUE);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// 2. Dialog-Control anlegen</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        Object dialog = xMCF.createInstanceWithContext(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlDialog&quot;</span>, context);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        XControl xControl = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XControl.class, dialog);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        xControl.setModel(<a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XControlModel.class, dialogModel));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="comment">// 3. Child-Controls anlegen</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        XMultiServiceFactory xMSF = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XMultiServiceFactory.class, dialogModel);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        XNameContainer cont = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XNameContainer.class, dialogModel);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        XControlContainer xcc = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XControlContainer.class, dialog);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ab1c8e5a285bf800159f494588d281f25">addLabel</a>(xMSF, cont, <span class="stringliteral">&quot;lblGruppenname&quot;</span>, <span class="stringliteral">&quot;Gruppenname:&quot;</span>, 8, 8, 184, 10);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#aa753326a196b2c2d281d05506145d864">addEditField</a>(xMSF, cont, <span class="stringliteral">&quot;editGruppenname&quot;</span>, 8, 22, 184, 14);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a7a8568fa6e2f495b28dab8762b3760c8">addFixedLine</a>(xMSF, cont, <span class="stringliteral">&quot;sep1&quot;</span>, 5, 42, 190, 2);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a0d5b642d3c54d79fdea5f9c42fade37f">addButton</a>(xMSF, cont, <span class="stringliteral">&quot;btnOk&quot;</span>, <span class="stringliteral">&quot;OK&quot;</span>, 42, 52, 50, 14);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a0d5b642d3c54d79fdea5f9c42fade37f">addButton</a>(xMSF, cont, <span class="stringliteral">&quot;btnCancel&quot;</span>, <span class="stringliteral">&quot;Abbrechen&quot;</span>, 108, 52, 60, 14);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// 4. Button-Listener VOR createPeer() anhängen</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        XDialog xDialog = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XDialog.class, dialog);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a3f9c2a760f21c65506b4612c1d64f306">okPressed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a05792c884a08b1fca61ea9774342c1b4">attachButtonListener</a>(xcc, <span class="stringliteral">&quot;btnOk&quot;</span>, <span class="keyword">new</span> XActionListener() {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            @Override</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            @Override</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a3f9c2a760f21c65506b4612c1d64f306">okPressed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                xDialog.endExecute();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        });</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a05792c884a08b1fca61ea9774342c1b4">attachButtonListener</a>(xcc, <span class="stringliteral">&quot;btnCancel&quot;</span>, <span class="keyword">new</span> XActionListener() {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            @Override</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> disposing(EventObject e) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            @Override</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keyword">public</span> <span class="keywordtype">void</span> actionPerformed(ActionEvent e) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                xDialog.endExecute();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        });</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="comment">// 5. Peer erzeugen</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        Object toolkit = xMCF.createInstanceWithContext(<span class="stringliteral">&quot;com.sun.star.awt.Toolkit&quot;</span>, context);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        XToolkit xToolkit = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XToolkit.class, toolkit);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        XWindow xWindow = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XWindow.class, xControl);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        xWindow.setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        xControl.createPeer(xToolkit, <span class="keyword">null</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="comment">// 6. Dialog anzeigen (blockiert)</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        xDialog.execute();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        Optional&lt;StartParameter&gt; result = Optional.empty();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a3f9c2a760f21c65506b4612c1d64f306">okPressed</a>) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            String gruppenname = <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ad3e822a52dfc18b0aa34c00b0c8c6d34">readEditText</a>(xcc, <span class="stringliteral">&quot;editGruppenname&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            result = Optional.of(<span class="keyword">new</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#af04faa30d3a8eafe496e8273d41f58ac">StartParameter</a>(gruppenname));</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XComponent.class, dialog).dispose();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_class" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html">ProcessBox</a>.<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a45528ee1e6fd2d79179eb7833332adc2">from</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#aadeae64e39a47a24864e259c7980ec9f">visibleWennAutomatisch</a>();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="comment">// Hilfsmethoden – Zustand auslesen</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ad3e822a52dfc18b0aa34c00b0c8c6d34">  143</a></span>    <span class="keyword">private</span> String <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ad3e822a52dfc18b0aa34c00b0c8c6d34">readEditText</a>(XControlContainer xcc, String name) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        XControl ctrl = xcc.getControl(name);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> (ctrl == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        XTextComponent text = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XTextComponent.class, ctrl);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">return</span> text != <span class="keyword">null</span> ? text.getText() : <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a05792c884a08b1fca61ea9774342c1b4">  152</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a05792c884a08b1fca61ea9774342c1b4">attachButtonListener</a>(XControlContainer xcc, String name, XActionListener listener) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        XControl ctrl = xcc.getControl(name);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">if</span> (ctrl != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            XButton btn = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XButton.class, ctrl);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span> (btn != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                btn.addActionListener(listener);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// Hilfsmethoden – Controls zum Dialog-Modell hinzufügen</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="foldopen" id="foldopen00166" data-start="{" data-end="}">
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ab1c8e5a285bf800159f494588d281f25">  166</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ab1c8e5a285bf800159f494588d281f25">addLabel</a>(XMultiServiceFactory xMSF, XNameContainer cont,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            String name, String text, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        Object <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = xMSF.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlFixedTextModel&quot;</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        XPropertySet props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        props.setPropertyValue(<span class="stringliteral">&quot;Label&quot;</span>, text);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, Integer.valueOf(x));</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, Integer.valueOf(y));</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, Integer.valueOf(w));</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, Integer.valueOf(h));</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        cont.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#aa753326a196b2c2d281d05506145d864">  178</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#aa753326a196b2c2d281d05506145d864">addEditField</a>(XMultiServiceFactory xMSF, XNameContainer cont,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            String name, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        Object <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = xMSF.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlEditModel&quot;</span>);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        XPropertySet props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, Integer.valueOf(x));</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, Integer.valueOf(y));</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, Integer.valueOf(w));</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, Integer.valueOf(h));</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        props.setPropertyValue(<span class="stringliteral">&quot;Text&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        cont.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a0d5b642d3c54d79fdea5f9c42fade37f">  190</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a0d5b642d3c54d79fdea5f9c42fade37f">addButton</a>(XMultiServiceFactory xMSF, XNameContainer cont,</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            String name, String label, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        Object <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = xMSF.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlButtonModel&quot;</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        XPropertySet props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        props.setPropertyValue(<span class="stringliteral">&quot;Label&quot;</span>, label);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, Integer.valueOf(x));</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, Integer.valueOf(y));</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, Integer.valueOf(w));</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, Integer.valueOf(h));</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        cont.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a7a8568fa6e2f495b28dab8762b3760c8">  202</a></span>    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a7a8568fa6e2f495b28dab8762b3760c8">addFixedLine</a>(XMultiServiceFactory xMSF, XNameContainer cont,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            String name, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) <span class="keywordflow">throws</span> com.sun.star.uno.Exception {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        Object <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a> = xMSF.createInstance(<span class="stringliteral">&quot;com.sun.star.awt.UnoControlFixedLineModel&quot;</span>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        XPropertySet props = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertySet.class, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionX&quot;</span>, Integer.valueOf(x));</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        props.setPropertyValue(<span class="stringliteral">&quot;PositionY&quot;</span>, Integer.valueOf(y));</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        props.setPropertyValue(<span class="stringliteral">&quot;Width&quot;</span>, Integer.valueOf(w));</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        props.setPropertyValue(<span class="stringliteral">&quot;Height&quot;</span>, Integer.valueOf(h));</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        cont.insertByName(name, <a class="code hl_package" href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">model</a>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
+</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a90f0011c75e8b626bcc9a93a8089d687">  213</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a636483cbf340d02f0caf20b00b53d0ed">LigaStartDialog</a> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a90f0011c75e8b626bcc9a93a8089d687">from</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a636483cbf340d02f0caf20b00b53d0ed">LigaStartDialog</a>(<a class="code hl_variable" href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">workingSpreadsheet</a>);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+</div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_ac33f37dfe8d60ce32075e159b75f3d0c"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#ac33f37dfe8d60ce32075e159b75f3d0c">de.petanqueturniermanager.comp.WorkingSpreadsheet.getxContext</a></div><div class="ttdeci">XComponentContext getxContext()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00094">WorkingSpreadsheet.java:94</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html">de.petanqueturniermanager.helper.msgbox.ProcessBox</a></div><div class="ttdoc">Process-Statusfenster als modeloser UNO-Dialog.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00079">ProcessBox.java:79</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a038a9b3145d4577e2eaade78ecb889d3"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a038a9b3145d4577e2eaade78ecb889d3">de.petanqueturniermanager.helper.msgbox.ProcessBox.hide</a></div><div class="ttdeci">ProcessBox hide()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00656">ProcessBox.java:656</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a45528ee1e6fd2d79179eb7833332adc2"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a45528ee1e6fd2d79179eb7833332adc2">de.petanqueturniermanager.helper.msgbox.ProcessBox.from</a></div><div class="ttdeci">static ProcessBox from()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00120">ProcessBox.java:120</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_aadeae64e39a47a24864e259c7980ec9f"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#aadeae64e39a47a24864e259c7980ec9f">de.petanqueturniermanager.helper.msgbox.ProcessBox.visibleWennAutomatisch</a></div><div class="ttdeci">ProcessBox visibleWennAutomatisch()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00675">ProcessBox.java:675</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a05792c884a08b1fca61ea9774342c1b4"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a05792c884a08b1fca61ea9774342c1b4">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.attachButtonListener</a></div><div class="ttdeci">void attachButtonListener(XControlContainer xcc, String name, XActionListener listener)</div><div class="ttdef"><b>Definition</b> <a href="#l00152">LigaStartDialog.java:152</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a0d5b642d3c54d79fdea5f9c42fade37f"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a0d5b642d3c54d79fdea5f9c42fade37f">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.addButton</a></div><div class="ttdeci">void addButton(XMultiServiceFactory xMSF, XNameContainer cont, String name, String label, int x, int y, int w, int h)</div><div class="ttdef"><b>Definition</b> <a href="#l00190">LigaStartDialog.java:190</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a3f9c2a760f21c65506b4612c1d64f306"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a3f9c2a760f21c65506b4612c1d64f306">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.okPressed</a></div><div class="ttdeci">volatile boolean okPressed</div><div class="ttdef"><b>Definition</b> <a href="#l00046">LigaStartDialog.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a5bb73d0af943060a0c1714ab0ea81436"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a5bb73d0af943060a0c1714ab0ea81436">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="#l00045">LigaStartDialog.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a636483cbf340d02f0caf20b00b53d0ed"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a636483cbf340d02f0caf20b00b53d0ed">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.LigaStartDialog</a></div><div class="ttdeci">LigaStartDialog(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">LigaStartDialog.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a68488d27189372b7c5524f135bc545fc"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a68488d27189372b7c5524f135bc545fc">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.show</a></div><div class="ttdeci">Optional&lt; StartParameter &gt; show()</div><div class="ttdoc">Zeigt den Dialog an und gibt das Ergebnis zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">LigaStartDialog.java:57</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a7a8568fa6e2f495b28dab8762b3760c8"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a7a8568fa6e2f495b28dab8762b3760c8">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.addFixedLine</a></div><div class="ttdeci">void addFixedLine(XMultiServiceFactory xMSF, XNameContainer cont, String name, int x, int y, int w, int h)</div><div class="ttdef"><b>Definition</b> <a href="#l00202">LigaStartDialog.java:202</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_a90f0011c75e8b626bcc9a93a8089d687"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#a90f0011c75e8b626bcc9a93a8089d687">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.from</a></div><div class="ttdeci">static LigaStartDialog from(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00213">LigaStartDialog.java:213</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_aa753326a196b2c2d281d05506145d864"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#aa753326a196b2c2d281d05506145d864">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.addEditField</a></div><div class="ttdeci">void addEditField(XMultiServiceFactory xMSF, XNameContainer cont, String name, int x, int y, int w, int h)</div><div class="ttdef"><b>Definition</b> <a href="#l00178">LigaStartDialog.java:178</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_ab1c8e5a285bf800159f494588d281f25"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ab1c8e5a285bf800159f494588d281f25">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.addLabel</a></div><div class="ttdeci">void addLabel(XMultiServiceFactory xMSF, XNameContainer cont, String name, String text, int x, int y, int w, int h)</div><div class="ttdef"><b>Definition</b> <a href="#l00166">LigaStartDialog.java:166</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_ad3e822a52dfc18b0aa34c00b0c8c6d34"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#ad3e822a52dfc18b0aa34c00b0c8c6d34">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.readEditText</a></div><div class="ttdeci">String readEditText(XControlContainer xcc, String name)</div><div class="ttdef"><b>Definition</b> <a href="#l00143">LigaStartDialog.java:143</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog_html_af04faa30d3a8eafe496e8273d41f58ac"><div class="ttname"><a href="../../dd/dc5/classde_1_1petanqueturniermanager_1_1liga_1_1meldeliste_1_1_liga_start_dialog.html#af04faa30d3a8eafe496e8273d41f58ac">de.petanqueturniermanager.liga.meldeliste.LigaStartDialog.StartParameter</a></div><div class="ttdeci">record StartParameter(String gruppenname)</div><div class="ttdoc">Ergebnis des Dialogs.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">LigaStartDialog.java:42</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1model_html"><div class="ttname"><a href="../../d1/dbc/namespacede_1_1petanqueturniermanager_1_1model.html">de.petanqueturniermanager.model</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d59/_forme_spielrunde_8java_source.html#l00004">FormeSpielrunde.java:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_ce7c1674cf21f28bd82b11a1b559cc7a.html">liga</a></li><li class="navelem"><a href="../../dir_8f4364f288066768f8873ee8e03a3c45.html">meldeliste</a></li><li class="navelem"><a href="../../da/d63/_liga_start_dialog_8java.html">LigaStartDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

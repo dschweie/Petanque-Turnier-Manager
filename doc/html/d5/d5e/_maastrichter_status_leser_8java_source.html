@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/maastrichter/MaastrichterStatusLeser.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d5/d5e/_maastrichter_status_leser_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MaastrichterStatusLeser.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d5e/_maastrichter_status_leser_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.maastrichter;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.lang.IndexOutOfBoundsException;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheet;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.sun.star.sheet.XSpreadsheetDocument;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.table.CellContentType;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html">   21</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">MaastrichterStatusLeser</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a67d7229e4c2c9391cce4b5cd2ece4f1b">   23</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a67d7229e4c2c9391cce4b5cd2ece4f1b">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">MaastrichterStatusLeser</a>.class);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a14cc97f668877989d9fa1bfff2553797">   24</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a14cc97f668877989d9fa1bfff2553797">MAX_ZEILEN</a> = 2000;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a1c75226be9f7ebfde9a611fb003c764a">   25</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> List&lt;String&gt; <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a1c75226be9f7ebfde9a611fb003c764a">FINALRUNDE_BUCHSTABEN</a> = List.of(<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;D&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ab9a71286a2be8c66689aed67cda06a5c">   26</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ab9a71286a2be8c66689aed67cda06a5c">SCORE_PRAEFIX</a> = <span class="stringliteral">&quot;PTM_EDIT:&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aefc3590c268ca4cc350e7bd2f472e949">   27</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aefc3590c268ca4cc350e7bd2f472e949">POSITIONS_TRENNZEICHEN</a> = <span class="stringliteral">&quot;\\|&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a425173584cc11c0186c21b63c27ed">   28</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a425173584cc11c0186c21b63c27ed">KOORDINATEN_TRENNZEICHEN</a> = <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">   30</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">workingSpreadsheet</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">   32</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">MaastrichterStatusLeser</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        this.workingSpreadsheet = <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">workingSpreadsheet</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#abfd811ff733ef36edaf8136dd08241c6">   36</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">MaastrichterStatusLeser</a> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#abfd811ff733ef36edaf8136dd08241c6">von</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">workingSpreadsheet</a>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">MaastrichterStatusLeser</a>(<a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">workingSpreadsheet</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a4d8e807491f6624d28c416f0200c30be">   40</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d8/d4e/namespacede_1_1petanqueturniermanager_1_1maastrichter.html#aeb07643c88001abc83e400e67308f3e7">MaastrichterTurnierSchritt</a> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a4d8e807491f6624d28c416f0200c30be">liesStatus</a>() {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        var xDoc = <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">workingSpreadsheet</a>.<a class="code hl_function" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">getWorkingSpreadsheetDocument</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">int</span> hoechsteVorrunde = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        XSpreadsheet hoechsteVorrundeSheet = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n = 1; n &lt; 1000; n++) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            var schluessel = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#addb77872cdbf1438ca7f1d7bf4930a2c">schluesselMaastrichterVorrunde</a>(n);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            var sheetOpt = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a87cf7540d5e6db2a5d076af8bf90e757">findeSheet</a>(xDoc, schluessel);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> (sheetOpt.isEmpty()) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            hoechsteVorrunde = n;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            hoechsteVorrundeSheet = sheetOpt.get();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (hoechsteVorrundeSheet == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d4e/namespacede_1_1petanqueturniermanager_1_1maastrichter.html#aeb07643c88001abc83e400e67308f3e7">MaastrichterTurnierSchritt</a>(<span class="keyword">false</span>, 0, 0, 0, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">int</span>[] zaehler = <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a02429df262123c4b9e1df6fb32f017e3">zaehleVorrundeSpiele</a>(hoechsteVorrundeSheet);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        var vorhandeneFinalrundenKeys = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;String&gt;</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">for</span> (var b : <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a1c75226be9f7ebfde9a611fb003c764a">FINALRUNDE_BUCHSTABEN</a>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            var schluessel = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#ae2887f7a3c4f1575fc453e84aad44d26">schluesselMaastrichterFinalrunde</a>(b);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a87cf7540d5e6db2a5d076af8bf90e757">findeSheet</a>(xDoc, schluessel).isPresent()) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                vorhandeneFinalrundenKeys.add(schluessel);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (vorhandeneFinalrundenKeys.isEmpty()) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d4e/namespacede_1_1petanqueturniermanager_1_1maastrichter.html#aeb07643c88001abc83e400e67308f3e7">MaastrichterTurnierSchritt</a>(<span class="keyword">true</span>, hoechsteVorrunde, zaehler[0], zaehler[1], <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">boolean</span> beendet = <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a06ad8807daa602687b5794b43a5b9eff">pruefeAlleFinalrundenBeendet</a>(xDoc, vorhandeneFinalrundenKeys);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d8/d4e/namespacede_1_1petanqueturniermanager_1_1maastrichter.html#aeb07643c88001abc83e400e67308f3e7">MaastrichterTurnierSchritt</a>(<span class="keyword">true</span>, hoechsteVorrunde, zaehler[0], zaehler[1], <span class="keyword">true</span>, beendet);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a02429df262123c4b9e1df6fb32f017e3">   77</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span>[] <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a02429df262123c4b9e1df6fb32f017e3">zaehleVorrundeSpiele</a>(XSpreadsheet sheet) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">int</span> gesamt = 0;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">int</span> gespielt = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> zeile = <a class="code hl_class" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html">SchweizerAbstractSpielrundeSheet</a>.<a class="code hl_variable" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#acee094c987c9ddc87f220e549b4b9d64">ERSTE_DATEN_ZEILE</a>; zeile &lt; <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a14cc97f668877989d9fa1bfff2553797">MAX_ZEILEN</a>; zeile++) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                var teamZelle = sheet.getCellByPosition(<a class="code hl_class" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html">SchweizerAbstractSpielrundeSheet</a>.<a class="code hl_variable" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#aaa604485418c7c2e5e65a2920afa6d83">TEAM_A_SPALTE</a>, zeile);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span> (teamZelle.getType() == CellContentType.EMPTY) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                gesamt++;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                var ergZelle = sheet.getCellByPosition(<a class="code hl_class" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html">SchweizerAbstractSpielrundeSheet</a>.<a class="code hl_variable" href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a43458f29a8e3a472aefac1ed8d2f4deb">ERG_TEAM_A_SPALTE</a>, zeile);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">if</span> (ergZelle.getType() == CellContentType.VALUE) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    gespielt++;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        } <span class="keywordflow">catch</span> (IndexOutOfBoundsException e) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a67d7229e4c2c9391cce4b5cd2ece4f1b">logger</a>.error(<span class="stringliteral">&quot;Fehler beim Lesen der Maastrichter-Vorrunde-Spiele&quot;</span>, e);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keywordtype">int</span>[] { gespielt, gesamt };</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a06ad8807daa602687b5794b43a5b9eff">   98</a></span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a06ad8807daa602687b5794b43a5b9eff">pruefeAlleFinalrundenBeendet</a>(XSpreadsheetDocument xDoc, List&lt;String&gt; finalrundenKeys) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">for</span> (var finalrundeKey : finalrundenKeys) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            var finalrundeSheet = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a87cf7540d5e6db2a5d076af8bf90e757">findeSheet</a>(xDoc, finalrundeKey);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">if</span> (finalrundeSheet.isEmpty() || !<a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a114f81e274009a0da747f0182d5a7f86">pruefeFinalrundeBeendet</a>(xDoc, finalrundeSheet.get(), finalrundeKey)) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a114f81e274009a0da747f0182d5a7f86">  108</a></span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a114f81e274009a0da747f0182d5a7f86">pruefeFinalrundeBeendet</a>(XSpreadsheetDocument xDoc, XSpreadsheet sheet, String finalrundeKey) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        var scoreKey = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#ab62397be8ca7a12395dc3afa69ab5a6a">scoreSchluessel</a>(finalrundeKey);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        var scoreText = <a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_function" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a33513b8634bd97f6f144f6e99aa7e4ae">leseScoreText</a>(xDoc, scoreKey);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (scoreText == <span class="keyword">null</span> || !scoreText.startsWith(<a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ab9a71286a2be8c66689aed67cda06a5c">SCORE_PRAEFIX</a>)) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        var positionenStr = scoreText.substring(<a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ab9a71286a2be8c66689aed67cda06a5c">SCORE_PRAEFIX</a>.length());</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        var positionen = positionenStr.split(<a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aefc3590c268ca4cc350e7bd2f472e949">POSITIONS_TRENNZEICHEN</a>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">for</span> (var pos : positionen) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">if</span> (pos.isBlank()) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                var teile = pos.split(<a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a425173584cc11c0186c21b63c27ed">KOORDINATEN_TRENNZEICHEN</a>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keywordflow">if</span> (teile.length &lt; 2) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordtype">int</span> spalte = Integer.parseInt(teile[0].trim());</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordtype">int</span> zeile = Integer.parseInt(teile[1].trim());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                var zelle = sheet.getCellByPosition(spalte, zeile);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordflow">if</span> (zelle.getType() != CellContentType.VALUE) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        } <span class="keywordflow">catch</span> (<a class="code hl_class" href="../../df/d70/class_exception.html">Exception</a> e) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <a class="code hl_variable" href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a67d7229e4c2c9391cce4b5cd2ece4f1b">logger</a>.error(<span class="stringliteral">&quot;Fehler beim Prüfen der Maastrichter-Finalrunden-Scores&quot;</span>, e);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> positionen.length &gt; 0;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclass_exception_html"><div class="ttname"><a href="../../df/d70/class_exception.html">Exception</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html_a31c86015e8e43a961f4b0441a8d4cb5d"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html#a31c86015e8e43a961f4b0441a8d4cb5d">de.petanqueturniermanager.comp.WorkingSpreadsheet.getWorkingSpreadsheetDocument</a></div><div class="ttdeci">XSpreadsheetDocument getWorkingSpreadsheetDocument()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00101">WorkingSpreadsheet.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper</a></div><div class="ttdoc">Schreibt und liest Sheet-Metadaten als benannte Bereiche im Dokument.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00050">SheetMetadataHelper.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_a33513b8634bd97f6f144f6e99aa7e4ae"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a33513b8634bd97f6f144f6e99aa7e4ae">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.leseScoreText</a></div><div class="ttdeci">static String leseScoreText(XSpreadsheetDocument xDoc, String scoreSchluessel)</div><div class="ttdoc">Liest den String-Inhalt der Zelle, auf die der Named Range mit scoreSchluessel zeigt.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00277">SheetMetadataHelper.java:277</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_a87cf7540d5e6db2a5d076af8bf90e757"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a87cf7540d5e6db2a5d076af8bf90e757">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.findeSheet</a></div><div class="ttdeci">static Optional&lt; XSpreadsheet &gt; findeSheet(XSpreadsheetDocument xDoc, String namedRangeKey)</div><div class="ttdoc">Sucht das Sheet, das dem gegebenen Named-Range-Schlüssel zugeordnet ist.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00506">SheetMetadataHelper.java:506</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_ab62397be8ca7a12395dc3afa69ab5a6a"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#ab62397be8ca7a12395dc3afa69ab5a6a">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.scoreSchluessel</a></div><div class="ttdeci">static String scoreSchluessel(String bracketSchluessel)</div><div class="ttdoc">Leitet den Dokument-Property-Schlüssel für Score-Positionen aus dem Bracket-Metadaten-Schlüssel ab.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00227">SheetMetadataHelper.java:227</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_addb77872cdbf1438ca7f1d7bf4930a2c"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#addb77872cdbf1438ca7f1d7bf4930a2c">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.schluesselMaastrichterVorrunde</a></div><div class="ttdeci">static String schluesselMaastrichterVorrunde(int rundeNr)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00187">SheetMetadataHelper.java:187</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_ae2887f7a3c4f1575fc453e84aad44d26"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#ae2887f7a3c4f1575fc453e84aad44d26">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.schluesselMaastrichterFinalrunde</a></div><div class="ttdeci">static String schluesselMaastrichterFinalrunde(String gruppenBuchstabe)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00191">SheetMetadataHelper.java:191</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a02429df262123c4b9e1df6fb32f017e3"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a02429df262123c4b9e1df6fb32f017e3">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.zaehleVorrundeSpiele</a></div><div class="ttdeci">int[] zaehleVorrundeSpiele(XSpreadsheet sheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00077">MaastrichterStatusLeser.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a06ad8807daa602687b5794b43a5b9eff"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a06ad8807daa602687b5794b43a5b9eff">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.pruefeAlleFinalrundenBeendet</a></div><div class="ttdeci">boolean pruefeAlleFinalrundenBeendet(XSpreadsheetDocument xDoc, List&lt; String &gt; finalrundenKeys)</div><div class="ttdef"><b>Definition</b> <a href="#l00098">MaastrichterStatusLeser.java:98</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a114f81e274009a0da747f0182d5a7f86"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a114f81e274009a0da747f0182d5a7f86">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.pruefeFinalrundeBeendet</a></div><div class="ttdeci">boolean pruefeFinalrundeBeendet(XSpreadsheetDocument xDoc, XSpreadsheet sheet, String finalrundeKey)</div><div class="ttdef"><b>Definition</b> <a href="#l00108">MaastrichterStatusLeser.java:108</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a14cc97f668877989d9fa1bfff2553797"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a14cc97f668877989d9fa1bfff2553797">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.MAX_ZEILEN</a></div><div class="ttdeci">static final int MAX_ZEILEN</div><div class="ttdef"><b>Definition</b> <a href="#l00024">MaastrichterStatusLeser.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a1c75226be9f7ebfde9a611fb003c764a"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a1c75226be9f7ebfde9a611fb003c764a">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.FINALRUNDE_BUCHSTABEN</a></div><div class="ttdeci">static final List&lt; String &gt; FINALRUNDE_BUCHSTABEN</div><div class="ttdef"><b>Definition</b> <a href="#l00025">MaastrichterStatusLeser.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a4d8e807491f6624d28c416f0200c30be"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a4d8e807491f6624d28c416f0200c30be">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.liesStatus</a></div><div class="ttdeci">MaastrichterTurnierSchritt liesStatus()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">MaastrichterStatusLeser.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_a67d7229e4c2c9391cce4b5cd2ece4f1b"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#a67d7229e4c2c9391cce4b5cd2ece4f1b">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00023">MaastrichterStatusLeser.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_aae199edb55106bd75cf051b1c6b51ae1"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aae199edb55106bd75cf051b1c6b51ae1">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.MaastrichterStatusLeser</a></div><div class="ttdeci">MaastrichterStatusLeser(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">MaastrichterStatusLeser.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_ab9a71286a2be8c66689aed67cda06a5c"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ab9a71286a2be8c66689aed67cda06a5c">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.SCORE_PRAEFIX</a></div><div class="ttdeci">static final String SCORE_PRAEFIX</div><div class="ttdef"><b>Definition</b> <a href="#l00026">MaastrichterStatusLeser.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_abfd811ff733ef36edaf8136dd08241c6"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#abfd811ff733ef36edaf8136dd08241c6">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.von</a></div><div class="ttdeci">static MaastrichterStatusLeser von(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">MaastrichterStatusLeser.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_ac5a425173584cc11c0186c21b63c27ed"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a425173584cc11c0186c21b63c27ed">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.KOORDINATEN_TRENNZEICHEN</a></div><div class="ttdeci">static final String KOORDINATEN_TRENNZEICHEN</div><div class="ttdef"><b>Definition</b> <a href="#l00028">MaastrichterStatusLeser.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_ac5a6deb8f6635e375d315c7452bd792d"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#ac5a6deb8f6635e375d315c7452bd792d">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.workingSpreadsheet</a></div><div class="ttdeci">final WorkingSpreadsheet workingSpreadsheet</div><div class="ttdef"><b>Definition</b> <a href="#l00030">MaastrichterStatusLeser.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser_html_aefc3590c268ca4cc350e7bd2f472e949"><div class="ttname"><a href="../../dd/db2/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter_status_leser.html#aefc3590c268ca4cc350e7bd2f472e949">de.petanqueturniermanager.maastrichter.MaastrichterStatusLeser.POSITIONS_TRENNZEICHEN</a></div><div class="ttdeci">static final String POSITIONS_TRENNZEICHEN</div><div class="ttdef"><b>Definition</b> <a href="#l00027">MaastrichterStatusLeser.java:27</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet</a></div><div class="ttdoc">Erstellung 27.03.2024 / Michael Massee.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00072">SchweizerAbstractSpielrundeSheet.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_a43458f29a8e3a472aefac1ed8d2f4deb"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#a43458f29a8e3a472aefac1ed8d2f4deb">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.ERG_TEAM_A_SPALTE</a></div><div class="ttdeci">static final int ERG_TEAM_A_SPALTE</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00087">SchweizerAbstractSpielrundeSheet.java:87</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_aaa604485418c7c2e5e65a2920afa6d83"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#aaa604485418c7c2e5e65a2920afa6d83">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.TEAM_A_SPALTE</a></div><div class="ttdeci">static final int TEAM_A_SPALTE</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00085">SchweizerAbstractSpielrundeSheet.java:85</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet_html_acee094c987c9ddc87f220e549b4b9d64"><div class="ttname"><a href="../../d9/d4f/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_abstract_spielrunde_sheet.html#acee094c987c9ddc87f220e549b4b9d64">de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet.ERSTE_DATEN_ZEILE</a></div><div class="ttdeci">static final int ERSTE_DATEN_ZEILE</div><div class="ttdef"><b>Definition</b> <a href="../../de/d61/_schweizer_abstract_spielrunde_sheet_8java_source.html#l00081">SchweizerAbstractSpielrundeSheet.java:81</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1maastrichter_html_aeb07643c88001abc83e400e67308f3e7"><div class="ttname"><a href="../../d8/d4e/namespacede_1_1petanqueturniermanager_1_1maastrichter.html#aeb07643c88001abc83e400e67308f3e7">de.petanqueturniermanager.maastrichter.MaastrichterTurnierSchritt</a></div><div class="ttdeci">record MaastrichterTurnierSchritt(boolean vorrundeVorhanden, int aktuelleVorrundeNr, int vorrundeGespielt, int vorrundeGesamt, boolean finalrundeVorhanden, boolean beendet)</div><div class="ttdoc">Aktueller Turnierstatus eines Maastrichter-Turniers für die Sidebar-Anzeige.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/dda/_maastrichter_turnier_schritt_8java_source.html#l00006">MaastrichterTurnierSchritt.java:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f435ceaf791809f4c24283e793e1abe5.html">maastrichter</a></li><li class="navelem"><a href="../../d5/d5e/_maastrichter_status_leser_8java.html">MaastrichterStatusLeser.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

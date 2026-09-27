@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer Klassenreferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html','../../','d4/de4/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Debounce-Helper: bündelt Event-Stürme (mehrere <code class="JavaDocCode">selectionChanged</code>-/<code class="JavaDocCode">onFocus</code>-Ticks in kurzer Folge) zu einem einzigen Hash-Check pro Dokument+Schlüssel.  
+ <a href="#details">Mehr ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:acfa812500d7f36acb91a343d4efe0208" id="r_acfa812500d7f36acb91a343d4efe0208"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acfa812500d7f36acb91a343d4efe0208">cancelAlle</a> (XSpreadsheetDocument xDoc)</td></tr>
+<tr class="memdesc:acfa812500d7f36acb91a343d4efe0208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancelt alle ausstehenden Checks zu diesem Dokument.  <br /></td></tr>
+<tr class="memitem:a3ea255c6904d0c6796449333052b2105" id="r_a3ea255c6904d0c6796449333052b2105"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3ea255c6904d0c6796449333052b2105">schedule</a> (XSpreadsheetDocument xDoc, String schluessel, Runnable check)</td></tr>
+<tr class="memdesc:a3ea255c6904d0c6796449333052b2105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plant einen Check für (<code class="JavaDocCode">xDoc</code>, <code class="JavaDocCode">schluessel</code>) nach <code><a class="el" href="#a6beeec8af2d34ff68991e8701e7917a6">DEBOUNCE_MS</a></code>.  <br /></td></tr>
+<tr class="memitem:ace0f997e1249e1c511d78e596ad1b89d" id="r_ace0f997e1249e1c511d78e596ad1b89d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ace0f997e1249e1c511d78e596ad1b89d">scheduleRetry</a> (XSpreadsheetDocument xDoc, String schluessel, int versuch, Runnable check)</td></tr>
+<tr class="memdesc:ace0f997e1249e1c511d78e596ad1b89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plant einen Retry nach TransientFehler.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a896cb0ae7a50594bc132b2213e08d0bd" id="r_a896cb0ae7a50594bc132b2213e08d0bd"><td class="memItemLeft">static <a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a896cb0ae7a50594bc132b2213e08d0bd">get</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Statische öffentliche Attribute</h2></td></tr>
+<tr class="memitem:aba4db3814636175cd6eca279eb6a3f14" id="r_aba4db3814636175cd6eca279eb6a3f14"><td class="memItemLeft">static final long[]&#160;</td><td class="memItemRight"><a class="el" href="#aba4db3814636175cd6eca279eb6a3f14">BACKOFF_MS</a> = {300L, 600L, 1200L}</td></tr>
+<tr class="memdesc:aba4db3814636175cd6eca279eb6a3f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearer Backoff für Re-Schedule nach TransientFehler (Versuche 1..3).  <br /></td></tr>
+<tr class="memitem:a6beeec8af2d34ff68991e8701e7917a6" id="r_a6beeec8af2d34ff68991e8701e7917a6"><td class="memItemLeft">static final long&#160;</td><td class="memItemRight"><a class="el" href="#a6beeec8af2d34ff68991e8701e7917a6">DEBOUNCE_MS</a> = 150L</td></tr>
+<tr class="memdesc:a6beeec8af2d34ff68991e8701e7917a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard-Debounce-Fenster für Selection/Focus-Trigger.  <br /></td></tr>
+<tr class="memitem:aec48893299ac74a9d2f8e932812fe60f" id="r_aec48893299ac74a9d2f8e932812fe60f"><td class="memItemLeft">static final int&#160;</td><td class="memItemRight"><a class="el" href="#aec48893299ac74a9d2f8e932812fe60f">MAX_RETRY</a> = BACKOFF_MS.length</td></tr>
+<tr class="memdesc:aec48893299ac74a9d2f8e932812fe60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximaler Versuch (inkl.) – danach forceNextCheck statt weiteres Retry.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:a4ae950c5226fc33873ede6a488b5e007" id="r_a4ae950c5226fc33873ede6a488b5e007"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ae950c5226fc33873ede6a488b5e007">ausfuehren</a> (String key, Runnable check)</td></tr>
+<tr class="memitem:a1b9b8cf8b529c20815d90056fdfb6208" id="r_a1b9b8cf8b529c20815d90056fdfb6208"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1b9b8cf8b529c20815d90056fdfb6208">scheduleMitDelay</a> (XSpreadsheetDocument xDoc, String schluessel, Runnable check, long delayMs)</td></tr>
+<tr class="memitem:a41b023d372a7ff471cb163f8e5d1fc13" id="r_a41b023d372a7ff471cb163f8e5d1fc13"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Private, statische Methoden</h2></td></tr>
+<tr class="memitem:a5008e6d4345293232659b1e6d321d7c9" id="r_a5008e6d4345293232659b1e6d321d7c9"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a5008e6d4345293232659b1e6d321d7c9">docPrefix</a> (XSpreadsheetDocument xDoc)</td></tr>
+<tr class="memitem:ae6aa66f61f92b72a406582313c003426" id="r_ae6aa66f61f92b72a406582313c003426"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#ae6aa66f61f92b72a406582313c003426">mapKey</a> (XSpreadsheetDocument xDoc, String schluessel)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a9b35fb9e31c3af4c36161499f1fe55d9" id="r_a9b35fb9e31c3af4c36161499f1fe55d9"><td class="memItemLeft">final ConcurrentHashMap&lt; String, ScheduledFuture&lt;?&gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9b35fb9e31c3af4c36161499f1fe55d9">ausstehend</a> = new ConcurrentHashMap&lt;&gt;()</td></tr>
+<tr class="memitem:addf440fa9f61b1db49b6de82ab241002" id="r_addf440fa9f61b1db49b6de82ab241002"><td class="memItemLeft">final ScheduledExecutorService&#160;</td><td class="memItemRight"><a class="el" href="#addf440fa9f61b1db49b6de82ab241002">executor</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:af8a36da33c788ec8bd912f76333a2b5a" id="r_af8a36da33c788ec8bd912f76333a2b5a"><td class="memItemLeft">static final <a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>&#160;</td><td class="memItemRight"><a class="el" href="#af8a36da33c788ec8bd912f76333a2b5a">INSTANZ</a> = new <a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>()</td></tr>
+<tr class="memitem:a60e9bd88de11c2391defd627940b9742" id="r_a60e9bd88de11c2391defd627940b9742"><td class="memItemLeft">static final Logger&#160;</td><td class="memItemRight"><a class="el" href="#a60e9bd88de11c2391defd627940b9742">logger</a> = LogManager.getLogger(SheetSyncDebouncer.class)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Jeder neue <code><a class="el" href="#a3ea255c6904d0c6796449333052b2105">schedule</a></code>-Aufruf cancelt einen ggf. anstehenden Future für denselben Schlüssel und plant einen neuen. Tasks laufen auf einem dedizierten Daemon-Thread, nicht im UI-Thread. </p>
+<p>Für <code class="JavaDocCode">TransientFehler</code> stellt <code><a class="el" href="#ace0f997e1249e1c511d78e596ad1b89d">scheduleRetry</a></code> eine eigene Methode mit eigenem Backoff zur Verfügung – siehe <code><a class="el" href="#aba4db3814636175cd6eca279eb6a3f14">BACKOFF_MS</a></code>. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00028">28</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a41b023d372a7ff471cb163f8e5d1fc13" name="a41b023d372a7ff471cb163f8e5d1fc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b023d372a7ff471cb163f8e5d1fc13">&#9670;&#160;</a></span>SheetSyncDebouncer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.SheetSyncDebouncer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00050">50</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                 {</div>
+<div class="line"><span class="lineno">   51</span>        this.executor = Executors.newSingleThreadScheduledExecutor(r -&gt; {</div>
+<div class="line"><span class="lineno">   52</span>            Thread t = <span class="keyword">new</span> Thread(r, <span class="stringliteral">&quot;PTM-SheetSyncDebouncer&quot;</span>);</div>
+<div class="line"><span class="lineno">   53</span>            t.setDaemon(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">return</span> t;</div>
+<div class="line"><span class="lineno">   55</span>        });</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a4ae950c5226fc33873ede6a488b5e007" name="a4ae950c5226fc33873ede6a488b5e007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae950c5226fc33873ede6a488b5e007">&#9670;&#160;</a></span>ausfuehren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.ausfuehren </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Runnable</td>          <td class="paramname"><span class="paramname"><em>check</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00094">94</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                        {</div>
+<div class="line"><span class="lineno">   95</span>        ausstehend.remove(key);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   97</span>            check.run();</div>
+<div class="line"><span class="lineno">   98</span>        } <span class="keywordflow">catch</span> (RuntimeException e) {</div>
+<div class="line"><span class="lineno">   99</span>            logger.warn(<span class="stringliteral">&quot;Sheet-Sync-Check warf Exception (key={})&quot;</span>, key, e);</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acfa812500d7f36acb91a343d4efe0208" name="acfa812500d7f36acb91a343d4efe0208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa812500d7f36acb91a343d4efe0208">&#9670;&#160;</a></span>cancelAlle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.cancelAlle </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wird beim Document-Dispose vom Listener gerufen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00107">107</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                      {</div>
+<div class="line"><span class="lineno">  108</span>        checkNotNull(xDoc);</div>
+<div class="line"><span class="lineno">  109</span>        String prefix = docPrefix(xDoc);</div>
+<div class="line"><span class="lineno">  110</span>        ausstehend.entrySet().removeIf(eintrag -&gt; {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (eintrag.getKey().startsWith(prefix)) {</div>
+<div class="line"><span class="lineno">  112</span>                eintrag.getValue().cancel(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  116</span>        });</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5008e6d4345293232659b1e6d321d7c9" name="a5008e6d4345293232659b1e6d321d7c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5008e6d4345293232659b1e6d321d7c9">&#9670;&#160;</a></span>docPrefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.docPrefix </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00123">123</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                               {</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> System.identityHashCode(xDoc) + <span class="stringliteral">&quot;:&quot;</span>;</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a896cb0ae7a50594bc132b2213e08d0bd" name="a896cb0ae7a50594bc132b2213e08d0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896cb0ae7a50594bc132b2213e08d0bd">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00043">43</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                           {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> INSTANZ;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae6aa66f61f92b72a406582313c003426" name="ae6aa66f61f92b72a406582313c003426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6aa66f61f92b72a406582313c003426">&#9670;&#160;</a></span>mapKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.mapKey </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>schluessel</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00119">119</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                                               {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> docPrefix(xDoc) + schluessel;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3ea255c6904d0c6796449333052b2105" name="a3ea255c6904d0c6796449333052b2105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea255c6904d0c6796449333052b2105">&#9670;&#160;</a></span>schedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.schedule </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>schluessel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Runnable</td>          <td class="paramname"><span class="paramname"><em>check</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bei mehrfachem Aufruf innerhalb des Fensters wird der vorherige Future gecancelt. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00062">62</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                                       {</div>
+<div class="line"><span class="lineno">   63</span>        scheduleMitDelay(xDoc, schluessel, check, DEBOUNCE_MS);</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1b9b8cf8b529c20815d90056fdfb6208" name="a1b9b8cf8b529c20815d90056fdfb6208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b9b8cf8b529c20815d90056fdfb6208">&#9670;&#160;</a></span>scheduleMitDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.scheduleMitDelay </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>schluessel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Runnable</td>          <td class="paramname"><span class="paramname"><em>check</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>delayMs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00080">80</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                          {</div>
+<div class="line"><span class="lineno">   82</span>        checkNotNull(xDoc);</div>
+<div class="line"><span class="lineno">   83</span>        checkNotNull(schluessel);</div>
+<div class="line"><span class="lineno">   84</span>        checkNotNull(check);</div>
+<div class="line"><span class="lineno">   85</span>        String key = mapKey(xDoc, schluessel);</div>
+<div class="line"><span class="lineno">   86</span>        ScheduledFuture&lt;?&gt; neu = executor.schedule(() -&gt; ausfuehren(key, check), delayMs,</div>
+<div class="line"><span class="lineno">   87</span>                TimeUnit.MILLISECONDS);</div>
+<div class="line"><span class="lineno">   88</span>        ScheduledFuture&lt;?&gt; alt = ausstehend.put(key, neu);</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (alt != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">   90</span>            alt.cancel(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ace0f997e1249e1c511d78e596ad1b89d" name="ace0f997e1249e1c511d78e596ad1b89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0f997e1249e1c511d78e596ad1b89d">&#9670;&#160;</a></span>scheduleRetry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.scheduleRetry </td>
+          <td>(</td>
+          <td class="paramtype">XSpreadsheetDocument</td>          <td class="paramname"><span class="paramname"><em>xDoc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>schluessel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>versuch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Runnable</td>          <td class="paramname"><span class="paramname"><em>check</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code class="JavaDocCode">versuch</code> ist 1-basiert (1 = erster Retry). Außerhalb von [1..<code><a class="el" href="#aec48893299ac74a9d2f8e932812fe60f">MAX_RETRY</a></code>] wird ignoriert. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00070">70</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                            {</div>
+<div class="line"><span class="lineno">   72</span>        checkArgument(versuch &gt;= 1, <span class="stringliteral">&quot;versuch muss &gt;= 1 sein&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (versuch &gt; MAX_RETRY) {</div>
+<div class="line"><span class="lineno">   74</span>            logger.debug(<span class="stringliteral">&quot;scheduleRetry ignoriert (versuch={} &gt; MAX_RETRY={})&quot;</span>, versuch, MAX_RETRY);</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>        }</div>
+<div class="line"><span class="lineno">   77</span>        scheduleMitDelay(xDoc, schluessel, check, BACKOFF_MS[versuch - 1]);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a9b35fb9e31c3af4c36161499f1fe55d9" name="a9b35fb9e31c3af4c36161499f1fe55d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b35fb9e31c3af4c36161499f1fe55d9">&#9670;&#160;</a></span>ausstehend</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ConcurrentHashMap&lt;String, ScheduledFuture&lt;?&gt; &gt; de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.ausstehend = new ConcurrentHashMap&lt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00048">48</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<a id="aba4db3814636175cd6eca279eb6a3f14" name="aba4db3814636175cd6eca279eb6a3f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4db3814636175cd6eca279eb6a3f14">&#9670;&#160;</a></span>BACKOFF_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long [] de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.BACKOFF_MS = {300L, 600L, 1200L}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00036">36</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<a id="a6beeec8af2d34ff68991e8701e7917a6" name="a6beeec8af2d34ff68991e8701e7917a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6beeec8af2d34ff68991e8701e7917a6">&#9670;&#160;</a></span>DEBOUNCE_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final long de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.DEBOUNCE_MS = 150L</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00033">33</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<a id="addf440fa9f61b1db49b6de82ab241002" name="addf440fa9f61b1db49b6de82ab241002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf440fa9f61b1db49b6de82ab241002">&#9670;&#160;</a></span>executor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ScheduledExecutorService de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.executor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00047">47</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<a id="af8a36da33c788ec8bd912f76333a2b5a" name="af8a36da33c788ec8bd912f76333a2b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a36da33c788ec8bd912f76333a2b5a">&#9670;&#160;</a></span>INSTANZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a> de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.INSTANZ = new <a class="el" href="#a41b023d372a7ff471cb163f8e5d1fc13">SheetSyncDebouncer</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00041">41</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<a id="a60e9bd88de11c2391defd627940b9742" name="a60e9bd88de11c2391defd627940b9742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e9bd88de11c2391defd627940b9742">&#9670;&#160;</a></span>logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Logger de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.logger = LogManager.getLogger(SheetSyncDebouncer.class)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00030">30</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<a id="aec48893299ac74a9d2f8e932812fe60f" name="aec48893299ac74a9d2f8e932812fe60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec48893299ac74a9d2f8e932812fe60f">&#9670;&#160;</a></span>MAX_RETRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final int de.petanqueturniermanager.helper.sheetsync.SheetSyncDebouncer.MAX_RETRY = BACKOFF_MS.length</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html#l00039">39</a> der Datei <a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>src/main/java/de/petanqueturniermanager/helper/sheetsync/<a class="el" href="../../df/d9f/_sheet_sync_debouncer_8java_source.html">SheetSyncDebouncer.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>de</b></li><li class="navelem"><a href="../../d0/da0/namespacede_1_1petanqueturniermanager.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../de/dbc/namespacede_1_1petanqueturniermanager_1_1helper.html">helper</a></li><li class="navelem"><a href="../../d6/de4/namespacede_1_1petanqueturniermanager_1_1helper_1_1sheetsync.html">sheetsync</a></li><li class="navelem"><a href="../../dd/d44/classde_1_1petanqueturniermanager_1_1helper_1_1sheetsync_1_1_sheet_sync_debouncer.html">SheetSyncDebouncer</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

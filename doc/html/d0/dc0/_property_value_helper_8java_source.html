@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/PropertyValueHelper.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/dc0/_property_value_helper_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PropertyValueHelper.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/dc0/_property_value_helper_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.petanqueturniermanager.helper;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> <span class="keyword">static</span> com.google.common.base.Preconditions.checkNotNull;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.sun.star.beans.PropertyValue;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html">   14</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">   16</a></span>    <span class="keyword">private</span> <span class="keyword">final</span> Map&lt;String, Object&gt; <a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">   18</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a>() {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/dfe/class_hash_map.html">HashMap&lt;&gt;</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a810455b692818e30b2aa709906dcc4d0">   22</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a810455b692818e30b2aa709906dcc4d0">from</a>() {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a24bf2ca2fc86b3922620dbe94b77e8b5">   26</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a24bf2ca2fc86b3922620dbe94b77e8b5">add</a>(String name, Object value) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>.put(checkNotNull(name), value);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#ae1bebc11ed33cc2fda3448c11b346554">   31</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#ae1bebc11ed33cc2fda3448c11b346554">clear</a>() {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>.<a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#ae1bebc11ed33cc2fda3448c11b346554">clear</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a903af460f4b226b5372feceed6a36f20">   36</a></span>    <span class="keyword">public</span> PropertyValue[] <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a903af460f4b226b5372feceed6a36f20">propList</a>() {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">PropertyValueHelper</a>.map2Proplist(<a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a1fc40f640c4910b82996eab403de3ebe">   40</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> PropertyValue[] <a class="code hl_function" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a1fc40f640c4910b82996eab403de3ebe">map2Proplist</a>(Map&lt;String, Object&gt; <a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        checkNotNull(<a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>, <span class="stringliteral">&quot;parameter propsMap=null&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        PropertyValue[] newProperties = <span class="keyword">new</span> PropertyValue[<a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>.size()];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">int</span> idx = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">for</span> (Map.Entry&lt;String, Object&gt; element : <a class="code hl_variable" href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">propsMap</a>.entrySet()) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            newProperties[idx] = <span class="keyword">new</span> com.sun.star.beans.PropertyValue();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            newProperties[idx].Name = element.getKey();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            newProperties[idx].Value = element.getValue();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            idx++;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> newProperties;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="ttc" id="aclass_hash_map_html"><div class="ttname"><a href="../../d8/dfe/class_hash_map.html">HashMap</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_a1fc40f640c4910b82996eab403de3ebe"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a1fc40f640c4910b82996eab403de3ebe">de.petanqueturniermanager.helper.PropertyValueHelper.map2Proplist</a></div><div class="ttdeci">static final PropertyValue[] map2Proplist(Map&lt; String, Object &gt; propsMap)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">PropertyValueHelper.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_a24bf2ca2fc86b3922620dbe94b77e8b5"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a24bf2ca2fc86b3922620dbe94b77e8b5">de.petanqueturniermanager.helper.PropertyValueHelper.add</a></div><div class="ttdeci">PropertyValueHelper add(String name, Object value)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">PropertyValueHelper.java:26</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_a28373e9e50193fb9ac98a8b08a142617"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a28373e9e50193fb9ac98a8b08a142617">de.petanqueturniermanager.helper.PropertyValueHelper.propsMap</a></div><div class="ttdeci">final Map&lt; String, Object &gt; propsMap</div><div class="ttdef"><b>Definition</b> <a href="#l00016">PropertyValueHelper.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_a7b6076aa0b4972c805ae2359f37eb844"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a7b6076aa0b4972c805ae2359f37eb844">de.petanqueturniermanager.helper.PropertyValueHelper.PropertyValueHelper</a></div><div class="ttdeci">PropertyValueHelper()</div><div class="ttdef"><b>Definition</b> <a href="#l00018">PropertyValueHelper.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_a810455b692818e30b2aa709906dcc4d0"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a810455b692818e30b2aa709906dcc4d0">de.petanqueturniermanager.helper.PropertyValueHelper.from</a></div><div class="ttdeci">static final PropertyValueHelper from()</div><div class="ttdef"><b>Definition</b> <a href="#l00022">PropertyValueHelper.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_a903af460f4b226b5372feceed6a36f20"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#a903af460f4b226b5372feceed6a36f20">de.petanqueturniermanager.helper.PropertyValueHelper.propList</a></div><div class="ttdeci">PropertyValue[] propList()</div><div class="ttdef"><b>Definition</b> <a href="#l00036">PropertyValueHelper.java:36</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper_html_ae1bebc11ed33cc2fda3448c11b346554"><div class="ttname"><a href="../../d4/d24/classde_1_1petanqueturniermanager_1_1helper_1_1_property_value_helper.html#ae1bebc11ed33cc2fda3448c11b346554">de.petanqueturniermanager.helper.PropertyValueHelper.clear</a></div><div class="ttdeci">PropertyValueHelper clear()</div><div class="ttdef"><b>Definition</b> <a href="#l00031">PropertyValueHelper.java:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../d0/dc0/_property_value_helper_8java.html">PropertyValueHelper.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+var _participants_were_not_opponents_8java =
+[
+    [ "de.petanqueturniermanager.algorithmen.supermelee.rules.ParticipantsWereNotOpponents", "d0/d77/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_opponents.html", "d0/d77/classde_1_1petanqueturniermanager_1_1algorithmen_1_1supermelee_1_1rules_1_1_participants_were_not_opponents" ]
+];

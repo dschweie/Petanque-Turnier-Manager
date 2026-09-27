@@ -1,0 +1,4 @@
+var classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter57_teams_turnier_test_daten =
+[
+    [ "Maastrichter57TeamsTurnierTestDaten", "d3/dd3/classde_1_1petanqueturniermanager_1_1maastrichter_1_1_maastrichter57_teams_turnier_test_daten.html#a5204d9dedf92f7f2558f32627cf3f736", null ]
+];

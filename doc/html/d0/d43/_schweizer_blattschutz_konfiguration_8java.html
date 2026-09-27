@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/schweizer/blattschutz/SchweizerBlattschutzKonfiguration.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d0/d43/_schweizer_blattschutz_konfiguration_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SchweizerBlattschutzKonfiguration.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.ArrayList;</code><br />
+<code>import java.util.List;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheetDocument;</code><br />
+<code>import com.sun.star.table.CellContentType;</code><br />
+<code>import com.sun.star.table.XCell;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldungenSpalte;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.CellStyleHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeUnGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.IBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.SheetSchutzInfo;</code><br />
+<code>import de.petanqueturniermanager.schweizer.konfiguration.SchweizerKonfigurationSheet;</code><br />
+<code>import de.petanqueturniermanager.schweizer.spielrunde.SchweizerAbstractSpielrundeSheet;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SchweizerBlattschutzKonfiguration.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d15/_schweizer_blattschutz_konfiguration_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2schweizer_2blattschutz_2_schweizer_blattschutz_konfiguration_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2schweizer_2blattschutz_2_schweizer_blattschutz_konfiguration_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2schweizer_2blattschutz_2_schweizer_blattschutz_konfiguration_8java">
+<area shape="rect" title=" " alt="" coords="2132,5,2415,64"/>
+<area shape="rect" title=" " alt="" coords="5,120,128,147"/>
+<area shape="poly" title=" " alt="" coords="2128,37,1700,44,1125,56,831,66,556,79,319,95,140,115,121,118,120,113,139,109,319,89,555,73,830,61,1125,51,1700,39,2134,37"/>
+<area shape="rect" title=" " alt="" coords="152,120,243,147"/>
+<area shape="poly" title=" " alt="" coords="2128,36,1721,41,1179,51,902,61,644,74,423,92,255,115,243,118,242,112,254,109,422,87,644,69,902,55,1179,46,1721,36,2134,36"/>
+<area shape="rect" title=" " alt="" coords="266,112,432,155"/>
+<area shape="poly" title=" " alt="" coords="2128,39,1763,50,1283,65,807,87,605,100,447,115,447,109,605,94,806,81,1283,60,1763,45,2134,39"/>
+<area shape="rect" title=" " alt="" coords="456,112,621,155"/>
+<area shape="poly" title=" " alt="" coords="2128,35,1857,39,1487,49,1066,73,850,91,637,114,636,109,849,86,1066,67,1487,44,1857,34,2134,35"/>
+<area shape="rect" title=" " alt="" coords="645,120,864,147"/>
+<area shape="poly" title=" " alt="" coords="2128,39,1893,48,1581,62,1230,83,877,115,839,120,838,114,877,109,1230,78,1580,56,1893,43,2134,39"/>
+<area shape="rect" title=" " alt="" coords="889,112,1108,155"/>
+<area shape="poly" title=" " alt="" coords="2128,41,1686,67,1408,87,1124,114,1123,109,1407,82,1686,61,2134,41"/>
+<area shape="rect" title=" " alt="" coords="1133,120,1363,147"/>
+<area shape="poly" title=" " alt="" coords="2134,45,1787,73,1581,92,1375,115,1337,120,1337,114,1374,109,1580,87,1786,68,2129,45"/>
+<area shape="rect" title=" " alt="" coords="1386,120,1552,147"/>
+<area shape="poly" title=" " alt="" coords="2134,47,1867,75,1715,93,1564,115,1539,119,1539,114,1563,109,1714,88,1867,70,2128,47"/>
+<area shape="rect" title=" " alt="" coords="1576,112,1885,155"/>
+<area shape="poly" title=" " alt="" coords="2134,61,1862,111,1862,106,2128,61"/>
+<area shape="rect" title=" " alt="" coords="1909,112,2128,155"/>
+<area shape="poly" title=" " alt="" coords="2200,64,2088,109,2087,103,2195,65"/>
+<area shape="rect" title=" " alt="" coords="2152,112,2394,155"/>
+<area shape="poly" title=" " alt="" coords="2275,62,2275,98,2271,95,2271,66"/>
+<area shape="rect" title=" " alt="" coords="2418,112,2691,155"/>
+<area shape="poly" title=" " alt="" coords="2357,62,2483,107,2477,106,2356,67"/>
+<area shape="rect" title=" " alt="" coords="2716,112,2999,155"/>
+<area shape="poly" title=" " alt="" coords="2416,57,2719,109,2714,109,2415,62"/>
+<area shape="rect" title=" " alt="" coords="3023,112,3323,155"/>
+<area shape="poly" title=" " alt="" coords="2415,47,3010,112,3005,112,2415,52"/>
+<area shape="rect" title=" " alt="" coords="3347,112,3618,155"/>
+<area shape="poly" title=" " alt="" coords="2415,41,2823,66,3075,85,3334,112,3329,112,3075,91,2823,71,2415,46"/>
+<area shape="rect" title=" " alt="" coords="3642,112,3899,155"/>
+<area shape="poly" title=" " alt="" coords="2416,37,2944,60,3282,81,3629,112,3624,112,3282,86,2944,65,2415,43"/>
+<area shape="rect" title=" " alt="" coords="3923,112,4180,155"/>
+<area shape="poly" title=" " alt="" coords="2415,35,2689,42,3058,55,3478,76,3910,112,3905,112,3478,82,3057,60,2689,47,2415,41"/>
+<area shape="rect" title=" " alt="" coords="4205,112,4530,155"/>
+<area shape="poly" title=" " alt="" coords="2415,35,2732,42,3169,55,3674,77,4193,112,4187,112,3674,82,3169,60,2732,47,2416,41"/>
+<area shape="rect" title=" " alt="" coords="4554,112,4880,155"/>
+<area shape="poly" title=" " alt="" coords="2415,34,2783,39,3306,50,3915,73,4230,89,4542,112,4536,112,4229,94,3915,78,3306,56,2783,44,2415,39"/>
+<area shape="rect" title=" " alt="" coords="4904,112,5227,155"/>
+<area shape="poly" title=" " alt="" coords="2415,33,2833,36,3442,46,4155,69,4525,86,4891,112,4886,112,4525,92,4155,74,3442,51,2833,41,2415,39"/>
+<area shape="rect" title=" " alt="" coords="5251,112,5559,155"/>
+<area shape="poly" title=" " alt="" coords="2415,35,3796,59,4619,81,4967,95,5238,112,5233,112,4967,100,4619,87,3796,65,2415,41"/>
+</map>
+</div>
+</div>
+<p><a href="../../d0/d43/_schweizer_blattschutz_konfiguration_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eschweizer_2Eblattschutz_2ESchweizerBlattschutzKonfiguration" id="r_de_2Epetanqueturniermanager_2Eschweizer_2Eblattschutz_2ESchweizerBlattschutzKonfiguration"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/dc3/classde_1_1petanqueturniermanager_1_1schweizer_1_1blattschutz_1_1_schweizer_blattschutz_konfiguration.html">de.petanqueturniermanager.schweizer.blattschutz.SchweizerBlattschutzKonfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blattschutz-Konfiguration für das Schweizer Turniersystem.  <a href="../../de/dc3/classde_1_1petanqueturniermanager_1_1schweizer_1_1blattschutz_1_1_schweizer_blattschutz_konfiguration.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eschweizer_2Eblattschutz" id="r_de_2Epetanqueturniermanager_2Eschweizer_2Eblattschutz"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d0/d65/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1blattschutz.html">de.petanqueturniermanager.schweizer.blattschutz</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f2dc274b2ef50bd726f96278ffd481c8.html">schweizer</a></li><li class="navelem"><a href="../../dir_f1256db7a93b24ccae0d08cc4e006d3a.html">blattschutz</a></li><li class="navelem"><a href="../../d0/d43/_schweizer_blattschutz_konfiguration_8java.html">SchweizerBlattschutzKonfiguration.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/ko/blattschutz/KoBlattschutzKonfiguration.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d1/da9/_ko_blattschutz_konfiguration_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KoBlattschutzKonfiguration.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import java.util.ArrayList;</code><br />
+<code>import java.util.List;</code><br />
+<code>import org.apache.logging.log4j.LogManager;</code><br />
+<code>import org.apache.logging.log4j.Logger;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheetDocument;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.MeldungenSpalte;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.CellStyleHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.cellstyle.EditierbareZelleHintergrundFarbeUnGeradeStyle;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.EditierbaresZelleFormatHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.IBlattschutzKonfiguration;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.blattschutz.SheetSchutzInfo;</code><br />
+<code>import de.petanqueturniermanager.ko.KoTurnierbaumSheet;</code><br />
+<code>import de.petanqueturniermanager.ko.konfiguration.KoKonfigurationSheet;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für KoBlattschutzKonfiguration.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d16/_ko_blattschutz_konfiguration_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2ko_2blattschutz_2_ko_blattschutz_konfiguration_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2ko_2blattschutz_2_ko_blattschutz_konfiguration_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2ko_2blattschutz_2_ko_blattschutz_konfiguration_8java">
+<area shape="rect" title=" " alt="" coords="1868,5,2166,48"/>
+<area shape="rect" title=" " alt="" coords="5,104,128,131"/>
+<area shape="poly" title=" " alt="" coords="1865,29,1483,36,985,47,496,67,294,81,140,99,121,102,120,97,139,93,293,76,496,62,985,42,1483,31,1871,29"/>
+<area shape="rect" title=" " alt="" coords="152,104,243,131"/>
+<area shape="poly" title=" " alt="" coords="1865,28,1504,34,1039,43,803,52,585,64,397,79,255,99,243,102,242,96,254,93,397,74,584,58,803,47,1039,38,1504,28,1871,28"/>
+<area shape="rect" title=" " alt="" coords="266,96,432,139"/>
+<area shape="poly" title=" " alt="" coords="1866,32,1145,56,748,75,580,86,447,98,447,93,580,81,748,69,1145,51,1871,31"/>
+<area shape="rect" title=" " alt="" coords="456,96,621,139"/>
+<area shape="poly" title=" " alt="" coords="1865,28,1633,33,1329,43,986,64,810,79,637,98,636,93,810,74,985,58,1328,38,1633,28,1871,27"/>
+<area shape="rect" title=" " alt="" coords="645,96,864,139"/>
+<area shape="poly" title=" " alt="" coords="1865,32,1429,54,1157,73,879,98,879,93,1156,67,1429,49,1871,32"/>
+<area shape="rect" title=" " alt="" coords="888,96,1197,139"/>
+<area shape="poly" title=" " alt="" coords="1871,39,1570,65,1213,98,1213,93,1570,60,1865,39"/>
+<area shape="rect" title=" " alt="" coords="1221,96,1440,139"/>
+<area shape="poly" title=" " alt="" coords="1871,44,1455,98,1455,93,1865,44"/>
+<area shape="rect" title=" " alt="" coords="1464,96,1706,139"/>
+<area shape="poly" title=" " alt="" coords="1919,48,1702,95,1701,90,1913,49"/>
+<area shape="rect" title=" " alt="" coords="1730,96,2003,139"/>
+<area shape="poly" title=" " alt="" coords="1984,48,1915,90,1914,85,1979,49"/>
+<area shape="rect" title=" " alt="" coords="2028,96,2311,139"/>
+<area shape="poly" title=" " alt="" coords="2053,46,2123,88,2118,87,2052,51"/>
+<area shape="rect" title=" " alt="" coords="2335,96,2635,139"/>
+<area shape="poly" title=" " alt="" coords="2127,46,2363,93,2358,92,2127,51"/>
+<area shape="rect" title=" " alt="" coords="2659,96,2930,139"/>
+<area shape="poly" title=" " alt="" coords="2167,40,2646,96,2641,95,2166,46"/>
+<area shape="rect" title=" " alt="" coords="2954,96,3211,139"/>
+<area shape="poly" title=" " alt="" coords="2166,33,2515,56,2941,96,2936,96,2514,61,2166,39"/>
+<area shape="rect" title=" " alt="" coords="3235,96,3492,139"/>
+<area shape="poly" title=" " alt="" coords="2166,30,2632,50,2924,68,3222,96,3217,96,2923,73,2632,55,2166,35"/>
+<area shape="rect" title=" " alt="" coords="3517,96,3842,139"/>
+<area shape="poly" title=" " alt="" coords="2166,29,2747,49,3121,67,3504,96,3499,96,3120,73,2747,54,2166,34"/>
+<area shape="rect" title=" " alt="" coords="3866,96,4192,139"/>
+<area shape="poly" title=" " alt="" coords="2166,27,2471,32,2887,44,3364,63,3854,96,3848,96,3364,69,2887,49,2471,38,2166,32"/>
+<area shape="rect" title=" " alt="" coords="4216,96,4416,139"/>
+<area shape="poly" title=" " alt="" coords="2166,27,2602,34,3183,47,3764,66,4010,79,4203,96,4198,96,4009,84,3764,71,3183,52,2602,39,2166,32"/>
+<area shape="rect" title=" " alt="" coords="4441,96,4719,139"/>
+<area shape="poly" title=" " alt="" coords="2166,28,3289,50,3938,69,4212,80,4428,96,4423,96,4212,86,3938,74,3288,55,2166,33"/>
+</map>
+</div>
+</div>
+<p><a href="../../d1/da9/_ko_blattschutz_konfiguration_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eko_2Eblattschutz_2EKoBlattschutzKonfiguration" id="r_de_2Epetanqueturniermanager_2Eko_2Eblattschutz_2EKoBlattschutzKonfiguration"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/de2/classde_1_1petanqueturniermanager_1_1ko_1_1blattschutz_1_1_ko_blattschutz_konfiguration.html">de.petanqueturniermanager.ko.blattschutz.KoBlattschutzKonfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blattschutz-Konfiguration für das K.  <a href="../../dc/de2/classde_1_1petanqueturniermanager_1_1ko_1_1blattschutz_1_1_ko_blattschutz_konfiguration.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eko_2Eblattschutz" id="r_de_2Epetanqueturniermanager_2Eko_2Eblattschutz"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d6/de4/namespacede_1_1petanqueturniermanager_1_1ko_1_1blattschutz.html">de.petanqueturniermanager.ko.blattschutz</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_72970fadef4cb52d7dbad45b2d9fc5fa.html">ko</a></li><li class="navelem"><a href="../../dir_ae6201d58babe2d416ca696d028510d2.html">blattschutz</a></li><li class="navelem"><a href="../../d1/da9/_ko_blattschutz_konfiguration_8java.html">KoBlattschutzKonfiguration.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

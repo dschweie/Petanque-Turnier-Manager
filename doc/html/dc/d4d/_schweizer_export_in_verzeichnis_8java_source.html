@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/schweizer/export/SchweizerExportInVerzeichnis.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dc/d4d/_schweizer_export_in_verzeichnis_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SchweizerExportInVerzeichnis.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d4d/_schweizer_export_in_verzeichnis_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Erstellung 2026 / Michael Massee</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="../../dd/da2/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1export.html">    4</a></span><span class="keyword">package </span>de.petanqueturniermanager.schweizer.export;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.nio.file.Path;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> org.apache.commons.lang3.StringUtils;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> de.petanqueturniermanager.comp.WorkingSpreadsheet;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> de.petanqueturniermanager.exception.GenerateException;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.I18n;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> de.petanqueturniermanager.helper.i18n.SheetNamen;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> de.petanqueturniermanager.helper.sheet.SheetMetadataHelper;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> de.petanqueturniermanager.helper.upload.ExportErgebnis;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> de.petanqueturniermanager.helper.upload.ExportHtmlSeite;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> de.petanqueturniermanager.schweizer.konfiguration.SchweizerKonfigurationSheet;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html">   23</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#adb071972bf2c56099a336c234cf7d588">SchweizerExportInVerzeichnis</a> <span class="keyword">extends</span> <a class="code hl_function" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#abd6c8a50aef12e144635b4736a8de4e5">AbstractExportInVerzeichnis</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#adb071972bf2c56099a336c234cf7d588">   25</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#adb071972bf2c56099a336c234cf7d588">SchweizerExportInVerzeichnis</a>(<a class="code hl_class" href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">WorkingSpreadsheet</a> ws, Path <a class="code hl_variable" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#adb171c4c30d74bc63560d8fe008f5085">zielVerzeichnis</a>) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        super(ws, <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a>.<a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8a79ce931e7d1811f9d3d5d049ca7412">SCHWEIZER</a>, <span class="stringliteral">&quot;Schweizer Export Verzeichnis&quot;</span>, <a class="code hl_variable" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#adb171c4c30d74bc63560d8fe008f5085">zielVerzeichnis</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    @Override</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#a4779a3190899b3fa92c1980d0f659199">   30</a></span>    <span class="keyword">protected</span> ExportErgebnis <a class="code hl_function" href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#a4779a3190899b3fa92c1980d0f659199">exportiereInVerzeichnis</a>(Path <a class="code hl_variable" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#adb171c4c30d74bc63560d8fe008f5085">zielVerzeichnis</a>) <span class="keywordflow">throws</span> <a class="code hl_class" href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">GenerateException</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">processBox</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a392667a3c362d0658b391e59d34f69fc">info</a>(<a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;export.info.pdf&quot;</span>));</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        var ws = <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a34c7b61fa178fc0bd109b24ffb9b9df1">getWorkingSpreadsheet</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        var <a class="code hl_package" href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">konfiguration</a> = <span class="keyword">new</span> <a class="code hl_function" href="../../d9/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet.html#a87f554dd2827bafd999f9d135eb47829">SchweizerKonfigurationSheet</a>(ws);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        List&lt;Path&gt; exportierteDateien = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        String meldelisteSheetName = <a class="code hl_function" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#a960fe65b9a4c0a3745b6621a8c0dc30d">sheetNamePerSchluessel</a>(<a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_variable" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a721073dfe47a4b1a427024853b9bdedf">SCHLUESSEL_SCHWEIZER_MELDELISTE</a>, <a class="code hl_class" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">SheetNamen</a>.<a class="code hl_function" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#a6ffc062653887b84e14a5deabfe3e98c">meldeliste</a>());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        String ranglisteSheetName = <a class="code hl_function" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#a960fe65b9a4c0a3745b6621a8c0dc30d">sheetNamePerSchluessel</a>(<a class="code hl_class" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">SheetMetadataHelper</a>.<a class="code hl_variable" href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a285d34cacc28f5d70c20691d4bf17f74">SCHLUESSEL_SCHWEIZER_RANGLISTE</a>, <a class="code hl_class" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">SheetNamen</a>.<a class="code hl_function" href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#a9fb6f0ea8f2348f6dc7b3e82dfe57bc5">rangliste</a>());</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Path pdfRangliste = <a class="code hl_function" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#ae58aab71af6f1822d365cc4ca838a2ed">exportierePdfAusHtml</a>(ranglisteSheetName, <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;export.nav.rangliste&quot;</span>), <a class="code hl_variable" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#adb171c4c30d74bc63560d8fe008f5085">zielVerzeichnis</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (pdfRangliste != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            exportierteDateien.add(pdfRangliste);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_function" href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">processBox</a>().<a class="code hl_function" href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a392667a3c362d0658b391e59d34f69fc">info</a>(<a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;export.info.html&quot;</span>));</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">boolean</span> meldelisteExportieren = <a class="code hl_package" href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">konfiguration</a>.isMeldelisteExportieren();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        List&lt;<a class="code hl_class" href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html">ExportHtmlSeite</a>.<a class="code hl_function" href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html#ac56ec12ecf9479929a6c8d585cb727bf">Section</a>&gt; sections = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/d14/class_array_list.html">ArrayList&lt;&gt;</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span> (meldelisteExportieren) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            sections.add(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html">ExportHtmlSeite</a>.<a class="code hl_function" href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html#ac56ec12ecf9479929a6c8d585cb727bf">Section</a>(<span class="stringliteral">&quot;meldeliste&quot;</span>, <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;export.nav.meldeliste&quot;</span>), meldelisteSheetName, <span class="keyword">null</span>));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        sections.add(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html">ExportHtmlSeite</a>.<a class="code hl_function" href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html#ac56ec12ecf9479929a6c8d585cb727bf">Section</a>(<span class="stringliteral">&quot;rangliste&quot;</span>, <a class="code hl_class" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">I18n</a>.<a class="code hl_function" href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">get</a>(<span class="stringliteral">&quot;export.nav.rangliste&quot;</span>), ranglisteSheetName,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <a class="code hl_function" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#a9ec9d9655599dd0c81c2663946d99e7d">buildPdfUrl</a>(pdfRangliste)));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#ad539d56263368a6266ba613182554b18">exportiereHtmlMitMeldelisteDruckbereich</a>(meldelisteExportieren, meldelisteSheetName,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_variable" href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#adb171c4c30d74bc63560d8fe008f5085">zielVerzeichnis</a>, <span class="stringliteral">&quot;Schweizer.html&quot;</span>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                StringUtils.defaultIfBlank(StringUtils.strip(<a class="code hl_package" href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">konfiguration</a>.getKopfZeileMitte()),</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                        <a class="code hl_class" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">TurnierSystem</a>.<a class="code hl_variable" href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8a79ce931e7d1811f9d3d5d049ca7412">SCHWEIZER</a>.getBezeichnung()),</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                StringUtils.strip(<a class="code hl_package" href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">konfiguration</a>.getTurnierlogoUrl()), sections)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                .addTo(exportierteDateien);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ExportErgebnis(exportierteDateien);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+</div>
+<div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="../../d3/d14/class_array_list.html">ArrayList</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a34c7b61fa178fc0bd109b24ffb9b9df1"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a34c7b61fa178fc0bd109b24ffb9b9df1">de.petanqueturniermanager.SheetRunner.getWorkingSpreadsheet</a></div><div class="ttdeci">WorkingSpreadsheet getWorkingSpreadsheet()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00613">SheetRunner.java:613</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1_sheet_runner_html_a4e2265626d9734997efd9e9e004bc215"><div class="ttname"><a href="../../da/d7c/classde_1_1petanqueturniermanager_1_1_sheet_runner.html#a4e2265626d9734997efd9e9e004bc215">de.petanqueturniermanager.SheetRunner.processBox</a></div><div class="ttdeci">ProcessBox processBox()</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d18/_sheet_runner_8java_source.html#l00606">SheetRunner.java:606</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet_html"><div class="ttname"><a href="../../d1/d33/classde_1_1petanqueturniermanager_1_1comp_1_1_working_spreadsheet.html">de.petanqueturniermanager.comp.WorkingSpreadsheet</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d54/_working_spreadsheet_8java_source.html#l00031">WorkingSpreadsheet.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception_html"><div class="ttname"><a href="../../d7/d17/classde_1_1petanqueturniermanager_1_1exception_1_1_generate_exception.html">de.petanqueturniermanager.exception.GenerateException</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d05/_generate_exception_8java_source.html#l00008">GenerateException.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html">de.petanqueturniermanager.helper.i18n.I18n</a></div><div class="ttdoc">Lokalisierungs-Helfer.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00029">I18n.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n_html_a09756390c5ee255a5223ddad55a3910d"><div class="ttname"><a href="../../d8/df4/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_i18n.html#a09756390c5ee255a5223ddad55a3910d">de.petanqueturniermanager.helper.i18n.I18n.get</a></div><div class="ttdeci">static String get(String key)</div><div class="ttdoc">Gibt den lokalisierten Text für den angegebenen Schlüssel zurück.</div><div class="ttdef"><b>Definition</b> <a href="../../de/d06/_i18n_8java_source.html#l00083">I18n.java:83</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html">de.petanqueturniermanager.helper.i18n.SheetNamen</a></div><div class="ttdoc">Zentraler Zugriffspunkt für alle lokalisierten Tabellennamen im Petanque-Turnier-Manager.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00022">SheetNamen.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html_a6ffc062653887b84e14a5deabfe3e98c"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#a6ffc062653887b84e14a5deabfe3e98c">de.petanqueturniermanager.helper.i18n.SheetNamen.meldeliste</a></div><div class="ttdeci">static String meldeliste()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00132">SheetNamen.java:132</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen_html_a9fb6f0ea8f2348f6dc7b3e82dfe57bc5"><div class="ttname"><a href="../../da/dc1/classde_1_1petanqueturniermanager_1_1helper_1_1i18n_1_1_sheet_namen.html#a9fb6f0ea8f2348f6dc7b3e82dfe57bc5">de.petanqueturniermanager.helper.i18n.SheetNamen.rangliste</a></div><div class="ttdeci">static String rangliste()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d4b/_sheet_namen_8java_source.html#l00136">SheetNamen.java:136</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box_html_a392667a3c362d0658b391e59d34f69fc"><div class="ttname"><a href="../../d1/dd5/classde_1_1petanqueturniermanager_1_1helper_1_1msgbox_1_1_process_box.html#a392667a3c362d0658b391e59d34f69fc">de.petanqueturniermanager.helper.msgbox.ProcessBox.info</a></div><div class="ttdeci">synchronized ProcessBox info(String logMsg)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/da8/_process_box_8java_source.html#l00583">ProcessBox.java:583</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper</a></div><div class="ttdoc">Schreibt und liest Sheet-Metadaten als benannte Bereiche im Dokument.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00050">SheetMetadataHelper.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_a285d34cacc28f5d70c20691d4bf17f74"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a285d34cacc28f5d70c20691d4bf17f74">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.SCHLUESSEL_SCHWEIZER_RANGLISTE</a></div><div class="ttdeci">static final String SCHLUESSEL_SCHWEIZER_RANGLISTE</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00100">SheetMetadataHelper.java:100</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper_html_a721073dfe47a4b1a427024853b9bdedf"><div class="ttname"><a href="../../d7/db0/classde_1_1petanqueturniermanager_1_1helper_1_1sheet_1_1_sheet_metadata_helper.html#a721073dfe47a4b1a427024853b9bdedf">de.petanqueturniermanager.helper.sheet.SheetMetadataHelper.SCHLUESSEL_SCHWEIZER_MELDELISTE</a></div><div class="ttdeci">static final String SCHLUESSEL_SCHWEIZER_MELDELISTE</div><div class="ttdef"><b>Definition</b> <a href="../../d2/ddb/_sheet_metadata_helper_8java_source.html#l00101">SheetMetadataHelper.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_html_a960fe65b9a4c0a3745b6621a8c0dc30d"><div class="ttname"><a href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#a960fe65b9a4c0a3745b6621a8c0dc30d">de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis.sheetNamePerSchluessel</a></div><div class="ttdeci">String sheetNamePerSchluessel(String schluessel, String fallbackName)</div><div class="ttdoc">Löst den aktuellen Sheet-Namen über den Metadaten-Schlüssel auf.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d7f/_abstract_export_in_verzeichnis_8java_source.html#l00213">AbstractExportInVerzeichnis.java:213</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_html_a9ec9d9655599dd0c81c2663946d99e7d"><div class="ttname"><a href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#a9ec9d9655599dd0c81c2663946d99e7d">de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis.buildPdfUrl</a></div><div class="ttdeci">String buildPdfUrl(Path pdf)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d7f/_abstract_export_in_verzeichnis_8java_source.html#l00239">AbstractExportInVerzeichnis.java:239</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_html_abd6c8a50aef12e144635b4736a8de4e5"><div class="ttname"><a href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#abd6c8a50aef12e144635b4736a8de4e5">de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis.AbstractExportInVerzeichnis</a></div><div class="ttdeci">AbstractExportInVerzeichnis(WorkingSpreadsheet ws, TurnierSystem ts, String name, Path zielVerzeichnis)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d7f/_abstract_export_in_verzeichnis_8java_source.html#l00049">AbstractExportInVerzeichnis.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_html_ad539d56263368a6266ba613182554b18"><div class="ttname"><a href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#ad539d56263368a6266ba613182554b18">de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis.exportiereHtmlMitMeldelisteDruckbereich</a></div><div class="ttdeci">HtmlExportErgebnis exportiereHtmlMitMeldelisteDruckbereich(boolean meldelisteExportieren, String meldelisteSheetName, Path zielVerzeichnis, String fallbackDateiname, String titel, String logoUrl, List&lt; ExportHtmlSeite.Section &gt; sections)</div><div class="ttdoc">Exportiert die HTML-Seite mit temporär angepasstem Druckbereich der Meldeliste.</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d7f/_abstract_export_in_verzeichnis_8java_source.html#l00256">AbstractExportInVerzeichnis.java:256</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_html_adb171c4c30d74bc63560d8fe008f5085"><div class="ttname"><a href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#adb171c4c30d74bc63560d8fe008f5085">de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis.zielVerzeichnis</a></div><div class="ttdeci">final Path zielVerzeichnis</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d7f/_abstract_export_in_verzeichnis_8java_source.html#l00045">AbstractExportInVerzeichnis.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis_html_ae58aab71af6f1822d365cc4ca838a2ed"><div class="ttname"><a href="../../d6/d0f/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_abstract_export_in_verzeichnis.html#ae58aab71af6f1822d365cc4ca838a2ed">de.petanqueturniermanager.helper.upload.AbstractExportInVerzeichnis.exportierePdfAusHtml</a></div><div class="ttdeci">Path exportierePdfAusHtml(String sheetName, String abschnittTitel, Path zielVerzeichnis)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d7f/_abstract_export_in_verzeichnis_8java_source.html#l00098">AbstractExportInVerzeichnis.java:98</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite_html"><div class="ttname"><a href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html">de.petanqueturniermanager.helper.upload.ExportHtmlSeite</a></div><div class="ttdoc">Einheitliche HTML-Exportseite für Turniersystem-Exports.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8c/_export_html_seite_8java_source.html#l00025">ExportHtmlSeite.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite_html_ac56ec12ecf9479929a6c8d585cb727bf"><div class="ttname"><a href="../../d6/ddf/classde_1_1petanqueturniermanager_1_1helper_1_1upload_1_1_export_html_seite.html#ac56ec12ecf9479929a6c8d585cb727bf">de.petanqueturniermanager.helper.upload.ExportHtmlSeite.Section</a></div><div class="ttdeci">record Section(String id, String titel, String sheetName, String pdfUrl)</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8c/_export_html_seite_8java_source.html#l00040">ExportHtmlSeite.java:40</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis_html_a4779a3190899b3fa92c1980d0f659199"><div class="ttname"><a href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#a4779a3190899b3fa92c1980d0f659199">de.petanqueturniermanager.schweizer.export.SchweizerExportInVerzeichnis.exportiereInVerzeichnis</a></div><div class="ttdeci">ExportErgebnis exportiereInVerzeichnis(Path zielVerzeichnis)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">SchweizerExportInVerzeichnis.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis_html_adb071972bf2c56099a336c234cf7d588"><div class="ttname"><a href="../../d3/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1export_1_1_schweizer_export_in_verzeichnis.html#adb071972bf2c56099a336c234cf7d588">de.petanqueturniermanager.schweizer.export.SchweizerExportInVerzeichnis.SchweizerExportInVerzeichnis</a></div><div class="ttdeci">SchweizerExportInVerzeichnis(WorkingSpreadsheet ws, Path zielVerzeichnis)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">SchweizerExportInVerzeichnis.java:25</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet_html_a87f554dd2827bafd999f9d135eb47829"><div class="ttname"><a href="../../d9/d73/classde_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_schweizer_konfiguration_sheet.html#a87f554dd2827bafd999f9d135eb47829">de.petanqueturniermanager.schweizer.konfiguration.SchweizerKonfigurationSheet.SchweizerKonfigurationSheet</a></div><div class="ttdeci">SchweizerKonfigurationSheet(WorkingSpreadsheet workingSpreadsheet)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d39/_schweizer_konfiguration_sheet_8java_source.html#l00032">SchweizerKonfigurationSheet.java:32</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_turnier_system_8java_source.html#l00009">TurnierSystem.java:9</a></div></div>
+<div class="ttc" id="aenumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system_html_a8a79ce931e7d1811f9d3d5d049ca7412"><div class="ttname"><a href="../../dd/db0/enumde_1_1petanqueturniermanager_1_1basesheet_1_1meldeliste_1_1_turnier_system.html#a8a79ce931e7d1811f9d3d5d049ca7412">de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem.SCHWEIZER</a></div><div class="ttdeci">SCHWEIZER</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d9c/_turnier_system_8java_source.html#l00013">TurnierSystem.java:13</a></div></div>
+<div class="ttc" id="anamespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_html"><div class="ttname"><a href="../../da/db9/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration.html">de.petanqueturniermanager.schweizer.konfiguration</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/ded/_i_schweizer_properties_spalte_8java_source.html#l00004">ISchweizerPropertiesSpalte.java:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f2dc274b2ef50bd726f96278ffd481c8.html">schweizer</a></li><li class="navelem"><a href="../../dir_854f732ff5c6822ace841f57ea1a2889.html">export</a></li><li class="navelem"><a href="../../dc/d4d/_schweizer_export_in_verzeichnis_8java.html">SchweizerExportInVerzeichnis.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

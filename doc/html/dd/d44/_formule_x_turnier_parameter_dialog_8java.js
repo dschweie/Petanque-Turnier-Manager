@@ -1,0 +1,4 @@
+var _formule_x_turnier_parameter_dialog_8java =
+[
+    [ "de.petanqueturniermanager.formulex.meldeliste.FormuleXTurnierParameterDialog", "d9/df8/classde_1_1petanqueturniermanager_1_1formulex_1_1meldeliste_1_1_formule_x_turnier_parameter_dialog.html", "d9/df8/classde_1_1petanqueturniermanager_1_1formulex_1_1meldeliste_1_1_formule_x_turnier_parameter_dialog" ]
+];

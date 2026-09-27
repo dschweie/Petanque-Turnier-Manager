@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/schweizer/spielrunde/SchweizerTurnierTestDaten.java-Dateireferenz</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d8/ddd/_schweizer_turnier_test_daten_8java.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SchweizerTurnierTestDaten.java-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>import de.petanqueturniermanager.helper.random.RandomSource;</code><br />
+<code>import com.sun.star.sheet.XSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.SheetRunner;</code><br />
+<code>import de.petanqueturniermanager.basesheet.spielrunde.SpielrundeSpielbahn;</code><br />
+<code>import de.petanqueturniermanager.comp.WorkingSpreadsheet;</code><br />
+<code>import de.petanqueturniermanager.helper.i18n.I18n;</code><br />
+<code>import de.petanqueturniermanager.exception.GenerateException;</code><br />
+<code>import de.petanqueturniermanager.helper.NewTestDatenValidator;</code><br />
+<code>import de.petanqueturniermanager.helper.cellvalue.NumberCellValue;</code><br />
+<code>import de.petanqueturniermanager.helper.position.Position;</code><br />
+<code>import de.petanqueturniermanager.helper.position.RangePosition;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.RangeHelper;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.rangedata.RangeData;</code><br />
+<code>import de.petanqueturniermanager.helper.sheet.rangedata.RowData;</code><br />
+<code>import de.petanqueturniermanager.schweizer.konfiguration.SpielplanTeamAnzeige;</code><br />
+<code>import de.petanqueturniermanager.schweizer.meldeliste.SchweizerMeldeListeSheetTestDaten;</code><br />
+<code>import de.petanqueturniermanager.schweizer.rangliste.SchweizerRanglisteSheet;</code><br />
+<code>import de.petanqueturniermanager.basesheet.meldeliste.TurnierSystem;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für SchweizerTurnierTestDaten.java:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d53/_schweizer_turnier_test_daten_8java__incl.png" border="0" usemap="#asrc_2main_2java_2de_2petanqueturniermanager_2schweizer_2spielrunde_2_schweizer_turnier_test_daten_8java" loading="lazy" alt=""/></div>
+<map name="asrc_2main_2java_2de_2petanqueturniermanager_2schweizer_2spielrunde_2_schweizer_turnier_test_daten_8java" id="asrc_2main_2java_2de_2petanqueturniermanager_2schweizer_2spielrunde_2_schweizer_turnier_test_daten_8java">
+<area shape="rect" title=" " alt="" coords="2282,5,2560,64"/>
+<area shape="rect" title=" " alt="" coords="5,112,274,155"/>
+<area shape="poly" title=" " alt="" coords="2279,36,1935,42,1444,53,874,76,579,93,289,114,289,109,579,87,873,70,1444,48,1935,37,2285,36"/>
+<area shape="rect" title=" " alt="" coords="298,120,517,147"/>
+<area shape="poly" title=" " alt="" coords="2279,36,1968,41,1533,52,1035,75,780,92,530,115,491,120,490,114,530,109,780,87,1035,70,1533,47,1967,36,2284,36"/>
+<area shape="rect" title=" " alt="" coords="542,112,724,155"/>
+<area shape="poly" title=" " alt="" coords="2279,35,2001,40,1620,51,1184,74,960,92,740,114,739,109,960,86,1184,68,1620,45,2001,35,2284,35"/>
+<area shape="rect" title=" " alt="" coords="748,112,1057,155"/>
+<area shape="poly" title=" " alt="" coords="2279,41,1755,68,1417,88,1073,114,1072,109,1417,83,1755,62,2285,41"/>
+<area shape="rect" title=" " alt="" coords="1081,112,1299,155"/>
+<area shape="poly" title=" " alt="" coords="2284,41,1854,67,1587,87,1315,114,1314,109,1586,82,1854,62,2279,41"/>
+<area shape="rect" title=" " alt="" coords="1324,120,1598,147"/>
+<area shape="poly" title=" " alt="" coords="2284,47,1974,77,1610,115,1566,120,1565,115,1610,109,1973,72,2279,48"/>
+<area shape="rect" title=" " alt="" coords="1622,112,1865,155"/>
+<area shape="poly" title=" " alt="" coords="2284,55,1880,114,1880,109,2279,55"/>
+<area shape="rect" title=" " alt="" coords="1889,112,2110,155"/>
+<area shape="poly" title=" " alt="" coords="2298,64,2105,111,2105,105,2293,65"/>
+<area shape="rect" title=" " alt="" coords="2135,112,2411,155"/>
+<area shape="poly" title=" " alt="" coords="2379,64,2318,106,2316,101,2374,65"/>
+<area shape="rect" title=" " alt="" coords="2435,112,2705,155"/>
+<area shape="poly" title=" " alt="" coords="2466,62,2528,104,2523,103,2464,67"/>
+<area shape="rect" title=" " alt="" coords="2730,112,3000,155"/>
+<area shape="poly" title=" " alt="" coords="2553,62,2757,108,2752,108,2553,67"/>
+<area shape="rect" title=" " alt="" coords="3024,112,3282,155"/>
+<area shape="poly" title=" " alt="" coords="2560,51,3011,112,3006,112,2560,56"/>
+<area shape="rect" title=" " alt="" coords="3306,112,3624,155"/>
+<area shape="poly" title=" " alt="" coords="2560,44,2889,72,3293,112,3288,112,2889,77,2560,49"/>
+<area shape="rect" title=" " alt="" coords="3648,112,3967,155"/>
+<area shape="poly" title=" " alt="" coords="2560,40,3031,65,3329,85,3636,112,3630,112,3329,90,3031,71,2560,45"/>
+<area shape="rect" title=" " alt="" coords="3991,112,4314,155"/>
+<area shape="poly" title=" " alt="" coords="2560,37,3170,60,3568,81,3978,112,3973,112,3568,86,3170,65,2560,42"/>
+<area shape="rect" title=" " alt="" coords="4339,112,4647,155"/>
+<area shape="poly" title=" " alt="" coords="2560,35,2873,41,3308,54,3809,76,4325,112,4320,112,3809,81,3308,59,2873,47,2560,40"/>
+<area shape="rect" title=" " alt="" coords="4672,112,4970,155"/>
+<area shape="poly" title=" " alt="" coords="2560,34,2922,38,3439,49,4040,71,4351,88,4659,112,4654,112,4350,93,4040,77,3439,54,2922,43,2560,39"/>
+<area shape="rect" title=" " alt="" coords="4994,112,5304,155"/>
+<area shape="poly" title=" " alt="" coords="2560,33,2969,35,3564,45,4262,68,4623,86,4981,112,4976,112,4623,91,4262,74,3564,51,2969,41,2560,38"/>
+</map>
+</div>
+</div>
+<p><a href="../../d8/ddd/_schweizer_turnier_test_daten_8java_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eschweizer_2Espielrunde_2ESchweizerTurnierTestDaten" id="r_de_2Epetanqueturniermanager_2Eschweizer_2Espielrunde_2ESchweizerTurnierTestDaten"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d2/d4e/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_turnier_test_daten.html">de.petanqueturniermanager.schweizer.spielrunde.SchweizerTurnierTestDaten</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generiert ein vollständiges Schweizer Beispielturnier: Meldeliste + Spielrunden mit Zufallsergebnissen + Rangliste.  <a href="../../d2/d4e/classde_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde_1_1_schweizer_turnier_test_daten.html#details">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Pakete</h2></td></tr>
+<tr class="memitem:de_2Epetanqueturniermanager_2Eschweizer_2Espielrunde" id="r_de_2Epetanqueturniermanager_2Eschweizer_2Espielrunde"><td class="memItemLeft">package &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d76/namespacede_1_1petanqueturniermanager_1_1schweizer_1_1spielrunde.html">de.petanqueturniermanager.schweizer.spielrunde</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_f2dc274b2ef50bd726f96278ffd481c8.html">schweizer</a></li><li class="navelem"><a href="../../dir_8ddafef893dbbd62f5bdd1c30c6cc8f9.html">spielrunde</a></li><li class="navelem"><a href="../../d8/ddd/_schweizer_turnier_test_daten_8java.html">SchweizerTurnierTestDaten.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

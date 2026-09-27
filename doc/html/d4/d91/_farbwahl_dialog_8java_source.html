@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petanque-Turnier-Manager: src/main/java/de/petanqueturniermanager/helper/farbe/FarbwahlDialog.java Quellcode</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../codefolding.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Petanque-Turnier-Manager<span id="projectnumber">&#160;5.34.20</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('d4/d91/_farbwahl_dialog_8java_source.html','../../',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FarbwahlDialog.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d91/_farbwahl_dialog_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="../../df/d2f/namespacede_1_1petanqueturniermanager_1_1helper_1_1farbe.html">    1</a></span><span class="keyword">package </span>de.petanqueturniermanager.helper.farbe;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.OptionalInt;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> org.apache.logging.log4j.LogManager;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> org.apache.logging.log4j.Logger;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.sun.star.awt.XWindow;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.sun.star.awt.XWindowPeer;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.sun.star.beans.PropertyValue;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.sun.star.beans.XPropertyAccess;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.sun.star.ui.dialogs.XExecutableDialog;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.sun.star.uno.XComponentContext;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> de.petanqueturniermanager.helper.Lo;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html">   46</a></span><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class </span><a class="code hl_function" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a5273daf63d184329ddecb70e54fc8c89">FarbwahlDialog</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#ae7153e8cd9bd69fdc30f20cdc51cb378">   48</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#ae7153e8cd9bd69fdc30f20cdc51cb378">logger</a> = LogManager.getLogger(<a class="code hl_function" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a5273daf63d184329ddecb70e54fc8c89">FarbwahlDialog</a>.class);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a86eca00ea57c19f0f87f7cf6ba1656d2">   49</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a86eca00ea57c19f0f87f7cf6ba1656d2">SERVICE</a> = <span class="stringliteral">&quot;com.sun.star.cui.ColorPicker&quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a77741320571158e9c8e4c7f1372ca896">   50</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a77741320571158e9c8e4c7f1372ca896">PROP_COLOR</a> = <span class="stringliteral">&quot;Color&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a5273daf63d184329ddecb70e54fc8c89">   52</a></span>    <span class="keyword">private</span> <a class="code hl_function" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a5273daf63d184329ddecb70e54fc8c89">FarbwahlDialog</a>() {}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#aef88a846f372b5a8f25dfdc63c7a50ed">   61</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> OptionalInt <a class="code hl_function" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#aef88a846f372b5a8f25dfdc63c7a50ed">waehle</a>(XComponentContext xContext, XWindowPeer parentPeer,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordtype">int</span> aktuelleFarbeRgb) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        XWindow parent = parentPeer != <span class="keyword">null</span> ? <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XWindow.class, parentPeer) : <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#aef88a846f372b5a8f25dfdc63c7a50ed">waehle</a>(xContext, parent, aktuelleFarbeRgb);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a144d958a2bf2fd30c1120cd9b5e39310">   79</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> OptionalInt <a class="code hl_function" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a144d958a2bf2fd30c1120cd9b5e39310">waehle</a>(XComponentContext xContext, XWindow parent, <span class="keywordtype">int</span> aktuelleFarbeRgb) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">if</span> (xContext == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">return</span> OptionalInt.empty();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            var mcf = xContext.getServiceManager();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            Object[] args = parent != <span class="keyword">null</span> ? <span class="keyword">new</span> Object[] { parent } : <span class="keyword">new</span> Object[0];</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            Object pickerInst = mcf.createInstanceWithArgumentsAndContext(<a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a86eca00ea57c19f0f87f7cf6ba1656d2">SERVICE</a>, args, xContext);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            var pickerProps = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XPropertyAccess.class, pickerInst);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            var pvFarbe = <span class="keyword">new</span> PropertyValue();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            pvFarbe.Name = <a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a77741320571158e9c8e4c7f1372ca896">PROP_COLOR</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            pvFarbe.Value = Integer.valueOf(aktuelleFarbeRgb &amp; 0xFFFFFF);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            pickerProps.setPropertyValues(<span class="keyword">new</span> PropertyValue[] { pvFarbe });</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            var picker = <a class="code hl_class" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">Lo</a>.<a class="code hl_function" href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">qi</a>(XExecutableDialog.class, pickerInst);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">if</span> (picker.execute() != 1) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordflow">return</span> OptionalInt.empty();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">for</span> (var pv : pickerProps.getPropertyValues()) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a77741320571158e9c8e4c7f1372ca896">PROP_COLOR</a>.equals(pv.Name) &amp;&amp; pv.Value instanceof Integer i) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    <span class="keywordflow">return</span> OptionalInt.of(i.intValue() &amp; 0xFFFFFF);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">return</span> OptionalInt.empty();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        } <span class="keywordflow">catch</span> (com.sun.star.uno.Exception e) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_variable" href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#ae7153e8cd9bd69fdc30f20cdc51cb378">logger</a>.error(<span class="stringliteral">&quot;Fehler bei UNO-ColorPicker&quot;</span>, e);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">return</span> OptionalInt.empty();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
+</div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html">de.petanqueturniermanager.helper.Lo</a></div><div class="ttdoc">Erstellung 10.07.2022 / Michael Massee   copy from Andrew Davison.</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00018">Lo.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1_lo_html_afd2128f7404f5d7807a6f6e00f175005"><div class="ttname"><a href="../../da/d88/classde_1_1petanqueturniermanager_1_1helper_1_1_lo.html#afd2128f7404f5d7807a6f6e00f175005">de.petanqueturniermanager.helper.Lo.qi</a></div><div class="ttdeci">static&lt; T &gt; T qi(Class&lt; T &gt; aType, Object o)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/dc7/_lo_8java_source.html#l00022">Lo.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog_html_a144d958a2bf2fd30c1120cd9b5e39310"><div class="ttname"><a href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a144d958a2bf2fd30c1120cd9b5e39310">de.petanqueturniermanager.helper.farbe.FarbwahlDialog.waehle</a></div><div class="ttdeci">static OptionalInt waehle(XComponentContext xContext, XWindow parent, int aktuelleFarbeRgb)</div><div class="ttdoc">Öffnet den nativen UNO-Color-Picker und blockiert, bis der Anwender OK oder Abbrechen klickt.</div><div class="ttdef"><b>Definition</b> <a href="#l00079">FarbwahlDialog.java:79</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog_html_a5273daf63d184329ddecb70e54fc8c89"><div class="ttname"><a href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a5273daf63d184329ddecb70e54fc8c89">de.petanqueturniermanager.helper.farbe.FarbwahlDialog.FarbwahlDialog</a></div><div class="ttdeci">FarbwahlDialog()</div><div class="ttdef"><b>Definition</b> <a href="#l00052">FarbwahlDialog.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog_html_a77741320571158e9c8e4c7f1372ca896"><div class="ttname"><a href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a77741320571158e9c8e4c7f1372ca896">de.petanqueturniermanager.helper.farbe.FarbwahlDialog.PROP_COLOR</a></div><div class="ttdeci">static final String PROP_COLOR</div><div class="ttdef"><b>Definition</b> <a href="#l00050">FarbwahlDialog.java:50</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog_html_a86eca00ea57c19f0f87f7cf6ba1656d2"><div class="ttname"><a href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#a86eca00ea57c19f0f87f7cf6ba1656d2">de.petanqueturniermanager.helper.farbe.FarbwahlDialog.SERVICE</a></div><div class="ttdeci">static final String SERVICE</div><div class="ttdef"><b>Definition</b> <a href="#l00049">FarbwahlDialog.java:49</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog_html_ae7153e8cd9bd69fdc30f20cdc51cb378"><div class="ttname"><a href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#ae7153e8cd9bd69fdc30f20cdc51cb378">de.petanqueturniermanager.helper.farbe.FarbwahlDialog.logger</a></div><div class="ttdeci">static final Logger logger</div><div class="ttdef"><b>Definition</b> <a href="#l00048">FarbwahlDialog.java:48</a></div></div>
+<div class="ttc" id="aclassde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog_html_aef88a846f372b5a8f25dfdc63c7a50ed"><div class="ttname"><a href="../../dc/db0/classde_1_1petanqueturniermanager_1_1helper_1_1farbe_1_1_farbwahl_dialog.html#aef88a846f372b5a8f25dfdc63c7a50ed">de.petanqueturniermanager.helper.farbe.FarbwahlDialog.waehle</a></div><div class="ttdeci">static OptionalInt waehle(XComponentContext xContext, XWindowPeer parentPeer, int aktuelleFarbeRgb)</div><div class="ttdoc">Standard-Aufruf von einem UNO-Dialog/Sidebar-Panel aus: erwartet den XWindowPeer des Aufruferfensters...</div><div class="ttdef"><b>Definition</b> <a href="#l00061">FarbwahlDialog.java:61</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="../../dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a href="../../dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a href="../../dir_d0b2643dbe59e2c16d00acf3fde99ae0.html">de</a></li><li class="navelem"><a href="../../dir_741889dd4061c9aac8c4aabd7cd18309.html">petanqueturniermanager</a></li><li class="navelem"><a href="../../dir_fe4618e70727428c07c72d9aeedb6855.html">helper</a></li><li class="navelem"><a href="../../dir_3f593ab020e7ca036fd8e3aa5c36d293.html">farbe</a></li><li class="navelem"><a href="../../d4/d91/_farbwahl_dialog_8java.html">FarbwahlDialog.java</a></li>
+    <li class="footer">Erzeugt am <span class="timestamp"></span> für Petanque-Turnier-Manager von <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

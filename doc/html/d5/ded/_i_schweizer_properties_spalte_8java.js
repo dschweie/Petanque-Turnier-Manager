@@ -1,0 +1,4 @@
+var _i_schweizer_properties_spalte_8java =
+[
+    [ "de.petanqueturniermanager.schweizer.konfiguration.ISchweizerPropertiesSpalte", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte.html", "d2/d32/interfacede_1_1petanqueturniermanager_1_1schweizer_1_1konfiguration_1_1_i_schweizer_properties_spalte" ]
+];
